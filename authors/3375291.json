@@ -1,0 +1,207 @@
+{
+    "authorId": "3375291",
+    "papers": [
+        {
+            "paperId": "26b13238e4f1b385699d53f27dc5e42e427ac863",
+            "title": "Etude - Evaluating the Inference Latency of Session-Based Recommendation Models at Scale",
+            "abstract": "Session-based recommendation (SBR) targets a core scenario in e-Commerce: Given a sequence of interactions of a visitor with a selection of items, we want to recommend the next item(s) of interest to interact with. Unfortunately, SBR models are difficult to deploy in practice, as ($i$) session-based recommendations cannot be precomputed offline, but must be inferred online for ongoing user sessions with low latency, and (ii) there is a huge variety of SBR models available, typically designed by academic researchers, whose inference performance and deployment cost is unclear. As a result, data scientists must typically prototype and evaluate different deployment options in collaboration with devops teams - a tedious and costly process, which does not scale to multiple use cases. To alleviate this, we present Etude, an end-to-end bench-marking framework, which enables data scientists to automati-cally evaluate the inference performance of SBR models under different deployment options. With Etude, data scientists can declaratively specify workload statistics, hardware options, as well as latency and throughput constraints. Based on these, Etude automatically deploys and runs an inference benchmark in Kubernetes with a synthetically generated click workload. Sub-sequently, Etude provides the data scientists with measurements on the achieved throughput and latency, as a basis for deciding on feasible and cost-efficient deployment options. We detail the design of Etude and present an experimental study for ten different SBR models in challenging settings resembling real-world workloads encountered at the large Euro-pean e-Commerce platform bol.com. We determine performant and cost-efficient deployment options in terms of models and cloud instance types for a variety of online shopping use cases (ranging from grocery shopping to large e-Commerce platforms). Moreover, we identify severe performance bottlenecks in the open source TorchServe inference server from the PyTorch ecosystem and in the implementation of four SBR models from the open source RecBole library. We make the source code of our framework and experimental results publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114852494",
+                    "name": "Barrie Kersbergen"
+                },
+                {
+                    "authorId": "2333066",
+                    "name": "O. Sprangers"
+                },
+                {
+                    "authorId": "2292333676",
+                    "name": "Frank Kootte"
+                },
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "2265490493",
+                    "name": "M. D. Rijke"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        },
+        {
+            "paperId": "333d6631e0f0ad2e96903e8f28fd43d28f189735",
+            "title": "Automated Data Cleaning Can Hurt Fairness in Machine Learning-based Decision Making",
+            "abstract": "In this paper, we interrogate whether data quality issues track demographic characteristics such as sex, race and age, and whether automated data cleaning \u2014 of the kind commonly used in production ML systems \u2014 impacts the fairness of predictions made by these systems. To the best of our knowledge, the impact of data cleaning on fairness in downstream tasks has not been investigated in the literature.We first analyze the tuples flagged by common error detection strategies in five research datasets. We find that, while specific data quality issues, such as higher rates of missing values, are associated with membership in historically disadvantaged groups, poor data quality does not generally track demographic group membership. As a follow-up, we conduct a large-scale empirical study on the impact of automated data cleaning on fairness, involving more than 26,000 model evaluations on five datasets. We observe that, while automated data cleaning has an insignificant impact on both accuracy and fairness in the majority of cases, it is more likely to worsen fairness than to improve it, especially when the cleaning techniques are not carefully chosen. This finding is both significant and worrying, given that it potentially implicates many production ML systems. We make our code and experimental results publicly available.The analysis we conducted in this paper is difficult, primarily because it requires that we think holistically about disparities in data quality, disparities in the effectiveness of data cleaning methods, and impacts of such disparities on ML model performance for different demographic groups. Such holistic analysis can and should be supported with the help of data engineering research. Towards this goal, we envision the development of fairness-aware data cleaning methods, and their integration into complex pipelines for ML-based decision making.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        },
+        {
+            "paperId": "3ebf96c32ab9c46e320bd890eb022685bd93779a",
+            "title": "MLWHATIF: What If You Could Stop Re-Implementing Your Machine Learning Pipeline Analyses Over and Over?",
+            "abstract": "\n Software systems that learn from data with machine learning (ML) are used in critical decision-making processes. Unfortunately, real-world experience shows that the pipelines for data preparation, feature encoding and model training in ML systems are often brittle with respect to their input data. As a consequence, data scientists have to run different kinds of\n data centric what-if analyses\n to evaluate the robustness and reliability of such pipelines, e.g., with respect to data errors or preprocessing techniques. These what-if analyses follow a common pattern: they take an existing ML pipeline, create a pipeline variant by introducing a small change, and execute this variant to see how the change impacts the pipeline's output score.\n \n We recently proposed mlwhatif, a library that enables data scientists to declaratively specify what-if analyses for an ML pipeline, and to automatically generate, optimize and execute the required pipeline variants. We demonstrate how data scientists can leverage mlwhatif for a variety of pipelines and three different what-if analyses focusing on the robustness of a pipeline against data errors, the impact of data cleaning operations, and the impact of data preprocessing operations on fairness. In particular, we demonstrate step-by-step how mlwhatif generates and optimizes the required execution plans for the pipeline analyses. Our library is publicly available at https://github.com/stefan-grafberger/mlwhatif.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                },
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "143772714",
+                    "name": "Paul Groth"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        },
+        {
+            "paperId": "85b7141f5ab8e3cd1400293cc0dae3797632918e",
+            "title": "Proactively Screening Machine Learning Pipelines with ARGUSEYES",
+            "abstract": "Software systems that learn from data with machine learning (ML) are ubiquitous. ML pipelines in these applications often suffer from a variety of data-related issues, such as data leakage, label errors or fairness violations, which require reasoning about complex dependencies between their inputs and outputs. These issues are usually only detected in hindsight after deployment, after they caused harm in production. We demonstrate ArgusEyes, a system which enables data scientists to proactively screen their ML pipelines for data-related issues as part of continuous integration. ArgusEyes instruments, executes and screens ML pipelines for declaratively specified pipeline issues, and analyzes data artifacts and their provenance to catch potential problems early before deployment to production. We demonstrate our system for three scenarios: detecting mislabeled images in a computer vision pipeline, spotting data leakage in a price prediction pipeline, and addressing fairness violations in a credit scoring pipeline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                },
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "3451527",
+                    "name": "Bojan Karlas"
+                },
+                {
+                    "authorId": "2146064155",
+                    "name": "Ce Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "e051605be1b602ced8b949a637497aae57102a28",
+            "title": "Screening Native Machine Learning Pipelines with ArgusEyes",
+            "abstract": "Software systems that learn from data are being deployed in increasing numbers in industrial and institutional scenarios. Developing these machine learning (ML) applications imposes additional challenges beyond those of traditional software systems. The behavior of such applications very much depends on their input data, and they are based on systems and libraries from a relatively young data science ecosystem, which is rapidly evolving all the time. Experience shows that it is di\ufb03cult to ensure that such ML applications are implemented correctly [Polyzotis et al. 2018, Stoyanovich et al. 2020]",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                },
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "2333066",
+                    "name": "O. Sprangers"
+                },
+                {
+                    "authorId": "3451527",
+                    "name": "Bojan Karlas"
+                },
+                {
+                    "authorId": "2146064155",
+                    "name": "Ce Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "e7b1169a6bb4855c9960d749e63e5e3416d789c2",
+            "title": "MLINSPECT: A Data Distribution Debugger for Machine Learning Pipelines",
+            "abstract": "Machine Learning (ML) is increasingly used to automate impactful decisions, and the risks arising from this wide-spread use are garnering attention from policymakers, scientists, and the media. ML applications are often very brittle with respect to their input data, which leads to concerns about their reliability, accountability, and fairness. While bias detection cannot be fully automated, computational tools can help pinpoint particular types of data issues. We recently proposed mlinspect, a library that enables lightweight lineage-based inspection of ML preprocessing pipelines. In this demonstration, we show how mlinspect can be used to detect data distribution bugs in a representative pipeline. In contrast to existing work, mlinspect operates on declarative abstractions of popular data science libraries like estimator/transformer pipelines, can handle both relational and matrix data, and does not require manual code instrumentation. The library is publicly available at https://github.com/stefan-grafberger/mlinspect.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                },
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        },
+        {
+            "paperId": "d8146d7f37516caa9446ebca302ed55ba4be57ff",
+            "title": "Approaching Neural Grammatical Error Correction as a Low-Resource Machine Translation Task",
+            "abstract": "Previously, neural methods in grammatical error correction (GEC) did not reach state-of-the-art results compared to phrase-based statistical machine translation (SMT) baselines. We demonstrate parallels between neural GEC and low-resource neural MT and successfully adapt several methods from low-resource MT to neural GEC. We further establish guidelines for trustable results in neural GEC and propose a set of model-independent methods for neural GEC that can be easily applied in most GEC settings. Proposed methods include adding source-side noise, domain-adaptation techniques, a GEC-specific training-objective, transfer learning with monolingual data, and ensembling of independently trained GEC models and language models. The combined effects of these methods result in better than state-of-the-art neural GEC models that outperform previously best neural GEC systems by more than 10% M\u00b2 on the CoNLL-2014 benchmark and 5.9% on the JFLEG test set. Non-neural state-of-the-art systems are outperformed by more than 2% on the CoNLL-2014 benchmark and by 4% on JFLEG.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1733933",
+                    "name": "Marcin Junczys-Dowmunt"
+                },
+                {
+                    "authorId": "3272639",
+                    "name": "Roman Grundkiewicz"
+                },
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "1702066",
+                    "name": "Kenneth Heafield"
+                }
+            ]
+        }
+    ]
+}

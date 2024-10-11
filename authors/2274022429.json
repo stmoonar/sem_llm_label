@@ -1,0 +1,311 @@
+{
+    "authorId": "2274022429",
+    "papers": [
+        {
+            "paperId": "05389d52e77a69c37b197a4b77aee65128a9666a",
+            "title": "ChartInstruct: Instruction Tuning for Chart Comprehension and Reasoning",
+            "abstract": "Charts provide visual representations of data and are widely used for analyzing information, addressing queries, and conveying insights to others. Various chart-related downstream tasks have emerged recently, such as question-answering and summarization. A common strategy to solve these tasks is to fine-tune various models originally trained on vision tasks language. However, such task-specific models are not capable of solving a wide range of chart-related tasks, constraining their real-world applicability. To overcome these challenges, we introduce ChartInstruct: a novel chart-specific vision-language Instruction-following dataset comprising 191K instructions generated with 71K charts. We then present two distinct systems for instruction tuning on such datasets: (1) an end-to-end model that connects a vision encoder for chart understanding with a LLM; and (2) a pipeline model that employs a two-step approach to extract chart data tables and input them into the LLM. In experiments on four downstream tasks, we first show the effectiveness of our model--achieving a new set of state-of-the-art results. Further evaluation shows that our instruction-tuning approach supports a wide array of real-world chart comprehension and reasoning scenarios, thereby expanding the scope and applicability of our models to new kinds of tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "100832735",
+                    "name": "Ahmed Masry"
+                },
+                {
+                    "authorId": "2291134806",
+                    "name": "Mehrad Shahmohammadi"
+                },
+                {
+                    "authorId": "3405393",
+                    "name": "Md. Rizwan Parvez"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2708940",
+                    "name": "Shafiq R. Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "2b4f4eda9884ef79d48020186c860ac26082b76a",
+            "title": "Natural Language Generation for Visualizations: State of the Art, Challenges and Future Directions",
+            "abstract": "Natural language and visualization are two complementary modalities of human communication that play a crucial role in conveying information effectively. While visualizations help people discover trends, patterns, and anomalies in data, natural language descriptions help explain these insights. Thus, combining text with visualizations is a prevalent technique for effectively delivering the core message of the data. Given the rise of natural language generation (NLG), there is a growing interest in automatically creating natural language descriptions for visualizations, which can be used as chart captions, answering questions about charts, or telling data-driven stories. In this survey, we systematically review the state of the art on NLG for visualizations and introduce a taxonomy of the problem. The NLG tasks fall within the domain of Natural Language Interfaces (NLI) for visualization, an area that has garnered significant attention from both the research community and industry. To narrow down the scope of the survey, we primarily concentrate on the research works that focus on text generation for visualizations. To characterize the NLG problem and the design space of proposed solutions, we pose five Wh-questions, why and how NLG tasks are performed for visualizations, what the task inputs and outputs are, as well as where and when the generated texts are integrated with visualizations. We categorize the solutions used in the surveyed papers based on these\"five Wh-questions.\"Finally, we discuss the key challenges and potential avenues for future research in this domain.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2304464834",
+                    "name": "Mohammed Saidul Islam"
+                }
+            ]
+        },
+        {
+            "paperId": "334d7fba900eab258cd4fbb5152539e83678b9c4",
+            "title": "ChartGemma: Visual Instruction-tuning for Chart Reasoning in the Wild",
+            "abstract": "Given the ubiquity of charts as a data analysis, visualization, and decision-making tool across industries and sciences, there has been a growing interest in developing pre-trained foundation models as well as general purpose instruction-tuned models for chart understanding and reasoning. However, existing methods suffer crucial drawbacks across two critical axes affecting the performance of chart representation models: they are trained on data generated from underlying data tables of the charts, ignoring the visual trends and patterns in chart images, and use weakly aligned vision-language backbone models for domain-specific training, limiting their generalizability when encountering charts in the wild. We address these important drawbacks and introduce ChartGemma, a novel chart understanding and reasoning model developed over PaliGemma. Rather than relying on underlying data tables, ChartGemma is trained on instruction-tuning data generated directly from chart images, thus capturing both high-level trends and low-level visual information from a diverse set of charts. Our simple approach achieves state-of-the-art results across $5$ benchmarks spanning chart summarization, question answering, and fact-checking, and our elaborate qualitative studies on real-world charts show that ChartGemma generates more realistic and factually correct summaries compared to its contemporaries. We release the code, model checkpoints, dataset, and demos at https://github.com/vis-nlp/ChartGemma.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "100832735",
+                    "name": "Ahmed Masry"
+                },
+                {
+                    "authorId": "71188587",
+                    "name": "Megh Thakkar"
+                },
+                {
+                    "authorId": "2310230414",
+                    "name": "Aayush Bajaj"
+                },
+                {
+                    "authorId": "2310228208",
+                    "name": "Aaryaman Kartha"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2708940",
+                    "name": "Shafiq R. Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "63a1617af179ee8b5b096b3038913a19166168d4",
+            "title": "Open-RAG: Enhanced Retrieval-Augmented Reasoning with Open-Source Large Language Models",
+            "abstract": "Retrieval-Augmented Generation (RAG) has been shown to enhance the factual accuracy of Large Language Models (LLMs), but existing methods often suffer from limited reasoning capabilities in effectively using the retrieved evidence, particularly when using open-source LLMs. To mitigate this gap, we introduce a novel framework, Open-RAG, designed to enhance reasoning capabilities in RAG with open-source LLMs. Our framework transforms an arbitrary dense LLM into a parameter-efficient sparse mixture of experts (MoE) model capable of handling complex reasoning tasks, including both single- and multi-hop queries. Open-RAG uniquely trains the model to navigate challenging distractors that appear relevant but are misleading. As a result, Open-RAG leverages latent learning, dynamically selecting relevant experts and integrating external knowledge effectively for more accurate and contextually relevant responses. In addition, we propose a hybrid adaptive retrieval method to determine retrieval necessity and balance the trade-off between performance gain and inference speed. Experimental results show that the Llama2-7B-based Open-RAG outperforms state-of-the-art LLMs and RAG models such as ChatGPT, Self-RAG, and Command R+ in various knowledge-intensive tasks. We open-source our code and models at https://openragmoe.github.io/",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2232783785",
+                    "name": "Shayekh Bin Islam"
+                },
+                {
+                    "authorId": "2323863538",
+                    "name": "Md Asib Rahman"
+                },
+                {
+                    "authorId": "2323786676",
+                    "name": "K. S. M. T. Hossain"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2708940",
+                    "name": "Shafiq R. Joty"
+                },
+                {
+                    "authorId": "3405393",
+                    "name": "Md. Rizwan Parvez"
+                }
+            ]
+        },
+        {
+            "paperId": "97ec0d508265f43d3d011a09ffbf599df9ea2b0d",
+            "title": "Are Large Vision Language Models up to the Challenge of Chart Comprehension and Reasoning? An Extensive Investigation into the Capabilities and Limitations of LVLMs",
+            "abstract": "Natural language is a powerful complementary modality of communication for data visualizations, such as bar and line charts. To facilitate chart-based reasoning using natural language, various downstream tasks have been introduced recently such as chart question answering, chart summarization, and fact-checking with charts. These tasks pose a unique challenge, demanding both vision-language reasoning and a nuanced understanding of chart data tables, visual encodings, and natural language prompts. Despite the recent success of Large Language Models (LLMs) across diverse NLP tasks, their abilities and limitations in the realm of data visualization remain under-explored, possibly due to their lack of multi-modal capabilities. To bridge the gap, this paper presents the first comprehensive evaluation of the recently developed large vision language models (LVLMs) for chart understanding and reasoning tasks. Our evaluation includes a comprehensive assessment of LVLMs, including GPT-4V and Gemini, across four major chart reasoning tasks. Furthermore, we perform a qualitative evaluation of LVLMs' performance on a diverse range of charts, aiming to provide a thorough analysis of their strengths and weaknesses. Our findings reveal that LVLMs demonstrate impressive abilities in generating fluent texts covering high-level data insights while also encountering common problems like hallucinations, factual errors, and data bias. We highlight the key strengths and limitations of chart comprehension tasks, offering insights for future research.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2304464834",
+                    "name": "Mohammed Saidul Islam"
+                },
+                {
+                    "authorId": "2124881265",
+                    "name": "Raian Rahman"
+                },
+                {
+                    "authorId": "100832735",
+                    "name": "Ahmed Masry"
+                },
+                {
+                    "authorId": "46437970",
+                    "name": "Md Tahmid Rahman Laskar"
+                },
+                {
+                    "authorId": "1807355",
+                    "name": "Mir Tafseer Nayeem"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                }
+            ]
+        },
+        {
+            "paperId": "bf746159ec6008fa8e4d4134c848f8611066d62d",
+            "title": "DataNarrative: Automated Data-Driven Storytelling with Visualizations and Texts",
+            "abstract": "Data-driven storytelling is a powerful method for conveying insights by combining narrative techniques with visualizations and text. These stories integrate visual aids, such as highlighted bars and lines in charts, along with textual annotations explaining insights. However, creating such stories requires a deep understanding of the data and meticulous narrative planning, often necessitating human intervention, which can be time-consuming and mentally taxing. While Large Language Models (LLMs) excel in various NLP tasks, their ability to generate coherent and comprehensive data stories remains underexplored. In this work, we introduce a novel task for data story generation and a benchmark containing 1,449 stories from diverse sources. To address the challenges of crafting coherent data stories, we propose a multiagent framework employing two LLM agents designed to replicate the human storytelling process: one for understanding and describing the data (Reflection), generating the outline, and narration, and another for verification at each intermediary step. While our agentic framework generally outperforms non-agentic counterparts in both model-based and human evaluations, the results also reveal unique challenges in data story generation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2304464834",
+                    "name": "Mohammed Saidul Islam"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2708940",
+                    "name": "Shafiq R. Joty"
+                },
+                {
+                    "authorId": "46437970",
+                    "name": "Md Tahmid Rahman Laskar"
+                },
+                {
+                    "authorId": "3405393",
+                    "name": "Md. Rizwan Parvez"
+                }
+            ]
+        },
+        {
+            "paperId": "df61f25e1f77163d82b8e52183b629404d535b88",
+            "title": "A Systematic Survey and Critical Review on Evaluating Large Language Models: Challenges, Limitations, and Recommendations",
+            "abstract": "Large Language Models (LLMs) have recently gained significant attention due to their remarkable capabilities in performing diverse tasks across various domains. However, a thorough evaluation of these models is crucial before deploying them in real-world applications to ensure they produce reliable performance. Despite the well-established importance of evaluating LLMs in the community, the complexity of the evaluation process has led to varied evaluation setups, causing inconsistencies in findings and interpretations. To address this, we systematically review the primary challenges and limitations causing these inconsistencies and unreliable evaluations in various steps of LLM evaluation. Based on our critical review, we present our perspectives and recommendations to ensure LLM evaluations are reproducible, reliable, and robust.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46437970",
+                    "name": "Md Tahmid Rahman Laskar"
+                },
+                {
+                    "authorId": "23644119",
+                    "name": "Sawsan Alqahtani"
+                },
+                {
+                    "authorId": "31773000",
+                    "name": "M Saiful Bari"
+                },
+                {
+                    "authorId": "2218664824",
+                    "name": "Mizanur Rahman"
+                },
+                {
+                    "authorId": "2210837993",
+                    "name": "Mohammad Abdullah Matin Khan"
+                },
+                {
+                    "authorId": "2310418723",
+                    "name": "Haidar Khan"
+                },
+                {
+                    "authorId": "2216718110",
+                    "name": "Israt Jahan"
+                },
+                {
+                    "authorId": "2284375773",
+                    "name": "Amran Bhuiyan"
+                },
+                {
+                    "authorId": "2310229814",
+                    "name": "Chee Wei Tan"
+                },
+                {
+                    "authorId": "3405393",
+                    "name": "Md. Rizwan Parvez"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2708940",
+                    "name": "Shafiq R. Joty"
+                },
+                {
+                    "authorId": "2257129648",
+                    "name": "Jimmy X. Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "7bef3c961fb1c272b8c3a66d9169b02b64d57766",
+            "title": "Do LLMs Work on Charts? Designing Few-Shot Prompts for Chart Question Answering and Summarization",
+            "abstract": "A number of tasks have been proposed recently to facilitate easy access to charts such as chart QA and summarization. The dominant paradigm to solve these tasks has been to fine-tune a pretrained model on the task data. However, this approach is not only expensive but also not generalizable to unseen tasks. On the other hand, large language models (LLMs) have shown impressive generalization capabilities to unseen tasks with zero- or few-shot prompting. However, their application to chart-related tasks is not trivial as these tasks typically involve considering not only the underlying data but also the visual features in the chart image. We propose PromptChart, a multimodal few-shot prompting framework with LLMs for chart-related applications. By analyzing the tasks carefully, we have come up with a set of prompting guidelines for each task to elicit the best few-shot performance from LLMs. We further propose a strategy to inject visual information into the prompts. Our experiments on three different chart-related information consumption tasks show that with properly designed prompts LLMs can excel on the benchmarks, achieving state-of-the-art.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2060491855",
+                    "name": "Do Xuan Long"
+                },
+                {
+                    "authorId": "2265582207",
+                    "name": "Mohammad Hassanpour"
+                },
+                {
+                    "authorId": "100832735",
+                    "name": "Ahmed Masry"
+                },
+                {
+                    "authorId": "2275056278",
+                    "name": "P. Kavehzadeh"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2708940",
+                    "name": "Shafiq R. Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "c92219ca0c97348c25132c56fd7674329063ee5e",
+            "title": "Can Large Language Models Fix Data Annotation Errors? An Empirical Study Using Debatepedia for Query-Focused Text Summarization",
+            "abstract": ",",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46437970",
+                    "name": "Md Tahmid Rahman Laskar"
+                },
+                {
+                    "authorId": "2218664824",
+                    "name": "Mizanur Rahman"
+                },
+                {
+                    "authorId": "2216718110",
+                    "name": "Israt Jahan"
+                },
+                {
+                    "authorId": "2274022429",
+                    "name": "Enamul Hoque"
+                },
+                {
+                    "authorId": "2257129648",
+                    "name": "Jimmy X. Huang"
+                }
+            ]
+        }
+    ]
+}

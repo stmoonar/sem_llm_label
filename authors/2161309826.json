@@ -1,0 +1,806 @@
+{
+    "authorId": "2161309826",
+    "papers": [
+        {
+            "paperId": "37741a9e9a2cb964ca3c7ab034c3e077baf66c8c",
+            "title": "BiVRec: Bidirectional View-based Multimodal Sequential Recommendation",
+            "abstract": "The integration of multimodal information into sequential recommender systems has attracted significant attention in recent research. In the initial stages of multimodal sequential recommendation models, the mainstream paradigm was ID-dominant recommendations, wherein multimodal information was fused as side information. However, due to their limitations in terms of transferability and information intrusion, another paradigm emerged, wherein multimodal features were employed directly for recommendation, enabling recommendation across datasets. Nonetheless, it overlooked user ID information, resulting in low information utilization and high training costs. To this end, we propose an innovative framework, BivRec, that jointly trains the recommendation tasks in both ID and multimodal views, leveraging their synergistic relationship to enhance recommendation performance bidirectionally. To tackle the information heterogeneity issue, we first construct structured user interest representations and then learn the synergistic relationship between them. Specifically, BivRec comprises three modules: Multi-scale Interest Embedding, comprehensively modeling user interests by expanding user interaction sequences with multi-scale patching; Intra-View Interest Decomposition, constructing highly structured interest representations using carefully designed Gaussian attention and Cluster attention; and Cross-View Interest Learning, learning the synergistic relationship between the two recommendation views through coarse-grained overall semantic similarity and fine-grained interest allocation similarity BiVRec achieves state-of-the-art performance on five datasets and showcases various practical advantages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284730172",
+                    "name": "Jiaxi Hu"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "2243037657",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2284735864",
+                    "name": "Yuehong Hu"
+                },
+                {
+                    "authorId": "2289093854",
+                    "name": "Yuxuan Liang"
+                },
+                {
+                    "authorId": "2282243915",
+                    "name": "Yiqi Wang"
+                },
+                {
+                    "authorId": "2287901729",
+                    "name": "Ming He"
+                },
+                {
+                    "authorId": "2260835602",
+                    "name": "Zitao Liu"
+                },
+                {
+                    "authorId": "2282271789",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "9ffab7e041dc10f4ae3f8acb20aed55bd8fc90f7",
+            "title": "LLM-enhanced Reranking in Recommender Systems",
+            "abstract": "Reranking is a critical component in recommender systems, playing an essential role in refining the output of recommendation algorithms. Traditional reranking models have focused predominantly on accuracy, but modern applications demand consideration of additional criteria such as diversity and fairness. Existing reranking approaches often fail to harmonize these diverse criteria effectively at the model level. Moreover, these models frequently encounter challenges with scalability and personalization due to their complexity and the varying significance of different reranking criteria in diverse scenarios. In response, we introduce a comprehensive reranking framework enhanced by LLM, designed to seamlessly integrate various reranking criteria while maintaining scalability and facilitating personalized recommendations. This framework employs a fully connected graph structure, allowing the LLM to simultaneously consider multiple aspects such as accuracy, diversity, and fairness through a coherent Chain-of-Thought (CoT) process. A customizable input mechanism is also integrated, enabling the tuning of the language model's focus to meet specific reranking needs. We validate our approach using three popular public datasets, where our framework demonstrates superior performance over existing state-of-the-art reranking models in balancing multiple criteria. The code for this implementation is publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "2258709565",
+                    "name": "Bo Chen"
+                },
+                {
+                    "authorId": "2238104000",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2130051800",
+                    "name": "Weiwen Liu"
+                },
+                {
+                    "authorId": "2181637944",
+                    "name": "Xiangyang Li"
+                },
+                {
+                    "authorId": "2262403807",
+                    "name": "Yichao Wang"
+                },
+                {
+                    "authorId": "2187882131",
+                    "name": "Zijian Zhang"
+                },
+                {
+                    "authorId": "2211473272",
+                    "name": "Wanyu Wang"
+                },
+                {
+                    "authorId": "2307408755",
+                    "name": "Yuyang Ye"
+                },
+                {
+                    "authorId": "2293567811",
+                    "name": "Shanru Lin"
+                },
+                {
+                    "authorId": "3339005",
+                    "name": "Huifeng Guo"
+                },
+                {
+                    "authorId": "2257180930",
+                    "name": "Ruiming Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "0ad3bd46c121a1a85b2d246242f34170e2090469",
+            "title": "SMLP4Rec: An Efficient All-MLP Architecture for Sequential Recommendations",
+            "abstract": "Self-attention models have achieved the state-of-the-art performance in sequential recommender systems by capturing the sequential dependencies among user\u2013item interactions. However, they rely on adding positional embeddings to the item sequence to retain the sequential information, which may break the semantics of item embeddings due to the heterogeneity between these two types of embeddings. In addition, most existing works assume that such dependencies exist solely in the item embeddings, but neglect their existence among the item features. In our previous study, we proposed a novel sequential recommendation model, i.e., MLP4Rec, based on the recent advances of MLP-Mixer architectures, which is naturally sensitive to the order of items in a sequence because matrix elements related to different positions of a sequence will be given different weights in training. We developed a tri-directional fusion scheme to coherently capture sequential, cross-channel, and cross-feature correlations with linear computational complexity as well as much fewer model parameters than existing self-attention methods. However, the cascading mixer structure, the large number of normalization layers between different mixer layers, and the noise generated by these operations limit the efficiency of information extraction and the effectiveness of MLP4Rec. In this extended version, we propose a novel framework \u2013 SMLP4Rec for sequential recommendation to address the aforementioned issues. The new framework changes the flawed cascading structure to a parallel mode, and integrates normalization layers to minimize their impact on the model\u2019s efficiency while maximizing their effectiveness. As a result, the training speed and prediction accuracy of SMLP4Rec are vastly improved in comparison to MLP4Rec. Extensive experimental results demonstrate that the proposed method is significantly superior to the state-of-the-art approaches. The implementation code is available online to ease reproducibility.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "2116711669",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2187870890",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2152527913",
+                    "name": "Minghao Zhao"
+                },
+                {
+                    "authorId": "2239054423",
+                    "name": "Runze Wu"
+                },
+                {
+                    "authorId": "2264097358",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "2249554788",
+                    "name": "Yiding Liu"
+                },
+                {
+                    "authorId": "2240617631",
+                    "name": "Dawei Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "13cc7cb462d3146cbc35ccb128f66609c788a96a",
+            "title": "Multi-Task Recommendations with Reinforcement Learning",
+            "abstract": "In recent years, Multi-task Learning (MTL) has yielded immense success in Recommender System (RS) applications [40]. However, current MTL-based recommendation models tend to disregard the session-wise patterns of user-item interactions because they are predominantly constructed based on item-wise datasets. Moreover, balancing multiple objectives has always been a challenge in this field, which is typically avoided via linear estimations in existing works. To address these issues, in this paper, we propose a Reinforcement Learning (RL) enhanced MTL framework, namely RMTL, to combine the losses of different recommendation tasks using dynamic weights. To be specific, the RMTL structure can address the two aforementioned issues by (i) constructing an MTL environment from session-wise interactions and (ii) training multi-task actor-critic network structure, which is compatible with most existing MTL-based recommendation models, and (iii) optimizing and fine-tuning the MTL loss function using the weights generated by critic networks. Experiments on two real-world public datasets demonstrate the effectiveness of RMTL with a higher AUC against state-of-the-art MTL-based recommendation models. Additionally, we evaluate and validate RMTL\u2019s compatibility and transferability across various MTL models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2204700561",
+                    "name": "Ziru Liu"
+                },
+                {
+                    "authorId": "2204719513",
+                    "name": "Jiejie Tian"
+                },
+                {
+                    "authorId": "144994208",
+                    "name": "Qingpeng Cai"
+                },
+                {
+                    "authorId": "2116711669",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "50152132",
+                    "name": "Shuchang Liu"
+                },
+                {
+                    "authorId": "2113596993",
+                    "name": "Da Chen"
+                },
+                {
+                    "authorId": "2204642544",
+                    "name": "Tonghao He"
+                },
+                {
+                    "authorId": "2153430224",
+                    "name": "Dong Zheng"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                }
+            ]
+        },
+        {
+            "paperId": "43674b7c8d4858ef560794fc5c0c9add42fd4cf4",
+            "title": "Multimodal Recommender Systems: A Survey",
+            "abstract": "\n The recommender system (RS) has been an integral toolkit of online services. They are equipped with various deep learning techniques to model user preference based on identifier and attribute information. With the emergence of multimedia services, such as short videos, news and\n etc.\n , understanding these contents while recommending becomes critical. Besides, multimodal features are also helpful in alleviating the problem of data sparsity in RS. Thus,\n M\n ultimodal\n R\n ecommender\n S\n ystem (MRS) has attracted much attention from both academia and industry recently. In this paper, we will give a comprehensive survey of the MRS models, mainly from technical views. First, we conclude the general procedures and major challenges for MRS. Then, we introduce the existing MRS models according to four categories,\n i.e.,\n Modality Encoder\n ,\n Feature Interaction\n ,\n Feature Enhancement\n and\n Model Optimization\n . Besides, to make it convenient for those who want to research this field, we also summarize the dataset and code resources. Finally, we discuss some promising future directions of MRS and conclude this paper. To access more details of the surveyed papers, such as implementation code, we open source a repository.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112246463",
+                    "name": "Qidong Liu"
+                },
+                {
+                    "authorId": "2284730172",
+                    "name": "Jiaxi Hu"
+                },
+                {
+                    "authorId": "150352978",
+                    "name": "Yutian Xiao"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "2116711312",
+                    "name": "Xiang Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "4dd54509ca4a20d575b3b43fda747e373420695b",
+            "title": "LinRec: Linear Attention Mechanism for Long-term Sequential Recommender Systems",
+            "abstract": "Transformer models have achieved remarkable success in sequential recommender systems (SRSs). However, computing the attention matrix in traditional dot-product attention mechanisms results in a quadratic complexity with sequence lengths, leading to high computational costs for long-term sequential recommendation. Motivated by the above observation, we propose a novel L2-Normalized Linear Attention for the Transformer-based Sequential Recommender Systems (LinRec), which theoretically improves efficiency while preserving the learning capabilities of the traditional dot-product attention. Specifically, by thoroughly examining the equivalence conditions of efficient attention mechanisms, we show that LinRec possesses linear complexity while preserving the property of attention mechanisms. In addition, we reveal its latent efficiency properties by interpreting the proposed LinRec mechanism through a statistical lens. Extensive experiments are conducted based on two public benchmark datasets, demonstrating that the combination of LinRec and Transformer models achieves comparable or even superior performance than state-of-the-art Transformer-based SRS models while significantly improving time and memory efficiency. The implementation code is available online at https://github.com/Applied-Machine-Learning-Lab/LinRec.>",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2223875866",
+                    "name": "Langming Liu"
+                },
+                {
+                    "authorId": "2223747158",
+                    "name": "Liu Cai"
+                },
+                {
+                    "authorId": "2117835555",
+                    "name": "Chi Zhang"
+                },
+                {
+                    "authorId": "2116711669",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "2211473272",
+                    "name": "Wanyu Wang"
+                },
+                {
+                    "authorId": "2223798314",
+                    "name": "Yifu Lv"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2108941389",
+                    "name": "Yiqi Wang"
+                },
+                {
+                    "authorId": "2116974078",
+                    "name": "Ming He"
+                },
+                {
+                    "authorId": "3195628",
+                    "name": "Zitao Liu"
+                },
+                {
+                    "authorId": "2117897052",
+                    "name": "Qing Li"
+                }
+            ]
+        },
+        {
+            "paperId": "6d18dcd4b562ea15f3270551b71596b2a1980b07",
+            "title": "Tutorials at The Web Conference 2023",
+            "abstract": "This paper summarizes the content of the 28 tutorials that have been given at The Web Conference 2023.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1705291",
+                    "name": "Valeria Fionda"
+                },
+                {
+                    "authorId": "2215622430",
+                    "name": "Olaf Hartig"
+                },
+                {
+                    "authorId": "1805958417",
+                    "name": "Reyhaneh Abdolazimi"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "2215690996",
+                    "name": "Hongzhi Chen"
+                },
+                {
+                    "authorId": "2117027107",
+                    "name": "Xiao Chen"
+                },
+                {
+                    "authorId": "2052469774",
+                    "name": "P. Cui"
+                },
+                {
+                    "authorId": "145269114",
+                    "name": "Jeffrey Dalton"
+                },
+                {
+                    "authorId": "2215596266",
+                    "name": "Xin Luna Dong"
+                },
+                {
+                    "authorId": "2957808",
+                    "name": "Lisette Espin Noboa"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2132398392",
+                    "name": "Manuela Fritz"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "2215622544",
+                    "name": "Torsten Hahmann"
+                },
+                {
+                    "authorId": "145325584",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2046142",
+                    "name": "S. Han"
+                },
+                {
+                    "authorId": "1842532",
+                    "name": "Estevam Hruschka"
+                },
+                {
+                    "authorId": "2118850040",
+                    "name": "Liang Hu"
+                },
+                {
+                    "authorId": "2139299903",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "47247243",
+                    "name": "Utkarshani Jaimini"
+                },
+                {
+                    "authorId": "2299944027",
+                    "name": "Olivier Jeunen"
+                },
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "51118506",
+                    "name": "F. Karimi"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "1769861",
+                    "name": "K. Kenthapadi"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                },
+                {
+                    "authorId": "3309003",
+                    "name": "Hady W. Lauw"
+                },
+                {
+                    "authorId": "145535348",
+                    "name": "Thai Le"
+                },
+                {
+                    "authorId": "1808423005",
+                    "name": "Trung-Hoang Le"
+                },
+                {
+                    "authorId": "2158951945",
+                    "name": "Dongwon Lee"
+                },
+                {
+                    "authorId": "2110855835",
+                    "name": "Geon Lee"
+                },
+                {
+                    "authorId": "19326298",
+                    "name": "Liat Levontin"
+                },
+                {
+                    "authorId": "2144231489",
+                    "name": "Cheng-Te Li"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2110471246",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2030126978",
+                    "name": "Jay Chiehen Liao"
+                },
+                {
+                    "authorId": "2157067900",
+                    "name": "Qidong Liu"
+                },
+                {
+                    "authorId": "46189109",
+                    "name": "Usha Lokala"
+                },
+                {
+                    "authorId": "2085850",
+                    "name": "Ben London"
+                },
+                {
+                    "authorId": "32545338",
+                    "name": "Siqu Long"
+                },
+                {
+                    "authorId": "153612944",
+                    "name": "H. Mcginty"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "29072828",
+                    "name": "Seungwhan Moon"
+                },
+                {
+                    "authorId": "1394609613",
+                    "name": "Usman Naseem"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "1403851743",
+                    "name": "Behrooz Omidvar-Tehrani"
+                },
+                {
+                    "authorId": "2069543964",
+                    "name": "Zijie Pan"
+                },
+                {
+                    "authorId": "48331451",
+                    "name": "Devesh Parekh"
+                },
+                {
+                    "authorId": "2188744953",
+                    "name": "Jian Pei"
+                },
+                {
+                    "authorId": "2101664",
+                    "name": "Tiago P. Peixoto"
+                },
+                {
+                    "authorId": "144615425",
+                    "name": "S. Pemberton"
+                },
+                {
+                    "authorId": "144179461",
+                    "name": "Josiah Poon"
+                },
+                {
+                    "authorId": "2065812052",
+                    "name": "Filip Radlinski"
+                },
+                {
+                    "authorId": "48890086",
+                    "name": "Federico Rossetto"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "2911888",
+                    "name": "Aghiles Salah"
+                },
+                {
+                    "authorId": "2128305",
+                    "name": "M. Sameki"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                },
+                {
+                    "authorId": "28908689",
+                    "name": "C. Shimizu"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                },
+                {
+                    "authorId": "2451800",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2064266862",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2528063",
+                    "name": "Johanne R. Trippas"
+                },
+                {
+                    "authorId": "39603708",
+                    "name": "Quoc-Tuan Truong"
+                },
+                {
+                    "authorId": "1896151979",
+                    "name": "Yu-Che Tsai"
+                },
+                {
+                    "authorId": "150035131",
+                    "name": "Adaku Uchendu"
+                },
+                {
+                    "authorId": "2215624802",
+                    "name": "Bram Van Den Akker"
+                },
+                {
+                    "authorId": "3265905",
+                    "name": "Linshan Wang"
+                },
+                {
+                    "authorId": "2144295736",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2116951322",
+                    "name": "Shoujin Wang"
+                },
+                {
+                    "authorId": "2153691630",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1684687",
+                    "name": "Ingmar Weber"
+                },
+                {
+                    "authorId": "69047048",
+                    "name": "H. Weld"
+                },
+                {
+                    "authorId": "2116666963",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2181385841",
+                    "name": "D. Xu"
+                },
+                {
+                    "authorId": "2138609128",
+                    "name": "E. Xu"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2156653838",
+                    "name": "Bo Yang"
+                },
+                {
+                    "authorId": "2125559318",
+                    "name": "Keyue Yang"
+                },
+                {
+                    "authorId": "1388775854",
+                    "name": "E. Yom-Tov"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "2281410",
+                    "name": "R. Zafarani"
+                },
+                {
+                    "authorId": "2499986",
+                    "name": "Hamed Zamani"
+                },
+                {
+                    "authorId": "41154657",
+                    "name": "Meike Zehlike"
+                },
+                {
+                    "authorId": "2145906426",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "1739818",
+                    "name": "Yongfeng Zhang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2148904413",
+                    "name": "Zhengqi Zhang"
+                },
+                {
+                    "authorId": "144010790",
+                    "name": "Liang Zhao"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "701bfade04d04d7c979dadf4007db2b02789ea22",
+            "title": "Trustworthy Recommender Systems: Foundations and Frontiers",
+            "abstract": "Recommender systems aim to provide personalized suggestions to users, helping them make effective decisions. However, recent evidence has revealed the untrustworthy aspects of advanced recommender systems, leading to harmful effects in safety-critical areas like finance and healthcare. This tutorial will offer a comprehensive overview of achieving trustworthy recommender systems. It will cover six important aspects: Safety & Robustness, Non-discrimination & Fairness, Explainability, Privacy, Environmental Well-being, and Accountability & Auditability. Each aspect will be defined and categorized, followed by a discussion of the latest research progress and notable works. Additionally, potential interactions among these aspects and future research directions for trustworthy recommender systems will be explored.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2116711669",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "3265905",
+                    "name": "Linshan Wang"
+                },
+                {
+                    "authorId": "2157320978",
+                    "name": "Xiao Chen"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "2112246463",
+                    "name": "Qidong Liu"
+                },
+                {
+                    "authorId": "2174270307",
+                    "name": "Shijie Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "c2526dd73bf5662e242004c935988d81597d6ee9",
+            "title": "Scenario-Aware Hierarchical Dynamic Network for Multi-Scenario Recommendation",
+            "abstract": "Click-Through Rate (CTR) prediction is a fundamental technique in recommendation and advertising systems. Recent studies have shown that implementing multi-scenario recommendations contributes to strengthening information sharing and improving overall performance. However, existing multi-scenario models only consider coarse-grained explicit scenario modeling that depends on pre-defined scenario identification from manual prior rules, which is biased and sub-optimal. To address these limitations, we propose a Scenario-Aware Hierarchical Dynamic Network for Multi-Scenario Recommendations (HierRec), which perceives implicit patterns adaptively and conducts explicit and implicit scenario modeling jointly. In particular, HierRec designs a basic scenario-oriented module based on the dynamic weight to capture scenario-specific information. Then the hierarchical explicit and implicit scenario-aware modules are proposed to model hybrid-grained scenario information. The multi-head implicit modeling design contributes to perceiving distinctive patterns from different perspectives. Our experiments on two public datasets and real-world industrial applications on a mainstream online advertising platform demonstrate that our HierRec outperforms existing models significantly.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "92633145",
+                    "name": "Bo Chen"
+                },
+                {
+                    "authorId": "2238203237",
+                    "name": "Menghui Zhu"
+                },
+                {
+                    "authorId": "2238104000",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2238125533",
+                    "name": "Xiaopeng Li"
+                },
+                {
+                    "authorId": "2223878432",
+                    "name": "Yuhao Wang"
+                },
+                {
+                    "authorId": "2116640929",
+                    "name": "Yichao Wang"
+                },
+                {
+                    "authorId": "3339005",
+                    "name": "Huifeng Guo"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "e776b35d50f07998e0c4fdca6bfe1f21c364fddf",
+            "title": "AutoTransfer: Instance Transfer for Cross-Domain Recommendations",
+            "abstract": "Cross-Domain Recommendation (CDR) is a widely used approach for leveraging information from domains with rich data to assist domains with insufficient data. A key challenge of CDR research is the effective and efficient transfer of helpful information from source domain to target domain. Currently, most existing CDR methods focus on extracting implicit information from the source domain to enhance the target domain. However, the hidden structure of the extracted implicit information is highly dependent on the specific CDR model, and is therefore not easily reusable or transferable. Additionally, the extracted implicit information only appears within the intermediate substructure of specific CDRs during training and is thus not easily retained for more use. In light of these challenges, this paper proposes AutoTransfer, with an Instance Transfer Policy Network, to selectively transfers instances from source domain to target domain for improved recommendations. Specifically, AutoTransfer acts as an agent that adaptively selects a subset of informative and transferable instances from the source domain. Notably, the selected subset possesses extraordinary re-utilization property that can be saved for improving model training of various future RS models in target domain. Experimental results on two public CDR benchmark datasets demonstrate that the proposed method outperforms state-of-the-art CDR baselines and classic Single-Domain Recommendation (SDR) approaches. The implementation code is available for easy reproduction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "2116711669",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "92633145",
+                    "name": "Bo Chen"
+                },
+                {
+                    "authorId": "2223746444",
+                    "name": "Fan Yan"
+                },
+                {
+                    "authorId": "3339005",
+                    "name": "Huifeng Guo"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                }
+            ]
+        }
+    ]
+}

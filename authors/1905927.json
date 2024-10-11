@@ -1,0 +1,167 @@
+{
+    "authorId": "1905927",
+    "papers": [
+        {
+            "paperId": "0ff029e91b8185739646a4ac6ab0713909d31d16",
+            "title": "Large Language Models of Code Fail at Completing Code with Potential Bugs",
+            "abstract": "Large language models of code (Code-LLMs) have recently brought tremendous advances to code completion, a fundamental feature of programming assistance and code intelligence. However, most existing works ignore the possible presence of bugs in the code context for generation, which are inevitable in software development. Therefore, we introduce and study the buggy-code completion problem, inspired by the realistic scenario of real-time code suggestion where the code context contains potential bugs -- anti-patterns that can become bugs in the completed program. To systematically study the task, we introduce two datasets: one with synthetic bugs derived from semantics-altering operator changes (buggy-HumanEval) and one with realistic bugs derived from user submissions to coding problems (buggy-FixEval). We find that the presence of potential bugs significantly degrades the generation performance of the high-performing Code-LLMs. For instance, the passing rates of CODEGEN-2B-MONO on test cases of buggy-HumanEval drop more than 50% given a single potential bug in the context. Finally, we investigate several post-hoc methods for mitigating the adverse effect of potential bugs and find that there remains a significant gap in post-mitigation performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Tuan Dinh"
+                },
+                {
+                    "authorId": "26128283",
+                    "name": "Jinman Zhao"
+                },
+                {
+                    "authorId": "145814654",
+                    "name": "Samson Tan"
+                },
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "5d585577881237c060ae4362ff900951a21d5c77",
+            "title": "COCO Denoiser: Using Co-Coercivity for Variance Reduction in Stochastic Convex Optimization",
+            "abstract": "First-order methods for stochastic optimization have undeniable relevance, in part due to their pivotal role in machine learning. Variance reduction for these algorithms has become an important research topic. In contrast to common approaches, which rarely leverage global models of the objective function, we exploit convexity and L-smoothness to improve the noisy estimates outputted by the stochastic gradient oracle. Our method, named COCO denoiser, is the joint maximum likelihood estimator of multiple function gradients from their noisy observations, subject to co-coercivity constraints between them. The resulting estimate is the solution of a convex Quadratically Constrained Quadratic Problem. Although this problem is expensive to solve by interior point methods, we exploit its structure to apply an accelerated first-order algorithm, the Fast Dual Proximal Gradient method. Besides analytically characterizing the proposed estimator, we show empirically that increasing the number and proximity of the queried points leads to better gradient estimates. We also apply COCO in stochastic settings by plugging it in existing algorithms, such as SGD, Adam or STRSAGA, outperforming their vanilla versions, even in scenarios where our modelling assumptions are mismatched.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2125825968",
+                    "name": "Manuel Madeira"
+                },
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "144515652",
+                    "name": "J. Xavier"
+                },
+                {
+                    "authorId": "35537344",
+                    "name": "P. Aguiar"
+                }
+            ]
+        },
+        {
+            "paperId": "dbae4c89a93597c41ec4373f6da03a93eac2927b",
+            "title": "Leveraging Pretrained Models for Automatic Summarization of Doctor-Patient Conversations",
+            "abstract": "Fine-tuning pretrained models for automatically summarizing doctor-patient conversation transcripts presents many challenges: limited training data, significant domain shift, long and noisy transcripts, and high target summary variability. In this paper, we explore the feasibility of using pretrained transformer models for automatically summarizing doctor-patient conversations directly from transcripts. We show that fluent and adequate summaries can be generated with limited training data by fine-tuning BART on a specially constructed dataset. The resulting models greatly surpass the performance of an average human annotator and the quality of previous published work for the task. We evaluate multiple methods for handling long conversations, comparing them to the obvious baseline of truncating the conversation to fit the pretrained model length limit. We introduce a multistage approach that tackles the task by learning two fine-tuned models: one for summarizing conversation chunks into partial summaries, followed by one for rewriting the collection of partial summaries into a complete summary. Using a carefully chosen fine-tuning dataset, this method is shown to be effective at handling longer conversations, improving the quality of generated summaries. We conduct both an automatic evaluation (through ROUGE and two concept-based metrics focusing on medical findings) and a human evaluation (through qualitative examples from literature, assessing hallucination, generalization, fluency, and general quality of the generated summaries).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108280996",
+                    "name": "Longxiang Zhang"
+                },
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "2034262772",
+                    "name": "Arindam Ghosh"
+                },
+                {
+                    "authorId": "2077332468",
+                    "name": "V. Jagannathan"
+                },
+                {
+                    "authorId": "116546449",
+                    "name": "H. Hassanzadeh"
+                },
+                {
+                    "authorId": "145849024",
+                    "name": "Thomas Schaaf"
+                },
+                {
+                    "authorId": "1762110",
+                    "name": "Matthew R. Gormley"
+                }
+            ]
+        },
+        {
+            "paperId": "e74272a4f9375d7f06c57b8cb0e196819cb6b8ac",
+            "title": "Seeing without Looking: Contextual Rescoring of Object Detections for AP Maximization",
+            "abstract": "The majority of current object detectors lack context: class predictions are made independently from other detections. We propose to incorporate context in object detection by post-processing the output of an arbitrary detector to rescore the confidences of its detections. Rescoring is done by conditioning on contextual information from the entire set of detections: their confidences, predicted classes, and positions. We show that AP can be improved by simply reassigning the detection confidence values such that true positives that survive longer (i.e., those with the correct class and large IoU) are scored higher than false positives or detections with small IoU. In this setting, we use a bidirectional RNN with attention for contextual rescoring and introduce a training target that uses the IoU with ground truth to maximize AP for the given set of detections. The fact that our approach does not require access to visual features makes it computationally inexpensive and agnostic to the detection architecture. In spite of this simplicity, our model consistently improves AP over strong pre-trained baselines (Cascade R-CNN and Faster R-CNN with several backbones), particularly by reducing the confidence of duplicate detections (a learned form of non-maximum suppression) and removing out-of-context objects by conditioning on the confidences, classes, positions, and sizes of the co-occurrent detections. Code is available at https://github.com/LourencoVazPato/seeing-without-looking/",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258194454",
+                    "name": "Louren\u00e7o V. Pato"
+                },
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "35537344",
+                    "name": "P. Aguiar"
+                }
+            ]
+        },
+        {
+            "paperId": "aebda7f2eeb9b476b306b0fded988aa3907416c2",
+            "title": "Symmetric polynomials for 2D shape representation",
+            "abstract": "We discuss the usage of symmetric polynomials for representing 2D shapes in their most general form, i.e., arbitrary sets of unlabeled points in the plane. Although particular families of these polynomials have been used in the past, we present general results that pave the way for the development of new representations that exhibit key properties for shape recognition. We show that all monomial symmetric polynomials satisfy homogeneity, which enables leveraging on previous work on spectral invariants to obtain invariance/completeness with respect to shape orientation. Representations based on symmetric polynomials are invariant to shape point relabeling. We single out elementary symmetric polynomials and power sums as particular families of polynomials that further enable obtaining completeness with respect to point labeling. We discuss the efficient computation of these polynomials and study how perturbations in the shape point coordinates affect their values.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "35537344",
+                    "name": "P. Aguiar"
+                }
+            ]
+        },
+        {
+            "paperId": "7773b3d698cf308b3f078e85d99cbf59460f00ac",
+            "title": "Shape representation via elementary symmetric polynomials: A complete invariant inspired by the bispectrum",
+            "abstract": "We address the representation of two-dimensional shape in its most general form, i.e., arbitrary sets of points, that may arise in multiple situations, e.g., sparse sets of specific landmarks, or dense sets of image edge points. Our goal are recognition tasks, where the key is balancing two contradicting demands: shapes that differ by rigid transformations or point re-labeling should have the same representation (invariance) but geometrically distinct shapes should have different representations (completeness). In the paper, we introduce a new shape representation that marries properties of the elementary symmetric polynomials and the bispectrum. Like the power spectrum, the bispectrum is insensitive to signal shifts; however, unlike the power spectrum, the bispectrum is complete. The elementary symmetric polynomials are complete and invariant to variable relabeling. We show that the elementary symmetric polynomials of the shape points depend on the shape orientation in a way that enables interpreting them in the frequency domain and building from them a bispectrum. The result is a shape representation that is complete and invariant to rigid transformations and point-relabeling. The paper also reports experiments that illustrate the proved properties.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "35537344",
+                    "name": "P. Aguiar"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,341 @@
+{
+    "authorId": "2144796537",
+    "papers": [
+        {
+            "paperId": "06d1497141b8f3fc6eeff0c22fa6885a963d04d3",
+            "title": "Alleviating Structural Distribution Shift in Graph Anomaly Detection",
+            "abstract": "Graph anomaly detection (GAD) is a challenging binary classification problem due to its different structural distribution between anomalies and normal nodes --- abnormal nodes are a minority, therefore holding high heterophily and low homophily compared to normal nodes. Furthermore, due to various time factors and the annotation preferences of human experts, the heterophily and homophily can change across training and testing data, which is called structural distribution shift (SDS) in this paper. The mainstream methods are built on graph neural networks (GNNs), benefiting the classification of normals from aggregating homophilous neighbors, yet ignoring the SDS issue for anomalies and suffering from poor generalization. This work solves the problem from a feature view. We observe that the degree of SDS varies between anomalies and normal nodes. Hence to address the issue, the key lies in resisting high heterophily for anomalies meanwhile benefiting the learning of normals from homophily. Since different labels correspond to the difference of critical anomaly features which make great contributions to the GAD, we tease out the anomaly features on which we constrain to mitigate the effect of heterophilous neighbors and make them invariant. However, the prior distribution of anomaly features is dynamic and hard to estimate, we thus devise a prototype vector to infer and update this distribution during training. For normal nodes, we constrain the remaining features to preserve the connectivity of nodes and reinforce the influence of the homophilous neighborhood. We term our proposed framework asGraph Decomposition Network (GDN). Extensive experiments are conducted on two benchmark datasets, and the proposed framework achieves a remarkable performance boost in GAD, especially in an SDS environment where anomalies have largely different structural distribution across training and testing environments. Codes are open-sourced in https://github.com/blacksingular/wsdm_GDN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143792907",
+                    "name": "Yuan Gao"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2145312301",
+                    "name": "Zhenguang Liu"
+                },
+                {
+                    "authorId": "1986484",
+                    "name": "Huamin Feng"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "3c40e8354176746226cfaed3603c8bc9db06c854",
+            "title": "GIF: A General Graph Unlearning Strategy via Influence Function",
+            "abstract": "With the greater emphasis on privacy and security in our society, the problem of graph unlearning \u2014 revoking the influence of specific data on the trained GNN model, is drawing increasing attention. However, ranging from machine unlearning to recently emerged graph unlearning methods, existing efforts either resort to retraining paradigm, or perform approximate erasure that fails to consider the inter-dependency between connected neighbors or imposes constraints on GNN structure, therefore hard to achieve satisfying performance-complexity trade-offs. In this work, we explore the influence function tailored for graph unlearning, so as to improve the unlearning efficacy and efficiency for graph unlearning. We first present a unified problem formulation of diverse graph unlearning tasks w.r.t. node, edge, and feature. Then, we recognize the crux to the inability of traditional influence function for graph unlearning, and devise Graph Influence Function (GIF), a model-agnostic unlearning method that can efficiently and accurately estimate parameter changes in response to a \u03f5 -mass perturbation in deleted data. The idea is to supplement the objective of the traditional influence function with an additional loss term of the influenced neighbors due to the structural dependency. Further deductions on the closed-form solution of parameter changes provide a better understanding of the unlearning mechanism. We conduct extensive experiments on four representative GNN models and three benchmark datasets to justify the superiority of GIF for diverse graph unlearning tasks in terms of unlearning efficacy, model utility, and unlearning efficiency. Our implementations are available at https://github.com/wujcan/GIF-torch/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1491035012",
+                    "name": "Jiancan Wu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yi Yang"
+                },
+                {
+                    "authorId": "2179636861",
+                    "name": "Yuchun Qian"
+                },
+                {
+                    "authorId": "2003767516",
+                    "name": "Yongduo Sui"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "3eb2dbe48eaa1406ab4e4bb90f094e70eda85738",
+            "title": "A Generic Learning Framework for Sequential Recommendation with Distribution Shifts",
+            "abstract": "Leading sequential recommendation (SeqRec) models adopt empirical risk minimization (ERM) as the learning framework, which inherently assumes that the training data (historical interaction sequences) and the testing data (future interactions) are drawn from the same distribution. However, such i.i.d. assumption hardly holds in practice, due to the online serving and dynamic nature of recommender system.For example, with the streaming of new data, the item popularity distribution would change, and the user preference would evolve after consuming some items. Such distribution shifts could undermine the ERM framework, hurting the model's generalization ability for future online serving. In this work, we aim to develop a generic learning framework to enhance the generalization of recommenders in the dynamic environment. Specifically, on top of ERM, we devise a Distributionally Robust Optimization mechanism for SeqRec (DROS). At its core is our carefully-designed distribution adaption paradigm, which considers the dynamics of data distribution and explores possible distribution shifts between training and testing. Through this way, we can endow the backbone recommenders with better generalization ability.It is worth mentioning that DROS is an effective model-agnostic learning framework, which is applicable to general recommendation scenarios.Theoretical analyses show that DROS enables the backbone recommenders to achieve robust performance in future testing data.Empirical studies verify the effectiveness against dynamic distribution shifts of DROS. Codes are anonymously open-sourced at https://github.com/YangZhengyi98/DROS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150358651",
+                    "name": "Zhengyi Yang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "1491035012",
+                    "name": "Jiancan Wu"
+                },
+                {
+                    "authorId": "2113821128",
+                    "name": "Xin Xin"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "4a76ea74e48ee96a0b846c58a843b2031da7b9de",
+            "title": "Addressing Heterophily in Graph Anomaly Detection: A Perspective of Graph Spectrum",
+            "abstract": "Graph anomaly detection (GAD) suffers from heterophily \u2014 abnormal nodes are sparse so that they are connected to vast normal nodes. The current solutions upon Graph Neural Networks (GNNs) blindly smooth the representation of neiboring nodes, thus undermining the discriminative information of the anomalies. To alleviate the issue, recent studies identify and discard inter-class edges through estimating and comparing the node-level representation similarity. However, the representation of a single node can be misleading when the prediction error is high, thus hindering the performance of the edge indicator. In graph signal processing, the smoothness index is a widely adopted metric which plays the role of frequency in classical spectral analysis. Considering the ground truth Y to be a signal on graph, the smoothness index is equivalent to the value of the heterophily ratio. From this perspective, we aim to address the heterophily problem in the spectral domain. First, we point out that heterophily is positively associated with the frequency of a graph. Towards this end, we could prune inter-class edges by simply emphasizing and delineating the high-frequency components of the graph. Recall that graph Laplacian is a high-pass filter, we adopt it to measure the extent of 1-hop label changing of the center node and indicate high-frequency components. As GAD can be formulated as a semi-supervised binary classification problem, only part of the nodes are labeled. As an alternative, we use the prediction of the nodes to estimate it. Through our analysis, we show that prediction errors are less likely to affect the identification process. Extensive empirical evaluations on four benchmarks demonstrate the effectiveness of the indicator over popular homophilic, heterophilic, and tailored fraud detection methods. Our proposed indicator can effectively reduce the heterophily degree of the graph, thus boosting the overall GAD performance. Codes are open-sourced in https://github.com/blacksingular/GHRN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143792907",
+                    "name": "Yuan Gao"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2145312301",
+                    "name": "Zhenguang Liu"
+                },
+                {
+                    "authorId": "1986484",
+                    "name": "Huamin Feng"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "4fa31616b834c377c4995c346a2b17464f25692a",
+            "title": "Graph Neural Networks for Recommender System",
+            "abstract": "Recently, graph neural network (GNN) has become the new state-of-the-art approach in many recommendation problems, with its strong ability to handle structured data and to explore high-order information. However, as the recommendation tasks are diverse and various in the real world, it is quite challenging to design proper GNN methods for specific problems. In this tutorial, we focus on the critical challenges of GNN-based recommendation and the potential solutions. Specifically, we start from an extensive background of recommender systems and graph neural networks. Then we fully discuss why GNNs are required in recommender systems and the four parts of challenges, including graph construction, network design, optimization, and computation efficiency. Then, we discuss how to address these challenges by elaborating on the recent advances of GNN-based recommendation models, with a systematic taxonomy from four critical perspectives: stages, scenarios, objectives, and applications. Last, we finalize this tutorial with conclusions and discuss important future directions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49281242",
+                    "name": "Chen Gao"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2154403926",
+                    "name": "Yong Li"
+                }
+            ]
+        },
+        {
+            "paperId": "a72dfe51cc70d6e3ca55e1b22475e3905e23a9ef",
+            "title": "On the Effectiveness of Sampled Softmax Loss for Item Recommendation",
+            "abstract": "The learning objective plays a fundamental role to build a recommender system. Most methods routinely adopt either pointwise (e.g., binary cross-entropy) or pairwise (e.g., BPR) loss to train the model parameters, while rarely pay attention to softmax loss, which assumes the probabilities of all classes sum up to 1, due to its computational complexity when scaling up to large datasets or intractability for streaming data where the complete item space is not always available. The sampled softmax (SSM) loss emerges as an efficient substitute for softmax loss. Its special case, InfoNCE loss, has been widely used in self-supervised learning and exhibited remarkable performance for contrastive learning. Nonetheless, limited recommendation work uses the SSM loss as the learning objective. Worse still, none of them explores its properties thoroughly and answers \u201cDoes SSM loss suit for item recommendation?\u201d and \u201cWhat are the conceptual advantages of SSM loss, as compared with the prevalent losses?\u201d, to the best of our knowledge. In this work, we aim at offering a better understanding of SSM for item recommendation. Specifically, we first theoretically reveal three model-agnostic advantages: (1) mitigating popularity bias, which is beneficial to long-tail recommendation; (2) mining hard negative samples, which offers informative gradients to optimize model parameters; and (3) maximizing the ranking metric, which facilitates top-K performance. However, based on our empirical studies, we recognize that the default choice of cosine similarity function in SSM limits its ability in learning the magnitudes of representation vectors. As such, the combinations of SSM with the models that also fall short in adjusting magnitudes (e.g., matrix factorization) may result in poor representations. One step further, we provide mathematical proof that message passing schemes in graph convolution networks can adjust representation magnitude according to node degree, which naturally compensates for the shortcoming of SSM. Extensive experiments on four benchmark datasets justify our analyses, demonstrating the superiority of SSM for item recommendation. Our implementations are available in both TensorFlow1 and PyTorch.2",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1491035012",
+                    "name": "Jiancan Wu"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "2156258088",
+                    "name": "Xingyu Gao"
+                },
+                {
+                    "authorId": "2115448385",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2153581828",
+                    "name": "Hongcheng Fu"
+                },
+                {
+                    "authorId": "2003803416",
+                    "name": "Tianyu Qiu"
+                }
+            ]
+        },
+        {
+            "paperId": "2ecbb88131453b9a61bd61320c19d5581106c442",
+            "title": "Contrastive Learning for Cold-Start Recommendation",
+            "abstract": "Recommending purely cold-start items is a long-standing and fundamental challenge in the recommender systems. Without any historical interaction on cold-start items, the collaborative filtering (CF) scheme fails to leverage collaborative signals to infer user preference on these items. To solve this problem, extensive studies have been conducted to incorporate side information of items (e.g. content features) into the CF scheme. Specifically, they employ modern neural network techniques (e.g., dropout, consistency constraint) to discover and exploit the coalition effect of content features and collaborative representations. However, we argue that these works less explore the mutual dependencies between content features and collaborative representations and lack sufficient theoretical supports, thus resulting in unsatisfactory performance on cold-start recommendation. In this work, we reformulate the cold-start item representation learning from an information-theoretic standpoint. It aims to maximize the mutual dependencies between item content and collaborative signals. Specifically, the representation learning is theoretically lower-bounded by the integration of two terms: mutual information between collaborative embeddings of users and items, and mutual information between collaborative embeddings and feature representations of items. To model such a learning process, we devise a new objective function founded upon contrastive learning and develop a simple yet efficient Contrastive Learning-based Cold-start Recommendation framework (CLCRec). In particular, CLCRec consists of three components: contrastive pair organization, contrastive embedding, and contrastive optimization modules. It allows us to preserve collaborative signals in the content representations for both warm and cold-start items. Through extensive experiments on four publicly accessible datasets, we observe that CLCRec achieves significant improvements over state-of-the-art approaches in both warm- and cold-start scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1887997",
+                    "name": "Yin-wei Wei"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "2118913642",
+                    "name": "Qi Li"
+                },
+                {
+                    "authorId": "143982887",
+                    "name": "Liqiang Nie"
+                },
+                {
+                    "authorId": "2152886829",
+                    "name": "Yan Li"
+                },
+                {
+                    "authorId": "2144461833",
+                    "name": "Xuanping Li"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "33b3779f316a830b9218427546f9e77f470a9d86",
+            "title": "A Survey on Neural Recommendation: From Collaborative Filtering to Content and Context Enriched Recommendation",
+            "abstract": "Influenced by the stunning success of deep learning in computer vision and language understanding, research in recommendation has shifted to inventing new recommender models based on neural networks. In recent years, we have witnessed significant progress in developing neural recommender models, which generalize and surpass traditional recommender models owing to the strong representation power of neural networks. In this survey paper, we conduct a systematic review on neural recommender models, aiming to summarize the field to facilitate future progress. Distinct from existing surveys that categorize existing methods based on the taxonomy of deep learning techniques, we instead summarize the field from the perspective of recommendation modeling, which could be more instructive to researchers and practitioners working on recommender systems. Specifically, we divide the work into three types based on the data they used for recommendation modeling: 1) collaborative filtering models, which leverage the key source of user-item interaction data; 2) content enriched models, which additionally utilize the side information associated with users and items, like user profile and item knowledge graph; and 3) context enriched models, which account for the contextual information associated with an interaction, such as time, location, and the past interactions. After reviewing representative works for each type, we finally discuss some promising directions in this field, including benchmarking recommender systems, graph reasoning based recommendation models, and explainable and fair recommendations for social good.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2688093",
+                    "name": "Le Wu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "2119017233",
+                    "name": "Kun Zhang"
+                },
+                {
+                    "authorId": "2146059323",
+                    "name": "Meng Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "4e59c8a1340f5189569a47c59b75be914394b5a4",
+            "title": "Deconfounded Recommendation for Alleviating Bias Amplification",
+            "abstract": "Recommender systems usually amplify the biases in the data. The model learned from historical interactions with imbalanced item distribution will amplify the imbalance by over-recommending items from the majority groups. Addressing this issue is essential for a healthy ecosystem of recommendation in the long run. Existing work applies bias control to the ranking targets (e.g., calibration, fairness, and diversity), but ignores the true reason for bias amplification and trades off the recommendation accuracy. In this work, we scrutinize the cause-effect factors for bias amplification, identifying the main reason lies in the confounding effect of imbalanced item distribution on user representation and prediction score. The existence of such confounder pushes us to go beyond merely modeling the conditional probability and embrace the causal modeling for recommendation. Towards this end, we propose a Deconfounded Recommender System (DecRS), which models the causal effect of user representation on the prediction score. The key to eliminating the impact of the confounder lies in backdoor adjustment, which is however difficult to do due to the infinite sample space of the confounder. For this challenge, we contribute an approximation operator for backdoor adjustment which can be easily plugged into most recommender models. Lastly, we devise an inference strategy to dynamically regulate backdoor adjustment according to user status. We instantiate DecRS on two representative models FM [32] and NFM [16], and conduct extensive experiments over two benchmarks to validate the superiority of our proposed DecRS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "54a54d5b4864a71b2604fa052212979494c5debb",
+            "title": "Time-aware Path Reasoning on Knowledge Graph for Recommendation",
+            "abstract": "Reasoning on knowledge graph (KG) has been studied for explainable recommendation due to its ability of providing explicit explanations. However, current KG-based explainable recommendation methods unfortunately ignore the temporal information (such as purchase time, recommend time, etc.), which may result in unsuitable explanations. In this work, we propose a novel Time-aware Path reasoning for Recommendation (TPRec for short) method, which leverages the potential of temporal information to offer better recommendation with plausible explanations. First, we present an efficient time-aware interaction relation extraction component to construct collaborative knowledge graph with time-aware interactions (TCKG for short), and then we introduce a novel time-aware path reasoning method for recommendation. We conduct extensive experiments on three real-world datasets. The results demonstrate that the proposed TPRec could successfully employ TCKG to achieve substantial gains and improve the quality of explainable recommendation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109814746",
+                    "name": "Yuyue Zhao"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "2115448385",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2116724274",
+                    "name": "Wei Tang"
+                },
+                {
+                    "authorId": "3292396",
+                    "name": "Yashen Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "97998823",
+                    "name": "Hai-ying Xie"
+                }
+            ]
+        }
+    ]
+}

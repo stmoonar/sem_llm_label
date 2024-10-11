@@ -1,0 +1,285 @@
+{
+    "authorId": "2370758",
+    "papers": [
+        {
+            "paperId": "10694956840c7ed0105199a238639873e39256b1",
+            "title": "Opportunities for Shape-based Optimization of Link Traversal Queries",
+            "abstract": "Data on the web is naturally unindexed and decentralized. Centralizing web data, especially personal data, raises ethical and legal concerns. Yet, compared to centralized query approaches, decentralization-friendly alternatives such as Link Traversal Query Processing (LTQP) are significantly less performant and understood. The two main difficulties of LTQP are the lack of apriori information about data sources and the high number of HTTP requests. Exploring decentralized-friendly ways to document unindexed networks of data sources could lead to solutions to alleviate those difficulties. RDF data shapes are widely used to validate linked data documents, therefore, it is worthwhile to investigate their potential for LTQP optimization. In our work, we built an early version of a source selection algorithm for LTQP using RDF data shape mappings with linked data documents and measured its performance in a realistic setup. In this article, we present our algorithm and early results, thus, opening opportunities for further research for shape-based optimization of link traversal queries. Our initial experiments show that with little maintenance and work from the server, our method can reduce up to 80% the execution time and 97% the number of links traversed during realistic queries. Given our early results and the descriptive power of RDF data shapes it would be worthwhile to investigate non-heuristic-based query planning using RDF shapes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2300190701",
+                    "name": "Bryan-Elliott Tam"
+                },
+                {
+                    "authorId": "3403873",
+                    "name": "Ruben Taelman"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                },
+                {
+                    "authorId": "1723397",
+                    "name": "R. Verborgh"
+                }
+            ]
+        },
+        {
+            "paperId": "296f04c6c39db8bd7b61ae27023a3b30bd89ad2b",
+            "title": "Reference Conditions: Relating Mapping Rules Without Joining",
+            "abstract": "Existing knowledge graph construction mapping languages have a legacy of mapping over relational databases. A such, current mapping language join constructs conflate securing referential integrity with relating concepts across data sources. This leads to a significant amount of operations (resulting in performance bottlenecks), and loss of additional context of potential linking triples that are not generated due to a lack of referential integrity. We propose a reference condition next to the traditional join condition, allowing to express a relation between sources without imposing any referential integrity. In this short research paper, we describe the concept, its applicability, how it could be integrated in existing and future mapping languages, and a proof-of-concept implementation. Our evaluation based on GTFS-Madrid-Bench confirms the assumption that removing these integrity checks leads to much faster generation times, but we also find that using reference conditions results in exactly the same graph output, i.e. these alternative semantics do not influence generation results for cases where referential integrity is assumed within the source system. Adding the reference conditions keeps the best of all worlds: generation time is shortened where possible, you have more context in the resulting RDF graph, and the mapping file still supplies relevant metadata about relations between triples maps. For future work, we will further research relations between triples maps, and expand our implementation to more complex reference conditions. This will allow us to investigate similar performance gains with other benchmarks and other mapping engines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2220675949",
+                    "name": "Els de Vleeschauwer"
+                },
+                {
+                    "authorId": "2166201716",
+                    "name": "Sitt Min Oo"
+                },
+                {
+                    "authorId": "2959801",
+                    "name": "B. Meester"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                }
+            ]
+        },
+        {
+            "paperId": "dc211e03f999c983f0dd337f9051f51f98a1cf14",
+            "title": "Publishing public transport data on the Web with the Linked Connections framework",
+            "abstract": "Publishing transport data on the Web for consumption by others poses several challenges for data\u00a0publishers. In addition to planned schedules, access to live schedule updates (e.g. delays or cancellations) and historical data is fundamental to enable reliable applications and to support machine learning use cases. However publishing such dynamic data further increases the computational burden for data publishers, resulting in often unavailable historical data and live schedule updates for most public transport networks. In this paper we apply and extend the current Linked Connections approach for static data to also support cost-efficient live and historical public transport data publishing on the Web. Our contributions include (i)\u00a0a reference specification and system architecture to support cost-efficient publishing of dynamic public transport schedules and historical data; (ii)\u00a0empirical evaluations on route planning query performance based on data fragmentation size, publishing costs and a comparison with a traditional route planning engine such as OpenTripPlanner; (iii)\u00a0an analysis of potential correlations of query performance with particular public transport network characteristics such as size, average degree, density, clustering coefficient and average connection duration. Results confirm that fragmentation size influences route planning query performance and converges on an optimal fragment size per network. Size (stops), density and connection duration also show correlation with route planning query performance. Our approach proves to be more cost-efficient and in some cases outperforms OpenTripPlanner when supporting the earliest arrival time route planning use case. Moreover, the cost of publishing live and historical schedules remains in the same order of magnitude for server-side resources compared to publishing planned schedules only. Yet, further optimizations are needed for larger networks (>1000 stops) to be useful in practice. Additional dataset fragmentation strategies (e.g. geospatial) may be studied for designing more scalable and performant Web apis that adapt to particular use cases, not only limited to the public transport domain.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147144342",
+                    "name": "J. Rojas"
+                },
+                {
+                    "authorId": "1390128049",
+                    "name": "Harm Delva"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                },
+                {
+                    "authorId": "1723397",
+                    "name": "R. Verborgh"
+                }
+            ]
+        },
+        {
+            "paperId": "07684f4d7aa66c507dc0db1ecf02b91e46913752",
+            "title": "Integrating OSLO semantics in word processors",
+            "abstract": "Documents issued by the government such as public tenders or policy documents often lack consistent semantics, which leads to ambiguities and misinterpretations. Take for example granting subsidies to companies. The conditions for entitlement to a subsidy are checked against the government\u2019s authentic data sources. However, the various governments and administrations have different definitions of, for instance, a small and medium-sized enterprise (SME), which can be derived from a European legal framework or a financial perspective. The absence of uniform definitions for these terms results in a lot of duplicate efforts for both the government and the entrepreneur. To tackle the problem of semantics, Flanders founded an interoperability program, Open Standards for Linked Organizations (OSLO) whose primary goal is to ensure that systems exchanging data can use a common vocabulary. However, despite the results made by OSLO, they do not reach policy-makers working mainly on the legal and organizational levels. We developed two tools to close this gap and make semantic agreements available at these levels. With OSLO Lookup, we provide a simple user interface that lets users query the semantics assets, while the OSLO365 plugin allows embedding the semantic assets in a Microsoft Word document. To assess the relevance and usability of these tools, servants of a local administration were interviewed. This paper outlines that semantic agreements that are mainly used on the data level can provide added value at an organizational and legal level as well.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191237211",
+                    "name": "Dwight Van Lancker"
+                },
+                {
+                    "authorId": "2191237194",
+                    "name": "Niels Van Durme"
+                },
+                {
+                    "authorId": "108028384",
+                    "name": "Eveline Vlassenroot"
+                },
+                {
+                    "authorId": "3340761",
+                    "name": "Raf Buyle"
+                },
+                {
+                    "authorId": "1804736",
+                    "name": "P. Mechant"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                },
+                {
+                    "authorId": "1691320",
+                    "name": "E. Mannens"
+                }
+            ]
+        },
+        {
+            "paperId": "24bc7b209124077713c6baf35885f042d3c60a55",
+            "title": "What's in a Pod? A Knowledge Graph Interpretation For The Solid Ecosystem",
+            "abstract": "Th e Solid vision aims to make data independent of applications through technical speci \ufb01 ca \u2010 tions, which detail how to publish and consume permissioned data across multiple autono \u2010 mous locations called \u201cpods\u201d. Th e current document-centric interpretation of Solid, wherein a pod is a single hierarchy of Linked Data documents, cannot fully realize this independence. Applications are le ft to de \ufb01 ne their own APIs within the Solid Protocol, leading to fundamen \u2010 tal interoperability problems and the need for associated workarounds. Th e long-term vision for Solid is confounded with the concrete HTTP interface to pods today, leading to a narrower solution space to address core issues. We examine the mismatch between the vision and its prevalent document-centric interpretation, and propose a reconciliatory graph-centric inter \u2010 pretation wherein a pod is a hybrid, contextualized knowledge graph. In this article, we con \u2010 trast the existing and proposed interpretations in terms of how they support the Solid vision. We argue that the graph-centric interpretation can improve pod access through di \ufb00 erent Web APIs that act as views into the knowledge graph. We show how the la tt er interpretation pro \u2010 vides improved opportunities for storage, publication, and querying of decentralized data in more \ufb02 exible and sustainable ways. Th ese insights are crucial to reduce the dependency of Solid apps on implicit API semantics and local assumptions about the shape and organization of data and the resulting performance. Th e suggested broader interpretation can guide Solid through its evolution into a heterogeneous yet interoperable ecosystem that be tt er supports the diverging read/write data access pa tt erns of di \ufb00 erent use cases.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40580115",
+                    "name": "R. Dedecker"
+                },
+                {
+                    "authorId": "2193563735",
+                    "name": "Wout Slabbinck"
+                },
+                {
+                    "authorId": "2110161996",
+                    "name": "Jesse Wright"
+                },
+                {
+                    "authorId": "2911425",
+                    "name": "Patrick Hochstenbach"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                },
+                {
+                    "authorId": "1723397",
+                    "name": "R. Verborgh"
+                }
+            ]
+        },
+        {
+            "paperId": "505bbb5985a09fc52bb0d688bcbc12c278f2bbb4",
+            "title": "Describing a network of live datasets with the SDS vocabulary",
+            "abstract": "Data publishers can provide multiple interfaces per dataset. Each interface has its own merits and drawbacks, SPARQL endpoints are expensive to host and clients find it difficult to work with static data dumps. Furthermore, query agents can only select the most fitting interface and dataset if provenance information is provided. In this paper, we introduce the Smart Data Specification for Semantically Describing Streams (SDS) to annotate dataset interfaces with provenance information, describing the consumed stream and the applied transformations on that stream. We focus on Linked Data Event Streams that can publish the same dataset with different fragmentations and demonstrate a pipeline that transforms a LDES and publishes the data with a different fragmentation as described in the accompanying provenance information. The SDS vocabulary is built upon the DCAT-AP, LDES and P-Plan vocabularies. In future work, we will create a source selection strategy for federated query processors that take into account this provenance information when selecting a dataset and interface to query the dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2209219016",
+                    "name": "Arthur Vercruysse"
+                },
+                {
+                    "authorId": "2166201716",
+                    "name": "Sitt Min Oo"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                }
+            ]
+        },
+        {
+            "paperId": "51676b836654d4fd202cd0cc7123d31d27140d86",
+            "title": "Editorial of transport data on the web",
+            "abstract": "Whether you are planning your next trip abroad or want a package delivered to your doorstep, chances are high that you will need a chain of services provided by multiple companies. Transport is inherently a geographically and administratively decentralized domain composed of a diverse set of actors, \u2013 from public transport authorities to vehicle sharing companies, infrastructure managers in different sectors (road, rail, etc.), transport operators, retailers, and distributors. As a result, it suffers vast data heterogeneity, which, in turn, brings severe challenges to data interoperability. However, such challenges have also been posed in other domains such as the Internet of Things [18], agriculture [11], building data management [17], biology [7] or open data [2], which have found their solutions using semantic web technologies. However, despite several research contributions [6,14,19,23,25], public-funded projects1,2 or academic-industry events,3,4 we have not yet seen a wide adoption of semantic technologies in the transport domain. We may only guess the inhibitors for adopting Linked Data in this domain: i) the SPARQL query language is not built for optimal path planning, and ii) RDF is perceived as highly conceptual by industry experts. We argue that SPARQL does not fit well with the concerns that typically matter to route planners (e.g., calculating the optimal Pareto path [4]). While calculating a path with SPARQL is feasible through property paths, controlling the path planning algorithm, which can hardly be done in SPARQL, is the core concern of route planners. On the other hand, the transport domain is dominated by different standards (e.g., NeTEx,5 or DATEX II6) and vocabularies, which are based on legacy data exchange technologies (e.g., XML or RDB). However, to construct a distributed and scalable architecture that addresses the current needs of this domain, the Web and its associated technologies (i.e., the Semantic Web) are the key resource.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1404333852",
+                    "name": "David Chaves-Fraga"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                },
+                {
+                    "authorId": "51486610",
+                    "name": "Mersedeh Sadeghi"
+                },
+                {
+                    "authorId": "3169902",
+                    "name": "M. Comerio"
+                }
+            ]
+        },
+        {
+            "paperId": "54a4e01271623e1cee91a5dcbe5f0f0352f46b0a",
+            "title": "Continuous generation of versioned collections' members with RML and LDES",
+            "abstract": ". When evolving datasets are used to generate a knowledge graph, it is usually challenging to keep the graph synchronized in a timely manner when changes occur in the source data. Current approaches fully regenerate a knowledge graph in such cases, which may be time consuming depending on the data type, size, and update frequency. We propose a continuous knowledge graph generation approach that can be applied on different types of data sources. We describe continuously updating knowledge graph versions represented as a Linked Data Events Stream, and use an rml processor for rdf generation. In this paper, we present our approach and demonstrate it on different types of data such as bike-sharing, public transport timetables, and weather data. By describing entities with unique, immutable, and reproducible iri s, we were able to identify changes in the original data collection, reducing the number of materialized triples and generation time. Our use-cases show the importance of mechanisms to derive unique and stable iri strategies of data source updates, to enable efficient knowledge graph generation pipelines. In the future, we will extend our approach to handle deletions in data collections, and conduct an extensive performance evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1742222115",
+                    "name": "Dylan Van Assche"
+                },
+                {
+                    "authorId": "2166201716",
+                    "name": "Sitt Min Oo"
+                },
+                {
+                    "authorId": "147144342",
+                    "name": "J. Rojas"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                }
+            ]
+        },
+        {
+            "paperId": "63fdd8ce255810a0ea41fa6165726172ffc8844c",
+            "title": "A Policy-Oriented Architecture for Enforcing Consent in Solid",
+            "abstract": "The Solid project aims to restore end-users\u2019 control over their data by decoupling services and applications from data storage. To realize data governance by the user, the Solid Protocol 0.9 relies on Web Access Control, which has limited expressivity and interpretability. In contrast, recent privacy and data protection regulations impose strict requirements on personal data processing applications and the scope of their operation. The Web Access Control mechanism lacks the granularity and contextual awareness needed to enforce these regulatory requirements. Therefore, we suggest a possible architecture for relating Solid\u2019s low-level technical access control rules with higher-level concepts such as the legal basis and purpose for data processing, the abstract types of information being processed, and the data sharing preferences of the data subject. Our architecture combines recent technical efforts by the Solid community panels with prior proposals made by researchers on the use of ODRL and SPECIAL policies as an extension to Solid\u2019s authorization mechanism. While our approach appears to avoid a number of pitfalls identified in previous research, further work is needed before it can be implemented and used in a practical setting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2163311366",
+                    "name": "Laurens Debackere"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                },
+                {
+                    "authorId": "3403873",
+                    "name": "Ruben Taelman"
+                },
+                {
+                    "authorId": "1723397",
+                    "name": "R. Verborgh"
+                }
+            ]
+        },
+        {
+            "paperId": "91f892ac43dd211e8bb96be90f7163168acf1087",
+            "title": "Linked Data Event Streams in Solid LDP containers",
+            "abstract": "The Solid Project \u2013 at the time of writing \u2013 uses containers with resources in them as defined in the LDP specification as a way to give developers the flexibility to write to a storage in the way they see fit. With cross-app interoperability and read performance in mind, choosing an application profile and container-resource structure becomes guesswork for the app writing the data, as all possible apps reading from the storage are not yet defined. Event sourcing is a technique used in data architecture to decouple writing from reading. Multiple views will always stay in-sync with an event source, or allow one to view a historic state or study the changes that happened over time. In this paper, we study whether we can use the current version of the Solid protocol to store an event source using the Linked Data Event Streams (LDES) specification. We successfully implemented a client library, which we tested on the use case of storing your live location with history, for both reading and writing in two modes: version aware and version agnostic. However, the current Solid protocol based on LDP also shows some limitations towards event sourcing: (i) re-balancing the hypermedia structure publishing the LDES is not possible due to slash semantics, (ii) as the event source is fully managed by clients, a faulty client may corrupt the event source, and (iii) the client is also in charge of enforcing the retention policy, having to delete older resources one by one, while they have no information about the internal limits of the Solid storage. We conclude that the Solid spec as-is can be used to store an event source, and that client libraries can create an abstraction of the history without any server-specific functionality. However, we also had to work our way around some limitations, putting more strain on the client, and want to open the discussion on whether the Solid server protocol needs to be extended for more native support of the event sourcing pattern.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2193563735",
+                    "name": "Wout Slabbinck"
+                },
+                {
+                    "authorId": "40580115",
+                    "name": "R. Dedecker"
+                },
+                {
+                    "authorId": "122897181",
+                    "name": "S. Vasireddy"
+                },
+                {
+                    "authorId": "1723397",
+                    "name": "R. Verborgh"
+                },
+                {
+                    "authorId": "2370758",
+                    "name": "Pieter Colpaert"
+                }
+            ]
+        }
+    ]
+}

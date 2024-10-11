@@ -1,0 +1,389 @@
+{
+    "authorId": "1381900594",
+    "papers": [
+        {
+            "paperId": "1da54405069963eaa1bba7a221b483a04ab5cdd6",
+            "title": "Text2DB: Integration-Aware Information Extraction with Large Language Model Agents",
+            "abstract": "The task of information extraction (IE) is to extract structured knowledge from text. However, it is often not straightforward to utilize IE output due to the mismatch between the IE ontology and the downstream application needs. We propose a new formulation of IE T EXT 2DB that emphasizes the integration of IE output and the target database (or knowledge base). Given a user instruction, a document set, and a database, our task requires the model to update the database with values from the document set to satisfy the user instruction. This task requires understanding user instructions for what to extract and adapting to the given DB/KB schema for how to extract on the fly. To evaluate this new task, we introduce a new benchmark featuring common demands such as data infilling, row population, and column addition. In addition, we propose an LLM agent framework OPAL (Observe-Plan-Analyze LLM) which includes an Observer component that interacts with the database, the Planner component that generates a code-based plan with calls to IE models, and the Analyzer component that provides feedback regarding code quality before execution. Experiments show that OPAL can successfully adapt to diverse database schemas by generating different code plans and calling the required IE models. We also highlight difficult cases such as dealing with large databases with complex dependencies and extraction hallucination, which we believe deserve further investigation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2293818809",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2187778761",
+                    "name": "Sizhe Zhou"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "4525feb8500de21bd99144365ad32b188c297eb2",
+            "title": "Unsupervised Episode Detection for Large-Scale News Events",
+            "abstract": "Episodic structures are inherently interpretable and adaptable to evolving large-scale key events. However, state-of-the-art automatic event detection methods overlook event episodes and, therefore, struggle with these crucial characteristics. This paper introduces a novel task, episode detection, aimed at identifying episodes from a news corpus containing key event articles. An episode describes a cohesive cluster of core entities (e.g.,\"protesters\",\"police\") performing actions at a specific time and location. Furthermore, an episode is a significant part of a larger group of episodes under a particular key event. Automatically detecting episodes is challenging because, unlike key events and atomic actions, we cannot rely on explicit mentions of times and locations to distinguish between episodes or use semantic similarity to merge inconsistent episode co-references. To address these challenges, we introduce EpiMine, an unsupervised episode detection framework that (1) automatically identifies the most salient, key-event-relevant terms and segments, (2) determines candidate episodes in an article based on natural episodic partitions estimated through shifts in discriminative term combinations, and (3) refines and forms final episode clusters using large language model-based reasoning on the candidate episodes. We construct three diverse, real-world event datasets annotated at the episode level. EpiMine outperforms all baselines on these datasets by an average 59.2% increase across all metrics.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1490933248",
+                    "name": "Priyanka Kargupta"
+                },
+                {
+                    "authorId": "48379289",
+                    "name": "Yunyi Zhang"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2307763214",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "6c2f36544226a34ede9aaae4a9655595ab543611",
+            "title": "Establishing Knowledge Preference in Language Models",
+            "abstract": "Language models are known to encode a great amount of factual knowledge through pretraining. However, such knowledge might be insufficient to cater to user requests, requiring the model to integrate external knowledge sources and adhere to user-provided specifications. When answering questions about ongoing events, the model should use recent news articles to update its response; when asked to provide recommendations, the model should prioritize user specifications over retrieved product reviews; when some facts are edited in the model, the updated facts should override all prior knowledge learned by the model even if they are conflicting. In all of the cases above, the model faces a decision between its own parametric knowledge, (retrieved) contextual knowledge, and user instruction knowledge. In this paper, we (1) unify such settings into the problem of knowledge preference and define a three-level preference hierarchy over these knowledge sources; (2) compile a collection of existing datasets IfQA, MQuAKE, and MRQA covering a combination of settings (with/without user specifications, with/without context documents) to systematically evaluate how well models obey the intended knowledge preference; and (3) propose a dataset synthesis method that composes diverse question-answer pairs with user assumptions and related context to directly fine-tune LMs for instilling the hierarchy of knowledge. We demonstrate that a 7B model, fine-tuned on only a few thousand examples automatically generated by our proposed method, effectively achieves superior performance (more than 18% improvement across all evaluation benchmarks) in adhering to the desired knowledge preference hierarchy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187778761",
+                    "name": "Sizhe Zhou"
+                },
+                {
+                    "authorId": "2293818809",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "db40e0e2a7557bb4c9e4ab2e4f81bc3ec85abb17",
+            "title": "Multi-LoRA Composition for Image Generation",
+            "abstract": "Low-Rank Adaptation (LoRA) is extensively utilized in text-to-image models for the accurate rendition of specific elements like distinct characters or unique styles in generated images. Nonetheless, existing methods face challenges in effectively composing multiple LoRAs, especially as the number of LoRAs to be integrated grows, thus hindering the creation of complex imagery. In this paper, we study multi-LoRA composition through a decoding-centric perspective. We present two training-free methods: LoRA Switch, which alternates between different LoRAs at each denoising step, and LoRA Composite, which simultaneously incorporates all LoRAs to guide more cohesive image synthesis. To evaluate the proposed approaches, we establish ComposLoRA, a new comprehensive testbed as part of this research. It features a diverse range of LoRA categories with 480 composition sets. Utilizing an evaluation framework based on GPT-4V, our findings demonstrate a clear improvement in performance with our methods over the prevalent baseline, particularly evident when increasing the number of LoRAs in a composition.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2237948786",
+                    "name": "Yelong Shen"
+                },
+                {
+                    "authorId": "2287785375",
+                    "name": "Shuohang Wang"
+                },
+                {
+                    "authorId": "2238052953",
+                    "name": "Yadong Lu"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2287794511",
+                    "name": "Donghan Yu"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2249538838",
+                    "name": "Weizhu Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "ede9e29755a9856b820137869f136a9b5842f43c",
+            "title": "Investigating Instruction Tuning Large Language Models on Graphs",
+            "abstract": "Inspired by the recent advancements of Large Language Models (LLMs) in NLP tasks, there's growing interest in applying LLMs to graph-related tasks. This study delves into the capabilities of instruction-following LLMs for engaging with real-world graphs, aiming to offer empirical insights into how LLMs can effectively interact with graphs and generalize across graph tasks. We begin by constructing a dataset designed for instruction tuning, which comprises a diverse collection of 79 graph-related tasks from academic and e-commerce domains, featuring 44,240 training instances and 18,960 test samples. Utilizing this benchmark, our initial investigation focuses on identifying the optimal graph representation that serves as a conduit for LLMs to understand complex graph structures. Our findings indicate that JSON format for graph representation consistently outperforms natural language and code formats across various LLMs and graph types. Furthermore, we examine the key factors that influence the generalization abilities of instruction-tuned LLMs by evaluating their performance on both in-domain and out-of-domain graph tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2315925352",
+                    "name": "Kerui Zhu"
+                },
+                {
+                    "authorId": "2110607118",
+                    "name": "Bo-Wei Huang"
+                },
+                {
+                    "authorId": "2057050247",
+                    "name": "Bowen Jin"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2316709408",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2316048447",
+                    "name": "Kevin Chang"
+                },
+                {
+                    "authorId": "2315946279",
+                    "name": "Shou-De Lin"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "f1ddbb6f3275c8829138a1eddb8d3d4cab1fbbdb",
+            "title": "ProCom: A Few-shot Targeted Community Detection Algorithm",
+            "abstract": "Targeted community detection aims to distinguish a particular type of community in the network. This is an important task with a lot of real-world applications, e.g., identifying fraud groups in transaction networks. Traditional community detection methods fail to capture the specific features of the targeted community and detect all types of communities indiscriminately. Semi-supervised community detection algorithms, emerged as a feasible alternative, are inherently constrained by their limited adaptability and substantial reliance on a large amount of labeled data, which demands extensive domain knowledge and manual effort. In this paper, we address the aforementioned weaknesses in targeted community detection by focusing on few-shot scenarios. We propose ProCom, a novel framework that extends the ``pre-train, prompt'' paradigm, offering a low-resource, high-efficiency, and transferable solution. Within the framework, we devise a dual-level context-aware pre-training method that fosters a deep understanding of latent communities in the network, establishing a rich knowledge foundation for downstream task. In the prompt learning stage, we reformulate the targeted community detection task into pre-training objectives, allowing the extraction of specific knowledge relevant to the targeted community to facilitate effective and efficient inference. By leveraging both the general community knowledge acquired during pre-training and the specific insights gained from the prompt communities, ProCom exhibits remarkable adaptability across different datasets. We conduct extensive experiments on five benchmarks to evaluate the ProCom framework, demonstrating its SOTA performance under few-shot scenarios, strong efficiency, and transferability across diverse datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2181344415",
+                    "name": "Xixi Wu"
+                },
+                {
+                    "authorId": "2316050944",
+                    "name": "Kaiyu Xiong"
+                },
+                {
+                    "authorId": "2212411539",
+                    "name": "Yun Xiong"
+                },
+                {
+                    "authorId": "2316187716",
+                    "name": "Xiaoxin He"
+                },
+                {
+                    "authorId": "2283767676",
+                    "name": "Yao Zhang"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2283820229",
+                    "name": "Jiawei Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "2967ab775f6cdabc6ab59010734f352dd3ebc8d6",
+            "title": "Instruct and Extract: Instruction Tuning for On-Demand Information Extraction",
+            "abstract": "Large language models with instruction-following capabilities open the door to a wider group of users. However, when it comes to information extraction - a classic task in natural language processing - most task-specific systems cannot align well with long-tail ad hoc extraction use cases for non-expert users. To address this, we propose a novel paradigm, termed On-Demand Information Extraction, to fulfill the personalized demands of real-world users. Our task aims to follow the instructions to extract the desired content from the associated text and present it in a structured tabular format. The table headers can either be user-specified or inferred contextually by the model. To facilitate research in this emerging area, we present a benchmark named InstructIE, inclusive of both automatically generated training data, as well as the human-annotated test set. Building on InstructIE, we further develop an On-Demand Information Extractor, ODIE. Comprehensive evaluations on our benchmark reveal that ODIE substantially outperforms the existing open-source models of similar size. Our code and dataset are released on https://github.com/yzjiao/On-Demand-IE.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2263798673",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2261459570",
+                    "name": "Ruining Zhao"
+                },
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "33093952c934beb32dca905193970d240b508042",
+            "title": "RDGSL: Dynamic Graph Representation Learning with Structure Learning",
+            "abstract": "Temporal Graph Networks (TGNs) have shown remarkable performance in learning representation for continuous-time dynamic graphs. However, real-world dynamic graphs typically contain diverse and intricate noise. Noise can significantly degrade the quality of representation generation, impeding the effectiveness of TGNs in downstream tasks. Though structure learning is widely applied to mitigate noise in static graphs, its adaptation to dynamic graph settings poses two significant challenges. i) Noise dynamics. Existing structure learning methods are ill-equipped to address the temporal aspect of noise, hampering their effectiveness in such dynamic and ever-changing noise patterns. ii) More severe noise. Noise may be introduced along with multiple interactions between two nodes, leading to the re-pollution of these nodes and consequently causing more severe noise compared to static graphs. In this paper, we present RDGSL, a representation learning method in continuous-time dynamic graphs. Meanwhile, we propose dynamic graph structure learning, a novel supervisory signal that empowers RDGSL with the ability to effectively combat noise in dynamic graphs. To address the noise dynamics issue, we introduce the Dynamic Graph Filter, where we innovatively propose a dynamic noise function that dynamically captures both current and historical noise, enabling us to assess the temporal aspect of noise and generate a denoised graph. We further propose the Temporal Embedding Learner to tackle the challenge of more severe noise, which utilizes an attention mechanism to selectively turn a blind eye to noisy edges and hence focus on normal edges, enhancing the expressiveness for representation generation that remains resilient to noise. Our method demonstrates robustness towards downstream tasks, resulting in up to 5.1% absolute AUC improvement in evolving classification versus the second-best baseline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2237941783",
+                    "name": "Siwei Zhang"
+                },
+                {
+                    "authorId": "33629364",
+                    "name": "Yun Xiong"
+                },
+                {
+                    "authorId": "49889358",
+                    "name": "Yao Zhang"
+                },
+                {
+                    "authorId": "2237954192",
+                    "name": "Yiheng Sun"
+                },
+                {
+                    "authorId": "95487088",
+                    "name": "Xiangshan Chen"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "8247706",
+                    "name": "Yangyong Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "62454a3694e2e52b8698458440612505a3f7404b",
+            "title": "The Shifted and The Overlooked: A Task-oriented Investigation of User-GPT Interactions",
+            "abstract": "Recent progress in Large Language Models (LLMs) has produced models that exhibit remarkable performance across a variety of NLP tasks. However, it remains unclear whether the existing focus of NLP research accurately captures the genuine requirements of human users. This paper provides a comprehensive analysis of the divergence between current NLP research and the needs of real-world NLP applications via a large-scale collection of user-GPT conversations. We analyze a large-scale collection of real user queries to GPT. We compare these queries against existing NLP benchmark tasks and identify a significant gap between the tasks that users frequently request from LLMs and the tasks that are commonly studied in academic research. For example, we find that tasks such as ``design'' and ``planning'' are prevalent in user interactions but are largely neglected or different from traditional NLP benchmarks. We investigate these overlooked tasks, dissect the practical challenges they pose, and provide insights toward a roadmap to make LLMs better aligned with user needs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2146294891",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "2260822008",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "3310951",
+                    "name": "Dan Iter"
+                },
+                {
+                    "authorId": "4099006",
+                    "name": "Reid Pryzant"
+                },
+                {
+                    "authorId": "2256797847",
+                    "name": "Chenguang Zhu"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "9ecf184dd657640cbd1c4cc0f3c801ebd9d53162",
+            "title": "ReactIE: Enhancing Chemical Reaction Extraction with Weak Supervision",
+            "abstract": "Structured chemical reaction information plays a vital role for chemists engaged in laboratory work and advanced endeavors such as computer-aided drug design. Despite the importance of extracting structured reactions from scientific literature, data annotation for this purpose is cost-prohibitive due to the significant labor required from domain experts. Consequently, the scarcity of sufficient training data poses an obstacle to the progress of related models in this domain. In this paper, we propose ReactIE, which combines two weakly supervised approaches for pre-training. Our method utilizes frequent patterns within the text as linguistic cues to identify specific characteristics of chemical reactions. Additionally, we adopt synthetic data from patent records as distant supervision to incorporate domain knowledge into the model. Experiments demonstrate that ReactIE achieves substantial improvements and outperforms all existing baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2042897657",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2800541",
+                    "name": "Minhao Jiang"
+                },
+                {
+                    "authorId": "50161308",
+                    "name": "Vivian Hu"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2154990549",
+                    "name": "Xuan Wang"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        }
+    ]
+}

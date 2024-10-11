@@ -1,0 +1,345 @@
+{
+    "authorId": "2109268730",
+    "papers": [
+        {
+            "paperId": "046cbc4c77ed65b33e7b95db058284824da3b580",
+            "title": "Parallel Structures in Pre-training Data Yield In-Context Learning",
+            "abstract": "Pre-trained language models (LMs) are capable of in-context learning (ICL): they can adapt to a task with only a few examples given in the prompt without any parameter update. However, it is unclear where this capability comes from as there is a stark distribution shift between pre-training text and ICL prompts. In this work, we study what patterns of the pre-training data contribute to ICL. We find that LMs' ICL ability depends on $\\textit{parallel structures}$ in the pre-training data -- pairs of phrases following similar templates in the same context window. Specifically, we detect parallel structures by checking whether training on one phrase improves prediction of the other, and conduct ablation experiments to study their effect on ICL. We show that removing parallel structures in the pre-training data reduces LMs' ICL accuracy by 51% (vs 2% from random ablation). This drop persists even when excluding common patterns such as n-gram repetitions and long-range dependency, showing the diversity and generality of parallel structures. A closer look at the detected parallel structures indicates that they cover diverse linguistic tasks and span long distances in the data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "2292453983",
+                    "name": "Chen Zhao"
+                },
+                {
+                    "authorId": "2284829022",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "2284760379",
+                    "name": "Kathleen McKeown"
+                },
+                {
+                    "authorId": "2284834386",
+                    "name": "He He"
+                }
+            ]
+        },
+        {
+            "paperId": "8c4fc5962aa3bf6112355d1066916daf9bfbf1ce",
+            "title": "Towards Consistent Natural-Language Explanations via Explanation-Consistency Finetuning",
+            "abstract": "Large language models (LLMs) often generate convincing, fluent explanations. However, different from humans, they often generate inconsistent explanations on different inputs. For example, an LLM may generate the explanation\"all birds can fly\"when answering the question\"Can sparrows fly?\"but meanwhile answer\"no\"to the related question\"Can penguins fly?\". Explanations should be consistent across related examples so that they allow a human to simulate the LLM's decision process on multiple examples. We propose explanation-consistency finetuning (EC-finetuning), a method that adapts LLMs to generate more consistent natural-language explanations on related examples. EC-finetuning involves finetuning LLMs on synthetic data that is carefully constructed to contain consistent explanations. Across a variety of question-answering datasets in various domains, EC-finetuning yields a 10.0% relative explanation consistency improvement on four finetuning datasets, and generalizes to seven out-of-distribution datasets not seen during finetuning (+4.5% relative). Code is available at https://github.com/yandachen/explanation-consistency-finetuning .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "2261286637",
+                    "name": "Chandan Singh"
+                },
+                {
+                    "authorId": "2257099218",
+                    "name": "Xiaodong Liu"
+                },
+                {
+                    "authorId": "52194893",
+                    "name": "Simiao Zuo"
+                },
+                {
+                    "authorId": "2265623278",
+                    "name": "Bin Yu"
+                },
+                {
+                    "authorId": "2284834386",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "2256227181",
+                    "name": "Jianfeng Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "fcc0f6bec11adde8810f26367bac81d5e2c27dde",
+            "title": "Social Orientation: A New Feature for Dialogue Analysis",
+            "abstract": "There are many settings where it is useful to predict and explain the success or failure of a dialogue. Circumplex theory from psychology models the social orientations (e.g., Warm-Agreeable, Arrogant-Calculating) of conversation participants and can be used to predict and explain the outcome of social interactions. Our work is novel in its systematic application of social orientation tags to modeling conversation outcomes. In this paper, we introduce a new data set of dialogue utterances machine-labeled with social orientation tags. We show that social orientation tags improve task performance, especially in low-resource settings, on both English and Chinese language benchmarks. We also demonstrate how social orientation tags help explain the outcomes of social interactions when used in neural models. Based on these results showing the utility of social orientation tags for dialogue outcome prediction tasks, we release our data sets, code, and models that are fine-tuned to predict social orientation tags on dialogue utterances.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2290487086",
+                    "name": "Todd Morrill"
+                },
+                {
+                    "authorId": "2187454516",
+                    "name": "Zhaoyuan Deng"
+                },
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "2024713528",
+                    "name": "Amith Ananthram"
+                },
+                {
+                    "authorId": "2257832906",
+                    "name": "Colin Wayne Leach"
+                },
+                {
+                    "authorId": "2284760379",
+                    "name": "Kathleen McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "69f2ba0f33a54e01de32c616b64e85d5d7194067",
+            "title": "Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations",
+            "abstract": "Large language models (LLMs) are trained to imitate humans to explain human decisions. However, do LLMs explain themselves? Can they help humans build mental models of how LLMs process different inputs? To answer these questions, we propose to evaluate $\\textbf{counterfactual simulatability}$ of natural language explanations: whether an explanation can enable humans to precisely infer the model's outputs on diverse counterfactuals of the explained input. For example, if a model answers\"yes\"to the input question\"Can eagles fly?\"with the explanation\"all birds can fly\", then humans would infer from the explanation that it would also answer\"yes\"to the counterfactual input\"Can penguins fly?\". If the explanation is precise, then the model's answer should match humans' expectations. We implemented two metrics based on counterfactual simulatability: precision and generality. We generated diverse counterfactuals automatically using LLMs. We then used these metrics to evaluate state-of-the-art LLMs (e.g., GPT-4) on two tasks: multi-hop factual reasoning and reward modeling. We found that LLM's explanations have low precision and that precision does not correlate with plausibility. Therefore, naively optimizing human approvals (e.g., RLHF) may not be a sufficient solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2218040104",
+                    "name": "Narutatsu Ri"
+                },
+                {
+                    "authorId": "145756130",
+                    "name": "Chen Zhao"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "46d64d0c1dd240f5035b1af57e738b3f70850ca2",
+            "title": "On the Relation between Sensitivity and Accuracy in In-context Learning",
+            "abstract": "In-context learning (ICL) suffers from oversensitivity to the prompt, making it unreliable in real-world scenarios. We study the sensitivity of ICL with respect to multiple perturbation types. First, we find that label bias obscures the true sensitivity, and therefore prior work may have significantly underestimated ICL sensitivity. Second, we observe a strong negative correlation between ICL sensitivity and accuracy: predictions sensitive to perturbations are less likely to be correct. Motivated by these findings, we propose \\textsc{SenSel}, a few-shot selective prediction method that abstains from sensitive predictions. Experiments on ten classification datasets show that \\textsc{SenSel} consistently outperforms two commonly used confidence-based and entropy-based baselines on abstention decisions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "2115458974",
+                    "name": "Chen Zhao"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                },
+                {
+                    "authorId": "144533687",
+                    "name": "He He"
+                }
+            ]
+        },
+        {
+            "paperId": "f9ad1fffa1cc76fd5db3ff758c0839492c5147c4",
+            "title": "In-context Learning Distillation: Transferring Few-shot Learning Ability of Pre-trained Language Models",
+            "abstract": "Given the success with in-context learning of large pre-trained language models, we introduce in-context learning distillation to transfer in-context few-shot learning ability from large models to smaller models. We propose to combine in-context learning objectives with language modeling objectives to distill both the ability to read in-context examples and task knowledge to the smaller models. We perform in-context learning distillation under two different few-shot learning paradigms: Meta In-context Tuning (Meta-ICT) and Multitask In-context Tuning (Multitask-ICT). Multitask-ICT performs better on multitask few-shot learning but also requires more computation than Meta-ICT. Our method shows consistent improvements for both Meta-ICT and Multitask-ICT on two benchmarks: LAMA and CrossFit. Our extensive experiments and analysis reveal that in-context learning objectives and language modeling objectives are complementary under the Multitask-ICT paradigm. In-context learning objectives achieve the best performance when combined with language modeling objectives.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145952181",
+                    "name": "Yukun Huang"
+                },
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "3df7970d24ac31744b772455307feb71d3d092b0",
+            "title": "Cross-language Sentence Selection via Data Augmentation and Rationale Training",
+            "abstract": "This paper proposes an approach to cross-language sentence selection in a low-resource setting. It uses data augmentation and negative sampling techniques on noisy parallel sentence data to directly learn a cross-lingual embedding-based query relevance model. Results show that this approach performs as well as or better than multiple state-of-the-art machine translation + monolingual retrieval systems trained on the same parallel data. Moreover, when a rationale training secondary objective is applied to encourage the model to match word alignment hints from a phrase-based statistical machine translation model, consistent improvements are seen across three language pairs (English-Somali, English-Swahili and English-Tagalog) over a variety of state-of-the-art baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "98736546",
+                    "name": "C. Kedzie"
+                },
+                {
+                    "authorId": "143913642",
+                    "name": "Suraj Nair"
+                },
+                {
+                    "authorId": "2107033402",
+                    "name": "Petra Galuvsvc'akov'a"
+                },
+                {
+                    "authorId": "144142360",
+                    "name": "Rui Zhang"
+                },
+                {
+                    "authorId": "1737250",
+                    "name": "Douglas W. Oard"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "6bd91a3183ddb844641acb9f3fe9faec6a9ff617",
+            "title": "Meta-learning via Language Model In-context Tuning",
+            "abstract": "The goal of meta-learning is to learn to adapt to a new task with only a few labeled examples. Inspired by the recent progress in large language models, we propose \\textit{in-context tuning} (ICT), which recasts task adaptation and prediction as a simple sequence prediction problem: to form the input sequence, we concatenate the task instruction, labeled in-context examples, and the target input to predict; to meta-train the model to learn from in-context examples, we fine-tune a pre-trained language model (LM) to predict the target label given the input sequence on a collection of tasks.We benchmark our method on two collections of text classification tasks: LAMA and BinaryClfs. Compared to MAML which adapts the model through gradient descent, our method leverages the inductive bias of pre-trained LMs to perform pattern matching, and outperforms MAML by an absolute 6% average AUC-ROC score on BinaryClfs, gaining more advantage with increasing model size. Compared to non-fine-tuned in-context learning (i.e. prompting a raw LM), in-context tuning meta-trains the model to learn from in-context examples. On BinaryClfs, ICT improves the average AUC-ROC score by an absolute 10%, and reduces the variance due to example ordering by 6x and example choices by 2x.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                }
+            ]
+        },
+        {
+            "paperId": "73cc6b5a93696cea121381044de95eecf7c134c5",
+            "title": "Improved Synthetic Training for Reading Comprehension",
+            "abstract": "Automatically generated synthetic training examples have been shown to improve performance in machine reading comprehension (MRC). Compared to human annotated gold standard data, synthetic training data has unique properties, such as high availability at the possible expense of quality. In view of such differences, in this paper, we explore novel applications of synthetic examples to MRC. Our proposed pre-training and knowledge distillation strategies show significant improvements over existing methods. In a particularly surprising discovery, we observe that synthetic distillation often yields students that can outperform the teacher model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "2937809",
+                    "name": "Md Arafat Sultan"
+                },
+                {
+                    "authorId": "2003616894",
+                    "name": "Vittorio Castelli Department of Computer Science"
+                },
+                {
+                    "authorId": "2064583853",
+                    "name": "C. University"
+                },
+                {
+                    "authorId": "2003625986",
+                    "name": "AI IBMResearch"
+                },
+                {
+                    "authorId": "102991163",
+                    "name": "T. J. W. R. Center"
+                },
+                {
+                    "authorId": "72379552",
+                    "name": "New York."
+                },
+                {
+                    "authorId": "2264493292",
+                    "name": "Usa"
+                }
+            ]
+        },
+        {
+            "paperId": "48a53893fbddf75ba15adf19e46e47266e218551",
+            "title": "Detecting and Reducing Bias in a High Stakes Domain",
+            "abstract": "Gang-involved youth in cities such as Chicago sometimes post on social media to express their aggression towards rival gangs and previous research has demonstrated that a deep learning approach can predict aggression and loss in posts. To address the possibility of bias in this sensitive application, we developed an approach to systematically interpret the state of the art model. We found, surprisingly, that it frequently bases its predictions on stop words such as \u201ca\u201d or \u201con\u201d, an approach that could harm social media users who have no aggressive intentions. To tackle this bias, domain experts annotated the rationales, highlighting words that explain why a tweet is labeled as \u201caggression\u201d. These new annotations enable us to quantitatively measure how justified the model predictions are, and build models that drastically reduce bias. Our study shows that in high stake scenarios, accuracy alone cannot guarantee a good system and we need new evaluation methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "2767140",
+                    "name": "D. Patton"
+                },
+                {
+                    "authorId": "14789611",
+                    "name": "C. Selous"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        }
+    ]
+}

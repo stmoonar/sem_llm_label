@@ -1,0 +1,298 @@
+{
+    "authorId": "23911916",
+    "papers": [
+        {
+            "paperId": "1be2584d082822e2ba9d6d8c47313a4ad3e653a5",
+            "title": "HAC: Hash-grid Assisted Context for 3D Gaussian Splatting Compression",
+            "abstract": "3D Gaussian Splatting (3DGS) has emerged as a promising framework for novel view synthesis, boasting rapid rendering speed with high fidelity. However, the substantial Gaussians and their associated attributes necessitate effective compression techniques. Nevertheless, the sparse and unorganized nature of the point cloud of Gaussians (or anchors in our paper) presents challenges for compression. To address this, we make use of the relations between the unorganized anchors and the structured hash grid, leveraging their mutual information for context modeling, and propose a Hash-grid Assisted Context (HAC) framework for highly compact 3DGS representation. Our approach introduces a binary hash grid to establish continuous spatial consistencies, allowing us to unveil the inherent spatial relations of anchors through a carefully designed context model. To facilitate entropy coding, we utilize Gaussian distributions to accurately estimate the probability of each quantized attribute, where an adaptive quantization module is proposed to enable high-precision quantization of these attributes for improved fidelity restoration. Additionally, we incorporate an adaptive masking strategy to eliminate invalid Gaussians and anchors. Importantly, our work is the pioneer to explore context-based compression for 3DGS representation, resulting in a remarkable size reduction of over $75\\times$ compared to vanilla 3DGS, while simultaneously improving fidelity, and achieving over $11\\times$ size reduction over SOTA 3DGS compression approach Scaffold-GS. Our code is available here: https://github.com/YihangChen-ee/HAC",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2292402500",
+                    "name": "Yihang Chen"
+                },
+                {
+                    "authorId": "2115911378",
+                    "name": "Qianyi Wu"
+                },
+                {
+                    "authorId": "2293171528",
+                    "name": "Jianfei Cai"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "2293229097",
+                    "name": "Weiyao Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "32224d02e30b8e83bd6c97b260e973070b134ffb",
+            "title": "Text-Enhanced Data-Free Approach for Federated Class-Incremental Learning",
+            "abstract": "Federated Class-Incremental Learning (FCIL) is an underexplored yet pivotal issue, involving the dynamic addition of new classes in the context of federated learning. In this field, Data-Free Knowledge Transfer (DFKT) plays a crucial role in addressing catastrophic forgetting and data privacy problems. However, prior approaches lack the crucial synergy between DFKT and the model training phases, causing DFKT to encounter difficulties in generating high-quality data from a non-anchored latent space of the old task model. In this paper, we introduce LANDER (Label Text Centered Data-Free Knowledge Transfer) to address this issue by utilizing label text embeddings (LTE) produced by pretrained language models. Specifically, during the model training phase, our approach treats LTE as anchor points and constrains the feature embeddings of corresponding training samples around them, enriching the surrounding area with more meaningful information. In the DFKT phase, by using these LTE anchors, LANDER can synthesize more meaningful samples, thereby effectively addressing the forgetting problem. Additionally, instead of tightly constraining embeddings toward the anchor, the Bounding Loss is introduced to encourage sample embeddings to remain flexible within a defined radius. This approach preserves the natural differences in sample embeddings and mitigates the embedding overlap caused by heterogeneous federated settings. Extensive experiments conducted on CIFAR100, Tiny-ImageNet, and ImageNet demonstrate that LANDER significantly outperforms previous methods and achieves state-of-the-art performance in FCIL. The code is available at https://github.com/tmtuan1307/lander.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2249550142",
+                    "name": "Minh-Tuan Tran"
+                },
+                {
+                    "authorId": "2249909946",
+                    "name": "Trung Le"
+                },
+                {
+                    "authorId": "2249761604",
+                    "name": "Xuan-May Le"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "1400659302",
+                    "name": "Dinh Q. Phung"
+                }
+            ]
+        },
+        {
+            "paperId": "3b202b468a35558978aeae0f5ad0ce682b5dc5c3",
+            "title": "EraseDiff: Erasing Data Influence in Diffusion Models",
+            "abstract": "We introduce EraseDiff, an unlearning algorithm designed for diffusion models to address concerns related to data memorization. Our approach formulates the unlearning task as a constrained optimization problem, aiming to preserve the utility of the diffusion model on retained data while removing the information associated with the data to be forgotten. This is achieved by altering the generative process to deviate away from the ground-truth denoising procedure. To manage the computational complexity inherent in the diffusion process, we develop a first-order method for solving the optimization problem, which has shown empirical benefits. Extensive experiments and thorough comparisons with state-of-the-art algorithms demonstrate that EraseDiff effectively preserves the model's utility, efficacy, and efficiency.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279024960",
+                    "name": "Jing Wu"
+                },
+                {
+                    "authorId": "2277844544",
+                    "name": "Trung Le"
+                },
+                {
+                    "authorId": "2249117091",
+                    "name": "Munawar Hayat"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                }
+            ]
+        },
+        {
+            "paperId": "482b57ae20f573928a0d3ce484e90cb4e47080aa",
+            "title": "Scissorhands: Scrub Data Influence via Connection Sensitivity in Networks",
+            "abstract": "Machine unlearning has become a pivotal task to erase the influence of data from a trained model. It adheres to recent data regulation standards and enhances the privacy and security of machine learning applications. In this work, we present a new machine unlearning approach Scissorhands. Initially, Scissorhands identifies the most pertinent parameters in the given model relative to the forgetting data via connection sensitivity. By reinitializing the most influential top-k percent of these parameters, a trimmed model for erasing the influence of the forgetting data is obtained. Subsequently, Scissorhands fine-tunes the trimmed model with a gradient projection-based approach, seeking parameters that preserve information on the remaining data while discarding information related to the forgetting data. Our experimental results, conducted across image classification and image generation tasks, demonstrate that Scissorhands, showcases competitive performance when compared to existing methods. Source code is available at https://github.com/JingWu321/Scissorhands.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279024960",
+                    "name": "Jing Wu"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                }
+            ]
+        },
+        {
+            "paperId": "5e830a9d4014e23ab184f4237757b07aa801a512",
+            "title": "A CNN system for segmenting tropical cyclones neighborhoods in geostationary images",
+            "abstract": "We present progress towards an automated system that can segment tropical cyclones (TCs) and their neighboring regions from geostationary infrared brightness temperature images. The purpose of these segmentation maps is to provide an area that can be used to compute the contribution of TCs to the upwelling radiation budget. Our previous work has identified regions of TC clouds, but it is known that TCs impact a larger area than just those covered by their clouds. Hence it is necessary to properly label both the TC clouds and the associated clear-sky regions in the vicinity of the TCs. Here we present a convolutional neural network method that can be used to reproduce cloud masks generated with our earlier, first-principles algorithm. We also discuss our efforts to create an extended training set of TC masks that include both clouds and clear sky.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2281491761",
+                    "name": "Joshua May"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "3259962",
+                    "name": "J. Tyo"
+                },
+                {
+                    "authorId": "2281620832",
+                    "name": "Liang Hu"
+                },
+                {
+                    "authorId": "2319935069",
+                    "name": "Elizabeth A Ritchie-Tyo"
+                }
+            ]
+        },
+        {
+            "paperId": "8f41be301d668f36e76e8c536329f8aeefc8d1cb",
+            "title": "SeCo-INR: Semantically Conditioned Implicit Neural Representations for Improved Medical Image Super-Resolution",
+            "abstract": "Implicit Neural Representations (INRs) have recently advanced the field of deep learning due to their ability to learn continuous representations of signals without the need for large training datasets. Although INR methods have been studied for medical image super-resolution, their adaptability to localized priors in medical images has not been extensively explored. Medical images contain rich anatomical divisions that could provide valuable local prior information to enhance the accuracy and robustness of INRs. In this work, we propose a novel framework, referred to as the Semantically Conditioned INR (SeCo-INR), that conditions an INR using local priors from a medical image, enabling accurate model fitting and interpolation capabilities to achieve super-resolution. Our framework learns a continuous representation of the semantic segmentation features of a medical image and utilizes it to derive the optimal INR for each semantic region of the image. We tested our framework using several medical imaging modalities and achieved higher quantitative scores and more realistic super-resolution outputs compared to state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Engineering",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2271469404",
+                    "name": "Mevan Ekanayake"
+                },
+                {
+                    "authorId": "2269186799",
+                    "name": "Zhifeng Chen"
+                },
+                {
+                    "authorId": "2064565749",
+                    "name": "Gary F. Egan"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "2269169946",
+                    "name": "Zhaolin Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "ac6b6a606dcd4cdc3e406f86e1da5e812c41d216",
+            "title": "Improving Deep Learning MRI Reconstruction with Contrastive Learning Pretraining",
+            "abstract": "Image reconstruction in Magnetic Resonance Imaging (MRI) aims to generate a high-quality image of the underlying anatomy from a minimal amount of measurements acquired during the scanning process. Deep learning (DL) has recently become the state-of-the-art approach for MRI reconstruction, often employing deep neural networks that learn to transform undersampled measurements into high-quality images, typically in a data-driven supervised manner. In our work, we propose a self-supervised contrastive learning pretraining framework for MRI that enhances the latent space for downstream reconstruction. Our framework is based on the fundamental principle of mutual information maximization, and we attempt to maximize the mutual information between different views of the same scan in latent space using contrastive learning. The learned latent space representations are subsequently utilized for reconstruction, and our experiments on various DL reconstruction models demonstrate significant improvements in performance both qualitatively and quantitatively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2271469404",
+                    "name": "Mevan Ekanayake"
+                },
+                {
+                    "authorId": "2269186799",
+                    "name": "Zhifeng Chen"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "2064565749",
+                    "name": "Gary F. Egan"
+                },
+                {
+                    "authorId": "2269169946",
+                    "name": "Zhaolin Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "b500b369ab588819d79d0191926e6a8ff2745029",
+            "title": "Automated Segmentation of Tropical Cyclone Clouds in Geostationary Infrared Images",
+            "abstract": "We demonstrate that a convolutional neural network (CNN) based on the U-Net architecture can be used to create a cloud mask dataset that accurately identifies the clouds associated with tropical cyclones (TCs). The CNN can be trained using a single year of cloud masks produced by an earlier first-principles algorithm, and the results are insensitive to the specific year of training data used. These masks were originally created to compute the upwelling radiation due to TC clouds, and we show that the predicted masks result in both pixel areas and radiation calculations that are nearly identical to those computed using the earlier masks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2281491761",
+                    "name": "Joshua May"
+                },
+                {
+                    "authorId": "2281620832",
+                    "name": "Liang Hu"
+                },
+                {
+                    "authorId": "2238879324",
+                    "name": "Elizabeth A. Ritchie"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "3259962",
+                    "name": "J. Tyo"
+                }
+            ]
+        },
+        {
+            "paperId": "d1a0142954814bab9d01d330a67082f630b35e72",
+            "title": "FIRE: A Dataset for Feedback Integration and Refinement Evaluation of Multimodal Models",
+            "abstract": "Vision language models (VLMs) have achieved impressive progress in diverse applications, becoming a prevalent research direction. In this paper, we build FIRE, a feedback-refinement dataset, consisting of 1.1M multi-turn conversations that are derived from 27 source datasets, empowering VLMs to spontaneously refine their responses based on user feedback across diverse tasks. To scale up the data collection, FIRE is collected in two components: FIRE-100K and FIRE-1M, where FIRE-100K is generated by GPT-4V, and FIRE-1M is freely generated via models trained on FIRE-100K. Then, we build FIRE-Bench, a benchmark to comprehensively evaluate the feedback-refining capability of VLMs, which contains 11K feedback-refinement conversations as the test data, two evaluation settings, and a model to provide feedback for VLMs. We develop the FIRE-LLaVA model by fine-tuning LLaVA on FIRE-100K and FIRE-1M, which shows remarkable feedback-refining capability on FIRE-Bench and outperforms untrained VLMs by 50%, making more efficient user-agent interactions and underscoring the significance of the FIRE dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144880657",
+                    "name": "Pengxiang Li"
+                },
+                {
+                    "authorId": "2116492882",
+                    "name": "Zhi Gao"
+                },
+                {
+                    "authorId": "2311710921",
+                    "name": "Bofei Zhang"
+                },
+                {
+                    "authorId": "2319406455",
+                    "name": "Tao Yuan"
+                },
+                {
+                    "authorId": "150352923",
+                    "name": "Yuwei Wu"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "2249719808",
+                    "name": "Yunde Jia"
+                },
+                {
+                    "authorId": "2249712263",
+                    "name": "Song-Chun Zhu"
+                },
+                {
+                    "authorId": "2311849464",
+                    "name": "Qing Li"
+                }
+            ]
+        },
+        {
+            "paperId": "d808742a12873e428f94a35ee0cc4920e21f848f",
+            "title": "LaViP: Language-Grounded Visual Prompting",
+            "abstract": "We introduce a language-grounded visual prompting method to adapt the visual encoder of vision-language models for downstream tasks. By capitalizing on language integration, we devise a parameter-efficient strategy to adjust the input of the visual encoder, eliminating the need to modify or add to the model's parameters. Due to this design choice, our algorithm can operate even in black-box scenarios, showcasing adaptability in situations where access to the model's parameters is constrained. We will empirically demonstrate that, compared to prior art, grounding visual prompts with language enhances both the accuracy and speed of adaptation. Moreover, our algorithm excels in base-to-novel class generalization, overcoming limitations of visual prompting and exhibiting the capacity to generalize beyond seen classes. We thoroughly assess and evaluate our method across a variety of image recognition datasets, such as EuroSAT, UCF101, DTD, and CLEVR, spanning different learning situations, including few-shot adaptation, base-to-novel class generalization, and transfer learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1396866339",
+                    "name": "Nilakshan Kunananthaseelan"
+                },
+                {
+                    "authorId": "2275237740",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                }
+            ]
+        }
+    ]
+}

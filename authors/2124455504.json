@@ -1,0 +1,91 @@
+{
+    "authorId": "2124455504",
+    "papers": [
+        {
+            "paperId": "927601b61dc518d5126f896c8ceb5f909d71ea8c",
+            "title": "GCON: Differentially Private Graph Convolutional Network via Objective Perturbation",
+            "abstract": "Graph Convolutional Networks (GCNs) are a popular machine learning model with a wide range of applications in graph analytics, including healthcare, transportation, and finance. Similar to other neural networks, a GCN may memorize parts of the training data through its model weights. Thus, when the underlying graph data contains sensitive information such as interpersonal relationships, a GCN trained without privacy-protection measures could be exploited to extract private data, leading to potential violations of privacy regulations such as GDPR. To defend against such attacks, a promising approach is to train the GCN with differential privacy (DP), which is a rigorous framework that provides strong privacy protection by injecting random noise into the trained model weights. However, training a large graph neural network under DP is a highly challenging task. Existing solutions either introduce random perturbations in the graph topology, which leads to severe distortions of the network's message passing, or inject randomness into each neighborhood aggregation operation, which leads to a high noise scale when the GCN performs multiple levels of aggregations. Motivated by this, we propose GCON, a novel and effective solution for training GCNs with edge differential privacy. The main idea is to (i) convert the GCN training process into a convex optimization problem, and then (ii) apply the classic idea of perturbing the objective function to satisfy DP. Extensive experiments using multiple benchmark datasets demonstrate GCON's consistent and superior performance over existing solutions in a wide variety of settings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2188261957",
+                    "name": "Jianxin Wei"
+                },
+                {
+                    "authorId": "2268479626",
+                    "name": "Yizheng Zhu"
+                },
+                {
+                    "authorId": "2238546590",
+                    "name": "Xiaokui Xiao"
+                },
+                {
+                    "authorId": "2123127549",
+                    "name": "Ergute Bao"
+                },
+                {
+                    "authorId": "2294848143",
+                    "name": "Yin Yang"
+                },
+                {
+                    "authorId": "2124455504",
+                    "name": "Kuntai Cai"
+                },
+                {
+                    "authorId": "1693070",
+                    "name": "B. Ooi"
+                }
+            ]
+        },
+        {
+            "paperId": "a207e3b032c9d79cd2b5cd5123426a6411733ae3",
+            "title": "PrivLava: Synthesizing Relational Data with Foreign Keys under Differential Privacy",
+            "abstract": "Answering database queries while preserving privacy is an important problem that has attracted considerable research attention in recent years. A canonical approach to this problem is to use synthetic data. That is, we replace the input database R with a synthetic database R* that preserves the characteristics of R, and use R* to answer queries. Existing solutions for relational data synthesis, however, either fail to provide strong privacy protection, or assume that R contains a single relation. In addition, it is challenging to extend the existing single-relation solutions to the case of multiple relations, because they are unable to model the complex correlations induced by the foreign keys. Therefore, multi-relational data synthesis with strong privacy guarantees is an open problem. In this paper, we address the above open problem by proposing PrivLava, the first solution for synthesizing relational data with foreign keys under differential privacy, a rigorous privacy framework widely adopted in both academia and industry. The key idea of PrivLava is to model the data distribution in R using graphical models, with latent variables included to capture the inter-relational correlations caused by foreign keys. We show that PrivLava supports arbitrary foreign key references that form a directed acyclic graph, and is able to tackle the common case when R contains a mixture of public and private relations. Extensive experiments on census data sets and the TPC-H benchmark demonstrate that PrivLava significantly outperforms its competitors in terms of the accuracy of aggregate queries processed on the synthetic data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124455504",
+                    "name": "Kuntai Cai"
+                },
+                {
+                    "authorId": "33285410",
+                    "name": "Xiaokui Xiao"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                }
+            ]
+        },
+        {
+            "paperId": "cbf450edbd9d44915528d4847c433b47fac0bdcf",
+            "title": "Data Synthesis via Differentially Private Markov Random Field",
+            "abstract": "\n This paper studies the synthesis of high-dimensional datasets with differential privacy (DP). The state-of-the-art solution addresses this problem by first generating a set\n M\n of noisy low-dimensional marginals of the input data\n D\n , and then use them to approximate the data distribution in\n D\n for synthetic data generation. However, it imposes several constraints on\n M\n that considerably limits the choices of marginals. This makes it difficult to capture all important correlations among attributes, which in turn degrades the quality of the resulting synthetic data.\n \n \n To address the above deficiency, we propose PrivMRF, a method that (i) also utilizes a set\n M\n of low-dimensional marginals for synthesizing high-dimensional data with DP, but (ii) provides a high degree of flexibility in the choices of marginals. The key idea of PrivMRF is to select an appropriate\n M\n to construct a\n Markov random field (MRF)\n that models the correlations among the attributes in the input data, and then use the MRF for data synthesis. Experimental results on four benchmark datasets show that PrivMRF consistently outperforms the state of the art in terms of the accuracy of counting queries and classification tasks conducted on the synthetic data generated.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124455504",
+                    "name": "Kuntai Cai"
+                },
+                {
+                    "authorId": "2142357622",
+                    "name": "Xiaoyu Lei"
+                },
+                {
+                    "authorId": "2111610446",
+                    "name": "Jianxin Wei"
+                },
+                {
+                    "authorId": "33285410",
+                    "name": "Xiaokui Xiao"
+                }
+            ]
+        }
+    ]
+}

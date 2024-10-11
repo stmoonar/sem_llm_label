@@ -1,0 +1,115 @@
+{
+    "authorId": "2240577157",
+    "papers": [
+        {
+            "paperId": "d663958a9595089dbc37f57722d9cfef8fed5555",
+            "title": "POTEC: Off-Policy Learning for Large Action Spaces via Two-Stage Policy Decomposition",
+            "abstract": "We study off-policy learning (OPL) of contextual bandit policies in large discrete action spaces where existing methods -- most of which rely crucially on reward-regression models or importance-weighted policy gradients -- fail due to excessive bias or variance. To overcome these issues in OPL, we propose a novel two-stage algorithm, called Policy Optimization via Two-Stage Policy Decomposition (POTEC). It leverages clustering in the action space and learns two different policies via policy- and regression-based approaches, respectively. In particular, we derive a novel low-variance gradient estimator that enables to learn a first-stage policy for cluster selection efficiently via a policy-based approach. To select a specific action within the cluster sampled by the first-stage policy, POTEC uses a second-stage policy derived from a regression-based approach within each cluster. We show that a local correctness condition, which only requires that the regression model preserves the relative expected reward differences of the actions within each cluster, ensures that our policy-gradient estimator is unbiased and the second-stage policy is optimal. We also show that POTEC provides a strict generalization of policy- and regression-based approaches and their associated assumptions. Comprehensive experiments demonstrate that POTEC provides substantial improvements in OPL effectiveness particularly in large and structured action spaces.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2240577157",
+                    "name": "Yuta Saito"
+                },
+                {
+                    "authorId": "2283873067",
+                    "name": "Jihan Yao"
+                },
+                {
+                    "authorId": "2240534858",
+                    "name": "Thorsten Joachims"
+                }
+            ]
+        },
+        {
+            "paperId": "de84e20073a02b625f46d159a852923ce405f204",
+            "title": "Scalable and Provably Fair Exposure Control for Large-Scale Recommender Systems",
+            "abstract": "Typical recommendation and ranking methods aim to optimize the satisfaction of users, but they are often oblivious to their impact on the items (e.g., products, jobs, news, video) and their providers. However, there has been a growing understanding that the latter is crucial to consider for a wide range of applications, since it determines the utility of those being recommended. Prior approaches to fairness-aware recommendation optimize a regularized objective to balance user satisfaction and item fairness based on some notion such as exposure fairness. These existing methods have been shown to be effective in controlling fairness, however, most of them are computationally inefficient, limiting their applications to only unrealistically small-scale situations. This indeed implies that the literature does not yet provide a solution to enable a flexible control of exposure in the industry-scale recommender systems where millions of users and items exist. To enable a computationally efficient exposure control even for such large-scale systems, this work develops a scalable, fast, and fair method called exposure-aware ADMM (exADMM ). exADMM is based on implicit alternating least squares (iALS), a conventional scalable algorithm for collaborative filtering, but optimizes a regularized objective to achieve a flexible control of accuracy-fairness tradeoff. A particular technical challenge in developing exADMM is the fact that the fairness regularizer destroys the separability of optimization subproblems for users and items, which is an essential property to ensure the scalability of iALS. Therefore, we develop a set of optimization tools to enable yet scalable fairness control with provable convergence guarantees as a basis of our algorithm. Extensive experiments performed on three recommendation datasets demonstrate that exADMM enables a far more flexible fairness control than the vanilla version of iALS, while being much more computationally efficient than existing fairness-aware recommendation methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "15743044",
+                    "name": "Riku Togashi"
+                },
+                {
+                    "authorId": "2284993338",
+                    "name": "Kenshi Abe"
+                },
+                {
+                    "authorId": "2240577157",
+                    "name": "Yuta Saito"
+                }
+            ]
+        },
+        {
+            "paperId": "eca1f54300311d905729275d11e9afd76ece5ff9",
+            "title": "Long-term Off-Policy Evaluation and Learning",
+            "abstract": "Short- and long-term outcomes of an algorithm often differ, with damaging downstream effects. A known example is a click-bait algorithm, which may increase short-term clicks but damage long-term user engagement. A possible solution to estimate the long-term outcome is to run an online experiment or A/B test for the potential algorithms, but it takes months or even longer to observe the long-term outcomes of interest, making the algorithm selection process unacceptably slow. This work thus studies the problem of feasibly yet accurately estimating the long-term outcome of an algorithm using only historical and short-term experiment data. Existing approaches to this problem either need a restrictive assumption about the short-term outcomes called surrogacy or cannot effectively use short-term outcomes, which is inefficient. Therefore, we propose a new framework called Long-term Off-Policy Evaluation (LOPE), which is based on reward function decomposition. LOPE works under a more relaxed assumption than surrogacy and effectively leverages short-term rewards to substantially reduce the variance. Synthetic experiments show that LOPE outperforms existing approaches particularly when surrogacy is severely violated and the long-term reward is noisy. In addition, real-world experiments on large-scale A/B test data collected on a music streaming platform show that LOPE can estimate the long-term outcome of actual algorithms more accurately than existing feasible methods.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2240577157",
+                    "name": "Yuta Saito"
+                },
+                {
+                    "authorId": "3442017",
+                    "name": "Himan Abdollahpouri"
+                },
+                {
+                    "authorId": "2298040235",
+                    "name": "Jesse Anderton"
+                },
+                {
+                    "authorId": "2182066774",
+                    "name": "Ben Carterette"
+                },
+                {
+                    "authorId": "1684032",
+                    "name": "M. Lalmas"
+                }
+            ]
+        },
+        {
+            "paperId": "92924bf52cdca8697d83938b1744d45cc8f70c52",
+            "title": "CONSEQUENCES \u2014 The 2nd Workshop on Causality, Counterfactuals and Sequential Decision-Making for Recommender Systems",
+            "abstract": "Recommender systems make algorithmic decisions about what will be shown to whom, billions of times every day across the web. These decisions have consequences that can often be far-reaching. Indeed, users that are exposed to certain items, might be convinced to explore interests that are novel to them. At the same time, exposure is often linked to economic incentives for the item producer, which platform-level metrics will be impacted by as well. Feedback loops in existing systems also imply that algorithmic decisions made by the model itself, have an impact on the data future model iterations will be trained and evaluated on. The literature on the intersection of recommender systems, and causal or counterfactual inference, is often focused on short-term, user-focused metrics. Nevertheless, as algorithmic consequences influence many stakeholders, it is our belief that a broader holistic view of the problem can lead to an improved understanding of these systems that touch upon many people\u2019s daily lives. The 2nd edition of the CONSEQUENCES workshop aims to bring together researchers and practitioners who are interested in this research topic, and wish to help shape its future.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2299944027",
+                    "name": "Olivier Jeunen"
+                },
+                {
+                    "authorId": "2240534858",
+                    "name": "Thorsten Joachims"
+                },
+                {
+                    "authorId": "143624743",
+                    "name": "Harrie Oosterhuis"
+                },
+                {
+                    "authorId": "2240577157",
+                    "name": "Yuta Saito"
+                },
+                {
+                    "authorId": "3358912",
+                    "name": "Flavian Vasile"
+                },
+                {
+                    "authorId": "2136913767",
+                    "name": "Yixin Wang"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+    "authorId": "2118571035",
+    "papers": [
+        {
+            "paperId": "179c8c7364caaf3b4d0d03018657aaec6c22a372",
+            "title": "Pruning Before Training May Improve Generalization, Provably",
+            "abstract": "It has been observed in practice that applying pruning-at-initialization methods to neural networks and training the sparsified networks can not only retain the testing performance of the original dense models, but also sometimes even slightly boost the generalization performance. Theoretical understanding for such experimental observations are yet to be developed. This work makes the first attempt to study how different pruning fractions affect the model's gradient descent dynamics and generalization. Specifically, this work considers a classification task for overparameterized two-layer neural networks, where the network is randomly pruned according to different rates at the initialization. It is shown that as long as the pruning fraction is below a certain threshold, gradient descent can drive the training loss toward zero and the network exhibits good generalization performance. More surprisingly, the generalization bound gets better as the pruning fraction gets larger. To complement this positive result, this work further shows a negative result: there exists a large pruning fraction such that while gradient descent is still able to drive the training loss toward zero (by memorizing noise), the generalization performance is no better than random guessing. This further suggests that pruning can change the feature learning process, which leads to the performance drop of the pruned neural network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "3008832",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "303d96bab3766557529ceb1d9d5856c1090a7ba2",
+            "title": "Convergence and Generalization of Wide Neural Networks with Large Bias",
+            "abstract": "This work studies training one-hidden-layer overparameterized ReLU networks via gradient descent in the neural tangent kernel (NTK) regime, where the networks' biases are initialized to some constant rather than zero. The tantalizing benefit of such initialization is that the neural network will provably have sparse activation through the entire training process, which enables fast training procedures. The first set of results characterizes the convergence of gradient descent training. Surprisingly, it is shown that the network after sparsification can achieve as fast convergence as the dense network, in comparison to the previous work indicating that the sparse networks converge slower. Further, the required width is improved to ensure gradient descent can drive the training error towards zero at a linear rate. Secondly, the networks' generalization is studied: a width-sparsity dependence is provided which yields a sparsity-dependent Rademacher complexity and generalization bound. To our knowledge, this is the first sparsity-dependent generalization result via Rademacher complexity. Lastly, this work further studies the least eigenvalue of the limiting NTK. Surprisingly, while it is not shown that trainable biases are necessary, trainable bias, which is enabled by our improved analysis scheme, helps to identify a nice data-dependent region where a much finer analysis of the NTK's smallest eigenvalue can be conducted. This leads to a much sharper lower bound on the NTK's smallest eigenvalue than the one previously known and, consequently, an improved generalization bound.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "152420547",
+                    "name": "Ziyu Jiang"
+                },
+                {
+                    "authorId": "2140713366",
+                    "name": "Ruizhe Zhang"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                }
+            ]
+        },
+        {
+            "paperId": "4fcc61989581a19629039c34816a0f50a6f17819",
+            "title": "On the Neural Tangent Kernel Analysis of Randomly Pruned Neural Networks",
+            "abstract": "Motivated by both theory and practice, we study how random pruning of the weights affects a neural network's neural tangent kernel (NTK). In particular, this work establishes an equivalence of the NTKs between a fully-connected neural network and its randomly pruned version. The equivalence is established under two cases. The first main result studies the infinite-width asymptotic. It is shown that given a pruning probability, for fully-connected neural networks with the weights randomly pruned at the initialization, as the width of each layer grows to infinity sequentially, the NTK of the pruned neural network converges to the limiting NTK of the original network with some extra scaling. If the network weights are rescaled appropriately after pruning, this extra scaling can be removed. The second main result considers the finite-width case. It is shown that to ensure the NTK's closeness to the limit, the dependence of width on the sparsity parameter is asymptotically linear, as the NTK's gap to its limit goes down to zero. Moreover, if the pruning probability is set to zero (i.e., no pruning), the bound on the required width matches the bound for fully-connected neural networks in previous works up to logarithmic factors. The proof of this result requires developing a novel analysis of a network structure which we called \\textit{mask-induced pseudo-networks}. Experiments are provided to evaluate our results.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "6291e9976067bbed346b9e50dac17225e8d1b6f1",
+            "title": "On the Neural Tangent Kernel Analysis of Randomly Pruned Wide Neural Networks",
+            "abstract": "We study the behavior of ultra-wide neural networks when their weights are randomly pruned at the initialization, through the lens of neural tangent kernels (NTKs). We show that for fully-connected neural networks when the network is pruned randomly at the initialization, as the width of each layer grows to in\ufb01nity, the empirical NTK of the pruned neural network converges to that of the original (unpruned) network with some extra scaling factor. Further, if we apply some appropriate scaling after pruning at the initialization, the empirical NTK of the pruned network converges to the exact NTK of the original network, and we provide a non-asymptotic bound on the approximation error in terms of pruning probability. Moreover, when we apply our result to an unpruned network (i.e., we set the probability of pruning a given weight to be zero), our analysis is optimal up to a logarithmic factor in width compared with the result in (Arora et al., 2019). We conduct experiments to validate our theoretical results. We further test our theory by evaluating random pruning across different architectures via image classi\ufb01cation on MNIST and CIFAR-10 and compare its performance with other pruning strategies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "124b816beb126496e0c8148ed2eaaaea8123e150",
+            "title": "Comparison of Accuracy and Scalability of Gauss-Newton and Alternating Least Squares for CP Decomposition",
+            "abstract": "Alternating least squares is the most widely used algorithm for CP tensor decomposition. However, alternating least squares may exhibit slow or no convergence, especially when high accuracy is required. An alternative approach to is to regard CP decomposition as a nonlinear least squares problem and employ Newton-like methods. Direct solution of linear systems involving an approximated Hessian is generally expensive. However, recent advancements have shown that use of an implicit representation of the linear system makes these methods competitive with alternating least squares. We provide the first parallel implementation of a Gauss-Newton method for CP decomposition, which iteratively solves linear least squares problems at each Gauss-Newton step. In particular, we leverage a formulation that employs tensor contractions for implicit matrix-vector products within the conjugate gradient method. The use of tensor contractions enables us to employ the Cyclops library for distributed-memory tensor computations to parallelize the Gauss-Newton approach with a high-level Python implementation. We study the convergence of variants of the Gauss-Newton method relative to ALS for finding exact CP decompositions as well as approximate decompositions of real-world tensors. We evaluate the performance of both sequential and parallel versions of both approaches, and study the parallel scalability on the Stampede2 supercomputer.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "98772624",
+                    "name": "Navjot Singh"
+                },
+                {
+                    "authorId": "2115503326",
+                    "name": "Linjian Ma"
+                },
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "2880213",
+                    "name": "Edgar Solomonik"
+                }
+            ]
+        },
+        {
+            "paperId": "738a5d6c46086e7bb8d8a7298ab02f0bd38f4f95",
+            "title": "Continuous Regular Functions",
+            "abstract": "Following Chaudhuri, Sankaranarayanan, and Vardi, we say that a function $f:[0,1] \\to [0,1]$ is $r$-regular if there is a Buchi automaton that accepts precisely the set of base $r \\in \\mathbb{N}$ representations of elements of the graph of $f$. We show that a continuous $r$-regular function $f$ is locally affine away from a nowhere dense, Lebesgue null, subset of $[0,1]$. As a corollary we establish that every differentiable $r$-regular function is affine. It follows that checking whether an $r$-regular function is differentiable is in $\\operatorname{PSPACE}$. Our proofs rely crucially on connections between automata theory and metric geometry developed by Charlier, Leroy, and Rigo.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "48482602",
+                    "name": "A. Gorman"
+                },
+                {
+                    "authorId": "2658848",
+                    "name": "Philipp Hieronymi"
+                },
+                {
+                    "authorId": "40258169",
+                    "name": "E. Kaplan"
+                },
+                {
+                    "authorId": "66373277",
+                    "name": "Ruoyu Meng"
+                },
+                {
+                    "authorId": "9968030",
+                    "name": "Erik Walsberg"
+                },
+                {
+                    "authorId": "2600094",
+                    "name": "Zihe Wang"
+                },
+                {
+                    "authorId": "65798507",
+                    "name": "Ziqin Xiong"
+                },
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                }
+            ]
+        }
+    ]
+}

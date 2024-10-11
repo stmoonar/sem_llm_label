@@ -1,0 +1,721 @@
+{
+    "authorId": "2086648690",
+    "papers": [
+        {
+            "paperId": "4c7c09dbe7b9633cca6acc82c1a1ff4e8fa8ed94",
+            "title": "Enabling Scalability in the Cloud for Scientific Workflows: An Earth Science Use Case",
+            "abstract": "Scientific discovery increasingly relies on interoperable, multimodular workflows generating intermediate data. The complexity of managing intermediate data may cause performance losses or unexpected costs. This paper defines an approach to composing these scientific workflows on cloud services, focusing on workflow data orchestration, management, and scalability. We demonstrate the effectiveness of our approach with the SOMOSPIE scientific workflow that deploys machine learning (ML) models to predict high-resolution soil moisture using an HPC service (LSF) and an open-source cloud-native service (K8s) and object storage. Our approach enables scientists to scale from coarse-grained to fine-grained resolution and from a small to a larger region of interest. Using our empirical observations, we generate a cost model for the execution of workflows with hidden intermediate data on cloud services.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144098589",
+                    "name": "Paula Olaya"
+                },
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "2230102025",
+                    "name": "Camila Roa"
+                },
+                {
+                    "authorId": "2247793490",
+                    "name": "Ricardo M. Llamas"
+                },
+                {
+                    "authorId": "2053336153",
+                    "name": "R. Vargas"
+                },
+                {
+                    "authorId": "2247726983",
+                    "name": "Sophia Wen"
+                },
+                {
+                    "authorId": "2247772137",
+                    "name": "I-Hsin Chung"
+                },
+                {
+                    "authorId": "6011944",
+                    "name": "Seetharami R. Seelam"
+                },
+                {
+                    "authorId": "2247862262",
+                    "name": "Yoonho Park"
+                },
+                {
+                    "authorId": "2247818644",
+                    "name": "Jay F. Lofstead"
+                },
+                {
+                    "authorId": "2239205012",
+                    "name": "Michela Taufer"
+                }
+            ]
+        },
+        {
+            "paperId": "54336ec8e7fdfcfe0b32dc1b15c77a7a644a125c",
+            "title": "Scalable Incremental Checkpointing using GPU-Accelerated De-Duplication",
+            "abstract": "Writing large amounts of data concurrently to stable storage is a typical I/O pattern of many HPC workflows. This pattern introduces high I/O overheads and results in increased storage space utilization especially for workflows that need to capture the evolution of data structures with high frequency as checkpoints. In this context, many applications, such as graph pattern matching, perform sparse updates to large data structures between checkpoints. For these applications, incremental checkpointing techniques that save only the differences from one checkpoint to another can dramatically reduce the checkpoint sizes, I/O bottlenecks, and storage space utilization. However, such techniques are not without challenges: it is non-trivial to transparently determine what data has changed since a previous checkpoint and assemble the differences in a compact fashion that does not result in excessive metadata. State-of-art data reduction techniques (e.g., compression and de-duplication) have significant limitations when applied to modern HPC applications that leverage GPUs: slow at detecting the differences, generate a large amount of metadata to keep track of the differences, and ignore crucial spatiotemporal checkpoint data redundancy. This paper addresses these challenges by proposing a Merkle tree-based incremental checkpointing method to exploit GPUs\u2019 high memory bandwidth and massive parallelism. Experimental results at scale show a significant reduction of the I/O overhead and space utilization of checkpointing compared with state-of-the-art incremental checkpointing and compression techniques.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057776389",
+                    "name": "Nigel Tan"
+                },
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "2239204779",
+                    "name": "Jack Marquez"
+                },
+                {
+                    "authorId": "34465837",
+                    "name": "K. Teranishi"
+                },
+                {
+                    "authorId": "2092366964",
+                    "name": "Nicolas Morales"
+                },
+                {
+                    "authorId": "2239204689",
+                    "name": "Sanjukta Bhowmick"
+                },
+                {
+                    "authorId": "2239205420",
+                    "name": "Franck Cappello"
+                },
+                {
+                    "authorId": "2239205012",
+                    "name": "Michela Taufer"
+                },
+                {
+                    "authorId": "2239204936",
+                    "name": "Bogdan Nicolae"
+                }
+            ]
+        },
+        {
+            "paperId": "794ba58adbce4d1630bbf3e3001347c2643f9a65",
+            "title": "Workflows Community Summit 2022: A Roadmap Revolution",
+            "abstract": "Scientific workflows have become integral tools in broad scientific computing use cases. Science discovery is increasingly dependent on workflows to orchestrate large and complex scientific experiments that range from execution of a cloud-based data preprocessing pipeline to multi-facility instrument-to-edge-to-HPC computational workflows. Given the changing landscape of scientific computing and the evolving needs of emerging scientific applications, it is paramount that the development of novel scientific workflows and system functionalities seek to increase the efficiency, resilience, and pervasiveness of existing systems and applications. Specifically, the proliferation of machine learning/artificial intelligence (ML/AI) workflows, need for processing large scale datasets produced by instruments at the edge, intensification of near real-time data processing, support for long-term experiment campaigns, and emergence of quantum computing as an adjunct to HPC, have significantly changed the functional and operational requirements of workflow systems. Workflow systems now need to, for example, support data streams from the edge-to-cloud-to-HPC enable the management of many small-sized files, allow data reduction while ensuring high accuracy, orchestrate distributed services (workflows, instruments, data movement, provenance, publication, etc.) across computing and user facilities, among others. Further, to accelerate science, it is also necessary that these systems implement specifications/standards and APIs for seamless (horizontal and vertical) integration between systems and applications, as well as enabling the publication of workflows and their associated products according to the FAIR principles. This document reports on discussions and findings from the 2022 international edition of the Workflows Community Summit that took place on November 29 and 30, 2022.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2140039842",
+                    "name": "Rafael Ferreira da Silva"
+                },
+                {
+                    "authorId": "1799983",
+                    "name": "Rosa M. Badia"
+                },
+                {
+                    "authorId": "2213299279",
+                    "name": "Venkat Bala"
+                },
+                {
+                    "authorId": "152409031",
+                    "name": "Deborah Bard"
+                },
+                {
+                    "authorId": "145466013",
+                    "name": "P. Bremer"
+                },
+                {
+                    "authorId": "2213305232",
+                    "name": "Ian Buckley"
+                },
+                {
+                    "authorId": "2304561021",
+                    "name": "Silvina Ca\u00edno-Lores"
+                },
+                {
+                    "authorId": "3091414",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "46555127",
+                    "name": "C. Goble"
+                },
+                {
+                    "authorId": "1693678",
+                    "name": "S. Jha"
+                },
+                {
+                    "authorId": "2059296518",
+                    "name": "D. Katz"
+                },
+                {
+                    "authorId": "33947553",
+                    "name": "D. Laney"
+                },
+                {
+                    "authorId": "145203664",
+                    "name": "M. Parashar"
+                },
+                {
+                    "authorId": "35531371",
+                    "name": "F. Suter"
+                },
+                {
+                    "authorId": "50329328",
+                    "name": "N. Tyler"
+                },
+                {
+                    "authorId": "2066071",
+                    "name": "T. Uram"
+                },
+                {
+                    "authorId": "1729053",
+                    "name": "I. Altintas"
+                },
+                {
+                    "authorId": "121299213",
+                    "name": "S. Andersson"
+                },
+                {
+                    "authorId": "144110414",
+                    "name": "W. Arndt"
+                },
+                {
+                    "authorId": "2057561277",
+                    "name": "J. Aznar"
+                },
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "1960359",
+                    "name": "B. Bali\u015b"
+                },
+                {
+                    "authorId": "108377253",
+                    "name": "Chris E. Blanton"
+                },
+                {
+                    "authorId": "2199664",
+                    "name": "K. Braghetto"
+                },
+                {
+                    "authorId": "2651403",
+                    "name": "Aharon Brodutch"
+                },
+                {
+                    "authorId": "2213427261",
+                    "name": "Paul Brunk"
+                },
+                {
+                    "authorId": "1707417",
+                    "name": "H. Casanova"
+                },
+                {
+                    "authorId": "104449865",
+                    "name": "Alba Cervera Lierta"
+                },
+                {
+                    "authorId": "2213298896",
+                    "name": "Justin Chigu"
+                },
+                {
+                    "authorId": "1572245697",
+                    "name": "T. Coleman"
+                },
+                {
+                    "authorId": "2065988217",
+                    "name": "Nick Collier"
+                },
+                {
+                    "authorId": "2120657141",
+                    "name": "Iacopo Colonnelli"
+                },
+                {
+                    "authorId": "144108029",
+                    "name": "Frederik Coppens"
+                },
+                {
+                    "authorId": "144361904",
+                    "name": "M. Crusoe"
+                },
+                {
+                    "authorId": "2058475897",
+                    "name": "W. Cunningham"
+                },
+                {
+                    "authorId": "3362335",
+                    "name": "B. Kinoshita"
+                },
+                {
+                    "authorId": "3062856",
+                    "name": "Paolo Di Tommaso"
+                },
+                {
+                    "authorId": "2802678",
+                    "name": "C. Doutriaux"
+                },
+                {
+                    "authorId": "143916458",
+                    "name": "M. Downton"
+                },
+                {
+                    "authorId": "1799299",
+                    "name": "W. Elwasif"
+                },
+                {
+                    "authorId": "144504471",
+                    "name": "B. Enders"
+                },
+                {
+                    "authorId": "17606192",
+                    "name": "Chris Erdmann"
+                },
+                {
+                    "authorId": "1719226",
+                    "name": "T. Fahringer"
+                },
+                {
+                    "authorId": "84336109",
+                    "name": "Ludmilla Figueiredo"
+                },
+                {
+                    "authorId": "1698908",
+                    "name": "Rosa Filgueira"
+                },
+                {
+                    "authorId": "1443779643",
+                    "name": "M. Foltin"
+                },
+                {
+                    "authorId": "2850787",
+                    "name": "A. Fouilloux"
+                },
+                {
+                    "authorId": "2811678",
+                    "name": "Luiz M. R. Gadelha"
+                },
+                {
+                    "authorId": "2053600243",
+                    "name": "Andrew Gallo"
+                },
+                {
+                    "authorId": "2079451840",
+                    "name": "A. G. Saez"
+                },
+                {
+                    "authorId": "1398926410",
+                    "name": "D. Garijo"
+                },
+                {
+                    "authorId": "2027553659",
+                    "name": "R. Gerlach"
+                },
+                {
+                    "authorId": "2072840094",
+                    "name": "Ryan E. Grant"
+                },
+                {
+                    "authorId": "51124744",
+                    "name": "Samuel Grayson"
+                },
+                {
+                    "authorId": "2923900",
+                    "name": "Patricia A. Grubel"
+                },
+                {
+                    "authorId": "48985473",
+                    "name": "Johan O. R. Gustafsson"
+                },
+                {
+                    "authorId": "2308097253",
+                    "name": "Val\u00e9rie Hayot-Sasson"
+                },
+                {
+                    "authorId": "2053161325",
+                    "name": "Oscar R. Hernandez"
+                },
+                {
+                    "authorId": "1967862",
+                    "name": "Marcus Hilbrich"
+                },
+                {
+                    "authorId": "2205970689",
+                    "name": "Annmary Justine"
+                },
+                {
+                    "authorId": "152142617",
+                    "name": "I. Laflotte"
+                },
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "50631038",
+                    "name": "Andr\u00e9 Luckow"
+                },
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "145341601",
+                    "name": "K. Maheshwari"
+                },
+                {
+                    "authorId": "3299313",
+                    "name": "Motohiko Matsuda"
+                },
+                {
+                    "authorId": "3421209",
+                    "name": "Doriana Medic"
+                },
+                {
+                    "authorId": "102153641",
+                    "name": "P. Mendygral"
+                },
+                {
+                    "authorId": "32733424",
+                    "name": "M. Michalewicz"
+                },
+                {
+                    "authorId": "2489735",
+                    "name": "J. Nonaka"
+                },
+                {
+                    "authorId": "40258733",
+                    "name": "Maciej Pawlik"
+                },
+                {
+                    "authorId": "34635073",
+                    "name": "L. Pottier"
+                },
+                {
+                    "authorId": "32809071",
+                    "name": "Line C. Pouchard"
+                },
+                {
+                    "authorId": "2213308235",
+                    "name": "Mathias Putz"
+                },
+                {
+                    "authorId": "46254996",
+                    "name": "Santosh Kumar Radha"
+                },
+                {
+                    "authorId": "1792683",
+                    "name": "L. Ramakrishnan"
+                },
+                {
+                    "authorId": "3445802",
+                    "name": "S. Ristov"
+                },
+                {
+                    "authorId": "1961788",
+                    "name": "P. Romano"
+                },
+                {
+                    "authorId": "21168032",
+                    "name": "Daniel Rosendo"
+                },
+                {
+                    "authorId": "3493555",
+                    "name": "M. Ruefenacht"
+                },
+                {
+                    "authorId": "2771040",
+                    "name": "Katarzyna Rycerz"
+                },
+                {
+                    "authorId": "2653506",
+                    "name": "Nishant Saurabh"
+                },
+                {
+                    "authorId": "144276915",
+                    "name": "V. Savchenko"
+                },
+                {
+                    "authorId": "2057456497",
+                    "name": "Martin Schulz"
+                },
+                {
+                    "authorId": "2037776232",
+                    "name": "C. Simpson"
+                },
+                {
+                    "authorId": "66188222",
+                    "name": "R. Sirvent"
+                },
+                {
+                    "authorId": "8884013",
+                    "name": "Tyler J. Skluzacek"
+                },
+                {
+                    "authorId": "1399487720",
+                    "name": "S. Soiland-Reyes"
+                },
+                {
+                    "authorId": "144712722",
+                    "name": "Renan Souza"
+                },
+                {
+                    "authorId": "1750800",
+                    "name": "S. Sukumar"
+                },
+                {
+                    "authorId": "48064827",
+                    "name": "Ziheng Sun"
+                },
+                {
+                    "authorId": "1746329",
+                    "name": "A. Sussman"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                },
+                {
+                    "authorId": "2072191295",
+                    "name": "Mikhail Titov"
+                },
+                {
+                    "authorId": "50883695",
+                    "name": "Benjam\u00edn Tovar"
+                },
+                {
+                    "authorId": "2643562",
+                    "name": "Aalap Tripathy"
+                },
+                {
+                    "authorId": "1840916",
+                    "name": "M. Turilli"
+                },
+                {
+                    "authorId": "2165288240",
+                    "name": "Bartosz Tuznik"
+                },
+                {
+                    "authorId": "1942636",
+                    "name": "H. V. Dam"
+                },
+                {
+                    "authorId": "2006915860",
+                    "name": "Aurelio Vivas"
+                },
+                {
+                    "authorId": "47766095",
+                    "name": "Logan T. Ward"
+                },
+                {
+                    "authorId": "2946172",
+                    "name": "Patrick M. Widener"
+                },
+                {
+                    "authorId": "153569593",
+                    "name": "Sean R. Wilkinson"
+                },
+                {
+                    "authorId": "2169430585",
+                    "name": "Justyna Zawalska"
+                },
+                {
+                    "authorId": "2065914488",
+                    "name": "M. Zulfiqar"
+                }
+            ]
+        },
+        {
+            "paperId": "a0576615c7cb69464a09aa9412d7b812e129be90",
+            "title": "Studying Latency and Throughput Constraints for Geo-Distributed Data in the National Science Data Fabric",
+            "abstract": "The National Science Data Fabric (NSDF) is our solution to the problem of addressing the data-sharing needs of the growing data science community. NSDF is designed to make sharing data across geographically distributed sites easier for users who lack technical expertise and infrastructure. By developing an easy-to-install software stack, we promote the FAIR data-sharing principles in NSDF while leveraging existing high-speed data transfer infrastructures such as Globus and XRootD. This work shows how we leverage latency and throughput information between geo-distributed NSDF sites with NSDF entry points to optimize the automatic coordination of data placement and transfer across the data fabric, which can further improve the efficiency of data sharing.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "2180092736",
+                    "name": "Heberth Martinez"
+                },
+                {
+                    "authorId": "115114903",
+                    "name": "G. Tarcea"
+                },
+                {
+                    "authorId": "2592350",
+                    "name": "G. Scorzelli"
+                },
+                {
+                    "authorId": "1685087",
+                    "name": "Valerio Pascucci"
+                },
+                {
+                    "authorId": "48478161",
+                    "name": "M. Taufer"
+                }
+            ]
+        },
+        {
+            "paperId": "abb2859cef0c52a336b41358bf3c49f169f338e2",
+            "title": "Orchestration of materials science workflows for heterogeneous resources at large scale",
+            "abstract": "In the era of big data, materials science workflows need to handle large-scale data distribution, storage, and computation. Any of these areas can become a performance bottleneck. We present a framework for analyzing internal material structures (e.g., cracks) to mitigate these bottlenecks. We demonstrate the effectiveness of our framework for a workflow performing synchrotron X-ray computed tomography reconstruction and segmentation of a silica-based structure. Our framework provides a cloud-based, cutting-edge solution to challenges such as growing intermediate and output data and heavy resource demands during image reconstruction and segmentation. Specifically, our framework efficiently manages data storage, scaling up compute resources on the cloud. The multi-layer software structure of our framework includes three layers. A top layer uses Jupyter notebooks and serves as the user interface. A middle layer uses Ansible for resource deployment and managing the execution environment. A low layer is dedicated to resource management and provides resource management and job scheduling on heterogeneous nodes (i.e., GPU and CPU). At the core of this layer, Kubernetes supports resource management, and Dask enables large-scale job scheduling for heterogeneous resources. The broader impact of our work is four-fold: through our framework, we hide the complexity of the cloud\u2019s software stack to the user who otherwise is required to have expertise in cloud technologies; we manage job scheduling efficiently and in a scalable manner; we enable resource elasticity and workflow orchestration at a large scale; and we facilitate moving the study of nonporous structures, which has wide applications in engineering and scientific fields, to the cloud. While we demonstrate the capability of our framework for a specific materials science application, it can be adapted for other applications and domains because of its modular, multi-layer architecture.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "30917917",
+                    "name": "Naweiluo Zhou"
+                },
+                {
+                    "authorId": "2592350",
+                    "name": "G. Scorzelli"
+                },
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "151361274",
+                    "name": "R. Kancharla"
+                },
+                {
+                    "authorId": "40625183",
+                    "name": "Joshua J. Kane"
+                },
+                {
+                    "authorId": "2214506324",
+                    "name": "Robert Wheeler"
+                },
+                {
+                    "authorId": "97623332",
+                    "name": "B. Croom"
+                },
+                {
+                    "authorId": "71216972",
+                    "name": "P. Newell"
+                },
+                {
+                    "authorId": "1685087",
+                    "name": "Valerio Pascucci"
+                },
+                {
+                    "authorId": "48478161",
+                    "name": "M. Taufer"
+                }
+            ]
+        },
+        {
+            "paperId": "2d40b9e16eac9b8a90ee45003b25c11fd309c4af",
+            "title": "NSDF-Cloud: Enabling Ad-Hoc Compute Clusters Across Academic and Commercial Clouds",
+            "abstract": "Computational resources are increasingly provisioned to users through cloud-like interfaces. Both academic and commercial cloud offerings exist, but no single standardized interface for common actions such as configuration, launching, and termination of virtual resources exists. This imposes huge technical burden on domain scientist that attempt to take advantage of these resources; even expert users spend considerable time to port their applications from one cloud platform to another. With this work, we make available to the community a unified API toolkit as well as five in-depth reports on challenges we encountered working with different academic and commercial cloud providers. Our toolkit implements automations for common tasks such as simultaneous launching and termination of large numbers of virtual machines (VM) across the cloud. We demonstrate that our toolkit brings down the time users need to spend launching and terminating these resources to mere minutes, thus enabling ad-hoc multi-cloud clusters.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "144098589",
+                    "name": "Paula Olaya"
+                },
+                {
+                    "authorId": "30917917",
+                    "name": "Naweiluo Zhou"
+                },
+                {
+                    "authorId": "2592350",
+                    "name": "G. Scorzelli"
+                },
+                {
+                    "authorId": "1685087",
+                    "name": "Valerio Pascucci"
+                },
+                {
+                    "authorId": "48478161",
+                    "name": "M. Taufer"
+                }
+            ]
+        },
+        {
+            "paperId": "56c17372ae6c4645f99f2fd2cd68e71ecc9360cb",
+            "title": "NSDF-FUSE: A Testbed for Studying Object Storage via FUSE File Systems",
+            "abstract": "This work presents NSDF-FUSE, a testbed for evaluating settings and performance of FUSE-based file systems on top of S3-compatible object storage; the testbed is part of a suite of services from the National Science Data Fabric (NSDF) project (an NSF-funded project that is delivering cyberinfrastructures for data scientists). We demonstrate how NSDF-FUSE can be deployed to evaluate eight different mapping packages that mount S3-compatible object storage to a file system, as well as six data patterns representing different I/O operations on two cloud platforms. NSDF-FUSE is open-source and can be easily extended to run with other software mapping packages and different cloud platforms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144098589",
+                    "name": "Paula Olaya"
+                },
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "30917917",
+                    "name": "Naweiluo Zhou"
+                },
+                {
+                    "authorId": "1772467",
+                    "name": "J. Lofstead"
+                },
+                {
+                    "authorId": "2592350",
+                    "name": "G. Scorzelli"
+                },
+                {
+                    "authorId": "1685087",
+                    "name": "Valerio Pascucci"
+                },
+                {
+                    "authorId": "48478161",
+                    "name": "M. Taufer"
+                }
+            ]
+        },
+        {
+            "paperId": "8794a8d3d80becdec327ea90663d11afec7147cb",
+            "title": "NSDF-Catalog: Lightweight Indexing Service for Democratizing Data Delivery",
+            "abstract": "Across domains massive amounts of scientific data are generated. Because of the large volume of information, data discoverability is a challenge, especially for scientists who have not generated the data or are from other domains. As part of the NSF-funded National Science Data Fabric (NSDF) initiative, we developed a testbed to demonstrate that these boundaries to data discoverability can be overcome. In support of this effort, we identify the need for indexing large-amounts of scientific data across scientific domains. We propose NSDF-Catalog, a lightweight indexing service with minimal metadata that complements existing domain-specific and rich-metadata col-lections. NSDF-Catalog is designed to facilitate multiple related objectives within a flexible microservice to: (i) coordinate data movements and replication of data from origin repositories within the NSDF federation; (ii) build an inventory of existing scientific data to inform the design of next-generation cyberinfrastructure; and (iii) provide a suite of tools for discovery of datasets for cross-disciplinary research. Our service indexes scientific data at a fine-granularity at the file or object level to inform data distribution strategies and to improve the experience for users from the consumer perspective, with the goal of allowing end-to-end dataflow optimizations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "143923678",
+                    "name": "Christine R. Kirkpatrick"
+                },
+                {
+                    "authorId": "2592350",
+                    "name": "G. Scorzelli"
+                },
+                {
+                    "authorId": "1685087",
+                    "name": "Valerio Pascucci"
+                },
+                {
+                    "authorId": "115114903",
+                    "name": "G. Tarcea"
+                }
+            ]
+        }
+    ]
+}

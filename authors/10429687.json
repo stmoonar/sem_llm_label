@@ -1,0 +1,389 @@
+{
+    "authorId": "10429687",
+    "papers": [
+        {
+            "paperId": "0130f2fab75c30c26635be32fdafa6a03c35af6a",
+            "title": "GraphStorm: all-in-one graph machine learning framework for industry applications",
+            "abstract": "Graph machine learning (GML) is effective in many business applications. However, making GML easy to use and applicable to industry applications with massive datasets remain challenging. We developed GraphStorm, which provides an end-to-end solution for scalable graph construction, graph model training and inference. GraphStorm has the following desirable properties: (a) Easy to use: it can perform graph construction and model training and inference with just a single command; (b) Expert-friendly: GraphStorm contains many advanced GML modeling techniques to handle complex graph data and improve model performance; (c) Scalable: every component in GraphStorm can operate on graphs with billions of nodes and can scale model training and inference to different hardware without changing any code. GraphStorm has been used and deployed for over a dozen billion-scale industry applications after its release in May 2023. It is open-sourced in Github: https://github.com/awslabs/graphstorm.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283934850",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2284037254",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2299062897",
+                    "name": "Qi Zhu"
+                },
+                {
+                    "authorId": "2284069643",
+                    "name": "Jian Zhang"
+                },
+                {
+                    "authorId": "1812965",
+                    "name": "Theodore Vasiloudis"
+                },
+                {
+                    "authorId": "2146354747",
+                    "name": "Runjie Ma"
+                },
+                {
+                    "authorId": "2280741034",
+                    "name": "Houyu Zhang"
+                },
+                {
+                    "authorId": "2255392614",
+                    "name": "Zichen Wang"
+                },
+                {
+                    "authorId": "2121390172",
+                    "name": "Soji Adeshina"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "3125115",
+                    "name": "Alejandro Mottini"
+                },
+                {
+                    "authorId": "2305618086",
+                    "name": "Qingjun Cui"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "2305616323",
+                    "name": "Belinda Zeng"
+                },
+                {
+                    "authorId": "2263543517",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "5a1db85197ca5a608fea362c7d572fafb7193a7e",
+            "title": "Hector: An Efficient Programming and Compilation Framework for Implementing Relational Graph Neural Networks in GPU Architectures",
+            "abstract": "Relational graph neural networks (RGNNs) are graph neural networks with dedicated structures for modeling the different types of nodes and edges in heterogeneous graphs. While RGNNs have been increasingly adopted in many real-world applications due to their versatility and accuracy, they pose performance and system design challenges: inherent memory-intensive computation patterns, the gap between the programming interface and kernel APIs, and heavy programming effort required to optimize kernels caused by their coupling with data layout and heterogeneity. To systematically address these challenges, we propose Hector, a novel two-level intermediate representation and its code generator framework that (a) captures the key properties of RGNN models, and opportunities to reduce memory accesses in inter-operator scheduling and materialization, (b) generates code with flexible data access schemes to eliminate redundant data copies, and (c) decouples model semantics, data layout, and operators-specific optimizations from each other to reduce programming effort. By building on one general matrix multiply (GEMM) template and a node/edge traversal template, Hector achieves up to 9.9\u00d7 speed-up in inference and 43.7\u00d7 speed-up in training compared with the state-of-the-art public systems on select models, RGCN, RGAT and HGT, when running heterogeneous graphs provided by Deep Graph Library (DGL) and Open Graph Benchmark (OGB). In addition, Hector does not trigger any out-of-memory (OOM) exception in these tests. We also propose linear operator reordering and compact materialization to further accelerate the system by up to 3.8\u00d7. As an indicator of the reduction of programming effort, Hector takes in 51 lines of code expressing the three models and generates a total of 8K lines of CUDA and C++ code. Through profiling, we found that higher memory efficiency allows Hector to accommodate larger input and therefore attain higher throughput in forward propagation, while backward propagation is bound by latency introduced by atomic updates and outer products.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047445449",
+                    "name": "Kun Wu"
+                },
+                {
+                    "authorId": "4654870",
+                    "name": "Mert Hidayeto\u011flu"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2728322",
+                    "name": "Sitao Huang"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "143668320",
+                    "name": "Wen-mei W. Hwu"
+                }
+            ]
+        },
+        {
+            "paperId": "6eea7fa1e628c47b16335034faf18e2fb3a01844",
+            "title": "Optimizing Irregular Dense Operators of Heterogeneous GNN Models on GPU",
+            "abstract": "GNN models on heterogeneous graphs have achieved state-of-the-art (SOTA) performance in various graph tasks such as link prediction and node classification. Despite their success in providing SOTA results, popular GNN libraries, such as PyG and DGL, fail to provide fast and efficient solutions for heterogeneous GNN models. One common key bottlenecks of models like RGAT, RGCN, and HGT is relation-specific linear projection. In this paper, we propose two high-performing tensor operators: gather-mm and segment-mm to address the issue. We demonstrate the effectiveness of the proposed operators in training two popular heterogeneous GNN models \u2013 RGCN and HGT. Our proposed approaches outperform the full-batch training time of RGCN by up to 3\u00d7 and mini-batch by up to 2\u00d7.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2167292330",
+                    "name": "Qiang Fu"
+                },
+                {
+                    "authorId": "1710813",
+                    "name": "\u00dcmit V. \u00c7ataly\u00fcrek"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "ad49ecbea3252505b0408047b9cba1343044745e",
+            "title": "PIGEON: Optimizing CUDA Code Generator for End-to-End Training and Inference of Relational Graph Neural Networks",
+            "abstract": "Relational graph neural networks (RGNNs) are graph neural networks (GNNs) with dedicated structures for modeling the different types of nodes and/or edges in heterogeneous graphs. While RGNNs have been increasingly adopted in many real-world applications due to their versatility and accuracy, they pose performance and system design challenges due to their inherent computation patterns, gap between the programming interface and kernel APIs, and heavy programming efforts in optimizing kernels caused by their coupling with data layout and heterogeneity. To systematically address these challenges, we propose Pigeon, a novel two-level intermediate representation (IR) and its code generator framework, that (a) represents the key properties of the RGNN models to bridge the gap between the programming interface and kernel APIs, (b) decouples model semantics, data layout, and operators-speci\ufb01c optimization from each other to reduce programming efforts, (c) expresses and leverages optimization opportunities in inter-operator transforms, data layout, and operator-speci\ufb01c schedules. By building on one general matrix multiply (GEMM) template and a node/edge traversal template, Pigeon achieves up to 7.8 \u00d7 speed-up in inference and 5.6 \u00d7 speed-up in training compared with the state-of-the-art public systems in select models, i.e., RGCN, RGAT, HGT, when running heterogeneous graphs provided by Deep Graph Library (DGL) and Open Graph Benchmark (OGB). Pigeon also triggers fewer out-of-memory (OOM) errors. In addition, we propose linear operator fusion and compact materialization to further accelerate the system by up to 2",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047445449",
+                    "name": "Kun Wu"
+                },
+                {
+                    "authorId": "4654870",
+                    "name": "Mert Hidayeto\u011flu"
+                },
+                {
+                    "authorId": "2284037254",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2306468883",
+                    "name": "Sitao Huang"
+                },
+                {
+                    "authorId": "2283934850",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "2290289857",
+                    "name": "Wen-mei W. Hwu"
+                }
+            ]
+        },
+        {
+            "paperId": "db46dd642e9c03ccc2186c6dd65611f79f220062",
+            "title": "GraphStorm an Easy-to-use and Scalable Graph Neural Network Framework: From Beginners to Heroes",
+            "abstract": "Applying Graph Neural Networks (GNNs) to real-world problems is challenging for machine learning (ML) practitioners due to two major obstacles. The first hurdle is the high barrier to learn programming GNNs from scratch. The second challenge lies in overcoming engineering difficulties when scaling GNN models for large graphs at an industry-level. To address these challenges, GraphStorm, an open-source framework, offers a solution by providing an easy-to-use user interface and an end-to-end GNN training/inference pipeline that seamlessly handles extremely large graphs in a distributed manner This tutorial aims to provide participants with a comprehensive understanding of GraphStorm, including its design principles, target users, and use cases, through presentations. The hands-on sections will enable attendees to walk through four practical GraphStorm use cases that can assist them in leveraging GNNs to address real-world business problems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2151810148",
+                    "name": "Jian Zhang"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "1812965",
+                    "name": "Theodore Vasiloudis"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "2227670581",
+                    "name": "Jim Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "01813d06675d364fe16e4c9075a2a08929d08220",
+            "title": "Nimble GNN Embedding with Tensor-Train Decomposition",
+            "abstract": "This paper describes a new method for representing embedding tables of graph neural networks (GNNs) more compactly via tensor-train (TT) decomposition. We consider the scenario where (a) the graph data that lack node features, thereby requiring the learning of embeddings during training; and (b) we wish to exploit GPU platforms, where smaller tables are needed to reduce host-to-GPU communication even for large-memory GPUs. The use of TT enables a compact parameterization of the embedding, rendering it small enough to fit entirely on modern GPUs even for massive graphs. When combined with judicious schemes for initialization and hierarchical graph partitioning, this approach can reduce the size of node embedding vectors by 1,659 times to 81,362 times on large publicly available benchmark datasets, achieving comparable or better accuracy and significant speedups on multi-GPU systems. In some cases, our model without explicit node features on input can even match the accuracy of models that use node features.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "26395421",
+                    "name": "Chunxing Yin"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "1771649",
+                    "name": "R. Vuduc"
+                }
+            ]
+        },
+        {
+            "paperId": "3d799fa743f84cbfa9073225163d15b986301c9c",
+            "title": "TGL: A General Framework for Temporal GNN Training onBillion-Scale Graphs",
+            "abstract": "Many real world graphs contain time domain information. Temporal Graph Neural Networks capture temporal information as well as structural and contextual information in the generated dynamic node embeddings. Researchers have shown that these embeddings achieve state-of-the-art performance in many different tasks. In this work, we propose TGL, a unified framework for large-scale offline Temporal Graph Neural Network training where users can compose various Temporal Graph Neural Networks with simple configuration files. TGL comprises five main components, a temporal sampler, a mailbox, a node memory module, a memory updater, and a message passing engine. We design a Temporal-CSR data structure and a parallel sampler to efficiently sample temporal neighbors to form training mini-batches. We propose a novel random chunk scheduling technique that mitigates the problem of obsolete node memory when training with a large batch size. To address the limitations of current TGNNs only being evaluated on small-scale datasets, we introduce two large-scale real-world datasets with 0.2 and 1.3 billion temporal edges. We evaluate the performance of TGL on four small-scale datasets with a single GPU and the two large datasets with multiple GPUs for both link prediction and node classification tasks. We compare TGL with the open-sourced code of five methods and show that TGL achieves similar or better accuracy with an average of 13X speedup. Our temporal parallel sampler achieves an average of 173X speedup on a multi-core CPU compared with the baselines. On a 4-GPU machine, TGL can train one epoch of more than one billion temporal edges within 1-10 hours. To the best of our knowledge, this is the first work that proposes a general framework for large-scale Temporal Graph Neural Networks training on multiple GPUs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1443735039",
+                    "name": "Hongkuan Zhou"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "28310338",
+                    "name": "Vasileios Ioannidis"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "2acef35aeaa784b76cd0f8e1fb87808c0f9e9204",
+            "title": "Parallel Algorithms for Masked Sparse Matrix-Matrix Products",
+            "abstract": "Computing the product of two sparse matrices (SpGEMM) is a fundamental operation in various combinatorial and graph algorithms as well as various bioinformatics and data analytics applications for computing inner-product similarities. For an important class of algorithms, only a subset of the output entries are needed, and the resulting operation is known as Masked SpGEMM since a subset of the output entries is considered to be \u201cmasked out\u201d. Existing algorithms for Masked SpGEMM usually do not consider mask as part of multiplication and either first compute a regular SpGEMM followed by masking, or perform a sparse inner product only for output elements that are not masked out. In this work, we investigate various novel algorithms and data structures for this rather challenging and important computation, and provide guidelines on how to design a fast Masked-SpGEMM for shared-memory architectures. Our evaluations show that factors such as matrix and mask density, mask structure and cache behavior play a vital role in attaining high performance for Masked SpGEMM. We evaluate our algorithms on a large number of real-world and synthetic matrices using several real-world benchmarks and show that our algorithms in most cases significantly outperform the state of the art for Masked SpGEMM implementations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "71281404",
+                    "name": "Sr\u0111an Milakovi\u0107"
+                },
+                {
+                    "authorId": "66309326",
+                    "name": "Oguz Selvitopi"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "1796796",
+                    "name": "Zoran Budimlic"
+                },
+                {
+                    "authorId": "2238795",
+                    "name": "A. Bulu\u00e7"
+                }
+            ]
+        },
+        {
+            "paperId": "6893573ab4e2856e9c807d1ddcfed409ab195eb9",
+            "title": "Distributed-memory parallel algorithms for sparse times tall-skinny-dense matrix multiplication",
+            "abstract": "Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We also consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66309326",
+                    "name": "Oguz Selvitopi"
+                },
+                {
+                    "authorId": "107728021",
+                    "name": "Benjamin Brock"
+                },
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "144923447",
+                    "name": "Alok Tripathy"
+                },
+                {
+                    "authorId": "1731111",
+                    "name": "K. Yelick"
+                },
+                {
+                    "authorId": "2238795",
+                    "name": "A. Bulu\u00e7"
+                }
+            ]
+        },
+        {
+            "paperId": "906ab2712e85b79d0da5106f96c0cb3ff6abdd9a",
+            "title": "Distributed-Memory k-mer Counting on GPUs",
+            "abstract": "A fundamental step in many bioinformatics computations is to count the frequency of fixed-length sequences, called k-mers, a problem that has received considerable attention as an important target for shared memory parallelization. With datasets growing at an exponential rate, distributed memory parallelization is becoming increasingly critical. Existing distributed memory k-mer counters do not take advantage of GPUs for accelerating computations. Additionally, they do not employ domain-specific optimizations to reduce communication volume in a distributed environment. In this paper, we present the first GPU-accelerated distributed-memory parallel k-mer counter. We evaluate the communication volume as the major bottleneck in scaling k-mer counting to multiple GPU-equipped compute nodes and implement a supermer-based optimization to reduce the communication volume and to enhance scalability. Our empirical analysis examines the balance of communication to computation on a state-of-the-art system, the Summit supercomputer at Oak Ridge National Lab. Results show overall speedups of up to two orders of magnitude with GPU optimization over CPU-based k mer counters. Furthermore, we show an additional 1.5$\\times$ speedup using the supermer-based communication optimization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "1890685",
+                    "name": "P. Pandey"
+                },
+                {
+                    "authorId": "34629911",
+                    "name": "Marquita Ellis"
+                },
+                {
+                    "authorId": "1757847",
+                    "name": "L. Oliker"
+                },
+                {
+                    "authorId": "2238795",
+                    "name": "A. Bulu\u00e7"
+                },
+                {
+                    "authorId": "1731111",
+                    "name": "K. Yelick"
+                }
+            ]
+        }
+    ]
+}

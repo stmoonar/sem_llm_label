@@ -1,0 +1,121 @@
+{
+    "authorId": "2226600284",
+    "papers": [
+        {
+            "paperId": "8114c2ececb5d6fd960bbb152eff9fed37e920a3",
+            "title": "Segment Any Text: A Universal Approach for Robust, Efficient and Adaptable Sentence Segmentation",
+            "abstract": "Segmenting text into sentences plays an early and crucial role in many NLP systems. This is commonly achieved by using rule-based or statistical methods relying on lexical features such as punctuation. Although some recent works no longer exclusively rely on punctuation, we find that no prior method achieves all of (i) robustness to missing punctuation, (ii) effective adaptability to new domains, and (iii) high efficiency. We introduce a new model - Segment any Text (SaT) - to solve this problem. To enhance robustness, we propose a new pretraining scheme that ensures less reliance on punctuation. To address adaptability, we introduce an extra stage of parameter-efficient fine-tuning, establishing state-of-the-art performance in distinct domains such as verses from lyrics and legal documents. Along the way, we introduce architectural modifications that result in a threefold gain in speed over the previous state of the art and solve spurious reliance on context far in the future. Finally, we introduce a variant of our model with fine-tuning on a diverse, multilingual mixture of sentence-segmented data, acting as a drop-in replacement and enhancement for existing segmentation tools. Overall, our contributions provide a universal approach for segmenting any text. Our method outperforms all baselines - including strong LLMs - across 8 corpora spanning diverse domains and languages, especially in practically relevant situations where text is poorly formatted. Our models and code, including documentation, are available at https://github.com/segment-any-text/wtpsplit under the MIT license.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2226600284",
+                    "name": "Markus Frohmann"
+                },
+                {
+                    "authorId": "2308040260",
+                    "name": "Igor Sterner"
+                },
+                {
+                    "authorId": "2267339029",
+                    "name": "Ivan Vuli'c"
+                },
+                {
+                    "authorId": "2090357303",
+                    "name": "Benjamin Minixhofer"
+                },
+                {
+                    "authorId": "2308040035",
+                    "name": "Markus Schedl"
+                }
+            ]
+        },
+        {
+            "paperId": "c0a30b378bf897412426ba28e65c6392a65859bc",
+            "title": "What the Weight?! A Unified Framework for Zero-Shot Knowledge Composition",
+            "abstract": "The knowledge encapsulated in a model is the core factor determining its final performance on downstream tasks. Much research in NLP has focused on efficient methods for storing and adapting different types of knowledge, e.g., in dedicated modularized structures, and on how to effectively combine these, e.g., by learning additional parameters. However, given the many possible options, a thorough understanding of the mechanisms involved in these compositions is missing, and hence it remains unclear which strategies to utilize. To address this research gap, we propose a novel framework for zero-shot module composition, which encompasses existing and some novel variations for selecting, weighting, and combining parameter modules under a single unified notion. Focusing on the scenario of domain knowledge and adapter layers, our framework provides a systematic unification of concepts, allowing us to conduct the first comprehensive benchmarking study of various zero-shot knowledge composition strategies. In particular, we test two module combination methods and five selection and weighting strategies for their effectiveness and efficiency in an extensive experimental setup. Our results highlight the efficacy of ensembling but also hint at the power of simple though often-ignored weighting methods. Further in-depth analyses allow us to understand the role of weighting vs. top-k selection, and show that, to a certain extent, the performance of adapter composition can even be predicted.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161965407",
+                    "name": "Carolin Holtermann"
+                },
+                {
+                    "authorId": "2226600284",
+                    "name": "Markus Frohmann"
+                },
+                {
+                    "authorId": "2844293",
+                    "name": "Navid Rekabsaz"
+                },
+                {
+                    "authorId": "29891652",
+                    "name": "Anne Lauscher"
+                }
+            ]
+        },
+        {
+            "paperId": "452070cc57a0430baed36bc34b623dd7d31b69b2",
+            "title": "Predicting the Price of Bitcoin Using Sentiment-Enriched Time Series Forecasting",
+            "abstract": "Recently, various methods to predict the future price of financial assets have emerged. One promising approach is to combine the historic price with sentiment scores derived via sentiment analysis techniques. In this article, we focus on predicting the future price of Bitcoin, which is currently the most popular cryptocurrency. More precisely, we propose a hybrid approach, combining time series forecasting and sentiment prediction from microblogs, to predict the intraday price of Bitcoin. Moreover, in addition to standard sentiment analysis methods, we are the first to employ a fine-tuned BERT model for this task. We also introduce a novel weighting scheme in which the weight of the sentiment of each tweet depends on the number of its creator\u2019s followers. For evaluation, we consider periods with strongly varying ranges of Bitcoin prices. This enables us to assess the models w.r.t. robustness and generalization to varied market conditions. Our experiments demonstrate that BERT-based sentiment analysis and the proposed weighting scheme improve upon previous methods. Specifically, our hybrid models that use linear regression as the underlying forecasting algorithm perform best in terms of the mean absolute error (MAE of 2.67) and root mean squared error (RMSE of 3.28). However, more complicated models, particularly long short-term memory networks and temporal convolutional networks, tend to have generalization and overfitting issues, resulting in considerably higher MAE and RMSE scores.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2226600284",
+                    "name": "Markus Frohmann"
+                },
+                {
+                    "authorId": "2226599065",
+                    "name": "Manuel Karner"
+                },
+                {
+                    "authorId": "2226604035",
+                    "name": "Said Khudoyan"
+                },
+                {
+                    "authorId": "2226495439",
+                    "name": "Robert Wagner"
+                },
+                {
+                    "authorId": "144125621",
+                    "name": "M. Schedl"
+                }
+            ]
+        },
+        {
+            "paperId": "c4ca8096f11af3c8657dd8497a4e8dcb2428d7ee",
+            "title": "ScaLearn: Simple and Highly Parameter-Efficient Task Transfer by Learning to Scale",
+            "abstract": "Multi-task learning (MTL) has shown considerable practical benefits, particularly when using language models (LMs). While this is commonly achieved by learning $n$ tasks under a joint optimization procedure, some methods, such as AdapterFusion, divide the problem into two stages: (i) task learning, where knowledge specific to a task is encapsulated within sets of parameters (e.g., adapters), and (ii) transfer, where this already learned knowledge is leveraged for a target task. This separation of concerns provides numerous benefits (e.g., promoting reusability). However, current two-stage MTL introduces a substantial number of additional parameters. We address this issue by leveraging the usefulness of linearly scaling the output representations of source adapters for transfer learning. We introduce ScaLearn, a simple and highly parameter-efficient two-stage MTL method that capitalizes on the knowledge of the source tasks by learning a minimal set of scaling parameters that enable effective transfer to a target task. Our experiments on three benchmarks (GLUE, SuperGLUE, and HumSet) and two encoder LMs show that ScaLearn consistently outperforms strong baselines with a small number of transfer parameters (~ $0.35$% of those of AdapterFusion). Remarkably, we observe that ScaLearn maintains its strong abilities even when further reducing parameters, achieving competitive results with only $8$ transfer parameters per target task. Our proposed approach thus demonstrates the power of simple scaling as a promise for more efficient task transfer.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2226600284",
+                    "name": "Markus Frohmann"
+                },
+                {
+                    "authorId": "2161965407",
+                    "name": "Carolin Holtermann"
+                },
+                {
+                    "authorId": "2184114298",
+                    "name": "Shahed Masoudian"
+                },
+                {
+                    "authorId": "29891652",
+                    "name": "Anne Lauscher"
+                },
+                {
+                    "authorId": "2844293",
+                    "name": "Navid Rekabsaz"
+                }
+            ]
+        }
+    ]
+}

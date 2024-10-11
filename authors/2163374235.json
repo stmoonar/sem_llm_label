@@ -1,0 +1,433 @@
+{
+    "authorId": "2163374235",
+    "papers": [
+        {
+            "paperId": "0bfc804e31eecfd77f45e4ee7f4d629fffdcd628",
+            "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
+            "abstract": "Despite the advancements of open-source large language models (LLMs), e.g., LLaMA, they remain significantly limited in tool-use capabilities, i.e., using external tools (APIs) to fulfill human instructions. The reason is that current instruction tuning largely focuses on basic language tasks but ignores the tool-use domain. This is in contrast to the excellent tool-use capabilities of state-of-the-art (SOTA) closed-source LLMs, e.g., ChatGPT. To bridge this gap, we introduce ToolLLM, a general tool-use framework encompassing data construction, model training, and evaluation. We first present ToolBench, an instruction-tuning dataset for tool use, which is constructed automatically using ChatGPT. Specifically, the construction can be divided into three stages: (i) API collection: we collect 16,464 real-world RESTful APIs spanning 49 categories from RapidAPI Hub; (ii) instruction generation: we prompt ChatGPT to generate diverse instructions involving these APIs, covering both single-tool and multi-tool scenarios; (iii) solution path annotation: we use ChatGPT to search for a valid solution path (chain of API calls) for each instruction. To enhance the reasoning capabilities of LLMs, we develop a novel depth-first search-based decision tree algorithm. It enables LLMs to evaluate multiple reasoning traces and expand the search space. Moreover, to evaluate the tool-use capabilities of LLMs, we develop an automatic evaluator: ToolEval. Based on ToolBench, we fine-tune LLaMA to obtain an LLM ToolLLaMA, and equip it with a neural API retriever to recommend appropriate APIs for each instruction. Experiments show that ToolLLaMA demonstrates a remarkable ability to execute complex instructions and generalize to unseen APIs, and exhibits comparable performance to ChatGPT. Our ToolLLaMA also demonstrates strong zero-shot generalization ability in an out-of-distribution tool-use dataset: APIBench.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50625437",
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "2163374235",
+                    "name": "Shi Liang"
+                },
+                {
+                    "authorId": "2114059497",
+                    "name": "Yining Ye"
+                },
+                {
+                    "authorId": "2214586034",
+                    "name": "Kunlun Zhu"
+                },
+                {
+                    "authorId": "2214613855",
+                    "name": "Lan Yan"
+                },
+                {
+                    "authorId": "2191753738",
+                    "name": "Ya-Ting Lu"
+                },
+                {
+                    "authorId": "2149202150",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2214579778",
+                    "name": "Xin Cong"
+                },
+                {
+                    "authorId": "47274259",
+                    "name": "Xiangru Tang"
+                },
+                {
+                    "authorId": "2226120351",
+                    "name": "Bill Qian"
+                },
+                {
+                    "authorId": "2226184989",
+                    "name": "Sihan Zhao"
+                },
+                {
+                    "authorId": "2214603370",
+                    "name": "Runchu Tian"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "49640256",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "152573911",
+                    "name": "M. Gerstein"
+                },
+                {
+                    "authorId": "2144118403",
+                    "name": "Dahai Li"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "352420ee61a8da783ca7750170793613b18b8d9c",
+            "title": "Tool Learning with Foundation Models",
+            "abstract": "Humans possess an extraordinary ability to create and utilize tools, allowing them to overcome physical limitations and explore new frontiers. With the advent of foundation models, AI systems have the potential to be equally adept in tool use as humans. This paradigm, i.e., tool learning with foundation models, combines the strengths of specialized tools and foundation models to achieve enhanced accuracy, efficiency, and automation in problem-solving. Despite its immense potential, there is still a lack of a comprehensive understanding of key challenges, opportunities, and future endeavors in this field. To this end, we present a systematic investigation of tool learning in this paper. We first introduce the background of tool learning, including its cognitive origins, the paradigm shift of foundation models, and the complementary roles of tools and models. Then we recapitulate existing tool learning research into tool-augmented and tool-oriented learning. We formulate a general tool learning framework: starting from understanding the user instruction, models should learn to decompose a complex task into several subtasks, dynamically adjust their plan through reasoning, and effectively conquer each sub-task by selecting appropriate tools. We also discuss how to train models for improved tool-use capabilities and facilitate the generalization in tool learning. Considering the lack of a systematic tool learning evaluation in prior works, we experiment with 18 representative tools and show the potential of current foundation models in skillfully utilizing tools. Finally, we discuss several open problems that require further investigation for tool learning. In general, we hope this paper could inspire future research in integrating tools with foundation models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50625437",
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2149202150",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2109136284",
+                    "name": "Weize Chen"
+                },
+                {
+                    "authorId": "46649145",
+                    "name": "Ning Ding"
+                },
+                {
+                    "authorId": "52297757",
+                    "name": "Ganqu Cui"
+                },
+                {
+                    "authorId": "1633538428",
+                    "name": "Zheni Zeng"
+                },
+                {
+                    "authorId": "2115640120",
+                    "name": "Yufei Huang"
+                },
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "2118642562",
+                    "name": "Chi Han"
+                },
+                {
+                    "authorId": "51135899",
+                    "name": "Y. Fung"
+                },
+                {
+                    "authorId": "48576745",
+                    "name": "Yusheng Su"
+                },
+                {
+                    "authorId": "2155242767",
+                    "name": "Huadong Wang"
+                },
+                {
+                    "authorId": "2082473972",
+                    "name": "Cheng Qian"
+                },
+                {
+                    "authorId": "2214603370",
+                    "name": "Runchu Tian"
+                },
+                {
+                    "authorId": "2214586034",
+                    "name": "Kunlun Zhu"
+                },
+                {
+                    "authorId": "2163374235",
+                    "name": "Shi Liang"
+                },
+                {
+                    "authorId": "145781166",
+                    "name": "Xingyu Shen"
+                },
+                {
+                    "authorId": "2052218689",
+                    "name": "Bokai Xu"
+                },
+                {
+                    "authorId": "2170500945",
+                    "name": "Zhen Zhang"
+                },
+                {
+                    "authorId": "2114059497",
+                    "name": "Yining Ye"
+                },
+                {
+                    "authorId": "2155882844",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "2214664440",
+                    "name": "Ziwei Tang"
+                },
+                {
+                    "authorId": "2106388389",
+                    "name": "Jing Yi"
+                },
+                {
+                    "authorId": "2109388429",
+                    "name": "Yu Zhu"
+                },
+                {
+                    "authorId": "2146517842",
+                    "name": "Zhenning Dai"
+                },
+                {
+                    "authorId": "2214613855",
+                    "name": "Lan Yan"
+                },
+                {
+                    "authorId": "2214579778",
+                    "name": "Xin Cong"
+                },
+                {
+                    "authorId": "2191753738",
+                    "name": "Ya-Ting Lu"
+                },
+                {
+                    "authorId": "2150606888",
+                    "name": "Weilin Zhao"
+                },
+                {
+                    "authorId": "2214586078",
+                    "name": "Yuxiang Huang"
+                },
+                {
+                    "authorId": "2213334016",
+                    "name": "Jun-Han Yan"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2143570016",
+                    "name": "Xian Sun"
+                },
+                {
+                    "authorId": "2144118403",
+                    "name": "Dahai Li"
+                },
+                {
+                    "authorId": "80842917",
+                    "name": "Jason Phang"
+                },
+                {
+                    "authorId": "3443627",
+                    "name": "Cheng Yang"
+                },
+                {
+                    "authorId": "2116417519",
+                    "name": "Tongshuang Wu"
+                },
+                {
+                    "authorId": "2072975663",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "46ac88bb0acbf736840ff8a392cec2bf43d917e1",
+            "title": "Exploring Format Consistency for Instruction Tuning",
+            "abstract": "Instruction tuning has emerged as a promising approach to enhancing large language models in following human instructions. It is shown that increasing the diversity and number of instructions in the training data can consistently enhance generalization performance, which facilitates a recent endeavor to collect various instructions and integrate existing instruction tuning datasets into larger collections. However, different users have their unique ways of expressing instructions, and there often exist variations across different datasets in the instruction styles and formats, i.e., format inconsistency. In this work, we propose a framework named Unified Instruction Tuning (UIT), which calls OpenAI APIs for automatic format transfer among different instruction tuning datasets such as PromptSource, FLAN and CrossFit. With the framework, we (1) demonstrate the necessity of maintaining format consistency in instruction tuning; (2) improve the generalization performance on unseen instructions on T5-LM-xl; (3) provide a novel perplexity-based denoising method to reduce the noise of automatic format transfer to make the UIT framework more practical and a smaller offline model based on GPT-J that achieves comparable format transfer capability to OpenAI APIs to reduce costs in practice. Further analysis regarding variations of targeted formats and other effects is intended.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2163374235",
+                    "name": "Shi Liang"
+                },
+                {
+                    "authorId": "2214586034",
+                    "name": "Kunlun Zhu"
+                },
+                {
+                    "authorId": "2214603370",
+                    "name": "Runchu Tian"
+                },
+                {
+                    "authorId": "50625437",
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "2155242767",
+                    "name": "Huadong Wang"
+                },
+                {
+                    "authorId": "2214579778",
+                    "name": "Xin Cong"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "3028405",
+                    "name": "Xiaojiang Liu"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "c3ed333a37a6d9a0fcf1dad3106a114f66a45b99",
+            "title": "WebCPM: Interactive Web Search for Chinese Long-form Question Answering",
+            "abstract": "Long-form question answering (LFQA) aims at answering complex, open-ended questions with detailed, paragraph-length responses. The de facto paradigm of LFQA necessitates two procedures: information retrieval, which searches for relevant supporting facts, and information synthesis, which integrates these facts into a coherent answer. In this paper, we introduce WebCPM, the first Chinese LFQA dataset. One unique feature of WebCPM is that its information retrieval is based on interactive web search, which engages with a search engine in real time. Following WebGPT, we develop a web search interface. We recruit annotators to search for relevant information using our interface and then answer questions. Meanwhile, the web search behaviors of our annotators would be recorded. In total, we collect 5,500 high-quality question-answer pairs, together with 15,372 supporting facts and 125,954 web search actions. We fine-tune pre-trained language models to imitate human behaviors for web search and to generate answers based on the collected facts. Our LFQA pipeline, built on these fine-tuned models, generates answers that are no worse than human-written ones in 32.5% and 47.5% of the cases on our dataset and DuReader, respectively. The interface, dataset, and codes are publicly available at https://github.com/thunlp/WebCPM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50625437",
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "2113441349",
+                    "name": "Zihan Cai"
+                },
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2214613855",
+                    "name": "Lan Yan"
+                },
+                {
+                    "authorId": "2163374235",
+                    "name": "Shi Liang"
+                },
+                {
+                    "authorId": "2214586034",
+                    "name": "Kunlun Zhu"
+                },
+                {
+                    "authorId": "2149202150",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "46649145",
+                    "name": "Ning Ding"
+                },
+                {
+                    "authorId": "2155242767",
+                    "name": "Huadong Wang"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "51466208",
+                    "name": "Fanchao Qi"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                },
+                {
+                    "authorId": "49640256",
+                    "name": "Jie Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "4259ee32a21153e62feb633ecc5d9ba48b615923",
+            "title": "Bi-Link: Bridging Inductive Link Predictions from Text via Contrastive Learning of Transformers and Prompts",
+            "abstract": "Inductive knowledge graph completion requires models to comprehend the underlying semantics and logic patterns of relations. With the advance of pretrained language models, recent research have designed transformers for link prediction tasks. However, empirical studies show that linearizing triples affects the learning of relational patterns, such as inversion and symmetry. In this paper, we propose Bi-Link, a contrastive learning framework with probabilistic syntax prompts for link predictions. Using grammatical knowledge of BERT, we efficiently search for relational prompts according to learnt syntactical patterns that generalize to large knowledge graphs. To better express symmetric relations, we design a symmetric link prediction model, establishing bidirectional linking between forward prediction and backward prediction. This bidirectional linking accommodates flexible self-ensemble strategies at test time. In our experiments, Bi-Link outperforms recent baselines on link prediction datasets (WN18RR, FB15K-237, and Wikidata5M). Furthermore, we construct Zeshel-Ind as an in-domain inductive entity linking the environment to evaluate Bi-Link. The experimental results demonstrate that our method yields robust representations which can generalize under domain shift.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2147421343",
+                    "name": "Bohua Peng"
+                },
+                {
+                    "authorId": "2163374235",
+                    "name": "Shi Liang"
+                },
+                {
+                    "authorId": "145481136",
+                    "name": "Mobarakol Islam"
+                }
+            ]
+        },
+        {
+            "paperId": "cfad587ac0fa1caf8f731f8d587317a6fc994522",
+            "title": "DeepGenBind: a novel deep learning model for predicting transcription factor binding sites",
+            "abstract": "Transcription factors are a class of protein factors that bind directly or indirectly to RNA polymerases and regulate the initiation of transcription by recognizing cis-acting elements in the DNA sequence. The prediction of transcription factor binding sites is an important part of the study of gene transcriptional regulation. Therefore, accurate prediction of TFBS helps one to understand and study the spatiotemporal nature of transcriptional regulation of target genes by different transcription factors. In recent years, an increasing number of deep learning methods have been used to predict transcription factor binding sites, however, existing methods still much room to improve performance. In this paper, we present a deep learning framework combining convolutional neural networks and recurrent neural networks to predict transcription factor binding sites, called DeepGenBind, for the systematic identification of transcription factor binding sites from DNA sequences. The novelty of our proposed approach relies on two key aspects: (1) the framework combines a three-layer parallel convolutional neural network CNN with a two-layer LSTM to efficiently extract useful features from large-scale genomic sequences obtained by high-throughput sequencing techniques (2) the use of k-mer coding to transform DNA sequences, with the transformed short sequences allowing for better data reading. Experimental results on 165 datasets from ENCODE show that DeepGenBind outperforms several other state-of-the-art methods in identifying transcription factor binding sites. In addition, we tested the effect of varying the k-mer vector length on model performance, demonstrating the variation in model performance under different k-mer related parameter settings. Overall, DeepGenBind is a useful tool for the cost-effective and accurate identification of potential transcription factor binding sites in biological genomes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2158627450",
+                    "name": "Wei Wang"
+                },
+                {
+                    "authorId": "2199191334",
+                    "name": "Xiaolin Jiao"
+                },
+                {
+                    "authorId": "46424946",
+                    "name": "Bin Sun"
+                },
+                {
+                    "authorId": "2163374235",
+                    "name": "Shi Liang"
+                },
+                {
+                    "authorId": "2121188252",
+                    "name": "Xianfang Wang"
+                },
+                {
+                    "authorId": "2143725462",
+                    "name": "Yun Zhou"
+                }
+            ]
+        }
+    ]
+}

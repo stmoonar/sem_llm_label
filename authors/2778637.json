@@ -1,0 +1,357 @@
+{
+    "authorId": "2778637",
+    "papers": [
+        {
+            "paperId": "7fcac8ab38f294d5e0112ae258c8c1b74bde27fb",
+            "title": "Learning from Children: Improving Image-Caption Pretraining via Curriculum",
+            "abstract": "Image-caption pretraining has been quite successfully used for downstream vision tasks like zero-shot image classification and object detection. However, image-caption pretraining is still a hard problem -- it requires multiple concepts (nouns) from captions to be aligned to several objects in images. To tackle this problem, we go to the roots -- the best learner, children. We take inspiration from cognitive science studies dealing with children's language learning to propose a curriculum learning framework. The learning begins with easy-to-align image caption pairs containing one concept per caption. The difficulty is progressively increased with each new phase by adding one more concept per caption. Correspondingly, the knowledge acquired in each learning phase is utilized in subsequent phases to effectively constrain the learning problem to aligning one new concept-object pair in each phase. We show that this learning strategy improves over vanilla image-caption training in various settings -- pretraining from scratch, using a pretrained image or/and pretrained text encoder, low data regime etc.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1381855534",
+                    "name": "Hammad A. Ayyubi"
+                },
+                {
+                    "authorId": "2156736146",
+                    "name": "R. Lokesh"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "2153712529",
+                    "name": "Bohong Wu"
+                },
+                {
+                    "authorId": "2122374530",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "9af4690bf545845e1cda6f35b212f46e9d64977c",
+            "title": "GOCA: Guided Online Cluster Assignment for Self-Supervised Video Representation Learning",
+            "abstract": "Clustering is a ubiquitous tool in unsupervised learning. Most of the existing self-supervised representation learning methods typically cluster samples based on visually dominant features. While this works well for image-based self-supervision, it often fails for videos, which require understanding motion rather than focusing on background. Using optical flow as complementary information to RGB can alleviate this problem. However, we observe that a naive combination of the two views does not provide meaningful gains. In this paper, we propose a principled way to combine two views. Specifically, we propose a novel clustering strategy where we use the initial cluster assignment of each view as prior to guide the final cluster assignment of the other view. This idea will enforce similar cluster structures for both views, and the formed clusters will be semantically abstract and robust to noisy inputs coming from each individual view. Additionally, we propose a novel regularization strategy to address the feature collapse problem, which is common in cluster-based self-supervised learning methods. Our extensive evaluation shows the effectiveness of our learned representations on downstream tasks, e.g., video retrieval and action recognition. Specifically, we outperform the state of the art by 7% on UCF and 4% on HMDB for video retrieval, and 5% on UCF and 6% on HMDB for video classification",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145254119",
+                    "name": "Huseyin Coskun"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "2109010418",
+                    "name": "Joshua L. Moore"
+                },
+                {
+                    "authorId": "50516802",
+                    "name": "F. Tombari"
+                },
+                {
+                    "authorId": "2109118080",
+                    "name": "Chen Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "c11ee33dea3f83cd77dcbc14684ee305b7a7e184",
+            "title": "SGEITL: Scene Graph Enhanced Image-Text Learning for Visual Commonsense Reasoning",
+            "abstract": "Answering complex questions about images is an ambitious goal for machine intelligence, which requires a joint understanding of images, text, and commonsense knowledge, as well as a strong reasoning ability. Recently, multimodal Transformers have made a great progress in the task of Visual Commonsense Reasoning (VCR), by jointly understanding visual objects and text tokens through layers of cross-modality attention. However, these approaches do not utilize the rich structure of the scene and the interactions between objects which are essential in answering complex commonsense questions. We propose a\nScene Graph Enhanced Image-Text Learning (SGEITL) framework to incorporate visual scene graph in commonsense reasoning. In order to exploit the scene graph structure, at the model structure level, we propose a multihop graph transformer for regularizing attention interaction among hops. As for pre-training, a scene-graph-aware pre-training method is proposed to leverage structure knowledge extracted in visual scene graph. Moreover, we introduce a method to train and generate domain relevant visual scene graph using textual annotations in a weakly-supervised manner. Extensive experiments on VCR and other tasks show significant performance boost compared with the state-of-the-art methods, and prove the efficacy of each proposed component.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2513111",
+                    "name": "Zhecan Wang"
+                },
+                {
+                    "authorId": "30156979",
+                    "name": "Haoxuan You"
+                },
+                {
+                    "authorId": "2108904535",
+                    "name": "Liunian Harold Li"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "2148559528",
+                    "name": "Suji Park"
+                },
+                {
+                    "authorId": "2057016",
+                    "name": "Yiqing Liang"
+                },
+                {
+                    "authorId": "2782886",
+                    "name": "Kai-Wei Chang"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "fc123daef8ab12025c2e5e6162a0c94370faa4c5",
+            "title": "Unsupervised Vision-and-Language Pre-training Without Parallel Images and Captions",
+            "abstract": "Pre-trained contextual vision-and-language (V&L) models have achieved impressive performance on various benchmarks. However, existing models require a large amount of parallel image-caption data for pre-training. Such data are costly to collect and require cumbersome curation. Inspired by unsupervised machine translation, we investigate if a strong V&L representation model can be learned through unsupervised pre-training without image-caption corpora. In particular, we propose to conduct \u201cmask-and-predict\u201d pre-training on text-only and image-only corpora and introduce the object tags detected by an object recognition model as anchor points to bridge two modalities. We find that such a simple approach achieves performance close to a model pre-trained with aligned data, on four English V&L benchmarks. Our work challenges the widely held notion that aligned data is necessary for V&L pre-training, while significantly reducing the amount of supervision needed for V&L models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108904535",
+                    "name": "Liunian Harold Li"
+                },
+                {
+                    "authorId": "30156979",
+                    "name": "Haoxuan You"
+                },
+                {
+                    "authorId": "2513111",
+                    "name": "Zhecan Wang"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "2782886",
+                    "name": "Kai-Wei Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "04f7834936bf8f455f804c4d84b52fcffc6784ee",
+            "title": "Cross-media Structured Common Space for Multimedia Event Extraction",
+            "abstract": "We introduce a new task, MultiMedia Event Extraction, which aims to extract events and their arguments from multimedia documents. We develop the first benchmark and collect a dataset of 245 multimedia news articles with extensively annotated events and arguments. We propose a novel method, Weakly Aligned Structured Embedding (WASE), that encodes structured representations of semantic information from textual and visual data into a common embedding space. The structures are aligned across modalities by employing a weakly supervised training strategy, which enables exploiting available resources without explicit cross-media annotation. Compared to uni-modal state-of-the-art methods, our approach achieves 4.0% and 9.8% absolute F-score gains on text event argument role labeling and visual event extraction. Compared to state-of-the-art multimedia unstructured representations, we achieve 8.3% and 5.0% absolute F-score gains on multimedia event extraction and argument role labeling, respectively. By utilizing images, we extract 21.4% more event mentions than traditional text-only methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3361240",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "145653969",
+                    "name": "Qi Zeng"
+                },
+                {
+                    "authorId": "153188991",
+                    "name": "Spencer Whitehead"
+                },
+                {
+                    "authorId": "152347526",
+                    "name": "Di Lu"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "16f82c1dae2f6e5149c1be95165d7081f08298b6",
+            "title": "Weakly-supervised VisualBERT: Pre-training without Parallel Images and Captions",
+            "abstract": "Pre-trained contextual vision-and-language (V&L) models have brought impressive performance improvement on various benchmarks. However, the paired text-image data required for pre-training are hard to collect and scale up. We investigate if a strong V&L representation model can be learned without text-image pairs. We propose Weakly-supervised VisualBERT with the key idea of conducting \"mask-and-predict\" pre-training on language-only and image-only corpora. Additionally, we introduce the object tags detected by an object recognition model as anchor points to bridge two modalities. Evaluation on four V&L benchmarks shows that Weakly-supervised VisualBERT achieves similar performance with a model pre-trained with paired data. Besides, pre-training on more image-only data further improves a model that already has access to aligned data, suggesting the possibility of utilizing billions of raw images available to enhance V&L models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "32562635",
+                    "name": "Liunian Harold Li"
+                },
+                {
+                    "authorId": "30156979",
+                    "name": "Haoxuan You"
+                },
+                {
+                    "authorId": "2513111",
+                    "name": "Zhecan Wang"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "2782886",
+                    "name": "Kai-Wei Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "33558aa3311b256880346524981408449b58bc58",
+            "title": "General Partial Label Learning via Dual Bipartite Graph Autoencoder",
+            "abstract": "We formulate a practical yet challenging problem: General Partial Label Learning (GPLL). Compared to the traditional Partial Label Learning (PLL) problem, GPLL relaxes the supervision assumption from instance-level \u2014 a label set partially labels an instance \u2014 to group-level: 1) a label set partially labels a group of instances, where the within-group instance-label link annotations are missing, and 2) cross-group links are allowed \u2014 instances in a group may be partially linked to the label set from another group. Such ambiguous group-level supervision is more practical in real-world scenarios as additional annotation on the instance-level is no longer required, e.g., face-naming in videos where the group consists of faces in a frame, labeled by a name set in the corresponding caption. In this paper, we propose a novel graph convolutional network (GCN) called Dual Bipartite Graph Autoencoder (DB-GAE) to tackle the label ambiguity challenge of GPLL. First, we exploit the cross-group correlations to represent the instance groups as dual bipartite graphs: within-group and cross-group, which reciprocally complements each other to resolve the linking ambiguities. Second, we design a GCN autoencoder to encode and decode them, where the decodings are considered as the refined results. It is worth noting that DB-GAE is self-supervised and transductive, as it only uses the group-level supervision without a separate offline training stage. Extensive experiments on two real-world datasets demonstrate that DB-GAE significantly outperforms the best baseline over absolute 0.159 F1-score and 24.8% accuracy. We further offer analysis on various levels of label ambiguities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108342501",
+                    "name": "Brian Chen"
+                },
+                {
+                    "authorId": "1993581583",
+                    "name": "Bo Wu"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "497d765b1eccbc9e99a37592a1860744559695db",
+            "title": "Open-Vocabulary Object Detection Using Captions",
+            "abstract": "Despite the remarkable accuracy of deep neural networks in object detection, they are costly to train and scale due to supervision requirements. Particularly, learning more object categories typically requires proportionally more bounding box annotations. Weakly supervised and zero-shot learning techniques have been explored to scale object detectors to more categories with less supervision, but they have not been as successful and widely adopted as supervised models. In this paper, we put forth a novel formulation of the object detection problem, namely open-vocabulary object detection, which is more general, more practical, and more effective than weakly supervised and zero-shot approaches. We propose a new method to train object detectors using bounding box annotations for a limited set of object categories, as well as image-caption pairs that cover a larger variety of objects at a significantly lower cost. We show that the proposed method can detect and localize objects for which no bounding box annotation is provided during training, at a significantly higher accuracy than zero-shot approaches. Meanwhile, objects with bounding box annotation can be detected almost as accurately as supervised methods, which is significantly better than weakly supervised baselines. Accordingly, we establish a new state of the art for scalable object detection.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "2722334",
+                    "name": "Kevin Dela Rosa"
+                },
+                {
+                    "authorId": "1811433",
+                    "name": "Derek Hao Hu"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "51c8975d88aa66781300e8ca88272ab3112445c0",
+            "title": "GAIA: A Fine-grained Multimedia Knowledge Extraction System",
+            "abstract": "We present the first comprehensive, open source multimedia knowledge extraction system that takes a massive stream of unstructured, heterogeneous multimedia data from various sources and languages as input, and creates a coherent, structured knowledge base, indexing entities, relations, and events, following a rich, fine-grained ontology. Our system, GAIA, enables seamless search of complex graph queries, and retrieves multimedia evidence including text, images and videos. GAIA achieves top performance at the recent NIST TAC SM-KBP2019 evaluation. The system is publicly available at GitHub and DockerHub, with a narrated video that documents the system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3361240",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "2117032681",
+                    "name": "Ying Lin"
+                },
+                {
+                    "authorId": "34741133",
+                    "name": "Xiaoman Pan"
+                },
+                {
+                    "authorId": "153188991",
+                    "name": "Spencer Whitehead"
+                },
+                {
+                    "authorId": "2108342501",
+                    "name": "Brian Chen"
+                },
+                {
+                    "authorId": "1993581583",
+                    "name": "Bo Wu"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "1817166",
+                    "name": "Clare R. Voss"
+                },
+                {
+                    "authorId": "1413386261",
+                    "name": "Dan Napierski"
+                },
+                {
+                    "authorId": "2052513135",
+                    "name": "Marjorie Freedman"
+                }
+            ]
+        },
+        {
+            "paperId": "8320ea909c38a616f9daccff4e5a49cfce4d9735",
+            "title": "Analogical Reasoning for Visually Grounded Language Acquisition",
+            "abstract": "Children acquire language subconsciously by observing the surrounding world and listening to descriptions. They can discover the meaning of words even without explicit language knowledge, and generalize to novel compositions effortlessly. In this paper, we bring this ability to AI, by studying the task of Visually grounded Language Acquisition (VLA). We propose a multimodal transformer model augmented with a novel mechanism for analogical reasoning, which approximates novel compositions by learning semantic mapping and reasoning operations from previously seen compositions. Our proposed method, Analogical Reasoning Transformer Networks (ARTNet), is trained on raw multimedia data (video frames and transcripts), and after observing a set of compositions such as \"washing apple\" or \"cutting carrot\", it can generalize and recognize new compositions in new video frames, such as \"washing carrot\" or \"cutting apple\". To this end, ARTNet refers to relevant instances in the training data and uses their visual features and captions to establish analogies with the query image. Then it chooses the suitable verb and noun to create a new composition that describes the new image best. Extensive experiments on an instructional video dataset demonstrate that the proposed method achieves significantly better generalization capability and recognition accuracy compared to state-of-the-art transformer models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1993581583",
+                    "name": "Bo Wu"
+                },
+                {
+                    "authorId": "71660806",
+                    "name": "Haoyu Qin"
+                },
+                {
+                    "authorId": "2778637",
+                    "name": "Alireza Zareian"
+                },
+                {
+                    "authorId": "1856025",
+                    "name": "Carl Vondrick"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        }
+    ]
+}

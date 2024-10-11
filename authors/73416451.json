@@ -1,0 +1,783 @@
+{
+    "authorId": "73416451",
+    "papers": [
+        {
+            "paperId": "087e1ceb9e62b2e3732247caa84beb223804178e",
+            "title": "Rating Distribution Calibration for Selection Bias Mitigation in Recommendations",
+            "abstract": "Real-world recommendation datasets have been shown to be subject to selection bias, which can challenge recommendation models to learn real preferences of users, so as to make accurate recommendations. Existing approaches to mitigate selection bias, such as data imputation and inverse propensity score, are sensitive to the quality of the additional imputation or propensity estimation models. To break these limitations, in this work, we propose a novel self-supervised learning (SSL) framework, i.e., Rating Distribution Calibration (RDC), to tackle selection bias without introducing additional models. In addition to the original training objective, we introduce a rating distribution calibration loss. It aims to correct the predicted rating distribution of biased users by taking advantage of that of their similar unbiased users. We empirically evaluate RDC on two real-world datasets and one synthetic dataset. The experimental results show that RDC outperforms the original model as well as the state-of-the-art debiasing approaches by a significant margin.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66442354",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "97705488",
+                    "name": "Da Tang"
+                },
+                {
+                    "authorId": "2109869278",
+                    "name": "Ji Yang"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2146672392",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "1736632",
+                    "name": "Jiliang Tang"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "0a70079b3ebbe8aca8ef1351818352047abc1e9c",
+            "title": "Monolith: Real Time Recommendation System with Collisionless Embedding Table",
+            "abstract": "Building a scalable and real-time recommendation system is vital for many businesses driven by time-sensitive customer feedback, such as short-videos ranking or online ads. Despite the ubiquitous adoption of production-scale deep learning frameworks like TensorFlow or PyTorch, these general-purpose frameworks fall short of business demands in recommendation scenarios for various reasons: on one hand, tweaking systems based on static parameters and dense computations for recommendation with dynamic and sparse features is detrimental to model quality; on the other hand, such frameworks are designed with batch-training stage and serving stage completely separated, preventing the model from interacting with customer feedback in real-time. These issues led us to reexamine traditional approaches and explore radically different design choices. In this paper, we present Monolith, a system tailored for online training. Our design has been driven by observations of our application workloads and production environment that reflects a marked departure from other recommendations systems. Our contributions are manifold: first, we crafted a collisionless embedding table with optimizations such as expirable embeddings and frequency filtering to reduce its memory footprint; second, we provide an production-ready online training architecture with high fault-tolerance; finally, we proved that system reliability could be traded-off for real-time learning. Monolith has successfully landed in the BytePlus Recommend product.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109170195",
+                    "name": "Zhu-Ping Liu"
+                },
+                {
+                    "authorId": "2162360130",
+                    "name": "Leqi Zou"
+                },
+                {
+                    "authorId": "2067661999",
+                    "name": "Xuan Zou"
+                },
+                {
+                    "authorId": "2185416689",
+                    "name": "Caihua Wang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Biao Zhang"
+                },
+                {
+                    "authorId": "2072574315",
+                    "name": "Dandan Tang"
+                },
+                {
+                    "authorId": "2087090943",
+                    "name": "Bolin Zhu"
+                },
+                {
+                    "authorId": "2162738919",
+                    "name": "Yijie Zhu"
+                },
+                {
+                    "authorId": "2111195348",
+                    "name": "Pengfei Wu"
+                },
+                {
+                    "authorId": "104138391",
+                    "name": "K. Wang"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "3ca2ba62e130c104b2c01ea496af6f690474a1db",
+            "title": "CowClip: Reducing CTR Prediction Model Training Time from 12 hours to 10 minutes on 1 GPU",
+            "abstract": "The click-through rate (CTR) prediction task is to predict whether a user will click on the recommended item. As mind-boggling amounts of data are produced online daily, accelerating CTR prediction model training is critical to ensuring an up-to-date model and reducing the training cost. One approach to increase the training speed is to apply large batch training. However, as shown in computer vision and natural language processing tasks, training with a large batch easily suffers from the loss of accuracy. Our experiments show that previous scaling rules fail in the training of CTR prediction neural networks. To tackle this problem, we first theoretically show that different frequencies of ids make it challenging to scale hyperparameters when scaling the batch size. To stabilize the training process in a large batch size setting, we develop the adaptive Column-wise Clipping (CowClip). It enables an easy and effective scaling rule for the embeddings, which keeps the learning rate unchanged and scales the L2 loss. We conduct extensive experiments with four CTR prediction networks on two real-world datasets and successfully scaled 128 times the original batch size without accuracy loss. In particular, for CTR prediction model DeepFM training on the Criteo dataset, our optimization framework enlarges the batch size from 1K to 128K with over 0.1% AUC improvement and reduces training time from 12 hours to 10 minutes on a single V100 GPU. Our code locates at github.com/bytedance/LargeBatchCTR.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109654065",
+                    "name": "Zangwei Zheng"
+                },
+                {
+                    "authorId": "2091437540",
+                    "name": "Peng Xu"
+                },
+                {
+                    "authorId": "2067661999",
+                    "name": "Xuan Zou"
+                },
+                {
+                    "authorId": "97705488",
+                    "name": "Da Tang"
+                },
+                {
+                    "authorId": "2157133491",
+                    "name": "Zhen Li"
+                },
+                {
+                    "authorId": "2963482",
+                    "name": "Chenguang Xi"
+                },
+                {
+                    "authorId": "2153093673",
+                    "name": "Peng Wu"
+                },
+                {
+                    "authorId": "2162360130",
+                    "name": "Leqi Zou"
+                },
+                {
+                    "authorId": "2162738919",
+                    "name": "Yijie Zhu"
+                },
+                {
+                    "authorId": "2108003749",
+                    "name": "Ming-yue Chen"
+                },
+                {
+                    "authorId": "2117436426",
+                    "name": "Xiangzhuo Ding"
+                },
+                {
+                    "authorId": "2144332771",
+                    "name": "Fuzhao Xue"
+                },
+                {
+                    "authorId": "2162400714",
+                    "name": "Ziheng Qing"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                },
+                {
+                    "authorId": "2054451943",
+                    "name": "Yang You"
+                }
+            ]
+        },
+        {
+            "paperId": "6dc8b0018bbc183c8d15747e5f6cc3fb14678a9f",
+            "title": "Toward Annotator Group Bias in Crowdsourcing",
+            "abstract": "Crowdsourcing has emerged as a popular approach for collecting annotated data to train supervised machine learning models. However, annotator bias can lead to defective annotations. Though there are a few works investigating individual annotator bias, the group effects in annotators are largely overlooked. In this work, we reveal that annotators within the same demographic group tend to show consistent group bias in annotation tasks and thus we conduct an initial study on annotator group bias. We first empirically verify the existence of annotator group bias in various real-world crowdsourcing datasets. Then, we develop a novel probabilistic graphical framework GroupAnno to capture annotator group bias with an extended Expectation Maximization (EM) algorithm. We conduct experiments on both synthetic and real-world datasets. Experimental results demonstrate the effectiveness of our model in modeling annotator group bias in label aggregation and model learning over competitive baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143856455",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "80601470",
+                    "name": "J. Thekinen"
+                },
+                {
+                    "authorId": "2315117721",
+                    "name": "Sinem Mollaoglu"
+                },
+                {
+                    "authorId": "97705488",
+                    "name": "Da Tang"
+                },
+                {
+                    "authorId": "2109869278",
+                    "name": "Ji Yang"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                },
+                {
+                    "authorId": "2146672392",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "1736632",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "c1e05836ee1c0a478817cef0100dd03641c6e969",
+            "title": "Enhanced Exploration in Neural Feature Selection for Deep Click-Through Rate Prediction Models via Ensemble of Gating Layers",
+            "abstract": "Feature selection has been an essential step in developing industry-scale deep Click-Through Rate (CTR) prediction systems. The goal of neural feature selection (NFS) is to choose a relatively small subset of features with the best explanatory power as a means to remove redundant features and reduce computational cost. Inspired by gradient-based neural architecture search (NAS) and network pruning methods, people have tackled the NFS problem with Gating approach that inserts a set of differentiable binary gates to drop less informative features. The binary gates are optimized along with the network parameters in an efficient end-to-end manner. In this paper, we analyze the gradient-based solution from an exploration-exploitation perspective and use empirical results to show that Gating approach might suffer from insufficient exploration. To improve the exploration capacity of gradient-based solutions, we propose a simple but effective ensemble learning approach, named Ensemble Gating. We choose two public datasets, namely Avazu and Criteo, to evaluate this approach. Our experiments show that, without adding any computational overhead or introducing any hyper-parameter (except the size of the ensemble), our method is able to consistently improve Gating approach and find a better subset of features on the two datasets with three different underlying deep CTR prediction models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144190085",
+                    "name": "L. Guan"
+                },
+                {
+                    "authorId": "2153020032",
+                    "name": "Xia Xiao"
+                },
+                {
+                    "authorId": "2108633651",
+                    "name": "Ming Chen"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "26080498fb851b6239114f0871a4957bea3d3684",
+            "title": "Talking-Heads Attention",
+            "abstract": "We introduce \"talking-heads attention\" - a variation on multi-head attention which includes linearprojections across the attention-heads dimension, immediately before and after the softmax operation.While inserting only a small number of additional parameters and a moderate amount of additionalcomputation, talking-heads attention leads to better perplexities on masked language modeling tasks, aswell as better quality when transfer-learning to language comprehension and question answering tasks.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1846258",
+                    "name": "Noam M. Shazeer"
+                },
+                {
+                    "authorId": "34692532",
+                    "name": "Zhenzhong Lan"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                },
+                {
+                    "authorId": "2066767241",
+                    "name": "Nan Ding"
+                },
+                {
+                    "authorId": "48557308",
+                    "name": "L. Hou"
+                }
+            ]
+        },
+        {
+            "paperId": "6c8b12d0bc64dd298e91d74f4277f7e2a5bc4477",
+            "title": "High Resolution Medical Image Analysis with Spatial Partitioning",
+            "abstract": "Medical images such as 3D computerized tomography (CT) scans and pathology images, have hundreds of millions or billions of voxels/pixels. It is infeasible to train CNN models directly on such high resolution images, because neural activations of a single image do not fit in the memory of a single GPU/TPU. Existing image analysis approaches alleviate this problem by cropping or down-sampling input images, which leads to complicated implementation and sub-optimal performance due to information loss. In this paper, we implement spatial partitioning, which internally distributes the input and output of convolutional layers across GPUs/TPUs. Our implementation is based on the Mesh-TensorFlow framework and the computation distribution is transparent to end users. With this technique, we train a 3D Unet on up to 512 by 512 by 512 resolution data. To the best of our knowledge, this is the first work for handling such high resolution images end-to-end.",
+            "fieldsOfStudy": [
+                "Engineering",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48557308",
+                    "name": "L. Hou"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                },
+                {
+                    "authorId": "1846258",
+                    "name": "Noam M. Shazeer"
+                },
+                {
+                    "authorId": "3877127",
+                    "name": "Niki Parmar"
+                },
+                {
+                    "authorId": "2110765504",
+                    "name": "Yeqing Li"
+                },
+                {
+                    "authorId": "1986491",
+                    "name": "P. Korfiatis"
+                },
+                {
+                    "authorId": "39785742",
+                    "name": "Travis M. Drucker"
+                },
+                {
+                    "authorId": "2802969",
+                    "name": "D. Blezek"
+                },
+                {
+                    "authorId": "1718192",
+                    "name": "Xiaodan Song"
+                }
+            ]
+        },
+        {
+            "paperId": "ff413cae44ca5e14281ebe4659b8627c349e8493",
+            "title": "Lingvo: a Modular and Scalable Framework for Sequence-to-Sequence Modeling",
+            "abstract": "Lingvo is a Tensorflow framework offering a complete solution for collaborative deep learning research, with a particular focus towards sequence-to-sequence models. Lingvo models are composed of modular building blocks that are flexible and easily extensible, and experiment configurations are centralized and highly customizable. Distributed training and quantized inference are supported directly within the framework, and it contains existing implementations of a large number of utilities, helper functions, and the newest research ideas. Lingvo has been used in collaboration by dozens of researchers in more than 20 papers over the last two years. This document outlines the underlying design of Lingvo and serves as an introduction to the various pieces of the framework, while also offering examples of advanced features that showcase the capabilities of the framework.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "143724108",
+                    "name": "Jonathan Shen"
+                },
+                {
+                    "authorId": "14902530",
+                    "name": "Patrick Nguyen"
+                },
+                {
+                    "authorId": "48607963",
+                    "name": "Yonghui Wu"
+                },
+                {
+                    "authorId": "2545358",
+                    "name": "Z. Chen"
+                },
+                {
+                    "authorId": "48623026",
+                    "name": "M. Chen"
+                },
+                {
+                    "authorId": "1691944",
+                    "name": "Ye Jia"
+                },
+                {
+                    "authorId": "31801501",
+                    "name": "Anjuli Kannan"
+                },
+                {
+                    "authorId": "1784851",
+                    "name": "Tara N. Sainath"
+                },
+                {
+                    "authorId": "145144022",
+                    "name": "Yuan Cao"
+                },
+                {
+                    "authorId": "145039780",
+                    "name": "Chung-Cheng Chiu"
+                },
+                {
+                    "authorId": "2352010",
+                    "name": "Yanzhang He"
+                },
+                {
+                    "authorId": "2292403",
+                    "name": "J. Chorowski"
+                },
+                {
+                    "authorId": "113471338",
+                    "name": "Smit Hinsu"
+                },
+                {
+                    "authorId": "51923161",
+                    "name": "Stella Laurenzo"
+                },
+                {
+                    "authorId": "47901308",
+                    "name": "James Qin"
+                },
+                {
+                    "authorId": "2345617",
+                    "name": "Orhan Firat"
+                },
+                {
+                    "authorId": "3153147",
+                    "name": "Wolfgang Macherey"
+                },
+                {
+                    "authorId": "2116011472",
+                    "name": "Suyog Gupta"
+                },
+                {
+                    "authorId": "12295226",
+                    "name": "Ankur Bapna"
+                },
+                {
+                    "authorId": "2108020884",
+                    "name": "Shuyuan Zhang"
+                },
+                {
+                    "authorId": "34320634",
+                    "name": "Ruoming Pang"
+                },
+                {
+                    "authorId": "39571582",
+                    "name": "Ron J. Weiss"
+                },
+                {
+                    "authorId": "2557391",
+                    "name": "Rohit Prabhavalkar"
+                },
+                {
+                    "authorId": "2055746849",
+                    "name": "Qiao Liang"
+                },
+                {
+                    "authorId": "11543879",
+                    "name": "Benoit Jacob"
+                },
+                {
+                    "authorId": "2065525906",
+                    "name": "Bowen Liang"
+                },
+                {
+                    "authorId": "34946720",
+                    "name": "HyoukJoong Lee"
+                },
+                {
+                    "authorId": "1802969",
+                    "name": "Ciprian Chelba"
+                },
+                {
+                    "authorId": "152857609",
+                    "name": "S\u00e9bastien Jean"
+                },
+                {
+                    "authorId": "143771569",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "145657834",
+                    "name": "Melvin Johnson"
+                },
+                {
+                    "authorId": "1508890387",
+                    "name": "Rohan Anil"
+                },
+                {
+                    "authorId": "114210303",
+                    "name": "Rajat Tibrewal"
+                },
+                {
+                    "authorId": "2109059862",
+                    "name": "Xiaobing Liu"
+                },
+                {
+                    "authorId": "50123248",
+                    "name": "Akiko Eriguchi"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "51893005",
+                    "name": "Naveen Ari"
+                },
+                {
+                    "authorId": "144507724",
+                    "name": "Colin Cherry"
+                },
+                {
+                    "authorId": "2059866453",
+                    "name": "Parisa Haghani"
+                },
+                {
+                    "authorId": "2096734552",
+                    "name": "Otavio Good"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                },
+                {
+                    "authorId": "38147373",
+                    "name": "R. \u00c1lvarez"
+                },
+                {
+                    "authorId": "73769795",
+                    "name": "Isaac Caswell"
+                },
+                {
+                    "authorId": "2957796",
+                    "name": "Wei-Ning Hsu"
+                },
+                {
+                    "authorId": "2109479107",
+                    "name": "Zongheng Yang"
+                },
+                {
+                    "authorId": "2155022475",
+                    "name": "Kuan Wang"
+                },
+                {
+                    "authorId": "2308319",
+                    "name": "Ekaterina Gonina"
+                },
+                {
+                    "authorId": "3357473",
+                    "name": "K. Tomanek"
+                },
+                {
+                    "authorId": "118502568",
+                    "name": "Ben Vanik"
+                },
+                {
+                    "authorId": "2109576291",
+                    "name": "Zelin Wu"
+                },
+                {
+                    "authorId": "145024664",
+                    "name": "Llion Jones"
+                },
+                {
+                    "authorId": "144927151",
+                    "name": "M. Schuster"
+                },
+                {
+                    "authorId": "2145438541",
+                    "name": "Yanping Huang"
+                },
+                {
+                    "authorId": "7167328",
+                    "name": "Dehao Chen"
+                },
+                {
+                    "authorId": "2350348",
+                    "name": "Kazuki Irie"
+                },
+                {
+                    "authorId": "2458308",
+                    "name": "George F. Foster"
+                },
+                {
+                    "authorId": "2113584534",
+                    "name": "J. Richardson"
+                },
+                {
+                    "authorId": "47051926",
+                    "name": "Uri Alon"
+                },
+                {
+                    "authorId": "113439369",
+                    "name": "Klaus Macherey"
+                },
+                {
+                    "authorId": "47043446",
+                    "name": "A. Bruguier"
+                },
+                {
+                    "authorId": "1691713",
+                    "name": "H. Zen"
+                },
+                {
+                    "authorId": "2402716",
+                    "name": "Colin Raffel"
+                },
+                {
+                    "authorId": "2109681515",
+                    "name": "Shankar Kumar"
+                },
+                {
+                    "authorId": "2251957",
+                    "name": "Kanishka Rao"
+                },
+                {
+                    "authorId": "1743961",
+                    "name": "David Rybach"
+                },
+                {
+                    "authorId": "2151189882",
+                    "name": "M. Murray"
+                },
+                {
+                    "authorId": "2946873",
+                    "name": "Vijayaditya Peddinti"
+                },
+                {
+                    "authorId": "2048712",
+                    "name": "M. Krikun"
+                },
+                {
+                    "authorId": "1771090",
+                    "name": "M. Bacchiani"
+                },
+                {
+                    "authorId": "2067328011",
+                    "name": "T. Jablin"
+                },
+                {
+                    "authorId": "1391592743",
+                    "name": "R. Suderman"
+                },
+                {
+                    "authorId": "2052629654",
+                    "name": "Ian Williams"
+                },
+                {
+                    "authorId": "2110173692",
+                    "name": "Benjamin Lee"
+                },
+                {
+                    "authorId": "2055505691",
+                    "name": "Deepti Bhatia"
+                },
+                {
+                    "authorId": "8957488",
+                    "name": "Justin Carlson"
+                },
+                {
+                    "authorId": "3014143",
+                    "name": "Semih Yavuz"
+                },
+                {
+                    "authorId": "2153635459",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "143685627",
+                    "name": "Ian McGraw"
+                },
+                {
+                    "authorId": "50453203",
+                    "name": "M. Galkin"
+                },
+                {
+                    "authorId": "2055641376",
+                    "name": "Qi Ge"
+                },
+                {
+                    "authorId": "2779415",
+                    "name": "G. Pundak"
+                },
+                {
+                    "authorId": "2150788",
+                    "name": "Chad Whipkey"
+                },
+                {
+                    "authorId": "2162794697",
+                    "name": "Todd Wang"
+                },
+                {
+                    "authorId": "47051926",
+                    "name": "Uri Alon"
+                },
+                {
+                    "authorId": "150077954",
+                    "name": "Dmitry Lepikhin"
+                },
+                {
+                    "authorId": "2143700160",
+                    "name": "Ye Tian"
+                },
+                {
+                    "authorId": "143752292",
+                    "name": "S. Sabour"
+                },
+                {
+                    "authorId": "144333684",
+                    "name": "William Chan"
+                },
+                {
+                    "authorId": "2634203",
+                    "name": "Shubham Toshniwal"
+                },
+                {
+                    "authorId": "48700007",
+                    "name": "Baohua Liao"
+                },
+                {
+                    "authorId": "23834982",
+                    "name": "M. Nirschl"
+                },
+                {
+                    "authorId": "51301830",
+                    "name": "Pat Rondon"
+                }
+            ]
+        },
+        {
+            "paperId": "2270b8628fd8ca67ae39d277f45bc3c38ac63d5f",
+            "title": "Mesh-TensorFlow: Deep Learning for Supercomputers",
+            "abstract": "Batch-splitting (data-parallelism) is the dominant distributed Deep Neural Network (DNN) training strategy, due to its universal applicability and its amenability to Single-Program-Multiple-Data (SPMD) programming. However, batch-splitting suffers from problems including the inability to train very large models (due to memory constraints), high latency, and inefficiency at small batch sizes. All of these can be solved by more general distribution strategies (model-parallelism). Unfortunately, efficient model-parallel algorithms tend to be complicated to discover, describe, and to implement, particularly on large clusters. We introduce Mesh-TensorFlow, a language for specifying a general class of distributed tensor computations. Where data-parallelism can be viewed as splitting tensors and operations along the \"batch\" dimension, in Mesh-TensorFlow, the user can specify any tensor-dimensions to be split across any dimensions of a multi-dimensional mesh of processors. A Mesh-TensorFlow graph compiles into a SPMD program consisting of parallel operations coupled with collective communication primitives such as Allreduce. We use Mesh-TensorFlow to implement an efficient data-parallel, model-parallel version of the Transformer sequence-to-sequence model. Using TPU meshes of up to 512 cores, we train Transformer models with up to 5 billion parameters, surpassing state of the art results on WMT'14 English-to-French translation task and the one-billion-word language modeling benchmark. Mesh-Tensorflow is available at this https URL .",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1846258",
+                    "name": "Noam M. Shazeer"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                },
+                {
+                    "authorId": "3877127",
+                    "name": "Niki Parmar"
+                },
+                {
+                    "authorId": "47497262",
+                    "name": "Dustin Tran"
+                },
+                {
+                    "authorId": "40348417",
+                    "name": "Ashish Vaswani"
+                },
+                {
+                    "authorId": "3344182",
+                    "name": "Penporn Koanantakool"
+                },
+                {
+                    "authorId": "2052793706",
+                    "name": "Peter Hawkins"
+                },
+                {
+                    "authorId": "34946720",
+                    "name": "HyoukJoong Lee"
+                },
+                {
+                    "authorId": "2069751443",
+                    "name": "Mingsheng Hong"
+                },
+                {
+                    "authorId": "39660914",
+                    "name": "C. Young"
+                },
+                {
+                    "authorId": "35474601",
+                    "name": "Ryan Sepassi"
+                },
+                {
+                    "authorId": "3135881",
+                    "name": "Blake A. Hechtman"
+                }
+            ]
+        },
+        {
+            "paperId": "cbe598931da8f925afeb1aaa9bd7e5a22716801e",
+            "title": "Image Classification at Supercomputer Scale",
+            "abstract": "Deep learning is extremely computationally intensive, and hardware vendors have responded by building faster accelerators in large clusters. Training deep learning models at petaFLOPS scale requires overcoming both algorithmic and systems software challenges. In this paper, we discuss three systems-related optimizations: (1) distributed batch normalization to control per-replica batch sizes, (2) input pipeline optimizations to sustain model throughput, and (3) 2-D torus all-reduce to speed up gradient summation. We combine these optimizations to train ResNet-50 on ImageNet to 76.3% accuracy in 2.2 minutes on a 1024-chip TPU v3 Pod with a training throughput of over 1.05 million images/second and no accuracy drop.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "31939605",
+                    "name": "Chris Ying"
+                },
+                {
+                    "authorId": "49596195",
+                    "name": "Sameer Kumar"
+                },
+                {
+                    "authorId": "7167328",
+                    "name": "Dehao Chen"
+                },
+                {
+                    "authorId": "2156633520",
+                    "name": "Tao Wang"
+                },
+                {
+                    "authorId": "73416451",
+                    "name": "Youlong Cheng"
+                }
+            ]
+        }
+    ]
+}

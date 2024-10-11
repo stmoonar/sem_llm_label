@@ -1,0 +1,311 @@
+{
+    "authorId": "2242717",
+    "papers": [
+        {
+            "paperId": "01de6d0c00e7e77050a90945246b2b4acde497a2",
+            "title": "NodeFormer: A Scalable Graph Structure Learning Transformer for Node Classification",
+            "abstract": "Graph neural networks have been extensively studied for learning with inter-connected data. Despite this, recent evidence has revealed GNNs' deficiencies related to over-squashing, heterophily, handling long-range dependencies, edge incompleteness and particularly, the absence of graphs altogether. While a plausible solution is to learn new adaptive topology for message passing, issues concerning quadratic complexity hinder simultaneous guarantees for scalability and precision in large networks. In this paper, we introduce a novel all-pair message passing scheme for efficiently propagating node signals between arbitrary nodes, as an important building block for a pioneering Transformer-style network for node classification on large graphs, dubbed as \\textsc{NodeFormer}. Specifically, the efficient computation is enabled by a kernerlized Gumbel-Softmax operator that reduces the algorithmic complexity to linearity w.r.t. node numbers for learning latent graph structures from large, potentially fully-connected graphs in a differentiable manner. We also provide accompanying theory as justification for our design. Extensive experiments demonstrate the promising efficacy of the method in various tasks including node classification on graphs (with up to 2M nodes) and graph-enhanced applications (e.g., image classification) where input graphs are missing.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51171144",
+                    "name": "Qitian Wu"
+                },
+                {
+                    "authorId": "2053249603",
+                    "name": "Wentao Zhao"
+                },
+                {
+                    "authorId": "15401196",
+                    "name": "Zenan Li"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "3063894",
+                    "name": "Junchi Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "419757bb967bf77ee726581e6f2039dd90c7805e",
+            "title": "Marginalization is not Marginal: No Bad VAE Local Minima when Learning Optimal Sparse Representations",
+            "abstract": "Although the variational autoencoder (VAE) represents a widely-used deep generative model, the underlying energy function when applied to continuous data remains poorly understood. In fact, most prior theoretical analysis has assumed a simplified affine decoder such that the model collapses to probabilistic PCA, a restricted regime whereby existing classical algorithms can also be trivially applied to guarantee globally optimal solutions. To push our understanding into more complex, practically-relevant settings, this paper instead adopts a deceptively sophisticated single-layer de-coder that nonetheless allows the VAE to address the fundamental challenge of learning optimally sparse representations of continuous data originating from popular multiple-response regression models. In doing so, we can then examine VAE properties within the non-trivial context of solving difficult, NP-hard inverse problems. More specifically, we prove rigorous conditions which guarantee that any minimum of the VAE energy (local or global) will produce the optimally sparse latent representation, meaning zero reconstruction error using a minimal number of active latent dimensions. This is ultimately possible because VAE marginalization over the latent posterior selectively smooths away bad local minima as has been conjectured but not actually proven in prior work. We then discuss how equivalent-capacity deterministic autoencoders, even with appropriate sparsity-promoting regularization of the latent space, maintain bad local minima that do not correspond with such parsimonious representations. Overall, these results serve to elucidate key properties of the VAE loss surface relative to finding low-dimensional structure in data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "46210e170045df3c0c50a17bb63e6de480d62f9d",
+            "title": "FreshGNN: Reducing Memory Access via Stable Historical Embeddings for Graph Neural Network Training",
+            "abstract": "A key performance bottleneck when training graph neural network (GNN) models on large, real-world graphs is loading node features onto a GPU. Due to limited GPU memory, expensive data movement is necessary to facilitate the storage of these features on alternative devices with slower access (e.g. CPU memory). Moreover, the irregularity of graph structures contributes to poor data locality which further exacerbates the problem. Consequently, existing frameworks capable of efficiently training large GNN models usually incur a significant accuracy degradation because of the currently-available shortcuts involved. To address these limitations, we instead propose FreshGNN, a general-purpose GNN mini-batch training framework that leverages a historical cache for storing and reusing GNN node embeddings instead of re-computing them through fetching raw features at every iteration. Critical to its success, the corresponding cache policy is designed, using a combination of gradient-based and staleness criteria, to selectively screen those embeddings which are relatively stable and can be cached, from those that need to be re-computed to reduce estimation errors and subsequent downstream accuracy loss. When paired with complementary system enhancements to support this selective historical cache, FreshGNN is able to accelerate the training speed on large graph datasets such as ogbn-papers100M and MAG240M by 3.4\u00d7 up to 20.5\u00d7 and reduce the memory access by 59%, with less than 1% influence on test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "5d4586d663e09310bfc6b598c3f3db4284cb0e6e",
+            "title": "Learning Graph Variational Autoencoders with Constraints and Structured Priors for Conditional Indoor 3D Scene Generation",
+            "abstract": "We present a graph variational autoencoder with a structured prior for generating the layout of indoor 3D scenes. Given the room type (e.g., living room or library) and the room layout (e.g., room elements such as floor and walls), our architecture generates a collection of objects (e.g., furniture items such as sofa, table and chairs) that is consistent with the room type and layout. This is a challenging problem because the generated scene needs to satisfy multiple constrains, e.g., each object should lie inside the room and two objects should not occupy the same volume. To address these challenges, we propose a deep generative model that encodes these relationships as soft constraints on an attributed graph (e.g., the nodes capture attributes of room and furniture elements, such as shape, class, pose and size, and the edges capture geometric relationships such as relative orientation). The architecture consists of a graph encoder that maps the input graph to a structured latent space, and a graph decoder that generates a furniture graph, given a latent code and the room graph. The latent space is modeled with autoregressive priors, which facilitates the generation of highly structured scenes. We also propose an efficient training procedure that combines matching and constrained learning. Experiments on the 3D-FRONT dataset show that our method produces scenes that are diverse and are adapted to the room layout.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054168194",
+                    "name": "Aditya Chattopadhyay"
+                },
+                {
+                    "authorId": "2108287164",
+                    "name": "Xi Zhang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "49583346",
+                    "name": "H. Arora"
+                },
+                {
+                    "authorId": "2204774185",
+                    "name": "Ren\u00e9 Vidal"
+                }
+            ]
+        },
+        {
+            "paperId": "612d15383f5bd258f0521b81b295c7d3c811e4d5",
+            "title": "From Hypergraph Energy Functions to Hypergraph Neural Networks",
+            "abstract": "Hypergraphs are a powerful abstraction for representing higher-order interactions between entities of interest. To exploit these relationships in making downstream predictions, a variety of hypergraph neural network architectures have recently been proposed, in large part building upon precursors from the more traditional graph neural network (GNN) literature. Somewhat differently, in this paper we begin by presenting an expressive family of parameterized, hypergraph-regularized energy functions. We then demonstrate how minimizers of these energies effectively serve as node embeddings that, when paired with a parameterized classifier, can be trained end-to-end via a supervised bilevel optimization process. Later, we draw parallels between the implicit architecture of the predictive models emerging from the proposed bilevel hypergraph optimization, and existing GNN architectures in common use. Empirically, we demonstrate state-of-the-art results on various hypergraph node classification benchmarks. Code is available at https://github.com/yxzwang/PhenomNN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180352936",
+                    "name": "Yuxin Wang"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "1767521",
+                    "name": "Xipeng Qiu"
+                },
+                {
+                    "authorId": "1790227",
+                    "name": "Xuanjing Huang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "8fde785b24f7804d2a97c716eaba32b8899f9cd2",
+            "title": "Learning Manifold Dimensions with Conditional Variational Autoencoders",
+            "abstract": "Although the variational autoencoder (VAE) and its conditional extension (CVAE) are capable of state-of-the-art results across multiple domains, their precise behavior is still not fully understood, particularly in the context of data (like images) that lie on or near a low-dimensional manifold. For example, while prior work has suggested that the globally optimal VAE solution can learn the correct manifold dimension, a necessary (but not sufficient) condition for producing samples from the true data distribution, this has never been rigorously proven. Moreover, it remains unclear how such considerations would change when various types of conditioning variables are introduced, or when the data support is extended to a union of manifolds (e.g., as is likely the case for MNIST digits and related). In this work, we address these points by first proving that VAE global minima are indeed capable of recovering the correct manifold dimension. We then extend this result to more general CVAEs, demonstrating practical scenarios whereby the conditioning variables allow the model to adaptively learn manifolds of varying dimension across samples. Our analyses, which have practical implications for various CVAE design choices, are also supported by numerical results on both synthetic and real-world datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2158583783",
+                    "name": "Yijia Zheng"
+                },
+                {
+                    "authorId": "48748557",
+                    "name": "Tong He"
+                },
+                {
+                    "authorId": "47604723",
+                    "name": "Yixuan Qiu"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "927f7527c7ac86cee2a51c845b0a4b9c38b1020a",
+            "title": "On the Initialization of Graph Neural Networks",
+            "abstract": "Graph Neural Networks (GNNs) have displayed considerable promise in graph representation learning across various applications. The core learning process requires the initialization of model weight matrices within each GNN layer, which is typically accomplished via classic initialization methods such as Xavier initialization. However, these methods were originally motivated to stabilize the variance of hidden embeddings and gradients across layers of Feedforward Neural Networks (FNNs) and Convolutional Neural Networks (CNNs) to avoid vanishing gradients and maintain steady information flow. In contrast, within the GNN context classical initializations disregard the impact of the input graph structure and message passing on variance. In this paper, we analyze the variance of forward and backward propagation across GNN layers and show that the variance instability of GNN initializations comes from the combined effect of the activation function, hidden dimension, graph structure and message passing. To better account for these influence factors, we propose a new initialization method for Variance Instability Reduction within GNN Optimization (Virgo), which naturally tends to equate forward and backward variances across successive layers. We conduct comprehensive experiments on 15 datasets to show that Virgo can lead to superior model performance and more stable variance at initialization on node classification, link prediction and graph classification tasks. Codes are in https://github.com/LspongebobJH/virgo_icml2023.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130139424",
+                    "name": "Jiahang Li"
+                },
+                {
+                    "authorId": "2121060",
+                    "name": "Ya-Zhi Song"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "aff19c695ec6986ec97d8f68e736add5c9be08e1",
+            "title": "Sparse Bayesian Learning for End-to-End EEG Decoding",
+            "abstract": "Decoding brain activity from non-invasive electroencephalography (EEG) is crucial for brain-computer interfaces (BCIs) and the study of brain disorders. Notably, end-to-end EEG decoding has gained widespread popularity in recent years owing to the remarkable advances in deep learning research. However, many EEG studies suffer from limited sample sizes, making it difficult for existing deep learning models to effectively generalize to highly noisy EEG data. To address this fundamental limitation, this paper proposes a novel end-to-end EEG decoding algorithm that utilizes a low-rank weight matrix to encode both spatio-temporal filters and the classifier, all optimized under a principled sparse Bayesian learning (SBL) framework. Importantly, this SBL framework also enables us to learn hyperparameters that optimally penalize the model in a Bayesian fashion. The proposed decoding algorithm is systematically benchmarked on five motor imagery BCI EEG datasets (<inline-formula><tex-math notation=\"LaTeX\">$N=192$</tex-math><alternatives><mml:math><mml:mrow><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>192</mml:mn></mml:mrow></mml:math><inline-graphic xlink:href=\"wu-ieq1-3299568.gif\"/></alternatives></inline-formula>) and an emotion recognition EEG dataset (<inline-formula><tex-math notation=\"LaTeX\">$N=45$</tex-math><alternatives><mml:math><mml:mrow><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>45</mml:mn></mml:mrow></mml:math><inline-graphic xlink:href=\"wu-ieq2-3299568.gif\"/></alternatives></inline-formula>), in comparison with several contemporary algorithms, including end-to-end deep-learning-based EEG decoding algorithms. The classification results demonstrate that our algorithm significantly outperforms the competing algorithms while yielding neurophysiologically meaningful spatio-temporal patterns. Our algorithm therefore advances the state-of-the-art by providing a novel EEG-tailored machine learning tool for decoding brain activity.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2134794330",
+                    "name": "Wenlong Wang"
+                },
+                {
+                    "authorId": "49555775",
+                    "name": "Feifei Qi"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "143743643",
+                    "name": "Chang Cai"
+                },
+                {
+                    "authorId": "5912766",
+                    "name": "Tianyou Yu"
+                },
+                {
+                    "authorId": "48514757",
+                    "name": "Yuanqing Li"
+                },
+                {
+                    "authorId": "2153636810",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "30679500",
+                    "name": "Zhuliang Yu"
+                },
+                {
+                    "authorId": "2118255588",
+                    "name": "Wei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "05689da638c9f7c054dc1fc2e75e408db8d0ee7e",
+            "title": "Structured Graph Variational Autoencoders for Indoor Furniture layout Generation",
+            "abstract": "We present a graph variational autoencoder with a structured prior for generating the layout of indoor 3D scenes. Given the room type (e.g., living room or library) and the room layout (e.g., room elements such as floor and walls), our architecture generates a collection of objects (e.g., furniture items such as sofa, table and chairs) that is consistent with the room type and layout. This is a challenging problem because the generated scene should satisfy multiple constrains, e.g., each object should lie inside the room and two objects should not occupy the same volume. To address these challenges, we propose a deep generative model that encodes these relationships as soft constraints on an attributed graph (e.g., the nodes capture attributes of room and furniture elements, such as class, pose and size, and the edges capture geometric relationships such as relative orientation). The architecture consists of a graph encoder that maps the input graph to a structured latent space, and a graph decoder that generates a furniture graph, given a latent code and the room graph. The latent space is modeled with auto-regressive priors, which facilitates the generation of highly structured scenes. We also propose an efficient training procedure that combines matching and constrained learning. Experiments on the 3D-FRONT dataset show that our method produces scenes that are diverse and are adapted to the room layout.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054168194",
+                    "name": "Aditya Chattopadhyay"
+                },
+                {
+                    "authorId": "2108287164",
+                    "name": "Xi Zhang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "49583346",
+                    "name": "H. Arora"
+                },
+                {
+                    "authorId": "144020730",
+                    "name": "R. Vidal"
+                }
+            ]
+        },
+        {
+            "paperId": "168e32bb9b0d3abead4da6e366d204c5d9177f6f",
+            "title": "Transformers from an Optimization Perspective",
+            "abstract": "Deep learning models such as the Transformer are often constructed by heuristics and experience. To provide a complementary foundation, in this work we study the following problem: Is it possible to find an energy function underlying the Transformer model, such that descent steps along this energy correspond with the Transformer forward pass? By finding such a function, we can view Transformers as the unfolding of an interpretable optimization process across iterations. This unfolding perspective has been frequently adopted in the past to elucidate more straightforward deep models such as MLPs and CNNs; however, it has thus far remained elusive obtaining a similar equivalence for more complex models with self-attention mechanisms like the Transformer. To this end, we first outline several major obstacles before providing companion techniques to at least partially address them, demonstrating for the first time a close association between energy function minimization and deep layers with self-attention. This interpretation contributes to our intuition and understanding of Transformers, while potentially laying the ground-work for new model designs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144182425",
+                    "name": "Yongyi Yang"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        }
+    ]
+}

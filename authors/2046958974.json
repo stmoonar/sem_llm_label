@@ -1,0 +1,350 @@
+{
+    "authorId": "2046958974",
+    "papers": [
+        {
+            "paperId": "0f0d757e764a7f21d7aaa329c835571b247dd937",
+            "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+            "abstract": "Quantization can accelerate large language model (LLM) inference. Going beyond INT8 quantization, the research community is actively exploring even lower precision, such as INT4. Nonetheless, state-of-the-art INT4 quantization techniques only accelerate low-batch, edge LLM inference, failing to deliver performance gains in large-batch, cloud-based LLM serving. We uncover a critical issue: existing INT4 quantization methods suffer from significant runtime overhead (20-90%) when dequantizing either weights or partial sums on GPUs. To address this challenge, we introduce QoQ, a W4A8KV4 quantization algorithm with 4-bit weight, 8-bit activation, and 4-bit KV cache. QoQ stands for quattuor-octo-quattuor, which represents 4-8-4 in Latin. QoQ is implemented by the QServe inference library that achieves measured speedup. The key insight driving QServe is that the efficiency of LLM serving on GPUs is critically influenced by operations on low-throughput CUDA cores. Building upon this insight, in QoQ algorithm, we introduce progressive quantization that can allow low dequantization overhead in W4A8 GEMM. Additionally, we develop SmoothAttention to effectively mitigate the accuracy degradation incurred by 4-bit KV quantization. In the QServe system, we perform compute-aware weight reordering and take advantage of register-level parallelism to reduce dequantization latency. We also make fused attention memory-bound, harnessing the performance gain brought by KV4 quantization. As a result, QServe improves the maximum achievable serving throughput of Llama-3-8B by 1.2x on A100, 1.4x on L40S; and Qwen1.5-72B by 2.4x on A100, 3.5x on L40S, compared to TensorRT-LLM. Remarkably, QServe on L40S GPU can achieve even higher throughput than TensorRT-LLM on A100. Thus, QServe effectively reduces the dollar cost of LLM serving by 3x. Code is available at https://github.com/mit-han-lab/qserve.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49417466",
+                    "name": "Yujun Lin"
+                },
+                {
+                    "authorId": "150127950",
+                    "name": "Haotian Tang"
+                },
+                {
+                    "authorId": "2202210853",
+                    "name": "Shang Yang"
+                },
+                {
+                    "authorId": "2286139423",
+                    "name": "Zhekai Zhang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2262215776",
+                    "name": "Chuang Gan"
+                },
+                {
+                    "authorId": "2243400730",
+                    "name": "Song Han"
+                }
+            ]
+        },
+        {
+            "paperId": "1c7db9fb18246787fbe3de6e0eaa370ae749e795",
+            "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
+            "abstract": "As the demand for long-context large language models (LLMs) increases, models with context windows of up to 128K or 1M tokens are becoming increasingly prevalent. However, long-context LLM inference is challenging since the inference speed decreases significantly as the sequence length grows. This slowdown is primarily caused by loading a large KV cache during self-attention. Previous works have shown that a small portion of critical tokens will dominate the attention outcomes. However, we observe the criticality of a token highly depends on the query. To this end, we propose Quest, a query-aware KV cache selection algorithm. Quest keeps track of the minimal and maximal Key values in KV cache pages and estimates the criticality of a given page using Query vectors. By only loading the Top-K critical KV cache pages for attention, Quest significantly speeds up self-attention without sacrificing accuracy. We show that Quest can achieve up to 2.23x self-attention speedup, which reduces inference latency by 7.03x while performing well on tasks with long dependencies with negligible accuracy loss. Code is available at http://github.com/mit-han-lab/Quest .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214687479",
+                    "name": "Jiaming Tang"
+                },
+                {
+                    "authorId": "2263892209",
+                    "name": "Yilong Zhao"
+                },
+                {
+                    "authorId": "2283850199",
+                    "name": "Kan Zhu"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "3178312",
+                    "name": "Baris Kasikci"
+                },
+                {
+                    "authorId": "2249530374",
+                    "name": "Song Han"
+                }
+            ]
+        },
+        {
+            "paperId": "26e13e1da4f47c93c9ad0daf9cc9e2bb4ffd063d",
+            "title": "InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory",
+            "abstract": "Large language models (LLMs) have emerged as a cornerstone in real-world applications with lengthy streaming inputs (e.g., LLM-driven agents). However, existing LLMs, pre-trained on sequences with a restricted maximum length, cannot process longer sequences due to the out-of-domain and distraction issues. Common solutions often involve continual pre-training on longer sequences, which will introduce expensive computational overhead and uncontrollable change in model capabilities. In this paper, we unveil the intrinsic capacity of LLMs for understanding extremely long sequences without any fine-tuning. To this end, we introduce a training-free memory-based method, InfLLM. Specifically, InfLLM stores distant contexts into additional memory units and employs an efficient mechanism to lookup token-relevant units for attention computation. Thereby, InfLLM allows LLMs to efficiently process long sequences with a limited context window and well capture long-distance dependencies. Without any training, InfLLM enables LLMs that are pre-trained on sequences consisting of a few thousand tokens to achieve comparable performance with competitive baselines that continually train these LLMs on long sequences. Even when the sequence length is scaled to $1,024$K, InfLLM still effectively captures long-distance dependencies. Our code can be found in \\url{https://github.com/thunlp/InfLLM}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "2261405658",
+                    "name": "Pengle Zhang"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2427350",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2249530374",
+                    "name": "Song Han"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "a624041a028404e7d1fdb40987b1780ce4f1c842",
+            "title": "BitDelta: Your Fine-Tune May Only Be Worth One Bit",
+            "abstract": "Large Language Models (LLMs) are typically trained in two phases: pre-training on large internet-scale datasets, and fine-tuning for downstream tasks. Given the higher computational demand of pre-training, it's intuitive to assume that fine-tuning adds less new information to the model, and is thus more compressible. We explore this assumption by decomposing the weights of fine-tuned models into their pre-trained components and an additional delta. We introduce a simple method, BitDelta, which successfully quantizes this delta down to 1 bit without compromising performance. This interesting finding not only highlights the potential redundancy of information added during fine-tuning, but also has significant implications for the multi-tenant serving and multi-tenant storage of fine-tuned models. By enabling the use of a single high-precision base model accompanied by multiple 1-bit deltas, BitDelta dramatically reduces GPU memory requirements by more than 10x, which can also be translated to enhanced generation latency in multi-tenant settings. We validate BitDelta through experiments across Llama-2 and Mistral model families, and on models up to 70B parameters, showcasing minimal performance degradation over all tested settings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2317036571",
+                    "name": "James Liu"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2288961070",
+                    "name": "Kai Li"
+                },
+                {
+                    "authorId": "2266491429",
+                    "name": "Jason D. Lee"
+                },
+                {
+                    "authorId": "2249530374",
+                    "name": "Song Han"
+                },
+                {
+                    "authorId": "2280290462",
+                    "name": "Tri Dao"
+                },
+                {
+                    "authorId": "2280065752",
+                    "name": "Tianle Cai"
+                }
+            ]
+        },
+        {
+            "paperId": "0e3d1457a66e442fae46c8f96886dc76aef3b085",
+            "title": "Offsite-Tuning: Transfer Learning without Full Model",
+            "abstract": "Transfer learning is important for foundation models to adapt to downstream tasks. However, many foundation models are proprietary, so users must share their data with model owners to fine-tune the models, which is costly and raise privacy concerns. Moreover, fine-tuning large foundation models is computation-intensive and impractical for most downstream users. In this paper, we propose Offsite-Tuning, a privacy-preserving and efficient transfer learning framework that can adapt billion-parameter foundation models to downstream data without access to the full model. In offsite-tuning, the model owner sends a light-weight adapter and a lossy compressed emulator to the data owner, who then fine-tunes the adapter on the downstream data with the emulator's assistance. The fine-tuned adapter is then returned to the model owner, who plugs it into the full model to create an adapted foundation model. Offsite-tuning preserves both parties' privacy and is computationally more efficient than the existing fine-tuning methods that require access to the full model weights. We demonstrate the effectiveness of offsite-tuning on various large language and vision foundation models. Offsite-tuning can achieve comparable accuracy as full model fine-tuning while being privacy-preserving and efficient, achieving 6.5x speedup and 5.6x memory reduction. Code is available at https://github.com/mit-han-lab/offsite-tuning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "46698300",
+                    "name": "Ji Lin"
+                },
+                {
+                    "authorId": "2143833459",
+                    "name": "Song Han"
+                }
+            ]
+        },
+        {
+            "paperId": "1a3d6119d9513ad27fa4fc3262e517ec6a6d2261",
+            "title": "FastComposer: Tuning-Free Multi-Subject Image Generation with Localized Attention",
+            "abstract": "Diffusion models excel at text-to-image generation, especially in subject-driven generation for personalized images. However, existing methods are inefficient due to the subject-specific fine-tuning, which is computationally intensive and hampers efficient deployment. Moreover, existing methods struggle with multi-subject generation as they often blend identity among subjects. We present FastComposer which enables efficient, personalized, multi-subject text-to-image generation without fine-tuning. FastComposer uses subject embeddings extracted by an image encoder to augment the generic text conditioning in diffusion models, enabling personalized image generation based on subject images and textual instructions with only forward passes. To address the identity blending problem in the multi-subject generation, FastComposer proposes cross-attention localization supervision during training, enforcing the attention of reference subjects localized to the correct regions in the target images. Naively conditioning on subject embeddings results in subject overfitting. FastComposer proposes delayed subject conditioning in the denoising step to maintain both identity and editability in subject-driven image generation. FastComposer generates images of multiple unseen individuals with different styles, actions, and contexts. It achieves 300$$\\times $$\n \u00d7\n \u20132500$$\\times $$\n \u00d7\n speedup compared to fine-tuning-based methods and requires zero extra storage for new subjects. FastComposer paves the way for efficient, personalized, and high-quality multi-subject image creation. Code, model, and dataset are available here (https://github.com/mit-han-lab/fastcomposer).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2068568214",
+                    "name": "Tianwei Yin"
+                },
+                {
+                    "authorId": "1768236",
+                    "name": "W. Freeman"
+                },
+                {
+                    "authorId": "145403226",
+                    "name": "F. Durand"
+                },
+                {
+                    "authorId": "2143833459",
+                    "name": "Song Han"
+                }
+            ]
+        },
+        {
+            "paperId": "46210e170045df3c0c50a17bb63e6de480d62f9d",
+            "title": "FreshGNN: Reducing Memory Access via Stable Historical Embeddings for Graph Neural Network Training",
+            "abstract": "A key performance bottleneck when training graph neural network (GNN) models on large, real-world graphs is loading node features onto a GPU. Due to limited GPU memory, expensive data movement is necessary to facilitate the storage of these features on alternative devices with slower access (e.g. CPU memory). Moreover, the irregularity of graph structures contributes to poor data locality which further exacerbates the problem. Consequently, existing frameworks capable of efficiently training large GNN models usually incur a significant accuracy degradation because of the currently-available shortcuts involved. To address these limitations, we instead propose FreshGNN, a general-purpose GNN mini-batch training framework that leverages a historical cache for storing and reusing GNN node embeddings instead of re-computing them through fetching raw features at every iteration. Critical to its success, the corresponding cache policy is designed, using a combination of gradient-based and staleness criteria, to selectively screen those embeddings which are relatively stable and can be cached, from those that need to be re-computed to reduce estimation errors and subsequent downstream accuracy loss. When paired with complementary system enhancements to support this selective historical cache, FreshGNN is able to accelerate the training speed on large graph datasets such as ogbn-papers100M and MAG240M by 3.4\u00d7 up to 20.5\u00d7 and reduce the memory access by 59%, with less than 1% influence on test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "947e0492e1c950ae81bd52a10853bde674571df5",
+            "title": "Sparse and Local Networks for Hypergraph Reasoning",
+            "abstract": "Reasoning about the relationships between entities from input facts (e.g., whether Ari is a grandparent of Charlie) generally requires explicit consideration of other entities that are not mentioned in the query (e.g., the parents of Charlie). In this paper, we present an approach for learning to solve problems of this kind in large, real-world domains, using sparse and local hypergraph neural networks (SpaLoc). SpaLoc is motivated by two observations from traditional logic-based reasoning: relational inferences usually apply locally (i.e., involve only a small number of individuals), and relations are usually sparse (i.e., only hold for a small percentage of tuples in a domain). We exploit these properties to make learning and inference efficient in very large domains by (1) using a sparse tensor representation for hypergraph neural networks, (2) applying a sparsification loss during training to encourage sparse representations, and (3) subsampling based on a novel information sufficiency-based sampling process during training. SpaLoc achieves state-of-the-art performance on several real-world, large-scale knowledge graph reasoning benchmarks, and is the first framework for applying hypergraph neural networks on real-world knowledge graphs with more than 10k nodes.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "1709512",
+                    "name": "L. Kaelbling"
+                },
+                {
+                    "authorId": "3045089",
+                    "name": "Jiajun Wu"
+                },
+                {
+                    "authorId": "13589371",
+                    "name": "Jiayuan Mao"
+                }
+            ]
+        },
+        {
+            "paperId": "fdc53c2c10742464087c0525f77e32604827a21d",
+            "title": "Efficient Streaming Language Models with Attention Sinks",
+            "abstract": "Deploying Large Language Models (LLMs) in streaming applications such as multi-round dialogue, where long interactions are expected, is urgently needed but poses two major challenges. Firstly, during the decoding stage, caching previous tokens' Key and Value states (KV) consumes extensive memory. Secondly, popular LLMs cannot generalize to longer texts than the training sequence length. Window attention, where only the most recent KVs are cached, is a natural approach -- but we show that it fails when the text length surpasses the cache size. We observe an interesting phenomenon, namely attention sink, that keeping the KV of initial tokens will largely recover the performance of window attention. In this paper, we first demonstrate that the emergence of attention sink is due to the strong attention scores towards initial tokens as a\"sink\"even if they are not semantically important. Based on the above analysis, we introduce StreamingLLM, an efficient framework that enables LLMs trained with a finite length attention window to generalize to infinite sequence lengths without any fine-tuning. We show that StreamingLLM can enable Llama-2, MPT, Falcon, and Pythia to perform stable and efficient language modeling with up to 4 million tokens and more. In addition, we discover that adding a placeholder token as a dedicated attention sink during pre-training can further improve streaming deployment. In streaming settings, StreamingLLM outperforms the sliding window recomputation baseline by up to 22.2x speedup. Code and datasets are provided at https://github.com/mit-han-lab/streaming-llm.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2249538771",
+                    "name": "Yuandong Tian"
+                },
+                {
+                    "authorId": "2249538643",
+                    "name": "Beidi Chen"
+                },
+                {
+                    "authorId": "2249530374",
+                    "name": "Song Han"
+                },
+                {
+                    "authorId": "2249533054",
+                    "name": "Mike Lewis"
+                }
+            ]
+        },
+        {
+            "paperId": "2c994fadbb84fb960d8306ee138dbeef41a5b323",
+            "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+            "abstract": "Large language models (LLMs) show excellent performance but are compute- and memory-intensive. Quantization can reduce memory and accelerate inference. However, existing methods cannot maintain accuracy and hardware efficiency at the same time. We propose SmoothQuant, a training-free, accuracy-preserving, and general-purpose post-training quantization (PTQ) solution to enable 8-bit weight, 8-bit activation (W8A8) quantization for LLMs. Based on the fact that weights are easy to quantize while activations are not, SmoothQuant smooths the activation outliers by offline migrating the quantization difficulty from activations to weights with a mathematically equivalent transformation. SmoothQuant enables an INT8 quantization of both weights and activations for all the matrix multiplications in LLMs, including OPT, BLOOM, GLM, MT-NLG, Llama-1/2, Falcon, Mistral, and Mixtral models. We demonstrate up to 1.56x speedup and 2x memory reduction for LLMs with negligible loss in accuracy. SmoothQuant enables serving 530B LLM within a single node. Our work offers a turn-key solution that reduces hardware costs and democratizes LLMs. Code is available at https://github.com/mit-han-lab/smoothquant.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "46698300",
+                    "name": "Ji Lin"
+                },
+                {
+                    "authorId": "2286429342",
+                    "name": "Mickael Seznec"
+                },
+                {
+                    "authorId": "32604218",
+                    "name": "Julien Demouth"
+                },
+                {
+                    "authorId": "143840275",
+                    "name": "Song Han"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,369 @@
+{
+    "authorId": "2145225543",
+    "papers": [
+        {
+            "paperId": "08145978da4c8912f4a05444a6bbf048778dc4af",
+            "title": "DNA-GPT: Divergent N-Gram Analysis for Training-Free Detection of GPT-Generated Text",
+            "abstract": "Large language models (LLMs) have notably enhanced the fluency and diversity of machine-generated text. However, this progress also presents a significant challenge in detecting the origin of a given text, and current research on detection methods lags behind the rapid evolution of LLMs. Conventional training-based methods have limitations in flexibility, particularly when adapting to new domains, and they often lack explanatory power. To address this gap, we propose a novel training-free detection strategy called Divergent N-Gram Analysis (DNA-GPT). Given a text, we first truncate it in the middle and then use only the preceding portion as input to the LLMs to regenerate the new remaining parts. By analyzing the differences between the original and new remaining parts through N-gram analysis in black-box or probability divergence in white-box, we unveil significant discrepancies between the distribution of machine-generated text and the distribution of human-written text. We conducted extensive experiments on the most advanced LLMs from OpenAI, including text-davinci-003, GPT-3.5-turbo, and GPT-4, as well as open-source models such as GPT-NeoX-20B and LLaMa-13B. Results show that our zero-shot approach exhibits state-of-the-art performance in distinguishing between human and GPT-generated text on four English and one German dataset, outperforming OpenAI's own classifier, which is trained on millions of text. Additionally, our methods provide reasonable explanations and evidence to support our claim, which is a unique feature of explainable detection. Our method is also robust under the revised text attack and can additionally solve model sourcing. Codes are available at https://github.com/Xianjun-Yang/DNA-GPT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145170944",
+                    "name": "Xianjun Yang"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "21038849",
+                    "name": "Linda Petzold"
+                },
+                {
+                    "authorId": "1682479",
+                    "name": "William Yang Wang"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "306c0576750d8ac1298f70474560aa951490b2a1",
+            "title": "Exploring the Limits of ChatGPT for Query or Aspect-based Text Summarization",
+            "abstract": "Text summarization has been a crucial problem in natural language processing (NLP) for several decades. It aims to condense lengthy documents into shorter versions while retaining the most critical information. Various methods have been proposed for text summarization, including extractive and abstractive summarization. The emergence of large language models (LLMs) like GPT3 and ChatGPT has recently created significant interest in using these models for text summarization tasks. Recent studies \\cite{goyal2022news, zhang2023benchmarking} have shown that LLMs-generated news summaries are already on par with humans. However, the performance of LLMs for more practical applications like aspect or query-based summaries is underexplored. To fill this gap, we conducted an evaluation of ChatGPT's performance on four widely used benchmark datasets, encompassing diverse summaries from Reddit posts, news articles, dialogue meetings, and stories. Our experiments reveal that ChatGPT's performance is comparable to traditional fine-tuning methods in terms of Rouge scores. Moreover, we highlight some unique differences between ChatGPT-generated summaries and human references, providing valuable insights into the superpower of ChatGPT for diverse text summarization tasks. Our findings call for new directions in this area, and we plan to conduct further research to systematically examine the characteristics of ChatGPT-generated summaries through extensive human evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145170944",
+                    "name": "Xianjun Yang"
+                },
+                {
+                    "authorId": "2152887874",
+                    "name": "Yan Li"
+                },
+                {
+                    "authorId": "2108030191",
+                    "name": "Xinlu Zhang"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "57611c1415d5d3b37ed2e244fc4df7ba591014e6",
+            "title": "Interpretable Skill Learning for Dynamic Treatment Regimes through Imitation",
+            "abstract": "Imitation learning that mimics experts' skills from their demonstrations has shown great success in discovering dynamic treatment regimes, i.e., the optimal decision rules to treat an individual patient based on related evolving treatment and covariate history. Existing imitation learning methods, however, still lack the capability to interpret the underlying rationales of the learned policy in a faithful way. Moreover, since dynamic treatment regimes for patients often exhibit varying patterns, i.e., symptoms that transit from one to another, the flat policy learned by a vanilla imitation learning method is typically undesired. To this end, we propose an Interpretable Skill Learning (ISL) framework to resolve the aforementioned challenges for dynamic treatment regimes through imitation. The key idea is to model each segment of experts' demonstrations with a prototype layer and integrate it with the imitation learning layer to enhance the interpretation capability. On one hand, the ISL framework is able to provide interpretable explanations by matching the prototype to exemplar segments during the inference stage, which enables doctors to perform reasoning of the learned demonstrations based on human-understandable patient symptoms and lab results. On the other hand, the obtained skill embedding consisting of prototypes serves as conditional information to the imitation learning layer, which implicitly guides the policy network to provide a more accurate demonstration when the patients' state switches from one stage to another. Thoroughly empirical studies demonstrate that our proposed ISL technique can achieve better performance than state-of-the-art methods. Moreover, the proposed ISL framework also exhibits good interpretability which cannot be observed in existing methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "3007026",
+                    "name": "Wenchao Yu"
+                },
+                {
+                    "authorId": "2451800",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "6b983038d3aabf75c2d0c8a6ba38fe3dcf7a5893",
+            "title": "Uncertainty-Aware Bootstrap Learning for Joint Extraction on Distantly-Supervised Data",
+            "abstract": "Jointly extracting entity pairs and their relations is challenging when working on distantly-supervised data with ambiguous or noisy labels.To mitigate such impact, we propose uncertainty-aware bootstrap learning, which is motivated by the intuition that the higher uncertainty of an instance, the more likely the model confidence is inconsistent with the ground truths.Specifically, we first explore instance-level data uncertainty to create an initial high-confident examples. Such subset serves as filtering noisy instances and facilitating the model to converge fast at the early stage.During bootstrap learning, we propose self-ensembling as a regularizer to alleviate inter-model uncertainty produced by noisy labels. We further define probability variance of joint tagging probabilities to estimate inner-model parametric uncertainty, which is used to select and build up new reliable training instances for the next iteration.Experimental results on two large datasets reveal that our approach outperforms existing strong baselines and related methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2120501497",
+                    "name": "Yufei Li"
+                },
+                {
+                    "authorId": "2139766157",
+                    "name": "Xiao Yu"
+                },
+                {
+                    "authorId": "3215702",
+                    "name": "Yanchi Liu"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                },
+                {
+                    "authorId": "2108152391",
+                    "name": "Cong Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "6e70a2b7512fde9d25176c508f9cad35e47f66ad",
+            "title": "Time Series Contrastive Learning with Information-Aware Augmentations",
+            "abstract": "Various contrastive learning approaches have been proposed in recent years and achieve significant empirical success. While effective and prevalent, contrastive learning has been less explored for time series data. A key component of contrastive learning is to select appropriate augmentations imposing some priors to construct feasible positive samples, such that an encoder can be trained to learn robust and discriminative representations. Unlike image and language domains where \"desired'' augmented samples can be generated with the rule of thumb guided by prefabricated human priors, the ad-hoc manual selection of time series augmentations is hindered by their diverse and human-unrecognizable temporal structures. How to find the desired augmentations of time series data that are meaningful for given contrastive learning tasks and datasets remains an open question. In this work, we address the problem by encouraging both high fidelity and variety based on information theory. A theoretical analysis leads to the criteria for selecting feasible data augmentations. On top of that, we propose a new contrastive learning approach with information-aware augmentations, InfoTS, that adaptively selects optimal augmentations for time series representation learning. Experiments on various datasets show highly competitive performance with up to a 12.0% reduction in MSE on forecasting tasks and up to 3.7% relative improvement in accuracy on classification tasks over the leading baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "153640788",
+                    "name": "Dongsheng Luo"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "2107962435",
+                    "name": "Yingheng Wang"
+                },
+                {
+                    "authorId": "2116459424",
+                    "name": "Dongkuan Xu"
+                },
+                {
+                    "authorId": "2090567",
+                    "name": "Jingchao Ni"
+                },
+                {
+                    "authorId": "3007026",
+                    "name": "Wenchao Yu"
+                },
+                {
+                    "authorId": "2048981220",
+                    "name": "Xuchao Zhang"
+                },
+                {
+                    "authorId": "3215702",
+                    "name": "Yanchi Liu"
+                },
+                {
+                    "authorId": "47557891",
+                    "name": "Yuncong Chen"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                },
+                {
+                    "authorId": "2190288679",
+                    "name": "Xiang Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "6f75404b0d01f9a09afe428f9efd5cbcd7825469",
+            "title": "Dynamic Prompting: A Unified Framework for Prompt Tuning",
+            "abstract": "It has been demonstrated that the art of prompt tuning is highly effective in efficiently extracting knowledge from pretrained foundation models, encompassing pretrained language models (PLMs), vision pretrained models, and vision-language (V-L) models. However, the efficacy of employing fixed soft prompts with a predetermined position for concatenation with inputs for all instances, irrespective of their inherent disparities, remains uncertain. Variables such as the position, length, and representations of prompts across diverse instances and tasks can substantially influence the performance of prompt tuning. In this context, we provide a theoretical analysis, which reveals that optimizing the position of the prompt to encompass the input can capture additional semantic information that traditional prefix or postfix prompt tuning methods fail to capture. Building upon our analysis, we present a unified dynamic prompt (DP) tuning strategy that dynamically determines different factors of prompts based on specific tasks and instances. To accomplish this, we employ a lightweight learning network with Gumble-Softmax, allowing us to learn instance-dependent guidance. Experimental results underscore the significant performance improvement achieved by dynamic prompt tuning across a wide range of tasks, including NLP tasks, vision recognition tasks, and vision-language tasks. Furthermore, we establish the universal applicability of our approach under full-data, few-shot, and multitask scenarios. Codes are available at https://github.com/Xianjun-Yang/DPT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145170944",
+                    "name": "Xianjun Yang"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "50879401",
+                    "name": "Xujiang Zhao"
+                },
+                {
+                    "authorId": "21038849",
+                    "name": "Linda Petzold"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "72c4978bd4d369491040b0015e8d4f7cb7f30592",
+            "title": "Hierarchical Graph Neural Networks for Causal Discovery and Root Cause Localization",
+            "abstract": "In this paper, we propose REASON, a novel framework that enables the automatic discovery of both intra-level (i.e., within-network) and inter-level (i.e., across-network) causal relationships for root cause localization. REASON consists of Topological Causal Discovery and Individual Causal Discovery. The Topological Causal Discovery component aims to model the fault propagation in order to trace back to the root causes. To achieve this, we propose novel hierarchical graph neural networks to construct interdependent causal networks by modeling both intra-level and inter-level non-linear causal relations. Based on the learned interdependent causal networks, we then leverage random walks with restarts to model the network propagation of a system fault. The Individual Causal Discovery component focuses on capturing abrupt change patterns of a single system entity. This component examines the temporal patterns of each entity's metric data (i.e., time series), and estimates its likelihood of being a root cause based on the Extreme Value theory. Combining the topological and individual causal scores, the top K system entities are identified as root causes. Extensive experiments on three real-world datasets with case studies demonstrate the effectiveness and superiority of the proposed framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1669829502",
+                    "name": "Dongjie Wang"
+                },
+                {
+                    "authorId": "1766853",
+                    "name": "Zhengzhang Chen"
+                },
+                {
+                    "authorId": "2090567",
+                    "name": "Jingchao Ni"
+                },
+                {
+                    "authorId": "2069440591",
+                    "name": "Liang Tong"
+                },
+                {
+                    "authorId": "40072305",
+                    "name": "Zheng Wang"
+                },
+                {
+                    "authorId": "2274395",
+                    "name": "Yanjie Fu"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "885792c0fe147bed2395cd4788e7007833a3e763",
+            "title": "Disentangled Causal Graph Learning for Online Unsupervised Root Cause Analysis",
+            "abstract": "The task of root cause analysis (RCA) is to identify the root causes of system faults/failures by analyzing system monitoring data. Efficient RCA can greatly accelerate system failure recovery and mitigate system damages or financial losses. However, previous research has mostly focused on developing offline RCA algorithms, which often require manually initiating the RCA process, a significant amount of time and data to train a robust model, and then being retrained from scratch for a new system fault. In this paper, we propose CORAL, a novel online RCA framework that can automatically trigger the RCA process and incrementally update the RCA model. CORAL consists of Trigger Point Detection, Incremental Disentangled Causal Graph Learning, and Network Propagation-based Root Cause Localization. The Trigger Point Detection component aims to detect system state transitions automatically and in near-real-time. To achieve this, we develop an online trigger point detection approach based on multivariate singular spectrum analysis and cumulative sum statistics. To efficiently update the RCA model, we propose an incremental disentangled causal graph learning approach to decouple the state-invariant and state-dependent information. After that, CORAL applies a random walk with restarts to the updated causal graph to accurately identify root causes. The online RCA process terminates when the causal graph and the generated root cause list converge. Extensive experiments on three real-world datasets with case studies demonstrate the effectiveness and superiority of the proposed framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1669829502",
+                    "name": "Dongjie Wang"
+                },
+                {
+                    "authorId": "1766853",
+                    "name": "Zhengzhang Chen"
+                },
+                {
+                    "authorId": "2274395",
+                    "name": "Yanjie Fu"
+                },
+                {
+                    "authorId": "3215702",
+                    "name": "Yanchi Liu"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "c04aed08eca7ac15629213862f1aa48535a66cae",
+            "title": "GLAD: Content-Aware Dynamic Graphs For Log Anomaly Detection",
+            "abstract": "Logs play a crucial role in system monitoring and debugging by recording valuable system information, including events and states. Although various methods have been proposed to detect anomalies in log sequences, they often overlook the significance of considering relations among system components, such as services and users, which can be identified from log contents. Understanding these relations is vital for detecting anomalies and their underlying causes. To address this issue, we introduce GLAD, a Graph-based Log Anomaly Detection framework designed to detect relational anomalies in system logs. GLAD incorporates log semantics, relational patterns, and sequential patterns into a unified framework for anomaly detection. Specifically, GLAD first introduces a field extraction module that utilizes prompt-based few-shot learning to identify essential fields from log contents. Then GLAD constructs dynamic log graphs for sliding windows by interconnecting extracted fields and log events parsed from the log parser. These graphs represent events and fields as nodes and their relations as edges. Subsequently, GLAD utilizes a temporal-attentive graph edge anomaly detection model for identifying anomalous relations in these dynamic log graphs. This model employs a Graph Neural Network (GNN)-based encoder enhanced with transformers to capture content, structural and temporal features. We evaluate our proposed method11Our code is available at https://github.com/yul091/GraphLogAD on three datasets, and the results demonstrate the effectiveness of GLAD in detecting anomalies indicated by varying relational patterns.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2120501497",
+                    "name": "Yufei Li"
+                },
+                {
+                    "authorId": "2238385975",
+                    "name": "Yanchi Liu"
+                },
+                {
+                    "authorId": "2256769706",
+                    "name": "Haoyu Wang"
+                },
+                {
+                    "authorId": "1766853",
+                    "name": "Zhengzhang Chen"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "47557891",
+                    "name": "Yuncong Chen"
+                },
+                {
+                    "authorId": "3007026",
+                    "name": "Wenchao Yu"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                },
+                {
+                    "authorId": "2239399824",
+                    "name": "Cong Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "d13bbf8fb16eeaaaadcd3aac39b7b1bf1f99cc8d",
+            "title": "Skill Disentanglement for Imitation Learning from Suboptimal Demonstrations",
+            "abstract": "Imitation learning has achieved great success in many sequential decision-making tasks, in which a neural agent is learned by imitating collected human demonstrations. However, existing algorithms typically require a large number of high-quality demonstrations that are difficult and expensive to collect. Usually, a trade-off needs to be made between demonstration quality and quantity in practice. Targeting this problem, in this work we consider the imitation of sub-optimal demonstrations, with both a small clean demonstration set and a large noisy set. Some pioneering works have been proposed, but they suffer from many limitations, e.g., assuming a demonstration to be of the same optimality throughout time steps and failing to provide any interpretation w.r.t knowledge learned from the noisy set. Addressing these problems, we propose \\method by evaluating and imitating at the sub-demonstration level, encoding action primitives of varying quality into different skills. Concretely, SDIL consists of a high-level controller to discover skills and a skill-conditioned module to capture action-taking policies, and is trained following a two-phase pipeline by first discovering skills with all demonstrations and then adapting the controller to only the clean set. A mutual-information-based regularization and a dynamic sub-demonstration optimality estimator are designed to promote disentanglement in the skill space. Extensive experiments are conducted over two gym environments and a real-world healthcare dataset to demonstrate the superiority of SDIL in learning from sub-optimal demonstrations and its improved interpretability by examining learned skills.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1999191869",
+                    "name": "Tianxiang Zhao"
+                },
+                {
+                    "authorId": "3007026",
+                    "name": "Wenchao Yu"
+                },
+                {
+                    "authorId": "2116430057",
+                    "name": "Suhang Wang"
+                },
+                {
+                    "authorId": "2153518376",
+                    "name": "Lucy Wang"
+                },
+                {
+                    "authorId": "48505793",
+                    "name": "Xiang Zhang"
+                },
+                {
+                    "authorId": "47557891",
+                    "name": "Yuncong Chen"
+                },
+                {
+                    "authorId": "3215702",
+                    "name": "Yanchi Liu"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        }
+    ]
+}

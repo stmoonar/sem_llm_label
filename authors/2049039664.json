@@ -1,0 +1,417 @@
+{
+    "authorId": "2049039664",
+    "papers": [
+        {
+            "paperId": "8758e094bd55c6810728963f212e07722a50ab74",
+            "title": "Enhancing ID and Text Fusion via Alternative Training in Session-based Recommendation",
+            "abstract": "Session-based recommendation has gained increasing attention in recent years, with its aim to offer tailored suggestions based on users' historical behaviors within sessions. To advance this field, a variety of methods have been developed, with ID-based approaches typically demonstrating promising performance. However, these methods often face challenges with long-tail items and overlook other rich forms of information, notably valuable textual semantic information. To integrate text information, various methods have been introduced, mostly following a naive fusion framework. Surprisingly, we observe that fusing these two modalities does not consistently outperform the best single modality by following the naive fusion framework. Further investigation reveals an potential imbalance issue in naive fusion, where the ID dominates and text modality is undertrained. This suggests that the unexpected observation may stem from naive fusion's failure to effectively balance the two modalities, often over-relying on the stronger ID modality. This insight suggests that naive fusion might not be as effective in combining ID and text as previously expected. To address this, we propose a novel alternative training strategy AlterRec. It separates the training of ID and text, thereby avoiding the imbalance issue seen in naive fusion. Additionally, AlterRec designs a novel strategy to facilitate the interaction between the two modalities, enabling them to mutually learn from each other and integrate the text more effectively. Comprehensive experiments demonstrate the effectiveness of AlterRec in session-based recommendation. The implementation is available at https://github.com/Juanhui28/AlterRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2257089588",
+                    "name": "Zhikai Chen"
+                },
+                {
+                    "authorId": "93719189",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "144767914",
+                    "name": "Wei Jin"
+                },
+                {
+                    "authorId": "2284066656",
+                    "name": "Amin Javari"
+                },
+                {
+                    "authorId": "2256937217",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "be9f4354285fc4ef1a9af5868797a25a2fa13cb5",
+            "title": "Mixture of Link Predictors",
+            "abstract": "Link prediction, which aims to forecast unseen connections in graphs, is a fundamental task in graph machine learning. Heuristic methods, leveraging a range of different pairwise measures such as common neighbors and shortest paths, often rival the performance of vanilla Graph Neural Networks (GNNs). Therefore, recent advancements in GNNs for link prediction (GNN4LP) have primarily focused on integrating one or a few types of pairwise information. In this work, we reveal that different node pairs within the same dataset necessitate varied pairwise information for accurate prediction and models that only apply the same pairwise information uniformly could achieve suboptimal performance. As a result, we propose a simple mixture of experts model Link-MoE for link prediction. Link-MoE utilizes various GNNs as experts and strategically selects the appropriate expert for each node pair based on various types of pairwise information. Experimental results across diverse real-world datasets demonstrate substantial performance improvement from Link-MoE. Notably, Link-MoE achieves a relative improvement of 18.82\\% on the MRR metric for the Pubmed dataset and 10.8\\% on the Hits@100 metric for the ogbl-ppa dataset, compared to the best baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284027842",
+                    "name": "Li Ma"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2220302956",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2261366610",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "11732258",
+                    "name": "Xiaofeng Gao"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "f5aa366ff70215f06ae6501c322eba2f0934a7c3",
+            "title": "Node-wise Filtering in Graph Neural Networks: A Mixture of Experts Approach",
+            "abstract": "Graph Neural Networks (GNNs) have proven to be highly effective for node classification tasks across diverse graph structural patterns. Traditionally, GNNs employ a uniform global filter, typically a low-pass filter for homophilic graphs and a high-pass filter for heterophilic graphs. However, real-world graphs often exhibit a complex mix of homophilic and heterophilic patterns, rendering a single global filter approach suboptimal. In this work, we theoretically demonstrate that a global filter optimized for one pattern can adversely affect performance on nodes with differing patterns. To address this, we introduce a novel GNN framework Node-MoE that utilizes a mixture of experts to adaptively select the appropriate filters for different nodes. Extensive experiments demonstrate the effectiveness of Node-MoE on both homophilic and heterophilic graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2267308439",
+                    "name": "Wei Huang"
+                },
+                {
+                    "authorId": "2301317582",
+                    "name": "Xianfeng Tang"
+                },
+                {
+                    "authorId": "2257363913",
+                    "name": "Hanqing Lu"
+                },
+                {
+                    "authorId": "2305051640",
+                    "name": "Chen Luo"
+                },
+                {
+                    "authorId": "2253533415",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "2faf6d480e9b4ed2c129f01c051726ec63497e60",
+            "title": "Spectral-Aware Augmentation for Enhanced Graph Representation Learning",
+            "abstract": "Graph Contrastive Learning (GCL) has demonstrated remarkable effectiveness in learning representations on graphs in recent years. To generate ideal augmentation views, the augmentation generation methods should preserve essential information while discarding less relevant details for downstream tasks. However, current augmentation methods usually involve random topology corruption in the spatial domain, which fails to adequately address information spread across different frequencies in the spectral domain. Our preliminary study highlights this issue, demonstrating that spatial random perturbations impact all frequency bands almost uniformly. Given that task-relevant information typically resides in specific spectral regions that vary across graphs, this one-size-fits-all approach can pose challenges. We argue that indiscriminate spatial random perturbation might unintentionally weaken task-relevant information, reducing its effectiveness. To tackle this challenge, we propose applying perturbations selectively, focusing on information specific to different frequencies across diverse graphs. In this paper, we present GASSER, a model that applies tailored perturbations to specific frequencies of graph structures in the spectral domain, guided by spectral hints. Through extensive experimentation and theoretical analysis, we demonstrate that the augmentation views generated by GASSER are adaptive, controllable, and intuitively aligned with the homophily ratios and spectrum of graph structures.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261395882",
+                    "name": "Kaiqi Yang"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2112343584",
+                    "name": "Wei-dong Jin"
+                },
+                {
+                    "authorId": "2261366610",
+                    "name": "Hui Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "45a6f7ca23944aa2050c2bc6d6a580058d032b30",
+            "title": "Amazon-M2: A Multilingual Multi-locale Shopping Session Dataset for Recommendation and Text Generation",
+            "abstract": "Modeling customer shopping intentions is a crucial task for e-commerce, as it directly impacts user experience and engagement. Thus, accurately understanding customer preferences is essential for providing personalized recommendations. Session-based recommendation, which utilizes customer session data to predict their next interaction, has become increasingly popular. However, existing session datasets have limitations in terms of item attributes, user diversity, and dataset scale. As a result, they cannot comprehensively capture the spectrum of user behaviors and preferences. To bridge this gap, we present the Amazon Multilingual Multi-locale Shopping Session Dataset, namely Amazon-M2. It is the first multilingual dataset consisting of millions of user sessions from six different locales, where the major languages of products are English, German, Japanese, French, Italian, and Spanish. Remarkably, the dataset can help us enhance personalization and understanding of user preferences, which can benefit various existing tasks as well as enable new tasks. To test the potential of the dataset, we introduce three tasks in this work: (1) next-product recommendation, (2) next-product recommendation with domain shifts, and (3) next-product title generation. With the above tasks, we benchmark a range of algorithms on our proposed dataset, drawing new insights for further research and practice. In addition, based on the proposed dataset and tasks, we hosted a competition in the KDD CUP 2023 and have attracted thousands of users and submissions. The winning solutions and the associated workshop can be accessed at our website https://kddcup23.github.io/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144767914",
+                    "name": "Wei Jin"
+                },
+                {
+                    "authorId": "2125202063",
+                    "name": "Haitao Mao"
+                },
+                {
+                    "authorId": "2146249169",
+                    "name": "Zheng Li"
+                },
+                {
+                    "authorId": "5795999",
+                    "name": "Haoming Jiang"
+                },
+                {
+                    "authorId": "143884453",
+                    "name": "Cheng-hsin Luo"
+                },
+                {
+                    "authorId": "30580446",
+                    "name": "Haifang Wen"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2149891871",
+                    "name": "Hanqing Lu"
+                },
+                {
+                    "authorId": "8492168",
+                    "name": "Zhengyang Wang"
+                },
+                {
+                    "authorId": "47370334",
+                    "name": "Ruirui Li"
+                },
+                {
+                    "authorId": "1700892",
+                    "name": "Z. Li"
+                },
+                {
+                    "authorId": "2072995251",
+                    "name": "Mo Cheng"
+                },
+                {
+                    "authorId": "3057049",
+                    "name": "R. Goutam"
+                },
+                {
+                    "authorId": "2184766165",
+                    "name": "Haiyang Zhang"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "2893721",
+                    "name": "Suhang Wang"
+                },
+                {
+                    "authorId": "2109461904",
+                    "name": "Yizhou Sun"
+                },
+                {
+                    "authorId": "1736632",
+                    "name": "Jiliang Tang"
+                },
+                {
+                    "authorId": "2021632793",
+                    "name": "Bing Yin"
+                },
+                {
+                    "authorId": "48784944",
+                    "name": "Xianfeng Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "4d1bcfb754dcd14fd312356021d9e332d3d3b18f",
+            "title": "Label-free Node Classification on Graphs with Large Language Models (LLMS)",
+            "abstract": "In recent years, there have been remarkable advancements in node classification achieved by Graph Neural Networks (GNNs). However, they necessitate abundant high-quality labels to ensure promising performance. In contrast, Large Language Models (LLMs) exhibit impressive zero-shot proficiency on text-attributed graphs. Yet, they face challenges in efficiently processing structural data and suffer from high inference costs. In light of these observations, this work introduces a label-free node classification on graphs with LLMs pipeline, LLM-GNN. It amalgamates the strengths of both GNNs and LLMs while mitigating their limitations. Specifically, LLMs are leveraged to annotate a small portion of nodes and then GNNs are trained on LLMs' annotations to make predictions for the remaining large portion of nodes. The implementation of LLM-GNN faces a unique challenge: how can we actively select nodes for LLMs to annotate and consequently enhance the GNN training? How can we leverage LLMs to obtain annotations of high quality, representativeness, and diversity, thereby enhancing GNN performance with less cost? To tackle this challenge, we develop an annotation quality heuristic and leverage the confidence scores derived from LLMs to advanced node selection. Comprehensive experimental results validate the effectiveness of LLM-GNN. In particular, LLM-GNN can achieve an accuracy of 74.9% on a vast-scale dataset \\products with a cost less than 1 dollar.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257089588",
+                    "name": "Zhikai Chen"
+                },
+                {
+                    "authorId": "2125202063",
+                    "name": "Haitao Mao"
+                },
+                {
+                    "authorId": "2256788829",
+                    "name": "Hongzhi Wen"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2112343584",
+                    "name": "Wei-dong Jin"
+                },
+                {
+                    "authorId": "2257092445",
+                    "name": "Haiyang Zhang"
+                },
+                {
+                    "authorId": "2253533415",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "2256937217",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "5ca04cde78542b8d58c4c5b2db91ddd65b56d917",
+            "title": "LazyGNN: Large-Scale Graph Neural Networks via Lazy Propagation",
+            "abstract": "Recent works have demonstrated the benefits of capturing long-distance dependency in graphs by deeper graph neural networks (GNNs). But deeper GNNs suffer from the long-lasting scalability challenge due to the neighborhood explosion problem in large-scale graphs. In this work, we propose to capture long-distance dependency in graphs by shallower models instead of deeper models, which leads to a much more efficient model, LazyGNN, for graph representation learning. Moreover, we demonstrate that LazyGNN is compatible with existing scalable approaches (such as sampling methods) for further accelerations through the development of mini-batch LazyGNN. Comprehensive experiments demonstrate its superior prediction performance and scalability on large-scale benchmarks. The implementation of LazyGNN is available at https://github.com/RXPHD/Lazy_GNN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066270999",
+                    "name": "Rui Xue"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2937550",
+                    "name": "MohamadAli Torkamani"
+                },
+                {
+                    "authorId": "2143385183",
+                    "name": "Jian Pei"
+                },
+                {
+                    "authorId": "2124928119",
+                    "name": "Xiaorui Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "707142f242ee4e40489062870ca53810cb33d404",
+            "title": "Demystifying Structural Disparity in Graph Neural Networks: Can One Size Fit All?",
+            "abstract": "Recent studies on Graph Neural Networks(GNNs) provide both empirical and theoretical evidence supporting their effectiveness in capturing structural patterns on both homophilic and certain heterophilic graphs. Notably, most real-world homophilic and heterophilic graphs are comprised of a mixture of nodes in both homophilic and heterophilic structural patterns, exhibiting a structural disparity. However, the analysis of GNN performance with respect to nodes exhibiting different structural patterns, e.g., homophilic nodes in heterophilic graphs, remains rather limited. In the present study, we provide evidence that Graph Neural Networks(GNNs) on node classification typically perform admirably on homophilic nodes within homophilic graphs and heterophilic nodes within heterophilic graphs while struggling on the opposite node set, exhibiting a performance disparity. We theoretically and empirically identify effects of GNNs on testing nodes exhibiting distinct structural patterns. We then propose a rigorous, non-i.i.d PAC-Bayesian generalization bound for GNNs, revealing reasons for the performance disparity, namely the aggregated feature distance and homophily ratio difference between training and testing nodes. Furthermore, we demonstrate the practical implications of our new findings via (1) elucidating the effectiveness of deeper GNNs; and (2) revealing an over-looked distribution shift factor on graph out-of-distribution problem and proposing a new scenario accordingly.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2125202063",
+                    "name": "Haitao Mao"
+                },
+                {
+                    "authorId": "2109393101",
+                    "name": "Zhikai Chen"
+                },
+                {
+                    "authorId": "144767914",
+                    "name": "Wei Jin"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "47009435",
+                    "name": "Yao Ma"
+                },
+                {
+                    "authorId": "2187164642",
+                    "name": "Tong Zhao"
+                },
+                {
+                    "authorId": "145474474",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "1736632",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "c2f40700ef3cb75eee66bb328c9a1a90404b4fba",
+            "title": "Enhancing Graph Representations Learning with Decorrelated Propagation",
+            "abstract": "In recent years, graph neural networks (GNNs) have been widely used in many domains due to their powerful capability in representation learning on graph-structured data. While a majority of extant studies focus on mitigating the over-smoothing problem, recent works also reveal the limitation of GNN from a new over-correlation perspective which states that the learned representation becomes highly correlated after feature transformation and propagation in GNNs. In this paper, we thoroughly re-examine the issue of over-correlation in deep GNNs, both empirically and theoretically. We demonstrate that the propagation operator in GNNs exacerbates the feature correlation. In addition, we discovered through empirical study that existing decorrelation solutions fall short of maintaining a low feature correlation, potentially encoding redundant information. Thus, to more effectively address the over-correlation problem, we propose a decorrelated propagation scheme (DeProp) as a fundamental component to decorrelate the feature learning in GNN models, which achieves feature decorrelation at the propagation step. Comprehensive experiments on multiple real-world datasets demonstrate that DeProp can be easily integrated into prevalent GNNs, leading to significant performance enhancements. Furthermore, we find that it can be used to solve over-smoothing and over-correlation problems simultaneously and significantly outperform state-of-the-art methods on missing feature settings. The code is available at https://github.com/hualiu829/DeProp.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268836596",
+                    "name": "Hua Liu"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "144767914",
+                    "name": "Wei Jin"
+                },
+                {
+                    "authorId": "2124928119",
+                    "name": "Xiaorui Liu"
+                },
+                {
+                    "authorId": "2261366610",
+                    "name": "Hui Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "fa061277792ffbde886b99398bc91459724f6eda",
+            "title": "Large-Scale Graph Neural Networks: The Past and New Frontiers",
+            "abstract": "Graph Neural Networks (GNNs) have gained significant attention in recent years due to their ability to model complex relationships between entities in graph-structured data such as social networks, protein structures, and knowledge graphs. However, due to the size of real-world industrial graphs and the special architecture of GNNs, it is a long-lasting challenge for engineers and researchers to deploy GNNs on large-scale graphs, which significantly limits their applications in real-world applications. In this tutorial, we will cover the fundamental scalability challenges of GNNs, frontiers of large-scale GNNs including classic approaches and some newly emerging techniques, the evaluation and comparison of scalable GNNs, and their large-scale real-world applications. Overall, this tutorial aims to provide a systematic and comprehensive understanding of the challenges and state-of-the-art techniques for scaling GNNs. The summary and discussion on future directions will inspire engineers and researchers to explore new ideas and developments in this rapidly evolving field. The website of this tutorial is available at https://sites.google.com/ncsu.edu/gnnkdd2023tutorial.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066270999",
+                    "name": "Rui Xue"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2187164642",
+                    "name": "Tong Zhao"
+                },
+                {
+                    "authorId": "2153429147",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "1736632",
+                    "name": "Jiliang Tang"
+                },
+                {
+                    "authorId": "1390612725",
+                    "name": "Xiaorui Liu"
+                }
+            ]
+        }
+    ]
+}

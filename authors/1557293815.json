@@ -1,0 +1,356 @@
+{
+    "authorId": "1557293815",
+    "papers": [
+        {
+            "paperId": "1a4b9ceb3dbecd3ec08b93f68ba44bc3178b1df5",
+            "title": "Simplifying and Empowering Transformers for Large-Graph Representations",
+            "abstract": "Learning representations on large-sized graphs is a long-standing challenge due to the inter-dependence nature involved in massive data points. Transformers, as an emerging class of foundation encoders for graph-structured data, have shown promising performance on small graphs due to its global attention capable of capturing all-pair influence beyond neighboring nodes. Even so, existing approaches tend to inherit the spirit of Transformers in language and vision tasks, and embrace complicated models by stacking deep multi-head attentions. In this paper, we critically demonstrate that even using a one-layer attention can bring up surprisingly competitive performance across node property prediction benchmarks where node numbers range from thousand-level to billion-level. This encourages us to rethink the design philosophy for Transformers on large graphs, where the global attention is a computation overhead hindering the scalability. We frame the proposed scheme as Simplified Graph Transformers (SGFormer), which is empowered by a simple attention model that can efficiently propagate information among arbitrary nodes in one layer. SGFormer requires none of positional encodings, feature/graph pre-processing or augmented loss. Empirically, SGFormer successfully scales to the web-scale graph ogbn-papers100M and yields up to 141x inference acceleration over SOTA Transformers on medium-sized graphs. Beyond current results, we believe the proposed methodology alone enlightens a new technical path of independent interest for building Transformers on large graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51171144",
+                    "name": "Qitian Wu"
+                },
+                {
+                    "authorId": "49260917",
+                    "name": "Wen-Long Zhao"
+                },
+                {
+                    "authorId": null,
+                    "name": "Chenxiao Yang"
+                },
+                {
+                    "authorId": "35466544",
+                    "name": "Hengrui Zhang"
+                },
+                {
+                    "authorId": "2163318329",
+                    "name": "Fan Nie"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2419616",
+                    "name": "Yatao Bian"
+                },
+                {
+                    "authorId": "3063894",
+                    "name": "Junchi Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "46210e170045df3c0c50a17bb63e6de480d62f9d",
+            "title": "FreshGNN: Reducing Memory Access via Stable Historical Embeddings for Graph Neural Network Training",
+            "abstract": "A key performance bottleneck when training graph neural network (GNN) models on large, real-world graphs is loading node features onto a GPU. Due to limited GPU memory, expensive data movement is necessary to facilitate the storage of these features on alternative devices with slower access (e.g. CPU memory). Moreover, the irregularity of graph structures contributes to poor data locality which further exacerbates the problem. Consequently, existing frameworks capable of efficiently training large GNN models usually incur a significant accuracy degradation because of the currently-available shortcuts involved. To address these limitations, we instead propose FreshGNN, a general-purpose GNN mini-batch training framework that leverages a historical cache for storing and reusing GNN node embeddings instead of re-computing them through fetching raw features at every iteration. Critical to its success, the corresponding cache policy is designed, using a combination of gradient-based and staleness criteria, to selectively screen those embeddings which are relatively stable and can be cached, from those that need to be re-computed to reduce estimation errors and subsequent downstream accuracy loss. When paired with complementary system enhancements to support this selective historical cache, FreshGNN is able to accelerate the training speed on large graph datasets such as ogbn-papers100M and MAG240M by 3.4\u00d7 up to 20.5\u00d7 and reduce the memory access by 59%, with less than 1% influence on test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "c822e205faa21c0187e495bcef7fc60a2825747b",
+            "title": "Efficient Halftoning via Deep Reinforcement Learning",
+            "abstract": "Halftoning aims to reproduce a continuous-tone image with pixels whose intensities are constrained to two discrete levels. This technique has been deployed on every printer, and the majority of them adopt fast methods (e.g., ordered dithering, error diffusion) that fail to render structural details, which determine halftone\u2019s quality. Other prior methods of pursuing visual pleasure by searching for the optimal halftone solution, on the contrary, suffer from their high computational cost. In this paper, we propose a fast and structure-aware halftoning method via a data-driven approach. Specifically, we formulate halftoning as a reinforcement learning problem, in which each binary pixel\u2019s value is regarded as an action chosen by a virtual agent with a shared fully convolutional neural network (CNN) policy. In the offline phase, an effective gradient estimator is utilized to train the agents in producing high-quality halftones in one action step. Then, halftones can be generated online by one fast CNN inference. Besides, we propose a novel anisotropy suppressing loss function, which brings the desirable blue-noise property. Finally, we find that optimizing SSIM could result in holes in flat areas, which can be avoided by weighting the metric with the contone\u2019s contrast map. Experiments show that our framework can effectively train a light-weight CNN, which is 15x faster than previous structure-aware methods, to generate blue-noise halftones with satisfactory visual quality. We also present a prototype of deep multitoning to demonstrate the extensibility of our method.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "1557386187",
+                    "name": "Dongliang Xiong"
+                },
+                {
+                    "authorId": "46812996",
+                    "name": "Xiaowen Jiang"
+                },
+                {
+                    "authorId": "2169550966",
+                    "name": "Li Ding"
+                },
+                {
+                    "authorId": null,
+                    "name": "Liang Chen"
+                },
+                {
+                    "authorId": "2000347116",
+                    "name": "Kai Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "724dc2278022327411c0faa8709e8050a292988d",
+            "title": "Halftoning with Multi-Agent Deep Reinforcement Learning",
+            "abstract": "Deep neural networks have recently succeeded in digital halftoning using vanilla convolutional layers with high parallelism. However, existing deep methods fail to generate halftones with a satisfying blue-noise property and require complex training schemes. In this paper, we propose a halftoning method based on multi-agent deep reinforcement learning, called HALFTONERS, which learns a shared policy to generate high-quality halftone images. Specifically, we view the decision of each binary pixel value as an action of a virtual agent, whose policy is trained by a low-variance policy gradient. Moreover, the blue-noise property is achieved by a novel anisotropy suppressing loss function. Experiments show that our halftoning method produces high-quality halftones while staying relatively fast.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "1557386187",
+                    "name": "Dongliang Xiong"
+                },
+                {
+                    "authorId": "46812996",
+                    "name": "Xiaowen Jiang"
+                },
+                {
+                    "authorId": "7889591",
+                    "name": "Aiguo Yin"
+                },
+                {
+                    "authorId": "2169550966",
+                    "name": "Li Ding"
+                },
+                {
+                    "authorId": "2000347116",
+                    "name": "Kai Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "add73d71fef8b06ba4ba1d500cd12d33dfe3df3f",
+            "title": "Structured Dynamic Precision for Deep Neural Networks Quantization",
+            "abstract": "Deep Neural Networks (DNNs) have achieved remarkable success in various Artificial Intelligence applications. Quantization is a critical step in DNNs compression and acceleration for deployment. To further boost DNN execution efficiency, many works explore to leverage the input-dependent redundancy with dynamic quantization for different regions. However, the sensitive regions in the feature map are irregularly distributed, which restricts the real speed up for existing accelerators. To this end, we propose an algorithm-architecture co-design, named Structured Dynamic Precision (SDP). Specifically, we propose a quantization scheme in which the high-order bit part and the low-order bit part of data can be masked independently. And a fixed number of term parts are dynamically selected for computation based on the importance of each term in the group. We also present a hardware design to enable the algorithm efficiently with small overheads, whose inference time mainly scales with the precision proportionally. Evaluation experiments on extensive networks demonstrate that compared to the state-of-the-art dynamic quantization accelerator DRQ, our SDP can achieve 29% performance gain and 51% energy reduction for the same level of model accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2000347116",
+                    "name": "Kai Huang"
+                },
+                {
+                    "authorId": "2132475727",
+                    "name": "Bowen Li"
+                },
+                {
+                    "authorId": "1557386187",
+                    "name": "Dongliang Xiong"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "46812996",
+                    "name": "Xiaowen Jiang"
+                },
+                {
+                    "authorId": "8073096",
+                    "name": "Xiaolang Yan"
+                },
+                {
+                    "authorId": "2380776",
+                    "name": "L. Claesen"
+                },
+                {
+                    "authorId": "2155790243",
+                    "name": "Dehong Liu"
+                },
+                {
+                    "authorId": "2128676658",
+                    "name": "Junjian Chen"
+                },
+                {
+                    "authorId": "2109097780",
+                    "name": "Zhili Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "858350d0bf0bf9f1f63c9a8b204d8c59e910f149",
+            "title": "MR-BIRCH: A scalable MapReduce-based BIRCH clustering algorithm",
+            "abstract": "Many classical clustering algorithms have been fitted into MapReduce, which provides a novel solution for clustering big data. However, several iterations are required to reach an acceptable result in most of the algorithms. For each iteration, a new MapReduce job must be executed to load the dataset into main memory, which results in high I/O overhead and poor efficiency. BIRCH algorithm stores only the statistical information of objects with CF entries and CF tree to cluster big data, but with the increase of the tree nodes, the main memory will be insufficient to contain more objects. Hence, BIRCH has to reduce the tree, which will degrade the clustering quality and decelerate the whole execution efficiency. To deal with the problem, BIRCH was fitted into MapReduce called MR-BIRCH in this paper. In contrast to a great number of MapReduce-based algorithms, MR-BIRCH loads dataset only once, and the dataset is processed parallel in several machines. The complexity and scalability were analyzed to evaluate the quality of MR-BIRCH, and MR-BIRCH was compared with Python sklearn BIRCH and Apache Mahout k-means on real-world and synthetic datasets. Experimental results show, most of the time, MR-BIRCH was better or equal to sklearn BIRCH, and it was competitive to Mahout k-means.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2192331109",
+                    "name": "Yufeng Li"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "3225060",
+                    "name": "Jiyong Lu"
+                },
+                {
+                    "authorId": "50079111",
+                    "name": "Xiaozhong Li"
+                },
+                {
+                    "authorId": "2145121892",
+                    "name": "Zhiwei Sun"
+                },
+                {
+                    "authorId": "2145626835",
+                    "name": "Min Li"
+                }
+            ]
+        },
+        {
+            "paperId": "c10ebdf12c2bc254d060d8254d1735769d0c9669",
+            "title": "DFQF: Data Free Quantization-aware Fine-tuning",
+            "abstract": "Data free deep neural network quantization is a practical challenge, since the original training data is often unavailable due to some privacy, proprietary or transmission issues. The existing methods implicitly equate data-free with training-free and quantize model manually through analyzing the weights\u2019 distribution. It leads to a signi\ufb01cant accuracy drop in lower than 6-bit quantization. In this work, we propose the data free quantization-aware \ufb01ne-tuning (DFQF), wherein no real training data is required, and the quantized network is \ufb01ne-tuned with generated images. Speci\ufb01cally, we start with training a generator from the pre-trained full-precision network with inception score loss, batch-normalization statistics loss and adversarial loss to synthesize a fake image set. Then we \ufb01ne-tune the quantized student network with the full-precision teacher network and the generated images by utilizing knowledge distillation (KD). The proposed DFQF outperforms state-of-the-art post-train quantization methods, and achieve W4A4 quantization of ResNet20 on the CIFAR10 dataset within 1% accuracy drop.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2132475727",
+                    "name": "Bowen Li"
+                },
+                {
+                    "authorId": "2000347116",
+                    "name": "Kai Huang"
+                },
+                {
+                    "authorId": "1558664405",
+                    "name": "Siang Chen"
+                },
+                {
+                    "authorId": "1557386187",
+                    "name": "Dongliang Xiong"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2380776",
+                    "name": "L. Claesen"
+                }
+            ]
+        },
+        {
+            "paperId": "5a42cd51820ec5897752aa9a1d75f8b76bca0181",
+            "title": "Fine-Grained Communication-Aware Task Scheduling Approach for Acyclic and Cyclic Applications on MPSoCs",
+            "abstract": "Fine-grained task models can exploit parallelism to achieve high performance for multiprocessor system-on-chip (MPSoC). However, fine-grained models face the issues of high-communication overhead and difficult scheduling decisions, and the two challenges are inter-dependent. To address the issues, this paper gives a full analysis of the fine-grained communication optimization technique and communication pipeline, from both time and topology perspectives, and proposes a static fine-grained communication-aware task scheduling (FCATS) approach, which integrates scheduling with communication pipeline for acyclic and cyclic applications based on the fine-grained Simulink model. The approach contains search-based scheduling with high-quality solutions utilizing genetic algorithm-integer linear programming (GA-ILP) and hybrid GA-heuristic scheduling with short solving time to meet different demands for users. The experimental results with both synthetic and real-life benchmarks on the 4/8/16-CPU platform demonstrate the efficiency of the approach on performance improvements compared to previous works.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144459093",
+                    "name": "Kai Huang"
+                },
+                {
+                    "authorId": "46812996",
+                    "name": "Xiaowen Jiang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "46447395",
+                    "name": "Xiaomeng Zhang"
+                },
+                {
+                    "authorId": "2152596627",
+                    "name": "Min Yu"
+                },
+                {
+                    "authorId": "7303839",
+                    "name": "Rongjie Yan"
+                },
+                {
+                    "authorId": "8073096",
+                    "name": "Xiaolang Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "bfc10f95849320045b0db3557299e76a71f009e6",
+            "title": "NoUCSR: Efficient Super-Resolution Network without Upsampling Convolution",
+            "abstract": "Deep learning approaches have been ubiquitous in single image super-resolution ever since the success of SRCNN. However, the superior performance is based on high requirement of computational resources, limiting the application of deep learning approaches in resource-constrained embedded and mobile devices. In this paper, we firstly show that the convolution layers in upsampling block are parameter-and computation-intensive. Secondly, we find that replacing upsampling convolution by concatenating different level features can reduce parameters and inference runtime significantly, while keeping same performance. Finally, we introduce an efficient model without upsampling convolution called NoUCSR, and present variant models optimizing parameter, inference runtime and performance respectively at the constraint of MSRResNet. The experiments show that NoUCSR can achieve a better tradeoff among parameter, inference runtime and performance than state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1557386187",
+                    "name": "Dongliang Xiong"
+                },
+                {
+                    "authorId": "2000347116",
+                    "name": "Kai Huang"
+                },
+                {
+                    "authorId": "1558664405",
+                    "name": "Siang Chen"
+                },
+                {
+                    "authorId": "2132475727",
+                    "name": "Bowen Li"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2152922725",
+                    "name": "Wenyuan Xu"
+                }
+            ]
+        }
+    ]
+}

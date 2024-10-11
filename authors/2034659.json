@@ -1,0 +1,249 @@
+{
+    "authorId": "2034659",
+    "papers": [
+        {
+            "paperId": "c24132d2eb4f4599b4abd363fe55d284d86bd65d",
+            "title": "Streaming Weighted Sampling over Join Queries",
+            "abstract": "Join queries are a fundamental database tool, capturing a range of tasks that involve linking heterogeneous data sources. However, with massive table sizes, it is often impractical to keep these in memory, and we can only take one or few streaming passes over them. Moreover, building out the full join result (e.g., linking heterogeneous data sources along quasi-identifiers) can lead to a combinatorial explosion of results due to many-to-many links. Random sampling is a natural tool to boil this oversized result down to a representative subset with well-understood statistical properties, but turns out to be a challenging task due to the combinatorial nature of the sampling domain. Existing techniques in the literature focus solely on the setting with tabular data residing in main memory, and do not address aspects such as stream operation, weighted sampling and more general join operators that are urgently needed in a modern data processing context. The main contribution of this work is to meet these needs with more lightweight practical approaches. First, a bijection between the sampling problem and a graph problem is introduced to support weighted sampling and common join operators. Second, the sampling techniques are refined to minimise the number of streaming passes. Third, techniques are presented to deal with very large tables under limited memory. Finally, the proposed techniques are compared to existing approaches that rely on database indices and the results indicate substantial memory savings, reduced runtimes for ad-hoc queries and competitive amortised runtimes. All pertinent code and data can be found at:",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "50bca53ff65a92e0776ed7f04ff692f87afaed85",
+            "title": "Graphical Join: A New Physical Join Algorithm for RDBMSs",
+            "abstract": "Join operations (especially n-way, many-to-many joins) are known to be time- and resource-consuming. At large scales, with respect to table and join-result sizes, current state of the art approaches (in-cluding both binary-join plans which use Nested-loop/Hash/Sort-merge Join algorithms or, alternatively, worst-case optimal join algorithms (WOJAs)), may even fail to produce any answer given reasonable resource and time constraints. In this work, we introduce a new approach for n-way equi-join processing, the Graphical Join (GJ). The key idea is two-fold: First, to map the physical join computation problem to PGMs and introduce tweaked inference algorithms which can compute a Run-Length Encoding (RLE) based join-result summary, entailing all statistics necessary to materialize the join result. Second, and most importantly, to show that a join algorithm, like GJ, which produces the above join-result summary and then desummarizes it, can introduce large performance bene fi ts in time and space. Comprehensive experimentation is undertaken with join queries from the JOB, TPCDS, and lastFM datasets, comparing GJ against PostgresQL and MonetDB and a state of the art WOJA implemented within the Umbra system. The results for in-memory join computation show performance improvements up to 64 \u00d7 , 388 \u00d7 , and 6 \u00d7 faster than PostgreSQL, MonetDB and Um- bra, respectively. For on-disk join computation, GJ is faster than PostgreSQL, MonetDB and Umbra by up to 820 \u00d7 , 717 \u00d7 and 165 \u00d7 , re- spectively. Furthermore, GJ space needs are up to 21,488 \u00d7 , 38,333 \u00d7 , and 78,750 \u00d7 smaller than PostgresQL, MonetDB, and Umbra, re- spectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "6c47bfbab4d5ac95bcf3158e16e9471f92b7fb05",
+            "title": "Model Joins: Enabling Analytics Over Joins of Absent Big Tables",
+            "abstract": "This work is motivated by two key facts. First, it is highly desirable to be able to learn and perform knowledge discovery and analytics (LKD) tasks without the need to access raw-data tables. This may be due to organizations finding it increasingly frustrating and costly to manage and maintain ever-growing tables, or for privacy reasons. Hence, compact models can be developed from the raw data and used instead of the tables. Second, oftentimes, LKD tasks are to be performed on a (potentially very large) table which is itself the result of joining separate (potentially very large) relational tables. But how can one do this, when the individual to-be-joined tables are absent? Here, we pose the following fundamental questions: Q1: How can one\"join models\"of (absent/deleted) tables or\"join models with other tables\"in a way that enables LKD as if it were performed on the join of the actual raw tables? Q2: What are appropriate models to use per table? Q3: As the model join would be an approximation of the actual data join, how can one evaluate the quality of the model join result? This work puts forth a framework, Model Join, addressing these challenges. The framework integrates and joins the per-table models of the absent tables and generates a uniform and independent sample that is a high-quality approximation of a uniform and independent sample of the actual raw-data join. The approximation stems from the models, but not from the Model Join framework. The sample obtained by the Model Join can be used to perform LKD downstream tasks, such as approximate query processing, classification, clustering, regression, association rule mining, visualization, and so on. To our knowledge, this is the first work with this agenda and solutions. Detailed experiments with TPC-DS data and synthetic data showcase Model Join's usefulness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "b53e1cf4c0837ee6f7dc3864e47be2d1c95d6a34",
+            "title": "Weighted Random Sampling over Joins",
+            "abstract": "Joining records with all other records that meet a linkage condition can result in an astronomically large number of combinations due to many-to-many relationships. For such challenging (acyclic) joins, a random sample over the join result is a practical alternative to working with the oversized join result. Whereas prior works are limited to uniform join sampling where each join row is assigned the same probability, the scope is extended in this work to weighted sampling to support emerging applications such as scientific discovery in observational data and privacy-preserving query answering. Notwithstanding some naive methods, this work presents the first approach for weighted random sampling from join results. Due to a lack of baselines, experiments over various join types and real-world data sets are conducted to show substantial memory savings and competitive performance with main-memory index-based approaches in the equal-probability setting. In contrast to existing uniform sampling approaches that require prepared structures that occupy contested resources to squeeze out slightly faster query-times, the proposed approaches exhibit qualities that are urgently needed in practice, namely reduced memory footprint, streaming operation, support for selections, outer joins, semi joins and anti joins and unequal-probability sampling. All pertinent code and data can be found at: https://github.com/shekelyan/weightedjoinsampling",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "11eb20c8206c3bde4e352895a66825aec82cc7c4",
+            "title": "XLJoins",
+            "abstract": "In many analytic settings join operations are fundamental as data is dispersed across different data sets (SQL or NoSQL tables, .csv files recording logs, click streams, KPIs from system/network monitoring, IoT telemetry, etc). However, in the era of big data the join operation can become exorbitantly expensive in terms of execution times and/or memory/space footprints.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                }
+            ]
+        },
+        {
+            "paperId": "159a9cd819ec1e8542c32d93442d9d077acd4b59",
+            "title": "Learned Approximate Query Processing: Make it Light, Accurate and Fast",
+            "abstract": "The advent of learning algorithms has revealed many opportunities for improving Data Systems\u2019 functionality and performance. Ap-proximate Query Processing (AQP) is one such area where machine learning (ML) models have been used to improve query execution efficiency and accuracy, outperforming the traditional sampling-based approaches. Based on our group\u2019s experience in the ML-for-DBs area, [3\u20137, 29, 37\u201339], we contribute a novel AQP engine, coined DBEst++ , which extends our previous effort (DBEst, [29]) and sets the state of the art in terms of accuracy and query execution efficiency. The DBEst++ salient design objective is to derive lightweight ML models for the task, allowing a plethora of ML models to coexist, covering a very large fraction of the expected analytical query workload without requiring very large memory footprints. The DBEst++ salient architectural feature rests on a novel blending of word embedding models with neural networks tasked with regression-based predictions for density estimation and aggregation-attribute values. We present design features and motivations/rationale behind DBEst++ and discuss how all the ML models are brought together. We also present how DBEst++ can deal with challenging scenarios, including how to deal with high-cardinality categorical attributes and how to ensure high accuracy under data updates. We provide a detailed experimental evaluation using the TPC-DS and Flights datasets against state of the art learned and sampling-based AQP engines, showcasing DBEst++ \u2019s gains in terms of accuracy, response-times, and memory space overheads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "3081947",
+                    "name": "Mehrdad Almasi"
+                },
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "671061237b92bd490f7857654d96baf0bf7ab807",
+            "title": "PGMJoins: Random Join Sampling with Graphical Models",
+            "abstract": "Modern databases face formidable challenges when called to join (several) massive tables. Joins (especially when entailing many-to-many joins) are very time- and resource-consuming, join results can be too big to keep in memory, and performing analytics/learning tasks over them costs dearly in terms of time, resources, and money (in the cloud). Moreover, although random sampling is a promising idea to mitigate the above problems, the current state of the art leaves lots of room for improvements. With this paper we contribute a principled solution, coined PGMJoins. PGMJoins adapts Probabilistic Graphical Models to deriving provably random samples of the join result for (n-way) key joins, many-to-many joins, and cyclic and acyclic joins. PGMJoins contributes optimizations both for deriving the structure of the graph and for PGM inference. It also contributes a novel Sum-Product Message Passing Algorithm (SP-MPA) to make a uniform sample of the joint distribution (join result) efficiently and a novel way to deal with cyclic joins. Despite the use of PGMs, the learned joint distribution is not approximated, and the uniform samples are drawn from the true distribution. Our experimentation using queries and datasets from TPC-H, JOB, TPC-DS, and Twitter shows PGMJoins to outperform the state of the art (by 2X-28X).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "3081947",
+                    "name": "Mehrdad Almasi"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "0ece9f8c85587d248f33432ed922afc57f84a4a9",
+            "title": "WHO: A New Evolutionary Algorithm Bio-Inspired by Wildebeests with a Case Study on Bank Customer Segmentation",
+            "abstract": "Numerous evolutionary algorithms have been proposed which are inspired by the amazing lives of creatures, such as animals, insects, and birds. Each inspired algorithm has its own advantages and disadvantages, and has its own way to accomplish exploration and exploitation. In this paper, a new evolutionary algorithm with novel concepts, called Wildebeests Herd Optimization (WHO), is proposed. This algorithm is inspired by the splendid life of wildebeests in Africa. Moving and migration are inseparable from wildebeests\u2019 lives. When a wildebeest wants to choose its path during migration, it considers the best path known to itself, the location of the more mature wildebeests in the crowd, and the direction of wildebeests with high mobility. The WHO algorithm imitates these traits, and can concurrently explore and exploit the search space. For validating WHO, it is applied to optimization problems and data mining tasks. It is demonstrated that WHO outperforms other evolutionary algorithms, such as genetic algorithm (GA) and particle swarm optimization, in the assessed problems. Then, WHO is applied to the customer segmentation problem. Customer segmentation is one of the most important tasks of data mining, especially in the banking sector. In this paper, the customers of a bank with current accounts are segmented using WHO based on four aspects: profitability, cost, loyalty and credit; some of these aspects are calculated in a novel way. The results were welcome by the bank authorities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "104269471",
+                    "name": "Mohammad Mahdi Motevali"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "2094978392",
+                    "name": "Reza Zohouri Aram"
+                },
+                {
+                    "authorId": "29992148",
+                    "name": "Hamidreza Keshavarz"
+                }
+            ]
+        },
+        {
+            "paperId": "43478f12f7ff358c243bc9f840afc8341282a138",
+            "title": "Tuning parameters via a new rapid, accurate and parameter-less method using meta-learning",
+            "abstract": "Dealing with a large parameter space in data mining tasks is extremely time-consuming, and the tuning method itself needs to be tuned since methods themselves have at least one parameter. Here, a new rapid and parameter-less method is presented to tune algorithms on diverse datasets to achieve high quality results in a short consumed time. The method presented here uses a pre-knowledge by using meta-features to guess closer point to optimal point in parameter space of target algorithms (here, support vector machine algorithm is used). For preparing the pre-knowledge, 282 meta-features are introduced and then genetic algorithm is applied to determine best meta-features for the target algorithm. Then the best meta-features are used to tune the target algorithm on unseen datasets. The results show in less than 0.19 minute in average, the method obtains approximately the same classification rates in comparison with others, but the consumed time is dramatically declined.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1396795153",
+                    "name": "Alireza Hekmatinia"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "104269471",
+                    "name": "Mohammad Mahdi Motevali"
+                },
+                {
+                    "authorId": null,
+                    "name": "Mehrdad Almasi"
+                }
+            ]
+        },
+        {
+            "paperId": "c6fe5248fde9f4750f4cb9ff773243dd42db4a8c",
+            "title": "Robust medical data mining using a clustering and swarm-based framework",
+            "abstract": "Interpretability of extracted fuzzy rules from medical datasets is one of the most important problems in the medical domain. Often, people consider interpretability as Sum of Rules Lengths SORL and Number of Rules NOR in a rule-based domain, but an important issue which is usually ignored is the variance of the final result Accuracy, SORL, NOR. This paper considers the variances of accuracy, SORL and NOR as essential interpretability measures. This paper proposes a parallel swarm-based framework to generate multi-objective fuzzy rule-based systems on three medical datasets that decreases the variances of Accuracy, SORL and NOR and simultaneously improves the final Accuracy, SORL and NOR values. Results show that we have been successful in improving the two objectives that were negatively correlated and accordingly we have been successful in generating robust fuzzy rule-based systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1928712",
+                    "name": "M. S. Abadeh"
+                }
+            ]
+        }
+    ]
+}

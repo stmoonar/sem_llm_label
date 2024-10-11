@@ -1,0 +1,453 @@
+{
+    "authorId": "2081160",
+    "papers": [
+        {
+            "paperId": "0c2bc344922ebfb0180d29052e938f4d80751f02",
+            "title": "G-Fuzz: A Directed Fuzzing Framework for gVisor",
+            "abstract": "gVisor is a Google-published application-level kernel for containers. As gVisor is lightweight and has sound isolation, it has been widely used in many IT enterprises [1], [2], [3]. When a new vulnerability of the upstream gVisor is found, it is important for the downstream developers to test the corresponding code to maintain the security. To achieve this aim, directed fuzzing is promising. Nevertheless, there are many challenges in applying existing directed fuzzing methods for gVisor. The core reason is that existing directed fuzzers are mainly for general C/C++ applications, while gVisor is an OS kernel written in the Go language. To address the above challenges, we propose G-Fuzz, a directed fuzzing framework for gVisor. There are three core methods in G-Fuzz, including lightweight and fine-grained distance calculation, target related syscall inference and utilization, and exploration and exploitation dynamic switch. Note that the methods of G-Fuzz are general and can be transferred to other OS kernels. We conduct extensive experiments to evaluate the performance of G-Fuzz. Compared to Syzkaller, the state-of-the-art kernel fuzzer, G-Fuzz outperforms it significantly. Furthermore, we have rigorously evaluated the importance for each core method of G-Fuzz. G-Fuzz has been deployed in industry and has detected multiple serious vulnerabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110426315",
+                    "name": "Yuwei Li"
+                },
+                {
+                    "authorId": "2144035401",
+                    "name": "Yuan Chen"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "2160107708",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "1750269",
+                    "name": "Guanglu Yan"
+                },
+                {
+                    "authorId": "2149301255",
+                    "name": "Alex X. Liu"
+                },
+                {
+                    "authorId": "2118839825",
+                    "name": "Chunming Wu"
+                },
+                {
+                    "authorId": "80752053",
+                    "name": "Zulie Pan"
+                },
+                {
+                    "authorId": "2209784784",
+                    "name": "Peng Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "1669e4b8f177fe5b8867c3335466683a5f72ddf0",
+            "title": "MINER: A Hybrid Data-Driven Approach for REST API Fuzzing",
+            "abstract": "In recent years, REST API fuzzing has emerged to explore errors on a cloud service. Its performance highly depends on the sequence construction and request generation. However, existing REST API fuzzers have trouble generating long sequences with well-constructed requests to trigger hard-to-reach states in a cloud service, which limits their performance of finding deep errors and security bugs. Further, they cannot find the specific errors caused by using undefined parameters during request generation. Therefore, in this paper, we propose a novel hybrid data-driven solution, named MINER, with three new designs working together to address the above limitations. First, MINER collects the valid sequences whose requests pass the cloud service's checking as the templates, and assigns more executions to long sequence templates. Second, to improve the generation quality of requests in a sequence template, MINER creatively leverages the state-of-the-art neural network model to predict key request parameters and provide them with appropriate parameter values. Third, MINER implements a new data-driven security rule checker to capture the new kind of errors caused by undefined parameters. We evaluate MINER against the state-of-the-art fuzzer RESTler on GitLab, Bugzilla, and WordPress via 11 REST APIs. The results demonstrate that the average pass rate of MINER is 23.42% higher than RESTler. MINER finds 97.54% more unique errors than RESTler on average and 142.86% more reproducible errors after manual analysis. We have reported all the newly found errors, and 7 of them have been confirmed as logic bugs by the corresponding vendors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2082426870",
+                    "name": "Chenyang Lyu"
+                },
+                {
+                    "authorId": "2110490804",
+                    "name": "Jiacheng Xu"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "49469875",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "2123719417",
+                    "name": "Qinying Wang"
+                },
+                {
+                    "authorId": "2112632915",
+                    "name": "Binbin Zhao"
+                },
+                {
+                    "authorId": "1562978050",
+                    "name": "Gaoning Pan"
+                },
+                {
+                    "authorId": "2210800545",
+                    "name": "Wei Cao"
+                },
+                {
+                    "authorId": "35976991",
+                    "name": "R. Beyah"
+                }
+            ]
+        },
+        {
+            "paperId": "1902beb6fe38332241e72cb48a2f3d42ebf39bc4",
+            "title": "How IoT Re-using Threatens Your Sensitive Data: Exploring the User-Data Disposal in Used IoT Devices",
+            "abstract": "With the rapid technology evolution of the Internet of Things (IoT) and increasing user needs, IoT device re-using becomes more and more common nowadays. For instance, more than 300,000 used IoT devices are selling on Craigslist. During IoT re-using, sensitive data such as credentials and biometrics residing in these devices may face the risk of leakage if a user fails properly dispose of the data. Thus, a critical security concern is raised: do (or can) users properly dispose of the sensitive data in used IoT? To the best of our knowledge, it is still an unexplored problem that desires a systematic study.In this paper, we perform the first in-depth investigation on the user-data disposal of used IoT devices. Our investigation integrates multiple research methods to explore the status quo and the root causes of the user-data leakages with used IoT devices. First, we conduct a user study to investigate the user awareness and understanding of data disposal. Then, we conduct a large-scale analysis on 4,749 IoT firmware images to investigate user-data collection. Finally, we conduct a comprehensive empirical evaluation on 33 IoT devices to investigate the effectiveness of existing data disposal methods.Through the systematical investigation, we discover that IoT devices collect more sensitive data than users expect. Specifically, we detect 121,984 sensitive data collections in the tested firmware. Moreover, users usually do not or even cannot properly dispose of the sensitive data. Worse, due to the inherent characteristics of storage chips, 13.2% of the investigated firmware perform \"shallow\" deletion, which may allow adversaries to obtain sensitive data after data disposal. Given the large-scale IoT re-using, such leakage would cause a broad impact. We have reported our findings to world-leading companies. We hope our findings raise awareness of the failures of user-data disposal with IoT devices and promote the protection of users\u2019 sensitive data in IoT devices.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113250310",
+                    "name": "Peiyu Liu"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "2116845824",
+                    "name": "Lirong Fu"
+                },
+                {
+                    "authorId": "40001161",
+                    "name": "Kangjie Lu"
+                },
+                {
+                    "authorId": "49469875",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "2224103542",
+                    "name": "Jingchang Qin"
+                },
+                {
+                    "authorId": "2134795704",
+                    "name": "Wenhai Wang"
+                },
+                {
+                    "authorId": "2530697",
+                    "name": "Wenzhi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "1cc2306848240644bd48a09161e3881b6e5738be",
+            "title": "UVSCAN: Detecting Third-Party Component Usage Violations in IoT Firmware",
+            "abstract": "Nowadays, IoT devices integrate a wealth of third-party components (TPCs) in firmware to shorten the development cycle. TPCs usually have strict usage specifications, e.g., checking the return value of the function. Violating the usage specifications of TPCs can cause serious consequences, e.g., NULL pointer dereference. Therefore, this massive amount of TPC integrations, if not properly implemented, will lead to pervasive vulnerabilities in IoT devices. Detecting vulnerabilities automatically in TPC integration is challenging from several perspectives: (1) There is a gap between the high-level specifications from TPC documents, and the low-level implementations in the IoT firmware. (2) IoT firmware is mostly the closed-source binary, which loses a lot of information when compiling from the source code and has diverse architectures. To address these challenges, we design and implement UVScan, an automated and scalable system to detect TPC usage violations in IoT firmware. In UVScan, we first propose a novel natural language processing (NLP)-based rule extraction framework, which extracts API specifications from inconsistently formatted TPC documents. We then design a rule-driven NLP-guided binary analysis engine, which maps the logical information from the high-level TPC document to the low-level binary, and detects TPC usage violations in IoT firmware across different architectures. We evaluate UVScan from four perspectives on four popular TPCs and six ground-truth datasets. The results show that UVScan achieves more than 70% precision and recall, and has a significant performance improvement compared with even the source-level API misuse detectors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112632915",
+                    "name": "Binbin Zhao"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "49469875",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "2152947658",
+                    "name": "Yuan Tian"
+                },
+                {
+                    "authorId": "2123719417",
+                    "name": "Qinying Wang"
+                },
+                {
+                    "authorId": "2184142286",
+                    "name": "Yuwen Pu"
+                },
+                {
+                    "authorId": "2082426870",
+                    "name": "Chenyang Lyu"
+                },
+                {
+                    "authorId": "35976991",
+                    "name": "R. Beyah"
+                }
+            ]
+        },
+        {
+            "paperId": "279a2ba6f22a543e8235fe95603f034d11adc6ad",
+            "title": "Tram: A Token-level Retrieval-augmented Mechanism for Source Code Summarization",
+            "abstract": "Automatically generating human-readable text describing the functionality of a program is the intent of source code summarization. Although neural language models achieve significant performance in this field, they are limited by their inability to access external knowledge. To address this limitation, an emerging trend is combining neural models with external knowledge through retrieval methods. Previous methods have relied on the sentence-level retrieval paradigm on the encoder side. However, this paradigm is coarse-grained, noise-filled and cannot directly take advantage of the high-quality retrieved summary tokens on the decoder side. In this paper, we propose a fine-grained Token-level retrieval-augmented mechanism (Tram) on the decoder side rather than the encoder side to enhance the performance of neural models and produce more low-frequency tokens in generating summaries. Furthermore, to overcome the challenge of token-level retrieval in capturing contextual code semantics, we also propose integrating code semantics into individual summary tokens. The results of extensive experiments and human evaluation show that our token-level retrieval-augmented approach significantly improves performance and is more interpretable.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155647387",
+                    "name": "Tong Ye"
+                },
+                {
+                    "authorId": "3008832",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "1901958",
+                    "name": "Tengyu Ma"
+                },
+                {
+                    "authorId": "49469875",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "2111936104",
+                    "name": "Yangkai Du"
+                },
+                {
+                    "authorId": "2108129670",
+                    "name": "Peiyu Liu"
+                },
+                {
+                    "authorId": "2134795704",
+                    "name": "Wenhai Wang"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "3172b7d67d00c1eb4fb0b92e8f6bbb0fb147b6cc",
+            "title": "Fraud-Agents Detection in Online Microfinance: A Large-Scale Empirical Study",
+            "abstract": "Online Microlending, a new financial service, focuses on small loans without any sort of collateral. It provides more flexible and quicker funding for borrowers, as well as higher interest rates of return. For platforms that provide such services, an essential task is to adequately evaluate each loan\u2019s risk so as to minimize the possible financial loss. However, there exists a special group of borrowers, namely fraud-agents, who gain illegal profits from inciting other borrowers to cheat, i.e., they help the high-risk borrowers evade the risk evaluation by crafting fake personal information. The existence of fraud-agents poses a severe threat to the risk management systems and results in a huge financial loss for lending platforms. In this article, we present the first machine learning-based solution to detect fraud-agents in online microlending. The key challenge of this decade-long problem is that it is unclear how to construct effective features from multiple behavior logs such as phone call history, address book, loan history and activity logs of borrowers. To address this problem, we first conduct an empirical study on over 600K borrowers to gain some insights on the adversarial behaviors of fraud-agents comparing to normal borrowers and benign-agents. Based on the study, we are able to design a total of 26 features, falling into four groups, for fraud agent detection. Then, we propose a two-stage detection model to address the challenge of limited number of labeled fraud agent examples. The evaluation results show that our method can achieve a precision of 94.30%. We deploy our method on a real large online microlending platform with 11,953,273 borrowers, and we identify 29,727 fraud-agents from them. The domain experts from the platform confirm that 95.59% of them are real fraud-agents, and have added them to the platform\u2019s internal blacklist. We further conduct a measurement study on those fraud-agents to share deeper insights on their adversarial behaviors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145021772",
+                    "name": "Yiming Wu"
+                },
+                {
+                    "authorId": "49172582",
+                    "name": "Zhiyuan Xie"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "2766201",
+                    "name": "Zhenguang Liu"
+                },
+                {
+                    "authorId": "49469875",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "50555044",
+                    "name": "Changting Lin"
+                },
+                {
+                    "authorId": "145590434",
+                    "name": "Shuiguang Deng"
+                },
+                {
+                    "authorId": "2151549978",
+                    "name": "Junfeng Zhou"
+                },
+                {
+                    "authorId": "2155389584",
+                    "name": "Ting Wang"
+                },
+                {
+                    "authorId": "35976991",
+                    "name": "R. Beyah"
+                }
+            ]
+        },
+        {
+            "paperId": "33baea728c28f07562cd2b287ca14deaf2042583",
+            "title": "SyzTrust: State-aware Fuzzing on Trusted OS Designed for IoT Devices",
+            "abstract": "Trusted Execution Environments (TEEs) embedded in IoT devices provide a deployable solution to secure IoT applications at the hardware level. By design, in TEEs, the Trusted Operating System (Trusted OS) is the primary component. It enables the TEE to use security-based design techniques, such as data encryption and identity authentication. Once a Trusted OS has been exploited, the TEE can no longer ensure security. However, Trusted OSes for IoT devices have received little security analysis, which is challenging from several perspectives: (1) Trusted OSes are closed-source and have an unfavorable environment for sending test cases and collecting feedback. (2) Trusted OSes have complex data structures and require a stateful workflow, which limits existing vulnerability detection tools.To address the challenges, we present SyzTrust, the first state-aware fuzzing framework for vetting the security of resource-limited Trusted OSes. SyzTrust adopts a hardware-assisted framework to enable fuzzing Trusted OSes directly on IoT devices as well as tracking state and code coverage non-invasively. SyzTrust utilizes composite feedback to guide the fuzzer to effectively explore more states as well as to increase the code coverage. We evaluate SyzTrust on Trusted OSes from three major vendors: Samsung, Tsinglink Cloud, and Ali Cloud. These systems run on Cortex M23/33 MCUs, which provide the necessary abstraction for embedded TEEs. We discovered 70 previously unknown vulnerabilities in their Trusted OSes, receiving 10 new CVEs so far. Furthermore, compared to the baseline, SyzTrust has demonstrated significant improvements, including 66% higher code coverage, 651% higher state coverage, and 31% improved vulnerability-finding capability. We report all discovered new vulnerabilities to vendors and open source SyzTrust.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2123719417",
+                    "name": "Qinying Wang"
+                },
+                {
+                    "authorId": "2151789586",
+                    "name": "Bo-Eun Chang"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "2152949046",
+                    "name": "Yuan Tian"
+                },
+                {
+                    "authorId": "49469875",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "2112632915",
+                    "name": "Binbin Zhao"
+                },
+                {
+                    "authorId": "1562978050",
+                    "name": "Gaoning Pan"
+                },
+                {
+                    "authorId": "2082426870",
+                    "name": "Chenyang Lyu"
+                },
+                {
+                    "authorId": "2246902791",
+                    "name": "Mathias Payer"
+                },
+                {
+                    "authorId": "2134795704",
+                    "name": "Wenhai Wang"
+                },
+                {
+                    "authorId": "35976991",
+                    "name": "R. Beyah"
+                }
+            ]
+        },
+        {
+            "paperId": "41cc3338635cde85316a0bcb934bffc73008761a",
+            "title": "Defending Pre-trained Language Models as Few-shot Learners against Backdoor Attacks",
+            "abstract": "Pre-trained language models (PLMs) have demonstrated remarkable performance as few-shot learners. However, their security risks under such settings are largely unexplored. In this work, we conduct a pilot study showing that PLMs as few-shot learners are highly vulnerable to backdoor attacks while existing defenses are inadequate due to the unique challenges of few-shot scenarios. To address such challenges, we advocate MDP, a novel lightweight, pluggable, and effective defense for PLMs as few-shot learners. Specifically, MDP leverages the gap between the masking-sensitivity of poisoned and clean samples: with reference to the limited few-shot data as distributional anchors, it compares the representations of given samples under varying masking and identifies poisoned samples as ones with significant variations. We show analytically that MDP creates an interesting dilemma for the attacker to choose between attack effectiveness and detection evasiveness. The empirical evaluation using benchmark datasets and representative attacks validates the efficacy of MDP.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51195718",
+                    "name": "Zhaohan Xi"
+                },
+                {
+                    "authorId": "2056897605",
+                    "name": "Tianyu Du"
+                },
+                {
+                    "authorId": "2145413923",
+                    "name": "Changjiang Li"
+                },
+                {
+                    "authorId": "80866871",
+                    "name": "Ren Pang"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "7557913",
+                    "name": "Jinghui Chen"
+                },
+                {
+                    "authorId": "2068197354",
+                    "name": "Fenglong Ma"
+                },
+                {
+                    "authorId": "2155394026",
+                    "name": "Ting Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "649d5e240adaa38e74299ccab3fc3215137170f9",
+            "title": "TextDefense: Adversarial Text Detection based on Word Importance Entropy",
+            "abstract": "Currently, natural language processing (NLP) models are wildly used in various scenarios. However, NLP models, like all deep models, are vulnerable to adversarially generated text. Numerous works have been working on mitigating the vulnerability from adversarial attacks. Nevertheless, there is no comprehensive defense in existing works where each work targets a specific attack category or suffers from the limitation of computation overhead, irresistible to adaptive attack, etc. In this paper, we exhaustively investigate the adversarial attack algorithms in NLP, and our empirical studies have discovered that the attack algorithms mainly disrupt the importance distribution of words in a text. A well-trained model can distinguish subtle importance distribution differences between clean and adversarial texts. Based on this intuition, we propose TextDefense, a new adversarial example detection framework that utilizes the target model's capability to defend against adversarial attacks while requiring no prior knowledge. TextDefense differs from previous approaches, where it utilizes the target model for detection and thus is attack type agnostic. Our extensive experiments show that TextDefense can be applied to different architectures, datasets, and attack methods and outperforms existing methods. We also discover that the leading factor influencing the performance of TextDefense is the target model's generalizability. By analyzing the property of the target model and the property of the adversarial example, we provide our insights into the adversarial attacks in NLP and the principles of our defense method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1382593028",
+                    "name": "Lujia Shen"
+                },
+                {
+                    "authorId": "2160107708",
+                    "name": "Xuhong Zhang"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "2184142286",
+                    "name": "Yuwen Pu"
+                },
+                {
+                    "authorId": "2218546",
+                    "name": "Chunpeng Ge"
+                },
+                {
+                    "authorId": "2191392055",
+                    "name": "Xing Yang"
+                },
+                {
+                    "authorId": "2152117183",
+                    "name": "Yanghe Feng"
+                }
+            ]
+        },
+        {
+            "paperId": "6f57c98e739520ceff18793e21057fd0e628713a",
+            "title": "On the Security Risks of Knowledge Graph Reasoning",
+            "abstract": "Knowledge graph reasoning (KGR) -- answering complex logical queries over large knowledge graphs -- represents an important artificial intelligence task, entailing a range of applications (e.g., cyber threat hunting). However, despite its surging popularity, the potential security risks of KGR are largely unexplored, which is concerning, given the increasing use of such capability in security-critical domains. This work represents a solid initial step towards bridging the striking gap. We systematize the security threats to KGR according to the adversary's objectives, knowledge, and attack vectors. Further, we present ROAR, a new class of attacks that instantiate a variety of such threats. Through empirical evaluation in representative use cases (e.g., medical decision support, cyber threat hunting, and commonsense reasoning), we demonstrate that ROAR is highly effective to mislead KGR to suggest pre-defined answers for target queries, yet with negligible impact on non-target ones. Finally, we explore potential countermeasures against ROAR, including filtering of potentially poisoning knowledge and training with adversarially augmented queries, which leads to several promising research directions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51195718",
+                    "name": "Zhaohan Xi"
+                },
+                {
+                    "authorId": "2056897605",
+                    "name": "Tianyu Du"
+                },
+                {
+                    "authorId": "2145413923",
+                    "name": "Changjiang Li"
+                },
+                {
+                    "authorId": "80866871",
+                    "name": "Ren Pang"
+                },
+                {
+                    "authorId": "2081160",
+                    "name": "S. Ji"
+                },
+                {
+                    "authorId": "1708419",
+                    "name": "Xiapu Luo"
+                },
+                {
+                    "authorId": "2148893360",
+                    "name": "Xusheng Xiao"
+                },
+                {
+                    "authorId": "2068197354",
+                    "name": "Fenglong Ma"
+                },
+                {
+                    "authorId": "2155394026",
+                    "name": "Ting Wang"
+                }
+            ]
+        }
+    ]
+}

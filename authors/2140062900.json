@@ -1,0 +1,342 @@
+{
+    "authorId": "2140062900",
+    "papers": [
+        {
+            "paperId": "69f2ba0f33a54e01de32c616b64e85d5d7194067",
+            "title": "Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations",
+            "abstract": "Large language models (LLMs) are trained to imitate humans to explain human decisions. However, do LLMs explain themselves? Can they help humans build mental models of how LLMs process different inputs? To answer these questions, we propose to evaluate $\\textbf{counterfactual simulatability}$ of natural language explanations: whether an explanation can enable humans to precisely infer the model's outputs on diverse counterfactuals of the explained input. For example, if a model answers\"yes\"to the input question\"Can eagles fly?\"with the explanation\"all birds can fly\", then humans would infer from the explanation that it would also answer\"yes\"to the counterfactual input\"Can penguins fly?\". If the explanation is precise, then the model's answer should match humans' expectations. We implemented two metrics based on counterfactual simulatability: precision and generality. We generated diverse counterfactuals automatically using LLMs. We then used these metrics to evaluate state-of-the-art LLMs (e.g., GPT-4) on two tasks: multi-hop factual reasoning and reward modeling. We found that LLM's explanations have low precision and that precision does not correlate with plausibility. Therefore, naively optimizing human approvals (e.g., RLHF) may not be a sufficient solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2218040104",
+                    "name": "Narutatsu Ri"
+                },
+                {
+                    "authorId": "145756130",
+                    "name": "Chen Zhao"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "3c209e0703ffff26231b1145268c935df494631a",
+            "title": "QuALITY: Question Answering with Long Input Texts, Yes!",
+            "abstract": "To enable building and testing models on long-document comprehension, we introduce QuALITY, a multiple-choice QA dataset with context passages in English that have an average length of about 5,000 tokens, much longer than typical current models can process. Unlike in prior work with passages, our questions are written and validated by contributors who have read the entire passage, rather than relying on summaries or excerpts. In addition, only half of the questions are answerable by annotators working under tight time constraints, indicating that skimming and simple search are not enough to consistently perform well. Our baseline models perform poorly on this task (55.4%) and significantly lag behind human performance (93.5%).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46230016",
+                    "name": "Richard Yuanzhe Pang"
+                },
+                {
+                    "authorId": "119389860",
+                    "name": "Alicia Parrish"
+                },
+                {
+                    "authorId": "134516087",
+                    "name": "Nitish Joshi"
+                },
+                {
+                    "authorId": "10666396",
+                    "name": "Nikita Nangia"
+                },
+                {
+                    "authorId": "80842917",
+                    "name": "Jason Phang"
+                },
+                {
+                    "authorId": "13336152",
+                    "name": "Angelica Chen"
+                },
+                {
+                    "authorId": "2044959912",
+                    "name": "Vishakh Padmakumar"
+                },
+                {
+                    "authorId": "2157291191",
+                    "name": "Johnny Ma"
+                },
+                {
+                    "authorId": "2148444557",
+                    "name": "Jana Thompson"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "1799822",
+                    "name": "Sam Bowman"
+                }
+            ]
+        },
+        {
+            "paperId": "6692187d1835e767c5015ab24df8caf9f1d774da",
+            "title": "An Investigation of the (In)effectiveness of Counterfactually Augmented Data",
+            "abstract": "While pretrained language models achieve excellent performance on natural language understanding benchmarks, they tend to rely on spurious correlations and generalize poorly to out-of-distribution (OOD) data. Recent work has explored using counterfactually-augmented data (CAD)\u2014data generated by minimally perturbing examples to flip the ground-truth label\u2014to identify robust features that are invariant under distribution shift. However, empirical results using CAD during training for OOD generalization have been mixed. To explain this discrepancy, through a toy theoretical example and empirical analysis on two crowdsourced CAD datasets, we show that: (a) while features perturbed in CAD are indeed robust features, it may prevent the model from learning unperturbed robust features; and (b) CAD may exacerbate existing spurious correlations in the data. Our results thus show that the lack of perturbation diversity limits CAD\u2019s effectiveness on OOD generalization, calling for innovative crowdsourcing procedures to elicit diverse perturbation of examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "134516087",
+                    "name": "Nitish Joshi"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                }
+            ]
+        },
+        {
+            "paperId": "6bd91a3183ddb844641acb9f3fe9faec6a9ff617",
+            "title": "Meta-learning via Language Model In-context Tuning",
+            "abstract": "The goal of meta-learning is to learn to adapt to a new task with only a few labeled examples. Inspired by the recent progress in large language models, we propose \\textit{in-context tuning} (ICT), which recasts task adaptation and prediction as a simple sequence prediction problem: to form the input sequence, we concatenate the task instruction, labeled in-context examples, and the target input to predict; to meta-train the model to learn from in-context examples, we fine-tune a pre-trained language model (LM) to predict the target label given the input sequence on a collection of tasks.We benchmark our method on two collections of text classification tasks: LAMA and BinaryClfs. Compared to MAML which adapts the model through gradient descent, our method leverages the inductive bias of pre-trained LMs to perform pattern matching, and outperforms MAML by an absolute 6% average AUC-ROC score on BinaryClfs, gaining more advantage with increasing model size. Compared to non-fine-tuned in-context learning (i.e. prompting a raw LM), in-context tuning meta-trains the model to learn from in-context examples. On BinaryClfs, ICT improves the average AUC-ROC score by an absolute 10%, and reduces the variance due to example ordering by 6x and example choices by 2x.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                }
+            ]
+        },
+        {
+            "paperId": "8331f4363d65235a8344e6a0c9b21fa3ab4c1d5e",
+            "title": "Types of Out-of-Distribution Texts and How to Detect Them",
+            "abstract": "Despite agreement on the importance of detecting out-of-distribution (OOD) examples, there is little consensus on the formal definition of the distribution shifts of OOD examples and how to best detect them. We categorize these examples as exhibiting a background shift or semantic shift, and find that the two major approaches to OOD detection, calibration and density estimation (language modeling for text), have distinct behavior on these types of OOD data. Across 14 pairs of in-distribution and OOD English natural language understanding datasets, we find that density estimation methods consistently beat calibration methods in background shift settings and perform worse in semantic shift settings. In addition, we find that both methods generally fail to detect examples from challenge data, indicating that these examples constitute a different type of OOD data. Overall, while the categorization we apply explains many of the differences between the two methods, our results call for a more explicit definition of OOD to create better benchmarks and build detectors that can target the type of OOD data expected at test time.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46368735",
+                    "name": "Udit Arora"
+                },
+                {
+                    "authorId": "47504331",
+                    "name": "William Huang"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                }
+            ]
+        },
+        {
+            "paperId": "8745260ea20bf671bdd388ef25979fc82083951b",
+            "title": "Amortized Noisy Channel Neural Machine Translation",
+            "abstract": "Noisy channel models have been especially effective in neural machine translation (NMT). However, recent approaches like\"beam search and rerank\"(BSR) incur significant computation overhead during inference, making real-world application infeasible. We aim to study if it is possible to build an amortized noisy channel NMT model such that when we do greedy decoding during inference, the translation accuracy matches that of BSR in terms of reward (based on the source-to-target log probability and the target-to-source log probability) and quality (based on BLEU and BLEURT). We attempt three approaches to train the new model: knowledge distillation, one-step-deviation imitation learning, and Q learning. The first approach obtains the noisy channel signal from a pseudo-corpus, and the latter two approaches aim to optimize toward a noisy-channel MT reward directly. For all three approaches, the generated translations fail to achieve rewards comparable to BSR, but the translation quality approximated by BLEU and BLEURT is similar to the quality of BSR-produced translations. Additionally, all three approaches speed up inference by 1-2 orders of magnitude.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46230016",
+                    "name": "Richard Yuanzhe Pang"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "1979489",
+                    "name": "Kyunghyun Cho"
+                }
+            ]
+        },
+        {
+            "paperId": "b0ef57dd0f226079cac20a2c2eceb0d65b5f7859",
+            "title": "IRM - when it works and when it doesn't: A test case of natural language inference",
+            "abstract": "Invariant Risk Minimization (IRM) is a recently proposed framework for out-of-distribution (o.o.d) generalization. Most of the studies on IRM so far have focused on theoretical results, toy problems, and simple models. In this work, we investigate the applicability of IRM to bias mitigation\u2014a special case of o.o.d generalization\u2014in increasingly naturalistic settings and deep models. Using natural language inference (NLI) as a test case, we start with a setting where both the dataset and the bias are synthetic, continue with a natural dataset and synthetic bias, and end with a fully realistic setting with natural datasets and bias. Our results show that in naturalistic settings, learning complex features in place of the bias proves to be dif\ufb01cult, leading to a rather small improvement over empirical risk minimization. Moreover, we \ufb01nd that in addition to being sensitive to random seeds, the performance of IRM also depends on several critical factors, notably dataset size, bias prevalence, and bias strength, thus limiting IRM\u2019s advantage in practical scenarios. Our results highlight key challenges in applying IRM to real-world scenarios, calling for a more naturalistic characterization of the problem setup for o.o.d generalization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145028743",
+                    "name": "Yana Dranker"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "2083259",
+                    "name": "Yonatan Belinkov"
+                }
+            ]
+        },
+        {
+            "paperId": "b6bf7706a4773e452bb09cf43d7686ac8fd06403",
+            "title": "Faithful or Extractive? On Mitigating the Faithfulness-Abstractiveness Trade-off in Abstractive Summarization",
+            "abstract": "Despite recent progress in abstractive summarization, systems still suffer from faithfulness errors. While prior work has proposed models that improve faithfulness, it is unclear whether the improvement comes from an increased level of extractiveness of the model outputs as one naive way to improve faithfulness is to make summarization models more extractive. In this work, we present a framework for evaluating the effective faithfulness of summarization systems, by generating a faithfulness-abstractiveness trade-off curve that serves as a control at different operating points on the abstractiveness spectrum. We then show that the Maximum Likelihood Estimation (MLE) baseline as well as recently proposed methods for improving faithfulness, fail to consistently improve over the control at the same level of abstractiveness. Finally, we learn a selector to identify the most faithful and abstractive summary for a given document, and show that this system can attain higher faithfulness scores in human evaluations while being more abstractive than the baseline system on two datasets. Moreover, we show that our system is able to achieve a better faithfulness-abstractiveness trade-off than the control at the same level of abstractiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "8759332",
+                    "name": "Faisal Ladhak"
+                },
+                {
+                    "authorId": "41152329",
+                    "name": "Esin Durmus"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "2064285348",
+                    "name": "Claire Cardie"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "2733574d40ce8e861d7d658bfc33ab36f529864d",
+            "title": "GluonCV and GluonNLP: Deep Learning in Computer Vision and Natural Language Processing",
+            "abstract": "We present GluonCV and GluonNLP, the deep learning toolkits for computer vision and natural language processing based on Apache MXNet (incubating). These toolkits provide state-of-the-art pre-trained models, training scripts, and training logs, to facilitate rapid prototyping and promote reproducible research. We also provide modular APIs with flexible building blocks to enable efficient customization. Leveraging the MXNet ecosystem, the deep learning models in GluonCV and GluonNLP can be deployed onto a variety of platforms with different programming languages. The Apache 2.0 license has been adopted by GluonCV and GluonNLP to allow for software distribution, modification, and usage.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2148900809",
+                    "name": "Jian Guo"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "2118328320",
+                    "name": "Tong He"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "2112143809",
+                    "name": "Mu Li"
+                },
+                {
+                    "authorId": "49955730",
+                    "name": "Haibin Lin"
+                },
+                {
+                    "authorId": "3008587",
+                    "name": "Xingjian Shi"
+                },
+                {
+                    "authorId": "2108755854",
+                    "name": "Chenguang Wang"
+                },
+                {
+                    "authorId": "2369548",
+                    "name": "Junyuan Xie"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "2085709",
+                    "name": "Aston Zhang"
+                },
+                {
+                    "authorId": "2119077209",
+                    "name": "Hang Zhang"
+                },
+                {
+                    "authorId": "2117991985",
+                    "name": "Zhi Zhang"
+                },
+                {
+                    "authorId": "48806269",
+                    "name": "Zhongyue Zhang"
+                },
+                {
+                    "authorId": "37748242",
+                    "name": "Shuai Zheng"
+                },
+                {
+                    "authorId": "46759150",
+                    "name": "Yi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "39d47ba0690cfac4c8efde6ecda104234c70ff86",
+            "title": "Pun Generation with Surprise",
+            "abstract": "We tackle the problem of generating a pun sentence given a pair of homophones (e.g., \u201cdied\u201d and \u201cdyed\u201d). Puns are by their very nature statistically anomalous and not amenable to most text generation methods that are supervised by a large corpus. In this paper, we propose an unsupervised approach to pun generation based on lots of raw (unhumorous) text and a surprisal principle. Specifically, we posit that in a pun sentence, there is a strong association between the pun word (e.g., \u201cdyed\u201d) and the distant context, but a strong association between the alternative word (e.g., \u201cdied\u201d) and the immediate context. We instantiate the surprisal principle in two ways: (i) as a measure based on the ratio of probabilities given by a language model, and (ii) a retrieve-and-edit approach based on words suggested by a skip-gram model. Based on human evaluation, our retrieve-and-edit approach generates puns successfully 30% of the time, doubling the success rate of a neural generation baseline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "145419642",
+                    "name": "Percy Liang"
+                }
+            ]
+        }
+    ]
+}

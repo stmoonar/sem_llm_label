@@ -1,0 +1,251 @@
+{
+    "authorId": "3255268",
+    "papers": [
+        {
+            "paperId": "0787da9a31fbc0bb5aa7d837a843a6de7e2e86bc",
+            "title": "Zero-shot Outlier Detection via Prior-data Fitted Networks: Model Selection Bygone!",
+            "abstract": "Outlier detection (OD) has a vast literature as it finds numerous applications in environmental monitoring, cybersecurity, finance, and medicine to name a few. Being an inherently unsupervised task, model selection is a key bottleneck for OD (both algorithm and hyperparameter selection) without label supervision. There is a long list of techniques to choose from -- both classical algorithms and deep neural architectures -- and while several studies report their hyperparameter sensitivity, the literature is quite slim on unsupervised model selection -- limiting the effective use of OD in practice. In this paper we present FoMo-0D, for zero/0-shot OD exploring a transformative new direction that bypasses the hurdle of model selection altogether (!), thus breaking new ground. The fundamental idea behind FoMo-0D is the Prior-data Fitted Networks, recently introduced by Muller et al.(2022), which trains a Transformer model on a large body of synthetically generated data from a prior data distribution. In essence, FoMo-0D is a pretrained Foundation Model for zero/0-shot OD on tabular data, which can directly predict the (outlier/inlier) label of any test data at inference time, by merely a single forward pass -- making obsolete the need for choosing an algorithm/architecture, tuning its associated hyperparameters, and even training any model parameters when given a new OD dataset. Extensive experiments on 57 public benchmark datasets against 26 baseline methods show that FoMo-0D performs statistically no different from the top 2nd baseline, while significantly outperforming the majority of the baselines, with an average inference time of 7.7 ms per test sample.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2320321181",
+                    "name": "Yuchen Shen"
+                },
+                {
+                    "authorId": "2320358039",
+                    "name": "Haomin Wen"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "1609cde5a319eacb23d587ed0eebfa9c1362eca3",
+            "title": "End-To-End Self-tuning Self-supervised Time Series Anomaly Detection",
+            "abstract": "Time series anomaly detection (TSAD) finds many applications such as monitoring environmental sensors, industry KPIs, patient biomarkers, etc. A two-fold challenge for TSAD is a versatile and unsupervised model that can detect various different types of time series anomalies (spikes, discontinuities, trend shifts, etc.) without any labeled data. Modern neural networks have outstanding ability in modeling complex time series. Self-supervised models in particular tackle unsupervised TSAD by transforming the input via various augmentations to create pseudo anomalies for training. However, their performance is sensitive to the choice of augmentation, which is hard to choose in practice, while there exists no effort in the literature on data augmentation tuning for TSAD without labels. Our work aims to fill this gap. We introduce TSAP for TSA\"on autoPilot\", which can (self-)tune augmentation hyperparameters end-to-end. It stands on two key components: a differentiable augmentation architecture and an unsupervised validation loss to effectively assess the alignment between augmentation type and anomaly type. Case studies show TSAP's ability to effectively select the (discrete) augmentation type and associated (continuous) hyperparameters. In turn, it outperforms established baselines, including SOTA self-supervised models, on diverse TSAD tasks exhibiting different anomaly types.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2193791694",
+                    "name": "Boje Deforce"
+                },
+                {
+                    "authorId": "2283818773",
+                    "name": "Meng-Chieh Lee"
+                },
+                {
+                    "authorId": "2284719425",
+                    "name": "Bart Baesens"
+                },
+                {
+                    "authorId": "24294537",
+                    "name": "E. S. Asensio"
+                },
+                {
+                    "authorId": "2257360769",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "2873ef59394d23f30d0b14847ec4da027f52b58a",
+            "title": "Outlier Detection Bias Busted: Understanding Sources of Algorithmic Bias through Data-centric Factors",
+            "abstract": "The astonishing successes of ML have raised growing concern for the fairness of modern methods when deployed in real world settings. However, studies on fairness have mostly focused on supervised ML, while unsupervised outlier detection (OD), with numerous applications in finance, security, etc., have attracted little attention. While a few studies proposed fairness-enhanced OD algorithms, they remain agnostic to the underlying driving mechanisms or sources of unfairness. Even within the supervised ML literature, there exists debate on whether unfairness stems solely from algorithmic biases (i.e. design choices) or from the biases encoded in the data on which they are trained. To close this gap, this work aims to shed light on the possible sources of unfairness in OD by auditing detection models under different data-centric factors. By injecting various known biases into the input data -- as pertain to sample size disparity, under-representation, feature measurement noise, and group membership obfuscation -- we find that the OD algorithms under the study all exhibit fairness pitfalls, although differing in which types of data bias they are more susceptible to. Most notable of our study is to demonstrate that OD algorithm bias is not merely a data bias problem. A key realization is that the data properties that emerge from bias injection could as well be organic -- as pertain to natural group differences w.r.t. sparsity, base rate, variance, and multi-modality. Either natural or biased, such data properties can give rise to unfairness as they interact with certain algorithmic design choices.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268636882",
+                    "name": "Xueying Ding"
+                },
+                {
+                    "authorId": "2316950419",
+                    "name": "Rui Xi"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "8e282feff7b01de91b32edef70723373f49ede54",
+            "title": "Descriptive Kernel Convolution Network with Improved Random Walk Kernel",
+            "abstract": "Graph kernels used to be the dominant approach to feature engineering for structured data, which are superseded by modern GNNs as the former lacks learnability. Recently, a suite of Kernel Convolution Networks (KCNs) successfully revitalized graph kernels by introducing learnability, which convolves input with learnable hidden graphs using a certain graph kernel. The random walk kernel (RWK) has been used as the default kernel in many KCNs, gaining increasing attention. In this paper, we first revisit the RWK and its current usage in KCNs, revealing several shortcomings of the existing designs, and propose an improved graph kernel RWK^+ , by introducing color-matching random walks and deriving its efficient computation. We then propose RWK^+ CN, a KCN that uses RWK^+ as the core kernel to learn descriptive graph features with an unsupervised objective, which can not be achieved by GNNs. Further, by unrolling RWK^+ , we discover its connection with a regular GCN layer, and propose a novel GNN layer RWK^+ Conv. In the first part of experiments, we demonstrate the descriptive learning ability of RWK^+ CN with the improved random walk kernel RWK^+ on unsupervised pattern mining tasks; in the second part, we show the effectiveness of RWK^+ for a variety of KCN architectures and supervised graph learning tasks, and demonstrate the expressiveness of RWK^+ Conv layer, especially on the graph-level tasks. RWK^+ and RWK^+ Conv adapt to various real-world applications, including web applications such as bot detection in a web-scale Twitter social network, and community classification in Reddit social interaction networks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283818773",
+                    "name": "Meng-Chieh Lee"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "9acc092e160b7cda5250e0436df5262864925420",
+            "title": "Uncertainty-aware Human Mobility Modeling and Anomaly Detection",
+            "abstract": "Given the GPS coordinates of a large collection of human agents over time, how can we model their mobility behavior toward effective anomaly detection (e.g. for bad-actor or malicious behavior detection) without any labeled data? Human mobility and trajectory modeling have been studied extensively with varying capacity to handle complex input, and performance-efficiency trade-offs. With the arrival of more expressive models in machine learning, we attempt to model GPS data as a sequence of stay-point events, each with a set of characterizing spatiotemporal features, and leverage modern sequence models such as Transformers for un/self-supervised training and inference. Notably, driven by the inherent stochasticity of certain individuals' behavior, we equip our model with aleatoric/data uncertainty estimation. In addition, to handle data sparsity of a large variety of behaviors, we incorporate epistemic/model uncertainty into our model. Together, aleatoric and epistemic uncertainty enable a robust loss and training dynamics, as well as uncertainty-aware decision making in anomaly scoring. Experiments on large expert-simulated datasets with tens of thousands of agents demonstrate the effectiveness of our model against both forecasting and anomaly detection baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2320358039",
+                    "name": "Haomin Wen"
+                },
+                {
+                    "authorId": "2324231520",
+                    "name": "Shurui Cao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "b8e59871669c0c4f77c414e8b413b1de10078072",
+            "title": "Pard: Permutation-Invariant Autoregressive Diffusion for Graph Generation",
+            "abstract": "Graph generation has been dominated by autoregressive models due to their simplicity and effectiveness, despite their sensitivity to ordering. Yet diffusion models have garnered increasing attention, as they offer comparable performance while being permutation-invariant. Current graph diffusion models generate graphs in a one-shot fashion, but they require extra features and thousands of denoising steps to achieve optimal performance. We introduce PARD, a Permutation-invariant Auto Regressive Diffusion model that integrates diffusion models with autoregressive methods. PARD harnesses the effectiveness and efficiency of the autoregressive model while maintaining permutation invariance without ordering sensitivity. Specifically, we show that contrary to sets, elements in a graph are not entirely unordered and there is a unique partial order for nodes and edges. With this partial order, PARD generates a graph in a block-by-block, autoregressive fashion, where each block's probability is conditionally modeled by a shared diffusion model with an equivariant network. To ensure efficiency while being expressive, we further propose a higher-order graph transformer, which integrates transformer with PPGN. Like GPT, we extend the higher-order graph transformer to support parallel training of all blocks. Without any extra features, PARD achieves state-of-the-art performance on molecular and non-molecular datasets, and scales to large datasets like MOSES containing 1.9M molecules. Pard is open-sourced at https://github.com/LingxiaoShawn/Pard.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2268636882",
+                    "name": "Xueying Ding"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "c675873dad31073ae1f4135e349d89dd2a36af17",
+            "title": "Unified Discrete Diffusion for Categorical Data",
+            "abstract": "Discrete diffusion models have seen a surge of attention with applications on naturally discrete data such as language and graphs. Although discrete-time discrete diffusion has been established for a while, only recently Campbell et al. (2022) introduced the first framework for continuous-time discrete diffusion. However, their training and sampling processes differ significantly from the discrete-time version, necessitating nontrivial approximations for tractability. In this paper, we first present a series of mathematical simplifications of the variational lower bound that enable more accurate and easy-to-optimize training for discrete diffusion. In addition, we derive a simple formulation for backward denoising that enables exact and accelerated sampling, and importantly, an elegant unification of discrete-time and continuous-time discrete diffusion. Thanks to simpler analytical formulations, both forward and now also backward probabilities can flexibly accommodate any noise distribution, including different noise distributions for multi-element objects. Experiments show that our proposed USD3 (for Unified Simplified Discrete Denoising Diffusion) outperform all SOTA baselines on established datasets. We open-source our unified code at https://github.com/LingxiaoShawn/USD3.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2268636882",
+                    "name": "Xueying Ding"
+                },
+                {
+                    "authorId": "2282947975",
+                    "name": "Lijun Yu"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "f958280f92eb3b23608f5525b94b1a7c25dfff0b",
+            "title": "On the Detection of Reviewer-Author Collusion Rings From Paper Bidding",
+            "abstract": "A major threat to the peer-review systems of computer science conferences is the existence of\"collusion rings\"between reviewers. In such collusion rings, reviewers who have also submitted their own papers to the conference work together to manipulate the conference's paper assignment, with the aim of being assigned to review each other's papers. The most straightforward way that colluding reviewers can manipulate the paper assignment is by indicating their interest in each other's papers through strategic paper bidding. One potential approach to solve this important problem would be to detect the colluding reviewers from their manipulated bids, after which the conference can take appropriate action. While prior work has developed effective techniques to detect other kinds of fraud, no research has yet established that detecting collusion rings is even possible. In this work, we tackle the question of whether it is feasible to detect collusion rings from the paper bidding. To answer this question, we conduct empirical analysis of two realistic conference bidding datasets, including evaluations of existing algorithms for fraud detection in other applications. We find that collusion rings can achieve considerable success at manipulating the paper assignment while remaining hidden from detection: for example, in one dataset, undetected colluders are able to achieve assignment to up to 30% of the papers authored by other colluders. In addition, when 10 colluders bid on all of each other's papers, no detection algorithm outputs a group of reviewers with more than 31% overlap with the true colluders. These results suggest that collusion cannot be effectively detected from the bidding using popular existing tools, demonstrating the need to develop more complex detection algorithms as well as those that leverage additional metadata (e.g., reviewer-paper text-similarity scores).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1572164529",
+                    "name": "Steven Jecmen"
+                },
+                {
+                    "authorId": "2283841486",
+                    "name": "Nihar B. Shah"
+                },
+                {
+                    "authorId": "2283842982",
+                    "name": "Fei Fang"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "0a0872114d63efee24b74d61f0e63b473fdaf2f6",
+            "title": "Fast Unsupervised Deep Outlier Model Selection with Hypernetworks",
+            "abstract": "Outlier detection (OD) finds many applications with a rich literature of numerous techniques. Deep neural network based OD (DOD) has seen a recent surge of attention thanks to the many advances in deep learning. In this paper, we consider a critical-yet-understudied challenge with unsupervised DOD, that is, effective hyperparameter (HP) tuning/model selection. While several prior work report the sensitivity of OD models to HPs, it becomes ever so critical for the modern DOD models that exhibit a long list of HPs. We introduce HYPER for tuning DOD models, tackling two fundamental challenges: (1) validation without supervision (due to lack of labeled anomalies), and (2) efficient search of the HP/model space (due to exponential growth in the number of HPs). A key idea is to design and train a novel hypernetwork (HN) that maps HPs onto optimal weights of the main DOD model. In turn, HYPER capitalizes on a single HN that can dynamically generate weights for many DOD models (corresponding to varying HPs), which offers significant speed-up. In addition, it employs meta-learning on historical OD tasks with labels to train a proxy validation function, likewise trained with our proposed HN efficiently. Extensive experiments on 35 OD tasks show that HYPER achieves high performance against 8 baselines with significant efficiency gains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151257348",
+                    "name": "Xueying Ding"
+                },
+                {
+                    "authorId": "2249527783",
+                    "name": "Yue Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "2d569e92218ff1cd0a7c7ef41389d765d7589bab",
+            "title": "ADAMM: Anomaly Detection of Attributed Multi-graphs with Metadata: A Unified Neural Network Approach",
+            "abstract": "Given a complex graph database of node- and edge-attributed multi-graphs as well as associated metadata for each graph, how can we spot the anomalous instances? Many real-world problems can be cast as graph inference tasks where the graph representation could capture complex relational phenomena (e.g., transactions among financial accounts in a journal entry), along with metadata reflecting tabular features (e.g. approver, effective date, etc.). While numerous anomaly detectors based on Graph Neural Networks (GNNs) have been proposed, none are capable of directly handling directed graphs with multi-edges and self-loops. Furthermore, the simultaneous handling of relational and tabular features remains an unexplored area. In this work we propose ADAMM, a novel graph neural network model that handles directed multi-graphs, providing a unified end-to-end architecture that fuses metadata and graph-level representation learning through an unsupervised anomaly detection objective. Experiments on datasets from two different domains, namely, general-ledger journal entries from different firms (accounting) as well as human GPS trajectories from thousands of individuals (urban mobility), validate ADAMM\u2019s generality and detection effectiveness of expert-guided and ground-truth anomalies. Notably, ADAMM outperforms existing baselines that handle the two data modalities (graph and metadata) separately with post hoc synthesis efforts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266395923",
+                    "name": "Konstantinos Sotiropoulos"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2266394457",
+                    "name": "Pierre Jinghong Liang"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        }
+    ]
+}

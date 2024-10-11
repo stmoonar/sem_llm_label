@@ -1,0 +1,335 @@
+{
+    "authorId": "51895312",
+    "papers": [
+        {
+            "paperId": "049288e68caeadf7842df6977e140b47a8a2f89d",
+            "title": "MatSci-NLP: Evaluating Scientific Language Models on Materials Science Language Tasks Using Text-to-Schema Modeling",
+            "abstract": "We present MatSci-NLP, a natural language benchmark for evaluating the performance of natural language processing (NLP) models on materials science text. We construct the benchmark from publicly available materials science text data to encompass seven different NLP tasks, including conventional NLP tasks like named entity recognition and relation classification, as well as NLP tasks specific to materials science, such as synthesis action retrieval which relates to creating synthesis procedures for materials. We study various BERT-based models pretrained on different scientific text corpora on MatSci-NLP to understand the impact of pretraining strategies on understanding materials science text. Given the scarcity of high-quality annotated data in the materials science domain, we perform our fine-tuning experiments with limited training data to encourage the generalize across MatSci-NLP tasks.Our experiments in this low-resource training setting show that language models pretrained on scientific text outperform BERT trained on general text. MatBERT, a model pretrained specifically on materials science journals, generally performs best for most tasks. Moreover, we propose a unified text-to-schema for multitask learning on {pasted macro \u2018BENCHMARK\u2019} and compare its performance with traditional fine-tuning methods. In our analysis of different training methods, we find that our proposed text-to-schema methods inspired by question-answering consistently outperform single and multitask NLP fine-tuning methods. The code and datasets are publicly available https://github.com/BangLab-UdeM-Mila/NLP4MatSci-ACL23.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152602955",
+                    "name": "Yurun Song"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "2116441692",
+                    "name": "Bang Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "4ea1f64c13280ef13f506eef4b3dd2395d1cf171",
+            "title": "ProtST: Multi-Modality Learning of Protein Sequences and Biomedical Texts",
+            "abstract": "Current protein language models (PLMs) learn protein representations mainly based on their sequences, thereby well capturing co-evolutionary information, but they are unable to explicitly acquire protein functions, which is the end goal of protein representation learning. Fortunately, for many proteins, their textual property descriptions are available, where their various functions are also described. Motivated by this fact, we first build the ProtDescribe dataset to augment protein sequences with text descriptions of their functions and other important properties. Based on this dataset, we propose the ProtST framework to enhance Protein Sequence pre-training and understanding by biomedical Texts. During pre-training, we design three types of tasks, i.e., unimodal mask prediction, multimodal representation alignment and multimodal mask prediction, to enhance a PLM with protein property information with different granularities and, at the same time, preserve the PLM's original representation power. On downstream tasks, ProtST enables both supervised learning and zero-shot prediction. We verify the superiority of ProtST-induced PLMs over previous ones on diverse representation learning benchmarks. Under the zero-shot setting, we show the effectiveness of ProtST on zero-shot protein classification, and ProtST also enables functional protein retrieval from a large-scale database without any function annotation.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153554889",
+                    "name": "Minghao Xu"
+                },
+                {
+                    "authorId": "2115844194",
+                    "name": "Xinyu Yuan"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "2115855484",
+                    "name": "Jian Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "a9cae269392ea8c20212f69af2b9c007a49d54c5",
+            "title": "FAENet: Frame Averaging Equivariant GNN for Materials Modeling",
+            "abstract": "Applications of machine learning techniques for materials modeling typically involve functions known to be equivariant or invariant to specific symmetries. While graph neural networks (GNNs) have proven successful in such tasks, they enforce symmetries via the model architecture, which often reduces their expressivity, scalability and comprehensibility. In this paper, we introduce (1) a flexible framework relying on stochastic frame-averaging (SFA) to make any model E(3)-equivariant or invariant through data transformations. (2) FAENet: a simple, fast and expressive GNN, optimized for SFA, that processes geometric information without any symmetrypreserving design constraints. We prove the validity of our method theoretically and empirically demonstrate its superior accuracy and computational scalability in materials modeling on the OC20 dataset (S2EF, IS2RE) as well as common molecular modeling tasks (QM9, QM7-X). A package implementation is available at https://faenet.readthedocs.io.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2256990809",
+                    "name": "Alexandre Duval"
+                },
+                {
+                    "authorId": "97574153",
+                    "name": "Victor Schmidt"
+                },
+                {
+                    "authorId": "83015253",
+                    "name": "Alex Hernandez-Garcia"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "2817467",
+                    "name": "Fragkiskos D. Malliaros"
+                },
+                {
+                    "authorId": "1865800402",
+                    "name": "Y. Bengio"
+                },
+                {
+                    "authorId": "2381187",
+                    "name": "D. Rolnick"
+                }
+            ]
+        },
+        {
+            "paperId": "21f9ddb6f39b2678bf9266d63895cdf71906784e",
+            "title": "The Open MatSci ML Toolkit: A Flexible Framework for Machine Learning in Materials Science",
+            "abstract": "We present the Open MatSci ML Toolkit: a flexible, self-contained, and scalable Python-based framework to apply deep learning models and methods on scientific data with a specific focus on materials science and the OpenCatalyst Dataset. Our toolkit provides: 1. A scalable machine learning workflow for materials science leveraging PyTorch Lightning, which enables seamless scaling across different computation capabilities (laptop, server, cluster) and hardware platforms (CPU, GPU, XPU). 2. Deep Graph Library (DGL) support for rapid graph neural network prototyping and development. By publishing and sharing this toolkit with the research community via open-source release, we hope to: 1. Lower the entry barrier for new machine learning researchers and practitioners that want to get started with the OpenCatalyst dataset, which presently comprises the largest computational materials science dataset. 2. Enable the scientific community to apply advanced machine learning tools to high-impact scientific challenges, such as modeling of materials behavior for clean energy applications. We demonstrate the capabilities of our framework by enabling three new equivariant neural network models for multiple OpenCatalyst tasks and arrive at promising results for compute scaling and model performance.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "2189418880",
+                    "name": "Kin Long Kelvin Lee"
+                },
+                {
+                    "authorId": "2189374130",
+                    "name": "Carmelo Gonzales"
+                },
+                {
+                    "authorId": "1678319",
+                    "name": "M. Nassar"
+                },
+                {
+                    "authorId": "143601761",
+                    "name": "Matthew Spellings"
+                }
+            ]
+        },
+        {
+            "paperId": "710e16ceb9f98d4f4864afaf0aa4bbbe529edc44",
+            "title": "Group SELFIES: A Robust Fragment-Based Molecular String Representation",
+            "abstract": "We introduce Group SELFIES, a molecular string representation that leverages group tokens to represent functional groups or entire substructures while maintaining chemical robustness guarantees. Molecular string representations, such as SMILES...",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "80658777",
+                    "name": "Austin H. Cheng"
+                },
+                {
+                    "authorId": "2192514753",
+                    "name": "Andy Cai"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "2594102",
+                    "name": "Gustavo Malkomes"
+                },
+                {
+                    "authorId": "2482400",
+                    "name": "Mariano Phielipp"
+                },
+                {
+                    "authorId": "1380248954",
+                    "name": "Al\u00e1n Aspuru-Guzik"
+                }
+            ]
+        },
+        {
+            "paperId": "7114a1d6d22ce98408ed58955ac3040068af70b8",
+            "title": "PhAST: Physics-Aware, Scalable, and Task-specific GNNs for Accelerated Catalyst Design",
+            "abstract": "Mitigating the climate crisis requires a rapid transition towards lower-carbon energy. Catalyst materials play a crucial role in the electrochemical reactions involved in numerous industrial processes key to this transition, such as renewable energy storage and electrofuel synthesis. To reduce the energy spent on such activities, we must quickly discover more efficient catalysts to drive electrochemical reactions. Machine learning (ML) holds the potential to efficiently model materials properties from large amounts of data, accelerating electrocatalyst design. The Open Catalyst Project OC20 dataset was constructed to that end. However, ML models trained on OC20 are still neither scalable nor accurate enough for practical applications. In this paper, we propose task-specific innovations applicable to most architectures, enhancing both computational efficiency and accuracy. This includes improvements in (1) the graph creation step, (2) atom representations, (3) the energy prediction head, and (4) the force prediction head. We describe these contributions, referred to as PhAST, and evaluate them thoroughly on multiple architectures. Overall, PhAST improves energy MAE by 4 to 42$\\%$ while dividing compute time by 3 to 8$\\times$ depending on the targeted task/model. PhAST also enables CPU training, leading to 40$\\times$ speedups in highly parallelized settings. Python package: \\url{https://phast.readthedocs.io}.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2256990809",
+                    "name": "Alexandre Duval"
+                },
+                {
+                    "authorId": "97574153",
+                    "name": "Victor Schmidt"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "1865800402",
+                    "name": "Y. Bengio"
+                },
+                {
+                    "authorId": "83015253",
+                    "name": "Alex Hernandez-Garcia"
+                },
+                {
+                    "authorId": "2381187",
+                    "name": "D. Rolnick"
+                }
+            ]
+        },
+        {
+            "paperId": "e3160e5fa4cd8e5d3b0fc8e4c0c2032d68b58f34",
+            "title": "Multi-Objective GFlowNets",
+            "abstract": "We study the problem of generating diverse candidates in the context of Multi-Objective Optimization. In many applications of machine learning such as drug discovery and material design, the goal is to generate candidates which simultaneously optimize a set of potentially conflicting objectives. Moreover, these objectives are often imperfect evaluations of some underlying property of interest, making it important to generate diverse candidates to have multiple options for expensive downstream evaluations. We propose Multi-Objective GFlowNets (MOGFNs), a novel method for generating diverse Pareto optimal solutions, based on GFlowNets. We introduce two variants of MOGFNs: MOGFN-PC, which models a family of independent sub-problems defined by a scalarization function, with reward-conditional GFlowNets, and MOGFN-AL, which solves a sequence of sub-problems defined by an acquisition function in an active learning loop. Our experiments on wide variety of synthetic and benchmark tasks demonstrate advantages of the proposed methods in terms of the Pareto performance and importantly, improved candidate diversity, which is the main contribution of this work.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1383135665",
+                    "name": "Moksh Jain"
+                },
+                {
+                    "authorId": "1498636613",
+                    "name": "S. Raparthy"
+                },
+                {
+                    "authorId": "83015253",
+                    "name": "Alex Hernandez-Garcia"
+                },
+                {
+                    "authorId": "1416982829",
+                    "name": "Jarrid Rector-Brooks"
+                },
+                {
+                    "authorId": "1865800402",
+                    "name": "Y. Bengio"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "2416433",
+                    "name": "Emmanuel Bengio"
+                }
+            ]
+        },
+        {
+            "paperId": "e4758d05c3d4231dd30c656330e156ccc9dbb07b",
+            "title": "Can Retriever-Augmented Language Models Reason? The Blame Game Between the Retriever and the Language Model",
+            "abstract": "Augmenting pretrained language models with retrievers to select the supporting documents has shown promise in effectively solving common NLP problems, including language modeling and question answering, in an interpretable way. In this paper, we first study the strengths and weaknesses of different retriever-augmented language models (REALM, $k$NN-LM, FiD coupled with DPR, and ATLAS and Flan-T5 coupled with Contriever) in reasoning over the retrieved statements in different tasks. We show how the retrieve-then-read models' limitations in reasoning are rooted both in the retriever module as well as the language model. Our experimental results demonstrate that the similarity metric used by the retrievers is generally insufficient for reasoning tasks. Additionally, we show that the language models in retriever-augmented models do not take the complicated relations between the statements into account, which leads to poor reasoning performance even when using the larger models. Moreover, we analyze the reasoning performance of large language models using multihop retrieval but we only observe minor improvements. Overall, this shows great room for further research in this area.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2101317786",
+                    "name": "Parishad BehnamGhader"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "145732771",
+                    "name": "Siva Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "272077f40d3bd13061bc83c36b4cc557ade2c152",
+            "title": "Neuroevolution-enhanced multi-objective optimization for mixed-precision quantization",
+            "abstract": "Mixed-precision quantization is a powerful tool to enable memory and compute savings of neural network workloads by deploying different sets of bit-width precisions on separate compute operations. In this work, we present a flexible and scalable framework for automated mixed-precision quantization that concurrently optimizes task performance, memory compression, and compute savings through multi-objective evolutionary computing. Our framework centers on Neuroevolution-Enhanced Multi-Objective Optimization (NEMO), a novel search method, which combines established search methods with the representational power of neural networks. Within NEMO, the population is divided into structurally distinct sub-populations, or species, which jointly create the Pareto frontier of solutions for the multi-objective problem. At each generation, species perform separate mutation and crossover operations, and are re-sized in proportion to the goodness of their contribution to the Pareto frontier. In our experiments, we define a graph-based representation to describe the underlying workload, enabling us to deploy graph neural networks trained by NEMO via neuroevolution, to find Pareto optimal configurations for MobileNet-V2, ResNet50 and ResNeXt-101-32\u00d78d. Compared to the state-of-the-art, we achieve competitive results on memory compression and superior results for compute compression. Further analysis reveals that the graph representation and the species-based approach employed by NEMO are critical to finding optimal solutions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "1414739797",
+                    "name": "Vui Seng Chua"
+                },
+                {
+                    "authorId": "37239855",
+                    "name": "Mattias Marder"
+                },
+                {
+                    "authorId": "2482400",
+                    "name": "Mariano Phielipp"
+                },
+                {
+                    "authorId": "2117768193",
+                    "name": "Nilesh Jain"
+                },
+                {
+                    "authorId": "2413238",
+                    "name": "Somdeb Majumdar"
+                }
+            ]
+        },
+        {
+            "paperId": "95cb5128f2cb9fb7fb94f2ce62cf1fb62361cc77",
+            "title": "Optimizing Memory Placement using Evolutionary Graph Reinforcement Learning",
+            "abstract": "As modern neural networks have grown to billions of parameters, meeting tight latency budgets has become increasingly challenging. Approaches like compression, sparsification and network pruning have proven effective to tackle this problem - but they rely on modifications of the underlying network. In this paper, we look at a complimentary approach of optimizing how tensors are mapped to on-chip memory in an inference accelerator while leaving the network parameters untouched. Since different memory components trade off capacity for bandwidth differently, a sub-optimal mapping can result in high latency. We introduce evolutionary graph reinforcement learning (EGRL) - a method combining graph neural networks, reinforcement learning (RL) and evolutionary search - that aims to find the optimal mapping to minimize latency. Furthermore, a set of fast, stateless policies guide the evolutionary search to improve sample-efficiency. We train and validate our approach directly on the Intel NNP-I chip for inference using a batch size of 1. EGRL outperforms policy-gradient, evolutionary search and dynamic programming baselines on BERT, ResNet-101 and ResNet-50. We achieve 28-78% speed-up compared to the native NNP-I compiler on all three workloads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440874",
+                    "name": "Shauharda Khadka"
+                },
+                {
+                    "authorId": "1816753600",
+                    "name": "Estelle Aflalo"
+                },
+                {
+                    "authorId": "37239855",
+                    "name": "Mattias Marder"
+                },
+                {
+                    "authorId": "1816751337",
+                    "name": "Avrech Ben-David"
+                },
+                {
+                    "authorId": "51895312",
+                    "name": "Santiago Miret"
+                },
+                {
+                    "authorId": "39278465",
+                    "name": "Hanlin Tang"
+                },
+                {
+                    "authorId": "1712535",
+                    "name": "Shie Mannor"
+                },
+                {
+                    "authorId": "1918412",
+                    "name": "Tamir Hazan"
+                },
+                {
+                    "authorId": "2413238",
+                    "name": "Somdeb Majumdar"
+                }
+            ]
+        }
+    ]
+}

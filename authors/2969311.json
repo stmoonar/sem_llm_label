@@ -1,0 +1,302 @@
+{
+    "authorId": "2969311",
+    "papers": [
+        {
+            "paperId": "041e1cbac95975029bc106eb3142a7192a6cbe40",
+            "title": "Robust Mixture-of-Expert Training for Convolutional Neural Networks",
+            "abstract": "Sparsely-gated Mixture of Expert (MoE), an emerging deep model architecture, has demonstrated a great promise to enable high-accuracy and ultra-efficient model inference. Despite the growing popularity of MoE, little work investigated its potential to advance convolutional neural networks (CNNs), especially in the plane of adversarial robustness. Since the lack of robustness has become one of the main hurdles for CNNs, in this paper we ask: How to adversarially robustify a CNN-based MoE model? Can we robustly train it like an ordinary CNN model? Our pilot study shows that the conventional adversarial training (AT) mechanism (developed for vanilla CNNs) no longer remains effective to robustify an MoE-CNN. To better understand this phenomenon, we dissect the robustness of an MoE-CNN into two dimensions: Robustness of routers (i.e., gating functions to select data-specific experts) and robustness of experts (i.e., the router-guided pathways defined by the subnetworks of the backbone CNN). Our analyses show that routers and experts are hard to adapt to each other in the vanilla AT. Thus, we propose a new router-expert alternating Adversarial training framework for MoE, termed AdvMoE. The effectiveness of our proposal is justified across 4 commonly-used CNN model architectures over 4 benchmark datasets. We find that AdvMoE achieves 1% ~ 4% adversarial robustness improvement over the original dense CNN, and enjoys the efficiency merit of sparsity-gated MoE, leading to more than 50% inference cost reduction. Codes are available at https://github.com/OPTML-Group/Robust-MoE-CNN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155369380",
+                    "name": "Yihua Zhang"
+                },
+                {
+                    "authorId": "2209882676",
+                    "name": "Ruisi Cai"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "46266569",
+                    "name": "Guanhua Zhang"
+                },
+                {
+                    "authorId": "49723481",
+                    "name": "Huan Zhang"
+                },
+                {
+                    "authorId": "153191489",
+                    "name": "Pin-Yu Chen"
+                },
+                {
+                    "authorId": "2122374354",
+                    "name": "Shiyu Chang"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "143743061",
+                    "name": "Sijia Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "1462a0e5b7db47301bb0995db56426e1f4a0ac7d",
+            "title": "Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers",
+            "abstract": "Despite their remarkable achievement, gigantic transformers encounter significant drawbacks, including exorbitant computational and memory footprints during training, as well as severe collapse evidenced by a high degree of parameter redundancy. Sparsely-activated Mixture-of-Experts (SMoEs) have shown promise to mitigate the issue of training efficiency, yet they are prone to (1) redundant experts due to representational collapse; and (2) poor expert scalability for inference and downstream fine-tuning, primarily due to overfitting of the learned routing policy to the number of activated experts during training. As recent research efforts are predominantly focused on improving routing policies to encourage expert specializations, this work focuses on exploring the overlooked scalability bottleneck of SMoEs and leveraging it to effectively scale dense transformers. To this end, we propose a new plug-and-play training framework, SMoE-Dropout, to enable scaling transformers to better accuracy in their full capacity without collapse. Specifically, SMoE-Dropout consists of a randomly initialized and fixed router network to activate experts and gradually increases the activated expert number as training progresses over time. Transformers trained by SMoE-Dropout naturally exhibit a self-slimmable property subject to resource availability, offering smooth and consistent performance boosts with an increase in activated experts during inference or fine-tuning. Our extensive experiments demonstrate the superior performance and substantial computation savings of SMoE-Dropout, compared to dense training baselines with equivalent parameter counts. In particular, our trained BERT outperforms its densely trained counterpart with consistent improvements of {1.03%, 0.78%, 1.09%} on challenging reasoning tasks {ASDiv-A, MAWPS, SVAMP}, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "2109338656",
+                    "name": "Zhenyu (Allen) Zhang"
+                },
+                {
+                    "authorId": "145018564",
+                    "name": "Ajay Jaiswal"
+                },
+                {
+                    "authorId": "47130544",
+                    "name": "Shiwei Liu"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "179c8c7364caaf3b4d0d03018657aaec6c22a372",
+            "title": "Pruning Before Training May Improve Generalization, Provably",
+            "abstract": "It has been observed in practice that applying pruning-at-initialization methods to neural networks and training the sparsified networks can not only retain the testing performance of the original dense models, but also sometimes even slightly boost the generalization performance. Theoretical understanding for such experimental observations are yet to be developed. This work makes the first attempt to study how different pruning fractions affect the model's gradient descent dynamics and generalization. Specifically, this work considers a classification task for overparameterized two-layer neural networks, where the network is randomly pruned according to different rates at the initialization. It is shown that as long as the pruning fraction is below a certain threshold, gradient descent can drive the training loss toward zero and the network exhibits good generalization performance. More surprisingly, the generalization bound gets better as the pruning fraction gets larger. To complement this positive result, this work further shows a negative result: there exists a large pruning fraction such that while gradient descent is still able to drive the training loss toward zero (by memorizing noise), the generalization performance is no better than random guessing. This further suggests that pruning can change the feature learning process, which leads to the performance drop of the pruned neural network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "3008832",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "19cbae4b5d3a10fd5e5cc27de163a4319c9d4341",
+            "title": "You Only Transfer What You Share: Intersection-Induced Graph Transfer Learning for Link Prediction",
+            "abstract": "Link prediction is central to many real-world applications, but its performance may be hampered when the graph of interest is sparse. To alleviate issues caused by sparsity, we investigate a previously overlooked phenomenon: in many cases, a densely connected, complementary graph can be found for the original graph. The denser graph may share nodes with the original graph, which offers a natural bridge for transferring selective, meaningful knowledge. We identify this setting as Graph Intersection-induced Transfer Learning (GITL), which is motivated by practical applications in e-commerce or academic co-authorship predictions. We develop a framework to effectively leverage the structural prior in this setting. We first create an intersection subgraph using the shared nodes between the two graphs, then transfer knowledge from the source-enriched intersection subgraph to the full target graph. In the second step, we consider two approaches: a modified label propagation, and a multi-layer perceptron (MLP) model in a teacher-student regime. Experimental results on proprietary e-commerce datasets and open-source citation graphs show that the proposed workflow outperforms existing transfer learning baselines that do not explicitly utilize the intersection structure.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                }
+            ]
+        },
+        {
+            "paperId": "1ed4bdfe692bff67ada28f4883492169103d156c",
+            "title": "Robust Weight Signatures: Gaining Robustness as Easy as Patching Weights?",
+            "abstract": "Given a robust model trained to be resilient to one or multiple types of distribution shifts (e.g., natural image corruptions), how is that\"robustness\"encoded in the model weights, and how easily can it be disentangled and/or\"zero-shot\"transferred to some other models? This paper empirically suggests a surprisingly simple answer: linearly - by straightforward model weight arithmetic! We start by drawing several key observations: (1)assuming that we train the same model architecture on both a clean dataset and its corrupted version, resultant weights mostly differ in shallow layers; (2)the weight difference after projection, which we call\"Robust Weight Signature\"(RWS), appears to be discriminative and indicative of different corruption types; (3)for the same corruption type, the RWSs obtained by one model architecture are highly consistent and transferable across different datasets. We propose a minimalistic model robustness\"patching\"framework that carries a model trained on clean data together with its pre-extracted RWSs. In this way, injecting certain robustness to the model is reduced to directly adding the corresponding RWS to its weight. We verify our proposed framework to be remarkably (1)lightweight. since RWSs concentrate on the shallowest few layers and we further show they can be painlessly quantized, storing an RWS is up to 13 x more compact than storing the full weight copy; (2)in-situ adjustable. RWSs can be appended as needed and later taken off to restore the intact clean model. We further demonstrate one can linearly re-scale the RWS to control the patched robustness strength; (3)composable. Multiple RWSs can be added simultaneously to patch more comprehensive robustness at once; and (4)transferable. Even when the clean model backbone is continually adapted or updated, RWSs remain as effective patches due to their outstanding cross-dataset transferability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2209882676",
+                    "name": "Ruisi Cai"
+                },
+                {
+                    "authorId": "2109338656",
+                    "name": "Zhenyu (Allen) Zhang"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "303d96bab3766557529ceb1d9d5856c1090a7ba2",
+            "title": "Convergence and Generalization of Wide Neural Networks with Large Bias",
+            "abstract": "This work studies training one-hidden-layer overparameterized ReLU networks via gradient descent in the neural tangent kernel (NTK) regime, where the networks' biases are initialized to some constant rather than zero. The tantalizing benefit of such initialization is that the neural network will provably have sparse activation through the entire training process, which enables fast training procedures. The first set of results characterizes the convergence of gradient descent training. Surprisingly, it is shown that the network after sparsification can achieve as fast convergence as the dense network, in comparison to the previous work indicating that the sparse networks converge slower. Further, the required width is improved to ensure gradient descent can drive the training error towards zero at a linear rate. Secondly, the networks' generalization is studied: a width-sparsity dependence is provided which yields a sparsity-dependent Rademacher complexity and generalization bound. To our knowledge, this is the first sparsity-dependent generalization result via Rademacher complexity. Lastly, this work further studies the least eigenvalue of the limiting NTK. Surprisingly, while it is not shown that trainable biases are necessary, trainable bias, which is enabled by our improved analysis scheme, helps to identify a nice data-dependent region where a much finer analysis of the NTK's smallest eigenvalue can be conducted. This leads to a much sharper lower bound on the NTK's smallest eigenvalue than the one previously known and, consequently, an improved generalization bound.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "152420547",
+                    "name": "Ziyu Jiang"
+                },
+                {
+                    "authorId": "2140713366",
+                    "name": "Ruizhe Zhang"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                }
+            ]
+        },
+        {
+            "paperId": "4354f95fd25a0daada3869ade9fcea093fba3d25",
+            "title": "Towards Constituting Mathematical Structures for Learning to Optimize",
+            "abstract": "Learning to Optimize (L2O), a technique that utilizes machine learning to learn an optimization algorithm automatically from data, has gained arising attention in recent years. A generic L2O approach parameterizes the iterative update rule and learns the update direction as a black-box network. While the generic approach is widely applicable, the learned model can overfit and may not generalize well to out-of-distribution test sets. In this paper, we derive the basic mathematical conditions that successful update rules commonly satisfy. Consequently, we propose a novel L2O model with a mathematics-inspired structure that is broadly applicable and generalized well to out-of-distribution problems. Numerical simulations validate our theoretical findings and demonstrate the superior empirical performance of the proposed L2O model.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108415378",
+                    "name": "Jialin Liu"
+                },
+                {
+                    "authorId": "2116298570",
+                    "name": "Xiaohan Chen"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "6833606",
+                    "name": "W. Yin"
+                },
+                {
+                    "authorId": "30104645",
+                    "name": "HanQin Cai"
+                }
+            ]
+        },
+        {
+            "paperId": "43c00597f8d59659af97dc35b24a836e8bd9b82a",
+            "title": "Learning to Optimize Differentiable Games",
+            "abstract": "Many machine learning problems can be abstracted in solving game theory formulations and boil down to optimizing nested objectives, such as generative adversarial networks (GANs) and multi-agent reinforcement learning. Solving these games requires finding their stable fixed points or Nash equilibrium. However, existing algorithms for solving games suffer from empirical instability, hence demanding heavy ad-hoc tuning in practice. To tackle these challenges, we resort to the emerging scheme of Learning to Op-timize (L2O), which discovers problem-specific efficient optimization algorithms through data-driven training. Our customized L2O framework for differentiable game theory problems, dubbed \u201cLearning to Play Games\u201d (L2PG), seeks a stable fixed point solution, by predicting the fast update direction from the past trajectory, with a novel gradient stability-aware, sign-based loss function. We further incorporate curriculum learning and self-learning to strengthen the empirical training stability and generalization of L2PG. On test problems including quadratic games and GANs, L2PG can substantially accelerate the convergence, and demonstrates a remarkably more stable trajectory. Codes are available at https: //github.com/VITA-Group/L2PG .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1753619492",
+                    "name": "Xuxi Chen"
+                },
+                {
+                    "authorId": "38921168",
+                    "name": "N. Vadori"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "5a073c23190fe31d5555e5f600ca0c09d1ca6e96",
+            "title": "Graph Domain Adaptation via Theory-Grounded Spectral Regularization",
+            "abstract": "Transfer learning on graphs drawn from varied distributions (domains) is in great demand across many applications. Emerging methods attempt to learn domaininvariant representations using graph neural networks (GNNs), yet the empirical performances vary and the theoretical foundation is limited. This paper aims at designing theory-grounded algorithms for graph domain adaptation (GDA). (i) As the first attempt, we derive a model-based GDA bound closely related to two GNN spectral properties: spectral smoothness (SS) and maximum frequency response (MFR). This is achieved by cross-pollinating between the OT-based (optimal transport) DA and graph filter theories. (ii) Inspired by the theoretical results, we propose algorithms regularizing spectral properties of SS and MFR to improve GNN transferability. We further extend the GDA theory into the more challenging scenario of conditional shift, where spectral regularization still applies. (iii) More importantly, our analyses of the theory reveal which regularization would improve performance of what transfer learning scenario, (iv) with numerical agreement with extensive real-world experiments: SS and MFR regularizations bring more benefits to the scenarios of node transfer and link transfer, respectively. In a nutshell, our study paves the way toward explicitly constructing and training GNNs that can capture more transferable representations across graph domains. Codes are released at https://github.com/Shen-Lab/GDA-SpecReg.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "89197162",
+                    "name": "Yuning You"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "1705610299",
+                    "name": "Yang Shen"
+                }
+            ]
+        },
+        {
+            "paperId": "6964459277134dc5a4fb1732eeb5de6761258b84",
+            "title": "Continuous-Discrete Convolution for Geometry-Sequence Modeling in Proteins",
+            "abstract": "The structure of proteins involves 3D geometry of amino acid coordinates and 1D sequence of peptide chains. The 3D structure exhibits irregularity because amino acids are distributed unevenly in Euclidean space and their coordinates are continuous variables. In contrast, the 1D structure is regular because amino acids are arranged uniformly in the chains and their sequential positions (orders) are discrete variables. Moreover, geometric coordinates and sequential orders are in two types of spaces and their units of length are incompatible. These inconsistencies make it challenging to capture the 3D and 1D structures while avoiding the impact of sequence and geometry modeling on each other. This paper proposes a Continuous-Discrete Convolution (CDConv) that uses irregular and regular approaches to model the geometry and sequence structures, respectively. Specifically, CDConv employs independent learnable weights for different regular sequential displacements but directly encodes geometric displacements due to their irregularity. In this way, CDConv significantly improves protein modeling by reducing the impact of geometric irregularity on sequence modeling. Extensive experiments on a range of tasks, including protein fold classification, enzyme reaction classification, gene ontology term prediction and enzyme commission number prediction, demonstrate the effectiveness of the proposed CDConv.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3446334",
+                    "name": "Hehe Fan"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "7607499",
+                    "name": "Yezhou Yang"
+                },
+                {
+                    "authorId": "145977143",
+                    "name": "Mohan S. Kankanhalli"
+                }
+            ]
+        }
+    ]
+}

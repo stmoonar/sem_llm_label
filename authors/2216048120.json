@@ -1,0 +1,137 @@
+{
+    "authorId": "2216048120",
+    "papers": [
+        {
+            "paperId": "5e29bf57f86909b3c0289b8f654b9d211d415d87",
+            "title": "Time Series Representation for Visualization in Apache IoTDB",
+            "abstract": "When analyzing time series, often interactively, the analysts frequently demand to visualize instantly large-scale data stored in databases. M4 visualization selects the first, last, bottom and top data points in each pixel column to ensure pixel-perfectness of the two-color line chart visualization. While M4 already shows its preciseness of encasing time series in different scales into a fixed size of pixels, how to efficiently support M4 representation in a time series native database is still absent. It is worth noting that, to enable fast writes, the commodity time series database systems, such as Apache IoTDB or InfluxDB, employ LSM-Tree based storage. That is, a time series is segmented and stored in a number of chunks, with possibly out-of-order arrivals, i.e., disordered on timestamps. To implement M4, a natural idea is to merge online the chunks as a whole series, with costly merge sort on timestamps, and then perform M4 representation as in relational databases. In this study, we propose a novel chunk merge free approach called M4-LSM to accelerate M4 representation and visualization. In particular, we utilize the metadata of chunks to prune and avoid the costly merging of any chunk. Moreover, intra-chunk indexing and pruning are enabled for efficiently accessing the representation points, referring to the special properties of time series. Remarkably, the time series database native operator M4-LSM has been implemented in Apache IoTDB, an open-source time series database, and deployed in companies across various industries. In the experiments over real-world datasets, the proposed M4-LSM operator demonstrates high efficiency without sacrificing preciseness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054447002",
+                    "name": "Lei Rui"
+                },
+                {
+                    "authorId": "2267009129",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2180290711",
+                    "name": "Yuyuan Kang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2216048120",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "8661ab64a846791aa4a1e6fe6d8d78af4e43f2cb",
+            "title": "Determining Exact Quantiles with Randomized Summaries",
+            "abstract": "Quantiles are fundamental statistics in various data science tasks, but costly to compute, e.g., by loading the entire data in memory for ranking. With limited memory space, prevalent in end devices or databases with heavy loads, it needs to scan the data in multiple passes. The idea is to gradually shrink the range of the queried quantile till it is small enough to fit in memory for ranking the result. Existing methods use deterministic sketches to determine the exact range of quantile, known as deterministic filter, which could be inefficient in range shrinking. In this study, we propose to shrink the ranges more aggressively, using randomized summaries such as KLL sketch. That is, with a high probability the quantile lies in a smaller range, namely probabilistic filter, determined by the randomized sketch. Specifically, we estimate the expected passes for determining the exact quantiles with probabilistic filters, and select a proper probability that can minimize the expected passes. Analyses show that our exact quantile determination method can terminate in P passes with 1-\u03b4 confidence, storing O(N 1/P logP-1/2P (1/\u03b4)) items, close to the lower bound \u00d8mega(N1/P) for a fixed \u03b4. The approach has been deployed as a function in an LSM-tree based time-series database Apache IoTDB. Remarkably, the randomized sketches can be pre-computed for the immutable SSTables in LSM-tree. Moreover, multiple quantile queries could share the data passes for probabilistic filters in range estimation. Extensive experiments on real and synthetic datasets demonstrate the superiority of our proposal compared to the existing methods with deterministic filters. On average, our method takes 0.48 fewer passes and 18% of the time compared with the state-of-the-art deterministic sketch (GK sketch).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2294016191",
+                    "name": "Ziling Chen"
+                },
+                {
+                    "authorId": "2218990334",
+                    "name": "Haoquan Guan"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2267009129",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2216048120",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "bee2afaf199fc843aa85f20ea0fbbec9442d6f9b",
+            "title": "Multimodal Data Encoding and Compression in Apache IoTDB",
+            "abstract": "Time-series data are widely used in industrial manufacturing, meteorology, ships, electric power, vehicles, \ufb01nance, and other \ufb01elds, which promote the booming development of time-series database management systems. Faced with larger data scales and more diverse data modalities, e\ufb03ciently storing and managing the data is very critical, and data encoding and compression become more and more important and are worth studying. Existing data encoding methods and systems fail to consider the characteristics of data in di\ufb00erent modalities thoroughly, and some methods of time-series data analysis have not been applied to the problem of data encoding. We comprehensively introduce the multimodal data encoding methods and their system implementation in the Apache IoTDB time-series database system, especially for the industrial Internet of Things application scenarios. Our encoding method comprehensively considers data in multiple models including timestamp data, numerical data, Boolean data, frequency domain data, and text data, and fully explores and utilizes the characteristics of the corresponding modal of data, especially the characteristics of timestamp intervals approximation in timestamp modality, to carry out targeted data encoding design. At the same time, the data quality issue that may occur in practical applications has been taken into consideration in the encoding algorithm. Experimental evaluation and analysis at the encoding algorithm level and the system level over multiple datasets validate the e\ufb00ectiveness of our encoding method and its system implementation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2276748600",
+                    "name": "Wendi He"
+                },
+                {
+                    "authorId": "2283948324",
+                    "name": "Tianrui Xia"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2267009129",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2216048120",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "57c993a657a1c327d0ec70cf4fb3fb0c54e69da4",
+            "title": "Efficiently Cleaning Structured Event Logs: A Graph Repair Approach",
+            "abstract": "Event data are often dirty owing to various recording conventions or simply system errors. These errors may cause serious damage to real applications, such as inaccurate provenance answers, poor profiling results, or concealing interesting patterns from event data. Cleaning dirty event data is strongly demanded. While existing event data cleaning techniques view event logs as sequences, structural information does exist among events, such as the task passing relationships between staffs in workflow or the invocation relationships among different micro-services in monitoring application performance. We argue that such structural information enhances not only the accuracy of repairing inconsistent events but also the computation efficiency. It is notable that both the structure and the names (labeling) of events could be inconsistent. In real applications, while an unsound structure is not repaired automatically (which requires manual effort from business actors to handle the structure error), it is highly desirable to repair the inconsistent event names introduced by recording mistakes. In this article, we first prove that the inconsistent label repairing problem is NP-complete. Then, we propose a graph repair approach for (1) detecting unsound structures, and (2) repairing inconsistent event names. Efficient pruning techniques together with two heuristic solutions are also presented. Extensive experiments over real and synthetic datasets demonstrate both the effectiveness and efficiency of our proposal.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40372969",
+                    "name": "Ruihong Huang"
+                },
+                {
+                    "authorId": "2216048120",
+                    "name": "Jianmin Wang"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2248416956",
+                    "name": "Xuemin Lin"
+                },
+                {
+                    "authorId": "2248844291",
+                    "name": "Xiaochen Zhu"
+                },
+                {
+                    "authorId": "2188744953",
+                    "name": "Jian Pei"
+                }
+            ]
+        }
+    ]
+}

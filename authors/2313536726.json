@@ -1,0 +1,221 @@
+{
+    "authorId": "2313536726",
+    "papers": [
+        {
+            "paperId": "09c3a340f5d6bb8b9b9f6a4a77326c0d692d4c66",
+            "title": "AdaPT: A Set of Guidelines for Hyperbolic Multimodal Multilingual NLP",
+            "abstract": "The Euclidean space is the familiar space for training neural models and performing arithmetic operations. However, many data types inherently possess complex geometries, and model training methods involve operating over their latent representations, which cannot be effectively captured in the Euclidean space. The hyperbolic space provides a more generalized representative geometry to model the hierarchical complexities of the tree-like structure of natural language. We propose A DA PT a set of guidelines for initialization, parametrization, and training of neural networks, which adapts to the dataset and can be used with different manifolds. A DA PT can be generalized over any existing neural network training methodology and leads to more stable training without a substantial increase in training time. We apply A DA PT guidelines over two state-of-the-art deep learning approaches and empirically demonstrate its effectiveness through experiments on three tasks over 12 languages across speech and text. Through extensive qualitative analysis, we put forward the applicability of A DA PT as a set of guidelines optimally utilizing the manifold geometry, which can be extended to various downstream tasks across languages and modalities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51042088",
+                    "name": "Ramit Sawhney"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "2069609589",
+                    "name": "Vishwa Shah"
+                },
+                {
+                    "authorId": "71188587",
+                    "name": "Megh Thakkar"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "389f9b27488f68e4dd81bb98ffac01446021f241",
+            "title": "Direct Judgement Preference Optimization",
+            "abstract": "Auto-evaluation is crucial for assessing response quality and offering feedback for model development. Recent studies have explored training large language models (LLMs) as generative judges to evaluate and critique other models' outputs. In this work, we investigate the idea of learning from both positive and negative data with preference optimization to enhance the evaluation capabilities of LLM judges across an array of different use cases. We achieve this by employing three approaches to collect the preference pairs for different use cases, each aimed at improving our generative judge from a different perspective. Our comprehensive study over a wide range of benchmarks demonstrates the effectiveness of our method. In particular, our generative judge achieves the best performance on 10 out of 13 benchmarks, outperforming strong baselines like GPT-4o and specialized judge models. Further analysis show that our judge model robustly counters inherent biases such as position and length bias, flexibly adapts to any evaluation protocol specified by practitioners, and provides helpful language feedback for improving downstream generator models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2322520737",
+                    "name": "Peifeng Wang"
+                },
+                {
+                    "authorId": "2321406326",
+                    "name": "Austin Xu"
+                },
+                {
+                    "authorId": "2307023535",
+                    "name": "Yilun Zhou"
+                },
+                {
+                    "authorId": "2267728986",
+                    "name": "Caiming Xiong"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "65a1f6c82840a98d0830b40e348f7243e9afb89a",
+            "title": "Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction",
+            "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in handling long context inputs, but this comes at the cost of increased computational resources and latency. Our research introduces a novel approach for the long context bottleneck to accelerate LLM inference and reduce GPU memory consumption. Our research demonstrates that LLMs can identify relevant tokens in the early layers before generating answers to a query. Leveraging this insight, we propose an algorithm that uses early layers of an LLM as filters to select and compress input tokens, significantly reducing the context length for subsequent processing. Our method, GemFilter, demonstrates substantial improvements in both speed and memory efficiency compared to existing techniques, such as standard attention and SnapKV/H2O. Notably, it achieves a 2.4$\\times$ speedup and 30\\% reduction in GPU memory usage compared to SOTA methods. Evaluation on the Needle in a Haystack task shows that GemFilter significantly outperforms standard attention, SnapKV and demonstrates comparable performance on the LongBench challenge. GemFilter is simple, training-free, and broadly applicable across different LLMs. Crucially, it provides interpretability by allowing humans to inspect the selected input sequence. These findings not only offer practical benefits for LLM deployment, but also enhance our understanding of LLM internal mechanisms, paving the way for further optimizations in LLM design and inference. Our code is available at \\url{https://github.com/SalesforceAIResearch/GemFilter}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "113515522",
+                    "name": "Zhenmei Shi"
+                },
+                {
+                    "authorId": "2321601631",
+                    "name": "Yifei Ming"
+                },
+                {
+                    "authorId": "1399659909",
+                    "name": "Xuan-Phi Nguyen"
+                },
+                {
+                    "authorId": "2260827689",
+                    "name": "Yingyu Liang"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "eee3bf09bcc997a3586e29f7d3c3d37a42aff87d",
+            "title": "FaithEval: Can Your Language Model Stay Faithful to Context, Even If\"The Moon is Made of Marshmallows\"",
+            "abstract": "Ensuring faithfulness to context in large language models (LLMs) and retrieval-augmented generation (RAG) systems is crucial for reliable deployment in real-world applications, as incorrect or unsupported information can erode user trust. Despite advancements on standard benchmarks, faithfulness hallucination-where models generate responses misaligned with the provided context-remains a significant challenge. In this work, we introduce FaithEval, a novel and comprehensive benchmark tailored to evaluate the faithfulness of LLMs in contextual scenarios across three diverse tasks: unanswerable, inconsistent, and counterfactual contexts. These tasks simulate real-world challenges where retrieval mechanisms may surface incomplete, contradictory, or fabricated information. FaithEval comprises 4.9K high-quality problems in total, validated through a rigorous four-stage context construction and validation framework, employing both LLM-based auto-evaluation and human validation. Our extensive study across a wide range of open-source and proprietary models reveals that even state-of-the-art models often struggle to remain faithful to the given context, and that larger models do not necessarily exhibit improved faithfulness.Project is available at: \\url{https://github.com/SalesforceAIResearch/FaithEval}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2321601631",
+                    "name": "Yifei Ming"
+                },
+                {
+                    "authorId": "3234247",
+                    "name": "Senthil Purushwalkam"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "2321405223",
+                    "name": "Zixuan Ke"
+                },
+                {
+                    "authorId": "1399659909",
+                    "name": "Xuan-Phi Nguyen"
+                },
+                {
+                    "authorId": "2267728986",
+                    "name": "Caiming Xiong"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "f321cce0932f2a257849a195c0cac1194a8b11d7",
+            "title": "SFR-RAG: Towards Contextually Faithful LLMs",
+            "abstract": "Retrieval Augmented Generation (RAG), a paradigm that integrates external contextual information with large language models (LLMs) to enhance factual accuracy and relevance, has emerged as a pivotal area in generative AI. The LLMs used in RAG applications are required to faithfully and completely comprehend the provided context and users' questions, avoid hallucination, handle unanswerable, counterfactual or otherwise low-quality and irrelevant contexts, perform complex multi-hop reasoning and produce reliable citations. In this paper, we introduce SFR-RAG, a small LLM that is instruction-tuned with an emphasis on context-grounded generation and hallucination minimization. We also present ContextualBench, a new evaluation framework compiling multiple popular and diverse RAG benchmarks, such as HotpotQA and TriviaQA, with consistent RAG settings to ensure reproducibility and consistency in model assessments. Experimental results demonstrate that our SFR-RAG-9B model outperforms leading baselines such as Command-R+ (104B) and GPT-4o, achieving state-of-the-art results in 3 out of 7 benchmarks in ContextualBench with significantly fewer parameters. The model is also shown to be resilient to alteration in the contextual information and behave appropriately when relevant context is removed. Additionally, the SFR-RAG model maintains competitive performance in general instruction-following tasks and function-calling capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1399659909",
+                    "name": "Xuan-Phi Nguyen"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "3234247",
+                    "name": "Senthil Purushwalkam"
+                },
+                {
+                    "authorId": "2321406326",
+                    "name": "Austin Xu"
+                },
+                {
+                    "authorId": "2258571998",
+                    "name": "Hailin Chen"
+                },
+                {
+                    "authorId": "2321601631",
+                    "name": "Yifei Ming"
+                },
+                {
+                    "authorId": "2321405223",
+                    "name": "Zixuan Ke"
+                },
+                {
+                    "authorId": "2321404956",
+                    "name": "Silvio Savarese"
+                },
+                {
+                    "authorId": "2321408694",
+                    "name": "Caiming Xong"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "280617f90c02f59aa3d9f4eaeaadfa337fdca4b7",
+            "title": "Exploring the Integration Strategies of Retriever and Large Language Models",
+            "abstract": "The integration of retrieved passages and large language models (LLMs), such as ChatGPTs, has significantly contributed to improving open-domain question answering. However, there is still a lack of exploration regarding the optimal approach for incorporating retrieved passages into the answer generation process. This paper aims to fill this gap by investigating different methods of combining retrieved passages with LLMs to enhance answer generation. We begin by examining the limitations of a commonly-used concatenation approach. Surprisingly, this approach often results in generating \u201cunknown\u201d outputs, even when the correct document is among the top-k retrieved passages. To address this issue, we explore four alternative strategies for integrating the retrieved passages with the LLMs. These strategies include two single-round methods that utilize chain-of-thought reasoning and two multi-round strategies that incorporate feedback loops. Through comprehensive analyses and experiments, we provide insightful observations on how to effectively leverage retrieved passages to enhance the answer generation capability of LLMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2238385821",
+                    "name": "Ye Liu"
+                },
+                {
+                    "authorId": "3014143",
+                    "name": "Semih Yavuz"
+                },
+                {
+                    "authorId": "2238207587",
+                    "name": "Rui Meng"
+                },
+                {
+                    "authorId": "2233287247",
+                    "name": "Meghana Moorthy"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                },
+                {
+                    "authorId": "2267728986",
+                    "name": "Caiming Xiong"
+                },
+                {
+                    "authorId": "2118860628",
+                    "name": "Yingbo Zhou"
+                }
+            ]
+        }
+    ]
+}

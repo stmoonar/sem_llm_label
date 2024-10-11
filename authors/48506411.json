@@ -1,0 +1,561 @@
+{
+    "authorId": "48506411",
+    "papers": [
+        {
+            "paperId": "125ff68732c441e143cf33587bebd2ab01372e49",
+            "title": "Beyond the Turn-Based Game: Enabling Real-Time Conversations with Duplex Models",
+            "abstract": "As large language models (LLMs) increasingly permeate daily lives, there is a growing demand for real-time interactions that mirror human conversations. Traditional turn-based chat systems driven by LLMs prevent users from verbally interacting with the system while it is generating responses. To overcome these limitations, we adapt existing LLMs to \\textit{duplex models} so that these LLMs can listen for users while generating output and dynamically adjust themselves to provide users with instant feedback. % such as in response to interruptions. Specifically, we divide the queries and responses of conversations into several time slices and then adopt a time-division-multiplexing (TDM) encoding-decoding strategy to pseudo-simultaneously process these slices. Furthermore, to make LLMs proficient enough to handle real-time conversations, we build a fine-tuning dataset consisting of alternating time slices of queries and responses as well as covering typical feedback types in instantaneous interactions. Our experiments show that although the queries and responses of conversations are segmented into incomplete slices for processing, LLMs can preserve their original performance on standard benchmarks with a few fine-tuning steps on our dataset. Automatic and human evaluation indicate that duplex models make user-AI interactions more natural and human-like, and greatly improve user satisfaction compared to vanilla LLMs. Our duplex model and dataset will be released.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2254576790",
+                    "name": "Xinrong Zhang"
+                },
+                {
+                    "authorId": "2109274417",
+                    "name": "Yingfa Chen"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2284948588",
+                    "name": "Zihang Xu"
+                },
+                {
+                    "authorId": "2308071031",
+                    "name": "Yuanwei Xu"
+                },
+                {
+                    "authorId": "2150606888",
+                    "name": "Weilin Zhao"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                },
+                {
+                    "authorId": "2301534001",
+                    "name": "Zhiyuan Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "1c1b5bc728cb6c59574e77987441ec066bea9109",
+            "title": "ProSparse: Introducing and Enhancing Intrinsic Activation Sparsity within Large Language Models",
+            "abstract": "Activation sparsity refers to the existence of considerable weakly-contributed elements among activation outputs. As a prevalent property of the models using the ReLU activation function, activation sparsity has been proven a promising paradigm to boost model inference efficiency. Nevertheless, most large language models (LLMs) adopt activation functions without intrinsic activation sparsity (e.g., GELU and Swish). Some recent efforts have explored introducing ReLU or its variants as the substitutive activation function to help LLMs achieve activation sparsity and inference acceleration, but few can simultaneously obtain high sparsity and comparable model performance. This paper introduces a simple and effective sparsification method named\"ProSparse\"to push LLMs for higher activation sparsity while maintaining comparable performance. Specifically, after substituting the activation function of LLMs with ReLU, ProSparse adopts progressive sparsity regularization with a factor smoothly increasing along the multi-stage sine curves. This can enhance activation sparsity and mitigate performance degradation by avoiding radical shifts in activation distributions. With ProSparse, we obtain high sparsity of 89.32% for LLaMA2-7B, 88.80% for LLaMA2-13B, and 87.89% for end-size MiniCPM-1B, respectively, achieving comparable performance to their original Swish-activated versions. These present the most sparsely activated models among open-source LLaMA versions and competitive end-size models, considerably surpassing ReluLLaMA-7B (66.98%) and ReluLLaMA-13B (71.56%). Our inference acceleration experiments further demonstrate the significant practical acceleration potential of LLMs with higher activation sparsity, obtaining up to 4.52$\\times$ inference speedup.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283100077",
+                    "name": "Chenyang Song"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2284975505",
+                    "name": "Xiyu Shi"
+                },
+                {
+                    "authorId": "2223171532",
+                    "name": "Kuai Li"
+                },
+                {
+                    "authorId": "2248149386",
+                    "name": "Chen Chen"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2256694218",
+                    "name": "Guanglin Li"
+                },
+                {
+                    "authorId": "2285186908",
+                    "name": "Tao Yang"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "239d6038947fa9e6e88a74e0e46117d1188d5c09",
+            "title": "Enabling Real-Time Conversations with Minimal Training Costs",
+            "abstract": "Large language models (LLMs) have demonstrated the ability to improve human efficiency through conversational interactions. Conventional LLM-powered dialogue systems, operating on a turn-based paradigm, preclude real-time interaction during response generation. To address this limitation, researchers have proposed duplex models. These models can dynamically adapt to user input, facilitating real-time interactive feedback. However, these methods typically require substantial computational resources to acquire the ability. To reduce overhead, this paper presents a new duplex decoding approach that enhances LLMs with duplex ability, requiring minimal additional training. Specifically, our method employs parallel decoding of queries and responses in conversations, effectively implementing a channel-division-multiplexing decoding strategy. Experimental results indicate that our proposed method significantly enhances the naturalness and human-likeness of user-AI interactions with minimal training costs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2308347042",
+                    "name": "Wang Xu"
+                },
+                {
+                    "authorId": "2267033597",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "2150606888",
+                    "name": "Weilin Zhao"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2277242040",
+                    "name": "Yukun Yan"
+                },
+                {
+                    "authorId": "2321663419",
+                    "name": "Yudi Zhang"
+                },
+                {
+                    "authorId": "2321557829",
+                    "name": "Zhe Tao"
+                },
+                {
+                    "authorId": "2301534001",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2321552437",
+                    "name": "Wanxiang Che"
+                }
+            ]
+        },
+        {
+            "paperId": "26e13e1da4f47c93c9ad0daf9cc9e2bb4ffd063d",
+            "title": "InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory",
+            "abstract": "Large language models (LLMs) have emerged as a cornerstone in real-world applications with lengthy streaming inputs (e.g., LLM-driven agents). However, existing LLMs, pre-trained on sequences with a restricted maximum length, cannot process longer sequences due to the out-of-domain and distraction issues. Common solutions often involve continual pre-training on longer sequences, which will introduce expensive computational overhead and uncontrollable change in model capabilities. In this paper, we unveil the intrinsic capacity of LLMs for understanding extremely long sequences without any fine-tuning. To this end, we introduce a training-free memory-based method, InfLLM. Specifically, InfLLM stores distant contexts into additional memory units and employs an efficient mechanism to lookup token-relevant units for attention computation. Thereby, InfLLM allows LLMs to efficiently process long sequences with a limited context window and well capture long-distance dependencies. Without any training, InfLLM enables LLMs that are pre-trained on sequences consisting of a few thousand tokens to achieve comparable performance with competitive baselines that continually train these LLMs on long sequences. Even when the sequence length is scaled to $1,024$K, InfLLM still effectively captures long-distance dependencies. Our code can be found in \\url{https://github.com/thunlp/InfLLM}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "2261405658",
+                    "name": "Pengle Zhang"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2427350",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2249530374",
+                    "name": "Song Han"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "4623901ec1f8311b32e27bd627b2bce56161c6bb",
+            "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
+            "abstract": "Speculative decoding is a widely used method that accelerates the generation process of large language models (LLMs) with no compromise in model performance. It achieves this goal by using an existing smaller model for drafting and then employing the target LLM to verify the draft in a low-cost parallel manner. Under such a drafting-verification framework, drafting efficiency has become a bottleneck in the final speedup of speculative decoding. Therefore, generating longer drafts at less cost can lead to better decoding speedup. To achieve this, we introduce Ouroboros, which can generate draft phrases to parallelize the drafting process and meanwhile lengthen drafts in a training-free manner. The experimental results on various typical text generation tasks show that Ouroboros can achieve speedups of up to $2.4\\times$ over speculative decoding and $3.9\\times$ over vanilla decoding, without fine-tuning draft and target models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2150606888",
+                    "name": "Weilin Zhao"
+                },
+                {
+                    "authorId": "2214586078",
+                    "name": "Yuxiang Huang"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2308347042",
+                    "name": "Wang Xu"
+                },
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "2254576790",
+                    "name": "Xinrong Zhang"
+                },
+                {
+                    "authorId": "2295846809",
+                    "name": "Yewei Fang"
+                },
+                {
+                    "authorId": "2295817905",
+                    "name": "Kaihuo Zhang"
+                },
+                {
+                    "authorId": "2301534001",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "49259f30ccc0fafe6ad19c80cb18dee6ea5d3739",
+            "title": "LoRA-Flow: Dynamic LoRA Fusion for Large Language Models in Generative Tasks",
+            "abstract": "LoRA employs lightweight modules to customize large language models (LLMs) for each downstream task or domain, where different learned additional modules represent diverse skills. Combining existing LoRAs to address new tasks can enhance the reusability of learned LoRAs, particularly beneficial for tasks with limited annotated data. Most prior works on LoRA combination primarily rely on task-level weights for each involved LoRA, making different examples and tokens share the same LoRA weights. However, in generative tasks, different tokens may necessitate diverse skills to manage. Taking the Chinese math task as an example, understanding the problem description may depend more on the Chinese LoRA, while the calculation part may rely more on the math LoRA. To this end, we propose LoRA-Flow, which utilizes dynamic weights to adjust the impact of different LoRAs. The weights at each step are determined by a fusion gate with extremely few parameters, which can be learned with only 200 training examples. Experiments across six generative tasks demonstrate that our method consistently outperforms baselines with task-level fusion weights. This underscores the necessity of introducing dynamic fusion weights for LoRA combination.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2262371637",
+                    "name": "Hanqing Wang"
+                },
+                {
+                    "authorId": "2284692055",
+                    "name": "Bowen Ping"
+                },
+                {
+                    "authorId": "2267033597",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2285074607",
+                    "name": "Yun Chen"
+                },
+                {
+                    "authorId": "2266886975",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "49873ee415619efd9e1e4c16f73ee066ff008c1f",
+            "title": "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies",
+            "abstract": "The burgeoning interest in developing Large Language Models (LLMs) with up to trillion parameters has been met with concerns regarding resource efficiency and practical expense, particularly given the immense cost of experimentation. This scenario underscores the importance of exploring the potential of Small Language Models (SLMs) as a resource-efficient alternative. In this context, we introduce MiniCPM, specifically the 1.2B and 2.4B non-embedding parameter variants, not only excel in their respective categories but also demonstrate capabilities on par with 7B-13B LLMs. While focusing on SLMs, our approach exhibits scalability in both model and data dimensions for future LLM research. Regarding model scaling, we employ extensive model wind tunnel experiments for stable and optimal scaling. For data scaling, we introduce a Warmup-Stable-Decay (WSD) learning rate scheduler (LRS), conducive to continuous training and domain adaptation. We present an in-depth analysis of the intriguing training dynamics that occurred in the WSD LRS. With WSD LRS, we are now able to efficiently study data-model scaling law without extensive retraining experiments on both axes of model and data, from which we derive the much higher compute optimal data-model ratio than Chinchilla Optimal. Additionally, we introduce MiniCPM family, including MiniCPM-DPO, MiniCPM-MoE and MiniCPM-128K, whose excellent performance further cementing MiniCPM's foundation in diverse SLM applications. MiniCPM models are available publicly at https://github.com/OpenBMB/MiniCPM .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2295757664",
+                    "name": "Yuge Tu"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2256951801",
+                    "name": "Chaoqun He"
+                },
+                {
+                    "authorId": "52297757",
+                    "name": "Ganqu Cui"
+                },
+                {
+                    "authorId": "2295733503",
+                    "name": "Xiang Long"
+                },
+                {
+                    "authorId": "2295929465",
+                    "name": "Zhi Zheng"
+                },
+                {
+                    "authorId": "2295846809",
+                    "name": "Yewei Fang"
+                },
+                {
+                    "authorId": "2214586078",
+                    "name": "Yuxiang Huang"
+                },
+                {
+                    "authorId": "2150606888",
+                    "name": "Weilin Zhao"
+                },
+                {
+                    "authorId": "2254576790",
+                    "name": "Xinrong Zhang"
+                },
+                {
+                    "authorId": "2284862784",
+                    "name": "Zhen Leng Thai"
+                },
+                {
+                    "authorId": "2295817905",
+                    "name": "Kaihuo Zhang"
+                },
+                {
+                    "authorId": "2249899670",
+                    "name": "Chongyi Wang"
+                },
+                {
+                    "authorId": "1390925224",
+                    "name": "Yuan Yao"
+                },
+                {
+                    "authorId": "2267866399",
+                    "name": "Chenyang Zhao"
+                },
+                {
+                    "authorId": "2295789325",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "2295809950",
+                    "name": "Jie Cai"
+                },
+                {
+                    "authorId": "2295733180",
+                    "name": "Zhongwu Zhai"
+                },
+                {
+                    "authorId": "46649145",
+                    "name": "Ning Ding"
+                },
+                {
+                    "authorId": "2279190843",
+                    "name": "Chaochao Jia"
+                },
+                {
+                    "authorId": "1398454307",
+                    "name": "Guoyang Zeng"
+                },
+                {
+                    "authorId": "2144118403",
+                    "name": "Dahai Li"
+                },
+                {
+                    "authorId": "2269703458",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "71f570bba213de89bc9497316a5138da6e09a926",
+            "title": "FastFiD: Improve Inference Efficiency of Open Domain Question Answering via Sentence Selection",
+            "abstract": "Open Domain Question Answering (ODQA) has been advancing rapidly in recent times, driven by significant developments in dense passage retrieval and pretrained language models. Current models typically incorporate the FiD framework, which is composed by a neural retriever alongside an encoder-decoder neural reader. In the answer generation process, the retriever will retrieve numerous passages (around 100 for instance), each of which is then individually encoded by the encoder. Subsequently, the decoder makes predictions based on these encoded passages. Nevertheless, this framework can be relatively time-consuming, particularly due to the extensive length of the gathered passages. To address this, we introduce FastFiD in this paper, a novel approach that executes sentence selection on the encoded passages. This aids in retaining valuable sentences while reducing the context length required for generating answers. Experiments on three commonly used datasets (Natural Questions, TriviaQA and ASQA) demonstrate that our method can enhance the inference speed by 2.3X-5.7X, while simultaneously maintaining the model's performance. Moreover, an in-depth analysis of the model's attention reveals that the selected sentences indeed hold a substantial contribution towards the final answer. The codes are publicly available at https://github.com/thunlp/FastFiD.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2286459314",
+                    "name": "Yufei Huang"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "84d3e913a02783f60f6e6831bde1596519da9dd4",
+            "title": "Configurable Foundation Models: Building LLMs from a Modular Perspective",
+            "abstract": "Advancements in LLMs have recently unveiled challenges tied to computational efficiency and continual scalability due to their requirements of huge parameters, making the applications and evolution of these models on devices with limited computation resources and scenarios requiring various abilities increasingly cumbersome. Inspired by modularity within the human brain, there is a growing tendency to decompose LLMs into numerous functional modules, allowing for inference with part of modules and dynamic assembly of modules to tackle complex tasks, such as mixture-of-experts. To highlight the inherent efficiency and composability of the modular approach, we coin the term brick to represent each functional module, designating the modularized structure as configurable foundation models. In this paper, we offer a comprehensive overview and investigation of the construction, utilization, and limitation of configurable foundation models. We first formalize modules into emergent bricks - functional neuron partitions that emerge during the pre-training phase, and customized bricks - bricks constructed via additional post-training to improve the capabilities and knowledge of LLMs. Based on diverse functional bricks, we further present four brick-oriented operations: retrieval and routing, merging, updating, and growing. These operations allow for dynamic configuration of LLMs based on instructions to handle complex tasks. To verify our perspective, we conduct an empirical analysis on widely-used LLMs. We find that the FFN layers follow modular patterns with functional specialization of neurons and functional neuron partitions. Finally, we highlight several open issues and directions for future research. Overall, this paper aims to offer a fresh modular perspective on existing LLM research and inspire the future creation of more efficient and scalable foundational models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "2283100077",
+                    "name": "Chenyang Song"
+                },
+                {
+                    "authorId": "2320103237",
+                    "name": "Dazhi Jiang"
+                },
+                {
+                    "authorId": "2319605121",
+                    "name": "Feng Yao"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "48631777",
+                    "name": "Xiaozhi Wang"
+                },
+                {
+                    "authorId": "2319401370",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "2286459314",
+                    "name": "Yufei Huang"
+                },
+                {
+                    "authorId": "2320593535",
+                    "name": "Guanyu Lin"
+                },
+                {
+                    "authorId": "2109274417",
+                    "name": "Yingfa Chen"
+                },
+                {
+                    "authorId": "2150606888",
+                    "name": "Weilin Zhao"
+                },
+                {
+                    "authorId": "2295757664",
+                    "name": "Yuge Tu"
+                },
+                {
+                    "authorId": "2320073000",
+                    "name": "Zexuan Zhong"
+                },
+                {
+                    "authorId": "2315247489",
+                    "name": "Ao Zhang"
+                },
+                {
+                    "authorId": "2319605242",
+                    "name": "Chenglei Si"
+                },
+                {
+                    "authorId": "2319603744",
+                    "name": "Khai Hao Moo"
+                },
+                {
+                    "authorId": "2310816486",
+                    "name": "Chenyang Zhao"
+                },
+                {
+                    "authorId": "2155553997",
+                    "name": "Huimin Chen"
+                },
+                {
+                    "authorId": "2427350",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2301534001",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2297773933",
+                    "name": "Jingbo Shang"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "8b2f50c01324d9fc36ab728839b3baf41fa859ad",
+            "title": "Hyperbolic Pre-Trained Language Model",
+            "abstract": "In recent years, we have witnessed significant improvements in pre-trained language models (PLM) brought about by the scaling of parameter sizes and data amounts. However, this also brings high computational and storage costs. In this paper, we present a new direction to improve PLMs without scaling parameters and data: adopting a geometric feature space that is more suitable for encoding the intrinsic structured features of text. Although text is generally considered unstructured data, it possesses rich intrinsic structured features that signify syntactic and semantic relationships. Leveraging these structured features is vital for text understanding. Given that structured features are better encoded in hyperbolic spaces than in the Euclidean spaces used by conventional PLMs, we propose that PLMs should operate entirely within hyperbolic spaces. Our experiments demonstrate the superiority of hyperbolic PLMs over Euclidean PLMs across a wide variety of tasks, using the same parameter and data settings. This suggests that altering the geometry of model representation is a promising direction for model enhancement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109136284",
+                    "name": "Weize Chen"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2427350",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2304086840",
+                    "name": "Kaichen He"
+                },
+                {
+                    "authorId": "2257007994",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2257088385",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "2261154189",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        }
+    ]
+}

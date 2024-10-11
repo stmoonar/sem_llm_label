@@ -1,0 +1,317 @@
+{
+    "authorId": "2131059444",
+    "papers": [
+        {
+            "paperId": "5316598d39df1bf47240eb4a8dc0f4770ec3fa72",
+            "title": "OpenHEXAI: An Open-Source Framework for Human-Centered Evaluation of Explainable Machine Learning",
+            "abstract": "Recently, there has been a surge of explainable AI (XAI) methods driven by the need for understanding machine learning model behaviors in high-stakes scenarios. However, properly evaluating the effectiveness of the XAI methods inevitably requires the involvement of human subjects, and conducting human-centered benchmarks is challenging in a number of ways: designing and implementing user studies is complex; numerous design choices in the design space of user study lead to problems of reproducibility; and running user studies can be challenging and even daunting for machine learning researchers. To address these challenges, this paper presents OpenHEXAI, an open-source framework for human-centered evaluation of XAI methods. OpenHEXAI features (1) a collection of diverse benchmark datasets, pre-trained models, and post hoc explanation methods; (2) an easy-to-use web application for user study; (3) comprehensive evaluation metrics for the effectiveness of post hoc explanation methods in the context of human-AI decision making tasks; (4) best practice recommendations of experiment documentation; and (5) convenient tools for power analysis and cost estimation. OpenHEAXI is the first large-scale infrastructural effort to facilitate human-centered benchmarks of XAI methods. It simplifies the design and implementation of user studies for XAI methods, thus allowing researchers and practitioners to focus on the scientific questions. Additionally, it enhances reproducibility through standardized designs. Based on OpenHEXAI, we further conduct a systematic benchmark of four state-of-the-art post hoc explanation methods and compare their impacts on human-AI decision making tasks in terms of accuracy, fairness, as well as users' trust and understanding of the machine learning model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261475382",
+                    "name": "Jiaqi Ma"
+                },
+                {
+                    "authorId": "120801533",
+                    "name": "Vivian Lai"
+                },
+                {
+                    "authorId": "49889218",
+                    "name": "Yiming Zhang"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2290718096",
+                    "name": "Paul Hamilton"
+                },
+                {
+                    "authorId": "1725415927",
+                    "name": "Davor Ljubenkov"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                },
+                {
+                    "authorId": "2269165090",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "716fd0d190723ee78b4000292987bdbdd4516b3d",
+            "title": "GPT-4V Cannot Generate Radiology Reports Yet",
+            "abstract": "GPT-4V's purported strong multimodal abilities raise interests in using it to automate radiology report writing, but there lacks thorough evaluations. In this work, we perform a systematic evaluation of GPT-4V in generating radiology reports on two chest X-ray report datasets: MIMIC-CXR and IU X-Ray. We attempt to directly generate reports using GPT-4V through different prompting strategies and find that it fails terribly in both lexical metrics and clinical efficacy metrics. To understand the low performance, we decompose the task into two steps: 1) the medical image reasoning step of predicting medical condition labels from images; and 2) the report synthesis step of generating reports from (groundtruth) conditions. We show that GPT-4V's performance in image reasoning is consistently low across different prompts. In fact, the distributions of model-predicted labels remain constant regardless of which groundtruth conditions are present on the image, suggesting that the model is not interpreting chest X-rays meaningfully. Even when given groundtruth conditions in report synthesis, its generated reports are less correct and less natural-sounding than a finetuned LLaMA-2. Altogether, our findings cast doubt on the viability of using GPT-4V in a radiology workflow.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2311890798",
+                    "name": "Yuyang Jiang"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2268763537",
+                    "name": "Dang Nguyen"
+                },
+                {
+                    "authorId": "2252958415",
+                    "name": "Benjamin M. Mervak"
+                },
+                {
+                    "authorId": "2269165090",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "66b217600c49195ce01cb24d068ebae5ca7bfd63",
+            "title": "Contextual Dynamic Prompting for Response Generation in Task-oriented Dialog Systems",
+            "abstract": "Response generation is one of the critical components in task-oriented dialog systems. Existing studies have shown that large pre-trained language models can be adapted to this task. The typical paradigm of adapting such extremely large language models would be by fine-tuning on the downstream tasks which is not only time-consuming but also involves significant resources and access to fine-tuning data. Prompting (Schick and Sch\u00fctze, 2020) has been an alternative to fine-tuning in many NLP tasks. In our work, we explore the idea of using prompting for response generation in task-oriented dialog systems. Specifically, we propose an approach that performs contextual dynamic prompting where the prompts are learnt from dialog contexts. We aim to distill useful prompting signals from the dialog context. On experiments with MultiWOZ 2.2 dataset (Zang et al., 2020), we show that contextual dynamic prompts improve response generation in terms of combined score (Mehri et al., 2019) by 3 absolute points, and an additional 17 points when dialog states are incorporated. Furthermore, we carried out human annotation on these conversations and found that agents which incorporate context are preferred over agents with vanilla prefix-tuning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34539242",
+                    "name": "Sandesh Swamy"
+                },
+                {
+                    "authorId": "46241251",
+                    "name": "N. Tabari"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "3208169",
+                    "name": "Rashmi Gangadharaiah"
+                }
+            ]
+        },
+        {
+            "paperId": "6af6e5b1acb39ac21d1730192f7e6617199f383d",
+            "title": "Pragmatic Radiology Report Generation",
+            "abstract": "When pneumonia is not found on a chest X-ray, should the report describe this negative observation or omit it? We argue that this question cannot be answered from the X-ray alone and requires a pragmatic perspective, which captures the communicative goal that radiology reports serve between radiologists and patients. However, the standard image-to-text formulation for radiology report generation fails to incorporate such pragmatic intents. Following this pragmatic perspective, we demonstrate that the indication, which describes why a patient comes for an X-ray, drives the mentions of negative observations and introduce indications as additional input to report generation. With respect to the output, we develop a framework to identify uninferable information from the image as a source of model hallucinations, and limit them by cleaning groundtruth reports. Finally, we use indications and cleaned groundtruth reports to develop pragmatic models, and show that they outperform existing methods not only in new pragmatics-inspired metrics (+4.3 Negative F1) but also in standard metrics (+6.3 Positive F1 and +11.0 BLEU-2).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268763537",
+                    "name": "Dang Nguyen"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2268756369",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "2269165090",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "e2de545750c859b9f7f62919e2b94f9e92ad9147",
+            "title": "Selective Explanations: Leveraging Human Input to Align Explainable AI",
+            "abstract": "While a vast collection of explainable AI (XAI) algorithms has been developed in recent years, they have been criticized for significant gaps with how humans produce and consume explanations. As a result, current XAI techniques are often found to be hard to use and lack effectiveness. In this work, we attempt to close these gaps by making AI explanations selective ---a fundamental property of human explanations---by selectively presenting a subset of model reasoning based on what aligns with the recipient's preferences. We propose a general framework for generating selective explanations by leveraging human input on a small dataset. This framework opens up a rich design space that accounts for different selectivity goals, types of input, and more. As a showcase, we use a decision-support task to explore selective explanations based on what the decision-maker would consider relevant to the decision task. We conducted two experimental studies to examine three paradigms based on our proposed framework: in Study 1, we ask the participants to provide critique-based or open-ended input to generate selective explanations (self-input). In Study 2, we show the participants selective explanations based on input from a panel of similar users (annotator input). Our experiments demonstrate the promise of selective explanations in reducing over-reliance on AI and improving collaborative decision making and subjective perceptions of the AI system, but also paint a nuanced picture that attributes some of these positive effects to the opportunity to provide one's own input to augment AI explanations. Overall, our work proposes a novel XAI framework inspired by human communication behaviors and demonstrates its potential to encourage future work to make AI explanations more human-compatible.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "120801533",
+                    "name": "Vivian Lai"
+                },
+                {
+                    "authorId": "49889218",
+                    "name": "Yiming Zhang"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "144921048",
+                    "name": "Q. Liao"
+                },
+                {
+                    "authorId": "2111727675",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "f1a6d2c02c250125ad669e4f63dd44e60915de4f",
+            "title": "Learning Human-Compatible Representations for Case-Based Decision Support",
+            "abstract": "Algorithmic case-based decision support provides examples to help human make sense of predicted labels and aid human in decision-making tasks. Despite the promising performance of supervised learning, representations learned by supervised models may not align well with human intuitions: what models consider as similar examples can be perceived as distinct by humans. As a result, they have limited effectiveness in case-based decision support. In this work, we incorporate ideas from metric learning with supervised learning to examine the importance of alignment for effective decision support. In addition to instance-level labels, we use human-provided triplet judgments to learn human-compatible decision-focused representations. Using both synthetic data and human subject experiments in multiple classification tasks, we demonstrate that such representation is better aligned with human perception than representation solely optimized for classification. Human-compatible representations identify nearest neighbors that are perceived as more similar by humans and allow humans to make more accurate predictions, leading to substantial improvements in human decision accuracies (17.8% in butterfly vs. moth classification and 13.2% in pneumonia classification).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2140162948",
+                    "name": "Han Liu"
+                },
+                {
+                    "authorId": "2211102686",
+                    "name": "Yizhou Tian"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2113511266",
+                    "name": "Shi Feng"
+                },
+                {
+                    "authorId": "50580847",
+                    "name": "Yuxin Chen"
+                },
+                {
+                    "authorId": "2111727675",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "f46050b4ae991a0c047f9930c8de7c706e61c197",
+            "title": "Towards a Science of Human-AI Decision Making: An Overview of Design Space in Empirical Human-Subject Studies",
+            "abstract": "AI systems are adopted in numerous domains due to their increasingly strong predictive performance. However, in high-stakes domains such as criminal justice and healthcare, full automation is often not desirable due to safety, ethical, and legal concerns, yet fully manual approaches can be inaccurate and time-consuming. As a result, there is growing interest in the research community to augment human decision making with AI assistance. Besides developing AI technologies for this purpose, the emerging field of human-AI decision making must embrace empirical approaches to form a foundational understanding of how humans interact and work with AI to make decisions. To invite and help structure research efforts towards a science of understanding and improving human-AI decision making, we survey recent literature of empirical human-subject studies on this topic. We summarize the study design choices made in over 100 papers in three important aspects: (1) decision tasks, (2) AI assistance elements, and (3) evaluation metrics. For each aspect, we summarize current trends, discuss gaps in current practices of the field, and make a list of recommendations for future research. Our work highlights the need to develop common frameworks to account for the design and research spaces of human-AI decision making, so that researchers can make rigorous choices in study design, and the research community can build on each other\u2019s work and produce generalizable scientific knowledge. We also hope this work will serve as a bridge for HCI and AI communities to work together to mutually shape the empirical science and computational technologies for human-AI decision making.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "120801533",
+                    "name": "Vivian Lai"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "1405364873",
+                    "name": "Alison Smith-Renner"
+                },
+                {
+                    "authorId": "144921048",
+                    "name": "Q. Liao"
+                },
+                {
+                    "authorId": "2111727675",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "101309da0732648e72929a5327341d325fca57fa",
+            "title": "Machine Explanations and Human Understanding",
+            "abstract": "Explanations are hypothesized to improve human understanding of machine learning models and achieve a variety of desirable outcomes, ranging from model debugging to enhancing human decision making. However, empirical studies have found mixed and even negative results. An open question, therefore, is under what conditions explanations can improve human understanding and in what way. To address this question, we first identify three core concepts that cover most existing quantitative measures of understanding: task decision boundary, model decision boundary, and model error. Using adapted causal diagrams, we provide a formal characterization of the relationship between these concepts and human approximations (i.e., understanding) of them. The relationship varies by the level of human intuition in different task types, such as emulation and discovery, which are often ignored when building or evaluating explanation methods. Our key result is that human intuitions are necessary for generating and evaluating machine explanations in human-AI decision making: without assumptions about human intuitions, explanations may improve human understanding of model decision boundary, but cannot improve human understanding of task decision boundary or model error. To validate our theoretical claims, we conduct human subject studies to show the importance of human intuitions. Together with our theoretical contributions, we provide a new paradigm for designing behavioral studies towards a rigorous view of the role of machine explanations across different tasks of human-AI decision making.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2113511266",
+                    "name": "Shi Feng"
+                },
+                {
+                    "authorId": "2143678801",
+                    "name": "Amit Sharma"
+                },
+                {
+                    "authorId": "2111727675",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "2e2147ca34e726f568fb28089424d2d97cb8b7f5",
+            "title": "Learning to Rank Visual Stories From Human Ranking Data",
+            "abstract": "Visual storytelling (VIST) is a typical vision and language task that has seen extensive development in the natural language generation research domain. However, it remains unclear whether conventional automatic evaluation metrics for text generation are applicable on VIST. In this paper, we present the VHED (VIST Human Evaluation Data) dataset, which first re-purposes human evaluation results for automatic evaluation; hence we develop Vrank (VIST Ranker), a novel reference-free VIST metric for story evaluation. We first show that the results from commonly adopted automatic metrics for text generation have little correlation with those obtained from human evaluation, which motivates us to directly utilize human evaluation results to learn the automatic evaluation model. In the experiments, we evaluate the generated texts to predict story ranks using our model as well as other reference-based and reference-free metrics. Results show that Vrank prediction is significantly more aligned to human evaluation than other metrics with almost 30% higher accuracy when ranking story pairs. Moreover, we demonstrate that only Vrank shows human-like behavior in its strong ability to find better stories when the quality gap between two stories is high. Finally, we show the superiority of Vrank by its generalizability to pure textual stories, and conclude that this reuse of human evaluation results puts Vrank in a strong position for continued future advances.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48162772",
+                    "name": "Chi-Yang Hsu"
+                },
+                {
+                    "authorId": "9628638",
+                    "name": "Yun-Wei Chu"
+                },
+                {
+                    "authorId": "2165225005",
+                    "name": "Vincent Chen"
+                },
+                {
+                    "authorId": "2051973162",
+                    "name": "Kuan-Chieh Lo"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "144188081",
+                    "name": "Ting-Hao 'Kenneth' Huang"
+                },
+                {
+                    "authorId": "1746959",
+                    "name": "Lun-Wei Ku"
+                }
+            ]
+        },
+        {
+            "paperId": "449ff2404a7b11fa3c47cd228fa5469b00ffef20",
+            "title": "Towards a Science of Human-AI Decision Making: A Survey of Empirical Studies",
+            "abstract": "As AI systems demonstrate increasingly strong predictive performance, their adoption has grown in numerous domains. However, in high-stakes domains such as criminal justice and healthcare, full automation is often not desirable due to safety, ethical, and legal concerns, yet fully manual approaches can be inaccurate and time consuming. As a result, there is growing interest in the research community to augment human decision making with AI assistance. Besides developing AI technologies for this purpose, the emerging field of human-AI decision making must embrace empirical approaches to form a foundational understanding of how humans interact and work with AI to make decisions. To invite and help structure research efforts towards a science of understanding and improving human-AI decision making, we survey recent literature of empirical human-subject studies on this topic. We summarize the study design choices made in over 100 papers in three important aspects: (1) decision tasks, (2) AI models and AI assistance elements, and (3) evaluation metrics. For each aspect, we summarize current trends, discuss gaps in current practices of the field, and make a list of recommendations for future research. Our survey highlights the need to develop common frameworks to account for the design and research spaces of human-AI decision making, so that researchers can make rigorous choices in study design, and the research community can build on each other's work and produce generalizable scientific knowledge. We also hope this survey will serve as a bridge for HCI and AI communities to work together to mutually shape the empirical science and computational technologies for human-AI decision making.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "120801533",
+                    "name": "Vivian Lai"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "144921048",
+                    "name": "Q. Liao"
+                },
+                {
+                    "authorId": "1405364873",
+                    "name": "Alison Smith-Renner"
+                },
+                {
+                    "authorId": "2111727675",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,259 @@
+{
+    "authorId": "2265617343",
+    "papers": [
+        {
+            "paperId": "217eab77e4b8d16189fa6d8e64cea489db46b56c",
+            "title": "Answer is All You Need: Instruction-following Text Embedding via Answering the Question",
+            "abstract": "This work aims to build a text embedder that can capture characteristics of texts specified by user instructions. Despite its tremendous potential to deploy user-oriented embeddings, none of previous approaches provides a concrete solution for it. This paper offers a new viewpoint, which treats the instruction as a question about the input text and encodes the expected answers to obtain the representation accordingly. Intuitively, texts with the same (implicit) semantics would share similar answers following the instruction, thus leading to more similar embeddings. Specifically, we propose InBedder that instantiates this embed-via-answering idea by only fine-tuning language models on abstractive question answering tasks. InBedder demonstrates significantly improved instruction-following capabilities according to our proposed instruction awareness tests and instruction robustness tests, when applied to both large language models (LLMs) (e.g., llama-2-7b) and smaller encoder-based LMs (e.g., roberta-large). Additionally, our qualitative analysis of clustering outcomes, achieved by applying different instructions to the same corpus, demonstrates a high degree of interpretability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "2284259968",
+                    "name": "Yuwei Zhang"
+                },
+                {
+                    "authorId": "1762478",
+                    "name": "Zilong Wang"
+                },
+                {
+                    "authorId": "2089885442",
+                    "name": "Jayanth Srinivasa"
+                },
+                {
+                    "authorId": "2284307754",
+                    "name": "Gaowen Liu"
+                },
+                {
+                    "authorId": "2255392606",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2254284383",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "9b565bbcbfeb9ce00264c4f524b4a4f76067b852",
+            "title": "Text Grafting: Near-Distribution Weak Supervision for Minority Classes in Text Classification",
+            "abstract": "For extremely weak-supervised text classification, pioneer research generates pseudo labels by mining texts similar to the class names from the raw corpus, which may end up with very limited or even no samples for the minority classes. Recent works have started to generate the relevant texts by prompting LLMs using the class names or definitions; however, there is a high risk that LLMs cannot generate in-distribution (i.e., similar to the corpus where the text classifier will be applied) data, leading to ungeneralizable classifiers. In this paper, we combine the advantages of these two approaches and propose to bridge the gap via a novel framework, \\emph{text grafting}, which aims to obtain clean and near-distribution weak supervision for minority classes. Specifically, we first use LLM-based logits to mine masked templates from the raw corpus, which have a high potential for data synthesis into the target minority class. Then, the templates are filled by state-of-the-art LLMs to synthesize near-distribution texts falling into minority classes. Text grafting shows significant improvement over direct mining or synthesis on minority classes. We also use analysis and case studies to comprehend the property of text grafting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "2112578816",
+                    "name": "Yi Gu"
+                },
+                {
+                    "authorId": "2113540861",
+                    "name": "Chengyu Dong"
+                },
+                {
+                    "authorId": "2255392606",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2296993605",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "a0d00164fc4c2fd7db2efce29a084a0c085b68e7",
+            "title": "Quantifying and Optimizing Global Faithfulness in Persona-driven Role-playing",
+            "abstract": "Persona-driven role-playing (PRP) aims to build AI characters that can respond to user queries by faithfully sticking with all persona statements. Unfortunately, existing faithfulness criteria for PRP are limited to coarse-grained LLM-based scoring without a clear definition or formulation. This paper presents a pioneering exploration to quantify PRP faithfulness as a fine-grained and explainable criterion, which also serves as a reliable reference for optimization. Our criterion first discriminates persona statements into active and passive constraints by identifying the query-statement relevance. Then, we incorporate all constraints following the principle that the AI character's response should be (a) entailed by active (relevant) constraints and (b) not contradicted by passive (irrelevant) constraints. We translate this principle mathematically into a novel Active-Passive-Constraint (APC) score, a constraint-wise sum of natural language inference (NLI) scores weighted by relevance scores. In practice, we build the APC scoring system by symbolically distilling small discriminators from GPT-4 for efficiency. We validate the quality of the APC score against human evaluation based on example personas with tens of statements, and the results show a high correlation. We further leverage it as a reward system in direct preference optimization (DPO) for better AI characters. Our experiments offer a fine-grained and explainable comparison between existing PRP techniques, revealing their advantages and limitations. We further find APC-based DPO to be one of the most competitive techniques for sticking with all constraints and can be well incorporated with other techniques. We then extend the scale of the experiments to real persons with hundreds of statements and reach a consistent conclusion.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "2296993605",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "adfac93d6b6ccc9a83e2e37c337f1cb9c69392df",
+            "title": "Learn from Failure: Fine-Tuning LLMs with Trial-and-Error Data for Intuitionistic Propositional Logic Proving",
+            "abstract": "Recent advances in Automated Theorem Proving have shown the effectiveness of leveraging a (large) language model that generates tactics (i.e. proof steps) to search through proof states. The current model, while trained solely on successful proof paths, faces a discrepancy at the inference stage, as it must sample and try various tactics at each proof state until finding success, unlike its training which does not incorporate learning from failed attempts. Intuitively, a tactic that leads to a failed search path would indicate that similar tactics should receive less attention during the following trials. In this paper, we demonstrate the benefit of training models that additionally learn from failed search paths. Facing the lack of such trial-and-error data in existing open-source theorem-proving datasets, we curate a dataset on intuitionistic propositional logic theorems and formalize it in Lean, such that we can reliably check the correctness of proofs. We compare our model trained on relatively short trial-and-error information (TrialMaster) with models trained only on the correct paths and discover that the former solves more unseen theorems with lower trial searches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2295988926",
+                    "name": "Chenyang An"
+                },
+                {
+                    "authorId": "2296028330",
+                    "name": "Zhibo Chen"
+                },
+                {
+                    "authorId": "2295990997",
+                    "name": "Qihao Ye"
+                },
+                {
+                    "authorId": "2295988294",
+                    "name": "Emily First"
+                },
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "2266421485",
+                    "name": "Jiayun Zhang"
+                },
+                {
+                    "authorId": "2255392606",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2295988080",
+                    "name": "Sorin Lerner"
+                },
+                {
+                    "authorId": "2254284383",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "b35493008484f8a558fb5b86bf9874f38b2da1f3",
+            "title": "Incubating Text Classifiers Following User Instruction with Nothing but LLM",
+            "abstract": "In this paper, we aim to generate text classification data given arbitrary class definitions (i.e., user instruction), so one can train a small text classifier without any human annotation or raw corpus. Compared with pioneer attempts, our proposed Incubator is the first framework that can handle complicated and even mutually dependent classes (e.g.,\"TED Talk given by Educator\"and\"Other\"). Specifically, Incubator is an LLM firstly tuned on the instruction-to-data mappings that we obtained from classification datasets and descriptions on HuggingFace together with in-context augmentation by GPT-4. We then refine Incubator by learning on the cluster centers of semantic textual embeddings to emphasize the uniformity and semantic diversity in generations. We compare Incubator on various classification tasks with strong baselines such as direct LLM-based inference and training data generation by prompt engineering. Experiments show Incubator is able to (1) perform well on traditional benchmarks, (2) take label dependency and user preference into consideration, and (3) enable logical text mining by incubating multiple classifiers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "2296993605",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "c958f9d87898e39a5ca416a43db1bcfd5c7898ce",
+            "title": "MetaIE: Distilling a Meta Model from LLM for All Kinds of Information Extraction Tasks",
+            "abstract": "Information extraction (IE) is a fundamental area in natural language processing where prompting large language models (LLMs), even with in-context examples, cannot defeat small LMs tuned on very small IE datasets. We observe that IE tasks, such as named entity recognition and relation extraction, all focus on extracting important information, which can be formalized as a label-to-span matching. In this paper, we propose a novel framework MetaIE to build a small LM as meta-model by learning to extract\"important information\", i.e., the meta-understanding of IE, so that this meta-model can be adapted to all kind of IE tasks effectively and efficiently. Specifically, MetaIE obtains the small LM via a symbolic distillation from an LLM following the label-to-span scheme. We construct the distillation dataset via sampling sentences from language model pre-training datasets (e.g., OpenWebText in our implementation) and prompting an LLM to identify the typed spans of\"important information\". We evaluate the meta-model under the few-shot adaptation setting. Extensive results on 13 datasets from 6 IE tasks confirm that MetaIE can offer a better starting point for few-shot tuning on IE datasets and outperform other meta-models from (1) vanilla language model pre-training, (2) multi-IE-task pre-training with human annotations, and (3) single-IE-task symbolic distillation from LLM. Moreover, we provide comprehensive analyses of MetaIE, such as the size of the distillation dataset, the meta-model architecture, and the size of the meta-model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "1762478",
+                    "name": "Zilong Wang"
+                },
+                {
+                    "authorId": "2297810571",
+                    "name": "Feng Yao"
+                },
+                {
+                    "authorId": "2255392606",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2254284383",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "5f08a63a0bb6eb1e0f5f8c9489c33cd63702796a",
+            "title": "Controllable Data Augmentation for Few-Shot Text Mining with Chain-of-Thought Attribute Manipulation",
+            "abstract": "Prompting large language models (LLMs) for data augmentation has recently become a common practice in few-shot NLP tasks. In this paper, we propose Chain-of-Thought Attribute Manipulation (CoTAM), a novel approach that generates new data from existing examples by only tweaking in the user-provided, task-specific attribute, e.g., sentiment polarity or topic in movie reviews. Instead of conventional latent representation controlling, we leverage the chain-of-thought prompting to directly edit the text in three steps, (1) attribute decomposition, (2) manipulation proposal, and (3) sentence reconstruction. Extensive results on various tasks, such as text (pair) classification, aspect-based sentiment analysis, and conditional text generation, verify the superiority of CoTAM over other LLM-based augmentation methods with the same number of training examples for both fine-tuning and in-context learning. Remarkably, the 2D visualization of the augmented dataset using principal component analysis revealed a human-recognizable decision boundary that is likely hinted by the attribute manipulation, demonstrating the potential of our proposed approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "2108424077",
+                    "name": "Yuwei Zhang"
+                },
+                {
+                    "authorId": "2884976",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "d77942dde428c5a7dfe0b7991f4cbdc5d1f1f42d",
+            "title": "Less than One-shot: Named Entity Recognition via Extremely Weak Supervision",
+            "abstract": "We study the named entity recognition (NER) problem under the extremely weak supervision (XWS) setting, where only one example entity per type is given in a context-free way. While one can see that XWS is lighter than one-shot in terms of the amount of supervision, we propose a novel method X-NER that can outperform the state-of-the-art one-shot NER methods. We first mine entity spans that are similar to the example entities from an unlabelled training corpus. Instead of utilizing entity span representations from language models, we find it more effective to compare the context distributions before and after the span is replaced by the entity example. We then leverage the top-ranked spans as pseudo-labels to train an NER tagger. Extensive experiments and analyses on 4 NER datasets show the superior end-to-end NER performance of X-NER, outperforming the state-of-the-art few-shot methods with 1-shot supervision and ChatGPT annotations significantly. Finally, our X-NER possesses several notable properties, such as inheriting the cross-lingual abilities of the underlying language models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "2259065706",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2254284383",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "eb1d2c0fee61eca106cc5a14b718f34fdc0d9e03",
+            "title": "EmojiLM: Modeling the New Emoji Language",
+            "abstract": "With the rapid development of the internet, online social media welcomes people with different backgrounds through its diverse content. The increasing usage of emoji becomes a noticeable trend thanks to emoji's rich information beyond cultural or linguistic borders. However, the current study on emojis is limited to single emoji prediction and there are limited data resources available for further study of the interesting linguistic phenomenon. To this end, we synthesize a large text-emoji parallel corpus, Text2Emoji, from a large language model. Based on the parallel corpus, we distill a sequence-to-sequence model, EmojiLM, which is specialized in the text-emoji bidirectional translation. Extensive experiments on public benchmarks and human evaluation demonstrate that our proposed model outperforms strong baselines and the parallel corpus benefits emoji-related downstream tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265617343",
+                    "name": "Letian Peng"
+                },
+                {
+                    "authorId": "1762478",
+                    "name": "Zilong Wang"
+                },
+                {
+                    "authorId": "2265444612",
+                    "name": "Hang Liu"
+                },
+                {
+                    "authorId": "2255392606",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2254284383",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        }
+    ]
+}

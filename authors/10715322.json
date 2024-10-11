@@ -1,0 +1,247 @@
+{
+    "authorId": "10715322",
+    "papers": [
+        {
+            "paperId": "52251970e022c47f3cdea57d5a1d1aef4bce4366",
+            "title": "FEDORA: Flying Event Dataset fOr Reactive behAvior",
+            "abstract": "The ability of resource-constrained biological systems such as fruitflies to perform complex and high-speed maneuvers in cluttered environments has been one of the prime sources of inspiration for developing vision-based autonomous systems. To emulate this capability, the perception pipeline of such systems must integrate information cues from tasks including optical flow and depth estimation, object detection and tracking, and segmentation, among others. However, the conventional approach of employing slow, synchronous inputs from standard frame-based cameras constrains these perception capabilities, particularly during high-speed maneuvers. Recently, event-based sensors have emerged as low latency and low energy alternatives to standard frame-based cameras for capturing high-speed motion, effectively speeding up perception and hence navigation. For coherence, all the perception tasks must be trained on the same input data. However, present-day datasets are curated mainly for a single or a handful of tasks and are limited in the rate of the provided ground truths. To address these limitations, we present Flying Event Dataset fOr Reactive behAviour (FEDORA) - a fully synthetic dataset for perception tasks, with raw data from frame-based cameras, event-based cameras, and Inertial Measurement Units (IMU), along with ground truths for depth, pose, and optical flow at a rate much higher than existing datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Amogh Joshi"
+                },
+                {
+                    "authorId": "34892704",
+                    "name": "A. Kosta"
+                },
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "153839324",
+                    "name": "M. Nagaraj"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "d6eeb507255b050979c644f79706d27ff1428ee0",
+            "title": "Low-Power Real-Time Sequential Processing with Spiking Neural Networks",
+            "abstract": "The biological brain is capable of processing temporal information at an incredible efficiency. Even with modern computing resources, traditional learning-based approaches are struggling to match its performance. Spiking neural networks that \u201cmimic\u201d certain functionalities of the biological neural networks in the brain is a promising avenue for solving sequential learning problems with high computational efficiency. Nonetheless, training such networks still remains a challenging task as conventional learning rules are not directly applicable to these bio-inspired neural networks. Recent efforts have focused on novel training paradigms that allow spiking neural networks to learn temporal correlations between inputs and solve sequential tasks such as audio or video processing. Such success has fueled the development of event-driven neuromorphic hardware that is specifically optimized for energy-efficient implementation of spiking neural networks. This paper highlights the ongoing development of spiking neural networks for low-power real-time sequential processing and the potential to improve their training through an understanding of the information flow.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7992565",
+                    "name": "C. Liyanagedera"
+                },
+                {
+                    "authorId": "153839324",
+                    "name": "M. Nagaraj"
+                },
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "2061563319",
+                    "name": "K. Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "727b9f0046c2aa25a175cfa429e77d145157ab4c",
+            "title": "Event-based Temporally Dense Optical Flow Estimation with Sequential Learning",
+            "abstract": "Event cameras provide an advantage over traditional frame-based cameras when capturing fast-moving objects without a motion blur. They achieve this by recording changes in light intensity (known as events), thus allowing them to operate at a much higher frequency and making them suitable for capturing motions in a highly dynamic scene. Many recent studies have proposed methods to train neural networks (NNs) for predicting optical flow from events. However, they often rely on a spatio-temporal representation constructed from events over a fixed interval, such as 10 Hz used in training on the DSEC dataset. This limitation restricts the flow prediction to the same interval (10 Hz) whereas the fast speed of event cameras, which can operate up to 3 kHz, has not been effectively utilized. In this work, we show that a temporally dense flow estimation at 100 Hz can be achieved by treating the flow estimation as a sequential problem using two different variants of recurrent networks \u2013 Long-short term memory (LSTM) and spiking neural network (SNN). First, We utilize the NN model constructed similar to the popular EV-FlowNet but with LSTM layers to demonstrate the efficiency of our training method. The model not only produces 10\u00d7 more frequent optical flow than the existing ones, but the estimated flows also have 13% lower errors than predictions from the baseline EV-FlowNet. Second, we construct an EV-FlowNet SNN but with leaky integrate and fire neurons to efficiently capture the temporal dynamics. We found that simple inherent recurrent dynamics of SNN lead to significant parameter reduction compared to the LSTM model. In addition, because of its event-driven computation, the spiking model is estimated to consume only 1.5% energy of the LSTM model, highlighting the efficiency of SNN in processing events and the potential for achieving temporally dense flow.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "7992565",
+                    "name": "C. Liyanagedera"
+                },
+                {
+                    "authorId": "2257216842",
+                    "name": "Kaushik Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "adce34e9d05ccfd89c50a5afd67c838053298643",
+            "title": "Event-based Temporally Dense Optical Flow Estimation with Sequential Neural Networks",
+            "abstract": "Event-based optical \ufb02ow estimation techniques have been recently receiving much attention as they process temporally rich inputs generated by event cameras. Unlike traditional frame-based cameras that sample light intensity at a \ufb01xed interval, event-based cameras record the changes in intensity (or events) allowing them to operate at a much higher temporal resolution and without motion blur. Past studies have investigated several gradient-based learning methods to train neural networks for predicting optical \ufb02ow from an event stream. However, they do not utilize the fast data rate of event data streams and rely on a spatio-temporal representation constructed from a collection of events over a \ufb01xed period of time (often between two grayscale frames). As a result, optical \ufb02ow is only evaluated at a frequency much lower than the rate data is produced by an event-based camera, leading to a temporally sparse optical \ufb02ow estimation. To predict temporally dense optical \ufb02ow, we cast the problem as a sequential learning task and propose a training methodology to train sequential networks for continuous prediction on an event stream. We propose two types of networks: one focused on performance and another focused on compute e\ufb03ciency. We \ufb01rst train long-short term memory networks (LSTMs) on the DSEC dataset and demonstrated 10 \u00d7 temporally dense optical \ufb02ow estimation over existing \ufb02ow estimation approaches. The additional bene\ufb01t of having a memory to draw long temporal correlations back in time results in a 19.7% improvement in \ufb02ow prediction accuracy of LSTMs over similar networks with no memory elements. We subsequently show that the inherent recurrence of spiking neural networks (SNNs) enables them to learn and estimate temporally dense optical \ufb02ow with 31.8% lesser parameters than LSTM, but with a slightly increased error. This demonstrates potential for energy-e\ufb03cient implementation of fast optical \ufb02ow prediction using SNNs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "7992565",
+                    "name": "C. Liyanagedera"
+                },
+                {
+                    "authorId": "2061563296",
+                    "name": "Kaushik Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "1792a72ac943668c192b94a1933ee7fbc475166d",
+            "title": "Hybrid Analog-Spiking Long Short-Term Memory for Energy Efficient Computing on Edge Devices",
+            "abstract": "Recurrent neural networks such as Long Short-Term Memory (LSTM) have been used in many sequential learning tasks such as speech recognition and language translation. Running large-scale LSTMs for real-world applications is known to be compute-intensive and often relies on cloud execution. To enable LSTM operations on edge devices that receive inputs in realtime, there is a need to improve LSTM execution efficiency following the limited energy constraint of the mobile platforms. We propose a hybrid analog-spiking LSTM that combines the energy efficiency of spiking neural network (SNN) with the performance efficiency of analog (non-spiking) neural network (ANN). SNN, which processes and represents information as a sequence of sparse binary spikes or events, uses integrate and fire activation, hence consuming low power and energy for realtime inference (batch size of 1). The proposed Analog-Spiking LSTM is derived from a trained LSTM using a novel conversion method that transforms the fully-connected layers and the nonlinearity function compatible for SNNs. We show that the default LSTM non-linearities are sources of output mismatch between the ANN and the SNN. We propose a set of replacement functions that lead to a minimal impact on the output quality of sequential learning problems. Our analyses on sequential image classification on MNIST dataset and sequence-to-sequence translation on the IWSLT14 dataset indicate <1% drop in average accuracy for rowwise and pixel-wise sequential image recognition and <1.5 drop in average BLEU score for the translation task. Implementation of the recognition system with the hybrid analog-spiking LSTM on Intel's spiking processor, Loihi, shows 55.9\u00d7 improvement in active energy per inference over the baseline system on Intel i7-6700. Based on our analysis, we estimate this benefit to be 3.38\u00d7 reduction in active energy per inference for the translation task.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "2061563319",
+                    "name": "K. Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "7793027bc575f7ca34643b362e8f64f84e7edfad",
+            "title": "Spiking Neural Networks with Improved Inherent Recurrence Dynamics for Sequential Learning",
+            "abstract": "Spiking neural networks (SNNs) with leaky integrate and fire (LIF) neurons, can be operated in an event-driven manner and have internal states to retain information over time, providing opportunities for energy-efficient neuromorphic computing, especially on edge devices. Note, however, many representative works on SNNs do not fully demonstrate the usefulness of their inherent recurrence (membrane potential retaining information about the past) for sequential learning. Most of the works train SNNs to recognize static images by artificially expanded input representation in time through rate coding. We show that SNNs can be trained for practical sequential tasks by proposing modifications to a network of LIF neurons that enable internal states to learn long sequences and make their inherent recurrence resilient to the vanishing gradient problem. We then develop a training scheme to train the proposed SNNs with improved inherent recurrence dynamics. Our training scheme allows spiking neurons to produce multi-bit outputs (as opposed to binary spikes) which help mitigate the mismatch between a derivative of spiking neurons' activation function and a surrogate derivative used to overcome spiking neurons' non-differentiability. Our experimental results indicate that the proposed SNN architecture on TIMIT and LibriSpeech 100h speech recognition dataset yields accuracy comparable to that of LSTMs (within 1.10% and 0.36%, respectively), but with 2x fewer parameters than LSTMs. The sparse SNN outputs also lead to 10.13x and 11.14x savings in multiplication operations compared to GRUs, which are generally considered as a lightweight alternative to LSTMs, on TIMIT and LibriSpeech 100h datasets, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "2257216834",
+                    "name": "K. Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "30be1b82378c0a6c224b03c8c7db1647085decda",
+            "title": "Reinforcement Learning With Low-Complexity Liquid State Machines",
+            "abstract": "We propose reinforcement learning on simple networks consisting of random connections of spiking neurons (both recurrent and feed-forward) that can learn complex tasks with very little trainable parameters. Such sparse and randomly interconnected recurrent spiking networks exhibit highly non-linear dynamics that transform the inputs into rich high-dimensional representations based on the current and past context. The random input representations can be efficiently interpreted by an output (or readout) layer with trainable parameters. Systematic initialization of the random connections and training of the readout layer using Q-learning algorithm enable such small random spiking networks to learn optimally and achieve the same learning efficiency as humans on complex reinforcement learning (RL) tasks like Atari games. In fact, the sparse recurrent connections cause these networks to retain fading memory of past inputs, thereby enabling them to perform temporal integration across successive RL time-steps and learn with partial state inputs. The spike-based approach using small random recurrent networks provides a computationally efficient alternative to state-of-the-art deep reinforcement learning networks with several layers of trainable parameters.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "153181248",
+                    "name": "G. Srinivasan"
+                },
+                {
+                    "authorId": "2257216834",
+                    "name": "K. Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "3702d633e8ae1fbb5a3d670a0a0a78bdee95cbe1",
+            "title": "A Comprehensive Analysis on Adversarial Robustness of Spiking Neural Networks",
+            "abstract": "In this era of machine learning models, their functionality is being threatened by adversarial attacks. In the face of this struggle for making artificial neural networks robust, finding a model, resilient to these attacks, is very important. In this work, we present, for the first time, a comprehensive analysis of the behavior of more bio-plausible networks, namely Spiking Neural Network (SNN) under state-of-the-art adversarial tests. We perform a comparative study of the accuracy degradation between conventional VGG-9 Artificial Neural Network (ANN) and equivalent spiking network with CIFAR-10 dataset in both whitebox and blackbox setting for different types of single-step and multi-step FGSM (Fast Gradient Sign Method) attacks. We demonstrate that SNNs tend to show more resiliency compared to ANN under blackbox attack scenario. Additionally, we find that SNN robustness is largely dependent on the corresponding training mechanism. We observe that SNNs trained by spike-based backpropagation are more adversarially robust than the ones obtained by ANN-to-SNN conversion rules in several whitebox and blackbox scenarios. Finally, we also propose a simple, yet, effective framework for crafting adversarial attacks from SNNs. Our results suggest that attacks crafted from SNNs following our proposed method are much stronger than those crafted from ANNs.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "35590148",
+                    "name": "Saima Sharmin"
+                },
+                {
+                    "authorId": "9352814",
+                    "name": "P. Panda"
+                },
+                {
+                    "authorId": "32830876",
+                    "name": "Syed Shakib Sarwar"
+                },
+                {
+                    "authorId": "2109435520",
+                    "name": "Chankyu Lee"
+                },
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "2257216834",
+                    "name": "K. Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "62addf5c8ca71e8e823740396871fd1c06d4e2be",
+            "title": "Clock tree optimization through selective airgap insertion",
+            "abstract": "Airgap refers to a void inserted in some inter metal dielectric (IMD). It brings about reduced permittivity and corresponding reduction in coupling capacitance. We address a problem of selective airgap insertion in clock wires to reduce clock skew as well as power consumption. This is performed after conventional clock tree construction and optimization, so the reduction in clock skew due to inserted airgap is additional benefit. The problem is formulated as linear programming (LP); more practical heuristic algorithm is also proposed, whose performance is comparable to LP. Experiments demonstrate 17.0% reduction in clock skew and 11.1% reduction in clock power, on average of a few test circuits in 28-nm technology.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2234902",
+                    "name": "Daijoon Hyun"
+                },
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "143869968",
+                    "name": "Youngsoo Shin"
+                }
+            ]
+        },
+        {
+            "paperId": "ceda277c714b59a4a111a6a7ef5b91c6f215a84d",
+            "title": "Cut mask optimization for multi-patterning directed self-assembly lithography",
+            "abstract": "Line-end cut process has been used to create very fine metal wires in sub-14nm technology. Cut patterns split regular line patterns into a number of wire segments with some segments being used as actual routing wires. In sub-7nm technology, cuts are smaller than optical resolution limit, and a directed self-assembly lithography with multiple patterning (MP-DSAL) is considered as a patterning solution. We address cut mask optimization problem for MP-DSAL, in which cut locations are determined in such a way that cuts are grouped into manufacturable clusters and assigned to one of masks without MP coloring conflicts; minimizing wire extensions is also pursued in the process. Only a restricted version of this problem has been addressed before while we do not assume any such restrictions. The problem is formulated as ILP first, and a fast heuristic algorithm is also proposed for application to larger circuits. Experimental results indicate that the ILP can remove all coloring conflicts, and reduce total wire extensions by 93% on average compared to those obtained by the restricted approach. Heuristic achieves a similar result with less than 1% of coloring conflicts and 91% reduction in total wire extensions.",
+            "fieldsOfStudy": [
+                "Engineering",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "144224500",
+                    "name": "Seongbo Shim"
+                },
+                {
+                    "authorId": "143869968",
+                    "name": "Youngsoo Shin"
+                }
+            ]
+        }
+    ]
+}

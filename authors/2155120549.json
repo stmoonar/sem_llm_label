@@ -1,0 +1,128 @@
+{
+    "authorId": "2155120549",
+    "papers": [
+        {
+            "paperId": "101d7d2fb721071e12e379b4ff822de61ef8a2f5",
+            "title": "On the Impact of Feature Heterophily on Link Prediction with Graph Neural Networks",
+            "abstract": "Heterophily, or the tendency of connected nodes in networks to have different class labels or dissimilar features, has been identified as challenging for many Graph Neural Network (GNN) models. While the challenges of applying GNNs for node classification when class labels display strong heterophily are well understood, it is unclear how heterophily affects GNN performance in other important graph learning tasks where class labels are not available. In this work, we focus on the link prediction task and systematically analyze the impact of heterophily in node features on GNN performance. Theoretically, we first introduce formal definitions of homophilic and heterophilic link prediction tasks, and present a theoretical framework that highlights the different optimizations needed for the respective tasks. We then analyze how different link prediction encoders and decoders adapt to varying levels of feature homophily and introduce designs for improved performance. Our empirical analysis on a variety of synthetic and real-world datasets confirms our theoretical insights and highlights the importance of adopting learnable decoders and GNN encoders with ego- and neighbor-embedding separation in message passing for link prediction tasks beyond homophily.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "2155120549",
+                    "name": "Gao Li"
+                },
+                {
+                    "authorId": "2322990558",
+                    "name": "Yao-An Yang"
+                },
+                {
+                    "authorId": "2314486522",
+                    "name": "Jinghua Zhu"
+                },
+                {
+                    "authorId": "2323314084",
+                    "name": "Xuehao Cui"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "2ecf83bfda9de04821036651d989c96ac0bca780",
+            "title": "Interpretable Sparsification of Brain Graphs: Better Practices and Effective Designs for Graph Neural Networks",
+            "abstract": "Brain graphs, which model the structural and functional relationships between brain regions, are crucial in neuroscientific and clinical applications that can be formulated as graph classification tasks. However, dense brain graphs pose computational challenges such as large time and memory consumption and poor model interpretability. In this paper, we investigate effective designs in Graph Neural Networks (GNNs) to sparsify brain graphs by eliminating noisy edges. Many prior works select noisy edges based on explainability or task-irrelevant properties, but this does not guarantee performance improvement when using the sparsified graphs. Additionally, the selection of noisy edges is often tailored to each individual graph, making it challenging to sparsify multiple graphs collectively using the same approach. To address the issues above, we first introduce an iterative framework to analyze the effectiveness of different sparsification models. By utilizing this framework, we find that (i) methods that prioritize interpretability may not be suitable for graph sparsification, as the sparsified graphs may degenerate the performance of GNN models; (ii) it is beneficial to learn the edge selection during the training of the GNN, rather than after the GNN has converged; (iii) learning a joint edge selection shared across all graphs achieves higher performance than generating separate edge selection for each graph; and (iv) gradient information, which is task-relevant, helps with edge selection. Based on these insights, we propose a new model, Interpretable Graph Sparsification (IGS), which improves the graph classification performance by up to 5.1% with 55.0% fewer edges than the original graphs. The retained edges identified by IGS provide neuroscientific interpretations and are supported by well-established literature.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155120549",
+                    "name": "Gao Li"
+                },
+                {
+                    "authorId": "2184493570",
+                    "name": "M. Duda"
+                },
+                {
+                    "authorId": "1771551",
+                    "name": "X. Zhang"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                },
+                {
+                    "authorId": "7957569",
+                    "name": "Yujun Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "c9bdc03e343d939d4b64357178e1c7d0bbdfafd4",
+            "title": "Size Generalization of Graph Neural Networks on Biological Data: Insights and Practices from the Spectral Perspective",
+            "abstract": "We investigate size-induced distribution shifts in graphs and assess their impact on the ability of graph neural networks (GNNs) to generalize to larger graphs relative to the training data. Existing literature presents conflicting conclusions on GNNs' size generalizability, primarily due to disparities in application domains and underlying assumptions concerning size-induced distribution shifts. Motivated by this, we take a data-driven approach: we focus on real biological datasets and seek to characterize the types of size-induced distribution shifts. Diverging from prior approaches, we adopt a spectral perspective and identify that spectrum differences induced by size are related to differences in subgraph patterns (e.g., average cycle lengths). While previous studies have identified that the inability of GNNs in capturing subgraph information negatively impacts their in-distribution generalization, our findings further show that this decline is more pronounced when evaluating on larger test graphs not encountered during training. Based on these spectral insights, we introduce a simple yet effective model-agnostic strategy, which makes GNNs aware of these important subgraph patterns to enhance their size generalizability. Our empirical results reveal that our proposed size-insensitive attention strategy substantially enhances graph classification performance on large test graphs, which are 2-10 times larger than the training graphs, resulting in an improvement in F1 scores by up to 8%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7957569",
+                    "name": "Yujun Yan"
+                },
+                {
+                    "authorId": "2155120549",
+                    "name": "Gao Li"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "dfc154625ca37193b51cdd2b29f6ba52c191295b",
+            "title": "Size Generalizability of Graph Neural Networks on Biological Data: Insights and Practices from the Spectral Perspective",
+            "abstract": "We investigate the question of whether the knowledge learned by graph neural networks (GNNs) from small graphs is generalizable to large graphs in the same domain. Prior works suggest that the distribution shift, particularly in the degree distribution, between graphs of different sizes can lead to performance degradation in the graph classification task. However, this may not be the case for biological datasets where the degrees are bounded and the distribution shift of degrees is small. Even with little degree distribution shift, our observations show that GNNs\u2019 performance on larger graphs from the same datasets still degrades, suggesting other causes. In fact, there has been a lack of exploration in real datasets to understand the types and properties of distribution shifts caused by various graph sizes. Furthermore, previous analyses of size generalizability mostly focus on the spatial domain. To fill these gaps, we take the spectral perspective and study the size generalizability of GNNs on biological data. We identify a distribution shift between small and large graphs in the eigenvalues of the normalized Laplacian/adjacency matrix, indicating a difference in the global node connectivity, which is found to be correlated with the node closeness centrality. We further find that despite of the variations in global connectivity, graphs of different sizes share similar local connectivity, which can be utilized to improve the size generalizability of GNNs. Based on our spectral insights and empirical observations, we propose a model-agnostic strategy, SIA, which uses size-irrelevant local structural features, i.e., the local closeness centrality of a node, to guide the learning process. Our empirical results demonstrate that our strategy improves the graph classification performance of various GNNs on small and large graphs when training with only small graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7957569",
+                    "name": "Yujun Yan"
+                },
+                {
+                    "authorId": "2155120549",
+                    "name": "Gao Li"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "45d1f2f03ae2a4362964f04487e0c924f058be52",
+            "title": "Methods for Pattern Mining in Dynamic Networks and Applications",
+            "abstract": "Studies of static complex networks have brought significant progress in revealing the mechanism for forming and evolving of social networks,information networks,and biological networks.However,many real word networks change with time and this type of networks is the so called dynamic networks.This paper focuses on dynamic networks to study the related pattern mining method and its applications in biological and social networks.First,the study analyzes the topological properties of the dynamic networks.Then we make a comparison and analysis to the algorithms and models for variety of pattern mining in dynamic networks.Specifically,we analyze the dynamics properties of biological and social networks.Based on this property,we study the biological networks related pattern mining problems,such as dynamic function module,pattern evolution and complex diseases associated pattern,the dynamic pattern in social network.Finally,some key problems and challenges in biological and social network are highlighted,as well as the future research directions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155120549",
+                    "name": "Gao Li"
+                }
+            ]
+        }
+    ]
+}

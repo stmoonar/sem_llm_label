@@ -1,0 +1,341 @@
+{
+    "authorId": "2223152252",
+    "papers": [
+        {
+            "paperId": "45dfa18409290d3cbed71d97b9dd435783cc7384",
+            "title": "Topology-aware Embedding Memory for Continual Learning on Expanding Networks",
+            "abstract": "Memory replay based techniques have shown great success for continual learning with incrementally accumulated Euclidean data. Directly applying them to continually expanding networks, however, leads to the potential memory explosion problem due to the need to buffer representative nodes and their associated topological neighborhood structures. To this end, we systematically analyze the key challenges in the memory explosion problem, and present a general framework, \\textit{i.e.}, Parameter Decoupled Graph Neural Networks (PDGNNs) with Topology-aware Embedding Memory (TEM), to tackle this issue. The proposed framework not only reduces the memory space complexity from $\\mathcal{O}(nd^L)$ to $\\mathcal{O}(n)$~\\footnote{$n$: memory budget, $d$: average node degree, $L$: the radius of the GNN receptive field}, but also fully utilizes the topological information for memory replay. Specifically, PDGNNs decouple trainable parameters from the computation ego-subnetwork via \\textit{Topology-aware Embeddings} (TEs), which compress ego-subnetworks into compact vectors (\\textit{i.e.}, TEs) to reduce the memory consumption. Based on this framework, we discover a unique \\textit{pseudo-training effect} in continual learning on expanding networks and this effect motivates us to develop a novel \\textit{coverage maximization sampling} strategy that can enhance the performance with a tight memory budget. Thorough empirical studies demonstrate that, by tackling the memory explosion problem and incorporating topological information into memory replay, PDGNNs with TEM significantly outperform state-of-the-art techniques, especially in the challenging class-incremental setting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2276069056",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "4f495e3cc4e2126c3ab74b98b6a06ddd012de29a",
+            "title": "Sheared Backpropagation for Fine-Tuning Foundation Models",
+            "abstract": "Fine-tuning is the process of extending the training of pre-trained models on specific target tasks, thereby significantly enhancing their performance across various applications. However, fine-tuning often demands large memory consumption, posing a challenge for low-memory devices that some previous memory-efficient fine-tuning methods attempted to mitigate by pruning activations for gradient computation, albeit at the cost of significant computational overhead from the pruning processes during training. To address these challenges, we introduce PreBackRazor; a novel activation pruning scheme offering both computational and memory efficiency through a sparsified back-propagation strategy, which judiciously avoids unnecessary activation pruning and storage and gradient computation. Before activation pruning, our approach samples a probability of selecting a portion of parameters to freeze, utilizing a bandit method for updates to prioritize impactful gradients on convergence. During the feed-forward pass, each model layer adjusts adaptively based on parameter activation status, obviating the need for sparsification and storage of redundant activations for subsequent backpropagation. Benchmarking on fine-tuning foundation models, our approach maintains baseline accuracy across diverse tasks, yielding over 20% speedup and around 10% memory reduction. Moreover, integrating with an advanced CUDA kernel achieves up to 60% speedup without extra memory costs or accuracy loss, significantly enhancing the efficiency of fine-tuning foundation models on memory-constrained devices.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2321936641",
+                    "name": "Zhiyuan Yu"
+                },
+                {
+                    "authorId": "2144035454",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2322361429",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "2266267649",
+                    "name": "Xinmei Tian"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2315507161",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "c4d4149a0d0bf727b22d3e3c297ddd7760cd69c0",
+            "title": "Topology-aware Embedding Memory for Learning on Expanding Graphs",
+            "abstract": "Memory replay based techniques have shown great success for continual learning with incrementally accumulated Euclidean data. Directly applying them to continually expanding graphs, however, leads to the potential memory explosion problem due to the need to buffer representative nodes and their associated topological neighborhood structures. To this end, we systematically analyze the key challenges in the memory explosion problem, and present a general framework, i.e. , Parameter Decoupled Graph Neural Networks (PDGNNs) with Topology-aware Embedding Memory (TEM), to tackle this issue. The proposed framework not only reduces the memory space complexity from O( \ud835\udc5b\ud835\udc51 \ud835\udc3f ) to O( \ud835\udc5b ) 1 , but also fully utilizes the topological information for memory replay. Specifically, PDGNNs decouple trainable parameters from the computation ego-subgraph via Topology-aware Embeddings (TEs), which compress ego-subgraphs into compact vectors ( i.e. , TEs) to reduce the memory consumption. Based on this framework, we discover a unique pseudo-training effect in continual learning on expanding graphs and this effect motivates us to develop a novel coverage maximization sampling strategy that can enhance the performance with a tight memory budget. Thorough empirical studies demonstrate that, by tackling the memory explosion problem and incorporating topological information into memory replay, PDGNNs with TEM significantly outperform state-of-the-art techniques, especially in the challenging class-incremental setting. All code will be publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2276069056",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "cb4045f3e6f4dfdaceedc6d8a70fc7a232722b3e",
+            "title": "Learning System Dynamics without Forgetting",
+            "abstract": "Predicting the trajectories of systems with unknown dynamics (\\textit{i.e.} the governing rules) is crucial in various research fields, including physics and biology. This challenge has gathered significant attention from diverse communities. Most existing works focus on learning fixed system dynamics within one single system. However, real-world applications often involve multiple systems with different types of dynamics or evolving systems with non-stationary dynamics (dynamics shifts). When data from those systems are continuously collected and sequentially fed to machine learning models for training, these models tend to be biased toward the most recently learned dynamics, leading to catastrophic forgetting of previously observed/learned system dynamics. To this end, we aim to learn system dynamics via continual learning. Specifically, we present a novel framework of Mode-switching Graph ODE (MS-GODE), which can continually learn varying dynamics and encode the system-specific dynamics into binary masks over the model parameters. During the inference stage, the model can select the most confident mask based on the observational data to identify the system and predict future trajectories accordingly. Empirically, we systematically investigate the task configurations and compare the proposed MS-GODE with state-of-the-art techniques. More importantly, we construct a novel benchmark of biological dynamic systems, featuring diverse systems with disparate dynamics and significantly enriching the research field of machine learning for dynamic systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2276069056",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "41139f0f51320c8efcb13d7caf33d3fb172bf419",
+            "title": "PNT-Edge: Towards Robust Edge Detection with Noisy Labels by Learning Pixel-level Noise Transitions",
+            "abstract": "Relying on large-scale training data with pixel-level labels, previous edge detection methods have achieved high performance. However, it is hard to manually label edges accurately, especially for large datasets, and thus the datasets inevitably contain noisy labels. This label-noise issue has been studied extensively for classification, while still remaining under-explored for edge detection. To address the label-noise issue for edge detection, this paper proposes to learn Pixel-level Noise Transitions to model the label-corruption process. To achieve it, we develop a novel Pixel-wise Shift Learning (PSL) module to estimate the transition from clean to noisy labels as a displacement field. Exploiting the estimated noise transitions, our model, named PNT-Edge, is able to fit the prediction to clean labels. In addition, a local edge density regularization term is devised to exploit local structure information for better transition learning. This term encourages learning large shifts for the edges with complex local structures. Experiments on SBD and Cityscapes demonstrate the effectiveness of our method in relieving the impact of label noise. Codes will be available at github.com/DREAMXFAR/PNT-Edge.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1658970090",
+                    "name": "Wenjie Xuan"
+                },
+                {
+                    "authorId": "1965885413",
+                    "name": "Shanshan Zhao"
+                },
+                {
+                    "authorId": "2116473112",
+                    "name": "Yu Yao"
+                },
+                {
+                    "authorId": "46701032",
+                    "name": "Juhua Liu"
+                },
+                {
+                    "authorId": "121698214",
+                    "name": "Tongliang Liu"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2064619959",
+                    "name": "Bo Du"
+                },
+                {
+                    "authorId": "2140448089",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "60953d9393a42fd6f84de80ffe8527dc10a7c857",
+            "title": "MAG-GNN: Reinforcement Learning Boosted Graph Neural Network",
+            "abstract": "While Graph Neural Networks (GNNs) recently became powerful tools in graph learning tasks, considerable efforts have been spent on improving GNNs' structural encoding ability. A particular line of work proposed subgraph GNNs that use subgraph information to improve GNNs' expressivity and achieved great success. However, such effectivity sacrifices the efficiency of GNNs by enumerating all possible subgraphs. In this paper, we analyze the necessity of complete subgraph enumeration and show that a model can achieve a comparable level of expressivity by considering a small subset of the subgraphs. We then formulate the identification of the optimal subset as a combinatorial optimization problem and propose Magnetic Graph Neural Network (MAG-GNN), a reinforcement learning (RL) boosted GNN, to solve the problem. Starting with a candidate subgraph set, MAG-GNN employs an RL agent to iteratively update the subgraphs to locate the most expressive set for prediction. This reduces the exponential complexity of subgraph enumeration to the constant complexity of a subgraph search algorithm while keeping good expressivity. We conduct extensive experiments on many datasets, showing that MAG-GNN achieves competitive performance to state-of-the-art methods and even outperforms many subgraph GNNs. We also demonstrate that MAG-GNN effectively reduces the running time of subgraph GNNs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2164063663",
+                    "name": "Lecheng Kong"
+                },
+                {
+                    "authorId": "48441034",
+                    "name": "Jiarui Feng"
+                },
+                {
+                    "authorId": "2264134998",
+                    "name": "Hao Liu"
+                },
+                {
+                    "authorId": "2244621611",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2239188141",
+                    "name": "Muhan Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "9587f39c5a3aac49908fe94664661c7458798242",
+            "title": "Towards Arbitrarily Expressive GNNs in O(n2) Space by Rethinking Folklore Weisfeiler-Lehman",
+            "abstract": "Message passing neural networks (MPNNs) have emerged as the most popular framework of graph neural networks (GNNs) in recent years. However, their expressive power is limited by the 1-dimensional Weisfeiler-Lehman (1-WL) test. Some works are inspired by k -WL/FWL (Folklore WL) and design the corresponding neural versions. Despite the high expressive power, there are serious limitations in this line of research. In particular, (1) k -WL/FWL requires at least O ( n k ) space complexity, which is impractical for large graphs even when k = 3 ; (2) The design space of k -WL/FWL is rigid, with the only adjustable hyper-parameter being k . To tackle the first limitation, we propose an extension, ( k, t ) -FWL. We theoretically prove that even if we fix the space complexity to O ( n 2 ) in ( k, t ) -FWL, we can construct an expressiveness hierarchy up to solving the graph isomorphism problem. To tackle the second problem, we propose k -FWL+, which considers any equivariant set as neighbors instead of all nodes, thereby greatly expanding the design space of k -FWL. Combining these two modifications results in a flexible and powerful framework ( k, t ) -FWL+. We demonstrate ( k, t ) -FWL+ can implement most existing models with matching expressiveness. We then introduce an instance of ( k, t ) -FWL+ called Neighborhood 2 -FWL (N 2 -FWL), which is practically and theoretically sound. We prove that N 2 -FWL is no less powerful than 3-WL, can encode many substructures while only requiring O ( n 2 ) space. Finally, we design its neural version named N 2 -GNN and evaluate its performance on various tasks. N 2 -GNN achieves superior performance on almost all tasks, with record-breaking results on ZINC-Subset ( 0.059 ) and ZINC-Full ( 0.013 ), outperforming previous state-of-the-art results by 10 . 6 % and 40 . 9 %, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2239091724",
+                    "name": "Jiarui Feng"
+                },
+                {
+                    "authorId": "2164063663",
+                    "name": "Lecheng Kong"
+                },
+                {
+                    "authorId": "2264134998",
+                    "name": "Hao Liu"
+                },
+                {
+                    "authorId": "2244621611",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2237956180",
+                    "name": "Fuhai Li"
+                },
+                {
+                    "authorId": "2239188141",
+                    "name": "Muhan Zhang"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "996c595ca87a014bd70ba7a4a0555f52bfa53cae",
+            "title": "PointHR: Exploring High-Resolution Architectures for 3D Point Cloud Segmentation",
+            "abstract": "Significant progress has been made recently in point cloud segmentation utilizing an encoder-decoder framework, which initially encodes point clouds into low-resolution representations and subsequently decodes high-resolution predictions. Inspired by the success of high-resolution architectures in image dense prediction, which always maintains a high-resolution representation throughout the entire learning process, we consider it also highly important for 3D dense point cloud analysis. Therefore, in this paper, we explore high-resolution architectures for 3D point cloud segmentation. Specifically, we generalize high-resolution architectures using a unified pipeline named PointHR, which includes a knn-based sequence operator for feature extraction and a differential resampling operator to efficiently communicate different resolutions. Additionally, we propose to avoid numerous on-the-fly computations of high-resolution architectures by pre-computing the indices for both sequence and resampling operators. By doing so, we deliver highly competitive high-resolution architectures while capitalizing on the benefits of well-designed point cloud blocks without additional effort. To evaluate these architectures for dense point cloud analysis, we conduct thorough experiments using S3DIS and ScanNetV2 datasets, where the proposed PointHR outperforms recent state-of-the-art methods without any bells and whistles. The source code is available at \\url{https://github.com/haibo-qiu/PointHR}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2052215769",
+                    "name": "Haibo Qiu"
+                },
+                {
+                    "authorId": "2110431812",
+                    "name": "Baosheng Yu"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2257346537",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "a09cbe54f842b9b243de4307349cb2800f3044d3",
+            "title": "Parameter Efficient Multi-task Model Fusion with Partial Linearization",
+            "abstract": "Large pre-trained models have enabled significant advances in machine learning and served as foundation components. Model fusion methods, such as task arithmetic, have been proven to be powerful and scalable to incorporate fine-tuned weights from different tasks into a multi-task model. However, efficiently fine-tuning large pre-trained models on multiple downstream tasks remains challenging, leading to inefficient multi-task model fusion. In this work, we propose a novel method to improve multi-task fusion for parameter-efficient fine-tuning techniques like LoRA fine-tuning. Specifically, our approach partially linearizes only the adapter modules and applies task arithmetic over the linearized adapters. This allows us to leverage the the advantages of model fusion over linearized fine-tuning, while still performing fine-tuning and inference efficiently. We demonstrate that our partial linearization technique enables a more effective fusion of multiple tasks into a single model, outperforming standard adapter tuning and task arithmetic alone. Experimental results demonstrate the capabilities of our proposed partial linearization technique to effectively construct unified multi-task models via the fusion of fine-tuned task vectors. We evaluate performance over an increasing number of tasks and find that our approach outperforms standard parameter-efficient fine-tuning techniques. The results highlight the benefits of partial linearization for scalable and efficient multi-task model fusion. The code is available at https://github.com/tanganke/peta",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2178366354",
+                    "name": "A. Tang"
+                },
+                {
+                    "authorId": "2248152216",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2150649639",
+                    "name": "Yong Luo"
+                },
+                {
+                    "authorId": "2248450431",
+                    "name": "Yibing Zhan"
+                },
+                {
+                    "authorId": "2247556302",
+                    "name": "Han Hu"
+                },
+                {
+                    "authorId": "2142452296",
+                    "name": "Bo Du"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "ab22d54dd13876d25c6c8f46c40fb9ac41c61ec5",
+            "title": "One for All: Towards Training One Graph Model for All Classification Tasks",
+            "abstract": "Designing a single model to address multiple tasks has been a long-standing objective in artificial intelligence. Recently, large language models have demonstrated exceptional capability in solving different tasks within the language domain. However, a unified model for various graph tasks remains underexplored, primarily due to the challenges unique to the graph learning domain. First, graph data from different areas carry distinct attributes and follow different distributions. Such discrepancy makes it hard to represent graphs in a single representation space. Second, tasks on graphs diversify into node, link, and graph tasks, requiring distinct embedding strategies. Finally, an appropriate graph prompting paradigm for in-context learning is unclear. We propose \\textbf{One for All (OFA)}, the first general framework that can use a single graph model to address the above challenges. Specifically, OFA proposes text-attributed graphs to unify different graph data by describing nodes and edges with natural language and uses language models to encode the diverse and possibly cross-domain text attributes to feature vectors in the same embedding space. Furthermore, OFA introduces the concept of nodes-of-interest to standardize different tasks with a single task representation. For in-context learning on graphs, OFA introduces a novel graph prompting paradigm that appends prompting substructures to the input graph, which enables it to address varied tasks without fine-tuning. We train the OFA model using graph data from multiple domains (including citation networks, molecular graphs, knowledge graphs, etc.) simultaneously and evaluate its ability in supervised, few-shot, and zero-shot learning scenarios. OFA performs well across different tasks, making it the first general-purpose across-domains classification model on graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2264134998",
+                    "name": "Hao Liu"
+                },
+                {
+                    "authorId": "48441034",
+                    "name": "Jiarui Feng"
+                },
+                {
+                    "authorId": "2164063663",
+                    "name": "Lecheng Kong"
+                },
+                {
+                    "authorId": "2270817857",
+                    "name": "Ningyue Liang"
+                },
+                {
+                    "authorId": "2244621611",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2239188141",
+                    "name": "Muhan Zhang"
+                }
+            ]
+        }
+    ]
+}

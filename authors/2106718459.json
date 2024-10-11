@@ -1,0 +1,271 @@
+{
+    "authorId": "2106718459",
+    "papers": [
+        {
+            "paperId": "0ca80b1244ee5419ff9108fbf39aa59f24fdfc4c",
+            "title": "FoodLMM: A Versatile Food Assistant using Large Multi-modal Model",
+            "abstract": "Large Multi-modal Models (LMMs) have made impressive progress in many vision-language tasks. Nevertheless, the performance of general LMMs in specific domains is still far from satisfactory. This paper proposes FoodLMM, a versatile food assistant based on LMMs with various capabilities, including food recognition, ingredient recognition, recipe generation, nutrition estimation, food segmentation and multi-round conversation. To facilitate FoodLMM to deal with tasks beyond pure text output, we introduce a series of novel task-specific tokens and heads, enabling the model to predict food nutritional values and multiple segmentation masks. We adopt a two-stage training strategy. In the first stage, we utilize multiple public food benchmarks for multi-task learning by leveraging the instruct-following paradigm. In the second stage, we construct a multi-round conversation dataset and a reasoning segmentation dataset to fine-tune the model, enabling it to conduct professional dialogues and generate segmentation masks based on complex reasoning in the food domain. Our fine-tuned FoodLMM achieves state-of-the-art results across several food benchmarks. We will make our code, models and datasets publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187757171",
+                    "name": "Yuehao Yin"
+                },
+                {
+                    "authorId": "2183597126",
+                    "name": "Huiyan Qi"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "2108536365",
+                    "name": "Jingjing Chen"
+                },
+                {
+                    "authorId": "2267603439",
+                    "name": "Yu-Gang Jiang"
+                },
+                {
+                    "authorId": "143977389",
+                    "name": "C. Ngo"
+                }
+            ]
+        },
+        {
+            "paperId": "111912318b30a9a1c23000ba9da7b95f33aa34c3",
+            "title": "Cross-domain Food Image-to-Recipe Retrieval by Weighted Adversarial Learning",
+            "abstract": "Food image-to-recipe aims to learn an embedded space linking the rich semantics in recipes with the visual content in food image for cross-modal retrieval. The existing research works carry out the learning of such space by assuming that all the image-recipe training example pairs belong to the same cuisine. As a result, despite the excellent performance reported in the literature, such space is not transferable for retrieving recipes of different cuisine. In this paper, we aim to address this issue by cross-domain food image-to-recipe retrieval, such that by leveraging abundant image-recipe pairs in source domain (one cuisine), the embedding space is generalizable to a target domain (the other cuisine) that does not have images to pair with recipes for training. With the intuition that the importance of different source samples should vary, this paper proposes two novel mechanisms for cross-domain food image-to-recipe retrieval, i.e., source data selector and weighted cross-modal adversarial learning. The former aims to select source samples similar to the target data and filter out distinctive ones for training. The latter is capable to assign higher weights to the source samples more similar to the target data and lower weights to suppress the distinctive ones for both cross-modal and adversarial learning. The weights are computed from the recipe features extracted from a pre-trained source model. Experiments on three different cuisines (Chuan, Yue and Washoku) demonstrate that the proposed method manages to achieve state-of-the-art performances in all the transfers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "143977389",
+                    "name": "C. Ngo"
+                },
+                {
+                    "authorId": "2108536365",
+                    "name": "Jingjing Chen"
+                },
+                {
+                    "authorId": "2130521470",
+                    "name": "W. Chan"
+                }
+            ]
+        },
+        {
+            "paperId": "32ffb5e528b54f03a8a359e4573e0f3926a1202b",
+            "title": "CgT-GAN: CLIP-guided Text GAN for Image Captioning",
+            "abstract": "The large-scale visual-language pre-trained model, Contrastive Language-Image Pre-training (CLIP), has significantly improved image captioning for scenarios without human-annotated image-caption pairs. Recent advanced CLIP-based image captioning without human annotations follows a text-only training paradigm, i.e., reconstructing text from shared embedding space. Nevertheless, these approaches are limited by the training/inference gap or huge storage requirements for text embeddings. Given that it is trivial to obtain images in the real world, we propose CLIP-guided text GAN (CgT-GAN), which incorporates images into the training process to enable the model to \"see\" real visual modality. Particularly, we use adversarial training to teach CgT-GAN to mimic the phrases of an external text corpus and CLIP-based reward to provide semantic guidance. The caption generator is jointly rewarded based on the caption naturalness to human language calculated from the GAN's discriminator and the semantic guidance reward computed by the CLIP-based reward module. In addition to the cosine similarity as the semantic guidance reward (i.e., CLIP-cos), we further introduce a novel semantic guidance reward called CLIP-agg, which aligns the generated caption with a weighted text embedding by attentively aggregating the entire corpus. Experimental results on three subtasks (ZS-IC, In-UIC and Cross-UIC) show that CgT-GAN outperforms state-of-the-art methods significantly across all metrics. Code is available at https://github.com/Lihr747/CgtGAN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7177756",
+                    "name": "Jiarui Yu"
+                },
+                {
+                    "authorId": "2145539796",
+                    "name": "Haoran Li"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "2148822529",
+                    "name": "Tong Xu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "0ab6291c0fc38fcca30a86f79510b605c2394840",
+            "title": "Cross-lingual Adaptation for Recipe Retrieval with Mixup",
+            "abstract": "Cross-modal recipe retrieval has attracted research attention in recent years, thanks to the availability of large-scale paired data for training. Nevertheless, obtaining adequate recipe-image pairs covering the majority of cuisines for supervised learning is difficult if not impossible. By transferring knowledge learnt from a data-rich cuisine to a data-scarce cuisine, domain adaptation sheds light on this practical problem. Nevertheless, existing works assume recipes in source and target domains are mostly originated from the same cuisine and written in the same language. This paper studies unsupervised domain adaptation for image-to-recipe retrieval, where recipes in source and target domains are in different languages. Moreover, only recipes are available for training in the target domain. A novel recipe mixup method is proposed to learn transferable embedding features between the two domains. Specifically, recipe mixup produces mixed recipes to form an intermediate domain by discretely exchanging the section(s) between source and target recipes. To bridge the domain gap, recipe mixup loss is proposed to enforce the intermediate domain to locate in the shortest geodesic path between source and target domains in the recipe embedding space. By using Recipe 1M dataset as source domain (English) and Vireo-FoodTransfer dataset as target domain (Chinese), empirical experiments verify the effectiveness of recipe mixup for cross-lingual adaptation in the context of image-to-recipe retrieval.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "143977389",
+                    "name": "C. Ngo"
+                },
+                {
+                    "authorId": "2108536365",
+                    "name": "Jingjing Chen"
+                },
+                {
+                    "authorId": "2130521470",
+                    "name": "W. Chan"
+                }
+            ]
+        },
+        {
+            "paperId": "3c037efecf9cc130761c8497ad9d0606f79cd114",
+            "title": "Text-driven Video Prediction",
+            "abstract": "Current video generation models usually convert signals indicating appearance and motion received from inputs (e.g., image, text) or latent spaces (e.g., noise vectors) into consecutive frames, fulfilling a stochastic generation process for the uncertainty introduced by latent code sampling. However, this generation pattern lacks deterministic constraints for both appearance and motion, leading to uncontrollable and undesirable outcomes. To this end, we propose a new task called Text-driven Video Prediction (TVP). Taking the first frame and text caption as inputs, this task aims to synthesize the following frames. Specifically, appearance and motion components are provided by the image and caption separately. The key to addressing the TVP task depends on fully exploring the underlying motion information in text descriptions, thus facilitating plausible video generation. In fact, this task is intrinsically a cause-and-effect problem, as the text content directly influences the motion changes of frames. To investigate the capability of text in causal inference for progressive motion information, our TVP framework contains a Text Inference Module (TIM), producing step-wise embeddings to regulate motion inference for subsequent frames. In particular, a refinement mechanism incorporating global motion semantics guarantees coherent generation. Extensive experiments are conducted on Something-Something V2 and Single Moving MNIST datasets. Experimental results demonstrate that our model achieves better results over other baselines, verifying the effectiveness of the proposed framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112275389",
+                    "name": "Xue Song"
+                },
+                {
+                    "authorId": "2108536365",
+                    "name": "Jingjing Chen"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "1717861",
+                    "name": "Yu-Gang Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "9bd74accb35b96e655f95aab11e91e269d6a2c90",
+            "title": "Mix-DANN and Dynamic-Modal-Distillation for Video Domain Adaptation",
+            "abstract": "Video domain adaptation is non-trivial due to video is inherently involved with multi-dimensional and multi-modal information. Existing works mainly adopt adversarial learning and self-supervised tasks to align features. Nevertheless, the explicit interaction between source and target in the temporal dimension, as well as the adaptation between modalities, are unexploited. In this paper, we propose Mix-Domain-Adversarial Neural Network and Dynamic-Modal-Distillation (MD-DMD), a novel multi-modal adversarial learning framework for unsupervised video domain adaptation. Our approach incorporates the temporal information between source and target domains, as well as the diversity of adaptability between modalities. On the one hand, for every single modality, we mix the frames from source and target domains to form mix-samples, then let the adversarial-discriminator predict the mix ratio of a mix-sample to further enhance the ability of the model to capture domain-invariant feature representations. On the other hand, we dynamically estimate the adaptability for different modalities during training, then pick the most adaptable modality as a teacher to guide other modalities by knowledge distillation. As a result, modalities are capable of learning transferable knowledge from each other, which leads to more effective adaptation. Experiments on two video domain adaptation benchmarks demonstrate the superiority of our proposed MD-DMD over state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187757171",
+                    "name": "Yuehao Yin"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "2108536365",
+                    "name": "Jingjing Chen"
+                },
+                {
+                    "authorId": "26953623",
+                    "name": "Lechao Cheng"
+                },
+                {
+                    "authorId": "1717861",
+                    "name": "Yu-Gang Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "c0c3856013c2ebce4d1791736169b217fe0e2f82",
+            "title": "Learning From Web Recipe-Image Pairs for Food Recognition: Problem, Baselines and Performance",
+            "abstract": "Cross-modal recipe retrieval has recently been explored for food recognition and understanding. Text-rich recipe provides not only visual content information (e.g., ingredients, dish presentation) but also procedure of food preparation (cutting and cooking styles). The paired data is leveraged to train deep models to retrieve recipes for food images. Most recipes on the Web include sample pictures as the references. The paired multimedia data is not noise-free, due to errors such as pairing of images containing partially prepared dishes with recipes. The content of recipes and food images are not always consistent due to free-style writing and preparation of food in different environments. As a consequence, the effectiveness of learning cross-modal deep models from such noisy web data is questionable. This paper conducts an empirical study to provide insights whether the features learnt with noisy pair data are resilient and could capture the modality correspondence between visual and text.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "143977389",
+                    "name": "C. Ngo"
+                },
+                {
+                    "authorId": "2130521470",
+                    "name": "W. Chan"
+                }
+            ]
+        },
+        {
+            "paperId": "43cc61ee893d73a1d12669902e7790c044679f85",
+            "title": "Pyramid Fusion Dark Channel Prior for Single Image Dehazing",
+            "abstract": "In this paper, we propose the pyramid fusion dark channel prior (PF-DCP) for single image dehazing. Based on the well-known Dark Channel Prior (DCP), we introduce an easy yet effective approach PF-DCP by employing the DCP algorithm at a pyramid of multi-scale images to alleviate the problem of patch size selection. In this case, we obtain the final transmission map by fusing transmission maps at each level to recover a high-quality haze-free image. Experiments on RESIDE SOTS show that PF-DCP not only outperforms the traditional prior-based methods with a large margin but also achieves comparable or even better results of state-of-art deep learning approaches. Furthermore, the visual quality is also greatly improved with much fewer color distortions and halo artifacts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111734372",
+                    "name": "Qiyuan Liang"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "143977389",
+                    "name": "C. Ngo"
+                }
+            ]
+        },
+        {
+            "paperId": "8b19379db0754cb325f79875354b82f6069ca8e0",
+            "title": "Learning to Match Anchor-Target Video Pairs With Dual Attentional Holographic Networks",
+            "abstract": "Video hyperlinking is the task of linking two video fragments/clips based on their multi-modal contents. Specifically, given an anchor video as a query, machine techniques automatically generate links between the anchor and target videos by modeling and comparing their content aboutness. The term \u201caboutness\u201d specifically refers to contextually relevant multimedia content, i.e., a fragment is on or of something. Since video contents are multi-modal (e.g., audio and vision), the content aboutness may be reflected across different modalities. Existing approaches regard hyperlinking as a retrieval task, by embedding multi-modal video contents into one or multiple common video representation space(s) for cross-modal comparison. As a result, the aboutness between videos is scored by computing the vector-distance based similarity in the learnt common feature space. However, these methods suffer from two main limitations: (1) the video modality descriptors/features are treated equally in representation learning, which hinders the effective modeling of their respective capabilities in linking; and (2) directly using the vector-distance based similarity to measure aboutness bears the risk of returning more duplicates. This paper focuses on addressing these two problems. Specifically, we firstly build attentional neural networks to learn a compact fragment-level representation, assigning different importance weights to different descriptor/feature contents by an attention mechanism. We believe that the potentially interesting content(s) should be highlighted in the representation. Furthermore, instead of directly computing the similarity of two representation embeddings, we secondly build a holographic composition network to model the aboutness for link establishment, with the core use of circular correlation. The two networks string together to form the final hyperlinking matching system. The entire model is trained in an end-to-end fashion. We examine its effectiveness by creating four train/validate/test partitioning schemes on the Blip10000 dataset and employing two video fragmentation methods.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "143977389",
+                    "name": "C. Ngo"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "7ccb6ba292ab6fbc05b1e10cb77088fe30912928",
+            "title": "Remote Sensing Images Data Augmentation Based on Style Transfer under the Condition of Few Samples",
+            "abstract": "To solve the problem that the detection accuracy of remote sensing image is affected by convolution neural network overfitting under the condition of small samples, a data augmentation method based on style transfer is proposed, in which new data is generated from texture of external domain to source domain by using cycle-consistent adversarial networks(CycleGAN). The experiment results show that the accuracy of detection and recognition is improved after adding the generated data to the original data.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "7911993",
+                    "name": "Yuchen Jiang"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "2064539994",
+                    "name": "Bo Xie"
+                }
+            ]
+        }
+    ]
+}

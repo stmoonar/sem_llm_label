@@ -1,0 +1,359 @@
+{
+    "authorId": "49980880",
+    "papers": [
+        {
+            "paperId": "2418bc3f97d1ee8d0caec7656af78343b83cabe3",
+            "title": "Is Adversarial Training Really a Silver Bullet for Mitigating Data Poisoning?",
+            "abstract": "Indiscriminate data poisoning can decrease the clean test accuracy of a deep learning model by slightly perturbing its training samples. There is a consensus that such poisons can hardly harm adversarially-trained (AT) models when the adversarial training budget is no less than the poison budget, i.e., \u03b5adv \u2265 \u03b5poi. This consensus, however, is challenged in this paper based on our new attack strategy that induces entangled features (EntF). The existence of entangled features makes the poisoned data become less useful for training a model, no matter if AT is applied or not. We demonstrate that for attacking a CIFAR-10 AT model under a reasonable setting with \u03b5adv = \u03b5poi = 8/255, our EntF yields an accuracy drop of 13.31%, which is 7\u00d7 better than existing methods and equal to discarding 83% training data. We further show the generalizability of EntF to more challenging settings, e.g., higher AT budgets, partial poisoning, unseen model architectures, and stronger (ensemble or adaptive) defenses. We finally provide new insights into the distinct roles of non-robust vs. robust features in poisoning standard vs. AT models and demonstrate the possibility of using a hybrid attack to poison standard and AT models simultaneously. Our code is available at https://github.com/ WenRuiUSTC/EntF.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054749404",
+                    "name": "Rui Wen"
+                },
+                {
+                    "authorId": "2277275",
+                    "name": "Zhengyu Zhao"
+                },
+                {
+                    "authorId": "1500377626",
+                    "name": "Zhuoran Liu"
+                },
+                {
+                    "authorId": "144588806",
+                    "name": "M. Backes"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "1698138",
+                    "name": "Yang Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "33277ae157017cc797e2351bc2cd45d915e9fca7",
+            "title": "Practical Differentially Private and Byzantine-resilient Federated Learning",
+            "abstract": "Privacy and Byzantine resilience are two indispensable requirements for a federated learning (FL) system. Although there have been extensive studies on privacy and Byzantine security in their own track, solutions that consider both remain sparse. This is due to difficulties in reconciling privacy-preserving and Byzantine-resilient algorithms. In this work, we propose a solution to such a two-fold issue. We use our version of differentially private stochastic gradient descent (DP-SGD) algorithm to preserve privacy and then apply our Byzantine-resilient algorithms. We note that while existing works follow this general approach, an in-depth analysis on the interplay between DP and Byzantine resilience has been ignored, leading to unsatisfactory performance. Specifically, for the random noise introduced by DP, previous works strive to reduce its seemingly detrimental impact on the Byzantine aggregation. In contrast, we leverage the random noise to construct a first-stage aggregation that effectively rejects many existing Byzantine attacks. Moreover, based on another property of our DP variant, we form a second-stage aggregation which provides a final sound filtering. Our protocol follows the principle of co-designing both DP and Byzantine resilience. We provide both theoretical proof and empirical experiments to show our protocol is effective: retaining high accuracy while preserving the DP guarantee and Byzantine resilience. Compared with the previous work, our protocol 1) achieves significantly higher accuracy even in a high privacy regime; 2) works well even when up to 90% distributive workers are Byzantine.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2048004796",
+                    "name": "Zihang Xiang"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "2526241",
+                    "name": "Wanyu Lin"
+                },
+                {
+                    "authorId": "2161017247",
+                    "name": "Di Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "349062d82b56fb516b0c7061940470f8d9c256a6",
+            "title": "Pareto-Secure Machine Learning (PSML): Fingerprinting and Securing Inference Serving Systems",
+            "abstract": "Model-serving systems have become increasingly popular, especially in real-time web applications. In such systems, users send queries to the server and specify the desired performance metrics (e.g., desired accuracy, latency). The server maintains a set of models (model zoo) in the back-end and serves the queries based on the specified metrics. This paper examines the security, specifically robustness against model extraction attacks, of such systems. Existing black-box attacks assume a single model can be repeatedly selected for serving inference requests. Modern inference serving systems break this assumption. Thus, they cannot be directly applied to extract a victim model, as models are hidden behind a layer of abstraction exposed by the serving system. An attacker can no longer identify which model she is interacting with. To this end, we first propose a query-efficient fingerprinting algorithm to enable the attacker to trigger any desired model consistently. We show that by using our fingerprinting algorithm, model extraction can have fidelity and accuracy scores within $1\\%$ of the scores obtained when attacking a single, explicitly specified model, as well as up to $14.6\\%$ gain in accuracy and up to $7.7\\%$ gain in fidelity compared to the naive attack. Second, we counter the proposed attack with a noise-based defense mechanism that thwarts fingerprinting by adding noise to the specified performance metrics. The proposed defense strategy reduces the attack's accuracy and fidelity by up to $9.8\\%$ and $4.8\\%$, respectively (on medium-sized model extraction). Third, we show that the proposed defense induces a fundamental trade-off between the level of protection and system goodput, achieving configurable and significant victim model extraction protection while maintaining acceptable goodput ($>80\\%$). We implement the proposed defense in a real system with plans to open source.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2140297212",
+                    "name": "Debopam Sanyal"
+                },
+                {
+                    "authorId": "2221123728",
+                    "name": "Jui-Tse Hung"
+                },
+                {
+                    "authorId": "70486241",
+                    "name": "Manavi Agrawal"
+                },
+                {
+                    "authorId": "2221130492",
+                    "name": "Prahlad Jasti"
+                },
+                {
+                    "authorId": "2216984120",
+                    "name": "Shahab Nikkhoo"
+                },
+                {
+                    "authorId": "1680133",
+                    "name": "S. Jha"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "1689767",
+                    "name": "Sibin Mohan"
+                },
+                {
+                    "authorId": "144312193",
+                    "name": "Alexey Tumanov"
+                }
+            ]
+        },
+        {
+            "paperId": "34bed407d65517ed2c8b98bab3a33da175677c59",
+            "title": "A Plot is Worth a Thousand Words: Model Information Stealing Attacks via Scientific Plots",
+            "abstract": "Building advanced machine learning (ML) models requires expert knowledge and many trials to discover the best architecture and hyperparameter settings. Previous work demonstrates that model information can be leveraged to assist other attacks, such as membership inference, generating adversarial examples. Therefore, such information, e.g., hyperparameters, should be kept confidential. It is well known that an adversary can leverage a target ML model's output to steal the model's information. In this paper, we discover a new side channel for model information stealing attacks, i.e., models' scientific plots which are extensively used to demonstrate model performance and are easily accessible. Our attack is simple and straightforward. We leverage the shadow model training techniques to generate training data for the attack model which is essentially an image classifier. Extensive evaluation on three benchmark datasets shows that our proposed attack can effectively infer the architecture/hyperparameters of image classifiers based on convolutional neural network (CNN) given the scientific plot generated from it. We also reveal that the attack's success is mainly caused by the shape of the scientific plots, and further demonstrate that the attacks are robust in various scenarios. Given the simplicity and effectiveness of the attack method, our study indicates scientific plots indeed constitute a valid side channel for model information stealing attacks. To mitigate the attacks, we propose several defense mechanisms that can reduce the original attacks' accuracy while maintaining the plot utility. However, such defenses can still be bypassed by adaptive attacks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2141935494",
+                    "name": "Boyang Zhang"
+                },
+                {
+                    "authorId": "2116553732",
+                    "name": "Xinlei He"
+                },
+                {
+                    "authorId": "2117688523",
+                    "name": "Yun Shen"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "1698138",
+                    "name": "Yang Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "3ed9c6c7f5ee8bc8386a59f034321ed6974020b1",
+            "title": "GlucoSynth: Generating Differentially-Private Synthetic Glucose Traces",
+            "abstract": "We focus on the problem of generating high-quality, private synthetic glucose traces, a task generalizable to many other time series sources. Existing methods for time series data synthesis, such as those using Generative Adversarial Networks (GANs), are not able to capture the innate characteristics of glucose data and cannot provide any formal privacy guarantees without severely degrading the utility of the synthetic data. In this paper we present GlucoSynth, a novel privacy-preserving GAN framework to generate synthetic glucose traces. The core intuition behind our approach is to conserve relationships amongst motifs (glucose events) within the traces, in addition to temporal dynamics. Our framework incorporates differential privacy mechanisms to provide strong formal privacy guarantees. We provide a comprehensive evaluation on the real-world utility of the data using 1.2 million glucose traces; GlucoSynth outperforms all previous methods in its ability to generate high-quality synthetic glucose traces with strong privacy guarantees.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40620949",
+                    "name": "Josephine Lamp"
+                },
+                {
+                    "authorId": "32520414",
+                    "name": "M. Derdzinski"
+                },
+                {
+                    "authorId": "12281059",
+                    "name": "Christopher Hannemann"
+                },
+                {
+                    "authorId": "2207540588",
+                    "name": "Joost van der Linden"
+                },
+                {
+                    "authorId": "2168976999",
+                    "name": "Lu Feng"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "2207854826",
+                    "name": "David Evans"
+                }
+            ]
+        },
+        {
+            "paperId": "60e53d9f34e71cbbfe87ab75ca3a909233a6b356",
+            "title": "White-box Membership Inference Attacks against Diffusion Models",
+            "abstract": "Diffusion models have begun to overshadow GANs and other generative models in industrial applications due to their superior image generation performance. The complex architecture of these models furnishes an extensive array of attack features. In light of this, we aim to design membership inference attacks (MIAs) catered to diffusion models. We first conduct an exhaustive analysis of existing MIAs on diffusion models, taking into account factors such as black-box/white-box models and the selection of attack features. We found that white-box attacks are highly applicable in real-world scenarios, and the most effective attacks presently are white-box. Departing from earlier research, which employs model loss as the attack feature for white-box MIAs, we employ model gradients in our attack, leveraging the fact that these gradients provide a more profound understanding of model responses to various samples. We subject these models to rigorous testing across a range of parameters, including training steps, sampling frequency, diffusion steps, and data variance. Across all experimental settings, our method consistently demonstrated near-flawless attack performance, with attack success rate approaching $100\\%$ and attack AUCROC near $1.0$. We also evaluate our attack against common defense mechanisms, and observe our attacks continue to exhibit commendable performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057013801",
+                    "name": "Yan Pang"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "2152320435",
+                    "name": "Xu Kang"
+                },
+                {
+                    "authorId": "2925985",
+                    "name": "Mengdi Huai"
+                },
+                {
+                    "authorId": "2145954003",
+                    "name": "Yang Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "8a7dc1630911808ff2469f3b53038ddf62a661bc",
+            "title": "Evading Provenance-Based ML Detectors with Adversarial System Actions",
+            "abstract": "The artifact evaluation process is designed to validate the repeatability and usability of the results presented in the research paper \"Evading Provenance-Based ML Detectors with Adversarial System Actions.\" The paper introduces P ROV N-INJA , a novel framework designed to discover adversarial samples, also known as gadgets, specifically tailored for path-based Intrusion Detection Systems (IDS) and Graph Neural Network-based IDS. The primary objective of P ROV N INJA is to identify actions that can successfully evade state-of-the-art IDSs. The evaluation process comprises two main components: training and testing the IDS and generating adversarial examples to evade the IDSs. As a valuable resource, the authors provide a GitHub link that grants access to the source code, data, and scripts necessary for reproducing the results described in the paper. By offering these artifacts, the researchers enable fellow researchers and practitioners to replicate and build upon their work in provenance-based ML detectors. The artifacts include comprehensive software, data, and scripts employed to generate the findings presented in the paper. The accessibility of the GitHub repository ensures transparency. It fosters collaboration among researchers, facilitating advancements in the domain of provenance-based ML detectors and contributing to the overall improvement of security systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2218792397",
+                    "name": "Kunal Mukherjee"
+                },
+                {
+                    "authorId": "2219236005",
+                    "name": "Joshua Wiedemeier"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "2111343761",
+                    "name": "James Wei"
+                },
+                {
+                    "authorId": "2156361901",
+                    "name": "Feng Chen"
+                },
+                {
+                    "authorId": "2169156186",
+                    "name": "Muhyun Kim"
+                },
+                {
+                    "authorId": "1741044",
+                    "name": "Murat Kantarcioglu"
+                },
+                {
+                    "authorId": "3344254",
+                    "name": "Kangkook Jee"
+                }
+            ]
+        },
+        {
+            "paperId": "a5db4a36868fbc5830730238ceed31da697dd07e",
+            "title": "FLORAS: Differentially Private Wireless Federated Learning Using Orthogonal Sequences",
+            "abstract": "We propose a novel private-preserving uplink over-the-air computation (AirComp) method, termed FLORAS, for wireless federated learning (FL) systems. From the communication design perspective, FLORAS eliminates the requirement of channel state information at the transmitters (CSIT) by leveraging the properties of orthogonal sequences. From the privacy perspective, we prove that FLORAS can offer pure differential privacy (DP) guarantee, and explicitly characterize the achievable $\\epsilon$-DP level as a function of the FLORAS parameter configuration. A novel FL convergence bound is derived which, combined with the pure DP guarantee, allows for a smooth tradeoff between convergence rate and DP guarantee levels. Experiments based on real-world datasets not only corroborate the theoretical findings but also empirically demonstrate the communication and privacy advantages of FLORAS over state-of-the-art AirComp methods.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "151258295",
+                    "name": "Xizixiang Wei"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "2140386847",
+                    "name": "Ruiquan Huang"
+                },
+                {
+                    "authorId": "33298166",
+                    "name": "Cong Shen"
+                },
+                {
+                    "authorId": "2143851813",
+                    "name": "Jing Yang"
+                },
+                {
+                    "authorId": "145967056",
+                    "name": "H. Poor"
+                },
+                {
+                    "authorId": "2267893064",
+                    "name": "Charles L. Brown"
+                }
+            ]
+        },
+        {
+            "paperId": "f6861ce39bad377f05337653eae78102f2c0a510",
+            "title": "Interpreting GNN-based IDS Detections Using Provenance Graph Structural Features",
+            "abstract": "The black-box nature of complex Neural Network (NN)-based models has hindered their widespread adoption in security domains due to the lack of logical explanations and actionable follow-ups for their predictions. To enhance the transparency and accountability of Graph Neural Network (GNN) security models used in system provenance analysis, we propose PROVEXPLAINER, a framework for projecting abstract GNN decision boundaries onto interpretable feature spaces. We first replicate the decision-making process of GNNbased security models using simpler and explainable models such as Decision Trees (DTs). To maximize the accuracy and fidelity of the surrogate models, we propose novel graph structural features founded on classical graph theory and enhanced by extensive data study with security domain knowledge. Our graph structural features are closely tied to problem-space actions in the system provenance domain, which allows the detection results to be explained in descriptive, human language. PROVEXPLAINER allowed simple DT models to achieve 95% fidelity to the GNN on program classification tasks with general graph structural features, and 99% fidelity on malware detection tasks with a task-specific feature package tailored for direct interpretation. The explanations for malware classification are demonstrated with case studies of five real-world malware samples across three malware families.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2218792397",
+                    "name": "Kunal Mukherjee"
+                },
+                {
+                    "authorId": "2219236005",
+                    "name": "Joshua Wiedemeier"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "2169156186",
+                    "name": "Muhyun Kim"
+                },
+                {
+                    "authorId": "2156361901",
+                    "name": "Feng Chen"
+                },
+                {
+                    "authorId": "1741044",
+                    "name": "Murat Kantarcioglu"
+                },
+                {
+                    "authorId": "3344254",
+                    "name": "Kangkook Jee"
+                }
+            ]
+        },
+        {
+            "paperId": "047a8344e3cfa49c8354fc244387d57ef9d2f01d",
+            "title": "Memorization in NLP Fine-tuning Methods",
+            "abstract": "Large language models are shown to present privacy risks through memorization of training data, and several recent works have studied such risks for the pre-training phase. Little attention, however, has been given to the fine-tuning phase and it is not well understood how different fine-tuning methods (such as fine-tuning the full model, the model head, and adapter) compare in terms of memorization risk. This presents increasing concern as the\"pre-train and fine-tune\"paradigm proliferates. In this paper, we empirically study memorization of fine-tuning methods using membership inference and extraction attacks, and show that their susceptibility to attacks is very different. We observe that fine-tuning the head of the model has the highest susceptibility to attacks, whereas fine-tuning smaller adapters appears to be less vulnerable to known extraction attacks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115471757",
+                    "name": "Fatemehsadat Mireshghallah"
+                },
+                {
+                    "authorId": "1702039811",
+                    "name": "Archit Uniyal"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "145685504",
+                    "name": "David Evans"
+                },
+                {
+                    "authorId": "1400419309",
+                    "name": "Taylor Berg-Kirkpatrick"
+                }
+            ]
+        }
+    ]
+}

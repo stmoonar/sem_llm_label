@@ -1,0 +1,585 @@
+{
+    "authorId": "2118180377",
+    "papers": [
+        {
+            "paperId": "10266bb0b3ffc13b51b1afdb7d1e2117a55b49fe",
+            "title": "Constraint-aware and Ranking-distilled Token Pruning for Efficient Transformer Inference",
+            "abstract": "Deploying pre-trained transformer models like BERT on downstream tasks in resource-constrained scenarios is challenging due to their high inference cost, which grows rapidly with input sequence length. In this work, we propose a constraint-aware and ranking-distilled token pruning method ToP, which selectively removes unnecessary tokens as input sequence passes through layers, allowing the model to improve online inference speed while preserving accuracy. ToP overcomes the limitation of inaccurate token importance ranking in the conventional self-attention mechanism through a ranking-distilled token distillation technique, which distills effective token rankings from the final layer of unpruned models to early layers of pruned models. Then, ToP introduces a coarse-to-fine pruning approach that automatically selects the optimal subset of transformer layers and optimizes token pruning decisions within these layers through improved L0 regularization. Extensive experiments on GLUE benchmark and SQuAD tasks demonstrate that ToP outperforms state-of-the-art token pruning and model compression methods with improved accuracy and speedups. ToP reduces the average FLOPs of BERT by 8.1X while achieving competitive accuracy on GLUE, and provides a real latency speedup of up to 7.4X on an Intel CPU. Code is available at https://github.com/microsoft/Moonlit/tree/main/ToP",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214284233",
+                    "name": "Junyan Li"
+                },
+                {
+                    "authorId": "48571328",
+                    "name": "L. Zhang"
+                },
+                {
+                    "authorId": "2257094139",
+                    "name": "Jiahang Xu"
+                },
+                {
+                    "authorId": "46394401",
+                    "name": "Yujing Wang"
+                },
+                {
+                    "authorId": "2181972735",
+                    "name": "Shaoguang Yan"
+                },
+                {
+                    "authorId": "33420715",
+                    "name": "Yunqing Xia"
+                },
+                {
+                    "authorId": "2108623481",
+                    "name": "Yuqing Yang"
+                },
+                {
+                    "authorId": "2069445596",
+                    "name": "Ting Cao"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": "2145908588",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "2168609907",
+                    "name": "Mao Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "21f0efaa9df627e180571f457386c87be7dcd299",
+            "title": "Model-enhanced Vector Index",
+            "abstract": "Embedding-based retrieval methods construct vector indices to search for document representations that are most similar to the query representations. They are widely used in document retrieval due to low latency and decent recall performance. Recent research indicates that deep retrieval solutions offer better model quality, but are hindered by unacceptable serving latency and the inability to support document updates. In this paper, we aim to enhance the vector index with end-to-end deep generative models, leveraging the differentiable advantages of deep retrieval models while maintaining desirable serving efficiency. We propose Model-enhanced Vector Index (MEVI), a differentiable model-enhanced index empowered by a twin-tower representation model. MEVI leverages a Residual Quantization (RQ) codebook to bridge the sequence-to-sequence deep retrieval and embedding-based models. To substantially reduce the inference time, instead of decoding the unique document ids in long sequential steps, we first generate some semantic virtual cluster ids of candidate documents in a small number of steps, and then leverage the well-adapted embedding vectors to further perform a fine-grained search for the relevant documents in the candidate virtual clusters. We empirically show that our model achieves better performance on the commonly used academic benchmarks MSMARCO Passage and Natural Questions, with comparable serving latency to dense retrieval solutions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155916654",
+                    "name": "Hailin Zhang"
+                },
+                {
+                    "authorId": "46394401",
+                    "name": "Yujing Wang"
+                },
+                {
+                    "authorId": "1819450790",
+                    "name": "Qi Chen"
+                },
+                {
+                    "authorId": "2112567692",
+                    "name": "Ruiheng Chang"
+                },
+                {
+                    "authorId": "2146320774",
+                    "name": "Ting Zhang"
+                },
+                {
+                    "authorId": "40793591",
+                    "name": "Ziming Miao"
+                },
+                {
+                    "authorId": "2246638730",
+                    "name": "Yingyan Hou"
+                },
+                {
+                    "authorId": "2110669087",
+                    "name": "Yan Ding"
+                },
+                {
+                    "authorId": "1720763480",
+                    "name": "Xupeng Miao"
+                },
+                {
+                    "authorId": "2256769645",
+                    "name": "Haonan Wang"
+                },
+                {
+                    "authorId": "2139619289",
+                    "name": "Bochen Pang"
+                },
+                {
+                    "authorId": "1945466206",
+                    "name": "Yu-Wei Zhan"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": "2256972722",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "145338263",
+                    "name": "Fan Yang"
+                },
+                {
+                    "authorId": "2247410698",
+                    "name": "Xing Xie"
+                },
+                {
+                    "authorId": "2110611349",
+                    "name": "Mao Yang"
+                },
+                {
+                    "authorId": "2143385941",
+                    "name": "Bin Cui"
+                }
+            ]
+        },
+        {
+            "paperId": "4651f455fcdc3add3740a55ffa110e1eb253a539",
+            "title": "IRGen: Generative Modeling for Image Retrieval",
+            "abstract": "While generative modeling has become prevalent across numerous research fields, its integration into the realm of image retrieval remains largely unexplored and underjustified. In this paper, we present a novel methodology, reframing image retrieval as a variant of generative modeling and employing a sequence-to-sequence model. This approach is harmoniously aligned with the current trend towards unification in research, presenting a cohesive framework that allows for end-to-end differentiable searching. This, in turn, facilitates superior performance via direct optimization techniques. The development of our model, dubbed IRGen, addresses the critical technical challenge of converting an image into a concise sequence of semantic units, which is pivotal for enabling efficient and effective search. Extensive experiments demonstrate that our model achieves state-of-the-art performance on three widely-used image retrieval benchmarks as well as two million-scale datasets, yielding significant improvement compared to prior competitive retrieval methods. In addition, the notable surge in precision scores facilitated by generative modeling presents the potential to bypass the reranking phase, which is traditionally indispensable in practical retrieval workflows.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2129521633",
+                    "name": "Yidan Zhang"
+                },
+                {
+                    "authorId": "2146320438",
+                    "name": "Ting Zhang"
+                },
+                {
+                    "authorId": "47514557",
+                    "name": "Dong Chen"
+                },
+                {
+                    "authorId": "46394401",
+                    "name": "Yujing Wang"
+                },
+                {
+                    "authorId": "1819450790",
+                    "name": "Qi Chen"
+                },
+                {
+                    "authorId": "1576441343",
+                    "name": "Xingxu Xie"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": "2145908588",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "145338263",
+                    "name": "Fan Yang"
+                },
+                {
+                    "authorId": "2168609907",
+                    "name": "Mao Yang"
+                },
+                {
+                    "authorId": "2883861",
+                    "name": "Q. Liao"
+                },
+                {
+                    "authorId": "2261753424",
+                    "name": "B. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "f7212245d3787c66b8dc1e9fa4bc48349cef1155",
+            "title": "UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation",
+            "abstract": "Large Language Models (LLMs) are popular for their impressive abilities, but the need for model-specific fine-tuning or task-specific prompt engineering can hinder their generalization. We propose UPRISE (Universal Prompt Retrieval for Improving zero-Shot Evaluation), which tunes a lightweight and versatile retriever that automatically retrieves prompts for a given zero-shot task input. Specifically, we demonstrate universality in a cross-task and cross-model scenario: the retriever is tuned on a diverse set of tasks, but tested on unseen task types; we use a small frozen LLM, GPT-Neo-2.7B, for tuning the retriever, but test the retriever on different LLMs of much larger scales, such as BLOOM-7.1B, OPT-66B and GPT3-175B. Additionally, we show that UPRISE mitigates the hallucination problem in our experiments with ChatGPT, suggesting its potential to improve even the strongest LLMs. Our model and code are available at https://github.com/microsoft/LMOps.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2068324576",
+                    "name": "Daixuan Cheng"
+                },
+                {
+                    "authorId": "3110003",
+                    "name": "Shaohan Huang"
+                },
+                {
+                    "authorId": "2142554422",
+                    "name": "Junyu Bi"
+                },
+                {
+                    "authorId": "1945466206",
+                    "name": "Yu-Wei Zhan"
+                },
+                {
+                    "authorId": null,
+                    "name": "Jianfeng Liu"
+                },
+                {
+                    "authorId": "46394401",
+                    "name": "Yujing Wang"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "49807919",
+                    "name": "Furu Wei"
+                },
+                {
+                    "authorId": "2150171067",
+                    "name": "Denvy Deng"
+                },
+                {
+                    "authorId": "2145908588",
+                    "name": "Qi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "f7e78f1a1b436d28bf8761380b91bff7d2f83c4a",
+            "title": "To Copy Rather Than Memorize: A Vertical Learning Paradigm for Knowledge Graph Completion",
+            "abstract": "Embedding models have shown great power in knowledge graph completion (KGC) task. By learning structural constraints for each training triple, these methods implicitly memorize intrinsic relation rules to infer missing links. However, this paper points out that the multi-hop relation rules are hard to be reliably memorized due to the inherent deficiencies of such implicit memorization strategy, making embedding models underperform in predicting links between distant entity pairs. To alleviate this problem, we present Vertical Learning Paradigm (VLP), which extends embedding models by allowing to explicitly copy target information from related factual triples for more accurate prediction. Rather than solely relying on the implicit memory, VLP directly provides additional cues to improve the generalization ability of embedding models, especially making the distant link prediction significantly easier. Moreover, we also propose a novel relative distance based negative sampling technique (ReD) for more effective optimization. Experiments demonstrate the validity and generality of our proposals on two standard benchmarks. Our code is available at https://github.com/rui9812/VLP.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1500522974",
+                    "name": "Rui Li"
+                },
+                {
+                    "authorId": "2144230222",
+                    "name": "Xu Chen"
+                },
+                {
+                    "authorId": "2869810",
+                    "name": "Chaozhuo Li"
+                },
+                {
+                    "authorId": "2115437382",
+                    "name": "Yanming Shen"
+                },
+                {
+                    "authorId": "48018967",
+                    "name": "Jianan Zhao"
+                },
+                {
+                    "authorId": "46394401",
+                    "name": "Yujing Wang"
+                },
+                {
+                    "authorId": "2114924471",
+                    "name": "Weihao Han"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": "2145908764",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "2110972816",
+                    "name": "Xing Xie"
+                }
+            ]
+        },
+        {
+            "paperId": "0eb19e852013f83e2001e3191ccd3b46b280d417",
+            "title": "Distill-VQ: Learning Retrieval Oriented Vector Quantization By Distilling Knowledge from Dense Embeddings",
+            "abstract": "Vector quantization (VQ) based ANN indexes, such as Inverted File System (IVF) and Product Quantization (PQ), have been widely applied to embedding based document retrieval thanks to the competitive time and memory efficiency. Originally, VQ is learned to minimize the reconstruction loss, i.e., the distortions between the original dense embeddings and the reconstructed embeddings after quantization. Unfortunately, such an objective is inconsistent with the goal of selecting ground-truth documents for the input query, which may cause severe loss of retrieval quality. Recent works identify such a defect, and propose to minimize the retrieval loss through contrastive learning. However, these methods intensively rely on queries with ground-truth documents, whose performance is limited by the insufficiency of labeled data. In this paper, we propose Distill-VQ, which unifies the learning of IVF and PQ within a knowledge distillation framework. In Distill-VQ, the dense embeddings are leveraged as \"teachers'', which predict the query's relevance to the sampled documents. The VQ modules are treated as the \"students'', which are learned to reproduce the predicted relevance, such that the reconstructed embeddings may fully preserve the retrieval result of the dense embeddings. By doing so, Distill-VQ is able to derive substantial training signals from the massive unlabeled data, which significantly contributes to the retrieval quality. We perform comprehensive explorations for the optimal conduct of knowledge distillation, which may provide useful insights for the learning of VQ based ANN index. We also experimentally show that the labeled data is no longer a necessity for high-quality vector quantization, which indicates Distill-VQ's strong applicability in practice. The evaluations are performed on MS MARCO and Natural Questions benchmarks, where Distill-VQ notably outperforms the SOTA VQ methods in Recall and MRR. Our code is avaliable at https://github.com/staoxiao/LibVQ.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2051175765",
+                    "name": "Shitao Xiao"
+                },
+                {
+                    "authorId": "2145976175",
+                    "name": "Zheng Liu"
+                },
+                {
+                    "authorId": "2114924471",
+                    "name": "Weihao Han"
+                },
+                {
+                    "authorId": "2144231046",
+                    "name": "Jianjin Zhang"
+                },
+                {
+                    "authorId": "1862782",
+                    "name": "Defu Lian"
+                },
+                {
+                    "authorId": "2171182",
+                    "name": "Yeyun Gong"
+                },
+                {
+                    "authorId": "2157956050",
+                    "name": "Qi Chen"
+                },
+                {
+                    "authorId": "145338263",
+                    "name": "Fan Yang"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2237813",
+                    "name": "Yingxia Shao"
+                },
+                {
+                    "authorId": "2150171067",
+                    "name": "Denvy Deng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "2110972323",
+                    "name": "Xing Xie"
+                }
+            ]
+        },
+        {
+            "paperId": "423a388c6b394eae2440d8b8c738db4550f2bb67",
+            "title": "Snapshot-Guided Domain Adaptation for ELECTRA",
+            "abstract": ",",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2068324576",
+                    "name": "Daixuan Cheng"
+                },
+                {
+                    "authorId": "3110003",
+                    "name": "Shaohan Huang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Jianfeng Liu"
+                },
+                {
+                    "authorId": "1945466206",
+                    "name": "Yu-Wei Zhan"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "49807919",
+                    "name": "Furu Wei"
+                },
+                {
+                    "authorId": "2150171067",
+                    "name": "Denvy Deng"
+                },
+                {
+                    "authorId": "2145908588",
+                    "name": "Qi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "63836e669416668744c3676a831060e8de3f58a1",
+            "title": "HousE: Knowledge Graph Embedding with Householder Parameterization",
+            "abstract": "The effectiveness of knowledge graph embedding (KGE) largely depends on the ability to model intrinsic relation patterns and mapping properties. However, existing approaches can only capture some of them with insufficient modeling capacity. In this work, we propose a more powerful KGE framework named HousE, which involves a novel parameterization based on two kinds of Householder transformations: (1) Householder rotations to achieve superior capacity of modeling relation patterns; (2) Householder projections to handle sophisticated relation mapping properties. Theoretically, HousE is capable of modeling crucial relation patterns and mapping properties simultaneously. Besides, HousE is a generalization of existing rotation-based models while extending the rotations to high-dimensional spaces. Empirically, HousE achieves new state-of-the-art performance on five benchmark datasets. Our code is available at https://github.com/anrep/HousE.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1500522974",
+                    "name": "Rui Li"
+                },
+                {
+                    "authorId": "48018967",
+                    "name": "Jianan Zhao"
+                },
+                {
+                    "authorId": "2869810",
+                    "name": "Chaozhuo Li"
+                },
+                {
+                    "authorId": "2064929062",
+                    "name": "Di He"
+                },
+                {
+                    "authorId": "2108941389",
+                    "name": "Yiqi Wang"
+                },
+                {
+                    "authorId": "2108104523",
+                    "name": "Yuming Liu"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "3210262",
+                    "name": "Senzhang Wang"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": "2115437382",
+                    "name": "Yanming Shen"
+                },
+                {
+                    "authorId": "2110972816",
+                    "name": "Xing Xie"
+                },
+                {
+                    "authorId": "2145908764",
+                    "name": "Qi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "70ab405a1431a92bd0fc2f9ec2f7b226fe4c64c9",
+            "title": "Geometric Disentangled Collaborative Filtering",
+            "abstract": "Learning informative representations of users and items from the historical interactions is crucial to collaborative filtering (CF). Existing CF approaches usually model interactions solely within the Euclidean space. However, the sophisticated user-item interactions inherently present highly non-Euclidean anatomy with various types of geometric patterns (i.e., tree-likeness and cyclic structures). The Euclidean-based models may be inadequate to fully uncover the intent factors beneath such hybrid-geometry interactions. To remedy this deficiency, in this paper, we study the novel problem of Geometric Disentangled Collaborative Filtering (GDCF), which aims to reveal and disentangle the latent intent factors across multiple geometric spaces. A novel generative GDCF model is proposed to learn geometric disentangled representations by inferring the high-level concepts associated with user intentions and various geometries. Empirically, our proposal is extensively evaluated over five real-world datasets, and the experimental results demonstrate the superiority of GDCF.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "93506381",
+                    "name": "Yiding Zhang"
+                },
+                {
+                    "authorId": "2869810",
+                    "name": "Chaozhuo Li"
+                },
+                {
+                    "authorId": "2110972816",
+                    "name": "Xing Xie"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2151458697",
+                    "name": "Chuan Shi"
+                },
+                {
+                    "authorId": "2108104523",
+                    "name": "Yuming Liu"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2146643615",
+                    "name": "Liangjie Zhang"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Qi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "7b87395bc4e9963c20c4dcfb17c47238b758212a",
+            "title": "Uni-Retriever: Towards Learning the Unified Embedding Based Retriever in Bing Sponsored Search",
+            "abstract": "Embedding based retrieval (EBR) is a fundamental building block in many web applications. However, EBR in sponsored search is distinguished from other generic scenarios and technically challenging due to the need of serving multiple retrieval purposes: firstly, it has to retrieve high-relevance ads, which may exactly serve user's search intent; secondly, it needs to retrieve high-CTR ads so as to maximize the overall user clicks. In this paper, we present a novel representation learning framework Uni-Retriever developed for Bing Search, which unifies two different training modes knowledge distillation and contrastive learning to realize both required objectives. On one hand, the capability of making high-relevance retrieval is established by distilling knowledge from the \"relevance teacher model''. On the other hand, the capability of making high-CTR retrieval is optimized by learning to discriminate user's clicked ads from the entire corpus. The two training modes are jointly performed as a multi-objective learning process, such that the ads of high relevance and CTR can be favored by the generated embeddings. Besides the learning strategy, we also elaborate our solution for EBR serving pipeline built upon the substantially optimized DiskANN, where massive-scale EBR can be performed with competitive time and memory efficiency, and accomplished in high-quality. We make comprehensive offline and online experiments to evaluate the proposed techniques, whose findings may provide useful insights for the future development of EBR systems. Uni-Retriever has been mainstreamed as the major retrieval path in Bing's production thanks to the notable improvements on the representation and EBR serving quality.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144231046",
+                    "name": "Jianjin Zhang"
+                },
+                {
+                    "authorId": "2145976175",
+                    "name": "Zheng Liu"
+                },
+                {
+                    "authorId": "2114924471",
+                    "name": "Weihao Han"
+                },
+                {
+                    "authorId": "2051175765",
+                    "name": "Shitao Xiao"
+                },
+                {
+                    "authorId": "2058585152",
+                    "name": "Rui Zheng"
+                },
+                {
+                    "authorId": "2237813",
+                    "name": "Yingxia Shao"
+                },
+                {
+                    "authorId": "2118180377",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2115315923",
+                    "name": "Hanqing Zhu"
+                },
+                {
+                    "authorId": "2154412922",
+                    "name": "Premkumar Srinivasan"
+                },
+                {
+                    "authorId": "2150171067",
+                    "name": "Denvy Deng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "2110972323",
+                    "name": "Xing Xie"
+                }
+            ]
+        }
+    ]
+}

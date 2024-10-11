@@ -1,0 +1,306 @@
+{
+    "authorId": "66615738",
+    "papers": [
+        {
+            "paperId": "0268225b5c7f12f3d980ccc4311e488e613b60f4",
+            "title": "Learning to Clarify: Multi-turn Conversations with Action-Based Contrastive Self-Training",
+            "abstract": "Large language models (LLMs) aligned through reinforcement learning from human feedback (RLHF) have quickly become one of the dominant paradigms for building intelligent conversational assistant agents. However, despite their strong performance across many benchmarks, LLM-based agents still lack conversational skills such as disambiguation: when generalized assistants are faced with ambiguity, they often overhedge or implicitly guess users' ground-truth intents rather than asking clarification questions, and under task-specific settings, high-quality conversation samples are often limited, affecting models' ability to learn optimal dialogue action policies. We propose Action-Based Contrastive Self-Training (henceforth ACT), a quasi-online preference optimization algorithm based on Direct Preference Optimization (DPO) which allows for sample-efficient dialogue policy learning in multi-turn conversation. We demonstrate ACT's efficacy under sample-efficient conditions in three difficult conversational tasks: tabular-grounded question-answering, machine reading comprehension, and AmbigSQL, a novel task for disambiguating information-seeking requests for text-to-SQL generation. Additionally, we propose evaluating LLMs' ability to function as conversational agents by examining whether they can implicitly recognize and reason about ambiguity in conversation. ACT demonstrates substantial conversation modeling improvements over standard approaches to supervised fine-tuning and DPO.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "2068169921",
+                    "name": "Ruoxi Sun"
+                },
+                {
+                    "authorId": "2676352",
+                    "name": "Sercan \u00d6. Arik"
+                },
+                {
+                    "authorId": "2264567300",
+                    "name": "Tomas Pfister"
+                }
+            ]
+        },
+        {
+            "paperId": "dfe926e52168827976a0b616b0f6aacd9de50267",
+            "title": "VarBench: Robust Language Model Benchmarking Through Dynamic Variable Perturbation",
+            "abstract": "As large language models achieve impressive scores on traditional benchmarks, an increasing number of researchers are becoming concerned about benchmark data leakage during pre-training, commonly known as the data contamination problem. To ensure fair evaluation, recent benchmarks release only the training and validation sets, keeping the test set labels closed-source. They require anyone wishing to evaluate his language model to submit the model's predictions for centralized processing and then publish the model's result on their leaderboard. However, this submission process is inefficient and prevents effective error analysis. To address this issue, we propose to variabilize benchmarks and evaluate language models dynamically. Specifically, we extract variables from each test case and define a value range for each variable. For each evaluation, we sample new values from these value ranges to create unique test cases, thus ensuring a fresh evaluation each time. We applied this variable perturbation method to four datasets: GSM8K, ARC, CommonsenseQA, and TruthfulQA, which cover mathematical generation and multiple-choice tasks. Our experimental results demonstrate that this approach provides a more accurate assessment of the true capabilities of language models, effectively mitigating the contamination problem.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2308102293",
+                    "name": "Kun Qian"
+                },
+                {
+                    "authorId": "2308101660",
+                    "name": "Shunji Wan"
+                },
+                {
+                    "authorId": "2308417874",
+                    "name": "Claudia Tang"
+                },
+                {
+                    "authorId": "2308143699",
+                    "name": "Youzhi Wang"
+                },
+                {
+                    "authorId": "2308225745",
+                    "name": "Xuanming Zhang"
+                },
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "2280289629",
+                    "name": "Zhou Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "6f9d3c3a628e8d842de83f4ba2e41dd1b4b404ac",
+            "title": "PLACES: Prompting Language Models for Social Conversation Synthesis",
+            "abstract": "Collecting high quality conversational data can be very expensive for most applications and infeasible for others due to privacy, ethical, or similar concerns. A promising direction to tackle this problem is to generate synthetic dialogues by prompting large language models. In this work, we use a small set of expert-written conversations as in-context examples to synthesize a social conversation dataset using prompting. We perform several thorough evaluations of our synthetic conversations compared to human-collected conversations. This includes various dimensions of conversation quality with human evaluation directly on the synthesized conversations, and interactive human evaluation of chatbots fine-tuned on the synthetically generated dataset. We additionally demonstrate that this prompting approach is generalizable to multi-party conversations, providing potential to create new synthetic data for multi-party tasks. Our synthetic multi-party conversations were rated more favorably across all measured dimensions compared to conversation excerpts sampled from a human-collected multi-party dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "1710287",
+                    "name": "A. Papangelis"
+                },
+                {
+                    "authorId": "46387857",
+                    "name": "Chenyang Tao"
+                },
+                {
+                    "authorId": "2127354716",
+                    "name": "Seokhwan Kim"
+                },
+                {
+                    "authorId": "146177177",
+                    "name": "Andrew Rosenbaum"
+                },
+                {
+                    "authorId": "2152797401",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "2167255986",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "1395813836",
+                    "name": "Dilek Z. Hakkani-T\u00fcr"
+                }
+            ]
+        },
+        {
+            "paperId": "9573e2025440219a1d3393664b3c80bda51ac8f4",
+            "title": "Prompt-Based Monte-Carlo Tree Search for Goal-Oriented Dialogue Policy Planning",
+            "abstract": "Planning for goal-oriented dialogue often requires simulating future dialogue interactions and estimating task progress. Many approaches thus consider training neural networks to perform look-ahead search algorithms such as A* search and Monte Carlo Tree Search (MCTS). However, this training often requires abundant annotated data, which creates challenges when faced with noisy annotations or low-resource settings. We introduce GDP-Zero, an approach using Open-Loop MCTS to perform goal-oriented dialogue policy planning without any model training. GDP-Zero prompts a large language model to act as a policy prior, value function, user simulator, and system model during the tree search. We evaluate GDP-Zero on the goal-oriented task PersuasionForGood, and find that its responses are preferred over ChatGPT up to 59.32% of the time, and are rated more persuasive than ChatGPT during interactive evaluations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2193279092",
+                    "name": "Xiao Yu"
+                },
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "b8bea82e7a8028fbe79942c4331546701976dd36",
+            "title": "Pre-Finetuning for Few-Shot Emotional Speech Recognition",
+            "abstract": "Speech models have long been known to overfit individual speakers for many classification tasks. This leads to poor generalization in settings where the speakers are out-of-domain or out-of-distribution, as is common in production environments. We view speaker adaptation as a few-shot learning problem and propose investigating transfer learning approaches inspired by recent success with pre-trained models in natural language tasks. We propose pre-finetuning speech models on difficult tasks to distill knowledge into few-shot downstream classification objectives. We pre-finetune Wav2Vec2.0 on every permutation of four multiclass emotional speech recognition corpora and evaluate our pre-finetuned models through 33,600 few-shot fine-tuning trials on the Emotional Speech Dataset.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "ed2221b2260169acf5fe962cf757e46082f85bbf",
+            "title": "Controllable Mixed-Initiative Dialogue Generation through Prompting",
+            "abstract": "Mixed-initiative dialogue tasks involve repeated exchanges of information and conversational control. Conversational agents gain control by generating responses that follow particular dialogue intents or strategies, prescribed by a policy planner. The standard approach has been fine-tuning pre-trained language models to perform generation conditioned on these intents. However, these supervised generation models are limited by the cost and quality of data annotation.We instead prompt large language models as a drop-in replacement to fine-tuning on conditional generation. We formalize prompt construction for controllable mixed-initiative dialogue. Our findings show improvements over fine-tuning and ground truth responses according to human evaluation and automatic metrics for two tasks: PersuasionForGood and Emotional Support Conversations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "2193279092",
+                    "name": "Xiao Yu"
+                },
+                {
+                    "authorId": "8299781",
+                    "name": "Weiyan Shi"
+                },
+                {
+                    "authorId": "2216556621",
+                    "name": "Urvi Awasthi"
+                },
+                {
+                    "authorId": "2167255986",
+                    "name": "Zhou Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "9a1c65b395974ee4c8f073f26d2a47b8492989e7",
+            "title": "Seamlessly Integrating Factual Information and Social Content with Persuasive Dialogue",
+            "abstract": "Complex conversation settings such as persuasion involve communicating changes in attitude or behavior, so users\u2019 perspectives need to be addressed, even when not directly related to the topic. In this work, we contribute a novel modular dialogue system framework that seamlessly integrates factual information and social content into persuasive dialogue. Our framework is generalizable to any dialogue tasks that have mixed social and task contents. We conducted a study that compared user evaluations of our framework versus a baseline end-to-end generation model. We found our model was evaluated to be more favorable in all dimensions including competence and friendliness compared to the baseline model which does not explicitly handle social content or factual questions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "8299781",
+                    "name": "Weiyan Shi"
+                },
+                {
+                    "authorId": "2088384643",
+                    "name": "Feifan Yan"
+                },
+                {
+                    "authorId": "2158856983",
+                    "name": "Ryan Hou"
+                },
+                {
+                    "authorId": "50561415",
+                    "name": "Jingwen Zhang"
+                },
+                {
+                    "authorId": "38531701",
+                    "name": "Saurav Sahay"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "b274acf5b045f762ff6269b4eef25cff90fc9e4e",
+            "title": "FastKASSIM: A Fast Tree Kernel-Based Syntactic Similarity Metric",
+            "abstract": "Syntax is a fundamental component of language, yet few metrics have been employed to capture syntactic similarity or coherence at the utterance- and document-level. The existing standard document-level syntactic similarity metric is computationally expensive and performs inconsistently when faced with syntactically dissimilar documents. To address these challenges, we present FastKASSIM, a metric for utterance- and document-level syntactic similarity which pairs and averages the most similar constituency parse trees between a pair of documents based on tree kernels. FastKASSIM is more robust to syntactic dissimilarities and runs up to to 5.32 times faster than its predecessor over documents in the r/ChangeMyView corpus. FastKASSIM\u2019s improvements allow us to examine hypotheses in two settings with large documents. We find that syntactically similar arguments on r/ChangeMyView tend to be more persuasive, and that syntax is predictive of authorship attribution in the Australian High Court Judgment corpus.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "2109063802",
+                    "name": "Caitlyn Chen"
+                },
+                {
+                    "authorId": "2193279092",
+                    "name": "Xiao Yu"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "ee9050207325cbe6fc9a0d510432601974cbd0c1",
+            "title": "Weakly Supervised Data Augmentation Through Prompting for Dialogue Understanding",
+            "abstract": "Dialogue understanding tasks often necessitate abundant annotated data to achieve good performance and that presents challenges in low-resource settings. To alleviate this barrier, we explore few-shot data augmentation for dialogue understanding by prompting large pre-trained language models and present a novel approach that iterates on augmentation quality by applying weakly-supervised filters. We evaluate our methods on the emotion and act classification tasks in DailyDialog and the intent classification task in Facebook Multilingual Task-Oriented Dialogue. Models fine-tuned on our augmented data mixed with few-shot ground truth data are able to approach or surpass existing state-of-the-art performance on both datasets. For DailyDialog specifically, using 10% of the ground truth data we outperform the current state-of-the-art model which uses 100% of the data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                },
+                {
+                    "authorId": "1710287",
+                    "name": "A. Papangelis"
+                },
+                {
+                    "authorId": "46387857",
+                    "name": "Chenyang Tao"
+                },
+                {
+                    "authorId": "146177177",
+                    "name": "Andrew Rosenbaum"
+                },
+                {
+                    "authorId": "2127354716",
+                    "name": "Seokhwan Kim"
+                },
+                {
+                    "authorId": "2152797401",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "1395813836",
+                    "name": "Dilek Z. Hakkani-T\u00fcr"
+                }
+            ]
+        },
+        {
+            "paperId": "2619ee9dfb75047f44fbc2fc91a011cb7304d9ca",
+            "title": "Student Engagement in Mobile Learning via Text Message",
+            "abstract": "Mobile learning is expanding rapidly due to its accessibility and affordability, especially in resource-poor parts of the world. Yet how students engage and learn with mobile learning has not been systematically analyzed at scale. This study examines how 93,819 Kenyan students in grades 6, 9, and 12 use a text message-based mobile learning platform that has millions of users across Sub-Saharan Africa. We investigate longitudinal variation in engagement over a one-year period for students in different age groups and check for evidence of learning gains using learning curve analysis. Student engagement is highest during school holidays and leading up to standardized exams, but persistence over time is low: under 25% of students return to the platform after joining. Clustering students into three groups based on their level of activity, we examine variation in their learning behaviors and quiz performance over their first ten days. Highly active students exhibit promising trends in terms of quiz completion, reattempts, and accuracy, but we do not see evidence of learning gains in this study. The findings suggest that students in Kenya use mobile learning either as an ad-hoc resource or a low-cost tutor to complement formal schooling and bridge gaps in instruction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2633430",
+                    "name": "Ren\u00e9 F. Kizilcec"
+                },
+                {
+                    "authorId": "66615738",
+                    "name": "Maximillian Chen"
+                }
+            ]
+        }
+    ]
+}

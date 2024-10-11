@@ -1,0 +1,250 @@
+{
+    "authorId": "1774258",
+    "papers": [
+        {
+            "paperId": "eac877c27e940bfde277b8123e89f6db32cad6e5",
+            "title": "Streaming Zero-Knowledge Proofs",
+            "abstract": "Streaming interactive proofs (SIPs) enable a space-bounded algorithm with one-pass access to a massive stream of data to verify a computation that requires large space, by communicating with a powerful but untrusted prover. This work initiates the study of zero-knowledge proofs for data streams. We define the notion of zero-knowledge in the streaming setting and construct zero-knowledge SIPs for the two main algorithmic building blocks in the streaming interactive proofs literature: the sumcheck and polynomial evaluation protocols. To the best of our knowledge all known streaming interactive proofs are based on either of these tools, and indeed, this allows us to obtain zero-knowledge SIPs for central streaming problems such as index, point and range queries, median, frequency moments, and inner product. Our protocols are efficient in terms of time and space, as well as communication: the verifier algorithm's space complexity is $\\mathrm{polylog}(n)$ and, after a non-interactive setup that uses a random string of near-linear length, the remaining parameters are $n^{o(1)}$. En route, we develop an algorithmic toolkit for designing zero-knowledge data stream protocols, consisting of an algebraic streaming commitment protocol and a temporal commitment protocol.Our analyses rely on delicate algebraic and information-theoretic arguments and reductions from average-case communication complexity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2076323150",
+                    "name": "M. Dall'Agnol"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "143756994",
+                    "name": "Chris Hickey"
+                }
+            ]
+        },
+        {
+            "paperId": "f596c565e67b5c43553f51b955b5a61b45c4d14b",
+            "title": "Distribution-Free Proofs of Proximity",
+            "abstract": "Motivated by the fact that input distributions are often unknown in advance, distribution-free property testing considers a setting where the algorithmic task is to accept functions $f : [n] \\to \\{0,1\\}$ with a certain property P and reject functions that are $\\eta$-far from P, where the distance is measured according to an arbitrary and unknown input distribution $D \\sim [n]$. As usual in property testing, the tester can only make a sublinear number of input queries, but as the distribution is unknown, we also allow a sublinear number of samples from the distribution D. In this work we initiate the study of distribution-free interactive proofs of proximity (df-IPPs) in which the distribution-free testing algorithm is assisted by an all powerful but untrusted prover. Our main result is that for any problem P $\\in$ NC, any proximity parameter $\\eta>0$, and any (trade-off) parameter $t\\leq\\sqrt{n}$, we construct a df-IPP for P with respect to $\\eta$, that has query and sample complexities $t+O(1/\\eta)$, and communication complexity $\\tilde{O}(n/t + 1/\\eta)$. For t as above and sufficiently large $\\eta$ (namely, when $\\eta>t/n$), this result matches the parameters of the best-known general purpose IPPs in the standard uniform setting. Moreover, for such t, its parameters are optimal up to poly-logarithmic factors under reasonable cryptographic assumptions for the same regime of $\\eta$ as the uniform setting, i.e., when $\\eta \\geq 1/t$. For small $\\eta$ (i.e., $\\eta<t/n$), our protocol has communication complexity $\\Omega(1/\\eta)$, which is worse than the $\\tilde{O}(n/t)$ communication complexity of the uniform IPPs (with the same query complexity). To improve on this gap, we show that for IPPs over specialised, but large distribution families, such as sufficiently smooth distributions and product distributions, the communication complexity reduces to $\\tilde{O}(n/t^{1-o(1)})$.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2172684749",
+                    "name": "Hugo Aaronson"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "1744960",
+                    "name": "Ninad Rajgopal"
+                },
+                {
+                    "authorId": "1768059",
+                    "name": "Ron D. Rothblum"
+                }
+            ]
+        },
+        {
+            "paperId": "3acb3fdcbb36aa9b96082d69dda3c7d18c16b382",
+            "title": "Quantum Worst-Case to Average-Case Reductions for All Linear Problems",
+            "abstract": "We study the problem of designing worst-case to average-case reductions for quantum algorithms. For all linear problems, we provide an explicit and efficient transformation of quantum algorithms that are only correct on a small (even sub-constant) fraction of their inputs into ones that are correct on all inputs. This stands in contrast to the classical setting, where such results are only known for a small number of specific problems or restricted computational models. En route, we obtain a tight $\\Omega(n^2)$ lower bound on the average-case quantum query complexity of the Matrix-Vector Multiplication problem. Our techniques strengthen and generalise the recently introduced additive combinatorics framework for classical worst-case to average-case reductions (STOC 2022) to the quantum setting. We rely on quantum singular value transformations to construct quantum algorithms for linear verification in superposition and learning Bogolyubov subspaces from noisy quantum oracles. We use these tools to prove a quantum local correction lemma, which lies at the heart of our reductions, based on a noise-robust probabilistic generalisation of Bogolyubov's lemma from additive combinatorics.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2102410209",
+                    "name": "Vahid R. Asadi"
+                },
+                {
+                    "authorId": "2210497",
+                    "name": "Alexander Golovnev"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "2065636",
+                    "name": "Igor Shinkar"
+                },
+                {
+                    "authorId": "47302141",
+                    "name": "Sathyawageeswar Subramanian"
+                }
+            ]
+        },
+        {
+            "paperId": "8a4596c278b115201e83ca447371b55d348388d5",
+            "title": "Worst-case to average-case reductions via additive combinatorics",
+            "abstract": "We present a new framework for designing worst-case to average-case reductions. For a large class of problems, it provides an explicit transformation of algorithms running in time T that are only correct on a small (subconstant) fraction of their inputs into algorithms running in time O(T) that are correct on all inputs. Using our framework, we obtain such efficient worst-case to average-case reductions for fundamental problems in a variety of computational models; namely, algorithms for matrix multiplication, streaming algorithms for the online matrix-vector multiplication problem, and static data structures for all linear problems as well as for the multivariate polynomial evaluation problem. Our techniques crucially rely on additive combinatorics. In particular, we show a local correction lemma that relies on a new probabilistic version of the quasi-polynomial Bogolyubov-Ruzsa lemma.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2102410209",
+                    "name": "Vahid R. Asadi"
+                },
+                {
+                    "authorId": "2210497",
+                    "name": "Alexander Golovnev"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "2065636",
+                    "name": "Igor Shinkar"
+                }
+            ]
+        },
+        {
+            "paperId": "818cfcc14a63058b34014e86f06dd510dc3b48f8",
+            "title": "Derandomization of Cell Sampling",
+            "abstract": "Since 1989, the best known lower bound on static data structures was Siegel's classical cell sampling lower bound. Siegel showed an explicit problem with $n$ inputs and $m$ possible queries such that every data structure that answers queries by probing $t$ memory cells requires space $s\\geq\\widetilde{\\Omega}\\left(n\\cdot(\\frac{m}{n})^{1/t}\\right)$. In this work, we improve this bound for non-adaptive data structures to $s\\geq\\widetilde{\\Omega}\\left(n\\cdot(\\frac{m}{n})^{1/(t-1)}\\right)$ for all $t \\geq 2$. For $t=2$, we give a lower bound of $s>m-o(m)$, improving on the bound $s>m/2$ recently proved by Viola over $\\mathbb{F}_2$ and Siegel's bound $s\\geq\\widetilde{\\Omega}(\\sqrt{mn})$ over other finite fields.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2210497",
+                    "name": "Alexander Golovnev"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "2065636",
+                    "name": "Igor Shinkar"
+                }
+            ]
+        },
+        {
+            "paperId": "9554e8de4ecc7a9db94f901037ecc63aad0c1f33",
+            "title": "Hypercontractivity on high dimensional expanders",
+            "abstract": "We prove hypercontractive inequalities on high dimensional expanders. As in the settings of the p-biased hypercube, the symmetric group, and the Grassmann scheme, our inequalities are effective for global functions, which are functions that are not significantly affected by a restriction of a small set of coordinates. As applications, we obtain Fourier concentration, small-set expansion, and Kruskal\u2013Katona theorems for high dimensional expanders. Our techniques rely on a new approximate Efron\u2013Stein decomposition for high dimensional link expanders.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "47107544",
+                    "name": "Noam Lifshitz"
+                },
+                {
+                    "authorId": "2108638144",
+                    "name": "Siqi Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "cba85ac80e038bce15356ede711e556906af758f",
+            "title": "Sublinear quantum algorithms for estimating von Neumann entropy",
+            "abstract": "Entropy is a fundamental property of both classical and quantum systems, spanning myriad theoretical and practical applications in physics and computer science. We study the problem of obtaining estimates to within a multiplicative factor $\\gamma>1$ of the Shannon entropy of probability distributions and the von Neumann entropy of mixed quantum states. Our main results are: $\\quad\\bullet$ an $\\widetilde{\\mathcal{O}}\\left( n^{\\frac{1+\\eta}{2\\gamma^2}}\\right)$-query quantum algorithm that outputs a $\\gamma$-multiplicative approximation of the Shannon entropy $H(\\mathbf{p})$ of a classical probability distribution $\\mathbf{p} = (p_1,\\ldots,p_n)$; $\\quad\\bullet$ an $\\widetilde{\\mathcal{O}}\\left( n^{\\frac12+\\frac{1+\\eta}{2\\gamma^2}}\\right)$-query quantum algorithm that outputs a $\\gamma$-multiplicative approximation of the von Neumann entropy $S(\\rho)$ of a density matrix $\\rho\\in\\mathbb{C}^{n\\times n}$. In both cases, the input is assumed to have entropy bounded away from zero by a quantity determined by the parameter $\\eta>0$, since, as we prove, no polynomial query algorithm can multiplicatively approximate the entropy of distributions with arbitrarily low entropy. In addition, we provide $\\Omega\\left(n^{\\frac{1}{3\\gamma^2}}\\right)$ lower bounds on the query complexity of $\\gamma$-multiplicative estimation of Shannon and von Neumann entropies. We work with the quantum purified query access model, which can handle both classical probability distributions and mixed quantum states, and is the most general input model considered in the literature.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "2405344",
+                    "name": "Min-Hsiu Hsieh"
+                },
+                {
+                    "authorId": "47302141",
+                    "name": "Sathyawageeswar Subramanian"
+                }
+            ]
+        },
+        {
+            "paperId": "cf28a3b50cef92f21992ed3326617f53988d3343",
+            "title": "Quantum Proofs of Proximity",
+            "abstract": "We initiate the systematic study of QMA algorithms in the setting of property testing, to which we refer as QMA proofs of proximity (QMAPs). These are quantum query algorithms that receive explicit access to a sublinear-size untrusted proof and are required to accept inputs having a property \u03a0 and reject inputs that are \u03b5-far from \u03a0, while only probing a minuscule portion of their input.We investigate the complexity landscape of this model, showing that QMAPs can be exponentially stronger than both classical proofs of proximity and quantum testers. To this end, we extend the methodology of Blais, Brody, and Matulef (Computational Complexity, 2012) to prove quantum property testing lower bounds via reductions from communication complexity. This also resolves a question raised in 2013 by Montanaro and de Wolf (cf. Theory of Computing, 2016).Our algorithmic results include a purpose an algorithmic framework that enables quantum speedups for testing an expressive class of properties, namely, those that are succinctly decomposable. A consequence of this framework is a QMA algorithm to verify the Parity of an n-bit string with O(n2/3) queries and proof length. We also propose a QMA algorithm for testing graph bipartitneness, a property that lies outside of this family, for which there is a quantum speedup.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2076323150",
+                    "name": "M. Dall'Agnol"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "102476123",
+                    "name": "Subhayan Roy Moulik"
+                },
+                {
+                    "authorId": "32523323",
+                    "name": "J. Thaler"
+                }
+            ]
+        },
+        {
+            "paperId": "75be28240a521a945f3833f91deab427ec29fb8d",
+            "title": "Relaxed Locally Correctable Codes with Nearly-Linear Block Length and Constant Query Complexity",
+            "abstract": "Locally correctable codes (LCCs) are codes C: \u03a3k \u2192 \u03a3n which admit local algorithms that can correct any individual symbol of a corrupted codeword via a minuscule number of queries. One of the central problems in algorithmic coding theory is to construct O(1)-query LCC with minimal block length. Alas, state-of-the-art of such codes requires exponential block length to admit O(1)-query algorithms for local correction, despite much attention during the last two decades. This lack of progress prompted the study of relaxed LCCs, which allow the correction algorithm to abort (but not err) on small fraction of the locations. This relaxation turned out to allow constant-query correction algorithms for codes with polynomial block length. Specifically, prior work showed that there exist O(1)-query relaxed LCCs that achieve nearly-quartic block length n = k4+\u03b1, for an arbitrarily small constant \u03b1 > 0. We construct an O(1)-query relaxed LCC with nearly-linear block length n = k1+\u03b1, for an arbitrarily small constant \u03b1 > 0. This significantly narrows the gap between the lower bound which states that there are no O(1)-query relaxed LCCs with block length n = k1+o(1). In particular, this resolves an open problem raised by Gur, Ramnarayan, and Rothblum (ITCS 2018).",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "3275651",
+                    "name": "A. Chiesa"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "2065636",
+                    "name": "Igor Shinkar"
+                }
+            ]
+        },
+        {
+            "paperId": "7c736fb91f4ffd926ad6c33ac31d4a44b19363da",
+            "title": "On the Power of Relaxed Local Decoding Algorithms",
+            "abstract": "A locally decodable code (LDC) C : { 0 , 1 } k \u2192 { 0 , 1 } n is an error correcting code that admits algorithms for recovering individual bits of the message by only querying a few bits of a noisy codeword. LDCs found a myriad of applications both in theory and in practice, ranging from probabilistically checkable proofs to distributed storage. However, despite nearly two decades of extensive study, the best known constructions of LDCs with O (1)-query decoding algorithms have super-polynomial blocklength. The notion of relaxed LDCs is a natural relaxation of LDCs, which aims to bypass the foregoing barrier by requiring local decoding of nearly all individual message bits, yet allowing decoding failure (but not error) on the rest. State of the art constructions of O (1)-query relaxed LDCs achieve blocklength n = O (cid:0) k 1+ \u03b3 (cid:1) for an arbitrarily small constant \u03b3 . Using algorithmic and combinatorial techniques, we prove an impossibility result, showing that codes with blocklength n = k 1+ o (1) cannot be relaxed decoded with O (1)-query algorithms. This resolves an open problem raised by Goldreich in 2004.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "1714254",
+                    "name": "Oded Lachish"
+                }
+            ]
+        }
+    ]
+}

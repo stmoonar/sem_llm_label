@@ -1,0 +1,377 @@
+{
+    "authorId": "47540245",
+    "papers": [
+        {
+            "paperId": "2387e267e33e6ceefcbac3ab1fd60ea1247f00fa",
+            "title": "Iterated Learning Improves Compositionality in Large Vision-Language Models",
+            "abstract": "A fundamental characteristic common to both human vision and natural language is their compositional nature. Yet, despite the performance gains contributed by large vision and language pretraining, recent investigations find that most-if not all-our state-of-the-art vision-language models struggle at compositionality. They are unable to distinguish between images of \u201ca girl in white facing a man in black\u201d and \u201ca girl in blackfacing a man in white\u201d. More-over, prior work suggests that compositionality doesn't arise with scale: larger model sizes or training data don't help. This paper develops a new iterated training algorithm that incentivizes compositionality. We draw on decades of cognitive science research that identifies cultural transmission-the need to teach a new generation-as a necessary inductive prior that incentivizes humans to develop compositional languages. Specifically, we reframe vision-language contrastive learning as the Lewis Signaling Game between a vision agent and a language agent, and ope rationalize cultural transmission by iteratively resetting one of the agent's weights during training. After every iteration, this training paradigm induces representations that become \u201ceasier to learn\u201d, a property of compositional languages: e.g. our model trained on CC3M and CC12M improves standard CLIP by 4.7%, 4.0% respectfully in the SugarCrepe benchmark.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2294672624",
+                    "name": "Chenhao Zheng"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2684226",
+                    "name": "Aniruddha Kembhavi"
+                },
+                {
+                    "authorId": "2257273968",
+                    "name": "Ranjay Krishna"
+                }
+            ]
+        },
+        {
+            "paperId": "90ee7c1d50793f7f0da731a1c07d6d2fc47324ac",
+            "title": "Offline Training of Language Model Agents with Functions as Learnable Weights",
+            "abstract": "Researchers and practitioners have recently reframed powerful Large Language Models (LLMs) as agents, enabling them to automate complex tasks largely via the use of specialized functions. To facilitate the development of LLM agents, we present a novel paradigm of training LLM agents without modifying the LLM weights, which is particularly useful when the LLMs are difficult or inaccessible for modifications. Inspired by how humans continuously forge tools to adapt to real-world tasks, rather than change our biological structure to fit a static set of tools, we propose to progressively forge agent's functions to better solve the downstream tasks instead of modifying the LLM weights. By treating the functions as learnable `agent parameters' and leveraging the fundamental idea of model training in artificial intelligence, we develop AgentOptimizer that employs the LLM to update agents' functions and devise an agent training algorithm with two strategies, roll-back, and early-stop, to streamline the training process. With extensive experiments, we showcase that the agent training paradigm could significantly improve the performance of representative LLM agents in various downstream tasks. We also study the behavior of the agent training regarding aspects like the learning curve and domain transferability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116579935",
+                    "name": "Shaokun Zhang"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2253854104",
+                    "name": "Jiale Liu"
+                },
+                {
+                    "authorId": "2187090356",
+                    "name": "Linxin Song"
+                },
+                {
+                    "authorId": "2256289461",
+                    "name": "Chi Wang"
+                },
+                {
+                    "authorId": "2257273968",
+                    "name": "Ranjay Krishna"
+                },
+                {
+                    "authorId": "2254166618",
+                    "name": "Qingyun Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "ab12d8c5e607d702f2fc02ea711960509f9ec1a9",
+            "title": "m&m's: A Benchmark to Evaluate Tool-Use for multi-step multi-modal Tasks",
+            "abstract": "Real-world multi-modal problems are rarely solved by a single machine learning model, and often require multi-step computational plans that involve stitching several models. Tool-augmented LLMs hold tremendous promise for automating the generation of such computational plans. However, the lack of standardized benchmarks for evaluating LLMs as planners for multi-step multi-modal tasks has prevented a systematic study of planner design decisions. Should LLMs generate a full plan in a single shot or step-by-step? Should they invoke tools directly with Python code or through structured data formats like JSON? Does feedback improve planning? To answer these questions and more, we introduce m&m's: a benchmark containing 4K+ multi-step multi-modal tasks involving 33 tools that include multi-modal models, (free) public APIs, and image processing modules. For each of these task queries, we provide automatically generated plans using this realistic toolset. We further provide a high-quality subset of 1,565 task plans that are human-verified and correctly executable. With m&m's, we evaluate 10 popular LLMs with 2 planning strategies (multi-step vs. step-by-step planning), 2 plan formats (JSON vs. code), and 3 types of feedback (parsing/verification/execution). Finally, we summarize takeaways from our extensive experiments. Our dataset and code are available on HuggingFace (https://huggingface.co/datasets/zixianma/mnms) and Github (https://github.com/RAIVNLab/mnms).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149504559",
+                    "name": "Zixian Ma"
+                },
+                {
+                    "authorId": "2292210407",
+                    "name": "Weikai Huang"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2269734955",
+                    "name": "Tanmay Gupta"
+                },
+                {
+                    "authorId": "2257273968",
+                    "name": "Ranjay Krishna"
+                }
+            ]
+        },
+        {
+            "paperId": "c8574be40d6c92f4a108f955969bd43ddde2a31d",
+            "title": "Adaptive In-conversation Team Building for Language Model Agents",
+            "abstract": "Leveraging multiple large language model (LLM) agents has shown to be a promising approach for tackling complex tasks, while the effective design of multiple agents for a particular application remains an art. It is thus intriguing to answer a critical question: Given a task, how can we build a team of LLM agents to solve it effectively? Our new adaptive team-building paradigm offers a flexible solution, realized through a novel agent design named Captain Agent. It dynamically forms and manages teams for each step of a task-solving process, utilizing nested group conversations and reflection to ensure diverse expertise and prevent stereotypical outputs, allowing for a flexible yet structured approach to problem-solving. A comprehensive evaluation across six real-world scenarios demonstrates that Captain Agent significantly outperforms existing multi-agent methods with 21.94% improvement in average accuracy, providing outstanding performance without requiring task-specific prompt engineering. Our exploration of different backbone LLM and cost analysis further shows that Captain Agent can improve the conversation quality of weak LLM and achieve competitive performance with extremely low cost, which illuminates the application of multi-agent systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279965048",
+                    "name": "Linxin Song"
+                },
+                {
+                    "authorId": "2253854104",
+                    "name": "Jiale Liu"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2116579935",
+                    "name": "Shaokun Zhang"
+                },
+                {
+                    "authorId": "2279803371",
+                    "name": "Ao Luo"
+                },
+                {
+                    "authorId": "2303893413",
+                    "name": "Shijian Wang"
+                },
+                {
+                    "authorId": "2254166618",
+                    "name": "Qingyun Wu"
+                },
+                {
+                    "authorId": "2256289461",
+                    "name": "Chi Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "e61351aea469de0d8bc5072394af7e2d6754bbd9",
+            "title": "Task Me Anything",
+            "abstract": "Benchmarks for large multimodal language models (MLMs) now serve to simultaneously assess the general capabilities of models instead of evaluating for a specific capability. As a result, when a developer wants to identify which models to use for their application, they are overwhelmed by the number of benchmarks and remain uncertain about which benchmark's results are most reflective of their specific use case. This paper introduces Task-Me-Anything, a benchmark generation engine which produces a benchmark tailored to a user's needs. Task-Me-Anything maintains an extendable taxonomy of visual assets and can programmatically generate a vast number of task instances. Additionally, it algorithmically addresses user queries regarding MLM performance efficiently within a computational budget. It contains 113K images, 10K videos, 2K 3D object assets, over 365 object categories, 655 attributes, and 335 relationships. It can generate 750M image/video question-answering pairs, which focus on evaluating MLM perceptual capabilities. Task-Me-Anything reveals critical insights: open-source MLMs excel in object and attribute recognition but lack spatial and temporal understanding; each model exhibits unique strengths and weaknesses; larger models generally perform better, though exceptions exist; and GPT4o demonstrates challenges in recognizing rotating/moving objects and distinguishing colors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2292210407",
+                    "name": "Weikai Huang"
+                },
+                {
+                    "authorId": "2149504559",
+                    "name": "Zixian Ma"
+                },
+                {
+                    "authorId": "2196005933",
+                    "name": "Oscar Michel"
+                },
+                {
+                    "authorId": "2064928598",
+                    "name": "Dong He"
+                },
+                {
+                    "authorId": "2269734955",
+                    "name": "Tanmay Gupta"
+                },
+                {
+                    "authorId": "2307443420",
+                    "name": "Wei-Chiu Ma"
+                },
+                {
+                    "authorId": "2257020375",
+                    "name": "Ali Farhadi"
+                },
+                {
+                    "authorId": "2684226",
+                    "name": "Aniruddha Kembhavi"
+                },
+                {
+                    "authorId": "2257273968",
+                    "name": "Ranjay Krishna"
+                }
+            ]
+        },
+        {
+            "paperId": "1a4c6856292b8c64d19a812a77f0aa6fd47cb96c",
+            "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework",
+            "abstract": "This technical report presents AutoGen , 1 a new framework that enables development of LLM applications using multiple agents that can converse with each other to solve tasks. AutoGen agents are customizable, conversable , and seamlessly allow human participation. They can operate in various modes that employ combinations of LLMs, human inputs, and tools. AutoGen \u2019s design offers multiple advantages: a) it gracefully navigates the strong but imperfect generation and reasoning abilities of these LLMs; b) it leverages human understanding and intelligence, while providing valuable automation through conversations between agents; c) it simplifies and unifies the implementation of complex LLM workflows as automated agent chats. We provide many diverse examples of how developers can easily use AutoGen to effectively solve tasks or build applications, ranging from coding, mathematics, operations research, entertainment, online decision-making, question answering, etc.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1777934740",
+                    "name": "Qingyun Wu"
+                },
+                {
+                    "authorId": "33340656",
+                    "name": "Gagan Bansal"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2115853457",
+                    "name": "Yiran Wu"
+                },
+                {
+                    "authorId": "2116579935",
+                    "name": "Shaokun Zhang"
+                },
+                {
+                    "authorId": "3055912",
+                    "name": "Erkang Zhu"
+                },
+                {
+                    "authorId": "3369602",
+                    "name": "Beibin Li"
+                },
+                {
+                    "authorId": "2231868268",
+                    "name": "Li Jiang"
+                },
+                {
+                    "authorId": "2232024704",
+                    "name": "Xiaoyun Zhang"
+                },
+                {
+                    "authorId": "2116627318",
+                    "name": "Chi Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "3162a6b51e38617e6916e6ab6a54e3b8680775d0",
+            "title": "EcoAssistant: Using LLM Assistant More Affordably and Accurately",
+            "abstract": "Today, users ask Large language models (LLMs) as assistants to answer queries that require external knowledge; they ask about the weather in a specific city, about stock prices, and even about where specific locations are within their neighborhood. These queries require the LLM to produce code that invokes external APIs to answer the user's question, yet LLMs rarely produce correct code on the first try, requiring iterative code refinement upon execution results. In addition, using LLM assistants to support high query volumes can be expensive. In this work, we contribute a framework, EcoAssistant, that enables LLMs to answer code-driven queries more affordably and accurately. EcoAssistant contains three components. First, it allows the LLM assistants to converse with an automatic code executor to iteratively refine code or to produce answers based on the execution results. Second, we use a hierarchy of LLM assistants, which attempts to answer the query with weaker, cheaper LLMs before backing off to stronger, expensive ones. Third, we retrieve solutions from past successful queries as in-context demonstrations to help subsequent queries. Empirically, we show that EcoAssistant offers distinct advantages for affordability and accuracy, surpassing GPT-4 by 10 points of success rate with less than 50% of GPT-4's cost.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2257273968",
+                    "name": "Ranjay Krishna"
+                },
+                {
+                    "authorId": "2072795428",
+                    "name": "A. Awadallah"
+                },
+                {
+                    "authorId": "2256289461",
+                    "name": "Chi Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "43b15205c98b5e0693f128ebdd4c57c4ba854049",
+            "title": "Cold-Start Data Selection for Better Few-shot Language Model Fine-tuning: A Prompt-based Uncertainty Propagation Approach",
+            "abstract": "We present PATRON, a prompt-based data selection method for pre-trained language model fine-tuning under cold-start scenarios, i.e., no initial labeled data are available. In PATRON, we design (1) a prompt-based uncertainty propagation approach to estimate the importance of data points and (2) a partition-then-rewrite (PTR) strategy to promote sample diversity when querying for annotations. Experiments on six text classification datasets show that PATRON outperforms the strongest cold-start data selection baselines by up to 6.9%. Besides, with 128 labels only, PATRON achieves 91.0% and 92.1% of the fully supervised performance based on vanilla fine-tuning and prompt-based learning respectively. Our implementation of PATRON will be published upon acceptance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1633124736",
+                    "name": "Yue Yu"
+                },
+                {
+                    "authorId": "46752897",
+                    "name": "Rongzhi Zhang"
+                },
+                {
+                    "authorId": "2115801998",
+                    "name": "Ran Xu"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "3363642",
+                    "name": "Jiaming Shen"
+                },
+                {
+                    "authorId": "145657504",
+                    "name": "Chao Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "4993258852711c4e3d0011325ac3db680eae84f4",
+            "title": "SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models",
+            "abstract": "Most of the existing Large Language Model (LLM) benchmarks on scientific problem reasoning focus on problems grounded in high-school subjects and are confined to elementary algebraic operations. To systematically examine the reasoning capabilities required for solving complex scientific problems, we introduce an expansive benchmark suite SciBench for LLMs. SciBench contains a carefully curated dataset featuring a range of collegiate-level scientific problems from mathematics, chemistry, and physics domains. Based on the dataset, we conduct an in-depth benchmarking study of representative open-source and proprietary LLMs with various prompting strategies. The results reveal that the current LLMs fall short of delivering satisfactory performance, with the best overall score of merely 43.22%. Furthermore, through a detailed user study, we categorize the errors made by LLMs into ten problem-solving abilities. Our analysis indicates that no single prompting strategy significantly outperforms the others and some strategies that demonstrate improvements in certain problem-solving skills could result in declines in other skills. We envision that SciBench will catalyze further developments in the reasoning abilities of LLMs, thereby ultimately contributing to scientific research and discovery.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2224092326",
+                    "name": "Xiaoxuan Wang"
+                },
+                {
+                    "authorId": "3407296",
+                    "name": "Ziniu Hu"
+                },
+                {
+                    "authorId": "2887562",
+                    "name": "Pan Lu"
+                },
+                {
+                    "authorId": "2653121",
+                    "name": "Yanqiao Zhu"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "2224018745",
+                    "name": "Satyen Subramaniam"
+                },
+                {
+                    "authorId": "2224017080",
+                    "name": "Arjun R. Loomba"
+                },
+                {
+                    "authorId": "2145408511",
+                    "name": "Shichang Zhang"
+                },
+                {
+                    "authorId": "2109461904",
+                    "name": "Yizhou Sun"
+                },
+                {
+                    "authorId": "2158624285",
+                    "name": "Wei Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "558070a76b80346049d1da3b1bd2e8a4dbf766c0",
+            "title": "Subclass-balancing Contrastive Learning for Long-tailed Recognition",
+            "abstract": "Long-tailed recognition with imbalanced class distribution naturally emerges in practical machine learning applications. Existing methods such as data reweighing, resampling, and supervised contrastive learning enforce the class balance with a price of introducing imbalance between instances of head class and tail class, which may ignore the underlying rich semantic substructures of the former and exaggerate the biases in the latter. We overcome these drawbacks by a novel \"subclass-balancing contrastive learning (SBCL)\" approach that clusters each head class into multiple subclasses of similar sizes as the tail classes and enforce representations to capture the two-layer class hierarchy between the original classes and their subclasses. Since the clustering is conducted in the representation space and updated during the course of training, the subclass labels preserve the semantic substructures of head classes. Meanwhile, it does not overemphasize tail class samples, so each individual instance contribute to the representation learning equally. Hence, our method achieves both the instance- and subclass-balance, while the original class labels are also learned through contrastive learning among subclasses from different classes. We evaluate SBCL over a list of long-tailed benchmark datasets and it achieves the state-of-the-art performance. In addition, we present extensive analyses and ablation studies of SBCL to verify its advantages. Our code is available at https://github.com/JackHck/subclass-balancing-contrastive-learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2220734428",
+                    "name": "Chengkai Hou"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "49528487",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "2213956781",
+                    "name": "Tianyi Zhou"
+                }
+            ]
+        }
+    ]
+}

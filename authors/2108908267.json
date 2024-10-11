@@ -1,0 +1,301 @@
+{
+    "authorId": "2108908267",
+    "papers": [
+        {
+            "paperId": "18981e60887244d898f00ef60738eaeae1453f76",
+            "title": "Graph-Based Tri-Attention Network for Answer Ranking in CQA",
+            "abstract": "In community-based question answering (CQA) platforms, automatic answer ranking for a given question is critical for finding potentially popular answers in early times. The mainstream approaches learn to generate answer ranking scores based on the matching degree between question and answer representations as well as the influence of respondents. However, they encounter two main limitations: (1) Correlations between answers in the same question are often overlooked. (2) Question and respondent representations are built independently of specific answers before affecting answer representations. To address the limitations, we devise a novel graph-based tri-attention network, namely GTAN, which has two innovations. First, GTAN proposes to construct a graph for each question and learn answer correlations from each graph through graph neural networks (GNNs). Second, based on the representations learned from GNNs, an alternating tri-attention method is developed to alternatively build target-aware respondent representations, answer-specific question representations, and context-aware answer representations by attention computation. GTAN finally integrates the above representations to generate answer ranking scores. Experiments on three real-world CQA datasets demonstrate GTAN significantly outperforms state-of-the-art answer ranking methods, validating the rationality of the network architecture.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155468861",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "5478513",
+                    "name": "Zeyuan Chen"
+                },
+                {
+                    "authorId": "2113540586",
+                    "name": "Chao Dong"
+                },
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                },
+                {
+                    "authorId": "2447408",
+                    "name": "Jianyong Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "ad9b8672d48eaefa67a5f7a7e7f14e3a2a7b5d72",
+            "title": "Reducing BERT Computation by Padding Removal and Curriculum Learning",
+            "abstract": "BERT [1] is very computationally expensive, which is a hurdle for its training and deployment. This work focuses on removing the unnecessary computation due to input padding in BERT. The input of BERT consists of two concatenated sentences. If the length of the two concatenated sentences is shorter than the maximum sequence length, padding must be added to the end of the sentences to fill the empty slots in the input. Because the lengths of sentences vary greatly, there can be a large amount of padding in input. For the English Wikipedia & BooksCorpus dataset, the percentage of padding among all the input tokens is 17% and 48%, respectively, when the max sequence length is set to 128 and 512. For the Chinese Wikipedia dataset, this percentage is 35% and 79%, respectively, when the max sequence length is 128 and 512. For SQuAD-v1.1 [2], padding accounts for 54% of the total input tokens when the max sequence length is 384. Thus, there is a lot of wasted computation on padding, which significantly increases the training and inference time.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144142217",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2149192554",
+                    "name": "Wei Wei"
+                },
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "2152164167",
+                    "name": "Lingling Jin"
+                },
+                {
+                    "authorId": "144332880",
+                    "name": "Zheng Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "fd7cb0b9f58b8e814e3e00cddbfe93686c276ee6",
+            "title": "Incorporating Link Prediction into Multi-Relational Item Graph Modeling for Session-Based Recommendation",
+            "abstract": "Session-based recommendation aims at predicting the next item that a user is more likely to interact with by a target behavior type. Most of the existing session-based recommendation methods focus on developing powerful representation learning approaches to model items\u2019 sequential correlations, whereas they usually encounter the following limitations. First, they only utilize sessions that belong to the target behavior type, neglecting the potential of leveraging other behavior types as auxiliary information for modeling user preference. Second, they separately model item-to-item relations for each session, overlooking to globally characterize the relations across different sessions for better item representations. To overcome these limitations, we first build a Multi-Relational Item Graph (MRIG) involving target and auxiliary behavior types over all sessions. Consequently, a novel Graph Neural Network (GNN) based model is devised to encode MRIG\u2019s item-to-item relations into target and auxiliary session-based representations, and adaptively fuse them to represent user interests. To facilitate model training, we further incorporate link prediction into multi-relational item graph modeling, acting as a simple but relevant task to session-based recommendation. The extensive experiments on real-world datasets demonstrate the superiority of the model over diverse and competitive baselines, validating its main components\u2019 significant contributions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "47528034",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2108420707",
+                    "name": "Shukai Liu"
+                },
+                {
+                    "authorId": "2157149914",
+                    "name": "Qi Liu"
+                },
+                {
+                    "authorId": "2156622354",
+                    "name": "Bo Zhang"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                }
+            ]
+        },
+        {
+            "paperId": "8a42a381be3d8bd00f8c861068f4ad90e7faa34c",
+            "title": "Group-Aware Long- and Short-Term Graph Representation Learning for Sequential Group Recommendation",
+            "abstract": "Sequential recommendation and group recommendation are two important branches in the field of recommender system. While considerable efforts have been devoted to these two branches in an independent way, we combine them by proposing the novel sequential group recommendation problem which enables modeling group dynamic representations and is crucial for achieving better group recommendation performance. The major challenge of the problem is how to effectively learn dynamic group representations based on the sequential user-item interactions of group members in the past time frames. To address this, we devise a Group-aware Long- and Short-term Graph Representation Learning approach, namely GLS-GRL, for sequential group recommendation. Specifically, for a target group, we construct a group-aware long-term graph to capture user-item interactions and item-item co-occurrence in the whole history, and a group-aware short-term graph to contain the same information regarding only the current time frame. Based on the graphs, GLS-GRL performs graph representation learning to obtain long-term and short-term user representations, and further adaptively fuse them to gain integrated user representations. Finally, group representations are obtained by a constrained user-interacted attention mechanism which encodes the correlations between group members. Comprehensive experiments demonstrate that GLS-GRL achieves better performance than several strong alternatives coming from sequential recommendation and group recommendation methods, validating the effectiveness of the core components in GLS-GRL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "47528034",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2057751674",
+                    "name": "Jun Rao"
+                },
+                {
+                    "authorId": "2053913147",
+                    "name": "Zhijie Qiu"
+                },
+                {
+                    "authorId": "2156622354",
+                    "name": "Bo Zhang"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                }
+            ]
+        },
+        {
+            "paperId": "8b716b3723b78f5ceaedcd656041e9f679dfc5b6",
+            "title": "Beyond Clicks: Modeling Multi-Relational Item Graph for Session-Based Target Behavior Prediction",
+            "abstract": "Session-based target behavior prediction aims to predict the next item to be interacted with specific behavior types (e.g., clicking). Although existing methods for session-based behavior prediction leverage powerful representation learning approaches to encode items\u2019 sequential relevance in a low-dimensional space, they suffer from several limitations. Firstly, they focus on only utilizing the same type of user behavior for prediction, but ignore the potential of taking other behavior data as auxiliary information. This is particularly crucial when the target behavior is sparse but important (e.g., buying or sharing an item). Secondly, item-to-item relations are modeled separately and locally in one behavior sequence, and they lack a principled way to globally encode these relations more effectively. To overcome these limitations, we propose a novel Multi-relational Graph Neural Network model for Session-based target behavior Prediction, namely MGNN-SPred for short. Specifically, we build a Multi-Relational Item Graph (MRIG) based on all behavior sequences from all sessions, involving target and auxiliary behavior types. Based on MRIG, MGNN-SPred learns global item-to-item relations and further obtains user preferences w.r.t. current target and auxiliary behavior sequences, respectively. In the end, MGNN-SPred leverages a gating mechanism to adaptively fuse user representations for predicting next item interacted with target behavior. The extensive experiments on two real-world datasets demonstrate the superiority of MGNN-SPred by comparing with state-of-the-art session-based prediction methods, validating the benefits of leveraging auxiliary behavior and learning item-to-item relations over MRIG.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2108420707",
+                    "name": "Shukai Liu"
+                },
+                {
+                    "authorId": "2157149914",
+                    "name": "Qi Liu"
+                },
+                {
+                    "authorId": "2156622354",
+                    "name": "Bo Zhang"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                }
+            ]
+        },
+        {
+            "paperId": "216d1eb49525d4c0b6bc58b52b903fc2313da912",
+            "title": "Learning Sequential Correlation for User Generated Textual Content Popularity Prediction",
+            "abstract": "Popularity prediction of user generated textual content is critical for prioritizing information in the web, which alleviates heavy information overload for ordinary readers. Most previous studies model each content instance separately for prediction and thus overlook the sequential correlations between instances of a specific user. In this paper, we go deeper into this problem based on the two observations for each user, i.e., sequential content correlation and sequential popularity correlation. We propose a novel deep sequential model called User Memory-augmented recurrent Attention Network (UMAN). This model encodes the two correlations by updating external user memories which is further leveraged for target text representation learning and popularity prediction. The experimental results on several real-world datasets validate the benefits of considering these correlations and demonstrate UMAN achieves best performance among several strong competitors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "40538912",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2152811374",
+                    "name": "Jun Wang"
+                },
+                {
+                    "authorId": "3063894",
+                    "name": "Junchi Yan"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                }
+            ]
+        },
+        {
+            "paperId": "43bb4b073f7b2b9b626c7f3263cc61932271ab74",
+            "title": "User-guided Hierarchical Attention Network for Multi-modal Social Image Popularity Prediction",
+            "abstract": "Popularity prediction for the growing social images has opened unprecedented opportunities for wide commercial applications, such as precision advertising and recommender system. While a few studies have explored this significant task, little research has addressed its unstructured properties of both visual and textual modalities, and further considered to learn effective representation from multi-modalities for popularity prediction. To this end, we propose a model named User-guided Hierarchical Attention Network (UHAN) with two novel user-guided attention mechanisms to hierarchically attend both visual and textual modalities. It is capable of not only learning effective representation for each modality, but also fusing them to obtain an integrated multi-modal representation under the guidance of user embedding. As no benchmark dataset exists, we extend a publicly available social image dataset by adding the descriptions of images. The comprehensive experiments have demonstrated the rationality of our proposed UHAN and its better performance than several strong alternatives.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40538912",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "2152811374",
+                    "name": "Jun Wang"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                }
+            ]
+        },
+        {
+            "paperId": "9aab620f53c779eba1b305f30ffbce9dadd36c1e",
+            "title": "Lithium-ion battery SoC estimation based on online support vector regression",
+            "abstract": "Lithium-ion battery is a typical dynamic and nonlinear electrochemical system, and common battery model can't accurately describe its characteristics of dynamic changes, nonlinear and strong coupling. The online support vector regression machine can update the model online in real time under the limited sample, and it has the global optimal and good generalization ability. The working voltage and temperature are selected as input variables, and the state of charge is used as the output variable to train the algorithm model. The simulation results show that the online support vector regression can accurately predict the state of charge of the battery compared with the BP neural network, and has higher SoC prediction accuracy and stability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155467855",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "f7b688c6a59c38c324b39fcf8fbe73c7c8d40091",
+            "title": "Combining Multiple Features for Image Popularity Prediction in Social Media",
+            "abstract": "Popularity prediction, aiming at predicting target items' total interactions with users, is a very significant type of problem and has attracted a lot of attention in recent years. It can benefit a lot of real applications, such as cold-start recommendation[8] and online advertising [4]. The Social Media Prediction Task-1 (SMP-T1) of the ACM Multimedia 2017 Grand Challenge is designed to predict popularity of photos published by users in social media. In this paper, we introduce the method adopted in this contest detailedly. It is mainly based on carefully designed features and selected regression models. We demonstrate the effectiveness of each feature proposed for this task via univariate and ablation tests by employing different models. Based on those results, we further integrate the verified useful features with the best-performing regression model to obtain final prediction results. We participated this contest with the team name \"heihei\" and ranked in the second place in the final ranking list.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "40538912",
+                    "name": "Wei Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "a5f20920528896e76e25e8532ad087708db46dde",
+            "title": "An Efficient Packet Scheduling and Resource Allocation Algorithm for Practical Multi-Layer Systems",
+            "abstract": "In this paper, we research the wireless resource allocation problem with packet scheduling in both MAC layer and physical layer in multi-user orthogonal frequency division multiplexing (OFDM) systems. Under the practical environment where mobile users receiving signal with different SNR levels in a cell or around a Wi-Fi hot spot, our designed algorithm can execute relatively fair packet scheduling from MAC layer consideration and make efficient use of wireless resources at physical layer. simulation results show that our proposed scheme satisfy most users in various SNR and have better average performance in packet drop rate, packet delay and total throughput.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047406769",
+                    "name": "Yuelong Ma"
+                },
+                {
+                    "authorId": null,
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "2108908267",
+                    "name": "Wen Wang"
+                },
+                {
+                    "authorId": "2119034632",
+                    "name": "Yuexuan Liu"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,369 @@
+{
+    "authorId": "2243336902",
+    "papers": [
+        {
+            "paperId": "3726d413766426d825734fd99e1e2bed711be9d8",
+            "title": "How JEPA Avoids Noisy Features: The Implicit Bias of Deep Linear Self Distillation Networks",
+            "abstract": "Two competing paradigms exist for self-supervised learning of data representations. Joint Embedding Predictive Architecture (JEPA) is a class of architectures in which semantically similar inputs are encoded into representations that are predictive of each other. A recent successful approach that falls under the JEPA framework is self-distillation, where an online encoder is trained to predict the output of the target encoder, sometimes using a lightweight predictor network. This is contrasted with the Masked AutoEncoder (MAE) paradigm, where an encoder and decoder are trained to reconstruct missing parts of the input in the data space rather, than its latent representation. A common motivation for using the JEPA approach over MAE is that the JEPA objective prioritizes abstract features over fine-grained pixel information (which can be unpredictable and uninformative). In this work, we seek to understand the mechanism behind this empirical observation by analyzing the training dynamics of deep linear models. We uncover a surprising mechanism: in a simplified linear setting where both approaches learn similar representations, JEPAs are biased to learn high-influence features, i.e., features characterized by having high regression coefficients. Our results point to a distinct implicit bias of predicting in latent space that may shed light on its success in practice.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1762320",
+                    "name": "Etai Littwin"
+                },
+                {
+                    "authorId": "2438203",
+                    "name": "O. Saremi"
+                },
+                {
+                    "authorId": "2306253607",
+                    "name": "Madhu Advani"
+                },
+                {
+                    "authorId": "3042871",
+                    "name": "Vimal Thilak"
+                },
+                {
+                    "authorId": "2181918",
+                    "name": "Preetum Nakkiran"
+                },
+                {
+                    "authorId": "2258866323",
+                    "name": "Chen Huang"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                }
+            ]
+        },
+        {
+            "paperId": "6253b9ca26d768813bb38e5ddfb39f0d63e47d76",
+            "title": "Overcoming the Pitfalls of Vision-Language Model Finetuning for OOD Generalization",
+            "abstract": "Existing vision-language models exhibit strong generalization on a variety of visual domains and tasks. However, such models mainly perform zero-shot recognition in a closed-set manner, and thus struggle to handle open-domain visual concepts by design. There are recent finetuning methods, such as prompt learning, that not only study the discrimination between in-distribution (ID) and out-of-distribution (OOD) samples, but also show some improvements in both ID and OOD accuracies. In this paper, we first demonstrate that vision-language models, after long enough finetuning but without proper regularization, tend to overfit the known classes in the given dataset, with degraded performance on unknown classes. Then we propose a novel approach OGEN to address this pitfall, with the main focus on improving the OOD GENeralization of finetuned models. Specifically, a class-conditional feature generator is introduced to synthesize OOD features using just the class name of any unknown class. Such synthesized features will provide useful knowledge about unknowns and help regularize the decision boundary between ID and OOD data when optimized jointly. Equally important is our adaptive self-distillation mechanism to regularize our feature generation model during joint optimization, i.e., adaptively transferring knowledge between model states to further prevent overfitting. Experiments validate that our method yields convincing gains in OOD generalization performance in different settings. Code: https://github.com/apple/ml-ogen.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "12862495",
+                    "name": "Yuhang Zang"
+                },
+                {
+                    "authorId": "2271164111",
+                    "name": "Hanlin Goh"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "2258866323",
+                    "name": "Chen Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "1ec3a3ff77cb4b424499b3805ecc90182ecd8f8b",
+            "title": "What Algorithms can Transformers Learn? A Study in Length Generalization",
+            "abstract": "Large language models exhibit surprising emergent generalization properties, yet also struggle on many simple reasoning tasks such as arithmetic and parity. This raises the question of if and when Transformer models can learn the true algorithm for solving a task. We study the scope of Transformers' abilities in the specific setting of length generalization on algorithmic tasks. Here, we propose a unifying framework to understand when and how Transformers can exhibit strong length generalization on a given task. Specifically, we leverage RASP (Weiss et al., 2021) -- a programming language designed for the computational model of a Transformer -- and introduce the RASP-Generalization Conjecture: Transformers tend to length generalize on a task if the task can be solved by a short RASP program which works for all input lengths. This simple conjecture remarkably captures most known instances of length generalization on algorithmic tasks. Moreover, we leverage our insights to drastically improve generalization performance on traditionally hard tasks (such as parity and addition). On the theoretical side, we give a simple example where the\"min-degree-interpolator\"model of learning from Abbe et al. (2023) does not correctly predict Transformers' out-of-distribution behavior, but our conjecture does. Overall, our work provides a novel perspective on the mechanisms of compositional generalization and the algorithmic capabilities of Transformers.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261393101",
+                    "name": "Hattie Zhou"
+                },
+                {
+                    "authorId": "2261389630",
+                    "name": "Arwen Bradley"
+                },
+                {
+                    "authorId": "1762320",
+                    "name": "Etai Littwin"
+                },
+                {
+                    "authorId": "1388726511",
+                    "name": "Noam Razin"
+                },
+                {
+                    "authorId": "2438203",
+                    "name": "O. Saremi"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "1751569",
+                    "name": "Samy Bengio"
+                },
+                {
+                    "authorId": "2181918",
+                    "name": "Preetum Nakkiran"
+                }
+            ]
+        },
+        {
+            "paperId": "28b8aff02f3338d60b590907872961d067002944",
+            "title": "Adaptivity and Modularity for Efficient Generalization Over Task Complexity",
+            "abstract": "Can transformers generalize efficiently on problems that require dealing with examples with different levels of difficulty? We introduce a new task tailored to assess generalization over different complexities and present results that indicate that standard transformers face challenges in solving these tasks. These tasks are variations of pointer value retrieval previously introduced by Zhang et al. (2021). We investigate how the use of a mechanism for adaptive and modular computation in transformers facilitates the learning of tasks that demand generalization over the number of sequential computation steps (i.e., the depth of the computation graph). Based on our observations, we propose a transformer-based architecture called Hyper-UT, which combines dynamic function generation from hyper networks with adaptive depth from Universal Transformers. This model demonstrates higher accuracy and a fairer allocation of computational resources when generalizing to higher numbers of computation steps. We conclude that mechanisms for adaptive depth and modularity complement each other in improving efficient generalization concerning example complexity. Additionally, to emphasize the broad applicability of our findings, we illustrate that in a standard image recognition task, Hyper- UT's performance matches that of a ViT model but with considerably reduced computational demands (achieving over 70\\% average savings by effectively using fewer layers).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2786352",
+                    "name": "Samira Abnar"
+                },
+                {
+                    "authorId": "2438203",
+                    "name": "O. Saremi"
+                },
+                {
+                    "authorId": "2257347621",
+                    "name": "Laurent Dinh"
+                },
+                {
+                    "authorId": "2258555365",
+                    "name": "Shantel Wilson"
+                },
+                {
+                    "authorId": "2258553333",
+                    "name": "Miguel Angel Bautista"
+                },
+                {
+                    "authorId": "2258866323",
+                    "name": "Chen Huang"
+                },
+                {
+                    "authorId": "3042871",
+                    "name": "Vimal Thilak"
+                },
+                {
+                    "authorId": "1762320",
+                    "name": "Etai Littwin"
+                },
+                {
+                    "authorId": "2257445437",
+                    "name": "Jiatao Gu"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "1751569",
+                    "name": "Samy Bengio"
+                }
+            ]
+        },
+        {
+            "paperId": "72883ceab65262f1e38ab1cd4262a326425488f1",
+            "title": "Vanishing Gradients in Reinforcement Finetuning of Language Models",
+            "abstract": "Pretrained language models are commonly aligned with human preferences and downstream tasks via reinforcement finetuning (RFT), which refers to maximizing a (possibly learned) reward function using policy gradient algorithms. This work identifies a fundamental optimization obstacle in RFT: we prove that the expected gradient for an input vanishes when its reward standard deviation under the model is small, even if the expected reward is far from optimal. Through experiments on an RFT benchmark and controlled environments, as well as a theoretical analysis, we then demonstrate that vanishing gradients due to small reward standard deviation are prevalent and detrimental, leading to extremely slow reward maximization. Lastly, we explore ways to overcome vanishing gradients in RFT. We find the common practice of an initial supervised finetuning (SFT) phase to be the most promising candidate, which sheds light on its importance in an RFT pipeline. Moreover, we show that a relatively small number of SFT optimization steps on as few as 1% of the input samples can suffice, indicating that the initial SFT phase need not be expensive in terms of compute and data labeling efforts. Overall, our results emphasize that being mindful for inputs whose expected gradient vanishes, as measured by the reward standard deviation, is crucial for successful execution of RFT.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1388726511",
+                    "name": "Noam Razin"
+                },
+                {
+                    "authorId": "2261393101",
+                    "name": "Hattie Zhou"
+                },
+                {
+                    "authorId": "2438203",
+                    "name": "O. Saremi"
+                },
+                {
+                    "authorId": "3042871",
+                    "name": "Vimal Thilak"
+                },
+                {
+                    "authorId": "2261389630",
+                    "name": "Arwen Bradley"
+                },
+                {
+                    "authorId": "2181918",
+                    "name": "Preetum Nakkiran"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "1762320",
+                    "name": "Etai Littwin"
+                }
+            ]
+        },
+        {
+            "paperId": "7b5072d0012215900eda8e604e0bad221ef43a04",
+            "title": "When can transformers reason with abstract symbols?",
+            "abstract": "We investigate the capabilities of transformer models on relational reasoning tasks. In these tasks, models are trained on a set of strings encoding abstract relations, and are then tested out-of-distribution on data that contains symbols that did not appear in the training dataset. We prove that for any relational reasoning task in a large family of tasks, transformers learn the abstract relations and generalize to the test set when trained by gradient descent on sufficiently large quantities of training data. This is in contrast to classical fully-connected networks, which we prove fail to learn to reason. Our results inspire modifications of the transformer architecture that add only two trainable parameters per head, and that we empirically demonstrate improve data efficiency for learning to reason.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1417543476",
+                    "name": "Enric Boix-Adser\u00e0"
+                },
+                {
+                    "authorId": "2438203",
+                    "name": "O. Saremi"
+                },
+                {
+                    "authorId": "2258723954",
+                    "name": "Emmanuel Abbe"
+                },
+                {
+                    "authorId": "1751569",
+                    "name": "Samy Bengio"
+                },
+                {
+                    "authorId": "1762320",
+                    "name": "Etai Littwin"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                }
+            ]
+        },
+        {
+            "paperId": "8003ba6db7cf713dfb7ac8a204e26c3794cd29a4",
+            "title": "LiDAR: Sensing Linear Probing Performance in Joint Embedding SSL Architectures",
+            "abstract": "Joint embedding (JE) architectures have emerged as a promising avenue for acquiring transferable data representations. A key obstacle to using JE methods, however, is the inherent challenge of evaluating learned representations without access to a downstream task, and an annotated dataset. Without efficient and reliable evaluation, it is difficult to iterate on architectural and training choices for JE methods. In this paper, we introduce LiDAR (Linear Discriminant Analysis Rank), a metric designed to measure the quality of representations within JE architectures. Our metric addresses several shortcomings of recent approaches based on feature covariance rank by discriminating between informative and uninformative features. In essence, LiDAR quantifies the rank of the Linear Discriminant Analysis (LDA) matrix associated with the surrogate SSL task -- a measure that intuitively captures the information content as it pertains to solving the SSL task. We empirically demonstrate that LiDAR significantly surpasses naive rank based approaches in its predictive power of optimal hyperparameters. Our proposed criterion presents a more robust and intuitive means of assessing the quality of representations within JE architectures, which we hope facilitates broader adoption of these powerful techniques in various domains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3042871",
+                    "name": "Vimal Thilak"
+                },
+                {
+                    "authorId": "2258866323",
+                    "name": "Chen Huang"
+                },
+                {
+                    "authorId": "2438203",
+                    "name": "O. Saremi"
+                },
+                {
+                    "authorId": "2257347621",
+                    "name": "Laurent Dinh"
+                },
+                {
+                    "authorId": "2271164111",
+                    "name": "Hanlin Goh"
+                },
+                {
+                    "authorId": "2181918",
+                    "name": "Preetum Nakkiran"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "1762320",
+                    "name": "Etai Littwin"
+                }
+            ]
+        },
+        {
+            "paperId": "bb86a2592e9efa196aefd6bbc39bf62a3202e9db",
+            "title": "Construction of Paired Knowledge Graph - Text Datasets Informed by Cyclic Evaluation",
+            "abstract": "Datasets that pair Knowledge Graphs (KG) and text together (KG-T) can be used to train forward and reverse neural models that generate text from KG and vice versa. However models trained on datasets where KG and text pairs are not equivalent can suffer from more hallucination and poorer recall. In this paper, we verify this empirically by generating datasets with different levels of noise and find that noisier datasets do indeed lead to more hallucination. We argue that the ability of forward and reverse models trained on a dataset to cyclically regenerate source KG or text is a proxy for the equivalence between the KG and the text in the dataset. Using cyclic evaluation we find that manually created WebNLG is much better than automatically created TeKGen and T-REx. Informed by these observations, we construct a new, improved dataset called LAGRANGE using heuristics meant to improve equivalence between KG and text and show the impact of each of the heuristics on cyclic evaluation. We also construct two synthetic datasets using large language models (LLMs), and observe that these are conducive to models that perform significantly well on cyclic generation of text, but less so on cyclic generation of KGs, probably because of a lack of a consistent underlying ontology.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2243336632",
+                    "name": "Ali Mousavi"
+                },
+                {
+                    "authorId": "2243337763",
+                    "name": "Xin Zhan"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2243340600",
+                    "name": "Peng Shi"
+                },
+                {
+                    "authorId": "2243336634",
+                    "name": "Theo Rekatsinas"
+                },
+                {
+                    "authorId": "2243377351",
+                    "name": "Benjamin Han"
+                },
+                {
+                    "authorId": "1718694",
+                    "name": "Yunyao Li"
+                },
+                {
+                    "authorId": "2243336030",
+                    "name": "Jeff Pound"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "2243335295",
+                    "name": "Natalie Schluter"
+                },
+                {
+                    "authorId": "2243335549",
+                    "name": "Ihab Ilyas"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "ca6fb9d804aa339c0ba686545ddb78d4c5e45e02",
+            "title": "Boolformer: Symbolic Regression of Logic Functions with Transformers",
+            "abstract": "In this work, we introduce Boolformer, the first Transformer architecture trained to perform end-to-end symbolic regression of Boolean functions. First, we show that it can predict compact formulas for complex functions which were not seen during training, when provided a clean truth table. Then, we demonstrate its ability to find approximate expressions when provided incomplete and noisy observations. We evaluate the Boolformer on a broad set of real-world binary classification datasets, demonstrating its potential as an interpretable alternative to classic machine learning methods. Finally, we apply it to the widespread task of modelling the dynamics of gene regulatory networks. Using a recent benchmark, we show that Boolformer is competitive with state-of-the art genetic algorithms with a speedup of several orders of magnitude. Our code and models are available publicly.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1400419176",
+                    "name": "St\u00e9phane d'Ascoli"
+                },
+                {
+                    "authorId": "1751569",
+                    "name": "Samy Bengio"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "2243404202",
+                    "name": "Emmanuel Abb'e"
+                }
+            ]
+        }
+    ]
+}

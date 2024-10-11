@@ -1,0 +1,405 @@
+{
+    "authorId": "152891495",
+    "papers": [
+        {
+            "paperId": "6f4e3be27fe55e34ceaed37cddf1d51176e3f25b",
+            "title": "Improving Out-of-Vocabulary Handling in Recommendation Systems",
+            "abstract": "Recommendation systems (RS) are an increasingly relevant area for both academic and industry researchers, given their widespread impact on the daily online experiences of billions of users. One common issue in real RS is the cold-start problem, where users and items may not contain enough information to produce high-quality recommendations. This work focuses on a complementary problem: recommending new users and items unseen (out-of-vocabulary, or OOV) at training time. This setting is known as the inductive setting and is especially problematic for factorization-based models, which rely on encoding only those users/items seen at training time with fixed parameter vectors. Many existing solutions applied in practice are often naive, such as assigning OOV users/items to random buckets. In this work, we tackle this problem and propose approaches that better leverage available user/item features to improve OOV handling at the embedding table level. We discuss general-purpose plug-and-play approaches that are easily applicable to most RS models and improve inductive performance without negatively impacting transductive model performance. We extensively evaluate 9 OOV embedding methods on 5 models across 4 datasets (spanning different domains). One of these datasets is a proprietary production dataset from a prominent RS employed by a large social platform serving hundreds of millions of daily active users. In our experiments, we find that several proposed methods that exploit feature similarity using LSH consistently outperform alternatives on most model-dataset combinations, with the best method showing a mean improvement of 3.74% over the industry standard baseline in inductive performance. We release our code and hope our work helps practitioners make more informed decisions when handling OOV for their RS and further inspires academic research into improving OOV support in RS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2094369655",
+                    "name": "William Shiao"
+                },
+                {
+                    "authorId": "67171225",
+                    "name": "Mingxuan Ju"
+                },
+                {
+                    "authorId": "2293659373",
+                    "name": "Zhichun Guo"
+                },
+                {
+                    "authorId": "2294001965",
+                    "name": "Xin Chen"
+                },
+                {
+                    "authorId": "3000659",
+                    "name": "E. Papalexakis"
+                },
+                {
+                    "authorId": "2256340293",
+                    "name": "Tong Zhao"
+                },
+                {
+                    "authorId": "2253409421",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "c18490d73d1cca3e686867d5693b836d26196af2",
+            "title": "Node Duplication Improves Cold-start Link Prediction",
+            "abstract": "Graph Neural Networks (GNNs) are prominent in graph machine learning and have shown state-of-the-art performance in Link Prediction (LP) tasks. Nonetheless, recent studies show that GNNs struggle to produce good results on low-degree nodes despite their overall strong performance. In practical applications of LP, like recommendation systems, improving performance on low-degree nodes is critical, as it amounts to tackling the cold-start problem of improving the experiences of users with few observed interactions. In this paper, we investigate improving GNNs' LP performance on low-degree nodes while preserving their performance on high-degree nodes and propose a simple yet surprisingly effective augmentation technique called NodeDup. Specifically, NodeDup duplicates low-degree nodes and creates links between nodes and their own duplicates before following the standard supervised LP training scheme. By leveraging a ''multi-view'' perspective for low-degree nodes, NodeDup shows significant LP performance improvements on low-degree nodes without compromising any performance on high-degree nodes. Additionally, as a plug-and-play augmentation module, NodeDup can be easily applied to existing GNNs with very light computational cost. Extensive experiments show that NodeDup achieves 38.49%, 13.34%, and 6.76% improvements on isolated, low-degree, and warm nodes, respectively, on average across all datasets compared to GNNs and state-of-the-art cold-start methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109411071",
+                    "name": "Zhichun Guo"
+                },
+                {
+                    "authorId": "2256340293",
+                    "name": "Tong Zhao"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "2124716703",
+                    "name": "Kaiwen Dong"
+                },
+                {
+                    "authorId": "2094369655",
+                    "name": "William Shiao"
+                },
+                {
+                    "authorId": "2253409421",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "144539424",
+                    "name": "N. Chawla"
+                }
+            ]
+        },
+        {
+            "paperId": "cc9719ffd47c5cdac5ce0993b911d1788f81d263",
+            "title": "How Does Message Passing Improve Collaborative Filtering?",
+            "abstract": "Collaborative filtering (CF) has exhibited prominent results for recommender systems and been broadly utilized for real-world applications. A branch of research enhances CF methods by message passing used in graph neural networks, due to its strong capabilities of extracting knowledge from graph-structured data, like user-item bipartite graphs that naturally exist in CF. They assume that message passing helps CF methods in a manner akin to its benefits for graph-based learning tasks in general. However, even though message passing empirically improves CF, whether or not this assumption is correct still needs verification. To address this gap, we formally investigate why message passing helps CF from multiple perspectives and show that many assumptions made by previous works are not entirely accurate. With our curated ablation studies and theoretical analyses, we discover that (1) message passing improves the CF performance primarily by additional representations passed from neighbors during the forward pass instead of additional gradient updates to neighbor representations during the model back-propagation and (ii) message passing usually helps low-degree nodes more than high-degree nodes. Utilizing these novel findings, we present Test-time Aggregation for CF, namely TAG-CF, a test-time augmentation framework that only conducts message passing once at inference time. The key novelty of TAG-CF is that it effectively utilizes graph knowledge while circumventing most of notorious computational overheads of message passing. Besides, TAG-CF is extremely versatile can be used as a plug-and-play module to enhance representations trained by different CF supervision signals. Evaluated on six datasets, TAG-CF consistently improves the recommendation performance of CF methods without graph by up to 39.2% on cold users and 31.7% on all users, with little to no extra computational overheads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "67171225",
+                    "name": "Mingxuan Ju"
+                },
+                {
+                    "authorId": "2094369655",
+                    "name": "William Shiao"
+                },
+                {
+                    "authorId": "2293659373",
+                    "name": "Zhichun Guo"
+                },
+                {
+                    "authorId": "2256127487",
+                    "name": "Yanfang Ye"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "2253409421",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "2256340293",
+                    "name": "Tong Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "f01209a34414728ad73c77c9d0b2869adab26bba",
+            "title": "USE: Dynamic User Modeling with Stateful Sequence Models",
+            "abstract": "User embeddings play a crucial role in user engagement forecasting and personalized services. Recent advances in sequence modeling have sparked interest in learning user embeddings from behavioral data. Yet behavior-based user embedding learning faces the unique challenge of dynamic user modeling. As users continuously interact with the apps, user embeddings should be periodically updated to account for users' recent and long-term behavior patterns. Existing methods highly rely on stateless sequence models that lack memory of historical behavior. They have to either discard historical data and use only the most recent data or reprocess the old and new data jointly. Both cases incur substantial computational overhead. To address this limitation, we introduce User Stateful Embedding (USE). USE generates user embeddings and reflects users' evolving behaviors without the need for exhaustive reprocessing by storing previous model states and revisiting them in the future. Furthermore, we introduce a novel training objective named future W-behavior prediction to transcend the limitations of next-token prediction by forecasting a broader horizon of upcoming user behaviors. By combining it with the Same User Prediction, a contrastive learning-based objective that predicts whether different segments of behavior sequences belong to the same user, we further improve the embeddings' distinctiveness and representativeness. We conducted experiments on 8 downstream tasks using Snapchat users' behavioral logs in both static (i.e., fixed user behavior sequences) and dynamic (i.e., periodically updated user behavior sequences) settings. We demonstrate USE's superior performance over established baselines. The results underscore USE's effectiveness and efficiency in integrating historical and recent user behavior sequences into user embeddings in dynamic user modeling.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2274054723",
+                    "name": "Zhihan Zhou"
+                },
+                {
+                    "authorId": "2292259605",
+                    "name": "Qixiang Fang"
+                },
+                {
+                    "authorId": "2264393824",
+                    "name": "Leonardo Neves"
+                },
+                {
+                    "authorId": "2261279445",
+                    "name": "Francesco Barbieri"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "2118960667",
+                    "name": "Han Liu"
+                },
+                {
+                    "authorId": "2261281146",
+                    "name": "Maarten W. Bos"
+                },
+                {
+                    "authorId": "2275247468",
+                    "name": "Ron Dotsch"
+                }
+            ]
+        },
+        {
+            "paperId": "f793a3e88039ecc8d4b88437434c43295f9c76b5",
+            "title": "Robust Training Objectives Improve Embedding-based Retrieval in Industrial Recommendation Systems",
+            "abstract": "Improving recommendation systems (RS) can greatly enhance the user experience across many domains, such as social media. Many RS utilize embedding-based retrieval (EBR) approaches to retrieve candidates for recommendation. In an EBR system, the embedding quality is key. According to recent literature, self-supervised multitask learning (SSMTL) has showed strong performance on academic benchmarks in embedding learning and resulted in an overall improvement in multiple downstream tasks, demonstrating a larger resilience to the adverse conditions between each downstream task and thereby increased robustness and task generalization ability through the training objective. However, whether or not the success of SSMTL in academia as a robust training objectives translates to large-scale (i.e., over hundreds of million users and interactions in-between) industrial RS still requires verification. Simply adopting academic setups in industrial RS might entail two issues. Firstly, many self-supervised objectives require data augmentations (e.g., embedding masking/corruption) over a large portion of users and items, which is prohibitively expensive in industrial RS. Furthermore, some self-supervised objectives might not align with the recommendation task, which might lead to redundant computational overheads or negative transfer. In light of these two challenges, we evaluate using a robust training objective, specifically SSMTL, through a large-scale friend recommendation system on a social media platform in the tech sector, identifying whether this increase in robustness can work at scale in enhancing retrieval in the production setting. Through online A/B testing with SSMTL-based EBR, we observe statistically significant increases in key metrics in the friend recommendations, with up to 5.45% improvements in new friends made and 1.91% improvements in new friends made with cold-start users.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114418246",
+                    "name": "Matthew Kolodner"
+                },
+                {
+                    "authorId": "2322440668",
+                    "name": "Mingxuan Ju"
+                },
+                {
+                    "authorId": "2310859385",
+                    "name": "Zihao Fan"
+                },
+                {
+                    "authorId": "2312181809",
+                    "name": "Tong Zhao"
+                },
+                {
+                    "authorId": "2313097226",
+                    "name": "Elham Ghazizadeh"
+                },
+                {
+                    "authorId": "2310896585",
+                    "name": "Yan Wu"
+                },
+                {
+                    "authorId": "2310871156",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "089a54ad426d1552622b6da87e8e0946ac074bb1",
+            "title": "Graph Transformers for Large Graphs",
+            "abstract": "Transformers have recently emerged as powerful neural networks for graph learning, showcasing state-of-the-art performance on several graph property prediction tasks. However, these results have been limited to small-scale graphs, where the computational feasibility of the global attention mechanism is possible. The next goal is to scale up these architectures to handle very large graphs on the scale of millions or even billions of nodes. With large-scale graphs, global attention learning is proven impractical due to its quadratic complexity w.r.t. the number of nodes. On the other hand, neighborhood sampling techniques become essential to manage large graph sizes, yet finding the optimal trade-off between speed and accuracy with sampling techniques remains challenging. This work advances representation learning on single large-scale graphs with a focus on identifying model characteristics and critical design constraints for developing scalable graph transformer (GT) architectures. We argue such GT requires layers that can adeptly learn both local and global graph representations while swiftly sampling the graph topology. As such, a key innovation of this work lies in the creation of a fast neighborhood sampling technique coupled with a local attention mechanism that encompasses a 4-hop reception field, but achieved through just 2-hop operations. This local node embedding is then integrated with a global node embedding, acquired via another self-attention layer with an approximate global codebook, before finally sent through a downstream layer for node predictions. The proposed GT framework, named LargeGT, overcomes previous computational bottlenecks and is validated on three large-scale node classification benchmarks. We report a 3x speedup and 16.8% performance gain on ogbn-products and snap-patents, while we also scale LargeGT on ogbn-papers100M with a 5.9% performance improvement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51235219",
+                    "name": "Vijay Prakash Dwivedi"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "1755919",
+                    "name": "A. Luu"
+                },
+                {
+                    "authorId": "2279831845",
+                    "name": "Xavier Bresson"
+                },
+                {
+                    "authorId": "2253409421",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "2256340293",
+                    "name": "Tong Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "421124db6a7901fc1933bf984c1e5ff5fdc27225",
+            "title": "Embedding Based Retrieval in Friend Recommendation",
+            "abstract": "Friend recommendation systems in online social and professional networks such as Snapchat helps users find friends and build connections, leading to better user engagement and retention. Traditional friend recommendation systems take advantage of the principle of locality and use graph traversal to retrieve friend candidates, e.g. Friends-of-Friends (FoF). While this approach has been adopted and shown efficacy in companies with large online networks such as Linkedin and Facebook, it suffers several challenges: (i) discrete graph traversal offers limited reach in cold-start settings, (ii) it is expensive and infeasible in realtime settings beyond 1 or 2 hop requests owing to latency constraints, and (iii) it cannot well-capture the complexity of graph topology or connection strengths, forcing one to resort to other mechanisms to rank and find top-K candidates. In this paper, we proposed a new Embedding Based Retrieval (EBR) system for retrieving friend candidates, which complements the traditional FoF retrieval by retrieving candidates beyond 2-hop, and providing a natural way to rank FoF candidates. Through online A/B test, we observe statistically significant improvements in the number of friendships made with EBR as an additional retrieval source in both low- and high-density network markets. Our contributions in this work include deploying a novel retrieval system to a large-scale friend recommendation system at Snapchat, generating embeddings for billions of users using Graph Neural Networks, and building EBR infrastructure in production to support Snapchat scale.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2223893005",
+                    "name": "Jiahui Shi"
+                },
+                {
+                    "authorId": "2226063688",
+                    "name": "Vivek Chaurasiya"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "2223762996",
+                    "name": "Shubham Vij"
+                },
+                {
+                    "authorId": "83331194",
+                    "name": "Y. Wu"
+                },
+                {
+                    "authorId": "2892275",
+                    "name": "Satya Kanduri"
+                },
+                {
+                    "authorId": "2153429147",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "2223884564",
+                    "name": "Peicheng Yu"
+                },
+                {
+                    "authorId": "2223768936",
+                    "name": "Nik Srivastava"
+                },
+                {
+                    "authorId": "2117206743",
+                    "name": "Lei Shi"
+                },
+                {
+                    "authorId": "2058606101",
+                    "name": "Ganesh Venkataraman"
+                },
+                {
+                    "authorId": "28584977",
+                    "name": "Junliang Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "444766f77e2109fe17fded1363f3dbbe5719dfa9",
+            "title": "Graph Explicit Neural Networks: Explicitly Encoding Graphs for Efficient and Accurate Inference",
+            "abstract": "As the state-of-the-art graph learning models, the message passing based neural networks (MPNNs) implicitly use the graph topology as the \"pathways\" to propagate node features. This implicit use of graph topology induces the MPNNs' over-reliance on (node) features and high inference latency, which hinders their large-scale applications in industrial contexts. To mitigate these weaknesses, we propose the Graph Explicit Neural Network (GENN) framework. GENN can be flexibly applied to various MPNNs and improves them by providing more efficient and accurate inference that is robust in feature-constrained settings. Specifically, we carefully incorporate recent developments in network embedding methods to efficiently prioritize the graph topology for inference. From this vantage, GENN explicitly encodes the topology as an important source of information to mitigate the reliance on node features. Moreover, by adopting knowledge distillation (KD) techniques, GENN takes an MPNN as the teacher to supervise the training for better effectiveness while avoiding the teacher's high inference latency. Empirical results show that our GENN infers dramatically faster than its MPNN teacher by 40x-78x. In terms of accuracy, GENN yields significant gains (more than 40%) for its MPNN teacher when the node features are limited based on our explicit encoding. Moreover, GENN outperforms the MPNN teacher even in feature-rich settings thanks to our KD design.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108841625",
+                    "name": "Yiwei Wang"
+                },
+                {
+                    "authorId": "2019961",
+                    "name": "Bryan Hooi"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "2153429147",
+                    "name": "Neil Shah"
+                }
+            ]
+        },
+        {
+            "paperId": "5b5b2822260ce15514eb2fafd85180706a4e2a4f",
+            "title": "Context-Aware Prediction of User Engagement on Online Social Platforms",
+            "abstract": "The success of online social platforms hinges on their ability to predict and understand user behavior at scale. Here, we present data suggesting that context-aware modeling approaches may offer a holistic yet lightweight and potentially privacy-preserving representation of user engagement on online social platforms. Leveraging deep LSTM neural networks to analyze more than 100 million Snapchat sessions from almost 80.000 users, we demonstrate that patterns of active and passive use are predictable from past behavior (R2=0.345) and that the integration of context features substantially improves predictive performance compared to the behavioral baseline model (R2=0.522). Features related to smartphone connectivity status, location, temporal context, and weather were found to capture non-redundant variance in user engagement relative to features derived from histories of in-app behaviors. Further, we show that a large proportion of variance can be accounted for with minimal behavioral histories if momentary context is considered (R2=0.442). These results indicate the potential of context-aware approaches for making models more efficient and privacy-preserving by reducing the need for long data histories. Finally, we employ model explainability techniques to glean preliminary insights into the underlying behavioral mechanisms. Our findings are consistent with the notion of context-contingent, habit-driven patterns of active and passive use, underscoring the value of contextualized representations of user behavior for predicting user engagement on social platforms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057327151",
+                    "name": "Heinrich Peters"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "2261279445",
+                    "name": "Francesco Barbieri"
+                },
+                {
+                    "authorId": "9258471",
+                    "name": "Raiyan Abdul Baten"
+                },
+                {
+                    "authorId": "2243179678",
+                    "name": "S. C. Matz"
+                },
+                {
+                    "authorId": "2261281146",
+                    "name": "Maarten W. Bos"
+                }
+            ]
+        },
+        {
+            "paperId": "7129d61b007bd0ddfc9615ee3c8dc53cebe773be",
+            "title": "General-Purpose User Modeling with Behavioral Logs: A Snapchat Case Study",
+            "abstract": "Learning general-purpose user representations based on user behavioral logs is an increasingly popular user modeling approach. It benefits from easily available, privacy-friendly yet expressive data, and does not require extensive re-tuning of the upstream user model for different downstream tasks. While this approach has shown promise in search engines and e-commerce applications, its fit for instant messaging platforms, a cornerstone of modern digital communication, remains largely uncharted. We explore this research gap using Snapchat data as a case study. Specifically, we implement a Transformer-based user model with customized training objectives and show that the model can produce high-quality user representations across a broad range of evaluation tasks, among which we introduce three new downstream tasks that concern pivotal topics in user research: user safety, engagement and churn. We also tackle the challenge of efficient extrapolation of long sequences at inference time, by applying a novel positional encoding method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720986506",
+                    "name": "Qixiang Fang"
+                },
+                {
+                    "authorId": "2274054723",
+                    "name": "Zhihan Zhou"
+                },
+                {
+                    "authorId": "2261279445",
+                    "name": "Francesco Barbieri"
+                },
+                {
+                    "authorId": "152891495",
+                    "name": "Yozen Liu"
+                },
+                {
+                    "authorId": "2264393824",
+                    "name": "Leonardo Neves"
+                },
+                {
+                    "authorId": "2275996283",
+                    "name": "Dong Nguyen"
+                },
+                {
+                    "authorId": "2140937833",
+                    "name": "D. Oberski"
+                },
+                {
+                    "authorId": "2261281146",
+                    "name": "Maarten W. Bos"
+                },
+                {
+                    "authorId": "2275247468",
+                    "name": "Ron Dotsch"
+                }
+            ]
+        }
+    ]
+}

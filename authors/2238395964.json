@@ -1,0 +1,69 @@
+{
+    "authorId": "2238395964",
+    "papers": [
+        {
+            "paperId": "0d5745bf3072671e37f405c092d99433985aa3d3",
+            "title": "Learning Compact Compositional Embeddings via Regularized Pruning for Recommendation",
+            "abstract": "Latent factor models are the dominant backbones of contemporary recommender systems (RSs) given their performance advantages, where a unique vector embedding with a fixed dimensionality (e.g., 128) is required to represent each entity (commonly a user/item). Due to the large number of users and items on e-commerce sites, the embedding table is arguably the least memory-efficient component of RSs. For any lightweight recommender that aims to efficiently scale with the growing size of users/items or to remain applicable in resource-constrained settings, existing solutions either reduce the number of embeddings needed via hashing, or sparsify the full embedding table to switch off selected embedding dimensions. However, as hash collision arises or embeddings become overly sparse, especially when adapting to a tighter memory budget, those lightweight recommenders inevitably have to compromise their accuracy. To this end, we propose a novel compact embedding framework for RSs, namely Compositional Embedding with Regularized Pruning (CERP). Specifically, CERP represents each entity by combining a pair of embeddings from two independent, substantially smaller meta-embedding tables, which are then jointly pruned via a learnable element-wise threshold. In addition, we innovatively design a regularized pruning mechanism in CERP, such that the two sparsified meta-embedding tables are encouraged to encode information that is mutually complementary. Given the compatibility with agnostic latent factor models, we pair CERP with two popular recommendation models for extensive experiments, where results on two real-world datasets under different memory budgets demonstrate its superiority against state-of-the-art baselines. The codebase of CERP is available in https://github.com/xurong-lianyCERP.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2238394188",
+                    "name": "Xurong Liang"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2238395964",
+                    "name": "Jianxin Li"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "75c71251149947a5e3d9ac2e42b3dff466af4ab0",
+            "title": "Hide Your Model: A Parameter Transmission-free Federated Recommender System",
+            "abstract": "With the growing concerns regarding user data privacy, Federated Recommender System (FedRec) has garnered significant attention recently due to its privacy-preserving capabilities. Existing FedRecs generally adhere to a learning protocol in which a central server shares a global recommendation model with clients, and participants achieve collaborative learning by frequently communicating the model's public parameters. Nevertheless, this learning framework has two drawbacks that limit its practical usability: (1) It necessitates a global-sharing recommendation model; however, in real-world scenarios, information related to the recommendation model, including its algorithm and parameters, constitutes the platforms' intellectual property. Hence, service providers are unlikely to release such information actively. (2) The communication costs of model parameter transmission are expensive since the model parameters are usually high-dimensional matrices. With the model size increasing, the communication burden will be the bottleneck for such traditional FedRecs. Given the above limitations, this paper introduces a novel parameter transmission-free federated recommendation framework that balances the protection between users' data privacy and platforms' model privacy, namely PTF-FedRec. Unlike traditional FedRecs, participants in PTF-FedRec collaboratively exchange knowledge by sharing their predictions within a privacy-preserving mechanism. Through this approach, the central server can learn a recommender model without disclosing its model parameters or accessing clients' raw data, preserving both the server's model privacy and users' data privacy. Besides, since clients and the central server only need to communicate prediction scores which are just a few real numbers, the communication overhead is significantly reduced compared to traditional FedRecs. Extensive experiments conducted on three commonly used recommendation datasets with three recommendation models demonstrate the effectiveness, efficiency, and generalization of our proposed federated recommendation framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "2248231751",
+                    "name": "Quoc Viet Hung Nguyen"
+                },
+                {
+                    "authorId": "2238395964",
+                    "name": "Jianxin Li"
+                },
+                {
+                    "authorId": "2260297841",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        }
+    ]
+}

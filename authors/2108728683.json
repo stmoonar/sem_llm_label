@@ -1,0 +1,370 @@
+{
+    "authorId": "2108728683",
+    "papers": [
+        {
+            "paperId": "648ffe6ff511d8fbddf2a356855e5e5cd40bc43d",
+            "title": "A New Mechanism for Eliminating Implicit Conflict in Graph Contrastive Learning",
+            "abstract": "Graph contrastive learning (GCL) has attracted considerable attention because it can self-supervisedly extract low-dimensional representation of graph data. InfoNCE-based loss function is widely used in graph contrastive learning, which pulls the representations of positive pairs close to each other and pulls the representations of negative pairs away from each other. Recent works mainly focus on designing new augmentation methods or sampling strategies. However, we argue that the widely used InfoNCE-based methods may contain an implicit conflict which seriously confuses models when learning from negative pairs. This conflict is engendered by the encoder's message-passing mechanism and the InfoNCE loss function. As a result, the learned representations between negative samples cannot be far away from each other, compromising the model performance. To our best knowledge, this is the first time to report and analysis this conflict of GCL. To address this problem, we propose a simple but effective method called Partial ignored Graph Contrastive Learning (PiGCL). Specifically, PiGCL first dynamically captures the conflicts during training by detecting the gradient of representation similarities. It then enables the loss function to ignore the conflict, allowing the encoder to adaptively learn the ignored information without self-supervised samples. Extensive experiments demonstrate the effectiveness of our method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2293422204",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2230259009",
+                    "name": "Jitao Zhao"
+                },
+                {
+                    "authorId": "2106771001",
+                    "name": "Cuiying Huo"
+                },
+                {
+                    "authorId": "2293653375",
+                    "name": "Yongqi Huang"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "2287699649",
+                    "name": "Zhiyong Feng"
+                }
+            ]
+        },
+        {
+            "paperId": "54d29a4cf71eabb6b17fbeca46e19084bc46ef55",
+            "title": "Contrastive Learning Meets Homophily: Two Birds with One Stone",
+            "abstract": "Graph Contrastive Learning (GCL) has recently enjoyed great success as an efficient self-supervised representation learning approach. However, the existing methods have focused on designing of contrastive modes and used data augmentation with a rigid and inefficient one-to-one sampling strategy. We adopted node neighborhoods to extend positive samplings and made avoided resorting to data augmentation to create different views. We also considered the homophily problem in Graph Neural Networks (GNNs) between the inter-class node pairs. The key novelty of our method hinged upon analyzing this GNNs problem and integrating the GCL sampling strategy with homophily discrimination, where we solved these two significant problems using one approach. We introduced a new parameterized neighbor sampling component to replace the conventional sub-optimal samplings. By keeping and updating the neighbor sets, both the positive sampling of GCL and the message passing of GNNs can be optimized. Moreover, we theoretically proved that the new method provided a lower bound of mutual information for unsupervised semantic learning, and it can also keep the lower bound with downstream tasks. In essence, our method is a new self-supervised approach, which we refer to as group discrimination, and it can make the downstream fine-tuning efficient. Our extensive empirical results demonstrate that the new method can significantly outperform the existing GCL methods because the former can solve the homophily problem in a self-supervised",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2230259009",
+                    "name": "Jitao Zhao"
+                },
+                {
+                    "authorId": "47630357",
+                    "name": "Ruixing Guo"
+                },
+                {
+                    "authorId": "2152084654",
+                    "name": "Zhiyong Feng"
+                },
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "2188012894",
+                    "name": "Zhen Wang"
+                },
+                {
+                    "authorId": "49039416",
+                    "name": "Weixiong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "f98ce3517924c03ef82528fb05958934cb97d8d8",
+            "title": "Trafformer: Unify Time and Space in Traffic Prediction",
+            "abstract": "Traffic prediction is an important component of the intelligent transportation system. Existing deep learning methods encode temporal information and spatial information separately or iteratively. However, the spatial and temporal information is highly correlated in a traffic network, so existing methods may not learn the complex spatial-temporal dependencies hidden in the traffic network due to the decomposed model design. To overcome this limitation, we propose a new model named Trafformer, which unifies spatial and temporal information in one transformer-style model. Trafformer enables every node at every timestamp interact with every other node in every other timestamp in just one step in the spatial-temporal correlation matrix. This design enables Trafformer to catch complex spatial-temporal dependencies. Following the same design principle, we use the generative style decoder to predict multiple timestamps in only one forward operation instead of the iterative style decoder in Transformer. Furthermore, to reduce the complexity brought about by the huge spatial-temporal self-attention matrix, we also propose two variants of Trafformer to further improve the training and inference speed without losing much effectivity. Extensive experiments on two traffic datasets demonstrate that Trafformer outperforms existing methods and provides a promising future direction for the spatial-temporal traffic prediction problem.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2221795887",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2176667091",
+                    "name": "Jiayi Shi"
+                },
+                {
+                    "authorId": "2222518321",
+                    "name": "Rui Wang"
+                },
+                {
+                    "authorId": "2222317038",
+                    "name": "Yawen Li"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "2020008",
+                    "name": "Yubin Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "095b8205d93a890025460031adc7f51e312c7454",
+            "title": "Graph Neural Network for Higher-Order Dependency Networks",
+            "abstract": "Graph neural network (GNN) has become a popular tool to analyze the graph data. Existing GNNs only focus on networks with first-order dependency, that is, conventional networks following the Markov property. However, many networks in real life own the higher-order dependency, such as click-stream data where the choice of the next page depends not only on the current page but also on previous pages. This kind of sequential data from complex systems (including natural dependencies) are often ignored by existing GNNs which makes them ineffective. To address this problem, we propose for the first time new GNN approaches for higher-order networks in this paper. First, we form sequence fragments by the current node and its predecessor nodes of different orders as candidate higher-order dependencies. When the fragment significantly affects the probability distribution of different successor nodes of the current node, we include it in the higher-order dependency set. We formulize the network with higher-order dependency as an augmented conventional first-order network, and then feed it into GNNs to derive network embeddings. Moreover, we further propose a new end-to-end GNN framework for dealing with higher-order networks directly in the model. Specifically, the higher-order dependency is used as the neighbor aggregation controller when the node is embedded and updated. In the graph convolutional layer, in addition to the first-order neighbor information, we also aggregate the middle node information from the higher-order dependency segment. We finally test the new approaches on three real networks with higher-order dependency, and compare with some state-of-the-art methods. The results show significant improvements of the new approaches which consider higher-order dependency.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "12698618",
+                    "name": "Yingli Gong"
+                },
+                {
+                    "authorId": "2163669096",
+                    "name": "Zhiqiang Wang"
+                },
+                {
+                    "authorId": "12073135",
+                    "name": "Zhizhi Yu"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "65779026",
+                    "name": "Wenjun Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "27b46889b8dd93f9ba90337694c045c569248acf",
+            "title": "Amer: A New Attribute-Missing Network Embedding Approach",
+            "abstract": "Network embedding which aims to learn a low dimensional representation of nodes is a powerful technique for network analysis. While network embedding for networks with complete attributes has been widely investigated, in many real-world applications the attributes of partial nodes are unobserved (i.e., missing) due to privacy concern or resource limit. Very recently, several network embedding methods have been proposed for attribute-missing networks. They first complete the missing attributes and then use the complemented network to learn network embedding. The parameters of these two processes cannot be adjusted by each other, resulting in compromised results. To address this problem, we propose a unified model in which the process of completing missing attributes and the process of learning embedding are not separated but closely intertwined. Being specific, completing missing attributes is under the guidance of learning network representation via mutual information maximization, and the complemented attributes directly enter network representation module which will generate further feedback for completing missing attributes. We further impose attribute-structure relationship constraint for completing missing attributes by designing a new generative adversarial networks (GANs) model. To the best of our knowledge, this is the first unified model for attribute-missing network embedding. Empirical results on real-world datasets show the superiority of our new method over other state-of-the-art methods on four network analysis tasks, including node classification, node clustering, link prediction, and network visualization.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2151037901",
+                    "name": "Rui Wang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Tao Wang"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2163787981",
+                    "name": "Weiping Ding"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "2127116223",
+                    "name": "Longbiao Wang"
+                },
+                {
+                    "authorId": "1731634",
+                    "name": "W. Pedrycz"
+                }
+            ]
+        },
+        {
+            "paperId": "3c9bcaf2201373efb4a18f62208710932af8321a",
+            "title": "Powerful Graph Convolutional Networks with Adaptive Propagation Mechanism for Homophily and Heterophily",
+            "abstract": "Graph Convolutional Networks (GCNs) have been widely applied in various fields due to their significant power on processing graph-structured data. Typical GCN and its variants work under a homophily assumption (i.e., nodes with same class are prone to connect to each other), while ignoring the heterophily which exists in many real-world networks (i.e., nodes with different classes tend to form edges). Existing methods deal with heterophily by mainly aggregating higher-order neighborhoods or combing the immediate representations, which leads to noise and irrelevant information in the result. But these methods did not change the propagation mechanism which works under homophily assumption (that is a fundamental part of GCNs). This makes it difficult to distinguish the representation of nodes from different classes. To address this problem, in this paper we design a novel propagation mechanism, which can automatically change the propagation and aggregation process according to homophily or heterophily between node pairs. To adaptively learn the propagation process, we introduce two measurements of homophily degree between node pairs, which is learned based on topological and attribute information, respectively. Then we incorporate the learnable homophily degree into the graph convolution framework, which is trained in an end-to-end schema, enabling it to go beyond the assumption of homophily. More importantly, we theoretically prove that our model can constrain the similarity of representations between nodes according to their homophily degree. Experiments on seven real-world datasets demonstrate that this new approach outperforms the state-of-the-art methods under heterophily or low homophily, and gains competitive performance under homophily.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257009075",
+                    "name": "Tao Wang"
+                },
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "145258523",
+                    "name": "Rui Wang"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "b244b08644f082a600edf337b73290928ecc5c2c",
+            "title": "Identification of Communities With Multi-Semantics via Bayesian Generative Model",
+            "abstract": "Discovering communities is an essential step in the analysis of complex systems, and it has two purposes: to identify functional modules and to interpret semantics. However, most of the existing community detection methods only focused on identify communities, while learning the semantics interpretation of communities has not been fully studied. In this paper, we focused on the problem of identifying communities and learning the semantics interpretation of modules jointly in an end-to-end model. We designed a novel generative model which combines two closely related parts, one for community discovery and the other for content clustering and semantics interpretation. By extracting the potential correlation between these two parts, our new method is not only robust to discovering communities, but also able to provide a community with more than one semantic topic. As for model inference, we developed a variational algorithm from a Bayesian point of view. Experimental results on the artificial benchmark and real networks showed the superior performance of the proposed approach over existing methods in terms of effectiveness and efficiency. We also analyzed semantic interpretability of community detection results through a case study over a large-scale music platform dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2134116910",
+                    "name": "Yanli Wu"
+                },
+                {
+                    "authorId": "2115724970",
+                    "name": "Youyou Wang"
+                },
+                {
+                    "authorId": "12073135",
+                    "name": "Zhizhi Yu"
+                },
+                {
+                    "authorId": "2152084654",
+                    "name": "Zhiyong Feng"
+                },
+                {
+                    "authorId": "2108114840",
+                    "name": "Xiaobao Wang"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "db06ec343e4b59252d26a7ea17b0f7d7709bb3a2",
+            "title": "Inflation Improves Graph Neural Networks",
+            "abstract": "Graph neural networks (GNNs) have gained significant success in graph representation learning and become the go-to approach for many graph-based tasks. Despite their effectiveness, the performance of GNNs is known to decline gradually as the number of layers increases. This attenuation is mainly caused by noise propagation, which refers to the useless or negative information propagated (directly or indirectly) from other nodes during the multi-layer graph convolution for node representation learning. This noise increases more severely as the layers of GNNs deepen, which is also a main reason of over-smoothing. In this paper, we propose a new convolution strategy for GNNs to address this problem via suppressing the noise propagation. Specifically, we first find that the feature propagation process of GNNs can be taken as a Markov chain. And then, based on the idea of Markov clustering, we introduce a new graph inflation layer (i.e., using a power function over the distribution) into GNNs to prevent noise propagating from local neighbourhoods to the whole graph with the increase of network layers. Our method is simple in design, which does not require any changes on the original basis and therefore can be easily extended. We conduct extensive experiments on real-world networks and have a stable improved performance as the network depth increases over existing GNNs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "47630357",
+                    "name": "Ruixing Guo"
+                },
+                {
+                    "authorId": "2108114840",
+                    "name": "Xiaobao Wang"
+                },
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "65779026",
+                    "name": "Wenjun Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "03b24b70801b9a11114f772fa01483d0e176c65c",
+            "title": "Adversarial Representation Mechanism Learning for Network Embedding",
+            "abstract": "Network embedding which is to learn a low dimensional representation of nodes in a network has been used in many network analysis tasks. Some network embedding methods, including those based on Generative Adversarial Networks (GAN) (a promising deep learning model), have been proposed recently. Existing GAN-based methods typically use GAN to learn a Gaussian distribution as a prior for network embedding, which makes it difficult to distinguish the node representation from Gaussian distribution. It did not apply the adversarial learning strategy on the representation mechanism but just on representation results. Thus, it does not make full use of the essential advantage of GAN, and leads to compromised performance of the method. To address this problem, we propose a novel adversarial learning framework consisting of three players for network embedding, which applies the adversarial learning strategy on the representation mechanism, called Adversarial representation mechanism GAN (ArmGAN). Specifically, the first two players, named encoder and competitor, aim to learn two different representation mechanisms (i.e., two ways projecting data onto latent space). They compete with each other to improve their representation mechanisms. The third player is the discriminator, which discriminate the representation mechanism of the encoder from that of the competitor. In addition, we design a perturbation strategy to produce fake networks from the original network, and feed the fake networks to the competitor to obtain a \u201cfake\u201d representation mechanism. We evaluated ArmGAN on a variety of tasks including node clustering, node classification, link prediction and visualization. Moreover, we compared ArmGAN with 10 state-of-the-art methods (including DGI, which is well-known for its high accuracy) on 7 real-world networks. The experimental results show the significant superiority of ArmGAN over the existing methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": null,
+                    "name": "Tao Wang"
+                },
+                {
+                    "authorId": "2069582535",
+                    "name": "Lu Zhai"
+                },
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "145774078",
+                    "name": "Zhiyong Feng"
+                },
+                {
+                    "authorId": "2149668064",
+                    "name": "P. Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "1ad420f0dce1ac832cf34aceec4af910509d00b1",
+            "title": "A Tibetan Language Model That Considers the Relationship Between Suffixes and Functional Words",
+            "abstract": "The complete semantic representation of a Tibetan sentence is mainly determined by the addition of a specific functional word. The choice of Tibetan functional words is mainly influenced (both explicitly and implicitly) by the sequence of Tibetan suffixes. In this article, we propose an RNN-based Tibetan radical suffix unit (TRSU) to consider this relationship. Specifically, for the Tibetan radical suffix unit-explicit (TRSU-E) method, the fixed suffix in Tibetan is used to determine the virtual functional words. For the Tibetan radical suffix unit-implicit (TRSU-I) method, the decision is assisted by adding a specific suffix. To test the method, we design a standard Tibetan corpus, which consists of different genres. Our experimental results show that the complexity of our method is reduced by up to 22.2% relative to the best baseline. Furthermore, with the hidden semantic information and implicit suffix, TRSU-I outperforms TRSU-E by reducing the perplexity (PPL) by 3%. Moreover, good results are achieved on the English Penn Treebank data set.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "28945373",
+                    "name": "Kuntharrgyal Khysru"
+                },
+                {
+                    "authorId": "1864018750",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2108728683",
+                    "name": "Yuxiao Huang"
+                },
+                {
+                    "authorId": "2113274415",
+                    "name": "Hui Feng"
+                },
+                {
+                    "authorId": "144699460",
+                    "name": "J. Dang"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,421 @@
+{
+    "authorId": "3360722",
+    "papers": [
+        {
+            "paperId": "1f6fddbb12110398b76666c771712ab49e6277c4",
+            "title": "Plug-in Diffusion Model for Sequential Recommendation",
+            "abstract": "Pioneering efforts have verified the effectiveness of the diffusion models in exploring the informative uncertainty for recommendation. Considering the difference between recommendation and image synthesis tasks, existing methods have undertaken tailored refinements to the diffusion and reverse process. However, these approaches typically use the highest-score item in corpus for user interest prediction, leading to the ignorance of the user's generalized preference contained within other items, thereby remaining constrained by the data sparsity issue. To address this issue, this paper presents a novel Plug-in Diffusion Model for Recommendation (PDRec) framework, which employs the diffusion model as a flexible plugin to jointly take full advantage of the diffusion-generating user preferences on all items. Specifically, PDRec first infers the users' dynamic preferences on all items via a time-interval diffusion model and proposes a Historical Behavior Reweighting (HBR) mechanism to identify the high-quality behaviors and suppress noisy behaviors. In addition to the observed items, PDRec proposes a Diffusion-based Positive Augmentation (DPA) strategy to leverage the top-ranked unobserved items as the potential positive samples, bringing in informative and diverse soft signals to alleviate data sparsity. To alleviate the false negative sampling issue, PDRec employs Noise-free Negative Sampling (NNS) to select stable negative samples for ensuring effective model optimization. Extensive experiments and analyses on four datasets have verified the superiority of the proposed PDRec over the state-of-the-art baselines and showcased the universality of PDRec as a flexible plugin for commonly-used sequential encoders in different recommendation scenarios. The code is available in https://github.com/hulkima/PDRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152191425",
+                    "name": "Haokai Ma"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2278235051",
+                    "name": "Lei Meng"
+                },
+                {
+                    "authorId": "2278394562",
+                    "name": "Xin Chen"
+                },
+                {
+                    "authorId": "2115462783",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                },
+                {
+                    "authorId": "2261082002",
+                    "name": "Zhanhui Kang"
+                }
+            ]
+        },
+        {
+            "paperId": "60123a0542c4ae85f9c1d902526bb51626177242",
+            "title": "Distillation is All You Need for Practically Using Different Pre-trained Recommendation Models",
+            "abstract": "Pre-trained recommendation models (PRMs) have attracted widespread attention recently. However, their totally different model structure, huge model size and computation cost hinder their application in practical recommender systems. Hence, it is highly essential to explore how to practically utilize PRMs in real-world recommendations. In this paper, we propose a novel joint knowledge distillation from different pre-trained recommendation models named PRM-KD for recommendation, which takes full advantages of diverse PRMs as teacher models for enhancing student models efficiently. Specifically, PRM-KD jointly distills diverse informative knowledge from multiple representative PRMs such as UniSRec, Recformer, and UniM^2Rec. The knowledge from the above PRMs are then smartly integrated into the student recommendation model considering their confidence and consistency. We further verify the universality of PRM-KD with various types of student models, including sequential recommendation, feature interaction, and graph-based models. Extensive experiments on five real-world datasets demonstrate the effectiveness and efficacy of PRM-KD, which could be viewed as an economical shortcut in practically and conveniently making full use of different PRMs in online systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111845105",
+                    "name": "Wenqi Sun"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2120518257",
+                    "name": "Junjie Zhang"
+                },
+                {
+                    "authorId": "2257376413",
+                    "name": "Wayne Xin Zhao"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                },
+                {
+                    "authorId": "2274218622",
+                    "name": "Ji-Rong Wen"
+                }
+            ]
+        },
+        {
+            "paperId": "ed3993207bbef268add936e6be222997f01441d8",
+            "title": "ID-centric Pre-training for Recommendation",
+            "abstract": "Classical sequential recommendation models generally adopt ID embeddings to store knowledge learned from user historical behaviors and represent items. However, these unique IDs are challenging to be transferred to new domains. With the thriving of pre-trained language model (PLM), some pioneer works adopt PLM for pre-trained recommendation, where modality information (e.g., text) is considered universal across domains via PLM. Unfortunately, the behavioral information in ID embeddings is still verified to be dominating in PLM-based recommendation models compared to modality information and thus limits these models' performance. In this work, we propose a novel ID-centric recommendation pre-training paradigm (IDP), which directly transfers informative ID embeddings learned in pre-training domains to item representations in new domains. Specifically, in pre-training stage, besides the ID-based sequential model for recommendation, we also build a Cross-domain ID-matcher (CDIM) learned by both behavioral and modality information. In the tuning stage, modality information of new domain items is regarded as a cross-domain bridge built by CDIM. We first leverage the textual information of downstream domain items to retrieve behaviorally and semantically similar items from pre-training domains using CDIM. Next, these retrieved pre-trained ID embeddings, rather than certain textual embeddings, are directly adopted to generate downstream new items' embeddings. Through extensive experiments on real-world datasets, both in cold and warm settings, we demonstrate that our proposed model significantly outperforms all baselines. Codes will be released upon acceptance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115290068",
+                    "name": "Yiqing Wu"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2005643069",
+                    "name": "Zhao Zhang"
+                },
+                {
+                    "authorId": "2286231813",
+                    "name": "Fuzhen Zhuang"
+                },
+                {
+                    "authorId": "2115462783",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                },
+                {
+                    "authorId": "2261082002",
+                    "name": "Zhanhui Kang"
+                },
+                {
+                    "authorId": "66607874",
+                    "name": "Yongjun Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "00ea20b6bc471e794c396c1308bba8ca16d4b156",
+            "title": "FairGap: Fairness-Aware Recommendation via Generating Counterfactual Graph",
+            "abstract": "The emergence of Graph Neural Networks (GNNs) has greatly advanced the development of recommendation systems. Recently, many researchers have leveraged GNN-based models to learn fair representations for users and items. However, current GNN-based models suffer from biased user\u2013item interaction data, which negatively impacts recommendation fairness. Although there have been several studies employing adversarial learning to mitigate this issue in recommendation systems, they mostly focus on modifying the model training approach with fairness regularization and neglect direct intervention of biased interaction. In contrast to these models, this article introduces a novel perspective by directly intervening in observed interactions to generate a counterfactual graph (called FairGap) that is not influenced by sensitive node attributes, enabling us to learn fair representations for users and items easily. We design FairGap to answer the key counterfactual question: \u201cWould interactions with an item remain unchanged if a user\u2019s sensitive attributes were concealed?\u201d. We also provide theoretical proofs to show that our learning strategy via the counterfactual graph is unbiased in expectation. Moreover, we propose a fairness-enhancing mechanism to continuously improve user fairness in the graph-based recommendation. Extensive experimental results against state-of-the-art competitors and base models on three real-world datasets validate the effectiveness of our proposed model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2275665792",
+                    "name": "Wei Chen"
+                },
+                {
+                    "authorId": "2115290068",
+                    "name": "Yiqing Wu"
+                },
+                {
+                    "authorId": "2005643069",
+                    "name": "Zhao Zhang"
+                },
+                {
+                    "authorId": "2104266567",
+                    "name": "Fuzhen Zhuang"
+                },
+                {
+                    "authorId": "2275743522",
+                    "name": "Zhongshi He"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2066080084",
+                    "name": "Feng Xia"
+                }
+            ]
+        },
+        {
+            "paperId": "024a25b2445ecb3a181c5e2f39fbf8b73a4c1a6f",
+            "title": "Emergent Modularity in Pre-trained Transformers",
+            "abstract": "This work examines the presence of modularity in pre-trained Transformers, a feature commonly found in human brains and thought to be vital for general intelligence. In analogy to human brains, we consider two main characteristics of modularity: (1) functional specialization of neurons: we evaluate whether each neuron is mainly specialized in a certain function, and find that the answer is yes. (2) function-based neuron grouping: we explore finding a structure that groups neurons into modules by function, and each module works for its corresponding function. Given the enormous amount of possible structures, we focus on Mixture-of-Experts as a promising candidate, which partitions neurons into experts and usually activates different experts for different inputs. Experimental results show that there are functional experts, where clustered are the neurons specialized in a certain function. Moreover, perturbing the activations of functional experts significantly affects the corresponding function. Finally, we study how modularity emerges during pre-training, and find that the modular structure is stabilized at the early stage, which is faster than neuron stabilization. It suggests that Transformers first construct the modular structure and then learn fine-grained neuron functions. Our code and data are available at https://github.com/THUNLP/modularity-analysis.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "2150468823",
+                    "name": "Zhiyuan Zeng"
+                },
+                {
+                    "authorId": "2149202150",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "48631777",
+                    "name": "Xiaozhi Wang"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                },
+                {
+                    "authorId": "49640256",
+                    "name": "Jie Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "0383e049e98c9eedbc61be728d4ef037300bbedf",
+            "title": "Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach",
+            "abstract": "In the past decades, recommender systems have attracted much attention in both research and industry communities, and a large number of studies have been devoted to developing effective recommendation models. Basically speaking, these models mainly learn the underlying user preference from historical behavior data, and then estimate the user-item matching relationships for recommendations. Inspired by the recent progress on large language models (LLMs), we take a different approach to developing the recommendation models, considering recommendation as instruction following by LLMs. The key idea is that the preferences or needs of a user can be expressed in natural language descriptions (called instructions), so that LLMs can understand and further execute the instruction for fulfilling the recommendation task. Instead of using public APIs of LLMs, we instruction tune an open-source LLM (3B Flan-T5-XL), in order to better adapt LLMs to recommender systems. For this purpose, we first design a general instruction format for describing the preference, intention, task form and context of a user in natural language. Then we manually design 39 instruction templates and automatically generate a large amount of user-personalized instruction data (252K instructions) with varying types of preferences and intentions. To demonstrate the effectiveness of our approach, we instantiate the instruction templates into several widely-studied recommendation (or search) tasks, and conduct extensive experiments on these tasks with real-world datasets. Experiment results show that the proposed approach can outperform several competitive baselines, including the powerful GPT-3.5, on these evaluation tasks. Our approach sheds light on developing more user-friendly recommender systems, in which users can freely communicate with the system and obtain more accurate recommendations via natural language instructions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2120518257",
+                    "name": "Junjie Zhang"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "151472453",
+                    "name": "Yupeng Hou"
+                },
+                {
+                    "authorId": "2542603",
+                    "name": "Wayne Xin Zhao"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                },
+                {
+                    "authorId": "153693432",
+                    "name": "Ji-rong Wen"
+                }
+            ]
+        },
+        {
+            "paperId": "0bfc804e31eecfd77f45e4ee7f4d629fffdcd628",
+            "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
+            "abstract": "Despite the advancements of open-source large language models (LLMs), e.g., LLaMA, they remain significantly limited in tool-use capabilities, i.e., using external tools (APIs) to fulfill human instructions. The reason is that current instruction tuning largely focuses on basic language tasks but ignores the tool-use domain. This is in contrast to the excellent tool-use capabilities of state-of-the-art (SOTA) closed-source LLMs, e.g., ChatGPT. To bridge this gap, we introduce ToolLLM, a general tool-use framework encompassing data construction, model training, and evaluation. We first present ToolBench, an instruction-tuning dataset for tool use, which is constructed automatically using ChatGPT. Specifically, the construction can be divided into three stages: (i) API collection: we collect 16,464 real-world RESTful APIs spanning 49 categories from RapidAPI Hub; (ii) instruction generation: we prompt ChatGPT to generate diverse instructions involving these APIs, covering both single-tool and multi-tool scenarios; (iii) solution path annotation: we use ChatGPT to search for a valid solution path (chain of API calls) for each instruction. To enhance the reasoning capabilities of LLMs, we develop a novel depth-first search-based decision tree algorithm. It enables LLMs to evaluate multiple reasoning traces and expand the search space. Moreover, to evaluate the tool-use capabilities of LLMs, we develop an automatic evaluator: ToolEval. Based on ToolBench, we fine-tune LLaMA to obtain an LLM ToolLLaMA, and equip it with a neural API retriever to recommend appropriate APIs for each instruction. Experiments show that ToolLLaMA demonstrates a remarkable ability to execute complex instructions and generalize to unseen APIs, and exhibits comparable performance to ChatGPT. Our ToolLLaMA also demonstrates strong zero-shot generalization ability in an out-of-distribution tool-use dataset: APIBench.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50625437",
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "2163374235",
+                    "name": "Shi Liang"
+                },
+                {
+                    "authorId": "2114059497",
+                    "name": "Yining Ye"
+                },
+                {
+                    "authorId": "2214586034",
+                    "name": "Kunlun Zhu"
+                },
+                {
+                    "authorId": "2214613855",
+                    "name": "Lan Yan"
+                },
+                {
+                    "authorId": "2191753738",
+                    "name": "Ya-Ting Lu"
+                },
+                {
+                    "authorId": "2149202150",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2214579778",
+                    "name": "Xin Cong"
+                },
+                {
+                    "authorId": "47274259",
+                    "name": "Xiangru Tang"
+                },
+                {
+                    "authorId": "2226120351",
+                    "name": "Bill Qian"
+                },
+                {
+                    "authorId": "2226184989",
+                    "name": "Sihan Zhao"
+                },
+                {
+                    "authorId": "2214603370",
+                    "name": "Runchu Tian"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "49640256",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "152573911",
+                    "name": "M. Gerstein"
+                },
+                {
+                    "authorId": "2144118403",
+                    "name": "Dahai Li"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "350fe1df510539eff3ae1c7b94b0b0ea09b7c354",
+            "title": "Learning from All Sides: Diversified Positive Augmentation via Self-distillation in Recommendation",
+            "abstract": "Personalized recommendation relies on user historical behaviors to provide user-interested items, and thus seriously struggles with the data sparsity issue. A powerful positive item augmentation is beneficial to address the sparsity issue, while few works could jointly consider both the accuracy and diversity of these augmented training labels. In this work, we propose a novel model-agnostic Diversified self-distillation guided positive augmentation (DivSPA) for accurate and diverse positive item augmentations. Specifically, DivSPA first conducts three types of retrieval strategies to collect high-quality and diverse positive item candidates according to users' overall interests, short-term intentions, and similar users. Next, a self-distillation module is conducted to double-check and rerank these candidates as the final positive augmentations. Extensive offline and online evaluations verify the effectiveness of our proposed DivSPA on both accuracy and diversity. DivSPA is simple and effective, which could be conveniently adapted to other base models and systems. Currently, DivSPA has been deployed on multiple widely-used real-world recommender systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108038336",
+                    "name": "Chong Liu"
+                },
+                {
+                    "authorId": "2142863049",
+                    "name": "Xiaoyang Liu"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2144156527",
+                    "name": "Lixin Zhang"
+                },
+                {
+                    "authorId": "2066080084",
+                    "name": "Feng Xia"
+                },
+                {
+                    "authorId": "4950224",
+                    "name": "Leyu Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "36edaddefa086075cdfab67a4916d27dbb6f4eea",
+            "title": "Cross-domain Recommendation with Behavioral Importance Perception",
+            "abstract": "Cross-domain recommendation (CDR) aims to leverage the source domain information to provide better recommendation for the target domain, which is widely adopted in recommender systems to alleviate the data sparsity and cold-start problems. However, existing CDR methods mostly focus on designing effective model architectures to transfer the source domain knowledge, ignoring the behavior-level effect during the loss optimization process, where behaviors regarding different aspects in the source domain may have different importance for the CDR model optimization. The ignorance of the behavior-level effect will cause the carefully designed model architectures ending up with sub-optimal parameters, which limits the recommendation performance. To tackle the problem, we propose a generic behavioral importance-aware optimization framework for cross-domain recommendation (BIAO). Specifically, we propose a behavioral perceptron which predicts the importance of each source behavior according to the corresponding item\u2019s global impact and local user-specific impact. The joint optimization process of the CDR model and the behavioral perceptron is formulated as a bi-level optimization problem. In the lower optimization, only the CDR model is updated with weighted source behavior loss and the target domain loss, while in the upper optimization, the behavioral perceptron is updated with implicit gradient from a developing dataset obtained through the proposed reorder-and-reuse strategy. Extensive experiments show that our proposed optimization framework consistently improves the performance of different cross-domain recommendation models in 7 cross-domain scenarios, demonstrating that our method can serve as a generic and powerful tool for cross-domain recommendation1.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2153687490",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2110219508",
+                    "name": "Yuwei Zhou"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "38f3a7bf85e41d93fb304c0ec810605bf8e30c05",
+            "title": "Connecting Embeddings Based on Multiplex Relational Graph Attention Networks for Knowledge Graph Entity Typing",
+            "abstract": "Knowledge graph entity typing (KGET) aims to infer missing entity typing instances in KGs, which is a significant subtask of KG completion. Despite of its progress, however, we observe that it still faces two non-trivial challenges: (i) most existing KGET methods extract features by encoding the existing entity typing tuples, while underutilizing or even ignoring rich relational knowledge. (ii) they typically treat each entity typing tuple in KGs independently, and thus inevitably fail to take account of the inherent and valuable neighborhood information surrounding a tuple. To address these challenges, we build a novel Heterogeneous Relational Graph (HRG), and propose a Multiplex Relational Graph Attention Networks (MRGAT) to learn on HRG, and then utilize a Connecting Embeddings model (ConnectE) to make entity type inference. Specifically, the overall framework contains three significant components. First, to effectively integrate the heterogeneous structural information including the entity typing tuples and entity relation triples in KGs, we construct a heterogeneous relational graph that consists of three semantic subgraphs. Second, we employ MRGAT to learn embeddings on HRG. In MRGAT, each subgraph of HRG is fed to its corresponding model that is capable of capturing neighborhood information by aggregating the surrounding nodes\u2019 features. Finally, given the learned embeddings, we make entity type prediction by the connecting embeddings method ConnectE. Experimental results demonstrate the effectiveness of our proposed model against various state-of-the-art baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "97522134",
+                    "name": "Yu Zhao"
+                },
+                {
+                    "authorId": "2153072255",
+                    "name": "Han Zhou"
+                },
+                {
+                    "authorId": "26319784",
+                    "name": "Anxiang Zhang"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2117895423",
+                    "name": "Qing Li"
+                },
+                {
+                    "authorId": "1799525",
+                    "name": "Fuzhen Zhuang"
+                }
+            ]
+        }
+    ]
+}

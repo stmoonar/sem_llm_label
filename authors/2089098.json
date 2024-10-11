@@ -1,0 +1,320 @@
+{
+    "authorId": "2089098",
+    "papers": [
+        {
+            "paperId": "76d6149b1b34a13af022341851e1e5215a615540",
+            "title": "Approximating Traveling Salesman Problems Using a Bridge Lemma",
+            "abstract": "We give improved approximations for two metric Traveling Salesman Problem (TSP) variants. In Ordered TSP (OTSP) we are given a linear ordering on a subset of nodes $o_1, \\ldots, o_k$. The TSP solution must have that $o_{i+1}$ is visited at some point after $o_i$ for each $1 \\leq i<k$. This is the special case of Precedence-Constrained TSP ($PTSP$) in which the precedence constraints are given by a single chain on a subset of nodes. In $k$-Person TSP Path (k-TSPP), we are given pairs of nodes $(s_1,t_1), \\ldots, (s_k,t_k)$. The goal is to find an $s_i$-$t_i$ path with minimum total cost such that every node is visited by at least one path. We obtain a $3/2 + e^{-1}<1.878$ approximation for OTSP, the first improvement over a trivial $\\alpha+1$ approximation where $\\alpha$ is the current best TSP approximation. We also obtain a $1 + 2 \\cdot e^{-1/2}<2.214$ approximation for k-TSPP, the first improvement over a trivial $3$-approximation. These algorithms both use an adaptation of the Bridge Lemma that was initially used to obtain improved Steiner Tree approximations [Byrka et al., 2013]. Roughly speaking, our variant states that the cost of a cheapest forest rooted at a given set of terminal nodes will decrease by a substantial amount if we randomly sample a set of non-terminal nodes to also become terminals such provided each non-terminal has a constant probability of being sampled. We believe this view of the Bridge Lemma will find further use for improved vehicle routing approximations beyond this paper.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2312320098",
+                    "name": "Martin Bohm"
+                },
+                {
+                    "authorId": "2548771",
+                    "name": "Zachary Friggstad"
+                },
+                {
+                    "authorId": "2312319977",
+                    "name": "Tobias Momke"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "92d39ad930f4941f1292d16f25864948be143bbb",
+            "title": "A Constant-Factor Approximation Algorithm for Reconciliation k-Median",
+            "abstract": "In the reconciliation k -median problem we ask to cluster a set of data points by picking k cluster centers so as to minimize the sum of distances of the data points to their cluster centers plus the sum of pairwise distances between the centers. The problem, which is a variant of classic k -median, aims to \ufb01nd a set of cluster centers that are not too far from each other, and it has applications, for example, when selecting a committee to de-liberate on a controversial topic. This problem was introduced recently (Ordozgoiti and Gionis, 2019), and it was shown that a local-search-based algorithm is always within a factor O ( k ) of an optimum solution and performs well in practice. In this paper, we demonstrate a close connection of reconciliation k -median to a variant of the k - facility location problem , in which each potential cluster center has an individual opening cost and we aim at minimizing the sum of client-center distances and the opening costs. This connection enables us to provide a new algorithm for reconciliation k -median that yields a constant-factor approximation (independent of k ). We also provide a sparsi\ufb01cation scheme that reduces the number of potential cluster centers to O ( k ) in order to substantially speed up approximation algorithms. We empirically compare our new algorithms with the previous local-search approach, showing improved performance and stability. In addition, we show how our sparsi\ufb01cation approach helps to reduce computation time without signi\ufb01cantly",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "104876753",
+                    "name": "B. Riegel"
+                },
+                {
+                    "authorId": "35332118",
+                    "name": "Bruno Ordozgoiti"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "b40665f40e80e287b6c9778e4ad2b2681e20570d",
+            "title": "Parameterized Approximation Schemes for Clustering with General Norm Objectives",
+            "abstract": "This paper considers the well-studied algorithmic regime of designing a $(1+\\epsilon)$-approximation algorithm for a k-clustering problem that runs in time $f(k,\\epsilon)poly(n)$ (sometimes called an efficient parameterized approximation scheme or EPAS for short1). Notable results of this kind include EPASes in the high-dimensional Euclidean setting for k-center [Bad\u014fiu, Har-Peled, Indyk; STOC\u201902] as well as k-median, and k-means [Kumar, Sabharwal, Sen; J. ACM 2010]. Our main contribution is a clean and simple EPAS that settles more than ten clustering problems (across multiple well-studied objectives as well as metric spaces) and unifies well-known EPASes. More specifically, our algorithm gives EPASes in the following settings:\u2022Clustering objectives: k-means, k-center, k-median, priority k-center, $\\ell$-centrum, ordered k-median, socially fair k-median (aka robust k-median), or any other objective that can be formulated as minimizing a monotone (not necessarily symmetric!) norm of the distances of the points from the solution (generalizing the symmetric formulation introduced by Chakrabarty and Swamy [STOC\u201919]).\u2022Metric spaces: Continuous high-dimensional Euclidean spaces, metrics of bounded doubling dimension, bounded treewidth metrics, and planar metrics. Prior to our results, EPASes were only known for vanilla clustering objectives (k-means, k-median, and k-center) and each such algorithm is tailored to work for the specific input metric and clustering objective (e.g., EPASes for k means and k-center in $\\mathbb{R}^{d}$ are conceptually very different). In contrast, our algorithmic framework is applicable to a wide range of well-studied objective functions in a uniform way, and is (almost) entirely oblivious to any specific metric structures and yet is able to effectively exploit those unknown structures. In particular, our algorithm is not based on the (metric- and objective-specific) technique of coresets. Key to our analysis is a new concept that we call bounded $\\epsilon$-scatter dimension\u2014an intrinsic complexity measure of a metric space that is a relaxation of the standard notion of bounded doubling dimension(often used as a source of algorithmic tractability for geometric problems). Our main technical result shows that two conditions are essentially sufficient for our algorithm to yield an EPAS on the input metric M for any clustering objective:(i)The objective is described by a monotone norm, and(ii)the $\\epsilon$-scatter dimension of M is upper bounded by a function of $\\epsilon$.1Quick remarks: (i) An EPAS is not comparable to polynomial time approximation schemes (PTAS), (ii) before the term EPAS was invented some researchers call this type of approximation schemes a PTAS or simply an approximation scheme (in clustering, it is often assumed that k is small) [1], [2], and (iii) both EPAS and PTAS are implied by the existence of efficient polynomial time approximation schemes (EPTAS).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2059605410",
+                    "name": "F. Abbasi"
+                },
+                {
+                    "authorId": "2110879013",
+                    "name": "Sandip Banerjee"
+                },
+                {
+                    "authorId": "1800005",
+                    "name": "J. Byrka"
+                },
+                {
+                    "authorId": "3154315",
+                    "name": "Parinya Chalermsook"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "145722890",
+                    "name": "D. Marx"
+                },
+                {
+                    "authorId": "2199730582",
+                    "name": "Roohani Sharma"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "b6474d152f6401c30e34d707613d79a30445cdc0",
+            "title": "Independent set in k-Claw-Free Graphs: Conditional \u03c7-boundedness and the Power of LP/SDP Relaxations",
+            "abstract": "This paper studies $k$-claw-free graphs, exploring the connection between an extremal combinatorics question and the power of a convex program in approximating the maximum-weight independent set in this graph class. For the extremal question, we consider the notion, that we call \\textit{conditional $\\chi$-boundedness} of a graph: Given a graph $G$ that is assumed to contain an independent set of a certain (constant) size, we are interested in upper bounding the chromatic number in terms of the clique number of $G$. This question, besides being interesting on its own, has algorithmic implications (which have been relatively neglected in the literature) on the performance of SDP relaxations in estimating the value of maximum-weight independent set. For $k=3$, Chudnovsky and Seymour (JCTB 2010) prove that any $3$-claw-free graph $G$ with an independent set of size three must satisfy $\\chi(G) \\leq 2 \\omega(G)$. Their result implies a factor $2$-estimation algorithm for the maximum weight independent set via an SDP relaxation (providing the first non-trivial result for maximum-weight independent set in such graphs via a convex relaxation). An obvious open question is whether a similar conditional $\\chi$-boundedness phenomenon holds for any $k$-claw-free graph. Our main result answers this question negatively. We further present some evidence that our construction could be useful in studying more broadly the power of convex relaxations in the context of approximating maximum weight independent set in $k$-claw free graphs. In particular, we prove a lower bound on families of convex programs that are stronger than known convex relaxations used algorithmically in this context.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3154315",
+                    "name": "Parinya Chalermsook"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "ee947976d91486aac367b5d15ca4826541ee6ce9",
+            "title": "Parameterized Approximation for Robust Clustering in Discrete Geometric Spaces",
+            "abstract": "We consider the well-studied Robust $(k, z)$-Clustering problem, which generalizes the classic $k$-Median, $k$-Means, and $k$-Center problems. Given a constant $z\\ge 1$, the input to Robust $(k, z)$-Clustering is a set $P$ of $n$ weighted points in a metric space $(M,\\delta)$ and a positive integer $k$. Further, each point belongs to one (or more) of the $m$ many different groups $S_1,S_2,\\ldots,S_m$. Our goal is to find a set $X$ of $k$ centers such that $\\max_{i \\in [m]} \\sum_{p \\in S_i} w(p) \\delta(p,X)^z$ is minimized. This problem arises in the domains of robust optimization [Anthony, Goyal, Gupta, Nagarajan, Math. Oper. Res. 2010] and in algorithmic fairness. For polynomial time computation, an approximation factor of $O(\\log m/\\log\\log m)$ is known [Makarychev, Vakilian, COLT $2021$], which is tight under a plausible complexity assumption even in the line metrics. For FPT time, there is a $(3^z+\\epsilon)$-approximation algorithm, which is tight under GAP-ETH [Goyal, Jaiswal, Inf. Proc. Letters, 2023]. Motivated by the tight lower bounds for general discrete metrics, we focus on \\emph{geometric} spaces such as the (discrete) high-dimensional Euclidean setting and metrics of low doubling dimension, which play an important role in data analysis applications. First, for a universal constant $\\eta_0>0.0006$, we devise a $3^z(1-\\eta_{0})$-factor FPT approximation algorithm for discrete high-dimensional Euclidean spaces thereby bypassing the lower bound for general metrics. We complement this result by showing that even the special case of $k$-Center in dimension $\\Theta(\\log n)$ is $(\\sqrt{3/2}- o(1))$-hard to approximate for FPT algorithms. Finally, we complete the FPT approximation landscape by designing an FPT $(1+\\epsilon)$-approximation scheme (EPAS) for the metric of sub-logarithmic doubling dimension.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2059605410",
+                    "name": "F. Abbasi"
+                },
+                {
+                    "authorId": "2110879013",
+                    "name": "Sandip Banerjee"
+                },
+                {
+                    "authorId": "1800005",
+                    "name": "J. Byrka"
+                },
+                {
+                    "authorId": "3154315",
+                    "name": "Parinya Chalermsook"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "145722890",
+                    "name": "D. Marx"
+                },
+                {
+                    "authorId": "2199730582",
+                    "name": "Roohani Sharma"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "fef16f920e819d91d29324098a32a3547b078efc",
+            "title": "Approximating Sparsest Cut in Low-treewidth Graphs via Combinatorial Diameter",
+            "abstract": "The fundamental Sparsest Cut problem takes as input a graph G together with edge capacities and demands and seeks a cut that minimizes the ratio between the capacities and demands across the cuts. For n-vertex graphs G of treewidth k, Chlamt\u00e1\u010d, Krauthgamer, and Raghavendra (APPROX\u201910) presented an algorithm that yields a factor- \\(2^{2^k}\\) approximation in time \\(2^{O(k)} \\cdot n^{O(1)}\\) . Later, Gupta, Talwar, and Witmer (STOC\u201913) showed how to obtain a 2-approximation algorithm with a blown-up runtime of \\(n^{O(k)}\\) . An intriguing open question is whether one can simultaneously achieve the best out of the aforementioned results, that is, a factor-2 approximation in time \\(2^{O(k)} \\cdot n^{O(1)}\\) . In this article, we make significant progress towards this goal via the following results: (i) A factor- \\(O(k^2)\\) approximation that runs in time \\(2^{O(k)} \\cdot n^{O(1)}\\) , directly improving the work of Chlamt\u00e1\u010d et al. while keeping the runtime single-exponential in k.(ii) For any \\(\\varepsilon \\in (0,1]\\) , a factor- \\(O(1/\\varepsilon ^2)\\) approximation whose runtime is \\(2^{O(k^{1+\\varepsilon }/\\varepsilon)} \\cdot n^{O(1)}\\) , implying a constant-factor approximation whose runtime is nearly single-exponential in k and a factor- \\(O(\\log ^2 k)\\) approximation in time \\(k^{O(k)} \\cdot n^{O(1)}\\) . Key to these results is a new measure of a tree decomposition that we call combinatorial diameter, which may be of independent interest.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3154315",
+                    "name": "Parinya Chalermsook"
+                },
+                {
+                    "authorId": "2065906835",
+                    "name": "Matthias Kaul"
+                },
+                {
+                    "authorId": "1975823",
+                    "name": "Matthias Mnich"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                },
+                {
+                    "authorId": "2030240",
+                    "name": "Sumedha Uniyal"
+                },
+                {
+                    "authorId": "2076684027",
+                    "name": "Daniel Vaz"
+                }
+            ]
+        },
+        {
+            "paperId": "b5de672dadd8895ae0ea6a6169ccd5f2faec0afd",
+            "title": "Simplification of Polyline Bundles",
+            "abstract": "We propose and study generalizations to the well-known problem of polyline simplification. Instead of a single polyline, we are given a set of polylines possibly sharing some line segments and bend points. The simplification of those shared parts has to be consistent among the polylines. We consider two optimization goals: either minimizing the number of line segments or minimizing the number of bend points in the simplification. By reduction from Minimum-Independent-Dominating-Set, we show that both of these optimization problems are NP-hard to approximate within a factor $n^{1/3 - \\varepsilon}$ for any $\\varepsilon > 0$ where $n$ is the number of bend points in the polyline bundle. Moreover, we outline that both problems remain NP-hard even if the input is planar. On the positive side, we give a polynomial-size integer linear program and show fixed-parameter tractability in the number of shared bend points.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                },
+                {
+                    "authorId": "1737892",
+                    "name": "Sabine Storandt"
+                },
+                {
+                    "authorId": "38416726",
+                    "name": "Johannes Zink"
+                }
+            ]
+        },
+        {
+            "paperId": "274d3782e34e011ed8ca088f9ab68f6874f22fe4",
+            "title": "Brief Announcement: Approximation Schemes for Geometric Coverage Problems",
+            "abstract": "In this announcement, we show that the classical Maximum Coverage problem (MC) admits a PTAS via local search in essentially all cases where the corresponding instances of Set Cover (SC) admit a PTAS via the local search approach by Mustafa and Ray [7]. As a corollary, we answer an open question by Badanidiyuru, Kleinberg, and Lee [1] regarding half-spaces in R3 thereby settling the existence of PTASs for essentially all natural cases of geometric MC problems. As an intermediate result, we show a color-balanced version of the classical planar subdivision theorem by Frederickson [5]. We believe that some of our ideas may be useful for analyzing local search in other settings involving a hard cardinality constraint. 2012 ACM Subject Classification Theory of computation \u2192 Packing and covering problems",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1798388",
+                    "name": "S. Chaplick"
+                },
+                {
+                    "authorId": "1738656",
+                    "name": "Minati De"
+                },
+                {
+                    "authorId": "2346315",
+                    "name": "A. Ravsky"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "3959f2f24c8ad73e417beffcdef5e0e890c81708",
+            "title": "Stabbing Rectangles by Line Segments - How Decomposition Reduces the Shallow-Cell Complexity",
+            "abstract": "We initiate the study of the following natural geometric optimization problem. The input is a set of axis-aligned rectangles in the plane. The objective is to find a set of horizontal line segments of minimum total length so that every rectangle is stabbed by some line segment. A line segment stabs a rectangle if it intersects its left and its right boundary. The problem, which we call Stabbing, can be motivated by a resource allocation problem and has applications in geometric network design. To the best of our knowledge, only special cases of this problem have been considered so far. \nStabbing is a weighted geometric set cover problem, which we show to be NP-hard. A constrained variant of Stabbing turns out to be even APX-hard. While for general set cover the best possible approximation ratio is $\\Theta(\\log n)$, it is an important field in geometric approximation algorithms to obtain better ratios for geometric set cover problems. Chan et al. [SODA'12] generalize earlier results by Varadarajan [STOC'10] to obtain sub-logarithmic performances for a broad class of weighted geometric set cover instances that are characterized by having low shallow-cell complexity. The shallow-cell complexity of Stabbing instances, however, can be high so that a direct application of the framework of Chan et al. gives only logarithmic bounds. We still achieve a constant-factor approximation by decomposing general instances into what we call laminar instances that have low enough complexity. \nOur decomposition technique yields constant-factor approximations also for the variant where rectangles can be stabbed by horizontal and vertical segments and for two further geometric set cover problems.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "31555479",
+                    "name": "Timothy M. Chan"
+                },
+                {
+                    "authorId": "21779603",
+                    "name": "Thomas C. van Dijk"
+                },
+                {
+                    "authorId": "40963131",
+                    "name": "Krzysztof Fleszar"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                },
+                {
+                    "authorId": "1732390",
+                    "name": "A. Wolff"
+                }
+            ]
+        },
+        {
+            "paperId": "c863e7635e3662c69d89b6ae2f7ab26682670049",
+            "title": "A Tight Approximation for Submodular Maximization with Mixed Packing and Covering Constraints",
+            "abstract": "Motivated by applications in machine learning, such as subset selection and data summarization, we consider the problem of maximizing a monotone submodular function subject to mixed packing and covering constraints. We present a tight approximation algorithm that for any constant $\\epsilon >0$ achieves a guarantee of $1-\\frac{1}{\\mathrm{e}}-\\epsilon$ while violating only the covering constraints by a multiplicative factor of $1-\\epsilon$. Our algorithm is based on a novel enumeration method, which unlike previous known enumeration techniques, can handle both packing and covering constraints. We extend the above main result by additionally handling a matroid independence constraints as well as finding (approximate) pareto set optimal solutions when multiple submodular objectives are present. Finally, we propose a novel and purely combinatorial dynamic programming approach that can be applied to several special cases of the problem yielding not only {\\em deterministic} but also considerably faster algorithms. For example, for the well studied special case of only packing constraints (Kulik {\\em et. al.} [Math. Oper. Res. `13] and Chekuri {\\em et. al.} [FOCS `10]), we are able to present the first deterministic non-trivial approximation algorithm. We believe our new combinatorial approach might be of independent interest.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "41016341",
+                    "name": "Eyal Mizrachi"
+                },
+                {
+                    "authorId": "2067838786",
+                    "name": "Roy Schwartz"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                },
+                {
+                    "authorId": "2030240",
+                    "name": "Sumedha Uniyal"
+                }
+            ]
+        }
+    ]
+}

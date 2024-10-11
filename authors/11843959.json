@@ -1,0 +1,155 @@
+{
+    "authorId": "11843959",
+    "papers": [
+        {
+            "paperId": "1d74df29a192a33cf08f61d5eb5e09083e826f05",
+            "title": "Low-variance estimation in the Plackett-Luce model via quasi-Monte Carlo sampling",
+            "abstract": "The Plackett-Luce (PL) model is popular in learning-to-rank (LTR) because it provides a useful and intuitive probabilistic model for sampling ranked lists. Counterfactual offline evaluation and optimization of ranking metrics are pivotal for using LTR methods in production. When adopting the PL model as a ranking policy, both tasks require the computation of expectations with respect to the model. These are usually approximated via Monte-Carlo (MC) sampling, since the combinatorial scaling in the number of items to be ranked makes their analytical computation intractable. Despite recent advances in improving the computational efficiency of the sampling process via the Gumbel top-k trick [23], the MC estimates can suffer from high variance. We develop a novel approach to producing more sample-efficient estimators of expectations in the PL model by combining the Gumbel top-k trick with quasi-Monte Carlo (QMC) sampling, a well-established technique for variance reduction. We illustrate our findings both theoretically and empirically using real-world recommendation data from Amazon Music and the Yahoo learning-to-rank challenge.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "11843959",
+                    "name": "Alexander Buchholz"
+                },
+                {
+                    "authorId": "2060219456",
+                    "name": "Jan Malte Lichtenberg"
+                },
+                {
+                    "authorId": "151007075",
+                    "name": "G. Benedetto"
+                },
+                {
+                    "authorId": "3149848",
+                    "name": "Yannik Stein"
+                },
+                {
+                    "authorId": "31614629",
+                    "name": "Vito Bellini"
+                },
+                {
+                    "authorId": "39868478",
+                    "name": "M. Ruffini"
+                }
+            ]
+        },
+        {
+            "paperId": "863f76e1c7b9d73745a1077888ba53f82e36b5f7",
+            "title": "Off-policy evaluation for learning-to-rank via interpolating the item-position model and the position-based model",
+            "abstract": "A critical need for industrial recommender systems is the ability to evaluate recommendation policies offline, before deploying them to production. Unfortunately, widely used off-policy evaluation methods either make strong assumptions about how users behave that can lead to excessive bias, or they make fewer assumptions and suffer from large variance. We tackle this problem by developing a new estimator that mitigates the problems of the two most popular off-policy estimators for rankings, namely the position-based model and the item-position model. In particular, the new estimator, called INTERPOL, addresses the bias of a potentially misspecified position-based model, while providing an adaptable bias-variance trade-off compared to the item-position model. We provide theoretical arguments as well as empirical results that highlight the performance of our novel estimation approach. Off-policy for learning-to-rank interpolating the",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "11843959",
+                    "name": "Alexander Buchholz"
+                },
+                {
+                    "authorId": "2085850",
+                    "name": "Ben London"
+                },
+                {
+                    "authorId": "151007075",
+                    "name": "G. Benedetto"
+                },
+                {
+                    "authorId": "1680188",
+                    "name": "T. Joachims"
+                }
+            ]
+        },
+        {
+            "paperId": "43b6c1e96377870e3209905db36b02acb9eda90a",
+            "title": "Distributed Computation for Marginal Likelihood based Model Choice",
+            "abstract": "We propose a general method for distributed Bayesian model choice, using the marginal likelihood, where each worker has access only to non-overlapping subsets of the data. Our approach approximates the model evidence for the full data set through Monte Carlo sampling from the posterior on every subset generating a model evidence per subset. The model evidences per worker are then consistently combined using a novel approach which corrects for the splitting using summary statistics of the generated samples. This divide-and-conquer approach allows Bayesian model choice in the large data setting, exploiting all available information but limiting communication between workers. Our work thereby complements the work on consensus Monte Carlo (Scott et al., 2016) by explicitly enabling model choice. In addition, we show how the suggested approach can be extended to model choice within a reversible jump setting that explores multiple feature combinations within one run.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "11843959",
+                    "name": "Alexander Buchholz"
+                },
+                {
+                    "authorId": "2417198",
+                    "name": "Daniel Ahfock"
+                },
+                {
+                    "authorId": "2274266859",
+                    "name": "S. Richardson"
+                }
+            ]
+        },
+        {
+            "paperId": "8db7aec088f0e094e0f239cecf19b71c6d43bb5b",
+            "title": "Adaptive Tuning Of Hamiltonian Monte Carlo Within Sequential Monte Carlo",
+            "abstract": "Sequential Monte Carlo (SMC) samplers form an attractive alternative to MCMC for Bayesian computation. However, their performance depends strongly on the Markov kernels used to re- juvenate particles. We discuss how to calibrate automatically (using the current particles) Hamiltonian Monte Carlo kernels within SMC. To do so, we build upon the adaptive SMC ap- proach of Fearnhead and Taylor (2013), and we also suggest alternative methods. We illustrate the advantages of using HMC kernels within an SMC sampler via an extensive numerical study.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "11843959",
+                    "name": "Alexander Buchholz"
+                },
+                {
+                    "authorId": "2593810",
+                    "name": "N. Chopin"
+                },
+                {
+                    "authorId": "32746783",
+                    "name": "P. Jacob"
+                }
+            ]
+        },
+        {
+            "paperId": "cc2591bec7073a5165d76698f5838bf8aa6d67fd",
+            "title": "Quasi-Monte Carlo Variational Inference",
+            "abstract": "Many machine learning problems involve Monte Carlo gradient estimators. As a prominent example, we focus on Monte Carlo variational inference (MCVI) in this paper. The performance of MCVI crucially depends on the variance of its stochastic gradients. We propose variance reduction by means of Quasi-Monte Carlo (QMC) sampling. QMC replaces N i.i.d. samples from a uniform probability distribution by a deterministic sequence of samples of length N. This sequence covers the underlying random variable space more evenly than i.i.d. draws, reducing the variance of the gradient estimator. With our novel approach, both the score function and the reparameterization gradient estimators lead to much faster convergence. We also propose a new algorithm for Monte Carlo objectives, where we operate with a constant learning rate and increase the number of QMC samples per iteration. We prove that this way, our algorithm can converge asymptotically at a faster rate than SGD. We furthermore provide theoretical guarantees on QMC for Monte Carlo objectives that go beyond MCVI, and support our findings by several experiments on large-scale data sets from various domains.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "11843959",
+                    "name": "Alexander Buchholz"
+                },
+                {
+                    "authorId": "39798982",
+                    "name": "F. Wenzel"
+                },
+                {
+                    "authorId": "1783468",
+                    "name": "S. Mandt"
+                }
+            ]
+        },
+        {
+            "paperId": "cd949e27446cbaeac3cc05581799ce935077ba68",
+            "title": "Improving Approximate Bayesian Computation via Quasi-Monte Carlo",
+            "abstract": "ABSTRACT ABC (approximate Bayesian computation) is a general approach for dealing with models with an intractable likelihood. In this work, we derive ABC algorithms based on QMC (quasi-Monte Carlo) sequences. We show that the resulting ABC estimates have a lower variance than their Monte Carlo counter-parts. We also develop QMC variants of sequential ABC algorithms, which progressively adapt the proposal distribution and the acceptance threshold. We illustrate our QMC approach through several examples taken from the ABC literature.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "11843959",
+                    "name": "Alexander Buchholz"
+                },
+                {
+                    "authorId": "2593810",
+                    "name": "N. Chopin"
+                }
+            ]
+        }
+    ]
+}

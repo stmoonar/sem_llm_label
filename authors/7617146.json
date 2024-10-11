@@ -1,0 +1,395 @@
+{
+    "authorId": "7617146",
+    "papers": [
+        {
+            "paperId": "6969c0fcfad4779b8883a09a1fce7e43be64b588",
+            "title": "Acceleration of Graph Neural Network-Based Prediction Models in Chemistry via Co-Design Optimization on Intelligence Processing Units",
+            "abstract": "Atomic structure prediction and associated property calculations are the bedrock of chemical physics. Since high-fidelity ab initio modeling techniques for computing the structure and properties can be prohibitively expensive, this motivates the development of machine-learning (ML) models that make these predictions more efficiently. Training graph neural networks over large atomistic databases introduces unique computational challenges, such as the need to process millions of small graphs with variable size and support communication patterns that are distinct from learning over large graphs, such as social networks. We demonstrate a novel hardware-software codesign approach to scale up the training of atomistic graph neural networks (GNN) for structure and property prediction. First, to eliminate redundant computation and memory associated with alternative padding techniques and to improve throughput via minimizing communication, we formulate the effective coalescing of the batches of variable-size atomistic graphs as the bin packing problem and introduce a hardware-agnostic algorithm to pack these batches. In addition, we propose hardware-specific optimizations, including a planner and vectorization for the gather-scatter operations targeted for Graphcore's Intelligence Processing Unit (IPU), as well as model-specific optimizations such as merged communication collectives and optimized softplus. Putting these all together, we demonstrate the effectiveness of the proposed codesign approach by providing an implementation of a well-established atomistic GNN on the Graphcore IPUs. We evaluate the training performance on multiple atomistic graph databases with varying degrees of graph counts, sizes, and sparsity. We demonstrate that such a codesign approach can reduce the training time of atomistic GNNs and can improve their performance by up to 1.5\u00d7 compared to the baseline implementation of the model on the IPUs. Additionally, we compare our IPU implementation with a Nvidia GPU-based implementation and show that our atomistic GNN implementation on the IPUs can run 1.8\u00d7 faster on average compared to the execution time on the GPUs.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "89918060",
+                    "name": "Hatem Helal"
+                },
+                {
+                    "authorId": "3036183",
+                    "name": "J. Firoz"
+                },
+                {
+                    "authorId": "1840232",
+                    "name": "Jenna A. Bilbrey"
+                },
+                {
+                    "authorId": "2190281477",
+                    "name": "Henry W Sprueill"
+                },
+                {
+                    "authorId": "2084608228",
+                    "name": "Kristina M Herman"
+                },
+                {
+                    "authorId": "1829972",
+                    "name": "M. M. Krell"
+                },
+                {
+                    "authorId": "2284971138",
+                    "name": "Tom Murray"
+                },
+                {
+                    "authorId": "2190281542",
+                    "name": "Manuel Lopez Roldan"
+                },
+                {
+                    "authorId": "2190280824",
+                    "name": "Mike Kraus"
+                },
+                {
+                    "authorId": "2287793822",
+                    "name": "Ang Li"
+                },
+                {
+                    "authorId": "2284975102",
+                    "name": "Payel Das"
+                },
+                {
+                    "authorId": "3200585",
+                    "name": "S. Xantheas"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                }
+            ]
+        },
+        {
+            "paperId": "7c8a6552fe0e3b33456afdac79614e7dc04f0b4d",
+            "title": "ChemReasoner: Heuristic Search over a Large Language Model's Knowledge Space using Quantum-Chemical Feedback",
+            "abstract": "The discovery of new catalysts is essential for the design of new and more efficient chemical processes in order to transition to a sustainable future. We introduce an AI-guided computational screening framework unifying linguistic reasoning with quantum-chemistry based feedback from 3D atomistic representations. Our approach formulates catalyst discovery as an uncertain environment where an agent actively searches for highly effective catalysts via the iterative combination of large language model (LLM)-derived hypotheses and atomistic graph neural network (GNN)-derived feedback. Identified catalysts in intermediate search steps undergo structural evaluation based on spatial orientation, reaction pathways, and stability. Scoring functions based on adsorption energies and reaction energy barriers steer the exploration in the LLM's knowledge space toward energetically favorable, high-efficiency catalysts. We introduce planning methods that automatically guide the exploration without human input, providing competitive performance against expert-enumerated chemical descriptor-based implementations. By integrating language-guided reasoning with computational chemistry feedback, our work pioneers AI-accelerated, trustworthy catalyst discovery.",
+            "fieldsOfStudy": [
+                "Physics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2190281477",
+                    "name": "Henry W Sprueill"
+                },
+                {
+                    "authorId": "48870109",
+                    "name": "Carl N. Edwards"
+                },
+                {
+                    "authorId": "39073194",
+                    "name": "Khushbu Agarwal"
+                },
+                {
+                    "authorId": "15751638",
+                    "name": "Mariefel V. Olarte"
+                },
+                {
+                    "authorId": "37794737",
+                    "name": "Udishnu Sanyal"
+                },
+                {
+                    "authorId": "2284668995",
+                    "name": "Conrad Johnston"
+                },
+                {
+                    "authorId": "2284730320",
+                    "name": "Hongbin Liu"
+                },
+                {
+                    "authorId": "2264201811",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                }
+            ]
+        },
+        {
+            "paperId": "de02ba19fb957ae30de7f09904ae3d983c3b50e7",
+            "title": "GLaM: Fine-Tuning Large Language Models for Domain Knowledge Graph Alignment via Neighborhood Partitioning and Generative Subgraph Encoding",
+            "abstract": "Integrating large language models with knowledge graphs derived from domain-specific data represents an important advancement towards more powerful and factual reasoning. As these models grow more capable, it is crucial to enable them to perform multi-step inferences over real-world knowledge graphs while minimizing hallucination. While large language models excel at conversation and text generation, their ability to reason over domain-specialized graphs of interconnected entities remains limited. For example, can we query a model to identify the optimal contact in a professional network for a specific goal, based on relationships and attributes in a private database? The answer is no \u2013 such capabilities lie beyond current methods. However, this question underscores a critical technical gap that must be addressed. Many high-value applications in areas such as science, security, and e-commerce rely on proprietary knowledge graphs encoding unique structures, relationships, and logical constraints. We introduce a fine-tuning framework for developing Graph-aligned Language Models (GaLM) that transforms a knowledge graph into an alternate text representation with labeled question-answer pairs. We demonstrate that grounding the models in specific graph-based knowledge expands the models\u2019 capacity for structure-based reasoning. Our methodology leverages the large-language model's generative capabilities to create the dataset and proposes an efficient alternate to retrieval-augmented generation styled methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283844550",
+                    "name": "Stefan Dernbach"
+                },
+                {
+                    "authorId": "39073194",
+                    "name": "Khushbu Agarwal"
+                },
+                {
+                    "authorId": "2283844552",
+                    "name": "Alejandro Zuniga"
+                },
+                {
+                    "authorId": "2283848833",
+                    "name": "Michael Henry"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                }
+            ]
+        },
+        {
+            "paperId": "09b0db9c91de77a2aa8c6e368f5e9e2953a1f6c0",
+            "title": "BitGNN: Unleashing the Performance Potential of Binary Graph Neural Networks on GPUs",
+            "abstract": "Recent studies have shown that Binary Graph Neural Networks (GNNs) are promising for saving computations of GNNs through binarized tensors. Prior work, however, mainly focused on algorithm designs or training techniques, leaving it open to how to materialize the performance potential on accelerator hardware fully. This work redesigns the binary GNN inference backend from the efficiency perspective. It fills the gap by proposing a series of abstractions and techniques to map binary GNNs and their computations best to fit the nature of bit manipulations on GPUs. Results on real-world graphs with GCNs, GraphSAGE, and GraphSAINT show that the proposed techniques outperform state-of-the-art binary GNN implementations by 8-22X with the same accuracy maintained. BitGNN code is publicly available.1.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108265215",
+                    "name": "Jou-An Chen"
+                },
+                {
+                    "authorId": "2058984901",
+                    "name": "Hsin-Hsuan Sung"
+                },
+                {
+                    "authorId": "2111112811",
+                    "name": "Xipeng Shen"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                },
+                {
+                    "authorId": "2108667898",
+                    "name": "Ang Li"
+                }
+            ]
+        },
+        {
+            "paperId": "2129c6edc2593bf4adb5bc2772fdb042bdf14070",
+            "title": "Monte Carlo Thought Search: Large Language Model Querying for Complex Scientific Reasoning in Catalyst Design",
+            "abstract": "Discovering novel catalysts requires complex reasoning involving multiple chemical properties and resultant trade-offs, leading to a combinatorial growth in the search space. While large language models (LLM) have demonstrated novel capabilities for chemistry through complex instruction following capabilities and high quality reasoning, a goal-driven combinatorial search using LLMs has not been explored in detail. In this work, we present a Monte Carlo Tree Search-based approach that improves beyond state-of-the-art chain-of-thought prompting variants to augment scientific reasoning. We introduce two new reasoning datasets: 1) a curation of computational chemistry simulations, and 2) diverse questions written by catalysis researchers for reasoning about novel chemical conversion processes. We improve over the best baseline by 25.8\\% and find that our approach can augment scientist's reasoning and discovery process with novel insights.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2190281477",
+                    "name": "Henry W Sprueill"
+                },
+                {
+                    "authorId": "48870109",
+                    "name": "Carl N. Edwards"
+                },
+                {
+                    "authorId": "15751638",
+                    "name": "Mariefel V. Olarte"
+                },
+                {
+                    "authorId": "37794737",
+                    "name": "Udishnu Sanyal"
+                },
+                {
+                    "authorId": "2264201811",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                }
+            ]
+        },
+        {
+            "paperId": "2804f6ee0b04bcda32b7fc181abad4602d4c56b5",
+            "title": "MediSage: An AI Assistant for Healthcare via Composition of Neural-Symbolic Reasoning Operators",
+            "abstract": "We introduce MediSage, an AI decision support assistant for medical professionals and caregivers that simplifies the way in which they interact with different modalities of electronic health records (EHRs) through a conversational interface. It provides step-by-step reasoning support to an end-user to summarize patient health, predict patient outcomes and provide comprehensive and personalized healthcare recommendations. MediSage provides these reasoning capabilities by using a knowledge graph that combines general purpose clinical knowledge resources with recent-most information from the EHR data. By combining the structured representation of knowledge with the predictive power of neural models trained over both EHR and knowledge graph data, MediSage brings explainability by construction and represents a stepping stone into the future through further integration with biomedical language models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                },
+                {
+                    "authorId": "39073194",
+                    "name": "Khushbu Agarwal"
+                },
+                {
+                    "authorId": "1825786589",
+                    "name": "Colby Ham"
+                },
+                {
+                    "authorId": "2364709",
+                    "name": "S. Tamang"
+                }
+            ]
+        },
+        {
+            "paperId": "2a70348e7a7b8abbef22c6ef3ef124bdc0ade5d5",
+            "title": "Faithful and Efficient Explanations for Neural Networks via Neural Tangent Kernel Surrogate Models",
+            "abstract": "A recent trend in explainable AI research has focused on surrogate modeling, where neural networks are approximated as simpler ML algorithms such as kernel machines. A second trend has been to utilize kernel functions in various explain-by-example or data attribution tasks. In this work, we combine these two trends to analyze approximate empirical neural tangent kernels (eNTK) for data attribution. Approximation is critical for eNTK analysis due to the high computational cost to compute the eNTK. We define new approximate eNTK and perform novel analysis on how well the resulting kernel machine surrogate models correlate with the underlying neural network. We introduce two new random projection variants of approximate eNTK which allow users to tune the time and memory complexity of their calculation. We conclude that kernel machines using approximate neural tangent kernel as the kernel function are effective surrogate models, with the introduced trace NTK the most consistent performer. Open source software allowing users to efficiently calculate kernel functions in the PyTorch framework is available (https://github.com/pnnl/projection\\_ntk).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "119030631",
+                    "name": "A. Engel"
+                },
+                {
+                    "authorId": "2128697229",
+                    "name": "Zhichao Wang"
+                },
+                {
+                    "authorId": "2067856069",
+                    "name": "Natalie Frank"
+                },
+                {
+                    "authorId": "2883178",
+                    "name": "Ioana Dumitriu"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                },
+                {
+                    "authorId": "9208982",
+                    "name": "A. Sarwate"
+                },
+                {
+                    "authorId": "2166330191",
+                    "name": "Tony Chiang"
+                }
+            ]
+        },
+        {
+            "paperId": "75ed10971afbc36aa927d44f37417c9e826299f0",
+            "title": "Robust Explanations for Deep Neural Networks via Pseudo Neural Tangent Kernel Surrogate Models",
+            "abstract": "One of the ways recent progress has been made on explainable AI has been via explain-by-example strategies, specifically, through data attribution tasks. The feature spaces used to attribute decisions to training data, however, have not been compared against one another as to whether they form a truly representative surrogate model of the neural network (NN). Here, we demonstrate the efficacy of surrogate linear feature spaces to neural networks through two means: (1) we establish that a normalized psuedo neural tangent kernel (pNTK) is more correlated to the neural network decision functions than embedding based and influence based alternatives in both computer vision and large language model architectures; (2) we show that the attributions created from the normalized pNTK more accurately select perturbed training data in a data poisoning attribution task than these alternatives. Based on these observations, we conclude that kernel linear models are effective surrogate models across multiple classification architectures and that pNTK-based kernels are the most appropriate surrogate feature space of all kernels studied.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "119030631",
+                    "name": "A. Engel"
+                },
+                {
+                    "authorId": "2128697229",
+                    "name": "Zhichao Wang"
+                },
+                {
+                    "authorId": "2257206250",
+                    "name": "Natalie S. Frank"
+                },
+                {
+                    "authorId": "2257214082",
+                    "name": "Ioana Dumitriu"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                },
+                {
+                    "authorId": "2248108535",
+                    "name": "Anand D. Sarwate"
+                },
+                {
+                    "authorId": "2166330191",
+                    "name": "Tony Chiang"
+                }
+            ]
+        },
+        {
+            "paperId": "8a8b04d1ee1990e012e8a130a0b5f11a8cb66f63",
+            "title": "Cloud Services Enable Efficient AI-Guided Simulation Workflows across Heterogeneous Resources",
+            "abstract": "Applications that fuse machine learning and simulation can benefit from the use of multiple computing resources, with, for example, simulation codes running on highly parallel supercomputers and AI training and inference tasks on specialized accelerators. Here, we present our experiences deploying two AI-guided simulation workflows across such heterogeneous systems. A unique aspect of our approach is our use of cloud-hosted management services to manage challenging aspects of cross-resource authentication and authorization, function-as-a-service (FaaS) function invocation, and data transfer. We show that these methods can achieve performance parity with systems that rely on direct connection between resources. We achieve parity by integrating the FaaS system and data transfer capabilities with a system that passes data by reference among managers and workers, and a user-configurable steering algorithm to hide data transfer latencies. We anticipate that this ease of use can enable routine use of heterogeneous resources in computational science.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47766095",
+                    "name": "Logan T. Ward"
+                },
+                {
+                    "authorId": "51916788",
+                    "name": "J. G. Pauloski"
+                },
+                {
+                    "authorId": "2308097253",
+                    "name": "Val\u00e9rie Hayot-Sasson"
+                },
+                {
+                    "authorId": "36319017",
+                    "name": "Ryan Chard"
+                },
+                {
+                    "authorId": "2115014071",
+                    "name": "Y. Babuji"
+                },
+                {
+                    "authorId": "34011214",
+                    "name": "G. Sivaraman"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                },
+                {
+                    "authorId": "3091414",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "143994696",
+                    "name": "R. Thakur"
+                },
+                {
+                    "authorId": "2091477753",
+                    "name": "Ian T. Foster"
+                }
+            ]
+        },
+        {
+            "paperId": "d2bf391d525fcb10a69514060879f097f7bba558",
+            "title": "Evaluating Emerging AI/ML Accelerators: IPU, RDU, and NVIDIA/AMD GPUs",
+            "abstract": "The relentless advancement of artificial intelligence (AI) and machine learning (ML) applications necessitates the development of specialized hardware accelerators capable of handling the increasing complexity and computational demands. Traditional computing architectures, based on the von Neumann model, are being outstripped by the requirements of contemporary AI/ML algorithms, leading to a surge in the creation of accelerators like the Graphcore Intelligence Processing Unit (IPU), Sambanova Reconfigurable Dataflow Unit (RDU), and enhanced GPU platforms. These hardware accelerators are characterized by their innovative data-flow architectures and other design optimizations that promise to deliver superior performance and energy efficiency for AI/ML tasks. This research provides a preliminary evaluation and comparison of these commercial AI/ML accelerators, delving into their hardware and software design features to discern their strengths and unique capabilities. By conducting a series of benchmark evaluations on common DNN operators and other AI/ML workloads, we aim to illuminate the advantages of data-flow architectures over conventional processor designs and offer insights into the performance trade-offs of each platform. The findings from our study will serve as a valuable reference for the design and performance expectations of research prototypes, thereby facilitating the development of next-generation hardware accelerators tailored for the ever-evolving landscape of AI/ML applications. Through this analysis, we aspire to contribute to the broader understanding of current accelerator technologies and to provide guidance for future innovations in the field.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266280214",
+                    "name": "Hongwu Peng"
+                },
+                {
+                    "authorId": "2265671362",
+                    "name": "Caiwen Ding"
+                },
+                {
+                    "authorId": "2241619596",
+                    "name": "Tong Geng"
+                },
+                {
+                    "authorId": "7617146",
+                    "name": "Sutanay Choudhury"
+                },
+                {
+                    "authorId": "2265650648",
+                    "name": "Kevin Barker"
+                },
+                {
+                    "authorId": "2266140625",
+                    "name": "Ang Li"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,299 @@
+{
+    "authorId": "1944575455",
+    "papers": [
+        {
+            "paperId": "b7b6543c0352d19f34453fd568dd0b7936d7c005",
+            "title": "Weakly-supervised Point Cloud Instance Segmentation with Geometric Priors",
+            "abstract": "This paper investigates how to leverage more readily acquired annotations, i.e., 3D bounding boxes instead of dense point-wise labels, for instance segmentation. We propose a Weakly-supervised point cloud Instance Segmentation framework with Geometric Priors (WISGP) that allows segmentation models to be trained with 3D bounding boxes of instances. Considering intersections among bounding boxes in a scene would result in ambiguous la- bels, we first group points into two sets, i.e., univocal and equivocal sets, indicating the certainty of a 3D point belonging to an instance, respectively. Specifically, 3D points with clear labels belong to the univocal set while the rest are grouped into the equivocal set. To assign reliable labels to points in the equivocal set, we design a Geometry-guided Label Propagation (GLP) scheme that progressively propagates labels to linked points based on geometric structure, e.g., polygon meshes and superpoints. Afterwards, we train an instance segmentation model with the univocal points and equivocal points labeled by GLP, and then employ it to assign pseudo labels for the remainder of the unlabeled points. Lastly, we retrain the model with all the labeled points to achieve better instance segmentation performance. Experiments on large-scale datasets ScanNet-v2 and S3DIS demonstrate that WISGP is superior to competing weakly-supervised algorithms and even on par with a few fully-supervised ones.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150121597",
+                    "name": "Heming Du"
+                },
+                {
+                    "authorId": "2118210785",
+                    "name": "Xin Yu"
+                },
+                {
+                    "authorId": "1678926",
+                    "name": "F. Hussain"
+                },
+                {
+                    "authorId": "2179032",
+                    "name": "M. Armin"
+                },
+                {
+                    "authorId": "47773335",
+                    "name": "L. Petersson"
+                },
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                }
+            ]
+        },
+        {
+            "paperId": "3e27ee18bc52ad06f7a900ceeef44eacfed430cc",
+            "title": "Curved Geometric Networks for Visual Anomaly Recognition",
+            "abstract": "Learning a latent embedding to understand the underlying nature of data distribution is often formulated in Euclidean spaces with zero curvature. However, the success of the geometry constraints, posed in the embedding space, indicates that curved spaces might encode more structural information, leading to better discriminative power and hence richer representations. In this work, we investigate the benefits of the curved space for analyzing anomalous, open-set, or out-of-distribution (OOD) objects in data. This is achieved by considering embeddings via three geometry constraints, namely, spherical geometry (with positive curvature), hyperbolic geometry (with negative curvature), or mixed geometry (with both positive and negative curvatures). Three geometric constraints can be chosen interchangeably in a unified design, given the task at hand. Tailored for the embeddings in the curved space, we also formulate functions to compute the anomaly score. Two types of geometric modules (i.e., geometric-in-one (GiO) and geometric-in-two (GiT) models) are proposed to plug in the original Euclidean classifier, and anomaly scores are computed from the curved embeddings. We evaluate the resulting designs under a diverse set of visual recognition scenarios, including image detection (multiclass OOD detection and one-class anomaly detection) and segmentation (multiclass anomaly segmentation and one-class anomaly segmentation). The empirical results show the effectiveness of our proposal through consistent improvement over various scenarios. The code is made available at https://github.com/JHome1/GiO-GiT.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152093629",
+                    "name": "Jie Hong"
+                },
+                {
+                    "authorId": "49208246",
+                    "name": "Pengfei Fang"
+                },
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                },
+                {
+                    "authorId": "2109488495",
+                    "name": "Junlin Han"
+                },
+                {
+                    "authorId": "47773335",
+                    "name": "L. Petersson"
+                },
+                {
+                    "authorId": "1686714",
+                    "name": "M. Harandi"
+                }
+            ]
+        },
+        {
+            "paperId": "6074302a8ceacc02ac2ee44729d30f5a4084c34e",
+            "title": "A New Deep Learning Framework for HF Signal Detection in Wideband Spectrogram",
+            "abstract": "Detection of high frequency (HF) signal in the wideband is challenging since the HF environment is chaotic. Recent works adopt deep learning-based object detectors to capture signals in wideband spectrogram, but the task of signal detection exhibits different characteristics from that of generic object detection, which causes the classical deep learning-based detectors to have defects such as limited receptive field and prior anchor mismatch. Based on the task analysis, this letter proposes a deep learning framework which extracts features along the time axis at each frequency bin, and predicts multiple characteristics of the signal, including the center frequency and the shape attributes. The unique advantages of the framework are the utilization of all time features and no prior anchor which adapt to the slender shape of signal with a strong generalization ability. The numerical studies on simulation signal + real-world background prove the superiority of the proposed framework both in accuracy and speed.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                },
+                {
+                    "authorId": "2124632050",
+                    "name": "Keren Wang"
+                },
+                {
+                    "authorId": "1944877142",
+                    "name": "Ling You"
+                },
+                {
+                    "authorId": "2301811",
+                    "name": "Zhitao Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "81f86cd44c57a06d423d1265c5476e438cf4969f",
+            "title": "Towards Open-Set Object Detection and Discovery",
+            "abstract": "With the human pursuit of knowledge, open-set object detection (OSOD) has been designed to identify unknown objects in a dynamic world. However, an issue with the current setting is that all the predicted unknown objects share the same category as \"unknown\", which require incremental learning via a human-in-the-loop approach to label novel classes. In order to address this problem, we present a new task, namely Open-Set Object Detection and Discovery (OSODD). This new task aims to extend the ability of open-set object detectors to further discover the categories of unknown objects based on their visual appearance without human effort. We propose a two-stage method that first uses an open-set object detector to predict both known and unknown objects. Then, we study the representation of predicted objects in an unsupervised manner and discover new categories from the set of unknown objects. With this method, a detector is able to detect objects belonging to known classes and define novel categories for objects of unknown classes with minimal supervision. We show the performance of our model on the MS-COCO dataset under a thorough evaluation protocol. We hope that our work will promote further research towards a more robust real-world detection system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112693995",
+                    "name": "Jiyang Zheng"
+                },
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                },
+                {
+                    "authorId": "2152093629",
+                    "name": "Jie Hong"
+                },
+                {
+                    "authorId": "47773335",
+                    "name": "L. Petersson"
+                },
+                {
+                    "authorId": "1712576",
+                    "name": "Nick Barnes"
+                }
+            ]
+        },
+        {
+            "paperId": "b5b77f7e34e987a2ee350b4ff06b513e1085d3aa",
+            "title": "Emoji-based Fine-grained Attention Network for Sentiment Analysis in the Microblog Comments",
+            "abstract": "Microblogs have become a social platform for people to express their emotions in real-time, and it is a trend to analyze user emotional tendencies from the information on Microblogs. The dynamic features of emojis can affect the sentiment polarity of microblog texts. Since existing models seldom consider the diversity of emoji sentiment polarity, the paper propose a microblog sentiment classification model based on ALBERT-FAET. We obtain text embedding via ALBERT pretraining model and learn the inter-emoji embedding with an attention-based LSTM network. In addition, a fine-grained attention mechanism is proposed to capture the word-level interactions between plain text and emoji. Finally, we concatenate these features and feed them into a CNN classifier to predict the sentiment labels of the microblogs. To verify the effectiveness of the model and the fine-grained attention network, we conduct comparison experiments and ablation experiments. The comparison experiments show that the model outperforms previous methods in three evaluation indicators (accuracy, precision, and recall) and the model can significantly improve sentiment classification. The ablation experiments show that compared with ALBERT-AET, the proposed model ALBERT-FAET is better in the metrics, indicating that the fine-grained attention network can understand the diversified information of emoticons.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145843537",
+                    "name": "Yang Deng"
+                },
+                {
+                    "authorId": "49599912",
+                    "name": "Kejian Liu"
+                },
+                {
+                    "authorId": "3443627",
+                    "name": "Cheng Yang"
+                },
+                {
+                    "authorId": "2107247873",
+                    "name": "Yuanyuan Feng"
+                },
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                }
+            ]
+        },
+        {
+            "paperId": "c2409aeb341b63d5c5bd14524e9c084c2f28d970",
+            "title": "A Hyperspectral and RGB Dataset for Building Facade Segmentation",
+            "abstract": "Hyperspectral Imaging (HSI) provides detailed spectral information and has been utilised in many real-world applications. This work introduces an HSI dataset of building facades in a light industry environment with the aim of classifying different building materials in a scene. The dataset is called the Light Industrial Building HSI (LIB-HSI) dataset. This dataset consists of nine categories and 44 classes. In this study, we investigated deep learning based semantic segmentation algorithms on RGB and hyperspectral images to classify various building materials, such as timber, brick and concrete.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "29399061",
+                    "name": "N. Habili"
+                },
+                {
+                    "authorId": "2193620920",
+                    "name": "Ernest Kwan"
+                },
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                },
+                {
+                    "authorId": "35837392",
+                    "name": "C. Webers"
+                },
+                {
+                    "authorId": "2584923",
+                    "name": "Jeremy Oorloff"
+                },
+                {
+                    "authorId": "2179032",
+                    "name": "M. Armin"
+                },
+                {
+                    "authorId": "47773335",
+                    "name": "L. Petersson"
+                }
+            ]
+        },
+        {
+            "paperId": "99b7a308e82165890e0a14e577715f81e11e8f89",
+            "title": "Reinforced Attention for Few-Shot Learning and Beyond",
+            "abstract": "Few-shot learning aims to correctly recognize query samples from unseen classes given a limited number of support samples, often by relying on global embeddings of images. In this paper, we propose to equip the backbone network with an attention agent, which is trained by reinforcement learning. The policy gradient algorithm is employed to train the agent towards adaptively localizing the representative regions on feature maps over time. We further design a reward function based on the prediction of the held-out data, thus helping the attention mechanism to generalize better across the unseen classes. The extensive experiments show, with the help of the reinforced attention, that our embedding network has the capability to progressively generate a more discriminative representation in few-shot learning. Moreover, experiments on the task of image classification also show the effectiveness of the proposed design.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152093629",
+                    "name": "Jie Hong"
+                },
+                {
+                    "authorId": "49208246",
+                    "name": "Pengfei Fang"
+                },
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                },
+                {
+                    "authorId": "50728655",
+                    "name": "Tong Zhang"
+                },
+                {
+                    "authorId": "144616396",
+                    "name": "Christian Simon"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                },
+                {
+                    "authorId": "47773335",
+                    "name": "L. Petersson"
+                }
+            ]
+        },
+        {
+            "paperId": "12d2144758bec3ee42dac95046ccd8652b08d3a1",
+            "title": "MorseNet: A Unified Neural Network for Morse Detection and Recognition in Spectrogram",
+            "abstract": "Short-wave radio is an indispensable long-distance means of communication, among which Morse signals, which rely on simplicity and efficiency, plays an import role in military and civilian applications. Automatic Morse detection and recognition have been researched for several years, but some thorny problems in actual communication always restrict the performance of methods. In this article, by introducing deep learning technology, we propose a network named MorseNet that can simultaneously locate and decode Morse signals in the spectrogram. MorseNet uses shared convolutions to extract shared features for both the detection and recognition branches. The detection branch regresses bounding boxes based on signal centerlines, and the recognition branch decodes Morse fragments cropped from feature maps by a convolutional recurrent neural network (CRNN). The losses of two branches are combined to implement the end-to-end training. Experimental results on four \u201csimulated Morse + real background\u201d datasets demonstrate that the proposed method achieves state-of-the-art performance in both detection and recognition, and it effectively improves four problems that have long been troublesome in accomplishing the tasks. Furthermore, the joint training strategy and architecture give MorseNet advantages over its two-stage deployment in terms of accuracy, speed, and model size.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                },
+                {
+                    "authorId": "2124632050",
+                    "name": "Keren Wang"
+                },
+                {
+                    "authorId": "1944877142",
+                    "name": "Ling You"
+                }
+            ]
+        },
+        {
+            "paperId": "5d39c5ac8ae9b914b20241b10b354f45f06f6b93",
+            "title": "A Fast Deep-Learning Signal Detection Architecture for the Short-wave Band",
+            "abstract": "Wideband signal detection plays an important role in wireless communication systems. In recent years, deep learning (DL) has been introduced, and many trial efforts have been posed. In this paper, a fast deep-learning signal detection architecture is proposed for the short-wave band, which consists of the GPU-based Down Digital Converter (DDC), the DL-based signal detector, and the signal data viewer & recorder. Wideband signal data are taken directly as the input, and detected signals are automatically recorded as the output of the architecture. Experimental results suggest that our architecture is capable of detecting signals in the whole short-wave band in quasi-real-time, and specifically, with single GPU device.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124632050",
+                    "name": "Keren Wang"
+                },
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                }
+            ]
+        },
+        {
+            "paperId": "63c4ae78420c31f60a2547e1bbfb4722618e1eb5",
+            "title": "A Deep Convolutional Network for Multi-Type Signal Detection in Spectrogram",
+            "abstract": ": Wideband signal detection is an important problem in wireless communication. With the rapid development of deep learning (DL) technology, some DL-based methods are applied to wireless technology, and the effect is obvious. In this paper, we propose a novel neural network for multi-type signal detection that can locate signals and recognize signal types in wideband spectrogram. Our network utilizes the key point estimation to locate the rough centerline of signal region and identify class. Then, several regressions are carried out to achieve properties, such as local offset and border offsets of bounding box, which is further synthesized for a more fine location. Experimental results demonstrate that our method performs more accurate than other DL-based object detection methods previously employed for the same detection task. Specifically, our method runs obviously faster than existing methods, and abandons the anchor generation, which makes it more favorable for real-time applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944575455",
+                    "name": "Weihao Li"
+                },
+                {
+                    "authorId": "2124632050",
+                    "name": "Keren Wang"
+                },
+                {
+                    "authorId": "1944877142",
+                    "name": "Ling You"
+                }
+            ]
+        }
+    ]
+}

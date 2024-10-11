@@ -1,0 +1,290 @@
+{
+    "authorId": "2695249",
+    "papers": [
+        {
+            "paperId": "c85cd1085efbb04d53822006e9fb2f258bb629dd",
+            "title": "ZenLDA: Large-scale topic model training on distributed data-parallel platform",
+            "abstract": "Recently, topic models such as Latent Dirichlet Allocation (LDA) have been widely used in large-scale web mining. Many large-scale LDA training systems have been developed, which usually prefer a customized design from top to bottom with sophisticated synchronization support. We propose an LDA training system named ZenLDA, which follows a generalized design for the distributed data-parallel platform. The novelty of ZenLDA consists of three main aspects: (1) it converts the commonly used serial Collapsed Gibbs Sampling (CGS) inference algorithm to a Monte-Carlo Collapsed Bayesian (MCCB) estimation method, which is embarrassingly parallel; (2) it decomposes the LDA inference formula into parts that can be sampled more efficiently to reduce computation complexity; (3) it proposes a distributed LDA training framework, which represents the corpus as a directed graph with the parameters annotated as corresponding vertices and implements ZenLDA and other well-known inference methods based on Spark. Experimental results indicate that MCCB converges with accuracy similar to that of CGS, while running much faster. On top of MCCB, the ZenLDA formula decomposition achieved the fastest speed among other well-known inference methods. ZenLDA also showed good scalability when dealing with large-scale topic models on the data-parallel platform. Overall, ZenLDA could achieve comparable and even better computing performance with state-of-the-art dedicated systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112525315",
+                    "name": "Bo Zhao"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "39908206",
+                    "name": "Guoqiang Li"
+                },
+                {
+                    "authorId": "2339847",
+                    "name": "Y. Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "117bd529d1e86ef1f2d8aae6acca2b13d3ae7826",
+            "title": "SparkTree: Push the Limit of Tree Ensemble Learning",
+            "abstract": "Decision trees, when combined with different loss functions and ensemble techniques, are widely used in web applications such as document ranking in web search and click prediction in ads targeting. Therefore, there is an increasing motivation on an integrated framework that supports all loss functions and all ensemble techniques instead of each with a separated system. The web-scale training is challenging because of big data that has hundreds of millions of samples and each sample with thousands of features, and big model in which thousands of trees are fitted and each tree has hundreds of nodes. Therefore, there is an increasing demand for a scalable distributed learning system that exploits all dimensions of parallelism. However, widely used offers such as XGBoost and Spark MLlib are incomplete without the support of ranking such as LambdaMART, and without the support of the feature parallelism, they are not scalable to support a large number of features. Simply adding these supports does not meet the efficiency requirement needed to balance the training speed and accuracy. In this paper, we present SparkTree which seamlessly integrates all parallelism with completely new tradeoffs and presents a series of optimizations to improve training speed and accuracy. SparkTree has been evaluated against our production workloads against XGBoost and MLlib, the result indicates that SparkTree outperforms MLlib with a 8.3X-71.5X speed increase and outperforms XGBoost with speeds up to 11.8X. The effectiveness of the presented optimization has also been evaluated, with SparkTree outperforming MLLib with 7.70% AUC gain and outperforms XGBoost with 5.77% AUC gain.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109735606",
+                    "name": "Cui Li"
+                },
+                {
+                    "authorId": "2112525315",
+                    "name": "Bo Zhao"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "34d569cd2e2508a29ebd2e23b70da497a02918ed",
+            "title": "Model Ensemble for Click Prediction in Bing Search Ads",
+            "abstract": "Accurate estimation of the click-through rate (CTR) in sponsored ads significantly impacts the user search experience and businesses' revenue, even 0.1% of accuracy improvement would yield greater earnings in the hundreds of millions of dollars. CTR prediction is generally formulated as a supervised classification problem. In this paper, we share our experience and learning on model ensemble design and our innovation. Specifically, we present 8 ensemble methods and evaluate them on our production data. Boosting neural networks with gradient boosting decision trees turns out to be the best. With larger training data, there is a nearly 0.9% AUC improvement in offline testing and significant click yield gains in online traffic. In addition, we share our experience and learning on improving the quality of training.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2056682198",
+                    "name": "Xiaoliang Ling"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": "2053400434",
+                    "name": "Chen Gu"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "2109735606",
+                    "name": "Cui Li"
+                },
+                {
+                    "authorId": "2075375820",
+                    "name": "Feng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "ba74ea36378cbcf8166ba64e689c0b3f03a74c70",
+            "title": "Efficient and Scalable Topic Model Training on Distributed Data-Parallel Platform",
+            "abstract": "Distributed Collapsed Gibbs Sampling (CGS) in Latent Dirichlet Allocation (LDA) training usually prefers a \u201ccustomized\u201d design with sophisticated asynchronization support. However, with both algorithm level innovation and system level optimizations, we demonstrate that the \u201cgeneralized\u201d design on distributed dataparallel platform can even outperform the dedicated designs. We first present a novel CGS sampling algorithm, ZenLDA, that has different formula decomposition with different performance-accuracy tradeoff with other CGS algorithms. With respect to parallelization, we convert the serial CGS algorithm to Monte Carlo ExpectationMaximization (MCEM) algorithm thus can be parallelized in a fully batched and synchronized way. To push the performance to the limit, we also present two approximations, sparse model initialization and \u201cconverged\u201d token exclusion, as well as several system level optimizations. Training corpus is represented as a directed graph and model parameters are annotated as the corresponding vertex attributes, thus we implemented ZenLDA and other well-known CGS algorithms on GraphX in Spark, and it has been deployed and daily used in production. We evaluated the efficiency of presented techniques against multiple datesets including web-scale corpus. Experimental results indicate that MCEM variant achieves much faster than CGS algorithms but still converges with similar accuracy, and ZenLDA is the best performer. When compared with state-of-art systems, ZenLDA achieves comparable (even better) performance with similar accuracy. Besides, ZenLDA demonstrates good scalability when dealing with large topics and huge corpus.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112525315",
+                    "name": "Bo Zhao"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "39908206",
+                    "name": "Guoqiang Li"
+                },
+                {
+                    "authorId": "46844324",
+                    "name": "Yihua Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "c89ad3defd663f9c2f0fd28af95014652a30153a",
+            "title": "Improving Execution Concurrency of Large-Scale Matrix Multiplication on Distributed Data-Parallel Platforms",
+            "abstract": "Matrix multiplication is a dominant but very time-consuming operation in many big data analytic applications. Thus its performance optimization is an important and fundamental research issue. The performance of large-scale matrix multiplication on distributed data-parallel platforms is determined by both computation and IO costs. For existing matrix multiplication execution strategies, when the execution concurrency scales up above a threshold, their execution performance deteriorates quickly because the increase of the IO cost outweighs the decrease of the computation cost. This paper presents a novel parallel execution strategy <italic>CRMM (Concurrent Replication-based Matrix Multiplication)</italic> along with a parallel algorithm, Marlin, for large-scale matrix multiplication on data-parallel platforms. The CRMM strategy exploits higher execution concurrency for sub-block matrix multiplication with the same IO cost. To further improve the performance of Marlin, we also propose a number of novel system-level optimizations, including increasing the concurrency of local data exchange by calling native library in batch, reducing the overhead of block matrix transformation, and reducing disk heavy shuffle operations by exploiting the semantics of matrix computation. We have implemented Marlin as a library along with a set of related matrix operations on Spark and also contributed Marlin to the open-source community. For large-sized matrix multiplication, Marlin outperforms existing systems including Spark MLlib, SystemML and SciDB, with about <inline-formula> <tex-math notation=\"LaTeX\">$1.29\\times$</tex-math><alternatives><inline-graphic xlink:href=\"tian-ieq1-2686384.gif\"/> </alternatives></inline-formula>, <inline-formula><tex-math notation=\"LaTeX\">$3.53\\times$</tex-math><alternatives> <inline-graphic xlink:href=\"tian-ieq2-2686384.gif\"/></alternatives></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">$2.21\\times$</tex-math><alternatives><inline-graphic xlink:href=\"tian-ieq3-2686384.gif\"/> </alternatives></inline-formula> speedup on average, respectively. The evaluation upon a real-world DNN workload also indicates that Marlin outperforms above systems by about <inline-formula><tex-math notation=\"LaTeX\">$12.8\\times$ </tex-math><alternatives><inline-graphic xlink:href=\"tian-ieq4-2686384.gif\"/></alternatives></inline-formula>, <inline-formula><tex-math notation=\"LaTeX\">$5.1\\times$</tex-math><alternatives> <inline-graphic xlink:href=\"tian-ieq5-2686384.gif\"/></alternatives></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">$27.2\\times$</tex-math><alternatives><inline-graphic xlink:href=\"tian-ieq6-2686384.gif\"/> </alternatives></inline-formula> speedup, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144997442",
+                    "name": "Rong Gu"
+                },
+                {
+                    "authorId": "2119309407",
+                    "name": "Yun Tang"
+                },
+                {
+                    "authorId": "2277300529",
+                    "name": "Chen Tian"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "2108845625",
+                    "name": "Guanru Li"
+                },
+                {
+                    "authorId": "2110301869",
+                    "name": "Xudong Zheng"
+                },
+                {
+                    "authorId": "2339847",
+                    "name": "Y. Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "81f3c82331f8185baec33e1bd50df3c6ae1a163d",
+            "title": "The Improvement of the Trustworthiness of Android App Stores in China",
+            "abstract": "The absence of Google Play has created a booming area for Android app distribution through third-party app stores in China. Since the study showed that the trustworthy level of app stores was fairly low in 2014, much attention should be paid on the changes of the trustworthiness of Android app stores. In this paper, we present a method to analyze the changes of trustworthiness of the top popular Android app stores in China. In this method, we evaluate the target app stores by analyzing the sampled apps hosted in them. Further more, we have used this method to track the changes of trustworthy level of Android app stores in China about two years. The results indicate that the trustworthy level of the top popular Android app stores in China has been improved 24% on average. It can be seen that the positive changes may be related to the development of the China's mobile market, the improvement of Android system, and the introduced policies. Although the trustworthy level of top popular Android app stores in China is still low, it is predicted to be improving in the future.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2119051013",
+                    "name": "Yao Wang"
+                },
+                {
+                    "authorId": "3173565",
+                    "name": "Yiying Ng"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "2115458740",
+                    "name": "Yuan Dong"
+                },
+                {
+                    "authorId": "2099823957",
+                    "name": "Zhiyuan Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "4661878bc89e7347fee16fbc0e6343eebf5631cb",
+            "title": "Demo: Optimizing Smartphone Power Consumption through Dynamic Resolution Scaling",
+            "abstract": "The extremely-high display density of modern smartphones imposes a significant burden on power consumption, yet does not always provide an improved user experience and may even lead to a compromised user experience. As human visually-perceivable ability highly depends on the user-screen distance, a reduced display resolution may still achieve the same user experience when the user-screen distance is large. This provides new power-saving opportunities. We present a flexible dynamic resolution scaling system for smartphones. The system adopts an ultrasonic-based approach to detect the user-screen distance at low-power cost and makes scaling decisions automatically for maximum user experience and power saving. App developers or users can also adjust the resolution manually and dynamically as their needs. Our system is able to work on the existing commercial smartphones and support the legacy apps, without requiring re-building the ROM or any changes from apps.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3143190",
+                    "name": "Songtao He"
+                },
+                {
+                    "authorId": "3180228",
+                    "name": "Yunxin Liu"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "55a480c9089645f49f06032c6bf315194b3a7df1",
+            "title": "An Empirical Study on Quality Issues of Production Big Data Platform",
+            "abstract": "Big Data computing platform has evolved to be a multi-tenant service. The service quality matters because system failure or performance slowdown could adversely affect business and user experience. There is few study in literature on service quality issues of production Big Data computing platform. In this paper, we present an empirical study on the service quality issues of Microsoft ProductA, which is a company-wide multi-tenant Big Data computing platform, serving thousands of customers from hundreds of teams. ProductA has a well-defined incident management process, which helps customers report and mitigate service quality issues on 24/7 basis. This paper explores the common symptom, causes and mitigation of service quality issues in Big Data computing. We conduct an empirical study on 210 real service quality issues in ProductA. Our major findings include (1) 21.0% of escalations are caused by hardware faults; (2) 36.2% are caused by system side defects; (3) 37.2% are due to customer side faults. We also studied the general diagnosis process and the commonly adopted mitigation solutions. Our findings can help improve current development and maintenance practice of Big Data computing platform, and motivate tool support.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "4648762",
+                    "name": "Jian-Guang Lou"
+                },
+                {
+                    "authorId": "46702864",
+                    "name": "Hongyu Zhang"
+                },
+                {
+                    "authorId": "2152781871",
+                    "name": "Haibo Lin"
+                },
+                {
+                    "authorId": "48444760",
+                    "name": "Haoxiang Lin"
+                },
+                {
+                    "authorId": "48214735",
+                    "name": "Tingting Qin"
+                }
+            ]
+        },
+        {
+            "paperId": "6e8dece0d88e4d7ddbf29e6eb0de49d59bcaffe4",
+            "title": "ZenLDA: An Efficient and Scalable Topic Model Training System on Distributed Data-Parallel Platform",
+            "abstract": "This paper presents our recent efforts, zenLDA, an efficient and scalable Collapsed Gibbs Sampling system for Latent Dirichlet Allocation training, which is thought to be challenging that both data parallelism and model parallelism are required because of the Big sampling data with up to billions of documents and Big model size with up to trillions of parameters. zenLDA combines both algorithm level improvements and system level optimizations. It first presents a novel CGS algorithm that balances the time complexity, model accuracy and parallelization flexibility. The input corpus in zenLDA is represented as a directed graph and model parameters are annotated as the corresponding vertex attributes. The distributed training is parallelized by partitioning the graph that in each iteration it first applies CGS step for all partitions in parallel, followed by synchronizing the computed model each other. In this way, both data parallelism and model parallelism are achieved by converting them to graph parallelism. We revisited the tradeoff between system efficiency and model accuracy and presented approximations such as unsynchronized model, sparse model initialization and \"converged\" token exclusion. zenLDA is built on GraphX in Spark that provides distributed data abstraction (RDD) and expressive APIs to simplify the programming efforts and simultaneously hides the system complexities. This enables us to implement other CGS algorithm with a few lines of code change. To better fit in distributed data-parallel framework and achieve comparable performance with contemporary systems, we also presented several system level optimizations to push the performance limit. zenLDA was evaluated it against web-scale corpus, and the result indicates that zenLDA can achieve about much better performance than other CGS algorithm we implemented, and simultaneously achieve better model accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112525315",
+                    "name": "Bo Zhao"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "39908206",
+                    "name": "Guoqiang Li"
+                },
+                {
+                    "authorId": "2339847",
+                    "name": "Y. Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "74ff7c4ac1626564f15528be5218dd205e7d6fee",
+            "title": "Multi-View Factorization Machines",
+            "abstract": "For a learning task, data can usually be collected from different sources or be represented from multiple views. For example, laboratory results from different medical examinations are available for disease diagnosis, and each of them can only reflect the health state of a person from a particular aspect/view. Therefore, different views provide complementary information for learning tasks. An effective integration of the multi-view information is expected to facilitate the learning performance. In this paper, we propose a general predictor, named multi-view machines (MVMs), that can effectively include all the possible interactions between features from multiple views. A joint factorization is embedded for the full-order interaction parameters which allows parameter estimation under sparsity. Moreover, MVMs can work in conjunction with different loss functions for a variety of machine learning tasks. A stochastic gradient descent method is presented to learn the MVM model. We further illustrate the advantages of MVMs through comparison with other methods for multi-view classification, including support vector machines (SVMs), support tensor machines (STMs) and factorization machines (FMs).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1678185",
+                    "name": "Bokai Cao"
+                },
+                {
+                    "authorId": "2695249",
+                    "name": "Hucheng Zhou"
+                },
+                {
+                    "authorId": "39908206",
+                    "name": "Guoqiang Li"
+                },
+                {
+                    "authorId": "144019071",
+                    "name": "Philip S. Yu"
+                }
+            ]
+        }
+    ]
+}

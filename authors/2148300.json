@@ -1,0 +1,313 @@
+{
+    "authorId": "2148300",
+    "papers": [
+        {
+            "paperId": "0b3a446f055b46bca12411e4b01146447f60d8de",
+            "title": "Imbalanced Node Classification Beyond Homophilic Assumption",
+            "abstract": "Imbalanced node classification widely exists in real-world networks where graph neural networks (GNNs) are usually highly inclined to majority classes and suffer from severe performance degradation on classifying minority class nodes. Various imbalanced node classification methods have been proposed recently which construct synthetic nodes and edges w.r.t. minority classes to balance the label and topology distribution. However, they are all based on the homophilic assumption that nodes of the same label tend to connect despite the wide existence of heterophilic edges in real-world graphs. Thus, they uniformly aggregate features from both homophilic and heterophilic neighbors and rely on feature similarity to generate synthetic edges, which cannot be applied to imbalanced graphs in high heterophily. To address this problem, we propose a novel GraphSANN for imbalanced node classification on both homophilic and heterophilic graphs. Firstly, we propose a unified feature mixer to generate synthetic nodes with both homophilic and heterophilic interpolation in a unified way. Next, by randomly sampling edges between synthetic nodes and existing nodes as candidate edges, we design an adaptive subgraph extractor to adaptively extract the contextual subgraphs of candidate edges with flexible ranges. Finally, we develop a multi-filter subgraph encoder that constructs different filter channels to discriminatively aggregate neighbor's information along the homophilic and heterophilic edges. Extensive experiments on eight datasets demonstrate the superiority of our model for imbalanced node classification on both homophilic and heterophilic graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Jie Liu"
+                },
+                {
+                    "authorId": "30785098",
+                    "name": "Mengting He"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "1925773",
+                    "name": "Nguyen Quoc Viet Hung"
+                },
+                {
+                    "authorId": "48803503",
+                    "name": "Xuequn Shang"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "be50b3866bd691ffe7fc1f9f846e7f3e6d291e60",
+            "title": "Exploring Interactive and Contrastive Relations for Nested Named Entity Recognition",
+            "abstract": "Nested named entities (nested NEs) refer to the situation where one named entity is included or nested within another named entity, which cannot be recognized by the traditional sequence labeling methods. Recently, span-based methods have become the mainstream methods for nested Named Entity Recognition (nested NER). The fundamental concept behind this method is to enumerate nearly all potential spans as entity mentions and subsequently classify them. However, span-based methods independently classify spans without considering the semantic relations among them, which negatively impacts the span representation. To address the issue, we propose a novel deep learning architecture for nested NER that explores interactive and contrastive relations among spans. Specifically, we design a scale transformation mechanism that embeds geometric information into span representations, which enhances the model's ability to encode interactive relations between spans. Additionally, we introduce a supervised contrastive learning loss that pulls apart highly overlapping spans in the embedding space to encode the contrastive relations. Experiments show that our method achieves state-of-the-art or competitive performance on three publicly nested NER datasets, thus validating its effectiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152099668",
+                    "name": "Qinghua Zheng"
+                },
+                {
+                    "authorId": "2034276064",
+                    "name": "Yuefei Wu"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "2109196823",
+                    "name": "Yanping Chen"
+                },
+                {
+                    "authorId": "50224935",
+                    "name": "Wei Yu Wu"
+                },
+                {
+                    "authorId": "2109536102",
+                    "name": "Zai Zhang"
+                },
+                {
+                    "authorId": "1950135986",
+                    "name": "Bin Shi"
+                },
+                {
+                    "authorId": "143864580",
+                    "name": "Bo Dong"
+                }
+            ]
+        },
+        {
+            "paperId": "3469127ffee73eca466bd86e4bfdfa8e8c71107f",
+            "title": "Improving Time Sensitivity for Question Answering over Temporal Knowledge Graphs",
+            "abstract": "Question answering over temporal knowledge graphs (KGs) efficiently uses facts contained in a temporal KG, which records entity relations and when they occur in time, to answer natural language questions (e.g., \u201cWho was the president of the US before Obama?\u201d). These questions often involve three time-related challenges that previous work fail to adequately address: 1) questions often do not specify exact timestamps of interest (e.g., \u201cObama\u201d instead of 2000); 2) subtle lexical differences in time relations (e.g., \u201cbefore\u201d vs \u201cafter\u201d); 3) off-the-shelf temporal KG embeddings that previous work builds on ignore the temporal order of timestamps, which is crucial for answering temporal-order related questions. In this paper, we propose a time-sensitive question answering (TSQA) framework to tackle these problems. TSQA features a timestamp estimation module to infer the unwritten timestamp from the question. We also employ a time-sensitive KG encoder to inject ordering information into the temporal KG embeddings that TSQA is based on. With the help of techniques to reduce the search space for potential answers, TSQA significantly outperforms the previous state of the art on a new benchmark for question answering over temporal KGs, especially achieving a 32% (absolute) error reduction on complex questions that require multiple steps of reasoning over facts in the temporal KG.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062997349",
+                    "name": "Chao Shang"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "2121382930",
+                    "name": "Peng Qi"
+                },
+                {
+                    "authorId": "30768523",
+                    "name": "Jing Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "5c57dc2ff80e1744db0f8d14de04aac502930840",
+            "title": "SpanDrop: Simple and Effective Counterfactual Learning for Long Sequences",
+            "abstract": "Distilling supervision signal from a long sequence to make predictions is a challenging task in machine learning, especially when not all elements in the input sequence contribute equally to the desired output. In this paper, we propose SpanDrop, a simple and effective data augmentation technique that helps models identify the true supervision signal in a long sequence with very few examples. By directly manipulating the input sequence, SpanDrop randomly ablates parts of the sequence at a time and ask the model to perform the same task to emulate counterfactual learning and achieve input attribution. Based on theoretical analysis of its properties, we also propose a variant of SpanDrop based on the beta-Bernoulli distribution, which yields diverse augmented sequences while providing a learning objective that is more consistent with the original dataset. We demonstrate the effectiveness of SpanDrop on a set of carefully designed toy tasks, as well as various natural language processing tasks that require reasoning over long sequences to arrive at the correct answer, and show that it helps models improve performance both when data is scarce and abundant.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2121382930",
+                    "name": "Peng Qi"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "30768523",
+                    "name": "Jing Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "b0fd65b0058d89e30c199465be5ed400ae319fe4",
+            "title": "Ensemble Learning Based Classification Algorithm Recommendation",
+            "abstract": "Recommending appropriate algorithms to a classification problem is one of the most challenging issues in the field of data mining. The existing algorithm recommendation models are generally constructed on only one kind of meta-features by single learners. Considering that i) ensemble learners usually show better performance and ii) different kinds of meta-features characterize the classification problems in different viewpoints independently, and further the models constructed with different sets of meta-features will be complementary with each other and applicable for ensemble. This paper proposes an ensemble learning-based algorithm recommendation method. To evaluate the proposed recommendation method, extensive experiments with 13 well-known candidate classification algorithms and five different kinds of meta-features are conducted on 1090 benchmark classification problems. The results show the effectiveness of the proposed ensemble learning based recommendation method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "1678555",
+                    "name": "Qinbao Song"
+                },
+                {
+                    "authorId": "1686240",
+                    "name": "Xiaoyan Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "e4179bf0963012f9f13ce0ca61d3cdd12a87b336",
+            "title": "Entity and Evidence Guided Document-Level Relation Extraction",
+            "abstract": "Document-level relation extraction is a challenging task, requiring reasoning over multiple sentences to predict a set of relations in a document. In this paper, we propose a novel framework E2GRE (Entity and Evidence Guided Relation Extraction) that jointly extracts relations and the underlying evidence sentences by using large pretrained language model (LM) as input encoder. First, we propose to guide the pretrained LM\u2019s attention mechanism to focus on relevant context by using attention probabilities as additional features for evidence prediction. Furthermore, instead of feeding the whole document into pretrained LMs to obtain entity representation, we concatenate document text with head entities to help LMs concentrate on parts of the document that are more related to the head entity. Our E2GRE jointly learns relation extraction and evidence prediction effectively, showing large gains on both these tasks, which we find are highly correlated.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152530947",
+                    "name": "Kevin Huang"
+                },
+                {
+                    "authorId": "2121382930",
+                    "name": "Peng Qi"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "2114186424",
+                    "name": "Tengyu Ma"
+                },
+                {
+                    "authorId": "30768523",
+                    "name": "Jing Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "e69baffcf8853efa627c917f8c57c33b27572ee8",
+            "title": "Graph Ensemble Learning over Multiple Dependency Trees for Aspect-level Sentiment Classification",
+            "abstract": "Recent work on aspect-level sentiment classification has demonstrated the efficacy of incorporating syntactic structures such as dependency trees with graph neural networks (GNN), but these approaches are usually vulnerable to parsing errors. To better leverage syntactic information in the face of unavoidable errors, we propose a simple yet effective graph ensemble technique, GraphMerge, to make use of the predictions from different parsers. Instead of assigning one set of model parameters to each dependency tree, we first combine the dependency relations from different parses before applying GNNs over the resulting graph. This allows GNN models to be robust to parse errors at no additional computational cost, and helps avoid overparameterization and overfitting from GNN layer stacking by introducing more connectivity into the ensemble graph. Our experiments on the SemEval 2014 Task 4 and ACL 14 Twitter datasets show that our GraphMerge model not only outperforms models with single dependency tree, but also beats other ensemble models without adding model parameters.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112801444",
+                    "name": "Xiaochen Hou"
+                },
+                {
+                    "authorId": "50531624",
+                    "name": "Peng Qi"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "83539859",
+                    "name": "Rex Ying"
+                },
+                {
+                    "authorId": "30768523",
+                    "name": "Jing Huang"
+                },
+                {
+                    "authorId": "144137069",
+                    "name": "Xiaodong He"
+                },
+                {
+                    "authorId": "150048906",
+                    "name": "Bowen Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "e6d84cf9ae6efa10919bff765613e883a761db62",
+            "title": "Open Temporal Relation Extraction for Question Answering",
+            "abstract": "Understanding the temporal relations among events in text is a critical aspect of reading comprehension, which can be evaluated in the form of temporal question answering (TQA). When explicit timestamps are absent, TQA is a challenging task that requires models to understand the nuanced di\ufb00erence in textual expressions that indicate di\ufb00erent temporal relations (e.g., \u201cWhat happened right before dawn\u201d indicates a small subset of \u201cWhat happened before dawn\u201d). In this paper, we propose to reformulate the task of TQA as open temporal relation extraction. Speci\ufb01cally, we decompose each question into a question event (e.g., \u201cdawn\u201d) and an open temporal relation (OTR, e.g., \u201chappened be-fore\u201d) which is not pre-de\ufb01ned nor with timestamps, and ground the former in the context while sharing the representation of the latter across contexts. This OTR for QA formulation has two advantages: 1) it allows us to learn context-agnostic, free-text-based relation representations that generalize across di\ufb00erent contexts and events, which leads to higher data e\ufb03ciency; 2) it allows us to explicitly model the di\ufb00erences in temporal relations with a contrastive loss function, which helps better capture mutually exclusive relations (e.g., an event cannot simultaneously \u201chappen before\u201d and \u201chappen after\u201d another) as well as more nuanced di\ufb00erences (e.g., not everything that \u201chappened before\u201d an event \u201chappened right before\u201d it). Empirical evaluations on the TORQUE challenge, a recently released dataset for temporal ordering questions, show that our approach attains signi\ufb01cant improvements correspondingly over the state of the art performance, especially gains more on EM consistency computed on the contrast question sets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143711518",
+                    "name": "Chao Shang"
+                },
+                {
+                    "authorId": "50531624",
+                    "name": "Peng Qi"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "30768523",
+                    "name": "Jing Huang"
+                },
+                {
+                    "authorId": "2115860568",
+                    "name": "Youzheng Wu"
+                },
+                {
+                    "authorId": "150048906",
+                    "name": "Bowen Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "f8490e1bd365b54bc5ac351a5496cf02b3cba051",
+            "title": "A Synopsis Based Approach for Itemset Frequency Estimation over Massive Multi-Transaction Stream",
+            "abstract": "The streams where multiple transactions are associated with the same key are prevalent in practice, e.g., a customer has multiple shopping records arriving at different time. Itemset frequency estimation on such streams is very challenging since sampling based methods, such as the popularly used reservoir sampling, cannot be used. In this article, we propose a novel k-Minimum Value (KMV) synopsis based method to estimate the frequency of itemsets over multi-transaction streams. First, we extract the KMV synopses for each item from the stream. Then, we propose a novel estimator to estimate the frequency of an itemset over the KMV synopses. Comparing to the existing estimator, our method is not only more accurate and efficient to calculate but also follows the downward-closure property. These properties enable the incorporation of our new estimator with existing frequent itemset mining (FIM) algorithm (e.g., FP-Growth) to mine frequent itemsets over multi-transaction streams. To demonstrate this, we implement a KMV synopsis based FIM algorithm by integrating our estimator into existing FIM algorithms, and we prove it is capable of guaranteeing the accuracy of FIM with a bounded size of KMV synopsis. Experimental results on massive streams show our estimator can significantly improve on the accuracy for both estimating itemset frequency and FIM compared to the existing estimators.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "144145211",
+                    "name": "G. Cong"
+                },
+                {
+                    "authorId": "102684122",
+                    "name": "Ying Zhang"
+                },
+                {
+                    "authorId": "2754618",
+                    "name": "Zhen Hai"
+                },
+                {
+                    "authorId": "144030870",
+                    "name": "Jieping Ye"
+                }
+            ]
+        },
+        {
+            "paperId": "172678d3fb74bc56c9ac58f024b4eb43e0470e78",
+            "title": "Entity and Evidence Guided Relation Extraction for DocRED",
+            "abstract": "Document-level relation extraction is a challenging task which requires reasoning over multiple sentences in order to predict relations in a document. In this paper, we pro-pose a joint training frameworkE2GRE(Entity and Evidence Guided Relation Extraction)for this task. First, we introduce entity-guided sequences as inputs to a pre-trained language model (e.g. BERT, RoBERTa). These entity-guided sequences help a pre-trained language model (LM) to focus on areas of the document related to the entity. Secondly, we guide the fine-tuning of the pre-trained language model by using its internal attention probabilities as additional features for evidence prediction.Our new approach encourages the pre-trained language model to focus on the entities and supporting/evidence sentences. We evaluate our E2GRE approach on DocRED, a recently released large-scale dataset for relation extraction. Our approach is able to achieve state-of-the-art results on the public leaderboard across all metrics, showing that our E2GRE is both effective and synergistic on relation extraction and evidence prediction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152530947",
+                    "name": "Kevin Huang"
+                },
+                {
+                    "authorId": "50531624",
+                    "name": "Peng Qi"
+                },
+                {
+                    "authorId": "2148300",
+                    "name": "Guangtao Wang"
+                },
+                {
+                    "authorId": "1901958",
+                    "name": "Tengyu Ma"
+                },
+                {
+                    "authorId": "30768523",
+                    "name": "Jing Huang"
+                }
+            ]
+        }
+    ]
+}

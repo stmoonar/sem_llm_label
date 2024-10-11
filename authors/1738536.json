@@ -1,0 +1,250 @@
+{
+    "authorId": "1738536",
+    "papers": [
+        {
+            "paperId": "28b07dd3c43238b2de2d7aaa64cb06d0c88411b4",
+            "title": "PyTrial: Machine Learning Software and Benchmark for Clinical Trial Applications",
+            "abstract": "Clinical trials are conducted to test the effectiveness and safety of potential drugs in humans for regulatory approval. Machine learning (ML) has recently emerged as a new tool to assist in clinical trials. Despite this progress, there have been few efforts to document and benchmark ML4Trial algorithms available to the ML research community. Additionally, the accessibility to clinical trial-related datasets is limited, and there is a lack of well-defined clinical tasks to facilitate the development of new algorithms. To fill this gap, we have developed PyTrial that provides benchmarks and open-source implementations of a series of ML algorithms for clinical trial design and operations. In this paper, we thoroughly investigate 34 ML algorithms for clinical trials across 6 different tasks, including patient outcome prediction, trial site selection, trial outcome prediction, patient-trial matching, trial similarity search, and synthetic data generation. We have also collected and prepared 23 ML-ready datasets as well as their working examples in Jupyter Notebooks for quick implementation and testing. PyTrial defines each task through a simple four-step process: data loading, model specification, model training, and model evaluation, all achievable with just a few lines of code. Furthermore, our modular API architecture empowers practitioners to expand the framework to incorporate new algorithms and tasks effortlessly. The code is available at https://github.com/RyanWangZf/PyTrial.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108733162",
+                    "name": "Zifeng Wang"
+                },
+                {
+                    "authorId": "2162373467",
+                    "name": "B. Theodorou"
+                },
+                {
+                    "authorId": "2427076",
+                    "name": "Tianfan Fu"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "3ef08e44a6873a4d5a7dce50a21e072b5d211e32",
+            "title": "TREEMENT: Interpretable Patient-Trial Matching via Personalized Dynamic Tree-based Memory Network",
+            "abstract": "Clinical trials are critical for drug development but often suffer from expensive and inefficient patient recruitment. In recent years, machine learning models have been proposed for speeding up patient recruitment via automatically matching patients with clinical trials based on longitudinal patient electronic health records (EHRs) and eligibility criteria of trials. However, they either depend on trial-specific expert rules that cannot be generalized or perform matching more generally with a black-box model where the lack of interpretability makes the model results difficult to be adopted. To provide accurate and interpretable patient trial matching, we introduce a personalized dynamic tree-based memory network, TREEMENT. It utilizes hierarchical clinical ontologies to expand the personalized patient representation learned from sequential EHR data, and then uses an attentional beam-search query learned from eligibility criteria embedding to offer a granular level of alignment for improved performance and interpretability. We evaluate TREEMENT against existing models on real-world datasets and show that TREEMENT outperforms the top baseline by 7% in terms of error reduction in criteria-level matching and achieves state-of-the-art results at the trial-level too. Furthermore, we show TREEMENT offers good interpretability to make the model results easier for adoption.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2162373467",
+                    "name": "B. Theodorou"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "42f96cbe5ddefab0f2f984db50d75264e9927a0c",
+            "title": "Synthesize Extremely High-dimensional Longitudinal Electronic Health Records via Hierarchical Autoregressive Language Model",
+            "abstract": "Synthetic electronic health records (EHRs) that are both realistic and preserve privacy can serve as an alternative to real EHRs for machine learning (ML) modeling and statistical analysis. However, generating high-fidelity and granular electronic health record (EHR) data in its original, highly-dimensional form poses challenges for existing methods due to the complexities inherent in high-dimensional data. In this paper, we propose Hierarchical Autoregressive Language mOdel (HALO) for generating longitudinal high-dimensional EHR, which preserve the statistical properties of real EHR and can be used to train accurate ML models without privacy concerns. Our HALO method, designed as a hierarchical autoregressive model, generates a probability density function of medical codes, clinical visits, and patient records, allowing for the generation of realistic EHR data in its original, unaggregated form without the need for variable selection or aggregation. Additionally, our model also produces high-quality continuous variables in a longitudinal and probabilistic manner. We conducted extensive experiments and demonstrate that HALO can generate high-fidelity EHR data with high-dimensional disease code probabilities (d \u2248 10, 000), disease code co-occurrence probabilities within a visit (d \u2248 1, 000, 000), and conditional probabilities across consecutive visits (d \u2248 5, 000, 000) and achieve above 0.9 R2 correlation in comparison to real EHR data. In comparison to the leading baseline, HALO improves predictive modeling by over 17% in its predictive accuracy and perplexity on a hold-off test set of real EHR data. This performance then enables downstream ML models trained on its synthetic data to achieve comparable accuracy to models trained on real data (0.938 area under the ROC curve with HALO data vs. 0.943 with real data). Finally, using a combination of real and synthetic data enhances the accuracy of ML models beyond that achieved by using only real EHR data.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2162373467",
+                    "name": "B. Theodorou"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "60b7c6913bead7636cba9aec55b1428c466771e1",
+            "title": "MediTab: Scaling Medical Tabular Data Predictors via Data Consolidation, Enrichment, and Refinement",
+            "abstract": "Tabular data prediction has been employed in medical applications such as patient health risk prediction. However, existing methods usually revolve around the algorithm design while overlooking the significance of data engineering. Medical tabular datasets frequently exhibit significant heterogeneity across different sources, with limited sample sizes per source. As such, previous predictors are often trained on manually curated small datasets that struggle to generalize across different tabular datasets during inference. This paper proposes to scale medical tabular data predictors (MediTab) to various tabular inputs with varying features. The method uses a data engine that leverages large language models (LLMs) to consolidate tabular samples to overcome the barrier across tables with distinct schema. It also aligns out-domain data with the target task using a \"learn, annotate, and refinement'' pipeline. The expanded training data then enables the pre-trained MediTab to infer for arbitrary tabular input in the domain without fine-tuning, resulting in significant improvements over supervised baselines: it reaches an average ranking of 1.57 and 1.00 on 7 patient outcome prediction datasets and 3 trial outcome prediction datasets, respectively. In addition, MediTab exhibits impressive zero-shot performances: it outperforms supervised XGBoost models by 8.9% and 17.2% on average in two prediction tasks, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108733162",
+                    "name": "Zifeng Wang"
+                },
+                {
+                    "authorId": "75181061",
+                    "name": "Chufan Gao"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "81001bd9f3753012815af4c7279d35a12432aa2f",
+            "title": "Text-Augmented Open Knowledge Graph Completion via Pre-Trained Language Models",
+            "abstract": "The mission of open knowledge graph (KG) completion is to draw new findings from known facts. Existing works that augment KG completion require either (1) factual triples to enlarge the graph reasoning space or (2) manually designed prompts to extract knowledge from a pre-trained language model (PLM), exhibiting limited performance and requiring expensive efforts from experts. To this end, we propose TAGREAL that automatically generates quality query prompts and retrieves support information from large text corpora to probe knowledge from PLM for KG completion. The results show that TAGREAL achieves state-of-the-art performance on two benchmark datasets. We find that TAGREAL has superb performance even with limited training data, outperforming existing embedding-based, graph-based, and PLM-based methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149498192",
+                    "name": "Pengcheng Jiang"
+                },
+                {
+                    "authorId": "1923351",
+                    "name": "Shivam Agarwal"
+                },
+                {
+                    "authorId": "2057050247",
+                    "name": "Bowen Jin"
+                },
+                {
+                    "authorId": "2154990549",
+                    "name": "Xuan Wang"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "89d33d534fd94dc7bf0b4ecee11c8068c24ed6c5",
+            "title": "Bi-level Contrastive Learning for Knowledge-Enhanced Molecule Representations",
+            "abstract": "Molecule representation learning is crucial for various downstream applications, such as understanding and predicting molecular properties and side effects. In this paper, we propose a novel method called GODE, which takes into account the two-level structure of individual molecules. We recognize that molecules have an intrinsic graph structure as well as being a node in a larger molecule knowledge graph. GODE integrates graph representations of individual molecules with multidomain biochemical data from knowledge graphs. By pre-training two graph neural networks (GNNs) on different graph structures, combined with contrastive learning, GODE fuses molecular structures with their corresponding knowledge graph substructures. This fusion results in a more robust and informative representation, which enhances molecular property prediction by harnessing both chemical and biological information. When fine-tuned across 11 chemical property tasks, our model outperforms existing benchmarks, registering an average ROC-AUC uplift of 13.8% for classification tasks and an average RMSE/MAE enhancement of 35.1% for regression tasks. Impressively, it surpasses the current leading model in molecule property predictions with average advancements of 2.1% in classification and 6.4% in regression tasks.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149498192",
+                    "name": "Pengcheng Jiang"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "2427076",
+                    "name": "Tianfan Fu"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "ad934a9344f68fcc0b9aa704102aa48c39c5b591",
+            "title": "Generating with Confidence: Uncertainty Quantification for Black-box Large Language Models",
+            "abstract": "Large language models (LLMs) specializing in natural language generation (NLG) have recently started exhibiting promising capabilities across a variety of domains. However, gauging the trustworthiness of responses generated by LLMs remains an open challenge, with limited research on uncertainty quantification (UQ) for NLG. Furthermore, existing literature typically assumes white-box access to language models, which is becoming unrealistic either due to the closed-source nature of the latest LLMs or computational constraints. In this work, we investigate UQ in NLG for *black-box* LLMs. We first differentiate *uncertainty* vs *confidence*: the former refers to the ``dispersion'' of the potential predictions for a fixed input, and the latter refers to the confidence on a particular prediction/generation. We then propose and compare several confidence/uncertainty measures, applying them to *selective NLG* where unreliable results could either be ignored or yielded for further assessment. Experiments were carried out with several popular LLMs on question-answering datasets (for evaluation purposes). Results reveal that a simple measure for the semantic dispersion can be a reliable predictor of the quality of LLM responses, providing valuable insights for practitioners on uncertainty management when adopting LLMs. The code to replicate our experiments is available at https://github.com/zlin7/UQ-NLG.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046763041",
+                    "name": "Zhen Lin"
+                },
+                {
+                    "authorId": "145927896",
+                    "name": "Shubhendu Trivedi"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "1fdf37b33ba03638a1a4f20507d47d2b948d6f0d",
+            "title": "Antibody Complementarity Determining Regions (CDRs) design using Constrained Energy Model",
+            "abstract": "In recent years, therapeutic antibodies have become one of the fastest-growing classes of drugs and have been approved for the treatment of a wide range of indications, from cancer to autoimmune diseases. Complementarity-determining regions (CDRs) are part of the variable chains in antibodies and determine specific antibody-antigen binding. Some explorations use in silicon methods to design antibody CDR loops. However, the existing methods faced the challenges of maintaining the specific geometry shape of the CDR loops. This paper proposes a Constrained Energy Model (CEM) to address this issue. Specifically, we design a constrained manifold to characterize the geometry constraints of the CDR loops. Then we design the energy model in the constrained manifold and only depict the energy landscape of the manifold instead of the whole space in the vanilla energy model. The geometry shape of the generated CDR loops is automatically preserved. Theoretical analysis shows that learning on the constrained manifold requires less sample complexity than the unconstrained method. CEM's superiority is validated via thorough empirical studies, achieving consistent and significant improvement with up to 33.4% relative reduction in terms of 3D geometry error (Root Mean Square Deviation, RMSD) and 8.4% relative reduction in terms of amino acid sequence metric (perplexity) compared to the best baseline method. The code is publicly available at https://github.com/futianfan/energy_model4antibody_design",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2427076",
+                    "name": "Tianfan Fu"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "39f0f28848990f74eeb9019f579c6ebcc8ef3ea1",
+            "title": "TransTab: Learning Transferable Tabular Transformers Across Tables",
+            "abstract": "Tabular data (or tables) are the most widely used data format in machine learning (ML). However, ML models often assume the table structure keeps fixed in training and testing. Before ML modeling, heavy data cleaning is required to merge disparate tables with different columns. This preprocessing often incurs significant data waste (e.g., removing unmatched columns and samples). How to learn ML models from multiple tables with partially overlapping columns? How to incrementally update ML models as more columns become available over time? Can we leverage model pretraining on multiple distinct tables? How to train an ML model which can predict on an unseen table? To answer all those questions, we propose to relax fixed table structures by introducing a Transferable Tabular Transformer (TransTab) for tables. The goal of TransTab is to convert each sample (a row in the table) to a generalizable embedding vector, and then apply stacked transformers for feature encoding. One methodology insight is combining column description and table cells as the raw input to a gated transformer model. The other insight is to introduce supervised and self-supervised pretraining to improve model performance. We compare TransTab with multiple baseline methods on diverse benchmark datasets and five oncology clinical trial datasets. Overall, TransTab ranks 1.00, 1.00, 1.78 out of 12 methods in supervised learning, feature incremental learning, and transfer learning scenarios, respectively; and the proposed pretraining leads to 2.3% AUC lift on average over the supervised learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108733162",
+                    "name": "Zifeng Wang"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "4ad7b82af43177f6722d1a72357f1ae9555596a8",
+            "title": "GOCPT: Generalized Online Canonical Polyadic Tensor Factorization and Completion",
+            "abstract": "Low-rank tensor factorization or completion is well-studied and applied in various online settings, such as online tensor factorization (where the temporal mode grows) and online tensor completion (where incomplete slices arrive gradually). However, in many real-world settings, tensors may have more complex evolving patterns: (i) one or more modes can grow; (ii) missing entries may be filled; (iii) existing tensor elements can change. Existing methods cannot support such complex scenarios. To fill the gap, this paper proposes a Generalized Online Canonical Polyadic (CP) Tensor factorization and completion framework (named GOCPT) for this general setting, where we maintain the CP structure of such dynamic tensors during the evolution. We show that existing online tensor factorization and completion setups can be unified under the GOCPT framework. Furthermore, we propose a variant, named GOCPTE, to deal with cases where historical tensor elements are unavailable (e.g., privacy protection), which achieves similar fitness as GOCPT but with much less computational cost. Experimental results demonstrate that our GOCPT can improve fitness by up to 2.8% on the JHU Covid data and 9.2% on a proprietary patient claim dataset over baselines. Our variant GOCPTE shows up to 1.2% and 5.5% fitness improvement on two datasets with about 20% speedup compared to the best model.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2047235443",
+                    "name": "Cheng Qian"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        }
+    ]
+}

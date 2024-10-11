@@ -1,0 +1,381 @@
+{
+    "authorId": "2135519749",
+    "papers": [
+        {
+            "paperId": "0506a30a6a9c672f18950ddef6dd3436b433ff19",
+            "title": "Task Groupings Regularization: Data-Free Meta-Learning with Heterogeneous Pre-trained Models",
+            "abstract": "Data-Free Meta-Learning (DFML) aims to derive knowledge from a collection of pre-trained models without accessing their original data, enabling the rapid adaptation to new unseen tasks. Current methods often overlook the heterogeneity among pre-trained models, which leads to performance degradation due to task conflicts. In this paper, we empirically and theoretically identify and analyze the model heterogeneity in DFML. We find that model heterogeneity introduces a heterogeneity-homogeneity trade-off, where homogeneous models reduce task conflicts but also increase the overfitting risk. Balancing this trade-off is crucial for learning shared representations across tasks. Based on our findings, we propose Task Groupings Regularization, a novel approach that benefits from model heterogeneity by grouping and aligning conflicting tasks. Specifically, we embed pre-trained models into a task space to compute dissimilarity, and group heterogeneous models together based on this measure. Then, we introduce implicit gradient regularization within each group to mitigate potential conflicts. By encouraging a gradient direction suitable for all tasks, the meta-model captures shared representations that generalize across tasks. Comprehensive experiments showcase the superiority of our approach in multiple benchmarks, effectively tackling the model heterogeneity in challenging multi-domain and multi-architecture scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268462471",
+                    "name": "Yongxian Wei"
+                },
+                {
+                    "authorId": "1557412467",
+                    "name": "Zixuan Hu"
+                },
+                {
+                    "authorId": "2172820082",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2254008335",
+                    "name": "Zhenyi Wang"
+                },
+                {
+                    "authorId": "2304084281",
+                    "name": "Yu Li"
+                },
+                {
+                    "authorId": "2268723678",
+                    "name": "Chun Yuan"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "19c72f33544f06954f440d8a57575139bf0edd28",
+            "title": "Solving Continual Offline Reinforcement Learning with Decision Transformer",
+            "abstract": "Continuous offline reinforcement learning (CORL) combines continuous and offline reinforcement learning, enabling agents to learn multiple tasks from static datasets without forgetting prior tasks. However, CORL faces challenges in balancing stability and plasticity. Existing methods, employing Actor-Critic structures and experience replay (ER), suffer from distribution shifts, low efficiency, and weak knowledge-sharing. We aim to investigate whether Decision Transformer (DT), another offline RL paradigm, can serve as a more suitable offline continuous learner to address these issues. We first compare AC-based offline algorithms with DT in the CORL framework. DT offers advantages in learning efficiency, distribution shift mitigation, and zero-shot generalization but exacerbates the forgetting problem during supervised parameter updates. We introduce multi-head DT (MH-DT) and low-rank adaptation DT (LoRA-DT) to mitigate DT's forgetting problem. MH-DT stores task-specific knowledge using multiple heads, facilitating knowledge sharing with common components. It employs distillation and selective rehearsal to enhance current task learning when a replay buffer is available. In buffer-unavailable scenarios, LoRA-DT merges less influential weights and fine-tunes DT's decisive MLP layer to adapt to the current task. Extensive experiments on MoJuCo and Meta-World benchmarks demonstrate that our methods outperform SOTA CORL baselines and showcase enhanced learning capabilities and superior memory efficiency.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279920416",
+                    "name": "Kaixin Huang"
+                },
+                {
+                    "authorId": "2144035454",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2279771742",
+                    "name": "Chen Zhao"
+                },
+                {
+                    "authorId": "2268723678",
+                    "name": "Chun Yuan"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "1a638e5752e386612406d0479b7bad94877be8cb",
+            "title": "Model Merging in LLMs, MLLMs, and Beyond: Methods, Theories, Applications and Opportunities",
+            "abstract": "Model merging is an efficient empowerment technique in the machine learning community that does not require the collection of raw training data and does not require expensive computation. As model merging becomes increasingly prevalent across various fields, it is crucial to understand the available model merging techniques comprehensively. However, there is a significant gap in the literature regarding a systematic and thorough review of these techniques. This survey provides a comprehensive overview of model merging methods and theories, their applications in various domains and settings, and future research directions. Specifically, we first propose a new taxonomic approach that exhaustively discusses existing model merging methods. Secondly, we discuss the application of model merging techniques in large language models, multimodal large language models, and 10+ machine learning subfields, including continual learning, multi-task learning, few-shot learning, etc. Finally, we highlight the remaining challenges of model merging and discuss future research directions. A comprehensive list of papers about model merging is available at \\url{https://github.com/EnnengYang/Awesome-Model-Merging-Methods-Theories-Applications}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151497321",
+                    "name": "Enneng Yang"
+                },
+                {
+                    "authorId": "2279871211",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2237427680",
+                    "name": "Guibing Guo"
+                },
+                {
+                    "authorId": "2237603955",
+                    "name": "Xingwei Wang"
+                },
+                {
+                    "authorId": "2316150631",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2316176138",
+                    "name": "Jie Zhang"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "22f130c6d64d3cf91baa471a25a3643ae564d89e",
+            "title": "Communication-Efficient Distributed Learning with Local Immediate Error Compensation",
+            "abstract": "Gradient compression with error compensation has attracted significant attention with the target of reducing the heavy communication overhead in distributed learning. However, existing compression methods either perform only unidirectional compression in one iteration with higher communication cost, or bidirectional compression with slower convergence rate. In this work, we propose the Local Immediate Error Compensated SGD (LIEC-SGD) optimization algorithm to break the above bottlenecks based on bidirectional compression and carefully designed compensation approaches. Specifically, the bidirectional compression technique is to reduce the communication cost, and the compensation technique compensates the local compression error to the model update immediately while only maintaining the global error variable on the server throughout the iterations to boost its efficacy. Theoretically, we prove that LIEC-SGD is superior to previous works in either the convergence rate or the communication cost, which indicates that LIEC-SGD could inherit the dual advantages from unidirectional compression and bidirectional compression. Finally, experiments of training deep neural networks validate the effectiveness of the proposed LIEC-SGD algorithm.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117233384",
+                    "name": "Yifei Cheng"
+                },
+                {
+                    "authorId": "2144035454",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2280133504",
+                    "name": "Linli Xu"
+                },
+                {
+                    "authorId": "2284763689",
+                    "name": "Xun Qian"
+                },
+                {
+                    "authorId": "2142349315",
+                    "name": "Shiwei Wu"
+                },
+                {
+                    "authorId": "2284726630",
+                    "name": "Yiming Zhou"
+                },
+                {
+                    "authorId": "2280282975",
+                    "name": "Tie Zhang"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2269875358",
+                    "name": "Enhong Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "23cde0fddb6e5e72fdb9c4532ce2d2dff48dd6ca",
+            "title": "Free: Faster and Better Data-Free Meta-Learning",
+            "abstract": "Data-Free Meta-Learning (DFML) aims to extract knowledge from a collection of pre-trained models without requiring the original data, presenting practical benefits in contexts constrained by data privacy concerns. Current DFML methods primarily focus on the data recovery from these pre-trained models. However, they suffer from slow recovery speed and overlook gaps inherent in heterogeneous pre-trained models. In response to these challenges, we introduce the Faster and Better Data-Free Meta-Learning (FREE) framework, which contains: (i) a meta-generator for rapidly recovering training tasks from pre-trained models; and (ii) a meta-learner for generalizing to new unseen tasks. Specifically, within the module Faster Inversion via Meta-Generator, each pre-trained model is perceived as a distinct task. The meta-generator can rapidly adapt to a specific task in just five steps, significantly accelerating the data recovery. Furthermore, we propose Better Generalization via Meta-Learner and introduce an implicit gradient alignment algorithm to optimize the meta-learner. This is achieved as aligned gradient directions alleviate potential conflicts among tasks from heterogeneous pre-trained models. Empirical experiments on multiple benchmarks affirm the superiority of our approach, marking a notable speed-up (20x) and performance enhancement (1.42% ~ 4.78%) in comparison to the state-of-the-art.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268462471",
+                    "name": "Yongxian Wei"
+                },
+                {
+                    "authorId": "1557412467",
+                    "name": "Zixuan Hu"
+                },
+                {
+                    "authorId": "2254008335",
+                    "name": "Zhenyi Wang"
+                },
+                {
+                    "authorId": "2172820082",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2268723678",
+                    "name": "Chun Yuan"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "2a237cf0b3a9e1c1957923bd4fb6c0b135ab8747",
+            "title": "A-FedPD: Aligning Dual-Drift is All Federated Primal-Dual Learning Needs",
+            "abstract": "As a popular paradigm for juggling data privacy and collaborative training, federated learning (FL) is flourishing to distributively process the large scale of heterogeneous datasets on edged clients. Due to bandwidth limitations and security considerations, it ingeniously splits the original problem into multiple subproblems to be solved in parallel, which empowers primal dual solutions to great application values in FL. In this paper, we review the recent development of classical federated primal dual methods and point out a serious common defect of such methods in non-convex scenarios, which we say is a\"dual drift\"caused by dual hysteresis of those longstanding inactive clients under partial participation training. To further address this problem, we propose a novel Aligned Federated Primal Dual (A-FedPD) method, which constructs virtual dual updates to align global consensus and local dual variables for those protracted unparticipated local clients. Meanwhile, we provide a comprehensive analysis of the optimization and generalization efficiency for the A-FedPD method on smooth non-convex objectives, which confirms its high efficiency and practicality. Extensive experiments are conducted on several classical FL setups to validate the effectiveness of our proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2204964085",
+                    "name": "Yan Sun"
+                },
+                {
+                    "authorId": "2144035454",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "5ffa572d5126166a04b21ebb4e462016192297f3",
+            "title": "QPO: Query-dependent Prompt Optimization via Multi-Loop Offline Reinforcement Learning",
+            "abstract": "Prompt engineering has demonstrated remarkable success in enhancing the performance of large language models (LLMs) across diverse tasks. However, most existing prompt optimization methods only focus on the task-level performance, overlooking the importance of query-preferred prompts, which leads to suboptimal performances. Additionally, these methods rely heavily on frequent interactions with LLMs to obtain feedback for guiding the optimization process, incurring substantial redundant interaction costs. In this paper, we introduce Query-dependent Prompt Optimization (QPO), which leverages multi-loop offline reinforcement learning to iteratively fine-tune a small pretrained language model to generate optimal prompts tailored to the input queries, thus significantly improving the prompting effect on the large target LLM. We derive insights from offline prompting demonstration data, which already exists in large quantities as a by-product of benchmarking diverse prompts on open-sourced tasks, thereby circumventing the expenses of online interactions. Furthermore, we continuously augment the offline dataset with the generated prompts in each loop, as the prompts from the fine-tuned model are supposed to outperform the source prompts in the original dataset. These iterative loops bootstrap the model towards generating optimal prompts. Experiments on various LLM scales and diverse NLP and math tasks demonstrate the efficacy and cost-efficiency of our method in both zero-shot and few-shot scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2267333752",
+                    "name": "Yilun Kong"
+                },
+                {
+                    "authorId": "2262446566",
+                    "name": "Hangyu Mao"
+                },
+                {
+                    "authorId": "2316522058",
+                    "name": "Qi Zhao"
+                },
+                {
+                    "authorId": "2315291036",
+                    "name": "Bin Zhang"
+                },
+                {
+                    "authorId": "2135060971",
+                    "name": "Jingqing Ruan"
+                },
+                {
+                    "authorId": "2316523084",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2281905521",
+                    "name": "Yongzhe Chang"
+                },
+                {
+                    "authorId": "2281904842",
+                    "name": "Xueqian Wang"
+                },
+                {
+                    "authorId": "2316607996",
+                    "name": "Rui Zhao"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "9db942e6eef83bd7d4bd2ec3c895a6c9e3774943",
+            "title": "Continual Diffuser (CoD): Mastering Continual Offline Reinforcement Learning with Experience Rehearsal",
+            "abstract": "Artificial neural networks, especially recent diffusion-based models, have shown remarkable superiority in gaming, control, and QA systems, where the training tasks' datasets are usually static. However, in real-world applications, such as robotic control of reinforcement learning (RL), the tasks are changing, and new tasks arise in a sequential order. This situation poses the new challenge of plasticity-stability trade-off for training an agent who can adapt to task changes and retain acquired knowledge. In view of this, we propose a rehearsal-based continual diffusion model, called Continual Diffuser (CoD), to endow the diffuser with the capabilities of quick adaptation (plasticity) and lasting retention (stability). Specifically, we first construct an offline benchmark that contains 90 tasks from multiple domains. Then, we train the CoD on each task with sequential modeling and conditional generation for making decisions. Next, we preserve a small portion of previous datasets as the rehearsal buffer and replay it to retain the acquired knowledge. Extensive experiments on a series of tasks show CoD can achieve a promising plasticity-stability trade-off and outperform existing diffusion-based methods and other representative baselines on most tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2254663192",
+                    "name": "Jifeng Hu"
+                },
+                {
+                    "authorId": "2316523084",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2187874594",
+                    "name": "Sili Huang"
+                },
+                {
+                    "authorId": "121937496",
+                    "name": "Zhejian Yang"
+                },
+                {
+                    "authorId": "2280102292",
+                    "name": "Hechang Chen"
+                },
+                {
+                    "authorId": "2219704055",
+                    "name": "Lichao Sun"
+                },
+                {
+                    "authorId": "2140493148",
+                    "name": "Yi Chang"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "b0bc8cbb3c8b5a7b2c325588c2a6f228d59efc0c",
+            "title": "Q-value Regularized Transformer for Offline Reinforcement Learning",
+            "abstract": "Recent advancements in offline reinforcement learning (RL) have underscored the capabilities of Conditional Sequence Modeling (CSM), a paradigm that learns the action distribution based on history trajectory and target returns for each state. However, these methods often struggle with stitching together optimal trajectories from sub-optimal ones due to the inconsistency between the sampled returns within individual trajectories and the optimal returns across multiple trajectories. Fortunately, Dynamic Programming (DP) methods offer a solution by leveraging a value function to approximate optimal future returns for each state, while these techniques are prone to unstable learning behaviors, particularly in long-horizon and sparse-reward scenarios. Building upon these insights, we propose the Q-value regularized Transformer (QT), which combines the trajectory modeling ability of the Transformer with the predictability of optimal future returns from DP methods. QT learns an action-value function and integrates a term maximizing action-values into the training loss of CSM, which aims to seek optimal actions that align closely with the behavior policy. Empirical evaluations on D4RL benchmark datasets demonstrate the superiority of QT over traditional DP and CSM methods, highlighting the potential of QT to enhance the state-of-the-art in offline RL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2176837980",
+                    "name": "Shengchao Hu"
+                },
+                {
+                    "authorId": "9069836",
+                    "name": "Ziqing Fan"
+                },
+                {
+                    "authorId": "35933894",
+                    "name": "Chaoqin Huang"
+                },
+                {
+                    "authorId": "2302504425",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2301417989",
+                    "name": "Ya Zhang"
+                },
+                {
+                    "authorId": "2303413808",
+                    "name": "Yanfeng Wang"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "b1b62d324e2cae75cc75538ec50a86edfa60229c",
+            "title": "Divide, Conquer and Combine: A Training-Free Framework for High-Resolution Image Perception in Multimodal Large Language Models",
+            "abstract": "Multimodal large language models (MLLMs) have experienced significant advancements recently, but still struggle to recognize and interpret intricate details in high-resolution (HR) images effectively. While state-of-the-art (SOTA) MLLMs claim to process images at 4K resolution, existing MLLM benchmarks only support up to 2K, leaving the capabilities of SOTA models on true HR images largely untested. Furthermore, existing methods for enhancing HR image perception in MLLMs rely on computationally expensive visual instruction tuning. To address these limitations, we introduce HR-Bench, the first deliberately designed benchmark to rigorously evaluate MLLM performance on 4K&8K images. Through extensive experiments, we demonstrate that while downsampling HR images leads to vision information loss, leveraging complementary modalities, e.g., text, can effectively compensate for this loss. Building upon this insight, we propose Divide, Conquer and Combine (DC$^2$), a novel training-free framework for enhancing MLLM perception of HR images. DC$^2$ follows a three-staged approach: 1) Divide: recursively partitioning the HR image into patches and merging similar patches to minimize computational overhead, 2) Conquer: leveraging the MLLM to generate accurate textual descriptions for each image patch, and 3) Combine: utilizing the generated text descriptions to enhance the MLLM's understanding of the overall HR image. Extensive experiments show that: 1) the SOTA MLLM achieves 63% accuracy, which is markedly lower than the 87% accuracy achieved by humans on HR-Bench; 2) our DC$^2$ brings consistent and significant improvements (a relative increase of +6% on HR-Bench and +8% on general multimodal benchmarks). The benchmark and code will be released to facilitate the multimodal R&D community.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279401280",
+                    "name": "Wenbin Wang"
+                },
+                {
+                    "authorId": "46573238",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "2317331677",
+                    "name": "Minyan Zeng"
+                },
+                {
+                    "authorId": "2284720419",
+                    "name": "Xiabin Zhou"
+                },
+                {
+                    "authorId": "2144035454",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2279402395",
+                    "name": "Yong Luo"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        }
+    ]
+}

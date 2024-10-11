@@ -1,0 +1,350 @@
+{
+    "authorId": "50077183",
+    "papers": [
+        {
+            "paperId": "101d7d2fb721071e12e379b4ff822de61ef8a2f5",
+            "title": "On the Impact of Feature Heterophily on Link Prediction with Graph Neural Networks",
+            "abstract": "Heterophily, or the tendency of connected nodes in networks to have different class labels or dissimilar features, has been identified as challenging for many Graph Neural Network (GNN) models. While the challenges of applying GNNs for node classification when class labels display strong heterophily are well understood, it is unclear how heterophily affects GNN performance in other important graph learning tasks where class labels are not available. In this work, we focus on the link prediction task and systematically analyze the impact of heterophily in node features on GNN performance. Theoretically, we first introduce formal definitions of homophilic and heterophilic link prediction tasks, and present a theoretical framework that highlights the different optimizations needed for the respective tasks. We then analyze how different link prediction encoders and decoders adapt to varying levels of feature homophily and introduce designs for improved performance. Our empirical analysis on a variety of synthetic and real-world datasets confirms our theoretical insights and highlights the importance of adopting learnable decoders and GNN encoders with ego- and neighbor-embedding separation in message passing for link prediction tasks beyond homophily.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "2155120549",
+                    "name": "Gao Li"
+                },
+                {
+                    "authorId": "2322990558",
+                    "name": "Yao-An Yang"
+                },
+                {
+                    "authorId": "2314486522",
+                    "name": "Jinghua Zhu"
+                },
+                {
+                    "authorId": "2323314084",
+                    "name": "Xuehao Cui"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "4a2008b8793d6ee8a14a95b2c21f30fe55720834",
+            "title": "Simplifying Distributed Neural Network Training on Massive Graphs: Randomized Partitions Improve Model Aggregation",
+            "abstract": "Distributed training of GNNs enables learning on massive graphs (e.g., social and e-commerce networks) that exceed the storage and computational capacity of a single machine. To reach performance comparable to centralized training, distributed frameworks focus on maximally recovering cross-instance node dependencies with either communication across instances or periodic fallback to centralized training, which create overhead and limit the framework scalability. In this work, we present a simplified framework for distributed GNN training that does not rely on the aforementioned costly operations, and has improved scalability, convergence speed and performance over the state-of-the-art approaches. Specifically, our framework (1) assembles independent trainers, each of which asynchronously learns a local model on locally-available parts of the training graph, and (2) only conducts periodic (time-based) model aggregation to synchronize the local models. Backed by our theoretical analysis, instead of maximizing the recovery of cross-instance node dependencies -- which has been considered the key behind closing the performance gap between model aggregation and centralized training -- , our framework leverages randomized assignment of nodes or super-nodes (i.e., collections of original nodes) to partition the training graph such that it improves data uniformity and minimizes the discrepancy of gradient and loss function across instances. In our experiments on social and e-commerce networks with up to 1.3 billion edges, our proposed RandomTMA and SuperTMA approaches -- despite using less training data -- achieve state-of-the-art performance and 2.31x speedup compared to the fastest baseline, and show better robustness to trainer failures.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "8856206",
+                    "name": "Aishwarya N. Reganti"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "51118486",
+                    "name": "Charles Dickens"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "610f0a91b476e3edfcf49523b6789633022ac5a5",
+            "title": "On Performance Discrepancies Across Local Homophily Levels in Graph Neural Networks",
+            "abstract": "Graph Neural Network (GNN) research has highlighted a relationship between high homophily (i.e., the tendency of nodes of the same class to connect) and strong predictive performance in node classification. However, recent work has found the relationship to be more nuanced, demonstrating that simple GNNs can learn in certain heterophilous settings. To resolve these conflicting findings and align closer to real-world datasets, we go beyond the assumption of a global graph homophily level and study the performance of GNNs when the local homophily level of a node deviates from the global homophily level. Through theoretical and empirical analysis, we systematically demonstrate how shifts in local homophily can introduce performance degradation, leading to performance discrepancies across local homophily levels. We ground the practical implications of this work through granular analysis on five real-world datasets with varying global homophily levels, demonstrating that (a) GNNs can fail to generalize to test nodes that deviate from the global homophily of a graph, and (b) high local homophily does not necessarily confer high performance for a node. We further show that GNNs designed for globally heterophilous graphs can alleviate performance discrepancy by improving performance across local homophily levels, offering a new perspective on how these GNNs achieve stronger global performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2064186990",
+                    "name": "Donald Loveland"
+                },
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "35505461",
+                    "name": "Mark Heimann"
+                },
+                {
+                    "authorId": "145476099",
+                    "name": "Benjamin Fish"
+                },
+                {
+                    "authorId": "2219860006",
+                    "name": "Michael T. Shaub"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "78d3cde1da06a51530f7451e4005cd35bad4af20",
+            "title": "Heterophily and Graph Neural Networks: Past, Present and Future",
+            "abstract": "Recently, there has been interest in understanding the performance of Graph Neural Networks (GNNs) on input graphs exhibiting heterophily, or the tendency for nodes of different classes to connect. Initial findings showed that many standard GNN models struggled on certain benchmark datasets exhibiting high heterophily, prompting research into existing and novel GNN designs that improved learning in these contexts. However, further analyses revealed that certain highly heterophilous settings did not challenge GNNs without these specialized designs, raising questions about the true factors causing performance degradation. In this work, we first review various GNN designs proposed for handling graphs with heterophily, and examine their connections to other GNN research objectives such as robustness, fairness, and oversmoothing avoidance. Next, we conduct an empirical study to investigate the specific heterophilous graph conditions under which GNNs can and cannot perform effectively. Our analysis reveals that although high heterophily does not universally impede conventional GNNs, unique challenges in heterophilous graphs, particularly the intertwined effects with low-degree nodes and complex compatibility patterns, warrant GNN designs specifically tailored to heterophily. In conclusion, we discuss future research directions aimed at advancing the understanding of the impact of heterophily on GNNs across a broader range of contexts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "7957569",
+                    "name": "Yujun Yan"
+                },
+                {
+                    "authorId": "35505461",
+                    "name": "Mark Heimann"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "7eb6652eab3cf22330efb1ef00089830b8b3c02a",
+            "title": "The 3rd Workshop on Graph Learning Benchmarks (GLB 2023)",
+            "abstract": "Recent years have witnessed a surge of research interest in graph machine learning. However, the benchmark datasets available to the field are rather limited in both quantity and diversity, an issue particularly notable given the immense potential applications of graph learning. The lack of diverse benchmark datasets may have biased the development of graph machine learning techniques towards narrow directions. By crowdsourcing novel tasks and datasets, this workshop aims to increase the diversity of graph learning benchmarks, identify new demands of graph machine learning in general, and gain a better synergy of how concrete techniques perform on these benchmarks. Moreover, this workshop offers a platform for discussions of best practices in curating graph learning benchmarks and data-centric approaches for graph learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47793019",
+                    "name": "Jiaqi Ma"
+                },
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "2047998",
+                    "name": "Yuxiao Dong"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                },
+                {
+                    "authorId": "31108652",
+                    "name": "Jingrui He"
+                },
+                {
+                    "authorId": "1743469",
+                    "name": "Qiaozhu Mei"
+                },
+                {
+                    "authorId": "40900939",
+                    "name": "Anton Tsitsulin"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xingjian Zhang"
+                },
+                {
+                    "authorId": "2095762",
+                    "name": "M. Zitnik"
+                }
+            ]
+        },
+        {
+            "paperId": "d88afa9aaa1aa1a0b777adc9bc7190885aafeb76",
+            "title": "Graph Coarsening via Convolution Matching for Scalable Graph Neural Network Training",
+            "abstract": "Graph summarization as a preprocessing step is an effective and complementary technique for scalable graph neural network (GNN) training. In this work, we propose the Coarsening Via Convolution Matching (ConvMatch) algorithm and a highly scalable variant, A-ConvMatch, for creating summarized graphs that preserve the output of graph convolution. We evaluate ConvMatch on six real-world link prediction and node classification graph datasets, and show it is efficient and preserves prediction performance while significantly reducing the graph size. Notably, ConvMatch achieves up to 95% of the prediction performance of GNNs on node classification while trained on graphs summarized down to 1% the size of the original graph. Furthermore, on link prediction tasks, ConvMatch consistently outperforms all baselines, achieving up to a 2X improvement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2276430640",
+                    "name": "Charles Dickens"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "8856206",
+                    "name": "Aishwarya N. Reganti"
+                },
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "d450acc48bd7a1e0702bdb72d60df2235854a04b",
+            "title": "On Graph Neural Network Fairness in the Presence of Heterophilous Neighborhoods",
+            "abstract": "We study the task of node classification for graph neural networks (GNNs) and establish a connection between group fairness, as measured by statistical parity and equal opportunity, and local assortativity, i.e., the tendency of linked nodes to have similar attributes. Such assortativity is often induced by homophily, the tendency for nodes of similar properties to connect. Homophily can be common in social networks where systemic factors have forced individuals into communities which share a sensitive attribute. Through synthetic graphs, we study the interplay between locally occurring homophily and fair predictions, finding that not all node neighborhoods are equal in this respect -- neighborhoods dominated by one category of a sensitive attribute often struggle to obtain fair treatment, especially in the case of diverging local class and sensitive attribute homophily. After determining that a relationship between local homophily and fairness exists, we investigate if the issue of unfairness can be associated to the design of the applied GNN model. We show that by adopting heterophilous GNN designs capable of handling disassortative group labels, group fairness in locally heterophilous neighborhoods can be improved by up to 25% over homophilous designs in real and synthetic datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2064186990",
+                    "name": "Donald Loveland"
+                },
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "35505461",
+                    "name": "Mark Heimann"
+                },
+                {
+                    "authorId": "145476099",
+                    "name": "Benjamin Fish"
+                },
+                {
+                    "authorId": "8036637",
+                    "name": "Michael T. Schaub"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "4878686f9b126a1fdcbdb374a4c98855a4961ca8",
+            "title": "How does Heterophily Impact the Robustness of Graph Neural Networks?: Theoretical Connections and Practical Implications",
+            "abstract": "We bridge two research directions on graph neural networks (GNNs), by formalizing the relation between heterophily of node labels (i.e., connected nodes tend to have dissimilar labels) and the robustness of GNNs to adversarial attacks. Our theoretical and empirical analyses show that for homophilous graph data, impactful structural attacks always lead to reduced homophily, while for heterophilous graph data the change in the homophily level depends on the node degrees. These insights have practical implications for defending against attacks on real-world graphs: we deduce that separate aggregators for ego- and neighbor-embeddings, a design principle which has been identified to significantly improve prediction for heterophilous graph data, can also offer increased robustness to GNNs. Our comprehensive experiments show that GNNs merely adopting this design achieve improved empirical and certifiable robustness compared to the best-performing unvaccinated model. Additionally, combining this design with explicit defense mechanisms against adversarial attacks leads to an improved robustness with up to 18.33% performance increase under attacks compared to the best-performing vaccinated model.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "3441160",
+                    "name": "Junchen Jin"
+                },
+                {
+                    "authorId": "2064186990",
+                    "name": "Donald Loveland"
+                },
+                {
+                    "authorId": "8036637",
+                    "name": "Michael T. Schaub"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "fe223a00a9da05b649e4392092674fa8f9d833b8",
+            "title": "Improving Robustness of Graph Neural Networks with Heterophily-Inspired Designs",
+            "abstract": "Recent studies have exposed that many graph neural networks (GNNs) are sensitive to adversarial attacks, and can suffer from performance loss if the graph structure is intentionally perturbed. A different line of research has shown that many GNN architectures implicitly assume that the underlying graph displays homophily, i.e., connected nodes are more likely to have similar features and class labels, and perform poorly if this assumption is not ful\ufb01lled. In this work, we formalize the relation between these two seemingly different issues. We theoretically show that in the standard scenario in which node features exhibit homophily, impactful structural attacks always lead to increased levels of heterophily. Then, inspired by GNN architectures that target heterophily, we present two designs\u2014(i) separate aggregators for ego-and neighbor-embeddings, and (ii) a reduced scope of aggregation\u2014that can signi\ufb01cantly improve the robustness of GNNs. Our extensive empirical evaluations show that GNNs featuring merely these two designs can achieve signi\ufb01cantly improved robustness compared to the best-performing unvaccinated model with 24.99% gain in average performance under targeted attacks, while having smaller computational overhead than existing defense mechanisms. Furthermore, these designs can be readily combined with explicit defense mechanisms to yield state-of-the-art robustness with up to 18.33% increase in performance under attacks compared to the best-performing vaccinated model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "3441160",
+                    "name": "Junchen Jin"
+                },
+                {
+                    "authorId": "8036637",
+                    "name": "Michael T. Schaub"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "21e33bd0ad95ee1f79d8b778e693fd316cbb72d4",
+            "title": "Beyond Homophily in Graph Neural Networks: Current Limitations and Effective Designs",
+            "abstract": "We investigate the representation power of graph neural networks in the semi-supervised node classification task under heterophily or low homophily, i.e., in networks where connected nodes may have different class labels and dissimilar features. Many popular GNNs fail to generalize to this setting, and are even outperformed by models that ignore the graph structure (e.g., multilayer perceptrons). Motivated by this limitation, we identify a set of key designs -- ego- and neighbor-embedding separation, higher-order neighborhoods, and combination of intermediate representations -- that boost learning from the graph structure under heterophily. We combine them into a graph neural network, H2GCN, which we use as the base method to empirically evaluate the effectiveness of the identified designs. Going beyond the traditional benchmarks with strong homophily, our empirical analysis shows that the identified designs increase the accuracy of GNNs by up to 40% and 27% over models without them on synthetic and real networks with heterophily, respectively, and yield competitive performance under homophily.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "7957569",
+                    "name": "Yujun Yan"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "35505461",
+                    "name": "Mark Heimann"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        }
+    ]
+}

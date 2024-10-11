@@ -1,0 +1,135 @@
+{
+    "authorId": "2054297550",
+    "papers": [
+        {
+            "paperId": "9bb212e112205f4716d9dc87b750c8f7b5acb9dc",
+            "title": "NER-MQMRC: Formulating Named Entity Recognition as Multi Question Machine Reading Comprehension",
+            "abstract": "NER has been traditionally formulated as a sequence labeling task. However, there has been recent trend in posing NER as a machine reading comprehension task (Wang et al., 2020; Mengge et al., 2020), where entity name (or other information) is considered as a question, text as the context and entity value in text as answer snippet. These works consider MRC based on a single question (entity) at a time. We propose posing NER as a multi-question MRC task, where multiple questions (one question per entity) are considered at the same time for a single text. We propose a novel BERT-based multi-question MRC (NER-MQMRC) architecture for this formulation. NER-MQMRC architecture considers all entities as input to BERT for learning token embeddings with self-attention and leverages BERT-based entity representation for further improving these token embeddings for NER task. Evaluation on three NER datasets show that our proposed architecture leads to average 2.5 times faster training and 2.3 times faster inference as compared to NER-SQMRC framework based models by considering all entities together in a single pass. Further, we show that our model performance does not degrade compared to single-question based MRC (NER-SQMRC) (Devlin et al., 2019) leading to F1 gain of +0.41%, +0.32% and +0.27% for AE-Pub, Ecommerce5PT and Twitter datasets respectively. We propose this architecture primarily to solve large scale e-commerce attribute (or entity) extraction from unstructured text of a magnitude of 50k+ attributes to be extracted on a scalable production environment with high performance and optimised training and inference runtimes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2007573924",
+                    "name": "Anubhav Shrimal"
+                },
+                {
+                    "authorId": "2164988782",
+                    "name": "A. Jain"
+                },
+                {
+                    "authorId": "2054297550",
+                    "name": "Kartik Mehta"
+                },
+                {
+                    "authorId": "31024864",
+                    "name": "Promod Yenigalla"
+                }
+            ]
+        },
+        {
+            "paperId": "2781182a38b6303dc5b4cb224579e9a365156bc3",
+            "title": "LATEX-Numeric: Language Agnostic Text Attribute Extraction for Numeric Attributes",
+            "abstract": "In this paper, we present LATEX-Numeric - a high-precision fully-automated scalable framework for extracting E-commerce numeric attributes from unstructured product text like product description. Most of the past work on attribute extraction is not scalable as they rely on manually curated training data, either with or without use of active learning. We rely on distant supervision for training data generation, removing dependency on manual labels. One issue with distant supervision is that it leads to incomplete training annotation due to missing attribute values while matching. We propose a multi-task learning architecture to deal with missing labels in the training data, leading to F1 improvement of 9.2% for numeric attributes over state-of-the-art single-task architecture. While multi-task architecture benefits both numeric and non-numeric attributes, we present automated techniques to further improve the numeric attributes extraction models. Numeric attributes require a list of units (or aliases) for better matching with distant supervision. We propose an automated algorithm for alias creation using unstructured text and attribute values, leading to a 20.2% F1 improvement. Extensive experiments on real world datasets for 20 numeric attributes across 5 product categories and 3 English marketplaces show that LATEX-numeric achieves a high F1-score, without any manual intervention, making it suitable for practical applications. Finally we show that the improvements are language-agnostic and LATEX-Numeric achieves 13.9% F1 improvement for 3 non-English languages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054297550",
+                    "name": "Kartik Mehta"
+                },
+                {
+                    "authorId": "145004446",
+                    "name": "I. Oprea"
+                },
+                {
+                    "authorId": "121243468",
+                    "name": "Nikhil Rasiwasia"
+                }
+            ]
+        },
+        {
+            "paperId": "678ee0571346b27692bd82889d1d38fc7250ab64",
+            "title": "Scalable Approach for Normalizing E-commerce Text Attributes (SANTA)",
+            "abstract": "In this paper, we present SANTA, a scalable framework to automatically normalize E-commerce attribute values (e.g. \u201cWin 10 Pro\u201d) to a fixed set of pre-defined canonical values (e.g. \u201cWindows 10\u201d). Earlier works on attribute normalization focused on fuzzy string matching (also referred as syntactic matching in this paper). In this work, we first perform an extensive study of nine syntactic matching algorithms and establish that \u2018cosine\u2019 similarity leads to best results, showing 2.7% improvement over commonly used Jaccard index. Next, we show that string similarity alone is not sufficient for attribute normalization as many surface forms require going beyond syntactic matching (e.g. \u201c720p\u201d and \u201cHD\u201d are synonyms). While semantic techniques like unsupervised embeddings (e.g. word2vec/fastText) have shown good results in word similarity tasks, we observed that they perform poorly to distinguish between close canonical forms, as these close forms often occur in similar contexts. We propose to learn token embeddings using a twin network with triplet loss. We propose an embedding learning task leveraging raw attribute values and product titles to learn these embeddings in a self-supervised fashion. We show that providing supervision using our proposed task improves over both syntactic and unsupervised embeddings based techniques for attribute normalization. Experiments on a real-world dataset of 50 attributes show that the embeddings trained using our proposed approach obtain 2.3% improvement over best string similarity and 19.3% improvement over best unsupervised embeddings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2105822749",
+                    "name": "Ravi Shankar Mishra"
+                },
+                {
+                    "authorId": "2054297550",
+                    "name": "Kartik Mehta"
+                },
+                {
+                    "authorId": "121243468",
+                    "name": "Nikhil Rasiwasia"
+                }
+            ]
+        },
+        {
+            "paperId": "575f47035494362cadd9fb22daca33bbdcab038b",
+            "title": "ProductQnA: Answering User Questions on E-Commerce Product Pages",
+            "abstract": "Product pages on e-commerce websites often overwhelm their customers with a wealth of data, making discovery of relevant information a challenge. Motivated by this, here, we present a novel framework to answer both factoid and non-factoid user questions on product pages. We propose several question-answer matching models leveraging both deep learned distributional semantics and semantics imposed by a structured resource like a domain specific ontology. The proposed framework supports the use of a combination of these models and we show, through empirical evaluation, that a cascade of these models does much better in meeting the high precision requirements of such a question-answering system. Evaluation on user asked questions shows that the proposed system achieves 66% higher precision1 as compared to IDF-weighted average of word vectors baseline [1].",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144684248",
+                    "name": "Ashish Kulkarni"
+                },
+                {
+                    "authorId": "2054297550",
+                    "name": "Kartik Mehta"
+                },
+                {
+                    "authorId": "50064464",
+                    "name": "Shweta Garg"
+                },
+                {
+                    "authorId": "118738038",
+                    "name": "Vidit Bansal"
+                },
+                {
+                    "authorId": "1793182",
+                    "name": "Nikhil Rasiwasia"
+                },
+                {
+                    "authorId": "1757518",
+                    "name": "Srinivasan H. Sengamedu"
+                }
+            ]
+        },
+        {
+            "paperId": "86cfd74601cd05aa954817aa14aa4d6c2d47a566",
+            "title": "Improving Answer Selection and Answer Triggering using Hard Negatives",
+            "abstract": "In this paper, we establish the effectiveness of using hard negatives, coupled with a siamese network and a suitable loss function, for the tasks of answer selection and answer triggering. We show that the choice of sampling strategy is key for achieving improved performance on these tasks. Evaluating on recent answer selection datasets - InsuranceQA, SelQA, and an internal QA dataset, we show that using hard negatives with relatively simple model architectures (bag of words and LSTM-CNN) drives significant performance gains. On InsuranceQA, this strategy alone improves over previously reported results by a minimum of 1.6 points in P@1. Using hard negatives with a Transformer encoder provides a further improvement of 2.3 points. Further, we propose to use quadruplet loss for answer triggering, with the aim of producing globally meaningful similarity scores. We show that quadruplet loss function coupled with the selection of hard negatives enables bag-of-words models to improve F1 score by 2.3 points over previous baselines, on SelQA answer triggering dataset. Our results provide key insights into answer selection and answer triggering tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "36212180",
+                    "name": "Sawan Kumar"
+                },
+                {
+                    "authorId": "50064464",
+                    "name": "Shweta Garg"
+                },
+                {
+                    "authorId": "2054297550",
+                    "name": "Kartik Mehta"
+                },
+                {
+                    "authorId": "121243468",
+                    "name": "Nikhil Rasiwasia"
+                }
+            ]
+        }
+    ]
+}

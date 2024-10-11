@@ -1,0 +1,178 @@
+{
+    "authorId": "2115740680",
+    "papers": [
+        {
+            "paperId": "3b1a170e47e60aac04958f394bf81f942214e6f1",
+            "title": "Limited-Supervised Multi-Label Learning with Dependency Noise",
+            "abstract": "Limited-supervised multi-label learning (LML) leverages weak or noisy supervision for multi-label classification model training over data with label noise, which contain missing labels and/or redundant labels. Existing studies usually solve LML problems by assuming that label noise is independent of the input features and class labels, while ignoring the fact that noisy labels may depend on the input features (instance-dependent) and the classes (label-dependent) in many real-world applications. In this paper, we propose limited-supervised Multi-label Learning with Dependency Noise (MLDN) to simultaneously identify the instance-dependent and label-dependent label noise by factorizing the noise matrix as the outputs of a mapping from the feature and label representations. Meanwhile, we regularize the problem with the manifold constraint on noise matrix to preserve local relationships and uncover the manifold structure. Theoretically, we bound noise recover error for the resulting problem. We solve the problem by using a first-order scheme based on proximal operator, and the convergence rate of it is at least sub-linear. Extensive experiments conducted on various datasets demonstrate the superiority of our proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115740680",
+                    "name": "Yejiang Wang"
+                },
+                {
+                    "authorId": "2287794649",
+                    "name": "Yuhai Zhao"
+                },
+                {
+                    "authorId": "2256361203",
+                    "name": "Zhengkui Wang"
+                },
+                {
+                    "authorId": "2151205868",
+                    "name": "Wen Shan"
+                },
+                {
+                    "authorId": "2241200019",
+                    "name": "Xingwei Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "d907f30c087a10b9041f357ad8a4a123f3f8bdcf",
+            "title": "Robust Multi-Graph Multi-Label Learning With Dual-Granularity Labeling",
+            "abstract": "Multi-graph Multi-label learning (Mgml) aims to classify a set of objects of interest, such as text or images, using a bag-of-graphs representation. Previous Mgml works have limitations as they only learn labels at the bag level, lose structural information in learning by transferring graphs into instances, and cannot handle noisy labels. This paper presents a robust coarse and fine-grained Noise Multi-graph Multi-label (cfMGNML) learning framework that builds the learning model over the graphs and empowers label prediction at both the coarse (bag) and fine-grained (graph in each bag) levels with noisy labels. To identify label noise, a label probability matrix is defined to act on the scoring function of each label, with a higher probability value indicating that the label is more likely to be the corresponding graph or bag label. The problem is regularized with the manifold constraint on the label probability matrix to preserve local relationships within the data and uncover its essential manifold structure. Meanwhile, a thresholding rank-loss objective is proposed to rank the labels for the graphs and bags and minimize the hamming loss at one step simultaneously. To tackle the non-convex optimization problem, an effective sub-gradient descent algorithm is developed. Experiments over various datasets demonstrate the proposed method achieves superior performance than the state-of-the-art algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115740680",
+                    "name": "Yejiang Wang"
+                },
+                {
+                    "authorId": "2287794649",
+                    "name": "Yuhai Zhao"
+                },
+                {
+                    "authorId": "2256361203",
+                    "name": "Zhengkui Wang"
+                },
+                {
+                    "authorId": "2261093869",
+                    "name": "Chengqi Zhang"
+                },
+                {
+                    "authorId": "2241200019",
+                    "name": "Xingwei Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "4494cded00ff0ef0d686cc2261b891686d7ad3d6",
+            "title": "Robust Self-Supervised Multi-Instance Learning with Structure Awareness",
+            "abstract": "Multi-instance learning (MIL) is a supervised learning where each example is a labeled bag with many instances. The typical MIL strategies are to train an instance-level feature extractor followed by aggregating instances features as bag-level representation with labeled information. However, learning such a bag-level representation highly depends on a large number of labeled datasets, which are difficult to get in real-world scenarios. In this paper, we make the first attempt to propose a robust Self-supervised Multi-Instance LEarning architecture with Structure awareness (SMILEs) that learns unsupervised bag representation. Our proposed approach is: 1) permutation invariant to the order of instances in bag; 2) structure-aware to encode the topological structures among the instances; and 3) robust against instances noise or permutation. Specifically, to yield robust MIL model without label information, we augment the multi-instance bag and train the representation encoder to maximize the correspondence between the representations of the same bag in its different augmented forms. Moreover, to capture topological structures from nearby instances in bags, our framework learns optimal graph structures for the bags and these graphs are optimized together with message passing layers and the ordered weighted averaging operator towards contrastive loss. Our main theorem characterizes the permutation invariance of the bag representation. Compared with state-of-the-art supervised MIL baselines, SMILEs achieves average improvement of 4.9%, 4.4% in classification accuracy on 5 benchmark datasets and 20 newsgroups datasets, respectively. In addition, we show that the model is robust to the input corruption.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115740680",
+                    "name": "Yejiang Wang"
+                },
+                {
+                    "authorId": "2124211783",
+                    "name": "Yuhai Zhao"
+                },
+                {
+                    "authorId": "2284974",
+                    "name": "Zhengkui Wang"
+                },
+                {
+                    "authorId": "2218892476",
+                    "name": "Meixia Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "b17969990b3745a494f8fcadae6c8cd0426dc3ec",
+            "title": "Pre-training Multi-task Contrastive Learning Models for Scientific Literature Understanding",
+            "abstract": "Scientific literature understanding tasks have gained significant attention due to their potential to accelerate scientific discovery. Pre-trained language models (LMs) have shown effectiveness in these tasks, especially when tuned via contrastive learning. However, jointly utilizing pre-training data across multiple heterogeneous tasks (e.g., extreme multi-label paper classification, citation prediction, and literature search) remains largely unexplored. To bridge this gap, we propose a multi-task contrastive learning framework, SciMult, with a focus on facilitating common knowledge sharing across different scientific literature understanding tasks while preventing task-specific skills from interfering with each other. To be specific, we explore two techniques -- task-aware specialization and instruction tuning. The former adopts a Mixture-of-Experts Transformer architecture with task-aware sub-layers; the latter prepends task-specific instructions to the input text so as to produce task-aware outputs. Extensive experiments on a comprehensive collection of benchmark datasets verify the effectiveness of our task-aware specialization strategy, where we outperform state-of-the-art scientific pre-trained LMs. Code, datasets, and pre-trained models can be found at https://scimult.github.io/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "47413820",
+                    "name": "Hao Cheng"
+                },
+                {
+                    "authorId": "123188251",
+                    "name": "Zhihong Shen"
+                },
+                {
+                    "authorId": "46522098",
+                    "name": "Xiaodong Liu"
+                },
+                {
+                    "authorId": "2115740680",
+                    "name": "Yejiang Wang"
+                },
+                {
+                    "authorId": "48441311",
+                    "name": "Jianfeng Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "070b69def690a39cef51e9d4f27f8d922a5d8ab1",
+            "title": "Multi-graph Multi-label Learning with Dual-granularity Labeling",
+            "abstract": "Graphs are a powerful and versatile data structure that easily captures real life relationship. Multi-graph Multi-label learning (MGML) is a supervised learning task, which aims to learn a Multi-label classifier to label a set of objects of interest (e.g. image or text) with a bag-of-graphs representation. However, prior techniques on the MGML are developed based on transferring graphs into instances that does not fully utilize the structure information in the learning, and focus on learning the unseen labels only at the bag level. There is no existing work studying how to label the graphs within a bag that is of importance in many applications like image or text annotation. To bridge this gap, in this paper, we present a novel coarse and fine-grained Multi-graph Multi-label (cfMGML) learning framework which directly builds the learning model over the graphs and empowers the label prediction at both the coarse (aka. bag) level and fine-grained (aka. graph in each bag) level. In particular, given a set of labeled multi-graph bags, we design the scoring functions at both graph and bag levels to model the relevance between the label and data using specific graph kernels. Meanwhile, we propose a thresholding rank-loss objective function to rank the labels for the graphs and bags and minimize the hamming-loss simultaneously at one-step, which aims to address the error accumulation issue in traditional rank-loss algorithms. To tackle the non-convex optimization problem, we further develop an effective sub-gradient descent algorithm to handle high-dimensional space computation required in cfMGML. Experiments over various real-world datasets demonstrate cfMGML achieves superior performance than the state-of-arts algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124211783",
+                    "name": "Yuhai Zhao"
+                },
+                {
+                    "authorId": "2115740680",
+                    "name": "Yejiang Wang"
+                },
+                {
+                    "authorId": "2284974",
+                    "name": "Zhengkui Wang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Chengqi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "cf4dd34f17686bc1161f42979286bc47424a7931",
+            "title": "Towards Coarse and Fine-grained Multi-Graph Multi-Label Learning",
+            "abstract": "Multi-graph multi-label learning (\\textsc{Mgml}) is a supervised learning framework, which aims to learn a multi-label classifier from a set of labeled bags each containing a number of graphs. Prior techniques on the \\textsc{Mgml} are developed based on transfering graphs into instances and focus on learning the unseen labels only at the bag level. In this paper, we propose a \\textit{coarse} and \\textit{fine-grained} Multi-graph Multi-label (cfMGML) learning framework which directly builds the learning model over the graphs and empowers the label prediction at both the \\textit{coarse} (aka. bag) level and \\textit{fine-grained} (aka. graph in each bag) level. In particular, given a set of labeled multi-graph bags, we design the scoring functions at both graph and bag levels to model the relevance between the label and data using specific graph kernels. Meanwhile, we propose a thresholding rank-loss objective function to rank the labels for the graphs and bags and minimize the hamming-loss simultaneously at one-step, which aims to addresses the error accumulation issue in traditional rank-loss algorithms. To tackle the non-convex optimization problem, we further develop an effective sub-gradient descent algorithm to handle high-dimensional space computation required in cfMGML. Experiments over various real-world datasets demonstrate cfMGML achieves superior performance than the state-of-arts algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115740680",
+                    "name": "Yejiang Wang"
+                },
+                {
+                    "authorId": "2124211783",
+                    "name": "Yuhai Zhao"
+                },
+                {
+                    "authorId": "2284974",
+                    "name": "Zhengkui Wang"
+                },
+                {
+                    "authorId": "48934799",
+                    "name": "Chengqi Zhang"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,329 @@
+{
+    "authorId": "3165179",
+    "papers": [
+        {
+            "paperId": "1ca873579b613317f726a16d21738e8864c66155",
+            "title": "Entity Disambiguation with Extreme Multi-label Ranking",
+            "abstract": "Entity disambiguation is one of the most important natural language tasks to identify entities behind ambiguous surface mentions within a knowledge base. Although many recent studies apply deep learning to achieve decent results, they need exhausting pre-training and mediocre recall in the retrieval stage. In this paper, we propose a novel framework, eXtreme Multi-label Ranking for Entity Disambiguation (XMRED), to address this challenge. An efficient zero-shot entity retriever with auxiliary data is first pre-trained to recall relevant entities based on linear models. Specifically, the retrieval process can be considered as an extreme multi-label ranking (XMR) task. Entities are first clustered at different scales to form a label tree, thereby learning multi-scale entity retrievers over the label tree with high recall. Moreover, XMRED applies deep cross-encoder as a re-ranker to achieve high precision based on high-quality candidates. Extensive experimental results based on the AIDA-CoNLL benchmark and five zero-shot testing datasets demonstrate that XMRED obtains 98% and over 95% recall scores for in-domain and zero-shot datasets with top-10 retrieved entities. With a deep cross-encoder as the re-ranker, XMRED further outperforms the previous state-of-the-art by 1.74% in In-KB micro-F1 scores on average with a significant improvement on the training efficiency from days to 3.48 hours. In addition, XMRED also beats the state-of-the-art for page-level document retrieval by 2.38% in accuracy and 1.90% in recall@5.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "2138799241",
+                    "name": "Jiong Zhang"
+                },
+                {
+                    "authorId": "2256992918",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2257105171",
+                    "name": "Hsiang-Fu Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "21d480fd29fcff6e9add8cf50117e40af208d265",
+            "title": "Build Faster with Less: A Journey to Accelerate Sparse Model Building for Semantic Matching in Product Search",
+            "abstract": "The semantic matching problem in product search seeks to retrieve all semantically relevant products given a user query. Recent studies have shown that extreme multi-label classification~(XMC) model enjoys both low inference latency and high recall in real-world scenarios. These XMC semantic matching models adopt TF-IDF vectorizers to extract query text features and use mainly sparse matrices for the model weights. However, limited availability of libraries for efficient parallel sparse modules may lead to tediously long model building time when the problem scales to hundreds of millions of labels. This incurs significant hardware cost and renders the semantic model stale even before it is deployed. In this paper, we investigate and accelerate the model building procedures in a tree-based XMC model. On a real-world semantic matching task with 100M labels, our enhancements achieve over 10 times acceleration (from 3.1 days to 6.7 hours) while reducing hardware cost by 25%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2138799241",
+                    "name": "Jiong Zhang"
+                },
+                {
+                    "authorId": "2259840389",
+                    "name": "Yau-Shian Wang"
+                },
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "2181787498",
+                    "name": "Wei Li"
+                },
+                {
+                    "authorId": "2256992918",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2257105171",
+                    "name": "Hsiang-Fu Yu"
+                },
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "39a9beda08f4bf33d800fa6bf2e9fdde12d0a118",
+            "title": "MinPrompt: Graph-based Minimal Prompt Data Augmentation for Few-shot Question Answering",
+            "abstract": "Recent advances in few-shot question answering (QA) mostly rely on the power of pre-trained large language models (LLMs) and fine-tuning in specific settings. Although the pre-training stage has already equipped LLMs with powerful reasoning capabilities, LLMs still need to be fine-tuned to adapt to specific domains to achieve the best results. In this paper, we propose to select the most informative data for fine-tuning, thereby improving the efficiency of the fine-tuning process with comparative or even better accuracy on the open-domain QA task. We present MinPrompt, a minimal data augmentation framework for open-domain QA based on an approximate graph algorithm and unsupervised question generation. We transform the raw text into a graph structure to build connections between different factual sentences, then apply graph algorithms to identify the minimal set of sentences needed to cover the most information in the raw text. We then generate QA pairs based on the identified sentence subset and train the model on the selected sentences to obtain the final model. Empirical results on several benchmark datasets and theoretical analysis show that MinPrompt is able to achieve comparable or better results than baselines with a high degree of efficiency, bringing consistent improvements in F-1 scores.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "29963551",
+                    "name": "Xiusi Chen"
+                },
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "2256992918",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2257105171",
+                    "name": "Hsiang-Fu Yu"
+                },
+                {
+                    "authorId": "2283212563",
+                    "name": "Wei Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "42f41d0d942cce30d741548cb533872a903fbd51",
+            "title": "Uncertainty Quantification for Extreme Classification",
+            "abstract": "Uncertainty quantification is one of the most crucial tasks to obtain trustworthy and reliable machine learning models for decision making. However, most research in this domain has only focused on problems with small label spaces and ignored eXtreme Multi-label Classification (XMC), which is an essential task in the era of big data for web-scale machine learning applications. Moreover, enormous label spaces could also lead to noisy retrieval results and intractable computational challenges for uncertainty quantification. In this paper, we aim to investigate general uncertainty quantification approaches for tree-based XMC models with a probabilistic ensemble-based framework. In particular, we analyze label-level and instance-level uncertainty in XMC, and propose a general approximation framework based on beam search to efficiently estimate the uncertainty with a theoretical guarantee under long-tail XMC predictions. Empirical studies on six large-scale real-world datasets show that our framework not only outperforms single models in predictive performance, but also can serve as strong uncertainty-based baselines for label misclassification and out-of-distribution detection, with significant speedup. Besides, our framework can further yield better state-of-the-art results based on deep XMC models with uncertainty quantification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "2138799241",
+                    "name": "Jiong Zhang"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "46185316",
+                    "name": "Hsiang-Fu Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "46d325f9c99c717bbabb87b410a230bb42825eb1",
+            "title": "printf: Preference Modeling Based on User Reviews with Item Images and Textual Information via Graph Learning",
+            "abstract": "Nowadays, modern recommender systems usually leverage textual and visual contents as auxiliary information to predict user preference. For textual information, review texts are one of the most popular contents to model user behaviors. Nevertheless, reviews usually lose their shine when it comes to top-N recommender systems because those that solely utilize textual reviews as features struggle to adequately capture the interaction relationships between users and items. For visual one, it is usually modeled with naive convolutional networks and also hard to capture high-order relationships between users and items. Moreover, previous works did not collaboratively use both texts and images in a proper way. In this paper, we propose printf, preference modeling based on user reviews with item images and textual information via graph learning, to address the above challenges. Specifically, the dimension-based attention mechanism directs relations between user reviews and interacted items, allowing each dimension to contribute different importance weights to derive user representations. Extensive experiments are conducted on three publicly available datasets. The experimental results demonstrate that our proposed printf consistently outperforms baseline methods with the relative improvements for NDCG@5 of 26.80%, 48.65%, and 25.74% on Amazon-Grocery, Amazon-Tools, and Amazon-Electronics datasets, respectively. The in-depth analysis also indicates the dimensions of review representations definitely have different topics and aspects, assisting the validity of our model design.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51255125",
+                    "name": "Haozhe Lin"
+                },
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "1753218633",
+                    "name": "Ming-Hao Juan"
+                },
+                {
+                    "authorId": "1712392",
+                    "name": "Pu-Jen Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "48115845d8562a1484f745bfd41e9dc7055858eb",
+            "title": "PEFA: Parameter-Free Adapters for Large-scale Embedding-based Retrieval Models",
+            "abstract": "Embedding-based Retrieval Models (ERMs) have emerged as a promising framework for large-scale text retrieval problems due to powerful large language models. Nevertheless, fine-tuning ERMs to reach state-of-the-art results can be expensive due to the extreme scale of data as well as the complexity of multi-stages pipelines (e.g., pre-training, fine-tuning, distillation). In this work, we propose the PEFA framework, namely ParamEter-Free Adapters, for fast tuning of ERMs without any backward pass in the optimization. At index building stage, PEFA equips the ERM with a non-parametric k-nearest neighbor (kNN) component. At inference stage, PEFA performs a convex combination of two scoring functions, one from the ERM and the other from the kNN. Based on the neighborhood definition, PEFA framework induces two realizations, namely PEFA-XL (i.e., extra large) using double ANN indices and PEFA-XS (i.e., extra small) using a single ANN index. Empirically, PEFA achieves significant improvement on two retrieval applications. For document retrieval, regarding Recall@100 metric, PEFA improves not only pre-trained ERMs on Trivia-QA by an average of 13.2%, but also fine-tuned ERMs on NQ-320K by an average of 5.5%, respectively. For product search, PEFA improves the Recall@100 of the fine-tuned ERMs by an average of 5.3% and 14.5%, for PEFA-XS and PEFA-XL, respectively. Our code is available at https://github.com/amzn/pecos/tree/mainline/examples/pefa-wsdm24.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "2138799241",
+                    "name": "Jiong Zhang"
+                },
+                {
+                    "authorId": "2215622884",
+                    "name": "Mutasem Al-Darabsah"
+                },
+                {
+                    "authorId": "37077406",
+                    "name": "C. Teo"
+                },
+                {
+                    "authorId": "2256992918",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2257105171",
+                    "name": "Hsiang-Fu Yu"
+                },
+                {
+                    "authorId": "2263308972",
+                    "name": "S. Vishwanathan"
+                }
+            ]
+        },
+        {
+            "paperId": "7b95c3062ae71fb0a83d8d5e747f80d048969519",
+            "title": "InfluencerRank: Discovering Effective Influencers via Graph Convolutional Attentive Recurrent Neural Networks",
+            "abstract": "As influencers play considerable roles in social media marketing, companies increase the budget for influencer marketing. Hiring effective influencers is crucial in social influencer marketing, but it is challenging to find the right influencers among hundreds of millions of social media users. In this paper, we propose InfluencerRank that ranks influencers by their effectiveness based on their posting behaviors and social relations over time. To represent the posting behaviors and social relations, the graph convolutional neural networks are applied to model influencers with heterogeneous networks during different historical periods. By learning the network structure with the embedded node features, InfluencerRank can derive informative representations for influencers at each period. An attentive recurrent neural network finally distinguishes highly effective influencers from other influencers by capturing the knowledge of the dynamics of influencer representations over time. Extensive experiments have been conducted on an Instagram dataset that consists of 18,397 influencers with their 2,952,075 posts published within 12 months. The experimental results demonstrate that InfluencerRank outperforms existing baseline methods. An in-depth analysis further reveals that all of our proposed features and model components are beneficial to discover effective influencers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2294567",
+                    "name": "Seungbae Kim"
+                },
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "2304380",
+                    "name": "Jinyoung Han"
+                },
+                {
+                    "authorId": "40397893",
+                    "name": "Wei Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "8d46f6b8da505566a809e34c3e60d39413ae9342",
+            "title": "Gotta: Generative Few-shot Question Answering by Prompt-based Cloze Data Augmentation",
+            "abstract": "Few-shot question answering (QA) aims at precisely discovering answers to a set of questions from context passages while only a few training samples are available. Although existing studies have made some progress and can usually achieve proper results, they suffer from understanding deep semantics for reasoning out the questions. In this paper, we develop Gotta, a Generative prOmpT-based daTa Augmentation framework to mitigate the challenge above. Inspired by the human reasoning process, we propose to integrate the cloze task to enhance few-shot QA learning. Following the recent success of prompt-tuning, we present the cloze task in the same format as the main QA task, allowing the model to learn both tasks seamlessly together to fully take advantage of the power of prompt-tuning. Extensive experiments on widely used benchmarks demonstrate that Gotta consistently outperforms competitive baselines, validating the effectiveness of our proposed prompt-tuning-based cloze task, which not only fine-tunes language models but also learns to guide reasoning in QA tasks. Further analysis shows that the prompt-based loss incorporates the auxiliary task better than the multi-task loss, highlighting the strength of prompt-tuning on the few-shot QA task.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "29963551",
+                    "name": "Xiusi Chen"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "3591598",
+                    "name": "Jinliang Deng"
+                },
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "40397893",
+                    "name": "Wei Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "e2b3a3ffbb328274212899be4b9aa6756dec7558",
+            "title": "PINA: Leveraging Side Information in eXtreme Multi-label Classification via Predicted Instance Neighborhood Aggregation",
+            "abstract": "The eXtreme Multi-label Classification~(XMC) problem seeks to find relevant labels from an exceptionally large label space. Most of the existing XMC learners focus on the extraction of semantic features from input query text. However, conventional XMC studies usually neglect the side information of instances and labels, which can be of use in many real-world applications such as recommendation systems and e-commerce product search. We propose Predicted Instance Neighborhood Aggregation (PINA), a data enhancement method for the general XMC problem that leverages beneficial side information. Unlike most existing XMC frameworks that treat labels and input instances as featureless indicators and independent entries, PINA extracts information from the label metadata and the correlations among training instances. Extensive experimental results demonstrate the consistent gain of PINA on various XMC tasks compared to the state-of-the-art methods: PINA offers a gain in accuracy compared to standard XR-Transformers on five public benchmark datasets. Moreover, PINA achieves a $\\sim 5\\%$ gain in accuracy on the largest dataset LF-AmazonTitles-1.3M. Our implementation is publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "121307942",
+                    "name": "Eli Chien"
+                },
+                {
+                    "authorId": "2138799241",
+                    "name": "Jiong Zhang"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "1743831",
+                    "name": "O. Milenkovic"
+                },
+                {
+                    "authorId": "46185316",
+                    "name": "Hsiang-Fu Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "0a4e41018f1f04640f16106e98855dd287bb971b",
+            "title": "Uncertainty in Extreme Multi-label Classification",
+            "abstract": "Uncertainty quantification is one of the most crucial tasks to obtain trustworthy and reliable machine learning models for decision making. However, most research in this domain has only focused on problems with small label spaces and ignored eXtreme Multi-label Classification (XMC), which is an essential task in the era of big data for web-scale machine learning applications. Moreover, enormous label spaces could also lead to noisy retrieval results and intractable computational challenges for uncertainty quantification. In this paper, we aim to investigate general uncertainty quantification approaches for tree-based XMC models with a probabilistic ensemble-based framework. In particular, we analyze label-level and instance-level uncertainty in XMC, and propose a general approximation framework based on beam search to efficiently estimate the uncertainty with a theoretical guarantee under long-tail XMC predictions. Empirical studies on six large-scale real-world datasets show that our framework not only outperforms single models in predictive performance, but also can serve as strong uncertainty-based baselines for label misclassification and out-of-distribution detection, with significant speedup. Besides, our framework can further yield better state-of-the-art results based on deep XMC models with uncertainty quantification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "2188234718",
+                    "name": "Jiong Zhong"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "46185316",
+                    "name": "Hsiang-Fu Yu"
+                }
+            ]
+        }
+    ]
+}

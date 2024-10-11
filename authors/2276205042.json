@@ -1,0 +1,263 @@
+{
+    "authorId": "2276205042",
+    "papers": [
+        {
+            "paperId": "2e55732bf8fa0a11cf24c9b58b25347c31557964",
+            "title": "Annotation alignment: Comparing LLM and human annotations of conversational safety",
+            "abstract": "Do LLMs align with human perceptions of safety? We study this question via annotation alignment, the extent to which LLMs and humans agree when annotating the safety of user-chatbot conversations. We leverage the recent DICES dataset (Aroyo et al., 2023), in which 350 conversations are each rated for safety by 112 annotators spanning 10 race-gender groups. GPT-4 achieves a Pearson correlation of $r = 0.59$ with the average annotator rating, \\textit{higher} than the median annotator's correlation with the average ($r=0.51$). We show that larger datasets are needed to resolve whether LLMs exhibit disparities in how well they correlate with different demographic groups. Also, there is substantial idiosyncratic variation in correlation within groups, suggesting that race&gender do not fully capture differences in alignment. Finally, we find that GPT-4 cannot predict when one demographic group finds a conversation more unsafe than another.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1405369173",
+                    "name": "Rajiv Movva"
+                },
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2276202987",
+                    "name": "Emma Pierson"
+                }
+            ]
+        },
+        {
+            "paperId": "5c7752de11cb2cb9671a6f32edb046b1e0c9b7fc",
+            "title": "MEDIQ: Question-Asking LLMs for Adaptive and Reliable Clinical Reasoning",
+            "abstract": "In high-stakes domains like clinical reasoning, AI assistants powered by large language models (LLMs) are yet to be reliable and safe. We identify a key obstacle towards reliability: existing LLMs are trained to answer any question, even with incomplete context in the prompt or insufficient parametric knowledge. We propose to change this paradigm to develop more careful LLMs that ask follow-up questions to gather necessary and sufficient information and respond reliably. We introduce MEDIQ, a framework to simulate realistic clinical interactions, which incorporates a Patient System and an adaptive Expert System. The Patient may provide incomplete information in the beginning; the Expert refrains from making diagnostic decisions when unconfident, and instead elicits missing details from the Patient via follow-up questions. To evaluate MEDIQ, we convert MEDQA and CRAFT-MD -- medical benchmarks for diagnostic question answering -- into an interactive setup. We develop a reliable Patient system and prototype several Expert systems, first showing that directly prompting state-of-the-art LLMs to ask questions degrades the quality of clinical reasoning, indicating that adapting LLMs to interactive information-seeking settings is nontrivial. We then augment the Expert with a novel abstention module to better estimate model confidence and decide whether to ask more questions, thereby improving diagnostic accuracy by 20.3%; however, performance still lags compared to an (unrealistic in practice) upper bound when full information is given upfront. Further analyses reveal that interactive performance can be improved by filtering irrelevant contexts and reformatting conversations. Overall, our paper introduces a novel problem towards LLM reliability, a novel MEDIQ framework, and highlights important future directions to extend the information-seeking abilities of LLM assistants in critical domains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2295954288",
+                    "name": "Shuyue Stella Li"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2304468718",
+                    "name": "Jonathan Ilgen"
+                },
+                {
+                    "authorId": "2276202987",
+                    "name": "Emma Pierson"
+                },
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "fb58e778b68f91c30806052bf195f20e98a85eff",
+            "title": "JPEG-LM: LLMs as Image Generators with Canonical Codec Representations",
+            "abstract": "Recent work in image and video generation has been adopting the autoregressive LLM architecture due to its generality and potentially easy integration into multi-modal systems. The crux of applying autoregressive training in language generation to visual generation is discretization -- representing continuous data like images and videos as discrete tokens. Common methods of discretizing images and videos include modeling raw pixel values, which are prohibitively lengthy, or vector quantization, which requires convoluted pre-hoc training. In this work, we propose to directly model images and videos as compressed files saved on computers via canonical codecs (e.g., JPEG, AVC/H.264). Using the default Llama architecture without any vision-specific modifications, we pretrain JPEG-LM from scratch to generate images (and AVC-LM to generate videos as a proof of concept), by directly outputting compressed file bytes in JPEG and AVC formats. Evaluation of image generation shows that this simple and straightforward approach is more effective than pixel-based modeling and sophisticated vector quantization baselines (on which our method yields a 31% reduction in FID). Our analysis shows that JPEG-LM has an especial advantage over vector quantization models in generating long-tail visual elements. Overall, we show that using canonical codec representations can help lower the barriers between language generation and visual generation, facilitating future research on multi-modal language/image/video LLMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "2320509",
+                    "name": "Marjan Ghazvininejad"
+                },
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "d4e7f31e2f8102d92e64d989ca7cd1bdea1bea3a",
+            "title": "Use large language models to promote equity",
+            "abstract": "Advances in large language models (LLMs) have driven an explosion of interest about their societal impacts. Much of the discourse around how they will impact social equity has been cautionary or negative, focusing on questions like\"how might LLMs be biased and how would we mitigate those biases?\"This is a vital discussion: the ways in which AI generally, and LLMs specifically, can entrench biases have been well-documented. But equally vital, and much less discussed, is the more opportunity-focused counterpoint:\"what promising applications do LLMs enable that could promote equity?\"If LLMs are to enable a more equitable world, it is not enough just to play defense against their biases and failure modes. We must also go on offense, applying them positively to equity-enhancing use cases to increase opportunities for underserved groups and reduce societal discrimination. There are many choices which determine the impact of AI, and a fundamental choice very early in the pipeline is the problems we choose to apply it to. If we focus only later in the pipeline -- making LLMs marginally more fair as they facilitate use cases which intrinsically entrench power -- we will miss an important opportunity to guide them to equitable impacts. Here, we highlight the emerging potential of LLMs to promote equity by presenting four newly possible, promising research directions, while keeping risks and cautionary points in clear view.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2276202987",
+                    "name": "Emma Pierson"
+                },
+                {
+                    "authorId": "2276205318",
+                    "name": "Divya Shanmugam"
+                },
+                {
+                    "authorId": "1405369173",
+                    "name": "Rajiv Movva"
+                },
+                {
+                    "authorId": "2238710364",
+                    "name": "Jon Kleinberg"
+                },
+                {
+                    "authorId": "2276204931",
+                    "name": "Monica Agrawal"
+                },
+                {
+                    "authorId": "1478928280",
+                    "name": "Mark Dredze"
+                },
+                {
+                    "authorId": "6745873",
+                    "name": "Kadija Ferryman"
+                },
+                {
+                    "authorId": "2268749951",
+                    "name": "J. Gichoya"
+                },
+                {
+                    "authorId": "2256674786",
+                    "name": "Dan Jurafsky"
+                },
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2238709356",
+                    "name": "Karen Levy"
+                },
+                {
+                    "authorId": "2253742235",
+                    "name": "Sendhil Mullainathan"
+                },
+                {
+                    "authorId": "3797258",
+                    "name": "Z. Obermeyer"
+                },
+                {
+                    "authorId": "2276205059",
+                    "name": "Harini Suresh"
+                },
+                {
+                    "authorId": "70025184",
+                    "name": "Keyon Vafa"
+                }
+            ]
+        },
+        {
+            "paperId": "40848b41ed8c9c255ecd8a920006877691b52d03",
+            "title": "WILDS: A Benchmark of in-the-Wild Distribution Shifts",
+            "abstract": "Distribution shifts -- where the training distribution differs from the test distribution -- can substantially degrade the accuracy of machine learning (ML) systems deployed in the wild. Despite their ubiquity in the real-world deployments, these distribution shifts are under-represented in the datasets widely used in the ML community today. To address this gap, we present WILDS, a curated benchmark of 10 datasets reflecting a diverse range of distribution shifts that naturally arise in real-world applications, such as shifts across hospitals for tumor identification; across camera traps for wildlife monitoring; and across time and location in satellite imaging and poverty mapping. On each dataset, we show that standard training yields substantially lower out-of-distribution than in-distribution performance. This gap remains even with models trained by existing methods for tackling distribution shifts, underscoring the need for new methods for training models that are more robust to the types of distribution shifts that arise in practice. To facilitate method development, we provide an open-source package that automates dataset loading, contains default model architectures and hyperparameters, and standardizes evaluations. Code and leaderboards are available at https://wilds.stanford.edu.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2389237",
+                    "name": "Shiori Sagawa"
+                },
+                {
+                    "authorId": "66977188",
+                    "name": "H. Marklund"
+                },
+                {
+                    "authorId": "2114080615",
+                    "name": "Sang Michael Xie"
+                },
+                {
+                    "authorId": "2281037751",
+                    "name": "Marvin Zhang"
+                },
+                {
+                    "authorId": "1693411",
+                    "name": "Akshay Balsubramani"
+                },
+                {
+                    "authorId": "2146241852",
+                    "name": "Weihua Hu"
+                },
+                {
+                    "authorId": "19168196",
+                    "name": "Michihiro Yasunaga"
+                },
+                {
+                    "authorId": "2280987258",
+                    "name": "Richard Lanas Phillips"
+                },
+                {
+                    "authorId": "2280985094",
+                    "name": "Irena Gao"
+                },
+                {
+                    "authorId": "2280998729",
+                    "name": "Tony Lee"
+                },
+                {
+                    "authorId": "2280985491",
+                    "name": "Etiene David"
+                },
+                {
+                    "authorId": "2351671",
+                    "name": "I. Stavness"
+                },
+                {
+                    "authorId": "2280992321",
+                    "name": "Wei Guo"
+                },
+                {
+                    "authorId": "3162326",
+                    "name": "Berton A. Earnshaw"
+                },
+                {
+                    "authorId": "1983211",
+                    "name": "I. Haque"
+                },
+                {
+                    "authorId": "2134791809",
+                    "name": "Sara Beery"
+                },
+                {
+                    "authorId": "2251205420",
+                    "name": "J. Leskovec"
+                },
+                {
+                    "authorId": "2844479",
+                    "name": "A. Kundaje"
+                },
+                {
+                    "authorId": "2277459687",
+                    "name": "Emma Pierson"
+                },
+                {
+                    "authorId": "2249615151",
+                    "name": "Sergey Levine"
+                },
+                {
+                    "authorId": "46881670",
+                    "name": "Chelsea Finn"
+                },
+                {
+                    "authorId": "2249641250",
+                    "name": "Percy Liang"
+                }
+            ]
+        }
+    ]
+}

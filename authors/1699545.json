@@ -1,0 +1,393 @@
+{
+    "authorId": "1699545",
+    "papers": [
+        {
+            "paperId": "1671d70a135b1e28b3a9cbc830feaa9b0c57df32",
+            "title": "Don't throw away your value model! Generating more preferable text with Value-Guided Monte-Carlo Tree Search decoding",
+            "abstract": "Inference-time search algorithms such as Monte-Carlo Tree Search (MCTS) may seem unnecessary when generating natural language text based on state-of-the-art reinforcement learning such as Proximal Policy Optimization (PPO). In this paper, we demonstrate that it is possible to get extra mileage out of PPO by integrating MCTS on top. The key idea is not to throw out the value network, a byproduct of PPO training for evaluating partial output sequences, when decoding text out of the policy network. More concretely, we present a novel value-guided decoding algorithm called PPO-MCTS, which can integrate the value network from PPO to work closely with the policy network during inference-time generation. Compared to prior approaches based on MCTS for controlled text generation, the key strength of our approach is to reduce the fundamental mismatch of the scoring mechanisms of the partial outputs between training and test. Evaluation on four text generation tasks demonstrate that PPO-MCTS greatly improves the preferability of generated text compared to the standard practice of using only the PPO policy. Our results demonstrate the promise of search algorithms even on top of the aligned language models from PPO, and the under-explored benefit of the value network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144174497",
+                    "name": "Jiacheng Liu"
+                },
+                {
+                    "authorId": "2112929180",
+                    "name": "Andrew Cohen"
+                },
+                {
+                    "authorId": "10721120",
+                    "name": "Ramakanth Pasunuru"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2548384",
+                    "name": "Hannaneh Hajishirzi"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                }
+            ]
+        },
+        {
+            "paperId": "1a7763f30c97b5b052af36bcfe478f64dcb97986",
+            "title": "Modular Transformers: Compressing Transformers into Modularized Layers for Flexible Efficient Inference",
+            "abstract": "Pre-trained Transformer models like T5 and BART have advanced the state of the art on a wide range of text generation tasks. Compressing these models into smaller ones has become critically important for practical use. Common neural network compression techniques such as knowledge distillation or quantization are limited to static compression where the compression ratio is fixed. In this paper, we introduce Modular Transformers, a modularized encoder-decoder framework for flexible sequence-to-sequence model compression. Modular Transformers train modularized layers that have the same function of two or more consecutive layers in the original model via module replacing and knowledge distillation. After training, the modularized layers can be flexibly assembled into sequence-to-sequence models that meet different performance-efficiency trade-offs. Experimental results show that after a single training phase, by simply varying the assembling strategy, Modular Transformers can achieve flexible compression ratios from 1.1x to 6x with little to moderate relative performance drop.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150341221",
+                    "name": "Wangchunshu Zhou"
+                },
+                {
+                    "authorId": "39227408",
+                    "name": "Ronan Le Bras"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "1bc0dc96d745325d89ec5bee1da1541255e6d1eb",
+            "title": "BotPercent: Estimating Twitter Bot Populations from Groups to Crowds",
+            "abstract": "Twitter bot detection has become increasingly important in combating misinformation, identifying malicious online cam-paigns, and protecting the integrity of social media discourse. While existing bot detection literature mostly focuses on identifying individual bots, it remains underexplored how to estimate the proportion of bots within speci\ufb01c communities and social networks, which has great implications for both content moderators and day-to-day users. In this work, we propose community-level bot detection , a novel approach to estimating the amount of malicious interference in online communities by estimating the percentage of bot accounts. Speci\ufb01cally, we introduce BotPercent , an amalgamation of Twitter bot-detection datasets and feature, text, and graph-based models that overcome generalization issues in existing individual-level models, resulting in a more accurate community-level bot estimation. Experiments demonstrate that BotPercent achieves state-of-the-art community-level bot detection performance on the TwiBot-22 benchmark while showing great robustness towards the tampering of speci\ufb01c user features. Armed with BotPercent , we analyze bot rates in different Twitter groups and communities, such as all active Twitter users, users that interact with partisan news media, users that participate in Elon Musk\u2019s content moderation votes, and the political communities in different countries and regions. Our experimental results demonstrate that the existence of Twitter bots is not homogeneous, but rather a spatial-temporal distribution whose heterogeneity should be taken into account for content moderation, social media policy making, and more. The BotPercent implementation is available at https://github.com/TamSiuhin/BotPercent",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2093186816",
+                    "name": "Zhaoxuan Tan"
+                },
+                {
+                    "authorId": "2114887261",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "1947172233",
+                    "name": "Melanie Sclar"
+                },
+                {
+                    "authorId": "2114831715",
+                    "name": "Herun Wan"
+                },
+                {
+                    "authorId": "3326677",
+                    "name": "Minnan Luo"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2073587169",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "1bcca45111ae6c7a1e30f1372b0584cc9d24031f",
+            "title": "SQuARe: A Large-Scale Dataset of Sensitive Questions and Acceptable Responses Created through Human-Machine Collaboration",
+            "abstract": "The potential social harms that large language models pose, such as generating offensive content and reinforcing biases, are steeply rising. Existing works focus on coping with this concern while interacting with ill-intentioned users, such as those who explicitly make hate speech or elicit harmful responses. However, discussions on sensitive issues can become toxic even if the users are well-intentioned. For safer models in such scenarios, we present the Sensitive Questions and Acceptable Response (SQuARe) dataset, a large-scale Korean dataset of 49k sensitive questions with 42k acceptable and 46k non-acceptable responses. The dataset was constructed leveraging HyperCLOVA in a human-in-the-loop manner based on real news headlines. Experiments show that acceptable response generation significantly improves for HyperCLOVA and GPT-3, demonstrating the efficacy of this dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2294014",
+                    "name": "Hwaran Lee"
+                },
+                {
+                    "authorId": "98486910",
+                    "name": "Seokhee Hong"
+                },
+                {
+                    "authorId": "48490725",
+                    "name": "Joonsuk Park"
+                },
+                {
+                    "authorId": "2134920925",
+                    "name": "Takyoung Kim"
+                },
+                {
+                    "authorId": "1775511",
+                    "name": "Meeyoung Cha"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2218605434",
+                    "name": "Byoung Pil Kim"
+                },
+                {
+                    "authorId": "70308241",
+                    "name": "Gunhee Kim"
+                },
+                {
+                    "authorId": "2218966974",
+                    "name": "Eun-Ju Lee"
+                },
+                {
+                    "authorId": "2219321309",
+                    "name": "Yong Lim"
+                },
+                {
+                    "authorId": "2208979147",
+                    "name": "Alice Oh"
+                },
+                {
+                    "authorId": "2215749550",
+                    "name": "San-hee Park"
+                },
+                {
+                    "authorId": "2577039",
+                    "name": "Jung-Woo Ha"
+                }
+            ]
+        },
+        {
+            "paperId": "1c6c6a26d23e8343c6de06187818f0402c994812",
+            "title": "Commonsense Knowledge Transfer for Pre-trained Language Models",
+            "abstract": "Despite serving as the foundation models for a wide range of NLP benchmarks, pre-trained language models have shown limited capabilities of acquiring implicit commonsense knowledge from self-supervision alone, compared to learning linguistic and factual knowledge that appear more explicitly in the surface patterns in text. In this work, we introduce commonsense knowledge transfer, a framework to transfer the commonsense knowledge stored in a neural commonsense knowledge model to a general-purpose pre-trained language model. It first exploits general texts to form queries for extracting commonsense knowledge from the neural commonsense knowledge model and then refines the language model with two self-supervised objectives: commonsense mask infilling and commonsense relation prediction, which align human language with the underlying commonsense knowledge. Empirical results show that our approach consistently improves the model's performance on downstream tasks that require commonsense reasoning. Moreover, we find that the improvement is more significant in the few-shot setting. This suggests that our approach helps language models better transfer to downstream tasks without extensive supervision by injecting commonsense knowledge into their parameters.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150341221",
+                    "name": "Wangchunshu Zhou"
+                },
+                {
+                    "authorId": "39227408",
+                    "name": "Ronan Le Bras"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "5b678b4c4737c7d2e8ba98e211fed4834dd43732",
+            "title": "ArK: Augmented Reality with Knowledge Interactive Emergent Ability",
+            "abstract": "Despite the growing adoption of mixed reality and interactive AI agents, it remains challenging for these systems to generate high quality 2D/3D scenes in unseen environments. The common practice requires deploying an AI agent to collect large amounts of data for model training for every new task. This process is costly, or even impossible, for many domains. In this study, we develop an infinite agent that learns to transfer knowledge memory from general foundation models (e.g. GPT4, DALLE) to novel domains or scenarios for scene understanding and generation in the physical or virtual world. The heart of our approach is an emerging mechanism, dubbed Augmented Reality with Knowledge Inference Interaction (ArK), which leverages knowledge-memory to generate scenes in unseen physical world and virtual reality environments. The knowledge interactive emergent ability (Figure 1) is demonstrated as the observation learns i) micro-action of cross-modality: in multi-modality models to collect a large amount of relevant knowledge memory data for each interaction task (e.g., unseen scene understanding) from the physical reality; and ii) macro-behavior of reality-agnostic: in mix-reality environments to improve interactions that tailor to different characterized roles, target variables, collaborative information, and so on. We validate the effectiveness of ArK on the scene generation and editing tasks. We show that our ArK approach, combined with large foundation models, significantly improves the quality of generated 2D/3D scenes, compared to baselines, demonstrating the potential benefit of incorporating ArK in generative AI for applications such as metaverse and gaming simulation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110991956",
+                    "name": "Qiuyuan Huang"
+                },
+                {
+                    "authorId": "2152276408",
+                    "name": "J. Park"
+                },
+                {
+                    "authorId": "48668899",
+                    "name": "Abhinav Gupta"
+                },
+                {
+                    "authorId": "2887562",
+                    "name": "Pan Lu"
+                },
+                {
+                    "authorId": "144609235",
+                    "name": "Paul N. Bennett"
+                },
+                {
+                    "authorId": null,
+                    "name": "Ran Gong"
+                },
+                {
+                    "authorId": "47348950",
+                    "name": "Subhojit Som"
+                },
+                {
+                    "authorId": "1780690",
+                    "name": "Baolin Peng"
+                },
+                {
+                    "authorId": "1381993925",
+                    "name": "O. Mohammed"
+                },
+                {
+                    "authorId": "1972076",
+                    "name": "C. Pal"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "48441311",
+                    "name": "Jianfeng Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "7a6a298efb965ce9a351a3212f6f536e94dbbb03",
+            "title": "Symbolic Chain-of-Thought Distillation: Small Models Can Also \u201cThink\u201d Step-by-Step",
+            "abstract": "Chain-of-thought prompting (e.g., \u201cLet\u2019s think step-by-ste\u201d) primes large language models to verbalize rationalization for their predictions. While chain-of-thought can lead to dramatic performance gains, benefits appear to emerge only for sufficiently large models (beyond 50B parameters). We show that orders-of-magnitude smaller models (125M\u20141.3B parameters) can still benefit from chain-of-thought prompting. To achieve this, we introduce Symbolic Chain-of-Thought Distillation (SCoTD), a method to train a smaller student model on rationalizations sampled from a significantly larger teacher model. Experiments across several commonsense benchmarks show that: 1) SCoTD enhances the performance of the student model in both supervised and few-shot settings, and especially for challenge sets; 2) sampling many reasoning chains per instance from the teacher is paramount; and 3) after distillation, student chain-of-thoughts are judged by humans as comparable to the teacher, despite orders of magnitude fewer parameters. We test several hypotheses regarding what properties of chain-of-thought samples are important, e.g., diversity vs. teacher likelihood vs. open-endedness. We release our corpus of chain-of-thought samples and code.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "32562635",
+                    "name": "Liunian Harold Li"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2111510510",
+                    "name": "Youngjae Yu"
+                },
+                {
+                    "authorId": "2115257544",
+                    "name": "Xiang Ren"
+                },
+                {
+                    "authorId": "2782886",
+                    "name": "Kai-Wei Chang"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "7d97c17a75beb89f938eaac1d3ca60ac2245fb2e",
+            "title": "Faith and Fate: Limits of Transformers on Compositionality",
+            "abstract": "Transformer large language models (LLMs) have sparked admiration for their exceptional performance on tasks that demand intricate multi-step reasoning. Yet, these models simultaneously show failures on surprisingly trivial problems. This begs the question: Are these errors incidental, or do they signal more substantial limitations? In an attempt to demystify transformer LLMs, we investigate the limits of these models across three representative compositional tasks -- multi-digit multiplication, logic grid puzzles, and a classic dynamic programming problem. These tasks require breaking problems down into sub-steps and synthesizing these steps into a precise answer. We formulate compositional tasks as computation graphs to systematically quantify the level of complexity, and break down reasoning steps into intermediate sub-procedures. Our empirical findings suggest that transformer LLMs solve compositional tasks by reducing multi-step compositional reasoning into linearized subgraph matching, without necessarily developing systematic problem-solving skills. To round off our empirical study, we provide theoretical arguments on abstract multi-step reasoning problems that highlight how autoregressive generations' performance can rapidly decay with\\,increased\\,task\\,complexity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "1947172233",
+                    "name": "Melanie Sclar"
+                },
+                {
+                    "authorId": "1737850",
+                    "name": "Xiang Lorraine Li"
+                },
+                {
+                    "authorId": "2218495662",
+                    "name": "Liwei Jian"
+                },
+                {
+                    "authorId": "51583409",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "1857797",
+                    "name": "Chandra Bhagavatula"
+                },
+                {
+                    "authorId": "39227408",
+                    "name": "Ronan Le Bras"
+                },
+                {
+                    "authorId": "2012510",
+                    "name": "Jena D. Hwang"
+                },
+                {
+                    "authorId": "3313909",
+                    "name": "Soumya Sanyal"
+                },
+                {
+                    "authorId": "2129663",
+                    "name": "S. Welleck"
+                },
+                {
+                    "authorId": "145201124",
+                    "name": "Xiang Ren"
+                },
+                {
+                    "authorId": "37907837",
+                    "name": "Allyson Ettinger"
+                },
+                {
+                    "authorId": "1753355",
+                    "name": "Za\u00efd Harchaoui"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "8c236be5cb8073cb3db317919ceb55130ab66dbe",
+            "title": "Champagne: Learning Real-world Conversation from Large-Scale Web Videos",
+            "abstract": "Visual information is central to conversation: body gestures and physical behaviour, for example, contribute to meaning that transcends words alone. To date, however, most neural conversational models are limited to just text. We introduce Champagne, a generative model of conversations that can account for visual contexts. To train Champagne, we collect and release YTD-18M, a large-scale corpus of 18M video-based dialogues. YTD-18M is constructed from web videos: crucial to our data collection pipeline is a pretrained language model that converts error-prone automatic transcripts to a cleaner dialogue format while maintaining meaning.Human evaluation reveals that YTD-18M is more sensible and specific than prior resources (MMDialog [17], 1M dialogues), while maintaining visual-groundedness. Experiments demonstrate that 1) Champagne learns to conduct conversation from YTD-18M; and 2) when fine-tuned, it achieves state-of-the-art results on four vision-language tasks focused on real-world conversations. We release data, models, and code at https://seungjuhan.me/champagne.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2423429",
+                    "name": "Seungju Han"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2111510510",
+                    "name": "Youngjae Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "8e1ad6685630822baad5e28b8e63218d7ee9b6ef",
+            "title": "Common Sense: The Dark Matter of Language and Intelligence",
+            "abstract": "Scale appears to be the winning recipe in today's leaderboards. And yet, extreme-scale neural models are (un)surprisingly brittle and make errors that are often nonsensical and even counterintuitive. In this talk, I will argue for the importance of knowledge, especially commonsense knowledge, as well as inference-time reasoning algorithms, and demonstrate how smaller models developed in academia can still have an edge over larger industry-scale models, if powered with knowledge and/or reasoning algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,373 @@
+{
+    "authorId": "6413344",
+    "papers": [
+        {
+            "paperId": "1163c29ae6a26b1cd8d85280740410e99001a959",
+            "title": "Self-Supervised Graph Neural Networks via Diverse and Interactive Message Passing",
+            "abstract": "By interpreting Graph Neural Networks (GNNs) as the message passing from the spatial perspective, their success is attributed to Laplacian smoothing. However, it also leads to serious over-smoothing issue by stacking many layers. Recently, many efforts have been paid to overcome this issue in semi-supervised learning. Unfortunately, it is more serious in unsupervised node representation learning task due to the lack of supervision information. Thus, most of the unsupervised or self-supervised GNNs often employ \\textit{one-layer GCN} as the encoder. Essentially, the over-smoothing issue is caused by the over-simplification of the existing message passing, which possesses two intrinsic limits: blind message and uniform passing. In this paper, a novel Diverse and Interactive Message Passing (DIMP) is proposed for self-supervised learning by overcoming these limits. Firstly, to prevent the message from blindness and make it interactive between two connected nodes, the message is determined by both the two connected nodes instead of the attributes of one node. Secondly, to prevent the passing from uniformness and make it diverse over different attribute channels, different propagation weights are assigned to different elements in the message. To this end, a natural implementation of the message in DIMP is the element-wise product of the representations of two connected nodes. From the perspective of numerical optimization, the proposed DIMP is equivalent to performing an overlapping community detection via expectation-maximization (EM). Both the objective function of the community detection and the convergence of EM algorithm guarantee that DMIP can prevent from over-smoothing issue. Extensive evaluations on node-level and graph-level tasks demonstrate the superiority of DIMP on improving performance and overcoming over-smoothing issue.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2145775206",
+                    "name": "Cheng Chen"
+                },
+                {
+                    "authorId": "1409858224",
+                    "name": "Weixun Li"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "1719250",
+                    "name": "Xiaochun Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "370fb0f5dfb590fad83705e1afc2ba3570335542",
+            "title": "Difference Residual Graph Neural Networks",
+            "abstract": "Graph Neural Networks have been widely employed for multimodal fusion and embedding. To overcome over-smoothing issue, residual connections, which are designed for alleviating vanishing gradient problem in NNs, are adopted in Graph Neural Networks (GNNs) to incorporate local node information. However, these simple residual connections are ineffective on networks with heterophily, since the roles of both convolutional operations and residual connections in GNNs are significantly different from those in classic NNs. By considering the specific smoothing characteristic of graph convolutional operation, deep layers in GNNs are expected to focus on the data which can't be properly handled in shallow layers. To this end, a novel and universal Difference Residual Connections (DRC), which feed the difference of the output and input of previous layer as the input of the next layer, is proposed. Essentially, Difference Residual Connections is equivalent to inserting layers with opposite effect (e.g., sharpening) into the network to prevent the excessive effect (e.g., over-smoothing issue) induced by too many layers with the similar role (e.g., smoothing) in GNNs. From the perspective of optimization, DRC is the gradient descent method to minimize an objective function with both smoothing and sharpening terms. The analytic solution to this objective function is determined by both graph topology and node attributes, which theoretically proves that DRC can prevent over-smoothing issue. Extensive experiments demonstrate the superiority of DRC on real networks with both homophily and heterophily, and show that DRC can automatically determine the model depth and be adaptive to both shallow and deep models with two complementary components.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "118103314",
+                    "name": "Weihang Peng"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "a93a71de416b1b3a3793b38ebd28364d2af26244",
+            "title": "Self-Supervised Graph Representation Learning via Information Bottleneck",
+            "abstract": "Graph representation learning has become a mainstream method for processing network structured data, and most graph representation learning methods rely heavily on labeling information for downstream tasks. Since labeled information is rare in the real world, adopting self-supervised learning to solve the graph neural network problem is a significant challenge. Currently, existing graph neural network approaches attempt to maximize mutual information for self-supervised learning, which leads to a large amount of redundant information in the graph representation and thus affects the performance of downstream tasks. Therefore, the self-supervised graph information bottleneck (SGIB) proposed in this paper uses the symmetry and asymmetry of graphs to establish comparative learning and introduces the information bottleneck theory as a loss training model. This model extracts the common features of both views and the independent features of each view by maximizing the mutual information estimation between the local high-level representation of one view and the global summary vector of the other view. It also removes redundant information not relevant to the target task by minimizing the mutual information between the local high-level representations of the two views. Based on the extensive experimental results of three public datasets and two large-scale datasets, it has been shown that the SGIB model can learn higher quality node representations and that several classical network analysis experiments such as node classification and node clustering can be improved compared to existing models in an unsupervised environment. In addition, an in-depth network experiment is designed for in-depth analysis, and the results show that the SGIB model can also alleviate the over-smoothing problem to a certain extent. Therefore, we can infer from different network analysis experiments that it would be an effective improvement of the performance of downstream tasks through introducing information bottleneck theory to remove redundant information.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "9197345",
+                    "name": "Zichen Zheng"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "1591122272",
+                    "name": "Yajuan Zhang"
+                },
+                {
+                    "authorId": "1791440710",
+                    "name": "Zhengjun Lu"
+                },
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "f8b8d4db4334303aa2e432af9bffca56b85ca4c3",
+            "title": "Graph Neural Networks Beyond Compromise Between Attribute and Topology",
+            "abstract": "Although existing Graph Neural Networks (GNNs) based on message passing achieve state-of-the-art, the over-smoothing issue, node similarity distortion issue and dissatisfactory link prediction performance can\u2019t be ignored. This paper summarizes these issues as the interference between topology and attribute for the first time. By leveraging the recently proposed optimization perspective of GNNs, this interference is analyzed and ascribed to that the learned representation in GNNs essentially compromises between the topology and node attribute. To alleviate the interference, this paper attempts to break this compromise by proposing a novel objective function, which fits node attribute and topology with different representations and introduces mutual exclusion constraints to reduce the redundancy in both representations. The mutual exclusion employs the statistical dependence, which regards the representations from topology and attribute as the observations of two random variables, and is implemented with Hilbert-Schmidt Independence Criterion. Derived from the novel objective function, a novel GNN, i.e., Graph Neural Network Beyond Compromise (GNN-BC), is proposed to iteratively updates the representations of topology and attribute by simultaneously capturing semantic information and removing the common information, and the final representation is the concatenation of them. The performance improvements on node classification and link prediction demonstrate the superiority of GNN-BC on relieving the interference.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "118103314",
+                    "name": "Weihang Peng"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                }
+            ]
+        },
+        {
+            "paperId": "23dc73e489f7cec3b8b907e9f2f93f8d168248e9",
+            "title": "Heterogeneous Graph Information Bottleneck",
+            "abstract": "Most attempts on extending Graph Neural Networks (GNNs) to Heterogeneous Information Networks (HINs) implicitly take the direct assumption that the multiple homogeneous attributed networks induced by different meta-paths are complementary. The doubts about the hypothesis of complementary motivate an alternative assumption of consensus. That is, the aggregated node attributes shared by multiple homogeneous attributed networks are essential for node representations, while the specific ones in each homogeneous attributed network should be discarded. In this paper, a novel Heterogeneous Graph Information Bottleneck (HGIB) is proposed to implement the consensus hypothesis in an unsupervised manner. To this end, information bottleneck (IB) is extended to unsupervised representation learning by leveraging self-supervision strategy. Specifically, HGIB simultaneously maximizes the mutual information between one homogeneous network and the representation learned from another homogeneous network, while minimizes the mutual information between the specific information contained in one homogeneous network and the representation learned from this homogeneous network. Model analysis reveals that the two extreme cases of HGIB correspond to the supervised heterogeneous GNN and the infomax on homogeneous graph, respectively. Extensive experiments on real datasets demonstrate that the consensus-based unsupervised HGIB significantly outperforms most semi-supervised SOTA methods based on complementary assumption.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2116491103",
+                    "name": "Fan Wu"
+                },
+                {
+                    "authorId": "9197345",
+                    "name": "Zichen Zheng"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2026996653",
+                    "name": "Chuang Wang"
+                },
+                {
+                    "authorId": "1719250",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "13495745",
+                    "name": "Yuanfang Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "a39193f071efed10af6704133061c15818a27edc",
+            "title": "Why Do Attributes Propagate in Graph Convolutional Neural Networks?",
+            "abstract": "Many efforts have been paid to enhance Graph Convolutional Network from the perspective of propagation under the philosophy that ``Propagation is the essence of the GCNNs\". Unfortunately, its adverse effect is over-smoothing, which makes the performance dramatically drop. To prevent the over-smoothing, many variants are presented. However, the perspective of propagation can't provide an intuitive and unified interpretation to their effect on prevent over-smoothing. In this paper, we aim at providing a novel explanation to the question of \"Why do attributes propagate in GCNNs?''. which not only gives the essence of the oversmoothing, but also illustrates why the GCN extensions, including multi-scale GCN and GCN with initial residual, can improve the performance. To this end, an intuitive Graph Representation Learning (GRL) framework is presented. GRL simply constrains the node representation similar with the original attribute, and encourages the connected nodes possess similar representations (pairwise constraint). Based on the proposed GRL, exiting GCN and its extensions can be proved as different numerical optimization algorithms, such as gradient descent, of our proposed GRL framework. Inspired by the superiority of conjugate gradient descent compared to common gradient descent, a novel Graph Conjugate Convolutional (GCC) network is presented to approximate the solution to GRL with fast convergence. Specifically, GCC adopts the obtained information of the last layer, which can be represented as the difference between the input and output of the last layer, as the input to the next layer. Extensive experiments demonstrate the superior performance of GCC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "5472921",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "1719250",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                }
+            ]
+        },
+        {
+            "paperId": "05e16bd760c91484946f48623ab360f398ca8ce4",
+            "title": "Semi-Supervised Community Detection via Constraint Matrix Construction and Active Node Selection",
+            "abstract": "Identification of community structures is essential for characterizing and analyzing complex networks. Having focusing primarily on network topological structures, most existing methods for community detection ignore two types of non-topological relationships among nodes, i.e., pairwise \u201cmust-link\u201d constraints among pairs of nodes and labels of nodes, such as functions they may have. Here, we present a novel semi-supervised and active learning method for community detection to integrate these two types of information of a network so as to increase the accuracy of community identification. Our new method will honor the \u201cmust-link\u201d relationship without introducing new parameters and is efficient with a guaranteed convergence. An essential component of the method is a linear representation that is particularly suited to an active learning to help select the most critical nodes that impact community discovery. We present results from extensive experiments on synthetic and real networks to show the superior performance of the new methods over the existing approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2876142",
+                    "name": "Suqi Zhang"
+                },
+                {
+                    "authorId": "1557358471",
+                    "name": "Junyan Wu"
+                },
+                {
+                    "authorId": "1492113939",
+                    "name": "Jianxin Li"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "4076742",
+                    "name": "Xianchao Tang"
+                },
+                {
+                    "authorId": "1557276472",
+                    "name": "Xinyun Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "3d808000740e8554ac5139957af53791676a73ad",
+            "title": "Pulmonary Nodules Detection Based on Deformable Convolution",
+            "abstract": "Early detection of malignant pulmonary nodules is of great help to the treatment of lung cancer. Yet it is difficult to establish a general diagnostic standard because of the two main characteristics of pulmonary nodules: different sizes and irregular shapes. To address this problem effectively, an improved pulmonary nodule detection model based on deformable convolution is proposed. Specifically, by adding a branch network to obtain the offsets, the process of feature extraction is more suitable with the shape of nodule itself. Besides, a simple but effective strategy is proposed for the size variability of pulmonary nodules, which is combined with the multilevel information as well as the fusion of different sizes feature maps. Compared with the two-dimensional convolution neural network and other advanced technologies, our method has a significant improvement, and its mean average precision can achieve 82.7%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "1491101183",
+                    "name": "Zepei Tian"
+                },
+                {
+                    "authorId": "12058591",
+                    "name": "Y. Qi"
+                }
+            ]
+        },
+        {
+            "paperId": "77d29520e675cc72c673350068afb7fa3fb7a5d6",
+            "title": "JANE: Jointly Adversarial Network Embedding",
+            "abstract": "Motivated by the capability of Generative Adversarial Network on exploring the latent semantic space and capturing semantic variations in the data distribution, adversarial learning has been adopted in network embedding to improve the robustness. However, this important ability is lost in existing adversarially regularized network embedding methods, because their embedding results are directly compared to the samples drawn from perturbation (Gaussian) distribution without any rectification from real data. To overcome this vital issue, a novel Joint Adversarial Network Embedding (JANE) framework is proposed to jointly distinguish the real and fake combinations of the embeddings, topology information and node features. JANE contains three pluggable components, Embedding module, Generator module and Discriminator module.\n\nThe overall objective function of JANE is defined in a min-max form, which can be optimized via alternating stochastic gradient. Extensive experiments demonstrate the remarkable superiority of the proposed JANE on link prediction (3% gains in both AUC and AP) and node clustering (5% gain in F1 score).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "5472921",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2108774994",
+                    "name": "Yuexue Wang"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "1719250",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "7dc880f91dd016ca47cb68325c76143c986d4d20",
+            "title": "Graph Attention Topic Modeling Network",
+            "abstract": "Existing topic modeling approaches possess several issues, including the overfitting issue of Probablistic Latent Semantic Indexing (pLSI), the failure of capturing the rich topical correlations among topics in Latent Dirichlet Allocation (LDA), and high inference complexity. In this paper, we provide a new method to overcome the overfitting issue of pLSI by using the amortized inference with word embedding as input, instead of the Dirichlet prior in LDA. For generative topic model, the large number of free latent variables is the root of overfitting. To reduce the number of parameters, the amortized inference replaces the inference of latent variable with a function which possesses the shared (amortized) learnable parameters. The number of the shared parameters is fixed and independent of the scale of the corpus. To overcome the limited application of amortized inference to independent and identically distributed (i.i.d) data, a novel graph neural network, Graph Attention TOpic Network (GATON), is proposed to model the topic structure of non-i.i.d documents according to the following two observations. First, pLSI can be interpreted as stochastic block model (SBM) on a specific bi-partite graph. Second, graph attention network (GAT) can be explained as the semi-amortized inference of SBM, which relaxes the i.i.d data assumption of vanilla amortized inference. GATON provides a novel scheme, i.e. graph convolution operation based scheme, to integrate word similarity and word co-occurrence structure. Specifically, the bag-of-words document representation is modeled as a bi-partite graph topology. Meanwhile, word embedding, which captures the word similarity, is modeled as attribute of the word node and the term frequency vector is adopted as the attribute of the document node. Based on the weighted (attention) graph convolution operation, the word co-occurrence structure and word similarity patterns are seamlessly integrated for topic identification. Extensive experiments demonstrate that the effectiveness of GATON on topic identification not only benefits the document classification, but also significantly refines the input word embedding.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "5472921",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2116491103",
+                    "name": "Fan Wu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "1719250",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "1864018750",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                }
+            ]
+        }
+    ]
+}

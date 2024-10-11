@@ -1,0 +1,302 @@
+{
+    "authorId": "47272000",
+    "papers": [
+        {
+            "paperId": "3b2fc88c1a16a38c7628ef38bd21dbe593c8f330",
+            "title": "Versatile Scene-Consistent Traffic Scenario Generation as Optimization with Diffusion",
+            "abstract": "Generating realistic and controllable agent behaviors in traffic simulation is crucial for the development of autonomous vehicles. This problem is often formulated as imitation learning (IL) from real-world driving data by either directly predicting future trajectories or inferring cost functions with inverse optimal control. In this paper, we draw a conceptual connection between IL and diffusion-based generative modeling and introduce a novel framework Versatile Behavior Diffusion (VBD) to simulate interactive scenarios with multiple traffic participants. Our model not only generates scene-consistent multi-agent interactions but also enables scenario editing through multi-step guidance and refinement. Experimental evaluations show that VBD achieves state-of-the-art performance on the Waymo Sim Agents benchmark. In addition, we illustrate the versatility of our model by adapting it to various applications. VBD is capable of producing scenarios conditioning on priors, integrating with model-based optimization, sampling multi-modal scene-consistent scenarios by fusing marginal predictions, and generating safety-critical scenarios when combined with a game-theoretic solver.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "2283800150",
+                    "name": "Zixu Zhang"
+                },
+                {
+                    "authorId": "2294720012",
+                    "name": "Ameya Vaidya"
+                },
+                {
+                    "authorId": "2294771661",
+                    "name": "Yuxiao Chen"
+                },
+                {
+                    "authorId": "2281748031",
+                    "name": "Chen Lv"
+                },
+                {
+                    "authorId": "2265578799",
+                    "name": "J. F. Fisac"
+                }
+            ]
+        },
+        {
+            "paperId": "47bfdcfa1a400df0001f11b05cbaeaf059b636be",
+            "title": "Learning Online Belief Prediction for Efficient POMDP Planning in Autonomous Driving",
+            "abstract": "Effective decision-making in autonomous driving relies on accurate inference of other traffic agents' future behaviors. To achieve this, we propose an online belief-update-based behavior prediction model and an efficient planner for Partially Observable Markov Decision Processes (POMDPs). We develop a Transformer-based prediction model, enhanced with a recurrent neural memory model, to dynamically update latent belief state and infer the intentions of other agents. The model can also integrate the ego vehicle's intentions to reflect closed-loop interactions among agents, and it learns from both offline data and online interactions. For planning, we employ a Monte-Carlo Tree Search (MCTS) planner with macro actions, which reduces computational complexity by searching over temporally extended action steps. Inside the MCTS planner, we use predicted long-term multi-modal trajectories to approximate future updates, which eliminates iterative belief updating and improves the running efficiency. Our approach also incorporates deep Q-learning (DQN) as a search prior, which significantly improves the performance of the MCTS planner. Experimental results from simulated environments validate the effectiveness of our proposed method. The online belief update model can significantly enhance the accuracy and temporal consistency of predictions, leading to improved decision-making performance. Employing DQN as a search prior in the MCTS planner considerably boosts its performance and outperforms an imitation learning-based prior. Additionally, we show that the MCTS planning with macro actions substantially outperforms the vanilla method in terms of performance and efficiency.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "1491105028",
+                    "name": "Chen Tang"
+                },
+                {
+                    "authorId": "2281748031",
+                    "name": "Chen Lv"
+                },
+                {
+                    "authorId": "2245825283",
+                    "name": "Masayoshi Tomizuka"
+                },
+                {
+                    "authorId": "144267500",
+                    "name": "Wei Zhan"
+                }
+            ]
+        },
+        {
+            "paperId": "9a19356176e1ded3284598f34bf5358addd845cc",
+            "title": "Transformer-Based Traffic-Aware Predictive Energy Management of a Fuel Cell Electric Vehicle",
+            "abstract": "The energy economy of fuel cell electric vehicles (FCEVs) plays a crucial role in determining their practicality, making the optimization of energy management strategies (EMS) essential. Predictive EMS (PEMS) based on future vehicle speed prediction offers great potential for enhancing EMS performance. However, current PEMS prediction models rely on historical speed data or static traffic information, overlooking the impact of real-time traffic conditions. In this article, we introduce a Transformer-based PEMS (TPEMS) that incorporates real-time predicted surrounding traffic information to improve FCEV operational economy. To better predict vehicle speed by accounting for the complex interactions between the controlled vehicle and surrounding vehicles, we developed a Transformer network-based predictor, which considers the speed and relative distance of six vehicles surrounding the controlled vehicle, generating speed predictions for the next 10 s. We then employ the deep reinforcement learning (DRL) method as a downstream optimizer, creating a fully data-driven PEMS. For training the TPEMS, we developed a dataset derived from the NGSIM dataset, consisting of numerous driving profile segments that include temporal-sequential characteristics of the controlled vehicle and surrounding traffic. Furthermore, we utilize the SUMO simulator to generate a traffic information-enabled driving profile for performance evaluation. Experimental results reveal our Transformer-based predictor outperforms existing predictors, i.e., recurrent neural networks (RNN), in processing traffic information and achieving improved predictions. The TPEMS enhances the economic efficiency of FCEVs by 4.6% relative to the current state-of-the-art long short-term memory (LSTM)-based PEMS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47875689",
+                    "name": "Jingda Wu"
+                },
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "2169376985",
+                    "name": "Chengqi Lv"
+                }
+            ]
+        },
+        {
+            "paperId": "9c8e1895a572eb04e206a626077a8143db759c83",
+            "title": "Map-Adaptive Multimodal Trajectory Prediction via Intention-Aware Unimodal Trajectory Predictors",
+            "abstract": "Autonomous vehicles necessitate prediction of future motions of surrounding traffic participants for safe navigation. However, prediction is challenging due to complex road structures and the multimodality of driving behaviors. Recent approaches usually output a fixed number of predicted trajectories, thus can hardly generalize to situations with more options and match modalities in different situations. They also rely on complex loss design and time-consuming training. This work proposes a novel map-adaptive multimodal trajectory predictor that links driving modalities, driver\u2019s intentions, and a vehicle\u2019s candidate centerlines (CCLs) together, rendering the predictor map-adaptive and the multimodality explainable. The predictor is derived by training an intention-aware unimodal trajectory predictor, which consists of a CCL-based goal predictor and a goal-directed trajectory completer, and a CCL scorer for estimating the possibilities of a target vehicle (TV) choosing a CCL to follow. This decomposed approach simplifies the training process and reduces the computational resources required, thereby rendering it a faster and more cost-effective alternative. Additionally, the proposed predictor has demonstrated comparable or even superior performance to traditional multimodal predictors in specific applications. Overall, the unimodal predictor presents a promising approach for practical machine learning applications, particularly when computational resources are limited.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "12086460",
+                    "name": "Xiaoyu Mo"
+                },
+                {
+                    "authorId": "2256317177",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "34343394",
+                    "name": "Xiuxian Li"
+                },
+                {
+                    "authorId": "2124987991",
+                    "name": "Chen Lv"
+                }
+            ]
+        },
+        {
+            "paperId": "cc70a357db40801e5b92344936917ae8b250fb49",
+            "title": "Hybrid-Prediction Integrated Planning for Autonomous Driving",
+            "abstract": "Autonomous driving systems require the ability to fully understand and predict the surrounding environment to make informed decisions in complex scenarios. Recent advancements in learning-based systems have highlighted the importance of integrating prediction and planning modules. However, this integration has brought forth three major challenges: inherent trade-offs by sole prediction, consistency between prediction patterns, and social coherence in prediction and planning. To address these challenges, we introduce a hybrid-prediction integrated planning (HPP) system, which possesses three novelly designed modules. First, we introduce marginal-conditioned occupancy prediction to align joint occupancy with agent-wise perceptions. Our proposed MS-OccFormer module achieves multi-stage alignment per occupancy forecasting with consistent awareness from agent-wise motion predictions. Second, we propose a game-theoretic motion predictor, GTFormer, to model the interactive future among individual agents with their joint predictive awareness. Third, hybrid prediction patterns are concurrently integrated with Ego Planner and optimized by prediction guidance. HPP achieves state-of-the-art performance on the nuScenes dataset, demonstrating superior accuracy and consistency for end-to-end paradigms in prediction and planning. Moreover, we test the long-term open-loop and closed-loop performance of HPP on the Waymo Open Motion Dataset and CARLA benchmark, surpassing other integrated prediction and planning pipelines with enhanced accuracy and compatibility.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2256317177",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "49015886",
+                    "name": "Wenhui Huang"
+                },
+                {
+                    "authorId": "2115538329",
+                    "name": "Haohan Yang"
+                },
+                {
+                    "authorId": "12086460",
+                    "name": "Xiaoyu Mo"
+                },
+                {
+                    "authorId": "2281748031",
+                    "name": "Chen Lv"
+                }
+            ]
+        },
+        {
+            "paperId": "fe313c67b67e13ef500219f521d4ba3977ad9c3e",
+            "title": "Scalable Traffic Simulation for Autonomous Driving via Multi-Agent Goal Assignment and Autoregressive Goal-Directed Planning",
+            "abstract": "Simulation provides a fast, cost-effective, and secure environment for developing autonomous driving systems. However, mitigating the gap between simulation and reality is a challenging task as it demands a behavior simulation method that is human-like, diverse, controllable, socially consistent, and scalable. This work proposes a data-driven traffic agent simulation method to address the aforementioned challenges. Our approach centers around a graph-based scene representation and an encoding method, dividing the simulation into two stages: Multi-Agent Goal assignment (MAG) and Goal-Directed Planning (GDP). Firstly, we create joint goal sets for all agents involved in the scenario. Subsequently, we assign target centerlines (TCLs) to each agent based on their predicted goals. To account for any potential mismatch between the predicted joint goal sets and the road structure, we further align the goals of each agent with their respective assigned TCLs. These on-TCL goals serve as inputs for our interactive autoregressive Goal-Directed Planner (AR-GDP), constituting the second stage of our method that generates roll-outs for simulations. Evaluation results on the leaderboard of the Waymo Open Sim Agents Challenge (WOSAC) 2023 show the competitiveness of the proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "12086460",
+                    "name": "Xiaoyu Mo"
+                },
+                {
+                    "authorId": "2256317177",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "2199033163",
+                    "name": "Jianwu Fang"
+                },
+                {
+                    "authorId": "2189422900",
+                    "name": "Jianru Xue"
+                },
+                {
+                    "authorId": "2289612016",
+                    "name": "Chen Lv"
+                }
+            ]
+        },
+        {
+            "paperId": "3e7e5c767502ab9ad500f17c5ae78392509f3395",
+            "title": "Learning Interaction-Aware Motion Prediction Model for Decision-Making in Autonomous Driving",
+            "abstract": "Predicting the behaviors of other road users is crucial to safe and intelligent decision-making for autonomous vehicles (AVs). However, most motion prediction models ignore the influence of the AV's actions and the planning module has to treat other agents as unalterable moving obstacles. To address this problem, this paper proposes an interaction-aware motion prediction model that is able to predict other agents' future trajectories according to the ego agent's future plan, i.e., their reactions to the ego's actions. Specifically, we employ Transformers to effectively encode the driving scene and incorporate the AV's future plan in decoding the predicted trajectories. To train the model to accurately predict the reactions of other agents, we develop an online learning framework, where the ego agent explores the environment and collects other agents' reactions to itself. We validate the decision-making and learning framework in three highly interactive simulated driving scenarios. The results reveal that our decision-making method significantly outperforms the reinforcement learning methods in terms of data efficiency and performance. We also find that using the interaction-aware model can bring better performance than the non-interaction-aware model and the exploration process helps improve the success rate in testing.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "49958600",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "47875689",
+                    "name": "Jingda Wu"
+                },
+                {
+                    "authorId": "49015886",
+                    "name": "Wenhui Huang"
+                },
+                {
+                    "authorId": "2124987991",
+                    "name": "Chen Lv"
+                }
+            ]
+        },
+        {
+            "paperId": "4c667a69a3d788e4ddbaf900dd36b78d845fd287",
+            "title": "GameFormer: Game-theoretic Modeling and Learning of Transformer-based Interactive Prediction and Planning for Autonomous Driving",
+            "abstract": "Autonomous vehicles operating in complex real-world environments require accurate predictions of interactive behaviors between traffic participants. This paper tackles the interaction prediction problem by formulating it with hierarchical game theory and proposing the GameFormer model for its implementation. The model incorporates a Transformer encoder, which effectively models the relationships between scene elements, alongside a novel hierarchical Transformer decoder structure. At each decoding level, the decoder utilizes the prediction outcomes from the previous level, in addition to the shared environmental context, to iteratively refine the interaction process. Moreover, we propose a learning process that regulates an agent\u2019s behavior at the current level to respond to other agents\u2019 behaviors from the preceding level. Through comprehensive experiments on large-scale real-world driving datasets, we demonstrate the state-of-the-art accuracy of our model on the Waymo interaction prediction task. Additionally, we validate the model\u2019s capacity to jointly reason about the motion plan of the ego agent and the behaviors of multiple agents in both open-loop and closed-loop planning tests, outperforming various baseline methods. Furthermore, we evaluate the efficacy of our model on the nuPlan planning benchmark, where it achieves leading performance. Project website: https://mczhi.github.io/GameFormer/",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "49958600",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "2124987991",
+                    "name": "Chen Lv"
+                }
+            ]
+        },
+        {
+            "paperId": "6fdf3348b684376e9ddfe8ffbeaac48eeb601720",
+            "title": "Fear-Neuro-Inspired Reinforcement Learning for Safe Autonomous Driving",
+            "abstract": "Ensuring safety and achieving human-level driving performance remain challenges for autonomous vehicles, especially in safety-critical situations. As a key component of artificial intelligence, reinforcement learning is promising and has shown great potential in many complex tasks; however, its lack of safety guarantees limits its real-world applicability. Hence, further advancing reinforcement learning, especially from the safety perspective, is of great importance for autonomous driving. As revealed by cognitive neuroscientists, the amygdala of the brain can elicit defensive responses against threats or hazards, which is crucial for survival in and adaptation to risky environments. Drawing inspiration from this scientific discovery, we present a fear-neuro-inspired reinforcement learning framework to realize safe autonomous driving through modeling the amygdala functionality. This new technique facilitates an agent to learn defensive behaviors and achieve safe decision making with fewer safety violations. Through experimental tests, we show that the proposed approach enables the autonomous driving agent to attain state-of-the-art performance compared to the baseline agents and perform comparably to 30 certified human drivers, across various safety-critical scenarios. The results demonstrate the feasibility and effectiveness of our framework while also shedding light on the crucial role of simulating the amygdala function in the application of reinforcement learning to safety-critical autonomous driving domains.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31490654",
+                    "name": "Xiangkun He"
+                },
+                {
+                    "authorId": "47875689",
+                    "name": "Jingda Wu"
+                },
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "72188413",
+                    "name": "Zhongxu Hu"
+                },
+                {
+                    "authorId": "2275275830",
+                    "name": "Jun Wang"
+                },
+                {
+                    "authorId": "2247636929",
+                    "name": "Alberto Sangiovanni-Vincentelli"
+                },
+                {
+                    "authorId": "2169376985",
+                    "name": "Chengqi Lv"
+                }
+            ]
+        },
+        {
+            "paperId": "8cabc5765dde4988ae63d551afdbb57947cf3a21",
+            "title": "Occupancy Prediction-Guided Neural Planner for Autonomous Driving",
+            "abstract": "Forecasting the scalable future states of surrounding traffic participants in complex traffic scenarios is a critical capability for autonomous vehicles, as it enables safe and feasible decision-making. Recent successes in learning-based prediction and planning have introduced two primary challenges: generating accurate joint predictions for the environment and integrating prediction guidance for planning purposes. To address these challenges, we propose a two-stage integrated neural planning framework, termed OPGP, that incorporates joint prediction guidance from occupancy forecasting. The preliminary planning phase simultaneously outputs the predicted occupancy for various types of traffic actors based on imitation learning objectives, taking into account shared interactions, scene context, and actor dynamics within a unified Transformer structure. Subsequently, the transformed occupancy prediction guides optimization to further inform safe and smooth planning under Frenet coordinates. We train our planner using a large-scale, real-world driving dataset and validate it in open-loop configurations. Our proposed planner outperforms strong learning-based methods, exhibiting improved performance due to occupancy prediction guidance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49958600",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "47272000",
+                    "name": "Zhiyu Huang"
+                },
+                {
+                    "authorId": "2124987991",
+                    "name": "Chen Lv"
+                }
+            ]
+        }
+    ]
+}

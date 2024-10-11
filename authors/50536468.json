@@ -1,0 +1,589 @@
+{
+    "authorId": "50536468",
+    "papers": [
+        {
+            "paperId": "2330035c7586a0dc0b1f09e9c00106b295acf543",
+            "title": "Long-Context Language Modeling with Parallel Context Encoding",
+            "abstract": "Extending large language models (LLMs) to process longer inputs is crucial for a wide range of applications. However, the substantial computational cost of transformers and limited generalization of positional encoding restrict the size of their context window. We introduce Context Expansion with Parallel Encoding (CEPE), a framework that can be applied to any existing decoder-only LLMs to extend their context window. CEPE employs a small encoder to process long inputs chunk by chunk, enabling the frozen decoder to utilize additional contexts via cross-attention. CEPE is efficient, generalizable, and versatile: trained with 8K-token documents, it extends the context window of LLAMA-2 to 128K tokens, offering 10x the throughput with only 1/6 of the memory. CEPE yields strong performance on language modeling and in-context learning. CEPE also excels in retrieval-augmented applications, while existing long-context models degenerate with retrieved contexts. We further introduce a CEPE variant that can extend the context window of instruction-tuned models using only unlabeled data, and showcase its effectiveness on LLAMA-2-CHAT, leading to a strong instruction-following model that can leverage very long contexts on downstream tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2287806228",
+                    "name": "Howard Yen"
+                },
+                {
+                    "authorId": "4800645",
+                    "name": "Tianyu Gao"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "34efdeaf0a78d6906b4da7335afc7182df11f639",
+            "title": "QuRating: Selecting High-Quality Data for Training Language Models",
+            "abstract": "Selecting high-quality pre-training data is important for creating capable language models, but existing methods rely on simple heuristics. We introduce QuRating, a method for selecting pre-training data that can capture human intuitions about data quality. In this paper, we investigate four qualities - writing style, required expertise, facts&trivia, and educational value - and find that LLMs are able to discern these qualities, especially when making pairwise judgments of texts. We train a QuRater model to learn scalar ratings from pairwise judgments, and use it to annotate a 260B training corpus with quality ratings for each of the four criteria. In our experiments, we select 30B tokens according to the different quality ratings and train 1.3B-parameter language models on the selected data. We find that it is important to balance quality and diversity. When we sample using quality ratings as logits over documents, our models obtain lower perplexity and stronger in-context learning performance than baselines. Our best model is based on educational value and performs similarly to a model trained with uniform sampling for 50% more steps. Beyond data selection, we use the quality ratings to construct a training curriculum which improves performance without changing the training dataset. We extensively analyze the quality ratings and discuss their characteristics, biases, and wider implications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2127066887",
+                    "name": "Alexander Wettig"
+                },
+                {
+                    "authorId": "2284268826",
+                    "name": "Aatmik Gupta"
+                },
+                {
+                    "authorId": "2284225047",
+                    "name": "Saumya Malik"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "3b81eca915a041b12eab31ffa62fca5bdabfbf17",
+            "title": "Certifiably Robust RAG against Retrieval Corruption",
+            "abstract": "Retrieval-augmented generation (RAG) has been shown vulnerable to retrieval corruption attacks: an attacker can inject malicious passages into retrieval results to induce inaccurate responses. In this paper, we propose RobustRAG as the first defense framework against retrieval corruption attacks. The key insight of RobustRAG is an isolate-then-aggregate strategy: we get LLM responses from each passage in isolation and then securely aggregate these isolated responses. To instantiate RobustRAG, we design keyword-based and decoding-based algorithms for securely aggregating unstructured text responses. Notably, RobustRAG can achieve certifiable robustness: we can formally prove and certify that, for certain queries, RobustRAG can always return accurate responses, even when the attacker has full knowledge of our defense and can arbitrarily inject a small number of malicious passages. We evaluate RobustRAG on open-domain QA and long-form text generation datasets and demonstrate its effectiveness and generalizability across various tasks and datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2056790281",
+                    "name": "Chong Xiang"
+                },
+                {
+                    "authorId": "2257381743",
+                    "name": "Tong Wu"
+                },
+                {
+                    "authorId": "49164966",
+                    "name": "Zexuan Zhong"
+                },
+                {
+                    "authorId": "2303258160",
+                    "name": "David Wagner"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                },
+                {
+                    "authorId": "2254282852",
+                    "name": "Prateek Mittal"
+                }
+            ]
+        },
+        {
+            "paperId": "4b879f069d023e03bf537309a99bdaeb39916ea5",
+            "title": "Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training",
+            "abstract": "Mixture-of-experts (MoE) models facilitate efficient scaling; however, training the router network introduces the challenge of optimizing a non-differentiable, discrete objective. Recently, a fully-differentiable MoE architecture, SMEAR, was proposed (Muqeeth et al., 2023), which softly merges experts in the parameter space; nevertheless, its effectiveness was only demonstrated in downstream fine-tuning on classification tasks. In this paper, we present Lory, the first approach that scales such architectures to autoregressive language model pre-training. Lory introduces two key techniques: (1) a causal segment routing strategy that achieves high efficiency for expert merging operations while preserving the autoregressive nature of language models; (2) a similarity-based data batching method that encourages expert specialization by grouping similar documents in training instances. We pre-train a series of Lory models on 150B tokens from scratch, with up to 32 experts and 30B (1.5B active) parameters. Experimental results show significant performance gains over parameter-matched dense models on both perplexity (+13.9%) and a variety of downstream tasks (+1.5%-11.1%). Despite segment-level routing, Lory models achieve competitive performance compared to state-of-the-art MoE models with token-level routing. We further demonstrate that the trained experts in Lory capture domain-level specialization without supervision. Our work highlights the potential of fully-differentiable MoE architectures for language model pre-training and advocates future research in this area.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49164966",
+                    "name": "Zexuan Zhong"
+                },
+                {
+                    "authorId": "67284811",
+                    "name": "Mengzhou Xia"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                },
+                {
+                    "authorId": "2261973116",
+                    "name": "Mike Lewis"
+                }
+            ]
+        },
+        {
+            "paperId": "57a8333365bf99b65591e6b2176eacf8fd85d5da",
+            "title": "Language Models as Science Tutors",
+            "abstract": "NLP has recently made exciting progress toward training language models (LMs) with strong scientific problem-solving skills. However, model development has not focused on real-life use-cases of LMs for science, including applications in education that require processing long scientific documents. To address this, we introduce TutorEval and TutorChat. TutorEval is a diverse question-answering benchmark consisting of questions about long chapters from STEM textbooks, written by experts. TutorEval helps measure real-life usability of LMs as scientific assistants, and it is the first benchmark combining long contexts, free-form generation, and multi-disciplinary scientific knowledge. Moreover, we show that fine-tuning base models with existing dialogue datasets leads to poor performance on TutorEval. Therefore, we create TutorChat, a dataset of 80,000 long synthetic dialogues about textbooks. We use TutorChat to fine-tune Llemma models with 7B and 34B parameters. These LM tutors specialized in math have a 32K-token context window, and they excel at TutorEval while performing strongly on GSM8K and MATH. Our datasets build on open-source materials, and we release our models, data, and evaluations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284703052",
+                    "name": "Alexis Chevalier"
+                },
+                {
+                    "authorId": "2308103990",
+                    "name": "Jiayi Geng"
+                },
+                {
+                    "authorId": "2127066887",
+                    "name": "Alexander Wettig"
+                },
+                {
+                    "authorId": "2284724648",
+                    "name": "Howard Chen"
+                },
+                {
+                    "authorId": "2284686496",
+                    "name": "Sebastian Mizera"
+                },
+                {
+                    "authorId": "2284685543",
+                    "name": "Toni Annala"
+                },
+                {
+                    "authorId": "2284685834",
+                    "name": "Max Jameson Aragon"
+                },
+                {
+                    "authorId": "2284682678",
+                    "name": "Arturo Rodr'iguez Fanlo"
+                },
+                {
+                    "authorId": "2127069744",
+                    "name": "Simon Frieder"
+                },
+                {
+                    "authorId": "2284683132",
+                    "name": "Simon Machado"
+                },
+                {
+                    "authorId": "2309244668",
+                    "name": "Akshara Prabhakar"
+                },
+                {
+                    "authorId": "103432855",
+                    "name": "Ellie Thieu"
+                },
+                {
+                    "authorId": "2284732304",
+                    "name": "Jiachen T. Wang"
+                },
+                {
+                    "authorId": "2260308709",
+                    "name": "Zirui Wang"
+                },
+                {
+                    "authorId": "2284683822",
+                    "name": "Xindi Wu"
+                },
+                {
+                    "authorId": "67284811",
+                    "name": "Mengzhou Xia"
+                },
+                {
+                    "authorId": "2284681788",
+                    "name": "Wenhan Jia"
+                },
+                {
+                    "authorId": "2257230025",
+                    "name": "Jiatong Yu"
+                },
+                {
+                    "authorId": "2284821642",
+                    "name": "Jun-Jie Zhu"
+                },
+                {
+                    "authorId": "2153387689",
+                    "name": "Z. Ren"
+                },
+                {
+                    "authorId": "2283134097",
+                    "name": "Sanjeev Arora"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "59f9b5c6167ff40327cc1abc75aa22711872c545",
+            "title": "Improving Language Understanding from Screenshots",
+            "abstract": "An emerging family of language models (LMs), capable of processing both text and images within a single visual view, has the promise to unlock complex tasks such as chart understanding and UI navigation. We refer to these models as screenshot language models. Despite their appeal, existing screenshot LMs substantially lag behind text-only models on language understanding tasks. To close this gap, we adopt a simplified setting where the model inputs are plain-text-rendered screenshots, and we focus on improving the text ability of screenshot LMs. We propose a novel Patch-and-Text Prediction (PTP) objective, which masks and recovers both image patches of screenshots and text within screenshots. We also conduct extensive ablation studies on masking rates and patch sizes, as well as designs for improving training stability. Our pre-trained model, while solely taking visual inputs, achieves comparable performance with BERT on 6 out of 8 GLUE tasks (within 2%) and improves up to 8% over prior work. Additionally, we extend PTP to train autoregressive screenshot LMs and demonstrate its effectiveness--our models can significantly reduce perplexity by utilizing the screenshot context. Together, we hope our findings can inspire future research on developing powerful screenshot LMs and extending their reach to broader applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "4800645",
+                    "name": "Tianyu Gao"
+                },
+                {
+                    "authorId": "2260308709",
+                    "name": "Zirui Wang"
+                },
+                {
+                    "authorId": "2284985689",
+                    "name": "Adithya Bhaskar"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "6c78c1455d4824bfc9bfb553dcd1c32a9e11633d",
+            "title": "Fantastic Copyrighted Beasts and How (Not) to Generate Them",
+            "abstract": "Recent studies show that image and video generation models can be prompted to reproduce copyrighted content from their training data, raising serious legal concerns around copyright infringement. Copyrighted characters, in particular, pose a difficult challenge for image generation services, with at least one lawsuit already awarding damages based on the generation of these characters. Yet, little research has empirically examined this issue. We conduct a systematic evaluation to fill this gap. First, we build CopyCat, an evaluation suite consisting of diverse copyrighted characters and a novel evaluation pipeline. Our evaluation considers both the detection of similarity to copyrighted characters and generated image's consistency with user input. Our evaluation systematically shows that both image and video generation models can still generate characters even if characters' names are not explicitly mentioned in the prompt, sometimes with only two generic keywords (e.g., prompting with\"videogame, plumber\"consistently generates Nintendo's Mario character). We then introduce techniques to semi-automatically identify such keywords or descriptions that trigger character generation. Using our evaluation suite, we study runtime mitigation strategies, including both existing methods and new strategies we propose. Our findings reveal that commonly employed strategies, such as prompt rewriting in the DALL-E system, are not sufficient as standalone guardrails. These strategies must be coupled with other approaches, like negative prompting, to effectively reduce the unintended generation of copyrighted characters. Our work provides empirical grounding to the discussion of copyright mitigation strategies and offers actionable insights for model deployers actively implementing them.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2294507804",
+                    "name": "Luxi He"
+                },
+                {
+                    "authorId": "2283305597",
+                    "name": "Yangsibo Huang"
+                },
+                {
+                    "authorId": "2304129935",
+                    "name": "Weijia Shi"
+                },
+                {
+                    "authorId": "2144071564",
+                    "name": "Tinghao Xie"
+                },
+                {
+                    "authorId": "2308072184",
+                    "name": "Haotian Liu"
+                },
+                {
+                    "authorId": "2307621989",
+                    "name": "Yue Wang"
+                },
+                {
+                    "authorId": "2137813791",
+                    "name": "Luke S. Zettlemoyer"
+                },
+                {
+                    "authorId": "2309481623",
+                    "name": "Chiyuan Zhang"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                },
+                {
+                    "authorId": "2254262712",
+                    "name": "Peter Henderson"
+                }
+            ]
+        },
+        {
+            "paperId": "6f98525dc695257bdcb9a491e4d77f4d12bb5144",
+            "title": "Foundational Challenges in Assuring Alignment and Safety of Large Language Models",
+            "abstract": "This work identifies 18 foundational challenges in assuring the alignment and safety of large language models (LLMs). These challenges are organized into three different categories: scientific understanding of LLMs, development and deployment methods, and sociotechnical challenges. Based on the identified challenges, we pose $200+$ concrete research questions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066185365",
+                    "name": "Usman Anwar"
+                },
+                {
+                    "authorId": "2407368",
+                    "name": "Abulhair Saparov"
+                },
+                {
+                    "authorId": "2099715241",
+                    "name": "Javier Rando"
+                },
+                {
+                    "authorId": "2175557610",
+                    "name": "Daniel Paleka"
+                },
+                {
+                    "authorId": "2296718595",
+                    "name": "Miles Turpin"
+                },
+                {
+                    "authorId": "2266467463",
+                    "name": "Peter Hase"
+                },
+                {
+                    "authorId": "35573359",
+                    "name": "Ekdeep Singh Lubana"
+                },
+                {
+                    "authorId": "2296719206",
+                    "name": "Erik Jenner"
+                },
+                {
+                    "authorId": "2265578954",
+                    "name": "Stephen Casper"
+                },
+                {
+                    "authorId": "2286895772",
+                    "name": "Oliver Sourbut"
+                },
+                {
+                    "authorId": "2296718606",
+                    "name": "Benjamin L. Edelman"
+                },
+                {
+                    "authorId": "2297035421",
+                    "name": "Zhaowei Zhang"
+                },
+                {
+                    "authorId": "2296717563",
+                    "name": "Mario Gunther"
+                },
+                {
+                    "authorId": "2264737393",
+                    "name": "Anton Korinek"
+                },
+                {
+                    "authorId": "1398777358",
+                    "name": "J. Hern\u00e1ndez-Orallo"
+                },
+                {
+                    "authorId": "2258548968",
+                    "name": "Lewis Hammond"
+                },
+                {
+                    "authorId": "2190821333",
+                    "name": "Eric J. Bigelow"
+                },
+                {
+                    "authorId": "2296717995",
+                    "name": "Alexander Pan"
+                },
+                {
+                    "authorId": "2106415649",
+                    "name": "L. Langosco"
+                },
+                {
+                    "authorId": "2261082206",
+                    "name": "Tomasz Korbak"
+                },
+                {
+                    "authorId": "2296805037",
+                    "name": "Heidi Zhang"
+                },
+                {
+                    "authorId": "2305484278",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "1632943165",
+                    "name": "Se'an 'O h'Eigeartaigh"
+                },
+                {
+                    "authorId": "2257207353",
+                    "name": "Gabriel Recchia"
+                },
+                {
+                    "authorId": "2296716925",
+                    "name": "Giulio Corsi"
+                },
+                {
+                    "authorId": "2258630999",
+                    "name": "Alan Chan"
+                },
+                {
+                    "authorId": "1486494220",
+                    "name": "Markus Anderljung"
+                },
+                {
+                    "authorId": "2296716526",
+                    "name": "Lilian Edwards"
+                },
+                {
+                    "authorId": "2211024206",
+                    "name": "Y. Bengio"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                },
+                {
+                    "authorId": "7641268",
+                    "name": "Samuel Albanie"
+                },
+                {
+                    "authorId": "3422058",
+                    "name": "Tegan Maharaj"
+                },
+                {
+                    "authorId": "2296717549",
+                    "name": "Jakob N. Foerster"
+                },
+                {
+                    "authorId": "2444919",
+                    "name": "Florian Tram\u00e8r"
+                },
+                {
+                    "authorId": "2263869572",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "51880633",
+                    "name": "Atoosa Kasirzadeh"
+                },
+                {
+                    "authorId": "2296751113",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2286169334",
+                    "name": "David Krueger"
+                }
+            ]
+        },
+        {
+            "paperId": "832ead63abe84eea696f239e1e0f87b3cd45dc84",
+            "title": "AI Risk Management Should Incorporate Both Safety and Security",
+            "abstract": "The exposure of security vulnerabilities in safety-aligned language models, e.g., susceptibility to adversarial attacks, has shed light on the intricate interplay between AI safety and AI security. Although the two disciplines now come together under the overarching goal of AI risk management, they have historically evolved separately, giving rise to differing perspectives. Therefore, in this paper, we advocate that stakeholders in AI risk management should be aware of the nuances, synergies, and interplay between safety and security, and unambiguously take into account the perspectives of both disciplines in order to devise mostly effective and holistic risk mitigation approaches. Unfortunately, this vision is often obfuscated, as the definitions of the basic concepts of\"safety\"and\"security\"themselves are often inconsistent and lack consensus across communities. With AI risk management being increasingly cross-disciplinary, this issue is particularly salient. In light of this conceptual challenge, we introduce a unified reference framework to clarify the differences and interplay between AI safety and AI security, aiming to facilitate a shared understanding and effective collaboration across communities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2304291821",
+                    "name": "Xiangyu Qi"
+                },
+                {
+                    "authorId": "2283305597",
+                    "name": "Yangsibo Huang"
+                },
+                {
+                    "authorId": "2297444637",
+                    "name": "Yi Zeng"
+                },
+                {
+                    "authorId": "2175939276",
+                    "name": "Edoardo Debenedetti"
+                },
+                {
+                    "authorId": "2284863781",
+                    "name": "Jonas Geiping"
+                },
+                {
+                    "authorId": "2294507804",
+                    "name": "Luxi He"
+                },
+                {
+                    "authorId": "2242535459",
+                    "name": "Kaixuan Huang"
+                },
+                {
+                    "authorId": "123607249",
+                    "name": "Udari Madhushani"
+                },
+                {
+                    "authorId": "3482535",
+                    "name": "Vikash Sehwag"
+                },
+                {
+                    "authorId": "2304129935",
+                    "name": "Weijia Shi"
+                },
+                {
+                    "authorId": "2283309803",
+                    "name": "Boyi Wei"
+                },
+                {
+                    "authorId": "2144071564",
+                    "name": "Tinghao Xie"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                },
+                {
+                    "authorId": "2294778657",
+                    "name": "Pin-Yu Chen"
+                },
+                {
+                    "authorId": "2303969333",
+                    "name": "Jeffrey Ding"
+                },
+                {
+                    "authorId": "2254249161",
+                    "name": "Ruoxi Jia"
+                },
+                {
+                    "authorId": "2304169722",
+                    "name": "Jiaqi Ma"
+                },
+                {
+                    "authorId": "2285608332",
+                    "name": "Arvind Narayanan"
+                },
+                {
+                    "authorId": "2282875732",
+                    "name": "Weijie J. Su"
+                },
+                {
+                    "authorId": "2237715253",
+                    "name": "Mengdi Wang"
+                },
+                {
+                    "authorId": "2256992327",
+                    "name": "Chaowei Xiao"
+                },
+                {
+                    "authorId": "2304013785",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "2293597685",
+                    "name": "Dawn Song"
+                },
+                {
+                    "authorId": "2254262712",
+                    "name": "Peter Henderson"
+                },
+                {
+                    "authorId": "2254282852",
+                    "name": "Prateek Mittal"
+                }
+            ]
+        },
+        {
+            "paperId": "95898b1f82cf7ad7d96fcc85b4def7f086325af5",
+            "title": "LESS: Selecting Influential Data for Targeted Instruction Tuning",
+            "abstract": "Instruction tuning has unlocked powerful capabilities in large language models (LLMs), effectively using combined datasets to develop generalpurpose chatbots. However, real-world applications often require a specialized suite of skills (e.g., reasoning). The challenge lies in identifying the most relevant data from these extensive datasets to effectively develop specific capabilities, a setting we frame as targeted instruction tuning. We propose LESS, an optimizer-aware and practically efficient algorithm to effectively estimate data influences and perform Low-rank gradiEnt Similarity Search for instruction data selection. Crucially, LESS adapts existing influence formulations to work with the Adam optimizer and variable-length instruction data. LESS first constructs a highly reusable and transferable gradient datastore with low-dimensional gradient features and then selects examples based on their similarity to few-shot examples embodying a specific capability. Experiments show that training on a LESS-selected 5% of the data can often outperform training on the full dataset across diverse downstream tasks. Furthermore, the selected data is highly transferable: smaller models can be leveraged to select useful data for larger models and models from different families. Our qualitative analysis shows that our method goes beyond surface form cues to identify data that exemplifies the necessary reasoning skills for the intended downstream application.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "67284811",
+                    "name": "Mengzhou Xia"
+                },
+                {
+                    "authorId": "49288855",
+                    "name": "Sadhika Malladi"
+                },
+                {
+                    "authorId": "40895369",
+                    "name": "Suchin Gururangan"
+                },
+                {
+                    "authorId": "2283134097",
+                    "name": "Sanjeev Arora"
+                },
+                {
+                    "authorId": "50536468",
+                    "name": "Danqi Chen"
+                }
+            ]
+        }
+    ]
+}

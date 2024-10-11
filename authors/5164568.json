@@ -1,0 +1,287 @@
+{
+    "authorId": "5164568",
+    "papers": [
+        {
+            "paperId": "06a69a5ffbc9b28d268bc50c1ccc7a1ed6c22dfb",
+            "title": "Improved Bayes Risk Can Yield Reduced Social Welfare Under Competition",
+            "abstract": "As the scale of machine learning models increases, trends such as scaling laws anticipate consistent downstream improvements in predictive accuracy. However, these trends take the perspective of a single model-provider in isolation, while in reality providers often compete with each other for users. In this work, we demonstrate that competition can fundamentally alter the behavior of these scaling trends, even causing overall predictive accuracy across users to be non-monotonic or decreasing with scale. We define a model of competition for classification tasks, and use data representations as a lens for studying the impact of increases in scale. We find many settings where improving data representation quality (as measured by Bayes risk) decreases the overall predictive accuracy across users (i.e., social welfare) for a marketplace of competing model-providers. Our examples range from closed-form formulas in simple settings to simulations with pretrained representations on CIFAR-10. At a conceptual level, our work suggests that favorable scaling trends for individual model-providers need not translate to downstream improvements in social welfare in marketplaces with multiple model providers.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "145096211",
+                    "name": "Meena Jagadeesan"
+                },
+                {
+                    "authorId": "123333909",
+                    "name": "Michael I. Jordan"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                },
+                {
+                    "authorId": "3033269",
+                    "name": "Nika Haghtalab"
+                }
+            ]
+        },
+        {
+            "paperId": "0aaee2b99ec6f659657658416e88ad7f4161ac7f",
+            "title": "Mass-Producing Failures of Multimodal Systems with Language Models",
+            "abstract": "Deployed multimodal systems can fail in ways that evaluators did not anticipate. In order to find these failures before deployment, we introduce MultiMon, a system that automatically identifies systematic failures -- generalizable, natural-language descriptions of patterns of model failures. To uncover systematic failures, MultiMon scrapes a corpus for examples of erroneous agreement: inputs that produce the same output, but should not. It then prompts a language model (e.g., GPT-4) to find systematic patterns of failure and describe them in natural language. We use MultiMon to find 14 systematic failures (e.g.,\"ignores quantifiers\") of the CLIP text-encoder, each comprising hundreds of distinct inputs (e.g.,\"a shelf with a few/many books\"). Because CLIP is the backbone for most state-of-the-art multimodal systems, these inputs produce failures in Midjourney 5.1, DALL-E, VideoFusion, and others. MultiMon can also steer towards failures relevant to specific use cases, such as self-driving cars. We see MultiMon as a step towards evaluation that autonomously explores the long tail of potential system failures. Code for MULTIMON is available at https://github.com/tsb0601/MultiMon.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143202419",
+                    "name": "Shengbang Tong"
+                },
+                {
+                    "authorId": "145790135",
+                    "name": "Erik Jones"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "1c0c13edd4442ceb7eac70bbcaebaf84512f9a3c",
+            "title": "Overthinking the Truth: Understanding how Language Models Process False Demonstrations",
+            "abstract": "Modern language models can imitate complex patterns through few-shot learning, enabling them to complete challenging tasks without fine-tuning. However, imitation can also lead models to reproduce inaccuracies or harmful content if present in the context. We study harmful imitation through the lens of a model's internal representations, and identify two related phenomena:\"overthinking\"and\"false induction heads\". The first phenomenon, overthinking, appears when we decode predictions from intermediate layers, given correct vs. incorrect few-shot demonstrations. At early layers, both demonstrations induce similar model behavior, but the behavior diverges sharply at some\"critical layer\", after which the accuracy given incorrect demonstrations progressively decreases. The second phenomenon, false induction heads, are a possible mechanistic cause of overthinking: these are heads in late layers that attend to and copy false information from previous demonstrations, and whose ablation reduces overthinking. Beyond scientific understanding, our results suggest that studying intermediate model computations could be a promising avenue for understanding and guarding against harmful model behaviors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1382232681",
+                    "name": "Danny Halawi"
+                },
+                {
+                    "authorId": "1509417780",
+                    "name": "Jean-Stanislas Denain"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "2f94f03fdac62d05f0f416b7b3855d1f597afee9",
+            "title": "Automatically Auditing Large Language Models via Discrete Optimization",
+            "abstract": "Auditing large language models for unexpected behaviors is critical to preempt catastrophic deployments, yet remains challenging. In this work, we cast auditing as an optimization problem, where we automatically search for input-output pairs that match a desired target behavior. For example, we might aim to find a non-toxic input that starts with\"Barack Obama\"that a model maps to a toxic output. This optimization problem is difficult to solve as the set of feasible points is sparse, the space is discrete, and the language models we audit are non-linear and high-dimensional. To combat these challenges, we introduce a discrete optimization algorithm, ARCA, that jointly and efficiently optimizes over inputs and outputs. Our approach automatically uncovers derogatory completions about celebrities (e.g.\"Barack Obama is a legalized unborn\"->\"child murderer\"), produces French inputs that complete to English outputs, and finds inputs that generate a specific name. Our work offers a promising new tool to uncover models' failure-modes before deployment.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145790135",
+                    "name": "Erik Jones"
+                },
+                {
+                    "authorId": "2745001",
+                    "name": "A. Dragan"
+                },
+                {
+                    "authorId": "2655157",
+                    "name": "Aditi Raghunathan"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "4c4b1bd9f36ccc545cf051efa9d03db2ed045770",
+            "title": "Reward Learning as Doubly Nonparametric Bandits: Optimal Design and Scaling Laws",
+            "abstract": "Specifying reward functions for complex tasks like object manipulation or driving is challenging to do by hand. Reward learning seeks to address this by learning a reward model using human feedback on selected query policies. This shifts the burden of reward specification to the optimal design of the queries. We propose a theoretical framework for studying reward learning and the associated optimal experiment design problem. Our framework models rewards and policies as nonparametric functions belonging to subsets of Reproducing Kernel Hilbert Spaces (RKHSs). The learner receives (noisy) oracle access to a true reward and must output a policy that performs well under the true reward. For this setting, we first derive non-asymptotic excess risk bounds for a simple plug-in estimator based on ridge regression. We then solve the query design problem by optimizing these risk bounds with respect to the choice of query set and obtain a finite sample statistical rate, which depends primarily on the eigenvalue spectrum of a certain linear operator on the RKHSs. Despite the generality of these results, our bounds are stronger than previous bounds developed for more specialized problems. We specifically show that the well-studied problem of Gaussian process (GP) bandit optimization is a special case of our framework, and that our bounds either improve or are competitive with known regret guarantees for the Mat\\'ern kernel.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "144383716",
+                    "name": "K. Bhatia"
+                },
+                {
+                    "authorId": "4328852",
+                    "name": "Wenshuo Guo"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "69f2ba0f33a54e01de32c616b64e85d5d7194067",
+            "title": "Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations",
+            "abstract": "Large language models (LLMs) are trained to imitate humans to explain human decisions. However, do LLMs explain themselves? Can they help humans build mental models of how LLMs process different inputs? To answer these questions, we propose to evaluate $\\textbf{counterfactual simulatability}$ of natural language explanations: whether an explanation can enable humans to precisely infer the model's outputs on diverse counterfactuals of the explained input. For example, if a model answers\"yes\"to the input question\"Can eagles fly?\"with the explanation\"all birds can fly\", then humans would infer from the explanation that it would also answer\"yes\"to the counterfactual input\"Can penguins fly?\". If the explanation is precise, then the model's answer should match humans' expectations. We implemented two metrics based on counterfactual simulatability: precision and generality. We generated diverse counterfactuals automatically using LLMs. We then used these metrics to evaluate state-of-the-art LLMs (e.g., GPT-4) on two tasks: multi-hop factual reasoning and reward modeling. We found that LLM's explanations have low precision and that precision does not correlate with plausibility. Therefore, naively optimizing human approvals (e.g., RLHF) may not be a sufficient solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2218040104",
+                    "name": "Narutatsu Ri"
+                },
+                {
+                    "authorId": "145756130",
+                    "name": "Chen Zhao"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "6aceefb7b260a4797986a5f42bfd474904af3124",
+            "title": "Goal Driven Discovery of Distributional Differences via Language Descriptions",
+            "abstract": "Mining large corpora can generate useful discoveries but is time-consuming for humans. We formulate a new task, D5, that automatically discovers differences between two large corpora in a goal-driven way. The task input is a problem comprising a research goal\"$\\textit{comparing the side effects of drug A and drug B}$\"and a corpus pair (two large collections of patients' self-reported reactions after taking each drug). The output is a language description (discovery) of how these corpora differ (patients taking drug A\"$\\textit{mention feelings of paranoia}$\"more often). We build a D5 system, and to quantitatively measure its performance, we 1) contribute a meta-dataset, OpenD5, aggregating 675 open-ended problems ranging across business, social sciences, humanities, machine learning, and health, and 2) propose a set of unified evaluation metrics: validity, relevance, novelty, and significance. With the dataset and the unified metrics, we confirm that language models can use the goals to propose more relevant, novel, and significant candidate discoveries. Finally, our system produces discoveries previously unknown to the authors on a wide range of applications in OpenD5, including temporal and demographic differences in discussion topics, political stances and stereotypes in speech, insights in commercial reviews, and error patterns in NLP models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2110001677",
+                    "name": "Peter Zhang"
+                },
+                {
+                    "authorId": "2210287616",
+                    "name": "Steve Li"
+                },
+                {
+                    "authorId": "5233596",
+                    "name": "Jinwoo Ahn"
+                },
+                {
+                    "authorId": "38666915",
+                    "name": "D. Klein"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "762ca2711eb167f19b79e39c175708ca15e1f5d7",
+            "title": "Eliciting Latent Predictions from Transformers with the Tuned Lens",
+            "abstract": "We analyze transformers from the perspective of iterative inference, seeking to understand how model predictions are refined layer by layer. To do so, we train an affine probe for each block in a frozen pretrained model, making it possible to decode every hidden state into a distribution over the vocabulary. Our method, the \\emph{tuned lens}, is a refinement of the earlier ``logit lens'' technique, which yielded useful insights but is often brittle. We test our method on various autoregressive language models with up to 20B parameters, showing it to be more predictive, reliable and unbiased than the logit lens. With causal experiments, we show the tuned lens uses similar features to the model itself. We also find the trajectory of latent predictions can be used to detect malicious inputs with high accuracy. All code needed to reproduce our results can be found at https://github.com/AlignmentResearch/tuned-lens.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2189421639",
+                    "name": "Nora Belrose"
+                },
+                {
+                    "authorId": "2282972810",
+                    "name": "Zach Furman"
+                },
+                {
+                    "authorId": "2211596218",
+                    "name": "Logan Smith"
+                },
+                {
+                    "authorId": "1382232681",
+                    "name": "Danny Halawi"
+                },
+                {
+                    "authorId": "2174872053",
+                    "name": "Igor V. Ostrovsky"
+                },
+                {
+                    "authorId": "2199837941",
+                    "name": "Lev McKinney"
+                },
+                {
+                    "authorId": "103476203",
+                    "name": "Stella Biderman"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "929305892d4ddae575a0fc23227a8139f7681632",
+            "title": "Jailbroken: How Does LLM Safety Training Fail?",
+            "abstract": "Large language models trained for safety and harmlessness remain susceptible to adversarial misuse, as evidenced by the prevalence of\"jailbreak\"attacks on early releases of ChatGPT that elicit undesired behavior. Going beyond recognition of the issue, we investigate why such attacks succeed and how they can be created. We hypothesize two failure modes of safety training: competing objectives and mismatched generalization. Competing objectives arise when a model's capabilities and safety goals conflict, while mismatched generalization occurs when safety training fails to generalize to a domain for which capabilities exist. We use these failure modes to guide jailbreak design and then evaluate state-of-the-art models, including OpenAI's GPT-4 and Anthropic's Claude v1.3, against both existing and newly designed attacks. We find that vulnerabilities persist despite the extensive red-teaming and safety-training efforts behind these models. Notably, new attacks utilizing our failure modes succeed on every prompt in a collection of unsafe requests from the models' red-teaming evaluation sets and outperform existing ad hoc jailbreaks. Our analysis emphasizes the need for safety-capability parity -- that safety mechanisms should be as sophisticated as the underlying model -- and argues against the idea that scaling alone can resolve these safety failure modes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143797846",
+                    "name": "Alexander Wei"
+                },
+                {
+                    "authorId": "3033269",
+                    "name": "Nika Haghtalab"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "b6fa514a9e0120dd807215e03c055a861614db93",
+            "title": "Are Neurons Actually Collapsed? On the Fine-Grained Structure in Neural Representations",
+            "abstract": "Recent work has observed an intriguing ''Neural Collapse'' phenomenon in well-trained neural networks, where the last-layer representations of training samples with the same label collapse into each other. This appears to suggest that the last-layer representations are completely determined by the labels, and do not depend on the intrinsic structure of input distribution. We provide evidence that this is not a complete description, and that the apparent collapse hides important fine-grained structure in the representations. Specifically, even when representations apparently collapse, the small amount of remaining variation can still faithfully and accurately captures the intrinsic structure of input distribution. As an example, if we train on CIFAR-10 using only 5 coarse-grained labels (by combining two classes into one super-class) until convergence, we can reconstruct the original 10-class labels from the learned representations via unsupervised clustering. The reconstructed labels achieve $93\\%$ accuracy on the CIFAR-10 test set, nearly matching the normal CIFAR-10 accuracy for the same architecture. We also provide an initial theoretical result showing the fine-grained representation structure in a simplified synthetic setting. Our results show concretely how the structure of input data can play a significant role in determining the fine-grained structure of neural representations, going beyond what Neural Collapse predicts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144182425",
+                    "name": "Yongyi Yang"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                },
+                {
+                    "authorId": "1471043558",
+                    "name": "Wei Hu"
+                }
+            ]
+        }
+    ]
+}

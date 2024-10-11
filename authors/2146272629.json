@@ -1,0 +1,245 @@
+{
+    "authorId": "2146272629",
+    "papers": [
+        {
+            "paperId": "05883daa79bfc07c0ffbe069314e223050310f51",
+            "title": "LinkGPT: Teaching Large Language Models To Predict Missing Links",
+            "abstract": "Large Language Models (LLMs) have shown promising results on various language and vision tasks. Recently, there has been growing interest in applying LLMs to graph-based tasks, particularly on Text-Attributed Graphs (TAGs). However, most studies have focused on node classification, while the use of LLMs for link prediction (LP) remains understudied. In this work, we propose a new task on LLMs, where the objective is to leverage LLMs to predict missing links between nodes in a graph. This task evaluates an LLM's ability to reason over structured data and infer new facts based on learned patterns. This new task poses two key challenges: (1) How to effectively integrate pairwise structural information into the LLMs, which is known to be crucial for LP performance, and (2) how to solve the computational bottleneck when teaching LLMs to perform LP. To address these challenges, we propose LinkGPT, the first end-to-end trained LLM for LP tasks. To effectively enhance the LLM's ability to understand the underlying structure, we design a two-stage instruction tuning approach where the first stage fine-tunes the pairwise encoder, projector, and node projector, and the second stage further fine-tunes the LLMs to predict links. To address the efficiency challenges at inference time, we introduce a retrieval-reranking scheme. Experiments show that LinkGPT can achieve state-of-the-art performance on real-world graphs as well as superior generalization in zero-shot and few-shot learning, surpassing existing benchmarks. At inference time, it can achieve $10\\times$ speedup while maintaining high LP accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2305970801",
+                    "name": "Zhongmou He"
+                },
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "2282529091",
+                    "name": "Shengyi Qian"
+                },
+                {
+                    "authorId": "2243382885",
+                    "name": "Joyce Chai"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "1081b62f3eea92c87eb024ce80cb9e5d16113057",
+            "title": "TouchUp-G: Improving Feature Representation through Graph-Centric Finetuning",
+            "abstract": "How can we enhance the node features acquired from Pretrained Models (PMs) to better suit downstream graph learning tasks? Graph Neural Networks (GNNs) have become the state-of-the-art approach for many high-impact, real-world graph applications. For feature-rich graphs, a prevalent practice involves utilizing a PM directly to generate features, without incorporating any domain adaptation techniques. Nevertheless, this practice is suboptimal because the node features extracted from PM are graph-agnostic and prevent GNNs from fully utilizing the potential correlations between the graph structure and node features, leading to a decline in GNNs performance. In this work, we seek to improve the node features obtained from a PM for downstream graph tasks and introduce TOUCHUP-G, which has several advantages. It is (a) General: applicable to any downstream graph task, including link prediction which is often employed in recommender systems; (b) Multi-modal: able to improve raw features of any modality (e.g. images, texts, audio); (c) Principled: it is closely related to a novel metric, feature homophily, which we propose to quantify the potential correlations between the graph structure and node features and we show that TOUCHUP-G can effectively shrink the discrepancy between the graph structure and node features; (d) Effective: achieving state-of-the-art results on four real-world datasets spanning different tasks and modalities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "40043851",
+                    "name": "V. Ioannidis"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                }
+            ]
+        },
+        {
+            "paperId": "6ce4684a197465c4a77390bf2bd2486d51f3199e",
+            "title": "SpotTarget: Rethinking the Effect of Target Edges for Link Prediction in Graph Neural Networks",
+            "abstract": "Graph Neural Networks (GNNs) have demonstrated promising outcomes across various tasks, including node classification and link prediction. Despite their remarkable success in various high-impact applications, we have identified three common pitfalls in message passing for link prediction, especially within industrial settings. Particularly, in prevalent GNN frameworks (e.g., DGL and PyTorch-Geometric), the target edges (i.e., the edges being predicted) consistently exist as message passing edges in the graph during training. Consequently, this results in overfitting and distribution shift , both of which adversely impact the generalizability to test the target edges. Additionally, during test time, the failure to exclude the test target edges leads to implicit test leakage caused by neighborhood aggregation. In this paper, we analyze these three pitfalls and investigate the impact of including or excluding target edges on the performance of nodes with varying degrees during training and test phases. Our theoretical and empirical analysis demonstrates that low-degree nodes are more susceptible to these pitfalls. These pitfalls can have detrimental consequences when GNNs are implemented in production systems. To systematically address these pitfalls, we propose SpotTarget, an effective and efficient GNN training framework. During training, SpotTarget leverages our insight regarding low-degree nodes and excludes train target edges connected to at least one low-degree node. During test time, it emulates real-world scenarios of GNN usage in production and excludes all test target edges. Our experiments conducted on diverse real-world datasets, demonstrate that SpotTarget significantly enhances GNNs, achieving up to a 15 \u00d7 increase in accuracy in sparse graphs. Furthermore, SpotTarget consistently and dramatically improves the performance for low-degree nodes in dense graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "2266789873",
+                    "name": "Yuhang Zhou"
+                },
+                {
+                    "authorId": "40043851",
+                    "name": "V. Ioannidis"
+                },
+                {
+                    "authorId": "2282529091",
+                    "name": "Shengyi Qian"
+                },
+                {
+                    "authorId": "2218202090",
+                    "name": "Wei Ai"
+                },
+                {
+                    "authorId": "2282638703",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "db7abc185768b06de77ba174f4f108c5030fa433",
+            "title": "Pitfalls in Link Prediction with Graph Neural Networks: Understanding the Impact of Target-link Inclusion & Better Practices",
+            "abstract": "While Graph Neural Networks (GNNs) are remarkably successful in a variety of high-impact applications, we demonstrate that, in link prediction, the common practices of including the edges being predicted in the graph at training and/or test have outsized impact on the performance of low-degree nodes. We theoretically and empirically investigate how these practices impact node-level performance across different degrees. Specifically, we explore three issues that arise: (I1) overfitting; (I2) distribution shift; and (I3) implicit test leakage. The former two issues lead to poor generalizability to the test data, while the latter leads to overestimation of the model's performance and directly impacts the deployment of GNNs. To address these issues in a systematic way, we introduce an effective and efficient GNN training framework, SpotTarget, which leverages our insight on low-degree nodes: (1) at training time, it excludes a (training) edge to be predicted if it is incident to at least one low-degree node; and (2) at test time, it excludes all test edges to be predicted (thus, mimicking real scenarios of using GNNs, where the test data is not included in the graph). SpotTarget helps researchers and practitioners adhere to best practices for learning from graph data, which are frequently overlooked even by the most widely-used frameworks. Our experiments on various real-world datasets show that SpotTarget makes GNNs up to 15\u00d7 more accurate in sparse graphs, and significantly improves their performance for low-degree nodes in dense graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "2145926835",
+                    "name": "Yuhang Zhou"
+                },
+                {
+                    "authorId": "40043851",
+                    "name": "V. Ioannidis"
+                },
+                {
+                    "authorId": "144416978",
+                    "name": "Sheng Qian"
+                },
+                {
+                    "authorId": "2218202090",
+                    "name": "Wei Ai"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "30fb0044cd58cbf9c4a9e6ca666589547a6c70d8",
+            "title": "CAPER: Coarsen, Align, Project, Refine - A General Multilevel Framework for Network Alignment",
+            "abstract": "Network alignment, or the task of finding corresponding nodes in different networks, is an important problem formulation in many application domains. We propose CAPER, a multilevel alignment framework that Coarsens the input graphs, Aligns the coarsened graphs, Projects the alignment solution to finer levels and Refines the alignment solution. We show that CAPER can improve upon many different existing network alignment algorithms by enforcing alignment consistency across multiple graph resolutions: nodes matched at finer levels should also be matched at coarser levels. CAPER also accelerates the use of slower network alignment methods, at the modest cost of linear-time coarsening and refinement steps, by allowing them to be run on smaller coarsened versions of the input graphs. Experiments show that CAPER can improve upon diverse network alignment methods by an average of 33% in accuracy and/or an order of magnitude faster in runtime.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                },
+                {
+                    "authorId": "35505461",
+                    "name": "Mark Heimann"
+                }
+            ]
+        },
+        {
+            "paperId": "95c0ff0c262878486d7a1237b4e32825526341f9",
+            "title": "Touch and Go: Learning from Human-Collected Vision and Touch",
+            "abstract": "The ability to associate touch with sight is essential for tasks that require physically interacting with objects in the world. We propose a dataset with paired visual and tactile data called Touch and Go, in which human data collectors probe objects in natural environments using tactile sensors, while simultaneously recording egocentric video. In contrast to previous efforts, which have largely been confined to lab settings or simulated environments, our dataset spans a large number of\"in the wild\"objects and scenes. To demonstrate our dataset's effectiveness, we successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) tactile-driven image stylization, i.e., making the visual appearance of an object more consistent with a given tactile signal, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2889431",
+                    "name": "Fengyu Yang"
+                },
+                {
+                    "authorId": "2121455359",
+                    "name": "Chenyang Ma"
+                },
+                {
+                    "authorId": "2188554616",
+                    "name": "Jiacheng Zhang"
+                },
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "3333169",
+                    "name": "Wenzhen Yuan"
+                },
+                {
+                    "authorId": "144956994",
+                    "name": "Andrew Owens"
+                }
+            ]
+        },
+        {
+            "paperId": "e556f0f37c64f1abfe6d8724fbcf69073fa71c6a",
+            "title": "Node Proximity Is All You Need: Unified Structural and Positional Node and Graph Embedding",
+            "abstract": "While most network embedding techniques model the relative positions of nodes in a network, recently there has been significant interest in structural embeddings that model node role equivalences, irrespective of their distances to any specific nodes. We present PhUSION, a proximity-based unified framework for computing structural and positional node embeddings, which leverages well-established methods for calculating node proximity scores. Clarifying a point of contention in the literature, we show which step of PhUSION produces the different kinds of embeddings and what steps can be used by both. Moreover, by aggregating the PhUSION node embeddings, we obtain graph-level features that model information lost by previous graph feature learning and kernel methods. In a comprehensive empirical study with over 10 datasets, 4 tasks, and 35 methods, we systematically reveal successful design choices for node and graph-level machine learning with embeddings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "2124827621",
+                    "name": "Xingyu Lu"
+                },
+                {
+                    "authorId": "35505461",
+                    "name": "Mark Heimann"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "09308b9be4052d0f51cda2372edeb973d6051ae4",
+            "title": "NegatER: Unsupervised Discovery of Negatives in Commonsense Knowledge Bases",
+            "abstract": "Codifying commonsense knowledge in machines is a longstanding goal of artificial intelligence. Recently, much progress toward this goal has been made with automatic knowledge base (KB) construction techniques. However, such techniques focus primarily on the acquisition of positive (true) KB statements, even though negative (false) statements are often also important for discriminative reasoning over commonsense KBs. As a first step toward the latter, this paper proposes NegatER, a framework that ranks potential negatives in commonsense KBs using a contextual language model (LM). Importantly, as most KBs do not contain negatives, NegatER relies only on the positive knowledge in the LM and does not require ground-truth negative examples. Experiments demonstrate that, compared to multiple contrastive data augmentation approaches, NegatER yields negatives that are more grammatical, coherent, and informative\u2014leading to statistically significant accuracy improvements in a challenging KB completion task and confirming that the positive knowledge in LMs can be \u201cre-purposed\u201d to generate negative knowledge.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "8495818",
+                    "name": "Tara Safavi"
+                },
+                {
+                    "authorId": "2146272629",
+                    "name": "Jing Zhu"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        }
+    ]
+}

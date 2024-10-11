@@ -1,0 +1,444 @@
+{
+    "authorId": "4565995",
+    "papers": [
+        {
+            "paperId": "268e7df89189e13a4bf0dc4ebbf74cf057dd2082",
+            "title": "Margin-aware Preference Optimization for Aligning Diffusion Models without Reference",
+            "abstract": "Modern alignment techniques based on human preferences, such as RLHF and DPO, typically employ divergence regularization relative to the reference model to ensure training stability. However, this often limits the flexibility of models during alignment, especially when there is a clear distributional discrepancy between the preference data and the reference model. In this paper, we focus on the alignment of recent text-to-image diffusion models, such as Stable Diffusion XL (SDXL), and find that this\"reference mismatch\"is indeed a significant problem in aligning these models due to the unstructured nature of visual modalities: e.g., a preference for a particular stylistic aspect can easily induce such a discrepancy. Motivated by this observation, we propose a novel and memory-friendly preference alignment method for diffusion models that does not depend on any reference model, coined margin-aware preference optimization (MaPO). MaPO jointly maximizes the likelihood margin between the preferred and dispreferred image sets and the likelihood of the preferred sets, simultaneously learning general stylistic features and preferences. For evaluation, we introduce two new pairwise preference datasets, which comprise self-generated image pairs from SDXL, Pick-Style and Pick-Safety, simulating diverse scenarios of reference mismatch. Our experiments validate that MaPO can significantly improve alignment on Pick-Style and Pick-Safety and general preference alignment when used with Pick-a-Pic v2, surpassing the base SDXL and other existing methods. Our code, models, and datasets are publicly available via https://mapo-t2i.github.io",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2290955335",
+                    "name": "Jiwoo Hong"
+                },
+                {
+                    "authorId": "2306760501",
+                    "name": "Sayak Paul"
+                },
+                {
+                    "authorId": "2291076200",
+                    "name": "Noah Lee"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2290905396",
+                    "name": "James Thorne"
+                },
+                {
+                    "authorId": "2305605278",
+                    "name": "Jongheon Jeong"
+                }
+            ]
+        },
+        {
+            "paperId": "42d2e852d9f3d7bcc499584fe0a8e5ad8a2df11e",
+            "title": "Structural Knowledge Informed Continual Multivariate Time Series Forecasting",
+            "abstract": "Recent studies in multivariate time series (MTS) forecasting reveal that explicitly modeling the hidden dependencies among different time series can yield promising forecasting performance and reliable explanations. However, modeling variable dependencies remains underexplored when MTS is continuously accumulated under different regimes (stages). Due to the potential distribution and dependency disparities, the underlying model may encounter the catastrophic forgetting problem, i.e., it is challenging to memorize and infer different types of variable dependencies across different regimes while maintaining forecasting performance. To address this issue, we propose a novel Structural Knowledge Informed Continual Learning (SKI-CL) framework to perform MTS forecasting within a continual learning paradigm, which leverages structural knowledge to steer the forecasting model toward identifying and adapting to different regimes, and selects representative MTS samples from each regime for memory replay. Specifically, we develop a forecasting model based on graph structure learning, where a consistency regularization scheme is imposed between the learned variable dependencies and the structural knowledge while optimizing the forecasting objective over the MTS data. As such, MTS representations learned in each regime are associated with distinct structural knowledge, which helps the model memorize a variety of conceivable scenarios and results in accurate forecasts in the continual learning context. Meanwhile, we develop a representation-matching memory replay scheme that maximizes the temporal coverage of MTS data to efficiently preserve the underlying temporal dynamics and dependency structures of each regime. Thorough empirical studies on synthetic and real-world benchmarks validate SKI-CL's efficacy and advantages over the state-of-the-art for continual MTS forecasting tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2281612988",
+                    "name": "Zijie Pan"
+                },
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2257349440",
+                    "name": "Sahil Garg"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2257349988",
+                    "name": "Anderson Schneider"
+                },
+                {
+                    "authorId": "2246897295",
+                    "name": "Yuriy Nevmyvaka"
+                }
+            ]
+        },
+        {
+            "paperId": "6252b0d8ab26a4e71c82221837226fa5f41174ec",
+            "title": "The N+ Implementation Details of RLHF with PPO: A Case Study on TL;DR Summarization",
+            "abstract": "This work is the first to openly reproduce the Reinforcement Learning from Human Feedback (RLHF) scaling behaviors reported in OpenAI's seminal TL;DR summarization work. We create an RLHF pipeline from scratch, enumerate over 20 key implementation details, and share key insights during the reproduction. Our RLHF-trained Pythia models demonstrate significant gains in response quality that scale with model size, with our 2.8B, 6.9B models outperforming OpenAI's released 1.3B checkpoint. We publicly release the trained model checkpoints and code to facilitate further research and accelerate progress in the field (\\url{https://github.com/vwxyzjn/summarize_from_feedback_details}).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261900258",
+                    "name": "Shengyi Huang"
+                },
+                {
+                    "authorId": "2293392623",
+                    "name": "Michael Noukhovitch"
+                },
+                {
+                    "authorId": "2293392539",
+                    "name": "Arian Hosseini"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2293559323",
+                    "name": "Weixun Wang"
+                },
+                {
+                    "authorId": "2293392398",
+                    "name": "Lewis Tunstall"
+                }
+            ]
+        },
+        {
+            "paperId": "6c14a617dd09dedaea4bdc043e25da0bcef1f59a",
+            "title": "Deep Generative Sampling in the Dual Divergence Space: A Data-efficient & Interpretative Approach for Generative AI",
+            "abstract": "Building on the remarkable achievements in generative sampling of natural images, we propose an innovative challenge, potentially overly ambitious, which involves generating samples of entire multivariate time series that resemble images. However, the statistical challenge lies in the small sample size, sometimes consisting of a few hundred subjects. This issue is especially problematic for deep generative models that follow the conventional approach of generating samples from a canonical distribution and then decoding or denoising them to match the true data distribution. In contrast, our method is grounded in information theory and aims to implicitly characterize the distribution of images, particularly the (global and local) dependency structure between pixels. We achieve this by empirically estimating its KL-divergence in the dual form with respect to the respective marginal distribution. This enables us to perform generative sampling directly in the optimized 1-D dual divergence space. Specifically, in the dual space, training samples representing the data distribution are embedded in the form of various clusters between two end points. In theory, any sample embedded between those two end points is in-distribution w.r.t. the data distribution. Our key idea for generating novel samples of images is to interpolate between the clusters via a walk as per gradients of the dual function w.r.t. the data dimensions. In addition to the data efficiency gained from direct sampling, we propose an algorithm that offers a significant reduction in sample complexity for estimating the divergence of the data distribution with respect to the marginal distribution. We provide strong theoretical guarantees along with an extensive empirical evaluation using many real-world datasets from diverse domains, establishing the superiority of our approach w.r.t. state-of-the-art deep learning methods.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257349440",
+                    "name": "Sahil Garg"
+                },
+                {
+                    "authorId": "2257349988",
+                    "name": "Anderson Schneider"
+                },
+                {
+                    "authorId": "2144925136",
+                    "name": "Anant Raj"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2774914",
+                    "name": "Yuriy Nevmyvaka"
+                },
+                {
+                    "authorId": "10832213",
+                    "name": "S. Gopal"
+                },
+                {
+                    "authorId": "2308468375",
+                    "name": "Amit Dhurandhar"
+                },
+                {
+                    "authorId": "2295170930",
+                    "name": "Guillermo Cecchi"
+                },
+                {
+                    "authorId": "2109771",
+                    "name": "I. Rish"
+                }
+            ]
+        },
+        {
+            "paperId": "7d97bc47048823585084096a0c9468d8942d3add",
+            "title": "Recurrent Interpolants for Probabilistic Time Series Prediction",
+            "abstract": "Sequential models like recurrent neural networks and transformers have become standard for probabilistic multivariate time series forecasting across various domains. Despite their strengths, they struggle with capturing high-dimensional distributions and cross-feature dependencies. Recent work explores generative approaches using diffusion or flow-based models, extending to time series imputation and forecasting. However, scalability remains a challenge. This work proposes a novel method combining recurrent neural networks' efficiency with diffusion models' probabilistic modeling, based on stochastic interpolants and conditional generation with control features, offering insights for future developments in this dynamic field.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2321678409",
+                    "name": "Yu Chen"
+                },
+                {
+                    "authorId": "2257346119",
+                    "name": "Marin Bilovs"
+                },
+                {
+                    "authorId": "2321551287",
+                    "name": "Sarthak Mittal"
+                },
+                {
+                    "authorId": "2262002818",
+                    "name": "Wei Deng"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2257349988",
+                    "name": "Anderson Schneider"
+                }
+            ]
+        },
+        {
+            "paperId": "e8a870b4637ac9f99ee27cabad202c390183072b",
+            "title": "Forecasting with Hyper-Trees",
+            "abstract": "This paper introduces the concept of Hyper-Trees and offers a new direction in applying tree-based models to time series data. Unlike conventional applications of decision trees that forecast time series directly, Hyper-Trees are designed to learn the parameters of a target time series model. Our framework leverages the gradient-based nature of boosted trees, which allows us to extend the concept of Hyper-Networks to Hyper-Trees and to induce a time-series inductive bias to tree models. By relating the parameters of a target time series model to features, Hyper-Trees address the issue of parameter non-stationarity and enable tree-based forecasts to extend beyond their training range. With our research, we aim to explore the effectiveness of Hyper-Trees across various forecasting scenarios and to extend the application of gradient boosted decision trees outside their conventional use in time series modeling.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2306789986",
+                    "name": "Alexander M\u00e4rz"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                }
+            ]
+        },
+        {
+            "paperId": "552572fa975344350b8af09009c647b4d4598f8c",
+            "title": "Deep Learning based Forecasting: a case study from the online fashion industry",
+            "abstract": "Demand forecasting in the online fashion industry is particularly amendable to global, data-driven forecasting models because of the industry's set of particular challenges. These include the volume of data, the irregularity, the high amount of turn-over in the catalog and the fixed inventory assumption. While standard deep learning forecasting approaches cater for many of these, the fixed inventory assumption requires a special treatment via controlling the relationship between price and demand closely. In this case study, we describe the data and our modelling approach for this forecasting problem in detail and present empirical results that highlight the effectiveness of our approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2202626639",
+                    "name": "Manuel Kunz"
+                },
+                {
+                    "authorId": "90947077",
+                    "name": "Stefan Birr"
+                },
+                {
+                    "authorId": "8653580",
+                    "name": "Mones Raslan"
+                },
+                {
+                    "authorId": "143828252",
+                    "name": "L. Ma"
+                },
+                {
+                    "authorId": "49969637",
+                    "name": "Zhuguo Li"
+                },
+                {
+                    "authorId": "2118151127",
+                    "name": "Adele Gouttes"
+                },
+                {
+                    "authorId": "2218803526",
+                    "name": "Mateusz Koren"
+                },
+                {
+                    "authorId": "2298773",
+                    "name": "T. Naghibi"
+                },
+                {
+                    "authorId": "2118151345",
+                    "name": "Johannes Stephan"
+                },
+                {
+                    "authorId": "104413041",
+                    "name": "M. Bulycheva"
+                },
+                {
+                    "authorId": "102686496",
+                    "name": "Matthias Grzeschik"
+                },
+                {
+                    "authorId": "2078911543",
+                    "name": "Armin Keki'c"
+                },
+                {
+                    "authorId": "30891652",
+                    "name": "Michael Narodovitch"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2218803888",
+                    "name": "Julian Sieber"
+                },
+                {
+                    "authorId": "2166235",
+                    "name": "Tim Januschowski"
+                }
+            ]
+        },
+        {
+            "paperId": "7c9bb230946cf48a7b9de97fd0281f42fbc51d31",
+            "title": "Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting",
+            "abstract": "Over the past years, foundation models have caused a paradigm shift in machine learning due to their unprecedented capabilities for zero-shot and few-shot generalization. However, despite the success of foundation models in modalities such as natural language processing and computer vision, the development of foundation models for time series forecasting has lagged behind. We present Lag-Llama, a general-purpose foundation model for univariate probabilistic time series forecasting based on a decoder-only transformer architecture that uses lags as covariates. Lag-Llama is pretrained on a large corpus of diverse time series data from several domains, and demonstrates strong zero-shot generalization capabilities compared to a wide range of forecasting models on downstream datasets across domains. Moreover, when fine-tuned on relatively small fractions of such previously unseen datasets, Lag-Llama achieves state-of-the-art performance, outperforming prior deep learning approaches, emerging as the best general-purpose model on average. Lag-Llama serves as a strong contender to the current state-of-art in time series forecasting and paves the way for future advancements in foundation models tailored to time series data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2253400055",
+                    "name": "Arjun Ashok"
+                },
+                {
+                    "authorId": "2258310022",
+                    "name": "Andrew Robert Williams"
+                },
+                {
+                    "authorId": "2257347656",
+                    "name": "Arian Khorasani"
+                },
+                {
+                    "authorId": "2257347183",
+                    "name": "George Adamopoulos"
+                },
+                {
+                    "authorId": "2052115032",
+                    "name": "Rishika Bhagwatkar"
+                },
+                {
+                    "authorId": "2257346119",
+                    "name": "Marin Bilovs"
+                },
+                {
+                    "authorId": "2257348423",
+                    "name": "Hena Ghonia"
+                },
+                {
+                    "authorId": "2124982378",
+                    "name": "N. Hassen"
+                },
+                {
+                    "authorId": "2257349988",
+                    "name": "Anderson Schneider"
+                },
+                {
+                    "authorId": "2257349440",
+                    "name": "Sahil Garg"
+                },
+                {
+                    "authorId": "2253399166",
+                    "name": "Alexandre Drouin"
+                },
+                {
+                    "authorId": "2748188",
+                    "name": "Nicolas Chapados"
+                },
+                {
+                    "authorId": "2774914",
+                    "name": "Yuriy Nevmyvaka"
+                },
+                {
+                    "authorId": "2109771",
+                    "name": "I. Rish"
+                }
+            ]
+        },
+        {
+            "paperId": "c0f72db1c99348b00f6ce1091fe2f097ddaa8819",
+            "title": "Provably Convergent Schr\u00f6dinger Bridge with Applications to Probabilistic Time Series Imputation",
+            "abstract": "The Schr\\\"odinger bridge problem (SBP) is gaining increasing attention in generative modeling and showing promising potential even in comparison with the score-based generative models (SGMs). SBP can be interpreted as an entropy-regularized optimal transport problem, which conducts projections onto every other marginal alternatingly. However, in practice, only approximated projections are accessible and their convergence is not well understood. To fill this gap, we present a first convergence analysis of the Schr\\\"odinger bridge algorithm based on approximated projections. As for its practical applications, we apply SBP to probabilistic time series imputation by generating missing values conditioned on observed data. We show that optimizing the transport cost improves the performance and the proposed algorithm achieves the state-of-the-art result in healthcare and environmental data while exhibiting the advantage of exploring both temporal and feature patterns in probabilistic time series imputation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2177698632",
+                    "name": "Yu Chen"
+                },
+                {
+                    "authorId": "1470563460",
+                    "name": "Wei Deng"
+                },
+                {
+                    "authorId": "1816748885",
+                    "name": "Shikai Fang"
+                },
+                {
+                    "authorId": "1751318",
+                    "name": "Fengpei Li"
+                },
+                {
+                    "authorId": "2153402020",
+                    "name": "Ni Yang"
+                },
+                {
+                    "authorId": "2300049761",
+                    "name": "Yikai Zhang"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "2390798",
+                    "name": "Shandian Zhe"
+                },
+                {
+                    "authorId": "50852706",
+                    "name": "A. Schneider"
+                },
+                {
+                    "authorId": "2774914",
+                    "name": "Yuriy Nevmyvaka"
+                }
+            ]
+        },
+        {
+            "paperId": "c81c35de1bdc343cd3e4c41e8972aa629673961b",
+            "title": "Risk Bounds on Aleatoric Uncertainty Recovery",
+            "abstract": "Quantifying aleatoric uncertainty is a challenging task in machine learning. It is important for decision making associated with data-dependent uncertainty in model outcomes. Recently, many empirical studies in modeling aleatoric uncertainty under regression settings primarily rely on either a Gaussian likelihood or moment matching. However, the performance of these methods varies for different datasets whereas discussions on their theoretical guarantees are lacking. In this work, we investigate the theoretical aspects of these approaches and establish risk bounds for their estimates. We provide conditions that are sufficient to guarantee the PAC-learnability of the aleatoric uncertainty. The study suggests that the likelihood-and moment matching-based methods enjoy different types of guarantee in their risk bounds, i.e., they calibrate different aspects of the uncertainty and thus exhibit distinct properties in different regimes of the parameter space. Finally, we conduct empirical study which shows promising re-sults and supports our theorems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2300049761",
+                    "name": "Yikai Zhang"
+                },
+                {
+                    "authorId": "21481646",
+                    "name": "Jiahe Lin"
+                },
+                {
+                    "authorId": "1751318",
+                    "name": "Fengpei Li"
+                },
+                {
+                    "authorId": "2176879167",
+                    "name": "Yeshaya Adler"
+                },
+                {
+                    "authorId": "4565995",
+                    "name": "Kashif Rasul"
+                },
+                {
+                    "authorId": "50852706",
+                    "name": "A. Schneider"
+                },
+                {
+                    "authorId": "2774914",
+                    "name": "Yuriy Nevmyvaka"
+                }
+            ]
+        }
+    ]
+}

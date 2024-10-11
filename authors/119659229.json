@@ -1,0 +1,537 @@
+{
+    "authorId": "119659229",
+    "papers": [
+        {
+            "paperId": "5df18deac55a1ce90a58b0401034d47594faa078",
+            "title": "Information-Theoretic Distillation for Reference-less Summarization",
+            "abstract": "The current winning recipe for automatic summarization is using proprietary large-scale language models (LLMs) such as ChatGPT as is, or imitation learning from them as teacher models. While increasingly ubiquitous dependence on such large-scale language models is convenient, there remains an important question of whether small-scale models could have achieved competitive results, if we were to seek an alternative learning method -- that allows for a more cost-efficient, controllable, yet powerful summarizer. We present InfoSumm, a novel framework to distill a powerful summarizer based on the information-theoretic objective for summarization, without relying on either the LLM's capability or human-written references. To achieve this, we first propose a novel formulation of the desiderata of summarization (saliency, faithfulness and brevity) through the lens of mutual information between the original document and the summary. Based on this formulation, we start off from Pythia-2.8B as the teacher model, which is not yet capable of summarization, then self-train the model to optimize for the information-centric measures of ideal summaries. Distilling from the improved teacher, we arrive at a compact but powerful summarizer with only 568M parameters that performs competitively against ChatGPT, without ever relying on ChatGPT's capabilities. Extensive analysis demonstrates that our approach outperforms in-domain supervised models in human evaluation, let alone state-of-the-art unsupervised methods, and wins over ChatGPT in controllable summarization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266707583",
+                    "name": "Jaehun Jung"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "2263759359",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2257385142",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "3cbd663640482ea8ffb6d7f128642b8757dfb35e",
+            "title": "NovaCOMET: Open Commonsense Foundation Models with Symbolic Knowledge Distillation",
+            "abstract": "We present NovaCOMET, an open commonsense knowledge model, that combines the best aspects of knowledge and general task models. Compared to previous knowledge models, NovaCOMET allows open-format relations enabling direct application to reasoning tasks; compared to general task models like Flan-T5, it explicitly centers knowledge, enabling superior performance for commonsense reasoning. NovaCOMET leverages the knowledge of opaque proprietary models to create an open knowledge pipeline. First, knowledge is symbolically distilled into NovATOMIC, a publicly-released discrete knowledge graph which can be audited, critiqued, and filtered. Next, we train NovaCOMET on NovATOMIC by fine-tuning an open-source pretrained model. NovaCOMET uses an open-format training objective, replacing the fixed relation sets of past knowledge models, enabling arbitrary structures within the data to serve as inputs or outputs. The resulting generation model, optionally augmented with human annotation, matches or exceeds comparable open task models like Flan-T5 on a range of commonsense generation tasks. NovaCOMET serves as a counterexample to the contemporary focus on instruction tuning only, demonstrating a distinct advantage to explicitly modeling commonsense knowledge as well.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "2069676542",
+                    "name": "R. L. Bras"
+                },
+                {
+                    "authorId": "122436831",
+                    "name": "Taylor Sorensen"
+                },
+                {
+                    "authorId": "2273918810",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "3458166",
+                    "name": "Ashutosh Baheti"
+                },
+                {
+                    "authorId": "1857797",
+                    "name": "Chandra Bhagavatula"
+                },
+                {
+                    "authorId": "2257385142",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "5c17fa02a4a4c0655b1873cf3e34fffbc1e7d601",
+            "title": "Localized Symbolic Knowledge Distillation for Visual Commonsense Models",
+            "abstract": "Instruction following vision-language (VL) models offer a flexible interface that supports a broad range of multimodal tasks in a zero-shot fashion. However, interfaces that operate on full images do not directly enable the user to\"point to\"and access specific regions within images. This capability is important not only to support reference-grounded VL benchmarks, but also, for practical applications that require precise within-image reasoning. We build Localized Visual Commonsense models, which allow users to specify (multiple) regions as input. We train our model by sampling localized commonsense knowledge from a large language model (LLM): specifically, we prompt an LLM to collect commonsense knowledge given a global literal image description and a local literal region description automatically generated by a set of VL models. With a separately trained critic model that selects high-quality examples, we find that training on the localized commonsense corpus can successfully distill existing VL models to support a reference-as-input interface. Empirical results and human evaluations in a zero-shot setup demonstrate that our distillation method results in more precise VL models of reasoning compared to a baseline of passing a generated referring expression to an LLM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152276408",
+                    "name": "J. Park"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "28130078",
+                    "name": "P. Liang"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "2111510510",
+                    "name": "Youngjae Yu"
+                },
+                {
+                    "authorId": "2242393161",
+                    "name": "Qiuyuan Huang"
+                },
+                {
+                    "authorId": "2257313530",
+                    "name": "Jianfeng Gao"
+                },
+                {
+                    "authorId": "2257020375",
+                    "name": "Ali Farhadi"
+                },
+                {
+                    "authorId": "2253903625",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "7d97c17a75beb89f938eaac1d3ca60ac2245fb2e",
+            "title": "Faith and Fate: Limits of Transformers on Compositionality",
+            "abstract": "Transformer large language models (LLMs) have sparked admiration for their exceptional performance on tasks that demand intricate multi-step reasoning. Yet, these models simultaneously show failures on surprisingly trivial problems. This begs the question: Are these errors incidental, or do they signal more substantial limitations? In an attempt to demystify transformer LLMs, we investigate the limits of these models across three representative compositional tasks -- multi-digit multiplication, logic grid puzzles, and a classic dynamic programming problem. These tasks require breaking problems down into sub-steps and synthesizing these steps into a precise answer. We formulate compositional tasks as computation graphs to systematically quantify the level of complexity, and break down reasoning steps into intermediate sub-procedures. Our empirical findings suggest that transformer LLMs solve compositional tasks by reducing multi-step compositional reasoning into linearized subgraph matching, without necessarily developing systematic problem-solving skills. To round off our empirical study, we provide theoretical arguments on abstract multi-step reasoning problems that highlight how autoregressive generations' performance can rapidly decay with\\,increased\\,task\\,complexity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "1947172233",
+                    "name": "Melanie Sclar"
+                },
+                {
+                    "authorId": "1737850",
+                    "name": "Xiang Lorraine Li"
+                },
+                {
+                    "authorId": "2218495662",
+                    "name": "Liwei Jian"
+                },
+                {
+                    "authorId": "51583409",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "1857797",
+                    "name": "Chandra Bhagavatula"
+                },
+                {
+                    "authorId": "39227408",
+                    "name": "Ronan Le Bras"
+                },
+                {
+                    "authorId": "2012510",
+                    "name": "Jena D. Hwang"
+                },
+                {
+                    "authorId": "3313909",
+                    "name": "Soumya Sanyal"
+                },
+                {
+                    "authorId": "2129663",
+                    "name": "S. Welleck"
+                },
+                {
+                    "authorId": "145201124",
+                    "name": "Xiang Ren"
+                },
+                {
+                    "authorId": "37907837",
+                    "name": "Allyson Ettinger"
+                },
+                {
+                    "authorId": "1753355",
+                    "name": "Za\u00efd Harchaoui"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "84adc377933eb09289304f63644ce546de9a4a2b",
+            "title": "Generative Models as a Complex Systems Science: How can we make sense of large language model behavior?",
+            "abstract": "Coaxing out desired behavior from pretrained models, while avoiding undesirable ones, has redefined NLP and is reshaping how we interact with computers. What was once a scientific engineering discipline-in which building blocks are stacked one on top of the other-is arguably already a complex systems science, in which emergent behaviors are sought out to support previously unimagined use cases. Despite the ever increasing number of benchmarks that measure task performance, we lack explanations of what behaviors language models exhibit that allow them to complete these tasks in the first place. We argue for a systematic effort to decompose language model behavior into categories that explain cross-task performance, to guide mechanistic explanations and help future-proof analytic research.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "14487640",
+                    "name": "Ari Holtzman"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "1982950",
+                    "name": "Luke Zettlemoyer"
+                }
+            ]
+        },
+        {
+            "paperId": "a221f7fd6b40168123e6577d983cdd0d51c54297",
+            "title": "The Generative AI Paradox: \"What It Can Create, It May Not Understand\"",
+            "abstract": "The recent wave of generative AI has sparked unprecedented global attention, with both excitement and concern over potentially superhuman levels of artificial intelligence: models now take only seconds to produce outputs that would challenge or exceed the capabilities even of expert humans. At the same time, models still show basic errors in understanding that would not be expected even in non-expert humans. This presents us with an apparent paradox: how do we reconcile seemingly superhuman capabilities with the persistence of errors that few humans would make? In this work, we posit that this tension reflects a divergence in the configuration of intelligence in today's generative models relative to intelligence in humans. Specifically, we propose and test the Generative AI Paradox hypothesis: generative models, having been trained directly to reproduce expert-like outputs, acquire generative capabilities that are not contingent upon -- and can therefore exceed -- their ability to understand those same types of outputs. This contrasts with humans, for whom basic understanding almost always precedes the ability to generate expert-level outputs. We test this hypothesis through controlled experiments analyzing generation vs. understanding in generative models, across both language and image modalities. Our results show that although models can outperform humans in generation, they consistently fall short of human capabilities in measures of understanding, as well as weaker correlation between generation and understanding performance, and more brittleness to adversarial inputs. Our findings support the hypothesis that models' generative capability may not be contingent upon understanding capability, and call for caution in interpreting artificial intelligence by analogy to human intelligence.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "2264413993",
+                    "name": "Linjie Li"
+                },
+                {
+                    "authorId": "2012510",
+                    "name": "Jena D. Hwang"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "33772445",
+                    "name": "Jillian R. Fisher"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2263557371",
+                    "name": "Benjamin Newman"
+                },
+                {
+                    "authorId": "2263759359",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2262217080",
+                    "name": "Allyson Ettinger"
+                },
+                {
+                    "authorId": "2257385142",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "a36658b26ea4ccb58f85d8a578f6ec6767446095",
+            "title": "Impossible Distillation for Paraphrasing and Summarization: How to Make High-quality Lemonade out of Small, Low-quality Model",
+            "abstract": "We present Impossible Distillation, a novel framework for paraphrasing and sentence summarization, that distills a high-quality dataset and model from a low-quality teacher that itself cannot perform these tasks. Unlike prior works that rely on an extreme-scale teacher model (e.g., GPT3) or task-specific architecture, we hypothesize and verify the paraphrastic proximity intrinsic to pre-trained LMs (e.g., GPT2), where paraphrases occupy a proximal subspace in the LM distribution. By identifying and distilling generations from these subspaces, Impossible Distillation produces a high-quality dataset and model even from GPT2-scale LMs. We evaluate our method on multiple benchmarks spanning unconstrained / syntax-controlled paraphrase generation and sentence summarization. Our model with 770M parameters consistently outperforms strong baselines, including models distilled from ChatGPT, and sometimes, even ChatGPT itself. Also, we find that our distilled dataset from 1.5B LMs exhibits higher diversity and fidelity than up to 13 times larger datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2122355046",
+                    "name": "Jaehun Jung"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "9252833",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "33772445",
+                    "name": "Jillian R. Fisher"
+                },
+                {
+                    "authorId": "122436831",
+                    "name": "Taylor Sorensen"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "ac9d5e5cd77a4f36d9bfd4ee9d4c8089f89990a0",
+            "title": "Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing",
+            "abstract": "It is commonly perceived that the strongest language models (LMs) rely on a combination of massive scale, instruction data, and human feedback to perform specialized tasks \u2013 e.g. summarization and paraphrasing, without supervision. In this paper, we propose that language models can learn to summarize and paraphrase sentences, with none of these 3 factors. We present I MPOSSIBLE D ISTILLATION , a framework that distills a task-specific dataset directly from an off-the-shelf LM, even when it is impossible for the LM itself to reliably solve the task. By training a student model on the generated dataset and amplifying its capability through self-distillation, our method yields a high-quality model and dataset from a low-quality teacher model, without the need for scale or supervision. Using I MPOSSIBLE D ISTILLATION , we are able to distill an order of magnitude smaller model (with only 770M parameters) that outperforms 175B parameter GPT-3, in both quality and controllability, as confirmed by automatic and human evaluations. Furthermore, as a useful byproduct of our approach, we obtain D IM S UM +, a high-quality dataset with 3.4M sentence summaries and paraphrases. Our analyses show that this dataset, as a purely LM-generated corpus, is more diverse and more effective for generalization to unseen domains than all human-authored datasets \u2013 including Gigaword with 4M samples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266707583",
+                    "name": "Jaehun Jung"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "33772445",
+                    "name": "Jillian R. Fisher"
+                },
+                {
+                    "authorId": "122436831",
+                    "name": "Taylor Sorensen"
+                },
+                {
+                    "authorId": "2257385142",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "ca991e0283a1c30a46eb585d9eb499fc0ec8ecc2",
+            "title": "Inference-Time Policy Adapters (IPA): Tailoring Extreme-Scale LMs without Fine-tuning",
+            "abstract": "While extreme-scale language models have demonstrated exceptional performance on a variety of language tasks, the degree of control over these language models through pure prompting can often be limited. Directly fine-tuning such language models can be effective for tailoring them, but it can be either extremely costly (e.g., GPT-3) or not even feasible for the broader community (e.g., GPT-4). We propose Inference-time Policy Adapters (IPA), which efficiently tailors a language model such as GPT-3 without fine-tuning it. IPA guides a large base model during decoding time through a lightweight policy adapter trained to optimize an arbitrary user objective with reinforcement learning. On five challenging text generation tasks, such as toxicity reduction and lexically constrained generation, IPA consistently brings significant improvements over off-the-shelf language models. It outperforms competitive baseline methods, sometimes even including expensive fine-tuning. In particular, tailoring GPT-2 with IPA can outperform GPT-3, while tailoring GPT-3 with IPA brings a major performance boost over GPT-3 (and sometimes even over GPT-4). Our promising results highlight the potential of IPA as a lightweight alternative to tailoring extreme-scale language models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "9252833",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "2148334242",
+                    "name": "Jaehun Jang"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "3444092",
+                    "name": "Lianhui Qin"
+                },
+                {
+                    "authorId": "19179135",
+                    "name": "Prithviraj Ammanabrolu"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "1399403094",
+                    "name": "Sahana Ramnath"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "33772445",
+                    "name": "Jillian R. Fisher"
+                },
+                {
+                    "authorId": "51583409",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "1474550731",
+                    "name": "Skyler Hallinan"
+                },
+                {
+                    "authorId": "1384550891",
+                    "name": "Xiang Ren"
+                },
+                {
+                    "authorId": "2129663",
+                    "name": "S. Welleck"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "d655f652d02251b45db43181c5e3c73dfc59cd51",
+            "title": "Value Kaleidoscope: Engaging AI with Pluralistic Human Values, Rights, and Duties",
+            "abstract": "Human values are crucial to human decision-making. Value pluralism is the view that multiple correct values may be held in tension with one another (e.g., when considering lying to a friend to protect their feelings, how does one balance honesty with friendship?). As statistical learners, AI systems fit to averages by default, washing out these potentially irreducible value conflicts. To improve AI systems to better reflect value pluralism, the first-order challenge is to explore the extent to which AI systems can model pluralistic human values, rights, and duties as well as their interaction.\n\nWe introduce ValuePrism, a large-scale dataset of 218k values, rights, and duties connected to 31k human-written situations. ValuePrism\u2019s contextualized values are generated by GPT-4 and deemed high-quality by human annotators 91% of the time. We conduct a large-scale study with annotators across diverse social and demographic backgrounds to try to understand whose values are represented.\n\nWith ValuePrism, we build Value Kaleidoscope (or Kaleido), an open, light-weight, and structured language-based multi-task model that generates, explains, and assesses the relevance and valence (i.e., support or oppose) of human values, rights, and duties within a specific context. Humans prefer the sets of values output by our system over the teacher GPT- 4, finding them more accurate and with broader coverage. In addition, we demonstrate that Kaleido can help explain variability in human decision-making by outputting contrasting values. Finally, we show that Kaleido\u2019s representations transfer to other philosophical frameworks and datasets, confirming the benefit of an explicit, modular, and interpretable approach to value pluralism. We hope that our work will serve as a step to making more explicit the implicit values behind human decision-making and to steering AI systems to make decisions that are more in accordance with them.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "122436831",
+                    "name": "Taylor Sorensen"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "2012510",
+                    "name": "Jena D. Hwang"
+                },
+                {
+                    "authorId": "2237802624",
+                    "name": "Sydney Levine"
+                },
+                {
+                    "authorId": "22330666",
+                    "name": "Valentina Pyatkin"
+                },
+                {
+                    "authorId": "119659229",
+                    "name": "Peter West"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "2237944445",
+                    "name": "Kavel Rao"
+                },
+                {
+                    "authorId": "1857797",
+                    "name": "Chandra Bhagavatula"
+                },
+                {
+                    "authorId": "2729164",
+                    "name": "Maarten Sap"
+                },
+                {
+                    "authorId": "3360730",
+                    "name": "J. Tasioulas"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                }
+            ]
+        }
+    ]
+}

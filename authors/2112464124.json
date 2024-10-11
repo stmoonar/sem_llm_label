@@ -1,0 +1,220 @@
+{
+    "authorId": "2112464124",
+    "papers": [
+        {
+            "paperId": "1d36e7ba19be5db9694ed256ea21dae5f753ede3",
+            "title": "Trainable Projected Gradient Method for Robust Fine-Tuning",
+            "abstract": "Recent studies on transfer learning have shown that selectively fine-tuning a subset of layers or customizing different learning rates for each layer can greatly improve robustness to out-of-distribution (OOD) data and retain generalization capability in the pre-trained models. However, most of these methods employ manually crafted heuristics or expensive hyper-parameter searches, which prevent them from scaling up to large datasets and neural networks. To solve this problem, we propose Trainable Projected Gradient Method (TPGM) to automatically learn the constraint imposed for each layer for a fine-grained fine-tuning regularization. This is motivated by formulating fine-tuning as a bi-level constrained optimization problem. Specifically, TPGM maintains a set of projection radii, i.e., distance constraints between the fine-tuned model and the pretrained model, for each layer, and enforces them through weight projections. To learn the constraints, we propose a bi-level optimization to automatically learn the best set of projection radii in an end-to-end manner. Theoretically, we show that the bi-level optimization formulation is the key to learning different constraints for each layer. Empirically, with little hyper-parameter search cost, TPGM outperforms existing fine-tuning methods in OOD performance while matching the best in-distribution (ID) performance. For example, when fine-tuned on DomainNet-Real and ImageNet, compared to vanilla fine-tuning, TPGM shows 22% and 10% relative OOD improvement respectively on their sketch counterparts. Code is available at https://github.com/PotatoTian/TPGM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "11007025",
+                    "name": "Junjiao Tian"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "21145493",
+                    "name": "Zecheng He"
+                },
+                {
+                    "authorId": "2108334170",
+                    "name": "Yen-Cheng Liu"
+                },
+                {
+                    "authorId": "145276578",
+                    "name": "Z. Kira"
+                }
+            ]
+        },
+        {
+            "paperId": "76f4416826b3393cf8f28ffd1a3191706d2b4286",
+            "title": "RoPAWS: Robust Semi-supervised Representation Learning from Uncurated Data",
+            "abstract": "Semi-supervised learning aims to train a model using limited labels. State-of-the-art semi-supervised methods for image classification such as PAWS rely on self-supervised representations learned with large-scale unlabeled but curated data. However, PAWS is often less effective when using real-world unlabeled data that is uncurated, e.g., contains out-of-class data. We propose RoPAWS, a robust extension of PAWS that can work with real-world unlabeled data. We first reinterpret PAWS as a generative classifier that models densities using kernel density estimation. From this probabilistic perspective, we calibrate its prediction based on the densities of labeled and unlabeled data, which leads to a simple closed-form solution from the Bayes' rule. We demonstrate that RoPAWS significantly improves PAWS for uncurated Semi-iNat by +5.3% and curated ImageNet by +0.4%.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "9962692",
+                    "name": "Sangwoo Mo"
+                },
+                {
+                    "authorId": "2148766061",
+                    "name": "Jong-Chyi Su"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "2065681534",
+                    "name": "Mido Assran"
+                },
+                {
+                    "authorId": "1806773",
+                    "name": "Ishan Misra"
+                },
+                {
+                    "authorId": "2112477373",
+                    "name": "Licheng Yu"
+                },
+                {
+                    "authorId": "144499674",
+                    "name": "Sean Bell"
+                }
+            ]
+        },
+        {
+            "paperId": "81d75fd1b255874ffb7f76bc784309280230e631",
+            "title": "When does the student surpass the teacher? Federated Semi-supervised Learning with Teacher-Student EMA",
+            "abstract": "Semi-Supervised Learning (SSL) has received extensive attention in the domain of computer vision, leading to development of promising approaches such as FixMatch. In scenarios where training data is decentralized and resides on client devices, SSL must be integrated with privacy-aware training techniques such as Federated Learning. We consider the problem of federated image classi\ufb01cation and study the performance and privacy challenges with existing federated SSL (FSSL) approaches. Firstly, we note that even state-of-the-art FSSL algorithms can trivially compromise client privacy and other real-world constraints such as client statelessness and communication cost. Secondly, we observe that it is challenging to integrate EMA (Exponential Moving Average) updates into the federated setting, which comes at a trade-off between performance and communication cost. We propose a novel approach FedSwitch , that improves privacy as well as generalization performance through Exponential Moving Average (EMA) updates. FedSwitch utilizes a federated semi-supervised teacher-student EMA framework with two features - local teacher adaptation and adaptive switching between teacher and student for pseudo-label generation . Our proposed approach outperforms the state-of-the-art on federated image classi\ufb01cation, can be adapted to real-world constraints, and achieves good generalization performance with minimal communication cost overhead.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2024689450",
+                    "name": "Jessica Zhao"
+                },
+                {
+                    "authorId": "2143032877",
+                    "name": "Sayan Ghosh"
+                },
+                {
+                    "authorId": "2528900",
+                    "name": "Akash Bharadwaj"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "6c231306614f35744518f4f22700efc55ad763a7",
+            "title": "Polyhistor: Parameter-Efficient Multi-Task Adaptation for Dense Vision Tasks",
+            "abstract": "Adapting large-scale pretrained models to various downstream tasks via fine-tuning is a standard method in machine learning. Recently, parameter-efficient fine-tuning methods show promise in adapting a pretrained model to different tasks while training only a few parameters. Despite their success, most existing methods are proposed in Natural Language Processing tasks with language Transformers, and adaptation to Computer Vision tasks with Vision Transformers remains under-explored, especially for dense vision tasks. Further, in multi-task settings, individually fine-tuning and storing separate models for different tasks is inefficient. In this work, we provide an extensive multi-task parameter-efficient benchmark and examine existing parameter-efficient fine-tuning NLP methods for vision tasks. Our results on four different dense vision tasks showed that existing methods cannot be efficiently integrated due to the hierarchical nature of the Hierarchical Vision Transformers. To overcome this issue, we propose Polyhistor and Polyhistor-Lite, consisting of Decomposed HyperNetworks and Layer-wise Scaling Kernels, to share information across different tasks with a few trainable parameters. This leads to favorable performance improvements against existing parameter-efficient methods while using fewer trainable parameters. Specifically, Polyhistor achieves competitive accuracy compared to the state-of-the-art while only using ~10% of their trainable parameters. Furthermore, our methods show larger performance gains when large networks and more pretraining data are used.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108334170",
+                    "name": "Yen-Cheng Liu"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "11007025",
+                    "name": "Junjiao Tian"
+                },
+                {
+                    "authorId": "2558787",
+                    "name": "Zijian He"
+                },
+                {
+                    "authorId": "145276578",
+                    "name": "Z. Kira"
+                }
+            ]
+        },
+        {
+            "paperId": "91cbeb715435252fade1284b343b8850934760d9",
+            "title": "Structure-Encoding Auxiliary Tasks for Improved Visual Representation in Vision-and-Language Navigation",
+            "abstract": "In Vision-and-Language Navigation (VLN), researchers typically take an image encoder pre-trained on ImageNet without fine-tuning on the environments that the agent will be trained or tested on. However, the distribution shift between the training images from ImageNet and the views in the navigation environments may render the ImageNet pre-trained image encoder suboptimal. Therefore, in this paper, we design a set of structure-encoding auxiliary tasks (SEA) that leverage the data in the navigation environments to pre-train and improve the image encoder. Specifically, we design and customize (1) 3D jigsaw, (2) traversability prediction, and (3) instance classification to pre-train the image encoder. Through rigorous ablations, our SEA pre-trained features are shown to better encode structural information of the scenes, which ImageNet pre-trained features fail to properly encode but is crucial for the target navigation task. The SEA pre-trained features can be easily plugged into existing VLN agents without any tuning. For example, on Test-Unseen environments, the VLN agents combined with our SEA pre-trained features achieve absolute success rate improvement of 12% for Speaker-Follower [14], 5% for Env-Dropout [37], and 4% for AuxRN [50].",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47387175",
+                    "name": "Chia-Wen Kuo"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "50196944",
+                    "name": "Judy Hoffman"
+                },
+                {
+                    "authorId": "145276578",
+                    "name": "Z. Kira"
+                }
+            ]
+        },
+        {
+            "paperId": "94041b8798c177699ab88f81bcf3fe810542a671",
+            "title": "Unbiased Teacher v2: Semi-supervised Object Detection for Anchor-free and Anchor-based Detectors",
+            "abstract": "With the recent development of Semi-Supervised Object Detection (SS-OD) techniques, object detectors can be improved by using a limited amount of labeled data and abundant unlabeled data. However, there are still two challenges that are not addressed: (1) there is no prior SS-OD work on anchor-free detectors, and (2) prior works are ineffective when pseudo-labeling bounding box regression. In this paper, we present Unbiased Teacher v2, which shows the generalization of SS-OD method to anchor-free detectors and also introduces Listen2Student mechanism for the unsupervised regression loss. Specifically, we first present a study examining the effectiveness of existing SS-OD methods on anchor-free detectors and find that they achieve much lower performance improvements under the semi-supervised setting. We also observe that box selection with centerness and the localization-based labeling used in anchor-free detectors cannot work well under the semi-supervised setting. On the other hand, our Listen2Student mechanism explicitly prevents misleading pseudo-labels in the training of bounding box regression; we specifically develop a novel pseudo-labeling selection mechanism based on the Teacher and Student's relative uncertainties. This idea contributes to favorable improvement in the regression branch in the semi-supervised setting. Our method, which works for both anchor-free and anchor-based methods, consistently performs favorably against the state-of-the-art methods in VOC, COCO-standard, and COCO-additional.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108334170",
+                    "name": "Yen-Cheng Liu"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "145276578",
+                    "name": "Z. Kira"
+                }
+            ]
+        },
+        {
+            "paperId": "abb94f85a1fb77012aae2e89875b3a59cf4827ab",
+            "title": "Open-Set Semi-Supervised Object Detection",
+            "abstract": "Recent developments for Semi-Supervised Object Detection (SSOD) have shown the promise of leveraging unlabeled data to improve an object detector. However, thus far these methods have assumed that the unlabeled data does not contain out-of-distribution (OOD) classes, which is unrealistic with larger-scale unlabeled datasets. In this paper, we consider a more practical yet challenging problem, Open-Set Semi-Supervised Object Detection (OSSOD). We first find the existing SSOD method obtains a lower performance gain in open-set conditions, and this is caused by the semantic expansion, where the distracting OOD objects are mispredicted as in-distribution pseudo-labels for the semi-supervised training. To address this problem, we consider online and offline OOD detection modules, which are integrated with SSOD methods. With the extensive studies, we found that leveraging an offline OOD detector based on a self-supervised vision transformer performs favorably against online OOD detectors due to its robustness to the interference of pseudo-labeling. In the experiment, our proposed framework effectively addresses the semantic expansion issue and shows consistent improvements on many OSSOD benchmarks, including large-scale COCO-OpenImages. We also verify the effectiveness of our framework under different OSSOD conditions, including varying numbers of in-distribution classes, different degrees of supervision, and different combinations of unlabeled sets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108334170",
+                    "name": "Yen-Cheng Liu"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "11007025",
+                    "name": "Junjiao Tian"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "2558787",
+                    "name": "Zijian He"
+                },
+                {
+                    "authorId": "145276578",
+                    "name": "Z. Kira"
+                }
+            ]
+        }
+    ]
+}

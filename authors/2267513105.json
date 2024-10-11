@@ -1,0 +1,357 @@
+{
+    "authorId": "2267513105",
+    "papers": [
+        {
+            "paperId": "0ae3d08bff81406b8806f6958e2bf9140593a6b3",
+            "title": "Physics-guided Active Sample Reweighting for Urban Flow Prediction",
+            "abstract": "Urban flow prediction is a spatio-temporal modeling task that estimates the throughput of transportation services like buses, taxis, and ride-sharing, where data-driven models have become the most popular solution in the past decade. Meanwhile, the implicitly learned mapping between historical observations to the prediction targets tend to over-simplify the dynamics of real-world urban flows, leading to suboptimal predictions. Some recent spatio-temporal prediction solutions bring remedies with the notion of physics-guided machine learning (PGML), which describes spatio-temporal data with nuanced and principled physics laws, thus enhancing both the prediction accuracy and interpretability. However, these spatio-temporal PGML methods are built upon a strong assumption that the observed data fully conforms to the differential equations that define the physical system, which can quickly become ill-posed in urban flow prediction tasks. The observed urban flow data, especially when sliced into time-dependent snapshots to facilitate predictions, is typically incomplete and sparse, and prone to inherent noise incurred in the collection process. As a result, such physical inconsistency between the data and PGML model significantly limits the predictive power and robustness of the solution. Moreover, due to the interval-based predictions and intermittent nature of data filing in many transportation services, the instantaneous dynamics of urban flows can hardly be captured, rendering differential equation-based continuous modeling a loose fit for this setting. To overcome the challenges, we develop a discretized physics-guided network (PN), and propose a data-aware framework Physics-guided Active Sample Reweighting (P-GASR) to enhance PN. Experimental results in four real-world datasets demonstrate that our method achieves state-of-the-art performance with a demonstrable improvement in robustness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2281470021",
+                    "name": "Wei Jiang"
+                },
+                {
+                    "authorId": "2280284086",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "2280283715",
+                    "name": "Wentao Zhang"
+                },
+                {
+                    "authorId": "2281001972",
+                    "name": "Lizhen Cui"
+                },
+                {
+                    "authorId": "2129485845",
+                    "name": "Zi-Liang Huang"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "0d4eeccd938cedf7852f608e6e8ac430accb2ab3",
+            "title": "On-Device Recommender Systems: A Comprehensive Survey",
+            "abstract": "Recommender systems have been widely deployed in various real-world applications to help users identify content of interest from massive amounts of information. Traditional recommender systems work by collecting user-item interaction data in a cloud-based data center and training a centralized model to perform the recommendation service. However, such cloud-based recommender systems (CloudRSs) inevitably suffer from excessive resource consumption, response latency, as well as privacy and security risks concerning both data and models. Recently, driven by the advances in storage, communication, and computation capabilities of edge devices, there has been a shift of focus from CloudRSs to on-device recommender systems (DeviceRSs), which leverage the capabilities of edge devices to minimize centralized data storage requirements, reduce the response latency caused by communication overheads, and enhance user privacy and security by localizing data processing and model training. Despite the rapid rise of DeviceRSs, there is a clear absence of timely literature reviews that systematically introduce, categorize and contrast these methods. To bridge this gap, we aim to provide a comprehensive survey of DeviceRSs, covering three main aspects: (1) the deployment and inference of DeviceRSs (2) the training and update of DeviceRSs (3) the security and privacy of DeviceRSs. Furthermore, we provide a fine-grained and systematic taxonomy of the methods involved in each aspect, followed by a discussion regarding challenges and future research directions. This is the first comprehensive survey on DeviceRSs that covers a spectrum of tasks to fit various needs. We believe this survey will help readers effectively grasp the current research status in this field, equip them with relevant technical foundations, and stimulate new research ideas for developing DeviceRSs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "2280284088",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "1811416884",
+                    "name": "Ruiqi Zheng"
+                },
+                {
+                    "authorId": "2161605203",
+                    "name": "Jing Long"
+                },
+                {
+                    "authorId": "2280927862",
+                    "name": "Xin Xia"
+                },
+                {
+                    "authorId": "2152862030",
+                    "name": "Yuhui Shi"
+                },
+                {
+                    "authorId": "2280285337",
+                    "name": "Chengqi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "334ebaae0a97fd7af3cd8ec0a9b02fb4fbba2f42",
+            "title": "Rethinking and Accelerating Graph Condensation: A Training-Free Approach with Class Partition",
+            "abstract": "The increasing prevalence of large-scale graphs poses a significant challenge for graph neural network training, attributed to their substantial computational requirements. In response, graph condensation (GC) emerges as a promising data-centric solution aiming to substitute the large graph with a small yet informative condensed graph to facilitate data-efficient GNN training. However, existing GC methods suffer from intricate optimization processes, necessitating excessive computing resources. In this paper, we revisit existing GC optimization strategies and identify two pervasive issues: 1. various GC optimization strategies converge to class-level node feature matching between the original and condensed graphs, making the optimization target coarse-grained despite the complex computations; 2. to bridge the original and condensed graphs, existing GC methods rely on a Siamese graph network architecture that requires time-consuming bi-level optimization with iterative gradient computations. To overcome these issues, we propose a training-free GC framework termed Class-partitioned Graph Condensation (CGC), which refines the node feature matching from the class-to-class paradigm into a novel class-to-node paradigm. Remarkably, this refinement also simplifies the GC optimization as a class partition problem, which can be efficiently solved by any clustering methods. Moreover, CGC incorporates a pre-defined graph structure to enable a closed-form solution for condensed node features, eliminating the back-and-forth gradient descent in existing GC approaches without sacrificing accuracy. Extensive experiments demonstrate that CGC achieves state-of-the-art performance with a more efficient condensation process. For instance, compared with the seminal GC method (i.e., GCond), CGC condenses the largest Reddit graph within 10 seconds, achieving a 2,680X speedup and a 1.4% accuracy increase.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2192083394",
+                    "name": "Xin Gao"
+                },
+                {
+                    "authorId": "2280284086",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2280283715",
+                    "name": "Wentao Zhang"
+                },
+                {
+                    "authorId": "28584977",
+                    "name": "Junliang Yu"
+                },
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "4d61e6d951ee1e38d68d26b400abfbe1f1b07a67",
+            "title": "Heterogeneous decentralised machine unlearning with seed model distillation",
+            "abstract": "As some recent information security legislation endowed users with unconditional rights to be forgotten by any trained machine learning model, personalised IoT service providers have to put unlearning functionality into their consideration. The most straightforward method to unlearn users' contribution is to retrain the model from the initial state, which is not realistic in high throughput applications with frequent unlearning requests. Though some machine unlearning frameworks have been proposed to speed up the retraining process, they fail to match decentralised learning scenarios. A decentralised unlearning framework called heterogeneous decentralised unlearning framework with seed (HDUS) is designed, which uses distilled seed models to construct erasable ensembles for all clients. Moreover, the framework is compatible with heterogeneous on\u2010device models, representing stronger scalability in real\u2010world applications. Extensive experiments on three real\u2010world datasets show that our HDUS achieves state\u2010of\u2010the\u2010art performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "4fb40bbfd21947c824efc235d4e318e7cc282c34",
+            "title": "Physical Trajectory Inference Attack and Defense in Decentralized POI Recommendation",
+            "abstract": "As an indispensable personalized service within Location-Based Social Networks (LBSNs), the Point-of-Interest (POI) recommendation aims to assist individuals in discovering attractive and engaging places. However, the accurate recommendation capability relies on the powerful server collecting a vast amount of users' historical check-in data, posing significant risks of privacy breaches. Although several collaborative learning (CL) frameworks for POI recommendation enhance recommendation resilience and allow users to keep personal data on-device, they still share personal knowledge to improve recommendation performance, thus leaving vulnerabilities for potential attackers. Given this, we design a new Physical Trajectory Inference Attack (PTIA) to expose users' historical trajectories. Specifically, for each user, we identify the set of interacted POIs by analyzing the aggregated information from the target POIs and their correlated POIs. We evaluate the effectiveness of PTIA on two real-world datasets across two types of decentralized CL frameworks for POI recommendation. Empirical results demonstrate that PTIA poses a significant threat to users' historical trajectories. Furthermore, Local Differential Privacy (LDP), the traditional privacy-preserving method for CL frameworks, has also been proven ineffective against PTIA. In light of this, we propose a novel defense mechanism (AGD) against PTIA based on an adversarial game to eliminate sensitive POIs and their information in correlated POIs. After conducting intensive experiments, AGD has been proven precise and practical, with minimal impact on recommendation performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161605203",
+                    "name": "Jing Long"
+                },
+                {
+                    "authorId": "2280284088",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "2281641893",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "532ed1c368eb08dfdd2ba0762daa2de5186204fc",
+            "title": "A Thorough Performance Benchmarking on Lightweight Embedding-based Recommender Systems",
+            "abstract": "Since the creation of the Web, recommender systems (RSs) have been an indispensable mechanism in information filtering. State-of-the-art RSs primarily depend on categorical features, which ecoded by embedding vectors, resulting in excessively large embedding tables. To prevent over-parameterized embedding tables from harming scalability, both academia and industry have seen increasing efforts in compressing RS embeddings. However, despite the prosperity of lightweight embedding-based RSs (LERSs), a wide diversity is seen in evaluation protocols, resulting in obstacles when relating LERS performance to real-world usability. Moreover, despite the common goal of lightweight embeddings, LERSs are evaluated with a single choice between the two main recommendation tasks -- collaborative filtering and content-based recommendation. This lack of discussions on cross-task transferability hinders the development of unified, more scalable solutions. Motivated by these issues, this study investigates various LERSs' performance, efficiency, and cross-task transferability via a thorough benchmarking process. Additionally, we propose an efficient embedding compression method using magnitude pruning, which is an easy-to-deploy yet highly competitive baseline that outperforms various complex LERSs. Our study reveals the distinct performance of LERSs across the two tasks, shedding light on their effectiveness and generalizability. To support edge-based recommendations, we tested all LERSs on a Raspberry Pi 4, where the efficiency bottleneck is exposed. Finally, we conclude this paper with critical summaries of LERS performance, model selection suggestions, and underexplored challenges around LERSs for future research. To encourage future research, we publish source codes and artifacts at \\href{this link}{https://github.com/chenxing1999/recsys-benchmark}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2309215777",
+                    "name": "Hung Vinh Tran"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2129485845",
+                    "name": "Zi-Liang Huang"
+                },
+                {
+                    "authorId": "2281001972",
+                    "name": "Lizhen Cui"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "575d626c47d1b6b74246d7ce168a64f6bcafbe4c",
+            "title": "Diffusion-Based Cloud-Edge-Device Collaborative Learning for Next POI Recommendations",
+            "abstract": "The rapid expansion of Location-Based Social Networks (LBSNs) has highlighted the importance of effective next Point-of-Interest (POI) recommendations, which leverage historical check-in data to predict users' next POIs to visit. Traditional centralized deep neural networks (DNNs) offer impressive POI recommendation performance but face challenges due to privacy concerns and limited timeliness. In response, on-device POI recommendations have been introduced, utilizing federated learning (FL) and decentralized approaches to ensure privacy and recommendation timeliness. However, these methods often suffer from computational strain on devices and struggle to adapt to new users and regions. This paper introduces a novel collaborative learning framework, Diffusion-Based Cloud-Edge-Device Collaborative Learning for Next POI Recommendations (DCPR), leveraging the diffusion model known for its success across various domains. DCPR operates with a cloud-edge-device architecture to offer region-specific and highly personalized POI recommendations while reducing on-device computational burdens. DCPR minimizes on-device computational demands through a unique blend of global and local learning processes. Our evaluation with two real-world datasets demonstrates DCPR's superior performance in recommendation accuracy, efficiency, and adaptability to new users and regions, marking a significant step forward in on-device POI recommendation technology.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161605203",
+                    "name": "Jing Long"
+                },
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "2280284086",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2155651371",
+                    "name": "Yang Wang"
+                },
+                {
+                    "authorId": "2146059429",
+                    "name": "Meng Wang"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "92ea98ca67767c05e9a32ed4a9e0937257c9b9cf",
+            "title": "Graph Condensation: A Survey",
+            "abstract": "The rapid growth of graph data poses significant challenges in storage, transmission, and particularly the training of graph neural networks (GNNs). To address these challenges, graph condensation (GC) has emerged as an innovative solution. GC focuses on synthesizing a compact yet highly representative graph, enabling GNNs trained on it to achieve performance comparable to those trained on the original large graph. The notable efficacy of GC and its broad prospects have garnered significant attention and spurred extensive research. This survey paper provides an up-to-date and systematic overview of GC, organizing existing research into five categories aligned with critical GC evaluation criteria: effectiveness, generalization, efficiency, fairness, and robustness. To facilitate an in-depth and comprehensive understanding of GC, this paper examines various methods under each category and thoroughly discusses two essential components within GC: optimization strategies and condensed graph generation. We also empirically compare and analyze representative GC methods with diverse optimization strategies based on the five proposed GC evaluation criteria. Finally, we explore the applications of GC in various fields, outline the related open-source libraries, and highlight the present challenges and novel insights, with the aim of promoting advancements in future research. The related resources can be found at https://github.com/XYGaoG/Graph-Condensation-Papers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2192083394",
+                    "name": "Xin Gao"
+                },
+                {
+                    "authorId": "28584977",
+                    "name": "Junliang Yu"
+                },
+                {
+                    "authorId": "2281470021",
+                    "name": "Wei Jiang"
+                },
+                {
+                    "authorId": "2280284086",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2280283715",
+                    "name": "Wentao Zhang"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "a4c0f12d4217b31d8dd8217bc6083381929740e2",
+            "title": "Poisoning Decentralized Collaborative Recommender System and Its Countermeasures",
+            "abstract": "To make room for privacy and efficiency, the deployment of many recommender systems is experiencing a shift from central servers to personal devices, where the federated recommender systems (FedRecs) and decentralized collaborative recommender systems (DecRecs) are arguably the two most representative paradigms. While both leverage knowledge (e.g., gradients) sharing to facilitate learning local models, FedRecs rely on a central server to coordinate the optimization process, yet in DecRecs, the knowledge sharing directly happens between clients. Knowledge sharing also opens a backdoor for model poisoning attacks, where adversaries disguise themselves as benign clients and disseminate polluted knowledge to achieve malicious goals like promoting an item's exposure rate. Although research on such poisoning attacks provides valuable insights into finding security loopholes and corresponding countermeasures, existing attacks mostly focus on FedRecs, and are either inapplicable or ineffective for DecRecs. Compared with FedRecs where the tampered information can be universally distributed to all clients once uploaded to the cloud, each adversary in DecRecs can only communicate with neighbor clients of a small size, confining its impact to a limited range. To fill the gap, we present a novel attack method named Poisoning with Adaptive Malicious Neighbors (PAMN). With item promotion in top-K recommendation as the attack objective, PAMN effectively boosts target items' ranks with several adversaries that emulate benign clients and transfers adaptively crafted gradients conditioned on each adversary's neighbors. Moreover, with the vulnerabilities of DecRecs uncovered, a dedicated defensive mechanism based on user-level gradient clipping with sparsified updating is proposed. Extensive experiments demonstrate the effectiveness of the poisoning attack and the robustness of our defensive mechanism.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1811416884",
+                    "name": "Ruiqi Zheng"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "2280284088",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2281641893",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2152862030",
+                    "name": "Yuhui Shi"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "a5adf2881910398948f3c7cdbcf73ef2dfa4e1e7",
+            "title": "Lightweight Embeddings for Graph Collaborative Filtering",
+            "abstract": "Graph neural networks (GNNs) are currently one of the most performant collaborative filtering methods. Meanwhile, owing to the use of an embedding table to represent each user/item as a distinct vector, GNN-based recommenders have inherited the long-standing defect of parameter inefficiency. As a common practice for scalable embeddings, parameter sharing enables the use of fewer embedding vectors (i.e., meta-embeddings). When assigning meta-embeddings, most existing methods are a heuristically designed, predefined mapping from each user's/item's ID to the corresponding meta-embedding indexes, thus simplifying the optimization problem into learning only the meta-embeddings. However, in the context of GNN-based collaborative filtering, such a fixed mapping omits the semantic correlations between entities that are evident in the user-item interaction graph, leading to suboptimal recommendation performance. To this end, we propose Lightweight Embeddings for Graph Collaborative Filtering (LEGCF), a parameter-efficient embedding framework dedicated to GNN-based recommenders. LEGCF innovatively introduces an assignment matrix as an extra learnable component on top of meta-embeddings. To jointly optimize these two heavily entangled components, aside from learning the meta-embeddings by minimizing the recommendation loss, LEGCF further performs efficient assignment update by enforcing a novel semantic similarity constraint and finding its closed-form solution based on matrix pseudo-inverse. The meta-embeddings and assignment matrix are alternately updated, where the latter is sparsified on the fly to ensure negligible storage overhead. Extensive experiments on three benchmark datasets have verified LEGCF's smallest trade-off between size and performance, with consistent accuracy gain over state-of-the-art baselines. The codebase of LEGCF is available in https://github.com/xurong-liang/LEGCF.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2238394188",
+                    "name": "Xurong Liang"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2281001972",
+                    "name": "Lizhen Cui"
+                },
+                {
+                    "authorId": "2155651371",
+                    "name": "Yang Wang"
+                },
+                {
+                    "authorId": "2146059429",
+                    "name": "Meng Wang"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        }
+    ]
+}

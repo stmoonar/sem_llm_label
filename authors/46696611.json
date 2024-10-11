@@ -1,0 +1,786 @@
+{
+    "authorId": "46696611",
+    "papers": [
+        {
+            "paperId": "8e86933e24e247d0c04c6bf7dcbdbed3bfc8b75d",
+            "title": "Improving Representation of High-frequency Components for Medical Foundation Models",
+            "abstract": "Foundation models have recently attracted significant attention for their impressive generalizability across diverse downstream tasks. However, these models are demonstrated to exhibit great limitations in representing high-frequency components and fine-grained details. In many medical imaging tasks, the precise representation of such information is crucial due to the inherently intricate anatomical structures, sub-visual features, and complex boundaries involved. Consequently, the limited representation of prevalent foundation models can result in significant performance degradation or even failure in these tasks. To address these challenges, we propose a novel pretraining strategy, named Frequency-advanced Representation Autoencoder (Frepa). Through high-frequency masking and low-frequency perturbation combined with adversarial learning, Frepa encourages the encoder to effectively represent and preserve high-frequency components in the image embeddings. Additionally, we introduce an innovative histogram-equalized image masking strategy, extending the Masked Autoencoder approach beyond ViT to other architectures such as Swin Transformer and convolutional networks. We develop Frepa across nine medical modalities and validate it on 32 downstream tasks for both 2D images and 3D volume data. Without fine-tuning, Frepa can outperform other self-supervised pretraining methods and, in some cases, even surpasses task-specific trained models. This improvement is particularly significant for tasks involving fine-grained details, such as achieving up to a +15% increase in DSC for retina vessel segmentation and a +7% increase in IoU for lung nodule detection. Further experiments quantitatively reveal that Frepa enables superior high-frequency representations and preservation in the embeddings, underscoring its potential for developing more generalized and universal medical image foundation models.",
+            "fieldsOfStudy": [
+                "Engineering",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2166165505",
+                    "name": "Yuetan Chu"
+                },
+                {
+                    "authorId": "2312338401",
+                    "name": "Yilan Zhang"
+                },
+                {
+                    "authorId": "2279914462",
+                    "name": "Zhongyi Han"
+                },
+                {
+                    "authorId": "2296664618",
+                    "name": "Changchun Yang"
+                },
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "2312325938",
+                    "name": "Gongning Luo"
+                },
+                {
+                    "authorId": "2254373994",
+                    "name": "Xin Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "d2ce3deb40b4b3099e014c651c33dbe210bfee56",
+            "title": "Deep learning-driven pulmonary arteries and veins segmentation reveals demography-associated pulmonary vasculature anatomy",
+            "abstract": "Pulmonary artery-vein segmentation is crucial for diagnosing pulmonary diseases and surgical planning, and is traditionally achieved by Computed Tomography Pulmonary Angiography (CTPA). However, concerns regarding adverse health effects from contrast agents used in CTPA have constrained its clinical utility. In contrast, identifying arteries and veins using non-contrast CT, a conventional and low-cost clinical examination routine, has long been considered impossible. Here we propose a High-abundant Pulmonary Artery-vein Segmentation (HiPaS) framework achieving accurate artery-vein segmentation on both non-contrast CT and CTPA across various spatial resolutions. HiPaS first performs spatial normalization on raw CT scans via a super-resolution module, and then iteratively achieves segmentation results at different branch levels by utilizing the low-level vessel segmentation as a prior for high-level vessel segmentation. We trained and validated HiPaS on our established multi-centric dataset comprising 1,073 CT volumes with meticulous manual annotation. Both quantitative experiments and clinical evaluation demonstrated the superior performance of HiPaS, achieving a dice score of 91.8% and a sensitivity of 98.0%. Further experiments demonstrated the non-inferiority of HiPaS segmentation on non-contrast CT compared to segmentation on CTPA. Employing HiPaS, we have conducted an anatomical study of pulmonary vasculature on 10,613 participants in China (five sites), discovering a new association between pulmonary vessel abundance and sex and age: vessel abundance is significantly higher in females than in males, and slightly decreases with age, under the controlling of lung volumes (p<0.0001). HiPaS realizing accurate artery-vein segmentation delineates a promising avenue for clinical diagnosis and understanding pulmonary physiology in a non-invasive manner.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2166165505",
+                    "name": "Yuetan Chu"
+                },
+                {
+                    "authorId": "2918346",
+                    "name": "Gongning Luo"
+                },
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "46179154",
+                    "name": "Shaodong Cao"
+                },
+                {
+                    "authorId": "2296138398",
+                    "name": "Guolin Ma"
+                },
+                {
+                    "authorId": "2296129078",
+                    "name": "Xianglin Meng"
+                },
+                {
+                    "authorId": "1502765940",
+                    "name": "Juexiao Zhou"
+                },
+                {
+                    "authorId": "2296664618",
+                    "name": "Changchun Yang"
+                },
+                {
+                    "authorId": "2269547024",
+                    "name": "Dexuan Xie"
+                },
+                {
+                    "authorId": "2295987429",
+                    "name": "Ricardo Henao"
+                },
+                {
+                    "authorId": "2296478530",
+                    "name": "Xigang Xiao"
+                },
+                {
+                    "authorId": "2296240078",
+                    "name": "Lianming Wu"
+                },
+                {
+                    "authorId": "2254314887",
+                    "name": "Zhaowen Qiu"
+                },
+                {
+                    "authorId": "2254373994",
+                    "name": "Xin Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "27387572208cf777fb2c55db8880dd5407d0e779",
+            "title": "Personalized and privacy-preserving federated heterogeneous medical image analysis with PPPML-HMI",
+            "abstract": "Heterogeneous data is endemic due to the use of diverse models and settings of devices by hospitals in the field of medical imaging. However, there are few open-source frameworks for federated heterogeneous medical image analysis with personalization and privacy protection without the demand to modify the existing model structures or to share any private data. In this paper, we proposed PPPML-HMI, a novel open-source learning paradigm for personalized and privacy-preserving federated heterogeneous medical image analysis. To our best knowledge, personalization and privacy protection were achieved simultaneously for the first time under the federated scenario by integrating the PerFedAvg algorithm and designing the novel cyclic secure aggregation with the homomorphic encryption algorithm. To show the utility of PPPML-HMI, we applied it to a simulated classification task namely the classification of healthy people and patients from the RAD-ChestCT Dataset, and one real-world segmentation task namely the segmentation of lung infections from COVID-19 CT scans. For the real-world task, PPPML-HMI achieved $sim$5% higher Dice score on average compared to conventional FL under the heterogeneous scenario. Meanwhile, we applied the improved deep leakage from gradients to simulate adversarial attacks and showed the strong privacy-preserving capability of PPPML-HMI. By applying PPPML-HMI to both tasks with different neural networks, a varied number of users, and sample sizes, we further demonstrated the strong generalizability of PPPML-HMI.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "1502765940",
+                    "name": "Juexiao Zhou"
+                },
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "2161017247",
+                    "name": "Di Wang"
+                },
+                {
+                    "authorId": "2142540079",
+                    "name": "Xiaopeng Xu"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2166165505",
+                    "name": "Yuetan Chu"
+                },
+                {
+                    "authorId": "2028962393",
+                    "name": "Wenkai Han"
+                },
+                {
+                    "authorId": "2198273175",
+                    "name": "Xin Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "27d0d2923a42bd2bced1b100844e232ff87368e3",
+            "title": "SkinGPT-4: An Interactive Dermatology Diagnostic System with Visual Large Language Model",
+            "abstract": "Skin and subcutaneous diseases rank high among the leading contributors to the global burden of nonfatal diseases, impacting a considerable portion of the population. Nonetheless, the field of dermatology diagnosis faces three significant hurdles. Firstly, there is a shortage of dermatologists accessible to diagnose patients, particularly in rural regions. Secondly, accurately interpreting skin disease images poses a considerable challenge. Lastly, generating patient-friendly diagnostic reports is usually a time-consuming and labor-intensive task for dermatologists. To tackle these challenges, we present SkinGPT-4, which is the world's first interactive dermatology diagnostic system powered by an advanced visual large language model. SkinGPT-4 leverages a fine-tuned version of MiniGPT-4, trained on an extensive collection of skin disease images (comprising 52,929 publicly available and proprietary images) along with clinical concepts and doctors' notes. We designed a two-step training process to allow SkinGPT to express medical features in skin disease images with natural language and make accurate diagnoses of the types of skin diseases. With SkinGPT-4, users could upload their own skin photos for diagnosis, and the system could autonomously evaluate the images, identifies the characteristics and categories of the skin conditions, performs in-depth analysis, and provides interactive treatment recommendations. Meanwhile, SkinGPT-4's local deployment capability and commitment to user privacy also render it an appealing choice for patients in search of a dependable and precise diagnosis of their skin ailments. To demonstrate the robustness of SkinGPT-4, we conducted quantitative evaluations on 150 real-life cases, which were independently reviewed by certified dermatologists, and showed that SkinGPT-4 could provide accurate diagnoses of skin diseases. Though SkinGPT-4 is not a substitute for doctors, it could enhance users' comprehension of their medical conditions, facilitate improve communication between patients and doctors, expedite the diagnostic process for dermatologists, and potentially promote human-centred care and healthcare equity in underdeveloped areas.",
+            "fieldsOfStudy": [
+                "Engineering",
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "1502765940",
+                    "name": "Juexiao Zhou"
+                },
+                {
+                    "authorId": "3455313",
+                    "name": "Xiao-Zhen He"
+                },
+                {
+                    "authorId": "46732892",
+                    "name": "Liyuan Sun"
+                },
+                {
+                    "authorId": "2293560831",
+                    "name": "Jiannan Xu"
+                },
+                {
+                    "authorId": "46772896",
+                    "name": "Xiuying Chen"
+                },
+                {
+                    "authorId": "2166165505",
+                    "name": "Yuetan Chu"
+                },
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "51072831",
+                    "name": "Xingyu Liao"
+                },
+                {
+                    "authorId": "2119454424",
+                    "name": "Bin Zhang"
+                },
+                {
+                    "authorId": "2198273175",
+                    "name": "Xin Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "9d6b5bd74f17b2768290189f6548312df83abb67",
+            "title": "A unified method to revoke the private data of patients in intelligent healthcare with audit to forget",
+            "abstract": "Revoking personal private data is one of the basic human rights, which has already been sheltered by several privacy-preserving laws in many countries. However, with the development of data science, machine learning and deep learning techniques, this right is usually neglected or violated as more and more patients\u2019 data are being collected and used for model training, especially in intelligent healthcare, thus making intelligent healthcare a sector where technology must meet the law, regulations, and privacy principles to ensure that the innovation is for the common good. In order to secure patients\u2019 right to be forgotten, we proposed a novel solution by using auditing to guide the forgetting process, where auditing means determining whether a dataset has been used to train the model and forgetting requires the information of a query dataset to be forgotten from the target model. We unified these two tasks by introducing a new approach called knowledge purification. To implement our solution, we developed AFS, a unified open-source software, which is able to evaluate and revoke patients\u2019 private data from pre-trained deep learning models. We demonstrated the generality of AFS by applying it to four tasks on different datasets with various data sizes and architectures of deep learning networks. The software is publicly available at https://github.com/JoshuaChou2018/AFS.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "1502765940",
+                    "name": "Juexiao Zhou"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "51072831",
+                    "name": "Xingyu Liao"
+                },
+                {
+                    "authorId": "2119454424",
+                    "name": "Bin Zhang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Wenjia He"
+                },
+                {
+                    "authorId": "66545108",
+                    "name": "Zhongxiao Li"
+                },
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "2198273175",
+                    "name": "Xin Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "08e953815494e126aaa15fa65092c4d49a6bf44f",
+            "title": "A Roadmap for Big Model",
+            "abstract": "With the rapid development of deep learning, training Big Models (BMs) for multiple downstream tasks becomes a popular paradigm. Researchers have achieved various outcomes in the construction of BMs and the BM application in many fields. At present, there is a lack of research work that sorts out the overall progress of BMs and guides the follow-up research. In this paper, we cover not only the BM technologies themselves but also the prerequisites for BM training and applications with BMs, dividing the BM review into four parts: Resource, Models, Key Technologies and Application. We introduce 16 specific BM-related topics in those four parts, they are Data, Knowledge, Computing System, Parallel Training System, Language Model, Vision Model, Multi-modal Model, Theory&Interpretability, Commonsense Reasoning, Reliability&Security, Governance, Evaluation, Machine Translation, Text Generation, Dialogue and Protein Research. In each topic, we summarize clearly the current studies and propose some future research directions. At the end of this paper, we conclude the further development of BMs in a more general view.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "119548118",
+                    "name": "Sha Yuan"
+                },
+                {
+                    "authorId": "1907469334",
+                    "name": "Hanyu Zhao"
+                },
+                {
+                    "authorId": null,
+                    "name": "Shuai Zhao"
+                },
+                {
+                    "authorId": "2124048409",
+                    "name": "Jiahong Leng"
+                },
+                {
+                    "authorId": "1753669403",
+                    "name": "Yangxiao Liang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xiaozhi Wang"
+                },
+                {
+                    "authorId": "2116034394",
+                    "name": "Jifan Yu"
+                },
+                {
+                    "authorId": "48574888",
+                    "name": "Xin Lv"
+                },
+                {
+                    "authorId": "1740580186",
+                    "name": "Zhou Shao"
+                },
+                {
+                    "authorId": "151050884",
+                    "name": "Jiaao He"
+                },
+                {
+                    "authorId": "2149202150",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "46270573",
+                    "name": "Zhenghao Liu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Ning Ding"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "1939358",
+                    "name": "Yizhao Gao"
+                },
+                {
+                    "authorId": "48570713",
+                    "name": "L. Zhang"
+                },
+                {
+                    "authorId": "145573466",
+                    "name": "Ming Ding"
+                },
+                {
+                    "authorId": "47967033",
+                    "name": "Cong Fang"
+                },
+                {
+                    "authorId": "2115869684",
+                    "name": "Yisen Wang"
+                },
+                {
+                    "authorId": "2054275000",
+                    "name": "Mingsheng Long"
+                },
+                {
+                    "authorId": "39772285",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "3431029",
+                    "name": "Yinpeng Dong"
+                },
+                {
+                    "authorId": "19201674",
+                    "name": "Tianyu Pang"
+                },
+                {
+                    "authorId": "2153522384",
+                    "name": "Peng Cui"
+                },
+                {
+                    "authorId": "2002075",
+                    "name": "Lingxiao Huang"
+                },
+                {
+                    "authorId": "1725433496",
+                    "name": "Zhengxuan Liang"
+                },
+                {
+                    "authorId": "2476503",
+                    "name": "Huawei Shen"
+                },
+                {
+                    "authorId": "2153727929",
+                    "name": "Hui Zhang"
+                },
+                {
+                    "authorId": "22063226",
+                    "name": "Quanshi Zhang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Qingxiu Dong"
+                },
+                {
+                    "authorId": "3468510",
+                    "name": "Zhixing Tan"
+                },
+                {
+                    "authorId": "2067908",
+                    "name": "Mingxuan Wang"
+                },
+                {
+                    "authorId": "2117011363",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "47893252",
+                    "name": "Haoran Li"
+                },
+                {
+                    "authorId": "3299718",
+                    "name": "Junwei Bao"
+                },
+                {
+                    "authorId": "3202968",
+                    "name": "Yingwei Pan"
+                },
+                {
+                    "authorId": "2108309435",
+                    "name": "Weinan Zhang"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "2147420700",
+                    "name": "Rui Yan"
+                },
+                {
+                    "authorId": "50727524",
+                    "name": "Chence Shi"
+                },
+                {
+                    "authorId": "2153554889",
+                    "name": "Minghao Xu"
+                },
+                {
+                    "authorId": "1490733324",
+                    "name": "Zuobai Zhang"
+                },
+                {
+                    "authorId": "2142449761",
+                    "name": "Guoqiang Wang"
+                },
+                {
+                    "authorId": "2119600282",
+                    "name": "X. Pan"
+                },
+                {
+                    "authorId": "2145680175",
+                    "name": "Meng-Jie Li"
+                },
+                {
+                    "authorId": "2056598979",
+                    "name": "Xiaoyu Chu"
+                },
+                {
+                    "authorId": "1423719712",
+                    "name": "Zijun Yao"
+                },
+                {
+                    "authorId": "70585600",
+                    "name": "Fangwei Zhu"
+                },
+                {
+                    "authorId": "1712738522",
+                    "name": "S. Cao"
+                },
+                {
+                    "authorId": "39057321",
+                    "name": "Weicheng Xue"
+                },
+                {
+                    "authorId": "2124489983",
+                    "name": "Zixuan Ma"
+                },
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "1633538428",
+                    "name": "Zheni Zeng"
+                },
+                {
+                    "authorId": "52297757",
+                    "name": "Ganqu Cui"
+                },
+                {
+                    "authorId": "2109136284",
+                    "name": "Weize Chen"
+                },
+                {
+                    "authorId": "2150606888",
+                    "name": "Weilin Zhao"
+                },
+                {
+                    "authorId": "2116472559",
+                    "name": "Yuan Yao"
+                },
+                {
+                    "authorId": "50492525",
+                    "name": "Peng Li"
+                },
+                {
+                    "authorId": "72315096",
+                    "name": "Wenzhao Zheng"
+                },
+                {
+                    "authorId": "2118223312",
+                    "name": "Wenliang Zhao"
+                },
+                {
+                    "authorId": "2142663132",
+                    "name": "Ziyi Wang"
+                },
+                {
+                    "authorId": "2208115583",
+                    "name": "Bo Zhang"
+                },
+                {
+                    "authorId": "21313225",
+                    "name": "Nanyi Fei"
+                },
+                {
+                    "authorId": "120897486",
+                    "name": "Anwen Hu"
+                },
+                {
+                    "authorId": "152355659",
+                    "name": "Zenan Ling"
+                },
+                {
+                    "authorId": "2157147413",
+                    "name": "Hao Li"
+                },
+                {
+                    "authorId": null,
+                    "name": "Boxi Cao"
+                },
+                {
+                    "authorId": "2110528051",
+                    "name": "Xi Han"
+                },
+                {
+                    "authorId": "3104591",
+                    "name": "W. Zhan"
+                },
+                {
+                    "authorId": "7267809",
+                    "name": "Baobao Chang"
+                },
+                {
+                    "authorId": "144990601",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2153626892",
+                    "name": "J. Deng"
+                },
+                {
+                    "authorId": "2133353675",
+                    "name": "Juanzi Li"
+                },
+                {
+                    "authorId": "2055765060",
+                    "name": "Lei Hou"
+                },
+                {
+                    "authorId": "48812053",
+                    "name": "Xi-Ming Cao"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                },
+                {
+                    "authorId": "2110326616",
+                    "name": "Zhi-Gang Lu"
+                },
+                {
+                    "authorId": "66381659",
+                    "name": "Qingyu Jin"
+                },
+                {
+                    "authorId": "35119829",
+                    "name": "Ruihua Song"
+                },
+                {
+                    "authorId": "2104586007",
+                    "name": "Jiaxin Wen"
+                },
+                {
+                    "authorId": "2112390185",
+                    "name": "Zhou Lin"
+                },
+                {
+                    "authorId": "2108596636",
+                    "name": "Liwei Wang"
+                },
+                {
+                    "authorId": "2093561216",
+                    "name": "Hang Su"
+                },
+                {
+                    "authorId": "2146280975",
+                    "name": "Junting Zhu"
+                },
+                {
+                    "authorId": "3335836",
+                    "name": "Zhifang Sui"
+                },
+                {
+                    "authorId": "2107983202",
+                    "name": "Jiaju Zhang"
+                },
+                {
+                    "authorId": "49421824",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "144137069",
+                    "name": "Xiaodong He"
+                },
+                {
+                    "authorId": "2196817617",
+                    "name": "Minlie Huang"
+                },
+                {
+                    "authorId": "2219805345",
+                    "name": "J. Tang"
+                },
+                {
+                    "authorId": "2148911975",
+                    "name": "Jie Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "2c25fbb9250b404090052df282b9876915a2f7cc",
+            "title": "DeeReCT-TSS: A novel meta-learning-based method annotates TSS in multiple cell types based on DNA sequences and RNA-seq data",
+            "abstract": "The accurate annotation of transcription start sites (TSSs) and their usage is critical for the mechanistic understanding of gene regulation under different biological contexts. To fulfill this, on one hand, specific high-throughput experimental technologies have been developed to capture TSSs in a genome-wide manner. On the other hand, various computational tools have also been developed for in silico prediction of TSSs solely based on genomic sequences. Most of these computational tools cast the problem as a binary classification task on a balanced dataset and thus result in drastic false positive predictions when applied on the genome-scale. To address these issues, we present DeeReCT-TSS, a deep-learning-based method that is capable of TSSs identification across the whole genome based on both DNA sequences and conventional RNA-seq data. We show that by effectively incorporating these two sources of information, DeeReCT-TSS significantly outperforms other solely sequence-based methods on the precise annotation of TSSs used in different cell types. Furthermore, we develop a meta-learning-based extension for simultaneous transcription start site (TSS) annotation on 10 cell types, which enables the identification of cell-type-specific TSS. Finally, we demonstrate the high precision of DeeReCT-TSS on two independent datasets from the ENCODE project by correlating our predicted TSSs with experimentally defined TSS chromatin states. Our application, pre-trained models and data are available at https://github.com/JoshuaChou2018/DeeReCT-TSS_release.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "1502765940",
+                    "name": "Juexiao Zhou"
+                },
+                {
+                    "authorId": "2119452217",
+                    "name": "Bin Zhang"
+                },
+                {
+                    "authorId": "1499279004",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "66545108",
+                    "name": "Zhongxiao Li"
+                },
+                {
+                    "authorId": "1388696717",
+                    "name": "Yongkang Long"
+                },
+                {
+                    "authorId": "2028962393",
+                    "name": "Wenkai Han"
+                },
+                {
+                    "authorId": "2145361648",
+                    "name": "Mengran Wang"
+                },
+                {
+                    "authorId": "31665823",
+                    "name": "H. Cui"
+                },
+                {
+                    "authorId": "2154938902",
+                    "name": "Wei Chen"
+                },
+                {
+                    "authorId": "143703146",
+                    "name": "Xin Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "6224055d8e1ce1e8c16c5fd56a38ac4ef637aac7",
+            "title": "A Rapid, Accurate and Machine-Agnostic Segmentation and Quantification Method for CT-Based COVID-19 Diagnosis",
+            "abstract": "COVID-19 has caused a global pandemic and become the most urgent threat to the entire world. Tremendous efforts and resources have been invested in developing diagnosis, prognosis and treatment strategies to combat the disease. Although nucleic acid detection has been mainly used as the gold standard to confirm this RNA virus-based disease, it has been shown that such a strategy has a high false negative rate, especially for patients in the early stage, and thus CT imaging has been applied as a major diagnostic modality in confirming positive COVID-19. Despite the various, urgent advances in developing artificial intelligence (AI)-based computer-aided systems for CT-based COVID-19 diagnosis, most of the existing methods can only perform classification, whereas the state-of-the-art segmentation method requires a high level of human intervention. In this paper, we propose a fully-automatic, rapid, accurate, and machine-agnostic method that can segment and quantify the infection regions on CT scans from different sources. Our method is founded upon two innovations: 1) the first CT scan simulator for COVID-19, by fitting the dynamic change of real patients\u2019 data measured at different time points, which greatly alleviates the data scarcity issue; and 2) a novel deep learning algorithm to solve the large-scene-small-object problem, which decomposes the 3D segmentation problem into three 2D ones, and thus reduces the model complexity by an order of magnitude and, at the same time, significantly improves the segmentation accuracy. Comprehensive experimental results over multi-country, multi-hospital, and multi-machine datasets demonstrate the superior performance of our method over the existing ones and suggest its important application value in combating the disease.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "46696611",
+                    "name": "Longxi Zhou"
+                },
+                {
+                    "authorId": "66545108",
+                    "name": "Zhongxiao Li"
+                },
+                {
+                    "authorId": "1502765940",
+                    "name": "Juexiao Zhou"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2109253936",
+                    "name": "Yupeng Chen"
+                },
+                {
+                    "authorId": "2157145509",
+                    "name": "Yuxin Huang"
+                },
+                {
+                    "authorId": "33749986",
+                    "name": "D. Xie"
+                },
+                {
+                    "authorId": "2111641804",
+                    "name": "Lintao Zhao"
+                },
+                {
+                    "authorId": "145404114",
+                    "name": "M. Fan"
+                },
+                {
+                    "authorId": "1760403",
+                    "name": "S. Hashmi"
+                },
+                {
+                    "authorId": "1845923258",
+                    "name": "Faisal Abdelkareem"
+                },
+                {
+                    "authorId": "2294254994",
+                    "name": "Riham Eiada"
+                },
+                {
+                    "authorId": "12449260",
+                    "name": "Xigang Xiao"
+                },
+                {
+                    "authorId": "40441224",
+                    "name": "Lihua Li"
+                },
+                {
+                    "authorId": "2053913691",
+                    "name": "Zhaowen Qiu"
+                },
+                {
+                    "authorId": "143703146",
+                    "name": "Xin Gao"
+                }
+            ]
+        }
+    ]
+}

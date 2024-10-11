@@ -1,0 +1,224 @@
+{
+    "authorId": "9499046",
+    "papers": [
+        {
+            "paperId": "296e87dfabab50505685574bb0698b35e1244a48",
+            "title": "$L_q$ Lower Bounds on Distributed Estimation via Fisher Information",
+            "abstract": "Van Trees inequality, also known as the Bayesian Cram\\'er-Rao lower bound, is a powerful tool for establishing lower bounds for minimax estimation through Fisher information. It easily adapts to different statistical models and often yields tight bounds. Recently, its application has been extended to distributed estimation with privacy and communication constraints where it yields order-wise optimal minimax lower bounds for various parametric tasks under squared $L_2$ loss. However, a widely perceived drawback of the van Trees inequality is that it is limited to squared $L_2$ loss. The goal of this paper is to dispel that perception by introducing a strengthened version of the van Trees inequality that applies to general $L_q$ loss functions by building on the Efroimovich's inequality -- a lesser-known entropic inequality dating back to the 1970s. We then apply the generalized van Trees inequality to lower bound $L_q$ loss in distributed minimax estimation under communication and local differential privacy constraints. This leads to lower bounds for $L_q$ loss that apply to sequentially interactive and blackboard communication protocols. Additionally, we show how the generalized van Trees inequality can be used to obtain \\emph{local} and \\emph{non-asymptotic} minimax results that capture the hardness of estimating each instance at finite sample sizes.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109085368",
+                    "name": "Wei-Ning Chen"
+                },
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                }
+            ]
+        },
+        {
+            "paperId": "1630ec8588eadd6f5af3a2fc7bd2f8902bddbac1",
+            "title": "Exact Optimality of Communication-Privacy-Utility Tradeoffs in Distributed Mean Estimation",
+            "abstract": "We study the mean estimation problem under communication and local differential privacy constraints. While previous work has proposed \\emph{order}-optimal algorithms for the same problem (i.e., asymptotically optimal as we spend more bits), \\emph{exact} optimality (in the non-asymptotic setting) still has not been achieved. In this work, we take a step towards characterizing the \\emph{exact}-optimal approach in the presence of shared randomness (a random variable shared between the server and the user) and identify several conditions for \\emph{exact} optimality. We prove that one of the conditions is to utilize a rotationally symmetric shared random codebook. Based on this, we propose a randomization mechanism where the codebook is a randomly rotated simplex -- satisfying the properties of the \\emph{exact}-optimal codebook. The proposed mechanism is based on a $k$-closest encoding which we prove to be \\emph{exact}-optimal for the randomly rotated simplex codebook.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1707440322",
+                    "name": "Berivan Isik"
+                },
+                {
+                    "authorId": "2109085368",
+                    "name": "Wei-Ning Chen"
+                },
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                },
+                {
+                    "authorId": "4820756",
+                    "name": "T. Weissman"
+                },
+                {
+                    "authorId": "3268846",
+                    "name": "Albert No"
+                }
+            ]
+        },
+        {
+            "paperId": "41c8a2a6ca140eeb9da52cb852e49d5ce7ffa162",
+            "title": "Differentially Private Decoupled Graph Convolutions for Multigranular Topology Protection",
+            "abstract": "GNNs can inadvertently expose sensitive user information and interactions through their model predictions. To address these privacy concerns, Differential Privacy (DP) protocols are employed to control the trade-off between provable privacy protection and model utility. Applying standard DP approaches to GNNs directly is not advisable due to two main reasons. First, the prediction of node labels, which relies on neighboring node attributes through graph convolutions, can lead to privacy leakage. Second, in practical applications, the privacy requirements for node attributes and graph topology may differ. In the latter setting, existing DP-GNN models fail to provide multigranular trade-offs between graph topology privacy, node attribute privacy, and GNN utility. To address both limitations, we propose a new framework termed Graph Differential Privacy (GDP), specifically tailored to graph learning. GDP ensures both provably private model parameters as well as private predictions. Additionally, we describe a novel unified notion of graph dataset adjacency to analyze the properties of GDP for different levels of graph topology privacy. Our findings reveal that DP-GNNs, which rely on graph convolutions, not only fail to meet the requirements for multigranular graph topology privacy but also necessitate the injection of DP noise that scales at least linearly with the maximum node degree. In contrast, our proposed Differentially Private Decoupled Graph Convolutions (DPDGCs) represent a more flexible and efficient alternative to graph convolutions that still provides the necessary guarantees of GDP. To validate our approach, we conducted extensive experiments on seven node classification benchmarking and illustrative synthetic datasets. The results demonstrate that DPDGCs significantly outperform existing DP-GNNs in terms of privacy-utility trade-offs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "121307942",
+                    "name": "Eli Chien"
+                },
+                {
+                    "authorId": "2109085368",
+                    "name": "Wei-Ning Chen"
+                },
+                {
+                    "authorId": "2084643427",
+                    "name": "Chao Pan"
+                },
+                {
+                    "authorId": "1561672016",
+                    "name": "Pan Li"
+                },
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                },
+                {
+                    "authorId": "1743831",
+                    "name": "O. Milenkovic"
+                }
+            ]
+        },
+        {
+            "paperId": "9c0fd8a359d5e8556a1e1828de8f3f30e30fa59b",
+            "title": "The communication cost of security and privacy in federated frequency estimation",
+            "abstract": "We consider the federated frequency estimation problem, where each user holds a private item $X_i$ from a size-$d$ domain and a server aims to estimate the empirical frequency (i.e., histogram) of $n$ items with $n \\ll d$. Without any security and privacy considerations, each user can communicate its item to the server by using $\\log d$ bits. A naive application of secure aggregation protocols would, however, require $d\\log n$ bits per user. Can we reduce the communication needed for secure aggregation, and does security come with a fundamental cost in communication? In this paper, we develop an information-theoretic model for secure aggregation that allows us to characterize the fundamental cost of security and privacy in terms of communication. We show that with security (and without privacy) $\\Omega\\left( n \\log d \\right)$ bits per user are necessary and sufficient to allow the server to compute the frequency distribution. This is significantly smaller than the $d\\log n$ bits per user needed by the naive scheme, but significantly higher than the $\\log d$ bits per user needed without security. To achieve differential privacy, we construct a linear scheme based on a noisy sketch which locally perturbs the data and does not require a trusted server (a.k.a. distributed differential privacy). We analyze this scheme under $\\ell_2$ and $\\ell_\\infty$ loss. By using our information-theoretic framework, we show that the scheme achieves the optimal accuracy-privacy trade-off with optimal communication cost, while matching the performance in the centralized case where data is stored in the central server.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109085368",
+                    "name": "Wei-Ning Chen"
+                },
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2528900",
+                    "name": "Akash Bharadwaj"
+                }
+            ]
+        },
+        {
+            "paperId": "d82e01d4e3741dd44dd164dd17e6bd48446b62cc",
+            "title": "Lower Bounds for Learning Distributions under Communication Constraints via Fisher Information",
+            "abstract": "We consider the problem of learning high-dimensional, nonparametric and structured (e.g. Gaussian) distributions in distributed networks, where each node in the network observes an independent sample from the underlying distribution and can use $k$ bits to communicate its sample to a central processor. We consider three different models for communication. Under the independent model, each node communicates its sample to a central processor by independently encoding it into $k$ bits. Under the more general sequential or blackboard communication models, nodes can share information interactively but each node is restricted to write at most $k$ bits on the final transcript. We characterize the impact of the communication constraint $k$ on the minimax risk of estimating the underlying distribution under $\\ell^2$ loss. We develop minimax lower bounds that apply in a unified way to many common statistical models and reveal that the impact of the communication constraint can be qualitatively different depending on the tail behavior of the score function associated with each model. A key ingredient in our proofs is a geometric characterization of Fisher information from quantized samples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "8790505",
+                    "name": "L. P. Barnes"
+                },
+                {
+                    "authorId": "48386120",
+                    "name": "Yanjun Han"
+                },
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                }
+            ]
+        },
+        {
+            "paperId": "332e10ad529d3f2074e5e01ffdd5e1df28efc8a1",
+            "title": "When Are Dynamic Relaying Strategies Necessary in Half-Duplex Wireless Networks?",
+            "abstract": "In this paper, we study a simple question: when are dynamic relaying strategies essential in optimizing the diversity-multiplexing tradeoff (DMT) in half-duplex wireless relay networks? This is motivated by apparently two contrasting results even for a simple three-node network with a single half-duplex relay. When all channels in the system are assumed to be independent and identically fading, a static schedule where the relay listens half the time and transmits half the time combined with quantize-map-and-forward (QMF) relaying is known to achieve the full-duplex performance. However, when there is no direct link between the source and the destination, a dynamic decode-and-forward (DDF) strategy is needed to achieve the optimal tradeoff. In this case, a static schedule is strictly suboptimal and the optimal tradeoff is significantly worse than the full-duplex performance. In this paper, we study the general case when the direct link is neither as strong as the other links nor fully nonexistent, and identify regimes where dynamic schedules are necessary and those where static schedules are enough. We identify four qualitatively different regimes for the single-relay channel, where the tradeoff between diversity and multiplexing is significantly different. We show that in all these regimes one of the above two strategies is sufficient to achieve the optimal tradeoff by developing a new upper bound on the best achievable tradeoff under channel state information available only at the receivers. A natural next question is whether these two strategies are sufficient to achieve the DMT of more general half-duplex wireless networks with a larger number of relays. We propose a generalization of the two existing schemes through a dynamic QMF (DQMF) strategy, where the relay listens for a fraction of time depending on received channel state information but not long enough to be able to decode. We show that such a DQMF strategy is needed to achieve the optimal DMT in a parallel channel with two relays, outperforming both DDF and static QMF strategies.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2350195",
+                    "name": "Ritesh Kolte"
+                },
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                },
+                {
+                    "authorId": "143813023",
+                    "name": "S. Diggavi"
+                }
+            ]
+        },
+        {
+            "paperId": "14446eebec390d83298852ca1def8e64b1448a85",
+            "title": "A scaling law approach to wireless relay networks",
+            "abstract": "There has been significant recent progress in understanding approximately optimal relaying strategies for wireless networks, such as quantize-map-and-forward, noisy network coding, amplify-and-forward, etc. While one can construct specific instances of networks, with specific topology and channel configurations, where each one of these strategies can provide significant gains over simple strategies such as routing and direct transmission, it is not clear how much gain these more sophisticated strategies can provide in generic setups. In this paper, we follow a scaling law approach and assume that nodes are randomly distributed over the network area and the channels between them are governed by a path-loss model. This approach has been used to demonstrate the benefits of sophisticated cooperation in networks with multiple unicast flows both in the high and the low SNR regimes. However, for a single unicast flow, we show that more sophisticated relaying can not provide significant gain over simple multi-hop or direct transmission both in the high and the low-SNR regimes, if the nodes are uniformly distributed over the network area. More sophisticated relaying is needed in networks where nodes are clustered in the low to moderate SNR regimes. We propose a cluster decode-and-forward strategy that is scaling optimal.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                }
+            ]
+        },
+        {
+            "paperId": "7598ec4bb611fce4de2d17764eda00dd6d26760d",
+            "title": "Network Simplification: The Gaussian diamond network with multiple antennas",
+            "abstract": "We consider the N-relay Gaussian diamond network when the source and the destination have n<inf>s</inf> \u2265 2 and n<inf>d</inf> \u2265 2 antennas respectively. We show that when n<inf>s</inf> = n<inf>d</inf> = 2 and when the individual MISO channels from the source to each relay and the SIMO channels from each relay to the destination have the same capacity, there exists a two relay sub-network that achieves approximately all the capacity of the network. To prove this result, we establish a simple relation between the joint entropies of three Gaussian random variables, which is not implied by standard Shannon-type entropy inequalities.<sup>1</sup>",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "3278596",
+                    "name": "Caner Nazaroglu"
+                },
+                {
+                    "authorId": "2265652891",
+                    "name": "Javad B. Ebrahimi"
+                },
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                },
+                {
+                    "authorId": "1762299",
+                    "name": "C. Fragouli"
+                }
+            ]
+        },
+        {
+            "paperId": "2370b7ca6365c954d49077d38f1f25a691b620cc",
+            "title": "How does the information capacity of ad hoc networks scale",
+            "abstract": "n source and destination pairs randomly located in an area want to communicate with each other. Signals transmitted from one user to another at distance r apart is subject to a power attenuation of r as well as a random phase. We identify exactly the scaling laws of the information theoretic capacity of the network. In the case of dense networks, where the area is fixed and the density of nodes increasing, we show that the total capacity of the network scales linearly with n. In the case of extended networks, where the density of nodes is fixed and the area increasing linearly with n, we show that the sum capacity scales as n for \u03b1 < 3 and \u221a n for \u03b1 \u2265 3. Thus, much better scaling than multihop can be achieved in dense networks, as well as in extended networks with low attenuation. The performance gain is achieved by intelligent node cooperation and distributed MIMO communication. The key ingredient is a hierarchical and digital architecture for nodal exchange of information for realizing the cooperation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9499046",
+                    "name": "Ayfer Ozgur"
+                },
+                {
+                    "authorId": "48807215",
+                    "name": "O. L\u00e9v\u00eaque"
+                },
+                {
+                    "authorId": "145748734",
+                    "name": "David Tse"
+                }
+            ]
+        }
+    ]
+}

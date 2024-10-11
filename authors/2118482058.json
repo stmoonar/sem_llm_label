@@ -1,0 +1,397 @@
+{
+    "authorId": "2118482058",
+    "papers": [
+        {
+            "paperId": "01f3b1809035a593b9dd6fb0b2cabdc8e216542f",
+            "title": "Knowledge Overshadowing Causes Amalgamated Hallucination in Large Language Models",
+            "abstract": "Hallucination is often regarded as a major impediment for using large language models (LLMs), especially for knowledge-intensive tasks. Even when the training corpus consists solely of true statements, language models still generate hallucinations in the form of amalgamations of multiple facts. We coin this phenomenon as ``knowledge overshadowing'': when we query knowledge from a language model with multiple conditions, some conditions overshadow others, leading to hallucinated outputs. This phenomenon partially stems from training data imbalance, which we verify on both pretrained models and fine-tuned models, over a wide range of LM model families and sizes.From a theoretical point of view, knowledge overshadowing can be interpreted as over-generalization of the dominant conditions (patterns). We show that the hallucination rate grows with both the imbalance ratio (between the popular and unpopular condition) and the length of dominant condition description, consistent with our derived generalization bound. Finally, we propose to utilize overshadowing conditions as a signal to catch hallucination before it is produced, along with a training-free self-contrastive decoding method to alleviate hallucination during inference. Our proposed approach showcases up to 82% F1 for hallucination anticipation and 11.2% to 39.4% hallucination control, with different models and datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284725570",
+                    "name": "Yuji Zhang"
+                },
+                {
+                    "authorId": "2262396117",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "33456794",
+                    "name": "Jiateng Liu"
+                },
+                {
+                    "authorId": "144808890",
+                    "name": "Pengfei Yu"
+                },
+                {
+                    "authorId": "51135899",
+                    "name": "Y. Fung"
+                },
+                {
+                    "authorId": "2310970738",
+                    "name": "Jing Li"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2307771313",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "19499cc52d7945d35811e9959fcec59f3b07f6f7",
+            "title": "Can LLMs Produce Faithful Explanations For Fact-checking? Towards Faithful Explainable Fact-Checking via Multi-Agent Debate",
+            "abstract": "Fact-checking research has extensively explored verification but less so the generation of natural-language explanations, crucial for user trust. While Large Language Models (LLMs) excel in text generation, their capability for producing faithful explanations in fact-checking remains underexamined. Our study investigates LLMs' ability to generate such explanations, finding that zero-shot prompts often result in unfaithfulness. To address these challenges, we propose the Multi-Agent Debate Refinement (MADR) framework, leveraging multiple LLMs as agents with diverse roles in an iterative refining process aimed at enhancing faithfulness in generated explanations. MADR ensures that the final explanation undergoes rigorous validation, significantly reducing the likelihood of unfaithful elements and aligning closely with the provided evidence. Experimental results demonstrate that MADR significantly improves the faithfulness of LLM-generated explanations to the evidence, advancing the credibility and trustworthiness of these explanations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283916265",
+                    "name": "Kyungha Kim"
+                },
+                {
+                    "authorId": "2283873743",
+                    "name": "Sangyun Lee"
+                },
+                {
+                    "authorId": "1420116116",
+                    "name": "Kung-Hsiang Huang"
+                },
+                {
+                    "authorId": "2261082492",
+                    "name": "Hou Pong Chan"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2277409745",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "4d04fa53fa9cd499c7070dae5ff3bc1e3357715b",
+            "title": "Why Does New Knowledge Create Messy Ripple Effects in LLMs?",
+            "abstract": "Extensive previous research has focused on post-training knowledge editing (KE) for language models (LMs) to ensure that knowledge remains accurate and up-to-date. One desired property and open question in KE is to let edited LMs correctly handle ripple effects, where LM is expected to answer its logically related knowledge accurately. In this paper, we answer the question of why most KE methods still create messy ripple effects. We conduct extensive analysis and identify a salient indicator, GradSim, that effectively reveals when and why updated knowledge ripples in LMs. GradSim is computed by the cosine similarity between gradients of the original fact and its related knowledge. We observe a strong positive correlation between ripple effect performance and GradSim across different LMs, KE methods, and evaluation metrics. Further investigations into three counter-intuitive failure cases (Negation, Over-Ripple, Multi-Lingual) of ripple effects demonstrate that these failures are often associated with very low GradSim. This finding validates that GradSim is an effective indicator of when knowledge ripples in LMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2312177894",
+                    "name": "Jiaxin Qin"
+                },
+                {
+                    "authorId": "2116461591",
+                    "name": "Zixuan Zhang"
+                },
+                {
+                    "authorId": "2118642562",
+                    "name": "Chi Han"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "144808890",
+                    "name": "Pengfei Yu"
+                },
+                {
+                    "authorId": "2271097936",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "6fde101147cf3b1980f1ac54a45026dddf110f3a",
+            "title": "Visually Descriptive Language Model for Vector Graphics Reasoning",
+            "abstract": "Despite significant advancements, large multimodal models (LMMs) still struggle to bridge the gap between low-level visual perception -- focusing on shapes, sizes, and layouts -- and high-level language reasoning, such as semantics and logic. This limitation is evident in tasks that require precise visual perception, like comparing geometric properties or solving visual reasoning problems. To study this failure mode, we focus on vector graphics -- images composed of 2D objects and shapes, prevalent in LMM-based tasks in web, design, and OS environments. We identify two key research questions: how can we enable precise visual perception, and how can we facilitate high-level reasoning based on such low-level perceptions? To capture fine visual details, we use Scalable Vector Graphics (SVG) for accurate encoding of visual scenes. However, SVGs are not readily interpretable by LMMs in a zero-shot manner. To tackle this, we propose the Visually Descriptive Language Model (VDLM), which introduces a Primal Visual Description (PVD) as an intermediate textual representation. PVD translates SVGs into a text-based abstraction consisting of primitive attributes (e.g., shape, position, measurement) and their corresponding values. PVD can be learned using task-agnostic synthesized data and represents visual primitives that are universal across vector graphics. This abstraction is more structured, allowing for direct interpretation by foundation models for zero-shot generalization. Without human-annotated data, empirical results show that VDLM significantly improves state-of-the-art LMMs like GPT-4o on various multimodal perception and reasoning tasks. Extensive analyses of VDLM show improved interpretability due to its disentangled perception and reasoning. We also demonstrate a positive correlation between PVD quality and task performance. Project page: https://mikewangwzhl.github.io/VDLM/",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108330537",
+                    "name": "Zhenhailong Wang"
+                },
+                {
+                    "authorId": "2266428515",
+                    "name": "Joy Hsu"
+                },
+                {
+                    "authorId": "2144803999",
+                    "name": "Xingyao Wang"
+                },
+                {
+                    "authorId": "2295786180",
+                    "name": "Kuan-Hao Huang"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2266457554",
+                    "name": "Jiajun Wu"
+                },
+                {
+                    "authorId": "2257039194",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "033607afc2e08a58383ad78deb98c844017109c1",
+            "title": "ViStruct: Visual Structural Knowledge Extraction via Curriculum Guided Code-Vision Representation",
+            "abstract": "State-of-the-art vision-language models (VLMs) still have limited performance in structural knowledge extraction, such as relations between objects. In this work, we present ViStruct, a training framework to learn VLMs for effective visual structural knowledge extraction. Two novel designs are incorporated. First, we propose to leverage the inherent structure of programming language to depict visual structural information. This approach enables explicit and consistent representation of visual structural information of multiple granularities, such as concepts, relations, and events, in a well-organized structured format. Second, we introduce curriculum-based learning for VLMs to progressively comprehend visual structures, from fundamental visual concepts to intricate event structures. Our intuition is that lower-level knowledge may contribute to complex visual structure understanding. Furthermore, we compile and release a collection of datasets tailored for visual structural knowledge extraction. We adopt a weakly-supervised approach to directly generate visual event structures from captions for ViStruct training, capitalizing on abundant image-caption pairs from the web. In experiments, we evaluate ViStruct on visual structure prediction tasks, demonstrating its effectiveness in improving the understanding of visual structures. The code is public at \\url{https://github.com/Yangyi-Chen/vi-struct}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "123331686",
+                    "name": "Yangyi Chen"
+                },
+                {
+                    "authorId": "2144803999",
+                    "name": "Xingyao Wang"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2433269",
+                    "name": "Derek Hoiem"
+                },
+                {
+                    "authorId": "2243197103",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "0f900f07158d0abf9d7a419c392e33531f3eebae",
+            "title": "Word Embeddings Are Steers for Language Models",
+            "abstract": "Language models (LMs) automatically learn word embeddings during pre-training on language corpora. Although word embeddings are usually interpreted as feature vectors for individual words, their roles in language model generation remain underexplored. In this work, we theoretically and empirically revisit output word embeddings and find that their linear transformations are equivalent to steering language model generation styles. We name such steers LM-Steers and find them existing in LMs of all sizes. It requires learning parameters equal to 0.2% of the original LMs' size for steering each style. On tasks such as language model detoxification and sentiment control, LM-Steers can achieve comparable or superior performance compared with state-of-the-art controlled generation methods while maintaining a better balance with generation quality. The learned LM-Steer serves as a lens in text styles: it reveals that word embeddings are interpretable when associated with language model generations and can highlight text spans that most indicate the style differences. An LM-Steer is transferrable between different language models by an explicit form calculation. One can also continuously steer LMs simply by scaling the LM-Steer or compose multiple LM-Steers by adding their transformations. Our codes are publicly available at \\url{https://github.com/Glaciohound/LM-Steer}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118642562",
+                    "name": "Chi Han"
+                },
+                {
+                    "authorId": "9097644",
+                    "name": "Jialiang Xu"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "51135899",
+                    "name": "Y. Fung"
+                },
+                {
+                    "authorId": "1726046634",
+                    "name": "Chenkai Sun"
+                },
+                {
+                    "authorId": "2057958465",
+                    "name": "Nan Jiang"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                },
+                {
+                    "authorId": "2072975661",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "275df2c45932501dc62632c89b721405da6fcb21",
+            "title": "SmartBook: AI-Assisted Situation Report Generation for Intelligence Analysts",
+            "abstract": "Timely and comprehensive understanding of emerging events is crucial for effective decision-making; automating situation report generation can significantly reduce the time, effort, and cost for intelligence analysts. In this work, we identify intelligence analysts' practices and preferences for AI assistance in situation report generation to guide the design strategies for an effective, trust-building interface that aligns with their thought processes and needs. Next, we introduce SmartBook, an automated framework designed to generate situation reports from large volumes of news data, creating structured reports by automatically discovering event-related strategic questions. These reports include multiple hypotheses (claims), summarized and grounded to sources with factual evidence, to promote in-depth situation understanding. Our comprehensive evaluation of SmartBook, encompassing a user study alongside a content review with an editing study, reveals SmartBook's effectiveness in generating accurate and relevant situation reports. Qualitative evaluations indicate over 80% of questions probe for strategic information, and over 90% of summaries produce tactically useful content, being consistently favored over summaries from a large language model integrated with web search. The editing study reveals that minimal information is removed from the generated text (under 2.5%), suggesting that SmartBook provides analysts with a valuable foundation for situation reports",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113583612",
+                    "name": "R. Reddy"
+                },
+                {
+                    "authorId": "2303475627",
+                    "name": "Daniel Lee"
+                },
+                {
+                    "authorId": "51135899",
+                    "name": "Y. Fung"
+                },
+                {
+                    "authorId": "2215992476",
+                    "name": "Khanh Duy Nguyen"
+                },
+                {
+                    "authorId": "2303725294",
+                    "name": "Qi Zeng"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2303494821",
+                    "name": "Ziqi Wang"
+                },
+                {
+                    "authorId": "2303462681",
+                    "name": "Clare Voss"
+                },
+                {
+                    "authorId": "2304124762",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "5402c22369d0190d0a002b7a1222d403edae010a",
+            "title": "Defining a New NLP Playground",
+            "abstract": "The recent explosion of performance of large language models (LLMs) has changed the field of Natural Language Processing (NLP) more abruptly and seismically than any other shift in the field's 80-year history. This has resulted in concerns that the field will become homogenized and resource-intensive. The new status quo has put many academic researchers, especially PhD students, at a disadvantage. This paper aims to define a new NLP playground by proposing 20+ PhD-dissertation-worthy research directions, covering theoretical analysis, new and challenging problems, learning paradigms, and interdisciplinary applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2263798673",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2118642562",
+                    "name": "Chi Han"
+                },
+                {
+                    "authorId": "144808890",
+                    "name": "Pengfei Yu"
+                },
+                {
+                    "authorId": "48870109",
+                    "name": "Carl N. Edwards"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2144803999",
+                    "name": "Xingyao Wang"
+                },
+                {
+                    "authorId": "51135899",
+                    "name": "Y. Fung"
+                },
+                {
+                    "authorId": "2263891451",
+                    "name": "Charles Yu"
+                },
+                {
+                    "authorId": "2249230172",
+                    "name": "Joel R. Tetreault"
+                },
+                {
+                    "authorId": "2257189311",
+                    "name": "Eduard H. Hovy"
+                },
+                {
+                    "authorId": "2264201811",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "b5ed8385cc8a939994df417467cd4d07ee3f9710",
+            "title": "Non-Sequential Graph Script Induction via Multimedia Grounding",
+            "abstract": "Online resources such as WikiHow compile a wide range of scripts for performing everyday tasks, which can assist models in learning to reason about procedures. However, the scripts are always presented in a linear manner, which does not reflect the flexibility displayed by people executing tasks in real life. For example, in the CrossTask Dataset, 64.5% of consecutive step pairs are also observed in the reverse order, suggesting their ordering is not fixed. In addition, each step has an average of 2.56 frequent next steps, demonstrating \u201cbranching\u201d. In this paper, we propose the new challenging task of non-sequential graph script induction, aiming to capture optional and interchangeable steps in procedural planning. To automate the induction of such graph scripts for given tasks, we propose to take advantage of loosely aligned videos of people performing the tasks. In particular, we design a multimodal framework to ground procedural videos to WikiHow textual steps and thus transform each video into an observed step path on the latent ground truth graph script. This key transformation enables us to train a script knowledge model capable of both generating explicit graph scripts for learnt tasks and predicting future steps given a partial step sequence. Our best model outperforms the strongest pure text/vision baselines by 17.52% absolute gains on F1@3 for next step prediction and 13.8% absolute gains on Acc@1 for partial sequence completion. Human evaluation shows our model outperforming the WikiHow linear baseline by 48.76% absolute gains in capturing sequential and non-sequential step relationships.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2157142269",
+                    "name": "Yu Zhou"
+                },
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "48030192",
+                    "name": "Xudong Lin"
+                },
+                {
+                    "authorId": "2122374530",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "bf2b8fefc66f811632e9e64cdc372631fe129200",
+            "title": "InfoPattern: Unveiling Information Propagation Patterns in Social Media",
+            "abstract": "Social media play a significant role in shaping public opinion and influencing ideological communities through information propagation. Our demo InfoPattern centers on the interplay between language and human ideology. The demo (Code: https://github.com/blender-nlp/InfoPattern ) is capable of: (1) red teaming to simulate adversary responses from opposite ideology communities; (2) stance detection to identify the underlying political sentiments in each message; (3) information propagation graph discovery to reveal the evolution of claims across various communities over time. (Live Demo: https://incas.csl.illinois.edu/blender/About )",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118642562",
+                    "name": "Chi Han"
+                },
+                {
+                    "authorId": "2268429939",
+                    "name": "Jialiang Xu"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2267057406",
+                    "name": "Hanning Zhang"
+                },
+                {
+                    "authorId": "2158570329",
+                    "name": "Tarek F. Abdelzaher"
+                },
+                {
+                    "authorId": "2261085610",
+                    "name": "Heng Ji"
+                }
+            ]
+        }
+    ]
+}

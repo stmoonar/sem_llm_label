@@ -1,0 +1,505 @@
+{
+    "authorId": "2467444",
+    "papers": [
+        {
+            "paperId": "16b136b0d588f01ffefa51d230281306ab047706",
+            "title": "WiseGraph: Optimizing GNN with Joint Workload Partition of Graph and Operations",
+            "abstract": "Graph Neural Network (GNN) has emerged as an important workload for learning on graphs. With the size of graph data and the complexity of GNN model architectures increasing, developing an efficient GNN system grows more important. As GNN has heavy neural computation workloads on a large graph, it is crucial to partition the entire workload into smaller parts for parallel execution and optimization. However, existing approaches separately partition graph data and GNN operations, resulting in inefficiency and large data movement overhead. To address this problem, we present WiseGraph, a GNN training framework exploring the joint optimization space of graph data partition and GNN operation partition. To bridge the gap between the two classes of partitions, we propose a workload abstraction tailored to GNN, gTask, which can not only describe existing GNN partition strategies as special cases but also exploit new optimization opportunities. Based on gTasks, WiseGraph effectively generates partition plans adaptive to input graph data and GNN models. Evaluation on five typical GNN models shows that WiseGraph outperforms existing GNN frameworks by 2.04\u00d7 and 2.22\u00d7 for single and multiple GPU training. WiseGraph is publicly available at https://github.com/xxcclong/CxGNN-Compute/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2149970563",
+                    "name": "Liyan Zheng"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "122923921",
+                    "name": "Yuyang Jin"
+                },
+                {
+                    "authorId": "2297419080",
+                    "name": "Qihao Zhang"
+                },
+                {
+                    "authorId": "2297419442",
+                    "name": "Runqing Zhang"
+                },
+                {
+                    "authorId": "2266718273",
+                    "name": "Zhen Zheng"
+                },
+                {
+                    "authorId": "2297739566",
+                    "name": "Youngmin Yi"
+                },
+                {
+                    "authorId": "2111115725",
+                    "name": "Xipeng Shen"
+                }
+            ]
+        },
+        {
+            "paperId": "2d7795c9bd4ff6b687d815995a5d136ec2e13325",
+            "title": "Graph-Centric Performance Analysis for Large-Scale Parallel Applications",
+            "abstract": "Performance analysis is essential for understanding the performance behaviors of parallel programs and detecting performance bottlenecks. Whereas, complex interconnections across several types of performance bugs, as well as inter-process communications and data dependence, make efficient performance analysis even more difficult. Despite the fact that many performance tools have been developed, accurately identifying underlying performance bottlenecks for such complex scenarios requires specific in-depth analysis. Significant human efforts and analysis knowledge are often required to implement each specific analytic task. To alleviate the complexity of developing specific performance analytic tasks, we present a programmable performance analysis tool, called PerFlow. In PerFlow, a step-by-step performance analysis process is represented as an Analysis Flow Diagram, which is constructed with several performance analysis sub-tasks, namely passes, that can be defined by developers or provided by PerFlow\u2019s built-in analysis pass library. Furthermore, we define a Performance Abstraction Graph to describe the performance behavior of a parallel program, where the edges indicate the interactions between parallel units, therefore the analytic sub-tasks are converted to graph analysis tasks. PerFlow provides plentiful Python APIs for developing analytic tasks. Several case studies of real-world applications with up to 700 K lines of code are used to demonstrate the effectiveness of PerFlow. The results indicate that PerFlow makes it much easier to implement specific performance analytic tasks, and these tasks are performed automatically and efficiently to detect underlying performance bottlenecks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "122923921",
+                    "name": "Yuyang Jin"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "2047095790",
+                    "name": "Runxin Zhong"
+                },
+                {
+                    "authorId": "2111574245",
+                    "name": "Chen Zhang"
+                },
+                {
+                    "authorId": "2301175272",
+                    "name": "Xia Liao"
+                },
+                {
+                    "authorId": "2187787351",
+                    "name": "Feng Zhang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                }
+            ]
+        },
+        {
+            "paperId": "3bfda090ce59c0556308c9f377946efb8615309c",
+            "title": "Optimal Kernel Orchestration for Tensor Programs with Korch",
+            "abstract": "Kernel orchestration is the task of mapping the computation defined in different operators of a deep neural network (DNN) to the execution of GPU kernels on modern hardware platforms. Prior approaches optimize kernel orchestration by greedily applying operator fusion, which fuses the computation of multiple operators into a single kernel, and miss a variety of optimization opportunities in kernel orchestration. This paper presents Korch, a tensor program optimizer that discovers optimal kernel orchestration strategies for tensor programs. Instead of directly fusing operators, Korch first applies operator fission to decompose tensor operators into a small set of basic tensor algebra primitives. This decomposition enables a diversity of fine-grained, inter-operator optimizations. Next, Korch optimizes kernel orchestration by formalizing it as a constrained optimization problem, leveraging an off-the-shelf binary linear programming solver to discover an optimal orchestration strategy, and generating an executable that can be directly deployed on modern GPU platforms. Evaluation on a variety of DNNs shows that Korch outperforms existing tensor program optimizers by up to 1.7\u00d7 on V100 GPUs and up to 1.6\u00d7 on A100 GPUs. Korch is publicly available at https://github.com/humuyan/Korch.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180542283",
+                    "name": "Muyan Hu"
+                },
+                {
+                    "authorId": "2298295649",
+                    "name": "Ashwin Venkatram"
+                },
+                {
+                    "authorId": "2005945356",
+                    "name": "Shreyashri Biswas"
+                },
+                {
+                    "authorId": "2318551353",
+                    "name": "Balamurugan Marimuthu"
+                },
+                {
+                    "authorId": "2298296957",
+                    "name": "Bohan Hou"
+                },
+                {
+                    "authorId": "2276435285",
+                    "name": "Gabriele Oliaro"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "2149970563",
+                    "name": "Liyan Zheng"
+                },
+                {
+                    "authorId": "2270842291",
+                    "name": "Xupeng Miao"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2271058444",
+                    "name": "Zhihao Jia"
+                }
+            ]
+        },
+        {
+            "paperId": "5ca42c1ec411eecb80765f12d8f8bc59cc63d76c",
+            "title": "Compressed Data Direct Computing for Databases",
+            "abstract": "Directly performing operations on compressed data has been proven to be a big success facing Big Data problems in modern data management systems. These systems have demonstrated significant compression benefits and performance improvement for data analytics applications. However, current systems only focus on data queries, while a complete Big Data system must support both data query and data manipulation. To solve this problem, we develop CompressDB, which is a new storage engine that can support data processing for databases without decompression. CompressDB has the following advantages. First, CompressDB utilizes context-free grammar to compress data, and supports both data query and data manipulation. Second, for adaptability, we integrate CompressDB to file systems so that a wide range of databases can directly use CompressDB without any change. Third, we enable operation pushdown to storage so that we can perform data query and manipulation in storage systems without bringing large data to memory for high efficiency. We validate the efficacy of CompressDB supporting various kinds of database systems, including SQLite, MySQL, LevelDB, MongoDB, ClickHouse, and Neo4j. We evaluate our method using seven real-world datasets with various lengths, structures, and content in both single node and cluster environments. Experiments show that CompressDB achieves 40% throughput improvement and 44% latency reduction, along with 1.75 compression ratio on average.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2243999724",
+                    "name": "Weitao Wan"
+                },
+                {
+                    "authorId": "1884418505",
+                    "name": "Feng Zhang"
+                },
+                {
+                    "authorId": "2111338876",
+                    "name": "Chenyang Zhang"
+                },
+                {
+                    "authorId": "2155081188",
+                    "name": "Mingde Zhang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2244056979",
+                    "name": "Yunpeng Chai"
+                },
+                {
+                    "authorId": "2267331042",
+                    "name": "Huanchen Zhang"
+                },
+                {
+                    "authorId": "143844110",
+                    "name": "Wei Lu"
+                },
+                {
+                    "authorId": "2244220012",
+                    "name": "Yuxing Chen"
+                },
+                {
+                    "authorId": "2109029364",
+                    "name": "Haixiang Li"
+                },
+                {
+                    "authorId": "40898641",
+                    "name": "Anqun Pan"
+                },
+                {
+                    "authorId": "2243945891",
+                    "name": "Xiaoyong Du"
+                }
+            ]
+        },
+        {
+            "paperId": "7dea62ae398c4aac33b7e7a89e7cb863b30b333b",
+            "title": "F-TADOC: FPGA-Based Text Analytics Directly on Compression with HLS",
+            "abstract": "With the development of loT and edge computing, data analytics on edge has become popular, and text analytics directly on compression (TADOC) has been proven to be a promising technology for edge data analytics. At the same time, Field Programmable Gate Array (FPGA) also has broad application prospects in data analytics systems. Unfortunately, there is no work to date showing how to support TADOC using FPGAs. We propose FPGA-based text analytics directly on compression with HLS, namely F - TADOC, which is the first framework using HLS to provide FPGA-based text analytics directly on compressed data. It effectively supports efficient text analytics on FPGA without decompressing input data. F-TADOC addresses three major challenges. First, TADOC involves a large number of dependencies with unbalanced workload of rules, which causes extremely low pipeline efficiency on FPG As. To solve it, we use layer-wise approach to traverse the DAG composed of rules and allocate different pipeline processing strategies for rules of different sizes. Second, the data volume required can be large that beyond the on-chip memory capacity of FPGAs. We develop a memory pool supporting hash structure and on-chip caches on FPGA to deal with this challenge. Third, when traversing the DAG, there are massive indirect addressing with a large number of random accesses. This leads to redundant time overhead caused by the latency in accessing the High Bandwidth Memory (HBM) during the pipeline. We optimize the F - TADOC algorithm by using dataflow to expand the nested loop, thus eliminate indirect addressing. With four widely used datasets, experiments show that F - TADOC achieves 4.63 x and 1.49 x performance speedup over TADOC and G- TADOC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1914615750",
+                    "name": "Yanliang Zhou"
+                },
+                {
+                    "authorId": "2277452199",
+                    "name": "Feng Zhang"
+                },
+                {
+                    "authorId": "2312726274",
+                    "name": "Tuo Lin"
+                },
+                {
+                    "authorId": "2312864448",
+                    "name": "Yuanjie Huang"
+                },
+                {
+                    "authorId": "2310466392",
+                    "name": "Saiqin Long"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2287191461",
+                    "name": "Xiaoyong Du"
+                }
+            ]
+        },
+        {
+            "paperId": "bec0ca9629f4026716ec138085b8d3abb9601510",
+            "title": "G-Learned Index: Enabling Efficient Learned Index on GPU",
+            "abstract": "AI and GPU technologies have been widely applied to solve Big Data problems. The total data volume worldwide reaches 200 zettabytes in 2022. How to efficiently index the required content among massive data becomes serious. Recently, a promising learned index has been proposed to address this challenge: It has extremely high efficiency while retaining marginal space overhead. However, we notice that previous learned indexes have mainly focused on CPU architecture, while ignoring the advantages of GPU. Because traditional indexes like B-Tree, LSM, and bitmap have greatly benefited from GPU acceleration, a combination of a learned index and GPU has great potentials to reach tremendous speedups. In this paper, we propose a GPU-based learned index, called G-Learned Index, to significantly improve the performance of learned index structures. The primary challenges in developing G-Learned Index lie in the use of thousands of GPU cores including minimization of synchronization and branch divergence, data structure design for parallel operations, and usage of memory bandwidth including limited memory transactions and multi-memory hierarchy. To overcome these challenges, a series of novel technologies are developed, including efficient thread organization, succinct data structures, and heterogeneous memory hierarchy utilization. Compared to the state-of-the-art learned index, the proposed G-Learned Index achieves an average of 174\u00d7 speedup (and 107\u00d7 of its parallel version). Meanwhile, we attain 2\u00d7 less query time over the state-of-the-art GPU B-Tree. Our further exploration of range queries shows that G-Learned Index is <inline-formula><tex-math notation=\"LaTeX\">$17\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>17</mml:mn><mml:mo>\u00d7</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"zhang-ieq1-3381214.gif\"/></alternatives></inline-formula> faster than CPU multi-dimensional learned index.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167513185",
+                    "name": "Jiesong Liu"
+                },
+                {
+                    "authorId": "2187787351",
+                    "name": "Feng Zhang"
+                },
+                {
+                    "authorId": "2295116736",
+                    "name": "Lv Lu"
+                },
+                {
+                    "authorId": "2294985786",
+                    "name": "Chang Qi"
+                },
+                {
+                    "authorId": "2193862819",
+                    "name": "Xiaoguang Guo"
+                },
+                {
+                    "authorId": "2148263666",
+                    "name": "Dong Deng"
+                },
+                {
+                    "authorId": "2242412700",
+                    "name": "Guoliang Li"
+                },
+                {
+                    "authorId": "2267331042",
+                    "name": "Huanchen Zhang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2296805049",
+                    "name": "Hechen Zhang"
+                },
+                {
+                    "authorId": "2244220012",
+                    "name": "Yuxing Chen"
+                },
+                {
+                    "authorId": "40898641",
+                    "name": "Anqun Pan"
+                },
+                {
+                    "authorId": "2287191461",
+                    "name": "Xiaoyong Du"
+                }
+            ]
+        },
+        {
+            "paperId": "2318bdeea310b1ea524fa483f9276c4f3ef6c88f",
+            "title": "GraphSet: High Performance Graph Mining through Equivalent Set Transformations",
+            "abstract": "Graph mining is of critical use in a number of fields such as social networks, knowledge graphs, and fraud detection. As an NP-complete problem, accelerating computation performance is the main target for current optimizations. Due to excellent performance, state-of-the-art graph mining systems mainly rely on pattern-aware algorithms. Despite previous efforts, complex control flows introduced by pattern-aware algorithms bring significant overhead and also impede further acceleration on heterogeneous hardware. To address these challenges, we propose a set-based equivalent transformation approach to optimize pattern-aware graph mining applications, which can leverage classic set properties to eliminate most control flows and reduce computation overhead exponentially. We further implement a high-performance pattern-aware graph mining system supporting both CPU and GPU, namely GraphSet, to automatically apply these transformations. Evaluation results show that GraphSet outperforms state-of-the-art cross-platform and hardware-specific graph mining frameworks by up to 3384.1x and 243.2x (18.0X and 10.2x on average), respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40864057",
+                    "name": "Tianhui Shi"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "2262448550",
+                    "name": "Qiqian Chen"
+                },
+                {
+                    "authorId": "1962334303",
+                    "name": "Mingshu Zhai"
+                },
+                {
+                    "authorId": "2262455622",
+                    "name": "Zixu Hao"
+                },
+                {
+                    "authorId": "2262759000",
+                    "name": "Haoyu Yang"
+                },
+                {
+                    "authorId": "2262468726",
+                    "name": "Wenguang Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "3adca9d49eab1a4db6538a995af3636d10e120c3",
+            "title": "BladeDISC: Optimizing Dynamic Shape Machine Learning Workloads via Compiler Approach",
+            "abstract": "Compiler optimization plays an increasingly important role to boost the performance of machine learning models for data processing and management. With increasingly complex data, the dynamic tensor shape phenomenon emerges for ML models. However, existing ML compilers either can only handle static shape models or expose a series of performance problems for both operator fusion optimization and code generation in dynamic shape scenes. This paper tackles the main challenges of dynamic shape optimization: the fusion optimization without shape value, and code generation supporting arbitrary shapes. To tackle the fundamental challenge of the absence of shape values, it systematically abstracts and excavates the shape information and designs a cross-level symbolic shape representation. With the insight that what fusion optimization relies upon is tensor shape relationships between adjacent operators rather than exact shape values, it proposes the dynamic shape fusion approach based on shape information propagation. To generate code that adapts to arbitrary shapes efficiently, it proposes a compile-time and runtime combined code generation approach. Finally, it presents a complete optimization pipeline for dynamic shape models and implements an industrial-grade ML compiler, named BladeDISC. The extensive evaluation demonstrates that BladeDISC outperforms PyTorch, TorchScript, TVM, ONNX Runtime, XLA, Torch Inductor (dynamic shape), and TensorRT by up to 6.95\u00d7, 6.25\u00d7, 4.08\u00d7, 2.04\u00d7, 2.06\u00d7, 7.92\u00d7, and 4.16\u00d7 (3.54\u00d7, 3.12\u00d7, 1.95\u00d7, 1.47\u00d7, 1.24\u00d7, 2.93\u00d7, and 1.46\u00d7 on average) in terms of end-to-end inference speedup on the A10 and T4 GPU, respectively. BladeDISC's source code is publicly available at https://github.com/alibaba/BladeDISC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266718273",
+                    "name": "Zhen Zheng"
+                },
+                {
+                    "authorId": "2111673955",
+                    "name": "Zaifeng Pan"
+                },
+                {
+                    "authorId": "2266704783",
+                    "name": "Dalin Wang"
+                },
+                {
+                    "authorId": "2113842197",
+                    "name": "Kai Zhu"
+                },
+                {
+                    "authorId": "2266818803",
+                    "name": "Wenyi Zhao"
+                },
+                {
+                    "authorId": "2057579908",
+                    "name": "Tianyou Guo"
+                },
+                {
+                    "authorId": "118377955",
+                    "name": "Xiafei Qiu"
+                },
+                {
+                    "authorId": "2267222610",
+                    "name": "Minmin Sun"
+                },
+                {
+                    "authorId": "2113829116",
+                    "name": "Junjie Bai"
+                },
+                {
+                    "authorId": "2187787351",
+                    "name": "Feng Zhang"
+                },
+                {
+                    "authorId": "2243945891",
+                    "name": "Xiaoyong Du"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2262822986",
+                    "name": "Wei Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "3f88b30c63cb50478fa45c25629f60314f69b89c",
+            "title": "Enabling Efficient Random Access to Hierarchically Compressed Text Data on Diverse GPU Platforms",
+            "abstract": "The tremendous computing capacity of GPU offers significant potential in processing hierarchically compressed text data without decompression. However, current GPU techniques offer only traversal-based text data analytics; random access is exceedingly inefficient, limiting their utility significantly. To address this issue, we develop a novel and widely applicable solution that prompts random access to hierarchically compressed text data without decompression in GPU memory. We address three main challenges for enabling efficient random access to compressed text data on GPUs. The first challenge is designing GPU data structures that facilitate random access. The second challenge is efficiently generating data structures on GPU. The CPU is inefficient when generating data structures for random access, and this inefficiency increases considerably when PCIe transmission is incorporated. The third challenge is query processing on compressed text data in GPU memory. Random accesses, such as data updates, cause massive conflicts among countless threads. In order to address the first challenge, we develop several compressed GPU data structures, including indexing within the intricate GPU memory hierarchy. To handle the second challenge, we propose a two-phase process for producing these data structures on GPU. For the third challenge, a double-parsing design is proposed as a solution to avoid conflicts. We evaluate our solution on three platforms, two server-grade GPU platforms and one edge-grade GPU platform, using five real-world datasets. Experimental results show that random access operations on GPU achieve an average speedup of 52.98\u00d7 compared to the state-of-the-art solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2209539012",
+                    "name": "Yihua Hu"
+                },
+                {
+                    "authorId": "1884418505",
+                    "name": "Feng Zhang"
+                },
+                {
+                    "authorId": "2223384697",
+                    "name": "Yifei Xia"
+                },
+                {
+                    "authorId": "2209381579",
+                    "name": "Zhiming Yao"
+                },
+                {
+                    "authorId": "2223500417",
+                    "name": "Letian Zeng"
+                },
+                {
+                    "authorId": "2113455170",
+                    "name": "Haipeng Ding"
+                },
+                {
+                    "authorId": "12457830",
+                    "name": "Zhewei Wei"
+                },
+                {
+                    "authorId": "2118038502",
+                    "name": "Xiao Zhang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2152944669",
+                    "name": "Xiaoyong Du"
+                },
+                {
+                    "authorId": "2244579708",
+                    "name": "Siqi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "457bbb0f64729dcfb15fe11be2b7fce91fcb1243",
+            "title": "CompressGraph: Efficient Parallel Graph Analytics with Rule-Based Compression",
+            "abstract": "Modern graphs exert colossal time and space pressure on graph analytics applications. In 2022, Facebook social graph reaches 2.91 billion users with trillions of edges. Many compression algorithms have been developed to support direct processing on compressed graphs to address this challenge. However, previous graph compression algorithms do not focus on leveraging redundancy in repeated neighbor sequences, so they do not save the amount of computation for graph analytics. We develop CompressGraph, an efficient rule-based graph analytics engine that leverages data redundancy in graphs to achieve both performance boost and space reduction for common graph applications. CompressGraph has three advantages over previous works. First, the rule-based abstraction of CompressGraph supports the reuse of intermediate results during graph traversal, thus saving time. Second, CompressGraph has intense expressiveness to support a wide range of graph applications. Third, CompressGraph scales well under high parallelism because the context-free rules have few dependencies. Experiments show that CompressGraph provides significant performance and space benefits on both CPUs and GPUs. On evaluating six typical graph applications, CompressGraph can achieve 1.97\u00d7 speedup on the CPU, while 3.95\u00d7 speedup on the GPU, compared to the state-of-the-art CPU and GPU methods, respectively. Moreover, CompressGraph can save an average of 71.27% memory savings on CPU and 70.36 on GPU.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117203294",
+                    "name": "Zheng Chen"
+                },
+                {
+                    "authorId": "2182283143",
+                    "name": "Feng Zhang"
+                },
+                {
+                    "authorId": "2054060619",
+                    "name": "Jiawei Guan"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2111115725",
+                    "name": "Xipeng Shen"
+                },
+                {
+                    "authorId": "2043439",
+                    "name": "Huanchen Zhang"
+                },
+                {
+                    "authorId": "2218889956",
+                    "name": "Wentong Shu"
+                },
+                {
+                    "authorId": "2152944669",
+                    "name": "Xiaoyong Du"
+                }
+            ]
+        }
+    ]
+}

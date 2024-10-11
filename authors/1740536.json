@@ -1,0 +1,249 @@
+{
+    "authorId": "1740536",
+    "papers": [
+        {
+            "paperId": "27df88684283003dc40f8e43ce3a716456fad5da",
+            "title": "Graph Representation Learning for Parasitic Impedance Prediction of the Interconnect",
+            "abstract": "An accurate early estimate of the post routing inter-connect parasitics allows for pre-emptive changes to the circuit in earlier phases of the design flow, significantly reducing the design time and effort. In this work, graph based deep regression models are proposed to predict the post routing interconnect capacitance of a circuit by utilizing layout information and the post placement estimates of the interconnect parasitics. The post placement capacitance determined by a commercial physical design tool is used as a baseline for the models, with the mean absolute percentage error (MAPE), the mean absolute error (MAE), and $R^{2}$ score calculated for comparison. The proposed methodology outperforms the baseline provided by the commercial physical design tools based on results obtained across all trained models, with an average improvement of 23.39% in MAPE, 5.33% in MAE, and 1% in $R^{2}$ score. The proposed methodology also provides better prediction of the worse case errors as compared to the commercial tool, with the model providing an average improvement of 47.43% in MAPE and 14.31 % in MAE for the nets with the largest 1 % of errors as determined by the tool.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "30661815",
+                    "name": "P. Shrestha"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        },
+        {
+            "paperId": "4677f7d9a0d31c7d6c6cd6a382a6b18b8c79b08b",
+            "title": "Circuit-GNN: A Graph Neural Network for Transistor-level Modeling of Analog Circuit Hierarchies",
+            "abstract": "Recently, graph neural networks (GNNs) have been applied to various circuit applications, where circuit topology is leveraged in the learning of the models. However, the aggregation of GNN models has not accounted for circuit hierarchies. In addition, the generalization of GNNs to distinguish between different circuit topologies is not currently provided, which raises the question of whether one GNN is sufficient to simultaneously model differing circuit graphs. In this work, a graph representation is proposed, based on a given circuit netlist, to model analog circuits at the transistor level. Additional categorical features are included to address the ambiguity in modeling the connections of the terminals of a given transistor. Edge-conditioned convolution (ECC) is utilized, where weight matrices conditioned on the edge attributes are trained in the local neighborhood of a given node. A relational graph is constructed to model groupings of devices for each level of the hierarchy provided by the designer. Each adjacency matrix of the relational graph is processed by a graph isomorphism network (GIN) layer, described as a Circuit-GIN layer, to update the node embeddings. The model consisting of an ECC layer and two Circuit-GIN layers, described as a Circuit-GNN, is trained on data from four op-amp topologies to predict four performance parameters. Results indicate that the ECC-based model outperforms a GCN-based model in the prediction of all of the performance parameters, which results from the additional edge information learned by the ECC layer. With the addition of Circuit-GIN layers, the Circuit-GNN outperforms the ECC-only model by up to 16.7% in $\\boldsymbol{R}^{\\mathbf{2}}$ score. Therefore, aggregation of node embeddings based on device groupings brings additional benefit to guide the GNNs in modeling the performance of analog ICs. The work also validates the expressive power of the proposed GNN model, which generates embeddings that distinguish between different circuit graphs. The generalization of GNNs renders feasible the simultaneous learning from different analog topologies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2028613840",
+                    "name": "Zhengfeng Wu"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        },
+        {
+            "paperId": "cffe3fae368c2ad75fb886ed3888caed6e8630f6",
+            "title": "Hidden Costs of Analog Deobfuscation Attacks",
+            "abstract": "Analog obfuscation techniques to prevent intellectual property attacks have mainly evolved from digital obfuscation. Similar to digital hardware security, the considered threat models commonly assume that the attacker possesses the circuit netlist, specifications, and bias information to deobfuscate a locked analog circuit. However, when one or more pieces of information remain unavailable, there is an adverse effect on the performance of current analog attack algorithms. In this article, an analysis of the challenges and limitations of obtaining the information needed to successfully attack an analog circuit is provided. In addition, the performance of current state-of-the-art analog attack techniques is evaluated when one or more pieces of information is unavailable. The analysis of the attack on five distinct analog circuits obfuscated with key-based parameter locking is performed, premised upon the level of information possessed by the adversary. The monotonic attack (MA) returned the correct key in less than 10 h when executing a black-box attack on single stage circuits obfuscated with a 10-bit key. The key-spacing (KS) attack is <inline-formula> <tex-math notation=\"LaTeX\">$10\\times $ </tex-math></inline-formula> faster than the monotonic attack and returns <inline-formula> <tex-math notation=\"LaTeX\">$8.3\\times $ </tex-math></inline-formula> fewer candidate keys for multistage analog circuits. The satisfiability modulo theory (SMT) based attack is <inline-formula> <tex-math notation=\"LaTeX\">$224\\times $ </tex-math></inline-formula> slower than the monotonic attack and <inline-formula> <tex-math notation=\"LaTeX\">$2240\\times $ </tex-math></inline-formula> slower than the key spacing attack for an 18-bit obfuscated circuit. A genetic algorithm (GA) based attack is 121<inline-formula> <tex-math notation=\"LaTeX\">$091\\times $ </tex-math></inline-formula> slower than an monotonic attack even for a single stage analog circuit. Through analysis of the results, metrics are developed to characterize the setup and evaluation time of executing the deobfuscation attacks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2142252588",
+                    "name": "Vaibhav Venugopal Rao"
+                },
+                {
+                    "authorId": "3399708",
+                    "name": "Kyle Juretus"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        },
+        {
+            "paperId": "dfdd1a784eae73a544410d4a8e59eef344fdf9f3",
+            "title": "A Power Side-Channel Attack on Flash ADC",
+            "abstract": "In this paper, a monotonic power side-channel attack (PSA) is proposed to analyze the security vulnerabilities of flash analog-to-digital converters (ADC), where the digital output of a flash ADC is determined by characterizing the monotonic relationship between the traces of the power consumed and the applied input signals. A novel technique that leverages clock phase division is proposed to secure the power side channel information of a 4-bit flash ADC. The proposed technique adds randomness to decorrelate the input signal from the given power trace as the execution phase of each comparator depends on a thermometer code computed from the previous seven clock cycles. The monotonic PSA is executed on both a secured and unsecured ADC, with results indicating 1.9 bits of information leakage from an unprotected ADC and no data leakage from a protected ADC as the bit-wise accuracy is approximately 50% when secured. The monotonic PSA is more effective at attacking a flash ADC architecture than either a convolutional neural network based PSA or a correlation template PSA. The secured ADC core occupies approximately 2% more area than a non-secure ADC in a 65 nm process, and provides a sampling frequency of up to 500 MHz at a supply voltage of 1.2 V.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117098419",
+                    "name": "Ziyi Chen"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        },
+        {
+            "paperId": "1704d4d55f12b76e41582fa39c19bf42b8b3fae8",
+            "title": "Transfer of Performance Models Across Analog Circuit Topologies with Graph Neural Networks",
+            "abstract": "In this work, graph neural networks (GNNs) and transfer learning are leveraged to transfer device sizing knowledge learned from data of related analog circuit topologies to predict the performance of a new topology. A graph is generated from the netlist of a circuit, with nodes representing the devices and edges the connections between devices. To allow for the simultaneous training of GNNs on data of multiple topologies, graph isomorphism networks are adopted to address the limitation of graph convolutional networks in distinguishing between different graph structures. The techniques are applied to transfer predictions of performance across four op-amp topologies in a 65 nm technology, with 10000 sets of sizing and performance evaluations sampled for each circuit. Two scenarios, zero-shot learning and few-shot learning, are considered based on the availability of data in the target domain. Results from the analysis indicate that zero-shot learning with GNNs trained on all the data of the three related topologies is effective for coarse estimates of the performance of the fourth unseen circuit without requiring any data from the fourth circuit. Few-shot learning by fine-tuning the GNNs with a small dataset of 100 points from the target topology after pre-training on data from the other three topologies further boosts the model performance. The fine-tuned GNNs outperform the baseline artificial neural networks (ANNs) trained on the same dataset of 100 points from the target topology",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2028613840",
+                    "name": "Zhengfeng Wu"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        },
+        {
+            "paperId": "2ee5c295dce71881b61fd70a9838da9bdb78833a",
+            "title": "Adaptive-Gravity: A Defense Against Adversarial Samples",
+            "abstract": "This paper presents a novel model training solution, denoted as Adaptive-Gravity, for enhancing the robustness of deep neural network classifiers against adversarial examples. We conceptualize the model parameters/features associated with each class as a mass characterized by its centroid location and the spread (standard deviation of the distance) of features around the centroid. We use the centroid associated with each cluster to derive an anti-gravity force that pushes the centroids of different classes away from one another during network training. Then we customized an objective function that aims to concentrate each class\u2019s features toward their corresponding new centroid, which has been obtained by anti-gravity force. This methodology results in a larger separation between different masses and reduces the spread of features around each centroid. As a result, the samples are pushed away from the space that adversarial examples could be mapped to, effectively increasing the degree of perturbation needed for making an adversarial example. We have implemented this training solution as an iterative method consisting of four steps at each iteration: 1) centroid extraction, 2) anti-gravity force calculation, 3) centroid relocation, and 4) gravity training. Gravity\u2019s efficiency is evaluated by measuring the corresponding fooling rates against various attack models, including FGSM, MIM, BIM, and PGD using LeNet and ResNet110 networks, benchmarked against MNIST and CIFAR10 classification problems. Test results show that Gravity not only functions as a powerful instrument to robustify a model against state-of-the-art adversarial attacks but also effectively improves the model training accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1380629762",
+                    "name": "Ali Mirzaeian"
+                },
+                {
+                    "authorId": "2069520672",
+                    "name": "Zhi Tian"
+                },
+                {
+                    "authorId": "2389278",
+                    "name": "Sai Manoj Pudukotai Dinakarrao"
+                },
+                {
+                    "authorId": "2161966302",
+                    "name": "B. S. Latibari"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                },
+                {
+                    "authorId": "1747542",
+                    "name": "H. Homayoun"
+                },
+                {
+                    "authorId": "1928425942",
+                    "name": "Avesta Sasan"
+                }
+            ]
+        },
+        {
+            "paperId": "45d5ba6567ba17bccda95f8cdb9fd4d6538af81e",
+            "title": "Reconfigurable Analog Array for Hardware Security",
+            "abstract": "In this paper, a novel field-programmable analog array (FPAA) is proposed to secure the intellectual property (IP) of analog and mixed-signal circuits. A obfuscation technique is developed to efficiently mask the topology of both differential mode and single-ended mode analog circuits. The overhead in performance due to the parasitic impedance of the routing switches is analyzed at the internal nodes connected to the programming switches. Advantages of topology obfuscation include the generation of a large search space, an uncorrelated output response, and flexibility in circuit design. The circuits implemented on the FPAA include an op amp with varying loads, a second order biquad filter, a ring-oscillator, and a frequency divider. For circuits requiring a single configurable analog block (CAB) on the FPAA, the 3 dB bandwidth is maintained around 1 GHz, while circuits requiring multiple CABs operate with frequencies between 200 MHz and 1.5 GHz. The security provided by the FPAA fabric is evaluated on both single CAB implementations as well as multi-CAB circuits. Two attack scenarios are considered, a brute force attack and a topology attack. The multi-CAB circuit provides strong security robustness to both attacks with a minimum search space of 226 for the brute force attack and 210 for the topology attack. The FPAA core is implemented in a 65 nm process with an area of 0.1 mm2.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117098419",
+                    "name": "Ziyi Chen"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        },
+        {
+            "paperId": "60531497fd812ae4712bb91cc54de049edffe5c0",
+            "title": "RAPTA: A Hierarchical Representation Learning Solution For Real-Time Prediction of Path-Based Static Timing Analysis",
+            "abstract": "This paper presents RAPTA, a customized Representation-learning Architecture for automation of feature engineering and predicting the result of Path-based Timing-Analysis early in the physical design cycle. RAPTA offers multiple advantages compared to prior work: 1) It has superior accuracy with errors std ranges 3.9ps~16.05ps in 32nm technology. 2) RAPTA's architecture does not change with feature-set size, 3) RAPTA does not require manual input feature engineering. To the best of our knowledge, this is the first work, in which Bidirectional Long Short-Term Memory (Bi-LSTM) representation learning is used to digest raw information for feature engineering, where generation of latent features and Multilayer Perceptron (MLP) based regression for timing prediction can be trained end-to-end.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2123930262",
+                    "name": "Tanmoy Chowdhury"
+                },
+                {
+                    "authorId": "66097019",
+                    "name": "Ashka Vakil"
+                },
+                {
+                    "authorId": "2161966302",
+                    "name": "B. S. Latibari"
+                },
+                {
+                    "authorId": "2113627697",
+                    "name": "Sayed Aresh Beheshti-Shirazi"
+                },
+                {
+                    "authorId": "1380629762",
+                    "name": "Ali Mirzaeian"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "2389278",
+                    "name": "Sai Manoj Pudukotai Dinakarrao"
+                },
+                {
+                    "authorId": "1747542",
+                    "name": "H. Homayoun"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                },
+                {
+                    "authorId": "2116734046",
+                    "name": "Liang Zhao"
+                },
+                {
+                    "authorId": "1928425942",
+                    "name": "Avesta Sasan"
+                }
+            ]
+        },
+        {
+            "paperId": "89b5985ae3d9b1d5e8a75361110131a8e37f04c3",
+            "title": "Synthesis of Coupling Capacitance Based Hidden State Transitions for Sequential Logic Locking",
+            "abstract": "Oracle guided attacks, such as the SAT attack, and finite state machine (FSM) reconstruction-based structural attacks are two primary threats to sequential logic obfuscation of an integrated circuit (IC). Recent defense mechanisms apply hidden state transitions (HST) and logic cone modifications to a partitioned FSM to protect against both oracle-guided and structural attacks. HST triggering techniques are implemented on select state registers to induce controlled timing glitches in the FSM. However, the current implementations of HST are vulnerable to structural attack through the gate-level logic implementing the trigger. In this paper, a random walk-based security estimation metric is utilized to quantify the security of gate-level masking of the triggering topology. A novel coupling capacitance-based HST triggering topology is proposed, where the glitch is induced by manipulating the physical properties of the circuit rather than the gate-level logic. An average increase of 8.53$\\times$ in the random walk-based security estimation score and an 887x increase in the geometric mean of the expected number paths to extract the key is observed for coupling capacitance based HSTs as compared to traditionally triggered HSTs. The schematic level equivalent of the proposed technique is implemented on a subset of ISCAS\u201989 benchmark circuits, resulting in an average overhead in area and power of 14.35% and 22.02% for all benchmark circuits and 2.23% and 1.25% for the four largest benchmark circuits, respectively, as compared to the original unobfuscated circuits.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "30661815",
+                    "name": "P. Shrestha"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        },
+        {
+            "paperId": "a7b200ea9bc2fd0751f5f4a0d1a9aaeaad9580e2",
+            "title": "Practical Performance of Analog Attack Techniques",
+            "abstract": "The increasing number of vulnerabilities in analog circuits has motivated the development of novel security techniques that protect the analog supply chain. A variety of attacks including ones based on satisfiability modulo theory (SMT) and genetic algorithms (GA) have been executed on different analog circuits to evaluate the vulnerabilities of the added protection. However, the current attack techniques assume ideal conditions, where the attacker has complete knowledge of the IC except for the key used to obfuscate the circuit. In this paper, four different threat models are examined, where an adversary is assumed to have different levels of access to circuit and security information. The analysis of the attack performance on key-based parameter obfuscation is performed premised upon the level of information possessed by the adversary. The analog attack techniques are evaluated on five distinct circuit topologies, each implemented with different key sizes and obfuscated parameters. Through analysis of the results, a characterization of the advantages and disadvantages of the analog attack algorithms is provided.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "30042890",
+                    "name": "Vaibhav Venugopal Rao"
+                },
+                {
+                    "authorId": "3399708",
+                    "name": "Kyle Juretus"
+                },
+                {
+                    "authorId": "1740536",
+                    "name": "I. Savidis"
+                }
+            ]
+        }
+    ]
+}

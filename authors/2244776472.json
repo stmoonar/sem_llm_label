@@ -1,0 +1,179 @@
+{
+    "authorId": "2244776472",
+    "papers": [
+        {
+            "paperId": "1cc0a50089d06e6b607e5308cedaf0674edb03ee",
+            "title": "Lightweight Modality Adaptation to Sequential Recommendation via Correlation Supervision",
+            "abstract": "In Sequential Recommenders (SR), encoding and utilizing modalities in an end-to-end manner is costly in terms of modality encoder sizes. Two-stage approaches can mitigate such concerns, but they suffer from poor performance due to modality forgetting, where the sequential objective overshadows modality representation. We propose a lightweight knowledge distillation solution that preserves both merits: retaining modality information and maintaining high efficiency. Specifically, we introduce a novel method that enhances the learning of embeddings in SR through the supervision of modality correlations. The supervision signals are distilled from the original modality representations, including both (1) holistic correlations, which quantify their overall associations, and (2) dissected correlation types, which refine their relationship facets (honing in on specific aspects like color or shape consistency). To further address the issue of modality forgetting, we propose an asynchronous learning step, allowing the original information to be retained longer for training the representation learning module. Our approach is compatible with various backbone architectures and outperforms the top baselines by 6.8% on average. We empirically demonstrate that preserving original feature associations from modality encoders significantly boosts task-specific recommendation adaptation. Additionally, we find that larger modality encoders (e.g., Large Language Models) contain richer feature sets which necessitate more fine-grained modeling to reach their full performance potential.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258801777",
+                    "name": "Hengchang Hu"
+                },
+                {
+                    "authorId": "2244776472",
+                    "name": "Qijiong Liu"
+                },
+                {
+                    "authorId": "2240818859",
+                    "name": "Chuang Li"
+                },
+                {
+                    "authorId": "2270948852",
+                    "name": "Min-Yen Kan"
+                }
+            ]
+        },
+        {
+            "paperId": "53fa01ab6d73878e32940ccf9ec861b24f2ab7c8",
+            "title": "Discrete Semantic Tokenization for Deep CTR Prediction",
+            "abstract": "Incorporating item content information into click-through rate (CTR) prediction models remains a challenge, especially with the time and space constraints of industrial scenarios. The content-encoding paradigm, which integrates user and item encoders directly into CTR models, prioritizes space over time. In contrast, the embedding-based paradigm transforms item and user semantics into latent embeddings, subsequently caching them to optimize processing time at the expense of space. In this paper, we introduce a new semantic-token paradigm and propose a discrete semantic tokenization approach, namely UIST, for user and item representation. UIST facilitates swift training and inference while maintaining a conservative memory footprint. Specifically, UIST quantizes dense embedding vectors into discrete tokens with shorter lengths and employs a hierarchical mixture inference module to weigh the contribution of each user-item token pair. Our experimental results on news recommendation showcase the effectiveness and efficiency (about 200-fold space compression) of UIST for CTR prediction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2244776472",
+                    "name": "Qijiong Liu"
+                },
+                {
+                    "authorId": "2258801777",
+                    "name": "Hengchang Hu"
+                },
+                {
+                    "authorId": "2109164978",
+                    "name": "Jiahao Wu"
+                },
+                {
+                    "authorId": "2290237904",
+                    "name": "Jieming Zhu"
+                },
+                {
+                    "authorId": "2270948852",
+                    "name": "Min-Yen Kan"
+                },
+                {
+                    "authorId": "2187512110",
+                    "name": "Xiao-Ming Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "077d0d96198252c1b8c9f256ed10edbe8e6ae7ad",
+            "title": "Dataset Condensation for Recommendation",
+            "abstract": "Training recommendation models on large datasets often requires significant time and computational resources. Consequently, an emergent imperative has arisen to construct informative, smaller-scale datasets for efficiently training. Dataset compression techniques explored in other domains show potential possibility to address this problem, via sampling a subset or synthesizing a small dataset. However, applying existing approaches to condense recommendation datasets is impractical due to following challenges: (i) sampling-based methods are inadequate in addressing the long-tailed distribution problem; (ii) synthesizing-based methods are not applicable due to discreteness of interactions and large size of recommendation datasets; (iii) neither of them fail to address the specific issue in recommendation of false negative items, where items with potential user interest are incorrectly sampled as negatives owing to insufficient exposure. To bridge this gap, we investigate dataset condensation for recommendation, where discrete interactions are continualized with probabilistic re-parameterization. To avoid catastrophically expensive computations, we adopt a one-step update strategy for inner model training and introducing policy gradient estimation for outer dataset synthesis. To mitigate amplification of long-tailed problem, we compensate long-tailed users in the condensed dataset. Furthermore, we propose to utilize a proxy model to identify false negative items. Theoretical analysis regarding the convergence property is provided. Extensive experiments on multiple datasets demonstrate the efficacy of our method. In particular, we reduce the dataset size by 75% while approximating over 98% of the original performance on Dianping and over 90% on other datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109164978",
+                    "name": "Jiahao Wu"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2152939552",
+                    "name": "Shengcai Liu"
+                },
+                {
+                    "authorId": "2244776472",
+                    "name": "Qijiong Liu"
+                },
+                {
+                    "authorId": "2253403022",
+                    "name": "Rui He"
+                },
+                {
+                    "authorId": "2254366521",
+                    "name": "Qing Li"
+                },
+                {
+                    "authorId": "2253405825",
+                    "name": "Ke Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "0790ffc8118c9ebba6a1d2b0e7f805f39faeae82",
+            "title": "Leveraging Large Language Models (LLMs) to Empower Training-Free Dataset Condensation for Content-Based Recommendation",
+            "abstract": "Modern techniques in Content-based Recommendation (CBR) leverage item content information to provide personalized services to users, but suffer from resource-intensive training on large datasets. To address this issue, we explore the dataset condensation for textual CBR in this paper. The goal of dataset condensation is to synthesize a small yet informative dataset, upon which models can achieve performance comparable to those trained on large datasets. While existing condensation approaches are tailored to classification tasks for continuous data like images or embeddings, direct application of them to CBR has limitations. To bridge this gap, we investigate efficient dataset condensation for content-based recommendation. Inspired by the remarkable abilities of large language models (LLMs) in text comprehension and generation, we leverage LLMs to empower the generation of textual content during condensation. To handle the interaction data involving both users and items, we devise a dual-level condensation method: content-level and user-level. At content-level, we utilize LLMs to condense all contents of an item into a new informative title. At user-level, we design a clustering-based synthesis module, where we first utilize LLMs to extract user interests. Then, the user interests and user embeddings are incorporated to condense users and generate interactions for condensed users. Notably, the condensation paradigm of this method is forward and free from iterative optimization on the synthesized dataset. Extensive empirical findings from our study, conducted on three authentic datasets, substantiate the efficacy of the proposed method. Particularly, we are able to approximate up to 97% of the original performance while reducing the dataset size by 95% (i.e., on dataset MIND).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109164978",
+                    "name": "Jiahao Wu"
+                },
+                {
+                    "authorId": "2244776472",
+                    "name": "Qijiong Liu"
+                },
+                {
+                    "authorId": "2258801777",
+                    "name": "Hengchang Hu"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2152939552",
+                    "name": "Shengcai Liu"
+                },
+                {
+                    "authorId": "2254366521",
+                    "name": "Qing Li"
+                },
+                {
+                    "authorId": "2187512110",
+                    "name": "Xiao-Ming Wu"
+                },
+                {
+                    "authorId": "2253405825",
+                    "name": "Ke Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "6de6ad9f6c473edd54d823c0cc7b59347f94db8c",
+            "title": "Enhancing Graph Collaborative Filtering via Uniformly Co-Clustered Intent Modeling",
+            "abstract": "Graph-based collaborative filtering has emerged as a powerful paradigm for delivering personalized recommendations. Despite their demonstrated effectiveness, these methods often neglect the underlying intents of users, which constitute a pivotal facet of comprehensive user interests. Consequently, a series of approaches have arisen to tackle this limitation by introducing independent intent representations. However, these approaches fail to capture the intricate relationships between intents of different users and the compatibility between user intents and item properties. To remedy the above issues, we propose a novel method, named uniformly co-clustered intent modeling. Specifically, we devise a uniformly contrastive intent modeling module to bring together the embeddings of users with similar intents and items with similar properties. This module aims to model the nuanced relations between intents of different users and properties of different items, especially those unreachable to each other on the user-item graph. To model the compatibility between user intents and item properties, we design the user-item co-clustering module, maximizing the mutual information of co-clusters of users and items. This approach is substantiated through theoretical validation, establishing its efficacy in modeling compatibility to enhance the mutual information between user and item representations. Comprehensive experiments on various real-world datasets verify the effectiveness of the proposed framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109164978",
+                    "name": "Jiahao Wu"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2173074",
+                    "name": "Shengcai Liu"
+                },
+                {
+                    "authorId": "2244776472",
+                    "name": "Qijiong Liu"
+                },
+                {
+                    "authorId": "1930238",
+                    "name": "Qing Li"
+                },
+                {
+                    "authorId": "2078692567",
+                    "name": "Ke Tang"
+                }
+            ]
+        }
+    ]
+}

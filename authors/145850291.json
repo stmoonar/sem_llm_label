@@ -1,0 +1,350 @@
+{
+    "authorId": "145850291",
+    "papers": [
+        {
+            "paperId": "19cbae4b5d3a10fd5e5cc27de163a4319c9d4341",
+            "title": "You Only Transfer What You Share: Intersection-Induced Graph Transfer Learning for Link Prediction",
+            "abstract": "Link prediction is central to many real-world applications, but its performance may be hampered when the graph of interest is sparse. To alleviate issues caused by sparsity, we investigate a previously overlooked phenomenon: in many cases, a densely connected, complementary graph can be found for the original graph. The denser graph may share nodes with the original graph, which offers a natural bridge for transferring selective, meaningful knowledge. We identify this setting as Graph Intersection-induced Transfer Learning (GITL), which is motivated by practical applications in e-commerce or academic co-authorship predictions. We develop a framework to effectively leverage the structural prior in this setting. We first create an intersection subgraph using the shared nodes between the two graphs, then transfer knowledge from the source-enriched intersection subgraph to the full target graph. In the second step, we consider two approaches: a modified label propagation, and a multi-layer perceptron (MLP) model in a teacher-student regime. Experimental results on proprietary e-commerce datasets and open-source citation graphs show that the proposed workflow outperforms existing transfer learning baselines that do not explicitly utilize the intersection structure.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                }
+            ]
+        },
+        {
+            "paperId": "4a2008b8793d6ee8a14a95b2c21f30fe55720834",
+            "title": "Simplifying Distributed Neural Network Training on Massive Graphs: Randomized Partitions Improve Model Aggregation",
+            "abstract": "Distributed training of GNNs enables learning on massive graphs (e.g., social and e-commerce networks) that exceed the storage and computational capacity of a single machine. To reach performance comparable to centralized training, distributed frameworks focus on maximally recovering cross-instance node dependencies with either communication across instances or periodic fallback to centralized training, which create overhead and limit the framework scalability. In this work, we present a simplified framework for distributed GNN training that does not rely on the aforementioned costly operations, and has improved scalability, convergence speed and performance over the state-of-the-art approaches. Specifically, our framework (1) assembles independent trainers, each of which asynchronously learns a local model on locally-available parts of the training graph, and (2) only conducts periodic (time-based) model aggregation to synchronize the local models. Backed by our theoretical analysis, instead of maximizing the recovery of cross-instance node dependencies -- which has been considered the key behind closing the performance gap between model aggregation and centralized training -- , our framework leverages randomized assignment of nodes or super-nodes (i.e., collections of original nodes) to partition the training graph such that it improves data uniformity and minimizes the discrepancy of gradient and loss function across instances. In our experiments on social and e-commerce networks with up to 1.3 billion edges, our proposed RandomTMA and SuperTMA approaches -- despite using less training data -- achieve state-of-the-art performance and 2.31x speedup compared to the fastest baseline, and show better robustness to trainer failures.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "8856206",
+                    "name": "Aishwarya N. Reganti"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "51118486",
+                    "name": "Charles Dickens"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "0dc77837f4aaf66fccaddf7bc7a2ae7939b032cf",
+            "title": "Text Enriched Sparse Hyperbolic Graph Convolutional Networks",
+            "abstract": "Heterogeneous networks, which connect informative nodes containing text with different edge types, are routinely used to store and process information in various real-world applications. Graph Neural Networks (GNNs) and their hyperbolic variants provide a promising approach to encode such networks in a low-dimensional latent space through neighborhood aggregation and hierarchical feature extraction, respectively. However, these approaches typically ignore metapath structures and the available semantic information. Furthermore, these approaches are sensitive to the noise present in the training data. To tackle these limitations, in this paper, we propose Text Enriched Sparse Hyperbolic Graph Convolution Network (TESH-GCN) to capture the graph's metapath structures using semantic signals and further improve prediction in large heterogeneous graphs. In TESH-GCN, we extract semantic node information, which successively acts as a connection signal to extract relevant nodes' local neighborhood and graph-level metapath features from the sparse adjacency tensor in a reformulated hyperbolic graph convolution layer. These extracted features in conjunction with semantic features from the language model (for robustness) are used for the final downstream task. Experiments on various heterogeneous graph datasets show that our model outperforms the current state-of-the-art approaches by a large margin on the task of link prediction. We also report a reduction in both the training time and model parameters compared to the existing hyperbolic approaches through a reformulated hyperbolic graph convolution. Furthermore, we illustrate the robustness of our model by experimenting with different levels of simulated noise in both the graph structure and text, and also, present a mechanism to explain TESH-GCN's prediction by analyzing the extracted metapaths.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2726036",
+                    "name": "Nurendra Choudhary"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "144417522",
+                    "name": "Chandan K. Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "2254e24e716f53dcef722085239b00d5edc15cc8",
+            "title": "ANTHEM: Attentive Hyperbolic Entity Model for Product Search",
+            "abstract": "Product search is a fundamentally challenging problem due to the large-size of product catalogues and the complexity of extracting semantic information from products. In addition to this, the black-box nature of most search systems also hamper a smooth customer experience. Current approaches in this area utilize lexical and semantic product information to match user queries against products. However, these models lack (i) a hierarchical query representation, (ii) a mechanism to detect and capture inter-entity relationships within a query, and (iii) a query composition method specific to e-commerce domain. To address these challenges, in this paper, we propose an AtteNTive Hyperbolic Entity Model (ANTHEM), a novel attention-based product search framework that models query entities as two-vector hyperboloids, learns inter-entity intersections and utilizes attention to unionize individual entities and inter-entity intersections to predict product matches from the search space. ANTHEM utilizes the first and second vector of hyperboloids to determine the query's semantic position and to tune its surrounding search volume, respectively. The attention networks capture the significance of intra-entity and inter-entity intersections to the final query space. Additionally, we provide a mechanism to comprehend ANTHEM and understand the significance of query entities towards the final resultant products. We evaluate the performance of our model on real data collected from popular e-commerce sites. Our experimental study on the offline data demonstrates compelling evidence of ANTHEM's superior performance over state-of-the-art product search methods with an improvement of more than 10% on various metrics. We also demonstrate the quality of ANTHEM's query encoder using a query matching task.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2726036",
+                    "name": "Nurendra Choudhary"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "47617256",
+                    "name": "S. Katariya"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "144417522",
+                    "name": "Chandan K. Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "46b259403b91be9643b1b689f1354e64f1da1879",
+            "title": "Shopping Queries Dataset: A Large-Scale ESCI Benchmark for Improving Product Search",
+            "abstract": "Improving the quality of search results can significantly enhance users experience and engagement with search engines. In spite of several recent advancements in the fields of machine learning and data mining, correctly classifying items for a particular user search query has been a long-standing challenge, which still has a large room for improvement. This paper introduces the\"Shopping Queries Dataset\", a large dataset of difficult Amazon search queries and results, publicly released with the aim of fostering research in improving the quality of search results. The dataset contains around 130 thousand unique queries and 2.6 million manually labeled (query,product) relevance judgements. The dataset is multilingual with queries in English, Japanese, and Spanish. The Shopping Queries Dataset is being used in one of the KDDCup'22 challenges. In this paper, we describe the dataset and present three evaluation tasks along with baseline results: (i) ranking the results list, (ii) classifying product results into relevance categories, and (iii) identifying substitute products for a given query. We anticipate that this data will become the gold standard for future research in the topic of product search.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2052844381",
+                    "name": "C. K. Reddy"
+                },
+                {
+                    "authorId": "3049328",
+                    "name": "Llu\u00eds M\u00e0rquez i Villodre"
+                },
+                {
+                    "authorId": "2149675907",
+                    "name": "Francisco B. Valero"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2833561",
+                    "name": "H. Zaragoza"
+                },
+                {
+                    "authorId": "144171563",
+                    "name": "S. Bandyopadhyay"
+                },
+                {
+                    "authorId": "2170163899",
+                    "name": "Arnab Biswas"
+                },
+                {
+                    "authorId": "2170167846",
+                    "name": "Anlu Xing"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                }
+            ]
+        },
+        {
+            "paperId": "62f82e0a3271880ca81c7198cad80305bb3719a7",
+            "title": "Search Behavior Prediction: A Hypergraph Perspective",
+            "abstract": "At E-Commerce stores such as Amazon, eBay, and Taobao, the shopping items and the query words that customers use to search for the items form a bipartite graph that captures search behavior. Such a query-item graph can be used to forecast search trends or improve search results. For example, generating query-item associations, which is equivalent to predicting links in the bipartite graph, can yield recommendations that can customize and improve the user search experience. Although the bipartite shopping graphs are straightforward to model search behavior, they suffer from two challenges: 1) The majority of items are sporadically searched and hence have noisy/sparse query associations, leading to a long-tail distribution. 2) Infrequent queries are more likely to link to popular items, leading to another hurdle known as disassortative mixing. To address these two challenges, we go beyond the bipartite graph to take a hypergraph perspective, introducing a new paradigm that leverages auxiliary information from anonymized customer engagement sessions to assist the main task of query-item link prediction. This auxiliary information is available at web scale in the form of search logs. We treat all items appearing in the same customer session as a single hyperedge. The hypothesis is that items in a customer session are unified by a common shopping interest. With these hyperedges, we augment the original bipartite graph into a new hypergraph. We develop a Dual-Channel Attention-Based Hypergraph Neural Network (DCAH), which synergizes information from two potentially noisy sources (original query-item edges and item-item hyperedges). In this way, items on the tail are better connected due to the extra hyperedges, thereby enhancing their link prediction performance. We further integrate DCAH with self-supervised graph pre-training and/or DropEdge training, both of which effectively alleviate disassortative mixing. Extensive experiments on three proprietary E-Commerce datasets show that DCAH yields significant improvements of up to 24.6% in mean reciprocal rank (MRR) and 48.3% in recall compared to GNN-based baselines. Our source code is available at https://github.com/amazon-science/dual-channel-hypergraph-neural-network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153216777",
+                    "name": "Yan Han"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                }
+            ]
+        },
+        {
+            "paperId": "9a5e7072e0cd1820c6fe383d5811b90c252af6f7",
+            "title": "Hyperbolic Neural Networks: Theory, Architectures and Applications",
+            "abstract": "Recent studies have revealed important properties that are unique to graph datasets such as hierarchies and global structures. This has driven research into hyperbolic space due to their ability to effectively encode the inherent hierarchy present in graph datasets. However, a major bottleneck here is the obscurity of hyperbolic geometry and a better comprehension of its gyrovector operations. In this tutorial, we aim to introduce researchers and practitioners in the data mining community to the hyperbolic equivariants of the Euclidean operations that are necessary to tackle their application to neural networks. We describe the popular hyperbolic variants of GNN architectures and explain their implementation, in contrast to the Euclidean counterparts. Also, we motivate our tutorial through critical analysis of existing applications in the areas of graph mining, knowledge graph reasoning, search, NLP, and computer vision.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2726036",
+                    "name": "Nurendra Choudhary"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "1757518",
+                    "name": "Srinivasan H. Sengamedu"
+                },
+                {
+                    "authorId": "144417522",
+                    "name": "Chandan K. Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "acc682841729ec95416aa61589d7e1a91d2c2b77",
+            "title": "Learning Backward Compatible Embeddings",
+            "abstract": "Embeddings, low-dimensional vector representation of objects, are fundamental in building modern machine learning systems. In industrial settings, there is usually an embedding team that trains an embedding model to solve intended tasks (e.g., product recommendation). The produced embeddings are then widely consumed by consumer teams to solve their unintended tasks (e.g., fraud detection). However, as the embedding model gets updated and retrained to improve performance on the intended task, the newly-generated embeddings are no longer compatible with the existing consumer models. This means that historical versions of the embeddings can never be retired or all consumer teams have to retrain their models to make them compatible with the latest version of the embeddings, both of which are extremely costly in practice. Here we study the problem of embedding version updates and their backward compatibility. We formalize the problem where the goal is for the embedding team to keep updating the embedding version, while the consumer teams do not have to retrain their models. We develop a solution based on learning backward compatible embeddings, which allows the embedding model version to be updated frequently, while also allowing the latest version of the embedding to be quickly transformed into any backward compatible historical version of it, so that consumer teams do not have to retrain their models. Our key idea is that whenever a new embedding model is trained, we learn it together with a light-weight backward compatibility transformation that aligns the new embedding to the previous version of it. Our learned backward transformations can then be composed to produce any historical version of embedding. Under our framework, we explore six methods and systematically evaluate them on a real-world recommender system application. We show that the best method, which we call BC-Aligner, maintains backward compatibility with existing unintended tasks even after multiple model version updates. Simultaneously, BC-Aligner achieves the intended task performance similar to the embedding model that is solely optimized for the intended task. Code is publicly available at https://github.com/snap-stanford/bc-emb",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48594758",
+                    "name": "Weihua Hu"
+                },
+                {
+                    "authorId": "1741156339",
+                    "name": "Rajas Bansal"
+                },
+                {
+                    "authorId": "48865984",
+                    "name": "Kaidi Cao"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "1702139",
+                    "name": "J. Leskovec"
+                }
+            ]
+        },
+        {
+            "paperId": "c759bfc48c4448748adde4a0467d96d56c83be51",
+            "title": "ALLIE: Active Learning on Large-scale Imbalanced Graphs",
+            "abstract": "Human labeling is time-consuming and costly. This problem is further exacerbated in extremely imbalanced class label scenarios, such as detecting fraudsters in online websites. Active learning selects the most relevant example for human labelers to improve the model performance at a lower cost. However, existing methods for active learning for graph data often assumes that both data and label distributions are balanced. These assumptions fail in extreme rare-class classification scenarios, such as classifying abusive reviews in an e-commerce website. We propose a novel framework ALLIE to address this challenge of active learning in large-scale imbalanced graph data. In our approach, we efficiently sample from both majority and minority classes using a reinforcement learning agent with imbalance-aware reward function. We employ focal loss in the node classification model in order to focus more on rare class and improve the accuracy of the downstream model. Finally, we use a graph coarsening strategy to reduce the search space of the reinforcement learning agent. We conduct extensive experiments on benchmark graph datasets and real-world e-commerce datasets. ALLIE out-performs state-of-the-art graph-based active learning methods significantly, with up to 10% improvement of F1 score for the positive class. We also validate ALLIE on a proprietary e-commerce graph data by tasking it to detect abuse. Our coarsening strategy reduces the computational time by up to 38% in both proprietary and public datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3122003",
+                    "name": "Limeng Cui"
+                },
+                {
+                    "authorId": "9333529",
+                    "name": "Xian-Juan Tang"
+                },
+                {
+                    "authorId": "47617256",
+                    "name": "S. Katariya"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2155993722",
+                    "name": "Pallav Agrawal"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "2150817685",
+                    "name": "Dongwon Lee"
+                }
+            ]
+        },
+        {
+            "paperId": "e76317b5191b88d83758be322c026af77492de44",
+            "title": "Task-Agnostic Graph Explanations",
+            "abstract": "Graph Neural Networks (GNNs) have emerged as powerful tools to encode graph-structured data. Due to their broad applications, there is an increasing need to develop tools to explain how GNNs make decisions given graph-structured data. Existing learning-based GNN explanation approaches are task-specific in training and hence suffer from crucial drawbacks. Specifically, they are incapable of producing explanations for a multitask prediction model with a single explainer. They are also unable to provide explanations in cases where the GNN is trained in a self-supervised manner, and the resulting representations are used in future downstream tasks. To address these limitations, we propose a Task-Agnostic GNN Explainer (TAGE) that is independent of downstream models and trained under self-supervision with no knowledge of downstream tasks. TAGE enables the explanation of GNN embedding models with unseen downstream tasks and allows efficient explanation of multitask models. Our extensive experiments show that TAGE can significantly speed up the explanation efficiency by using the same model to explain predictions for multiple downstream tasks while achieving explanation quality as good as or even better than current state-of-the-art GNN explanation approaches. Our code is pubicly available as part of the DIG library at https://github.com/divelab/DIG/tree/main/dig/xgraph/TAGE/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "14629242",
+                    "name": "Yaochen Xie"
+                },
+                {
+                    "authorId": "47617256",
+                    "name": "S. Katariya"
+                },
+                {
+                    "authorId": "48784944",
+                    "name": "Xianfeng Tang"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                },
+                {
+                    "authorId": "1743600",
+                    "name": "Shuiwang Ji"
+                }
+            ]
+        }
+    ]
+}

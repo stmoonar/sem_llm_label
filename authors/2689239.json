@@ -1,0 +1,553 @@
+{
+    "authorId": "2689239",
+    "papers": [
+        {
+            "paperId": "1b5e69a5b0f179e90f356a9c8cc1a39f77471dab",
+            "title": "Selective \"Selective Prediction\": Reducing Unnecessary Abstention in Vision-Language Reasoning",
+            "abstract": "Selective prediction minimizes incorrect predictions from vision-language models (VLMs) by allowing them to abstain from answering when uncertain. However, when deploying a vision-language system with low tolerance for inaccurate predictions, selective prediction may be over-cautious and abstain too frequently, even on many correct predictions. We introduce ReCoVERR, an inference-time algorithm to reduce the over-abstention of a selective vision-language system without increasing the error rate of the system's predictions. When the VLM makes a low-confidence prediction, instead of abstaining ReCoVERR tries to find relevant clues in the image that provide additional evidence for the prediction. ReCoVERR uses an LLM to pose related questions to the VLM, collects high-confidence evidences, and if enough evidence confirms the prediction the system makes a prediction instead of abstaining. ReCoVERR enables three VLMs (BLIP2, InstructBLIP, and LLaVA-1.5) to answer up to 20% more questions on the VQAv2 and A-OKVQA tasks without decreasing system accuracy, thus improving overall system reliability. Our code is available at https://github.com/tejas1995/ReCoVERR.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150324514",
+                    "name": "Tejas Srinivasan"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2286872071",
+                    "name": "Tanmay Gupta"
+                },
+                {
+                    "authorId": "2273918810",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "2253903625",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2284872321",
+                    "name": "Jesse Thomason"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                }
+            ]
+        },
+        {
+            "paperId": "2a3c0ffbe70b4aa4b5d118cc0da365fe2a04f262",
+            "title": "Deal, or no deal (or who knows)? Forecasting Uncertainty in Conversations using Large Language Models",
+            "abstract": "Effective interlocutors account for the uncertain goals, beliefs, and emotions of others. But even the best human conversationalist cannot perfectly anticipate the trajectory of a dialogue. How well can language models represent inherent uncertainty in conversations? We propose FortUne Dial, an expansion of the long-standing\"conversation forecasting\"task: instead of just accuracy, evaluation is conducted with uncertainty-aware metrics, effectively enabling abstention on individual instances. We study two ways in which language models potentially represent outcome uncertainty (internally, using scores and directly, using tokens) and propose fine-tuning strategies to improve calibration of both representations. Experiments on eight difficult negotiation corpora demonstrate that our proposed fine-tuning strategies (a traditional supervision strategy and an off-policy reinforcement learning strategy) can calibrate smaller open-source models to compete with pre-trained models 10x their size.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51137683",
+                    "name": "Anthony Sicilia"
+                },
+                {
+                    "authorId": "32609381",
+                    "name": "Hyunwoo Kim"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2715920",
+                    "name": "Malihe Alikhani"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                }
+            ]
+        },
+        {
+            "paperId": "301659c54f451ec5c963dae46d28f397a562fb53",
+            "title": "WildVis: Open Source Visualizer for Million-Scale Chat Logs in the Wild",
+            "abstract": "The increasing availability of real-world conversation data offers exciting opportunities for researchers to study user-chatbot interactions. However, the sheer volume of this data makes manually examining individual conversations impractical. To overcome this challenge, we introduce WildVis, an interactive tool that enables fast, versatile, and large-scale conversation analysis. WildVis provides search and visualization capabilities in the text and embedding spaces based on a list of criteria. To manage million-scale datasets, we implemented optimizations including search index construction, embedding precomputation and compression, and caching to ensure responsive user interactions within seconds. We demonstrate WildVis' utility through three case studies: facilitating chatbot misuse research, visualizing and comparing topic distributions across datasets, and characterizing user-specific conversation patterns. WildVis is open-source and designed to be extendable, supporting additional datasets and customized search and visualization functionalities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268298457",
+                    "name": "Yuntian Deng"
+                },
+                {
+                    "authorId": "2266434757",
+                    "name": "Wenting Zhao"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2228515529",
+                    "name": "Xiang Ren"
+                },
+                {
+                    "authorId": "2064285348",
+                    "name": "Claire Cardie"
+                },
+                {
+                    "authorId": "2285939518",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "46326c01b49b06c61b4d6ffa8429344ff23c9bb9",
+            "title": "Certainly Uncertain: A Benchmark and Metric for Multimodal Epistemic and Aleatoric Awareness",
+            "abstract": "The ability to acknowledge the inevitable uncertainty in their knowledge and reasoning is a prerequisite for AI systems to be truly truthful and reliable. In this paper, we present a taxonomy of uncertainty specific to vision-language AI systems, distinguishing between epistemic uncertainty (arising from a lack of information) and aleatoric uncertainty (due to inherent unpredictability), and further explore finer categories within. Based on this taxonomy, we synthesize a benchmark dataset, CertainlyUncertain, featuring 178K visual question answering (VQA) samples as contrastive pairs. This is achieved by 1) inpainting images to make previously answerable questions into unanswerable ones; and 2) using image captions to prompt large language models for both answerable and unanswerable questions. Additionally, we introduce a new metric confidence-weighted accuracy, that is well correlated with both accuracy and calibration error, to address the shortcomings of existing metrics.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2264413993",
+                    "name": "Linjie Li"
+                },
+                {
+                    "authorId": "2135149490",
+                    "name": "Anas Awadalla"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "2152276408",
+                    "name": "J. Park"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2273909761",
+                    "name": "Lijuan Wang"
+                },
+                {
+                    "authorId": "2307036659",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "5439a10e45bf1af937b1009348fb9582d9c3d640",
+            "title": "L3GO: Language Agents with Chain-of-3D-Thoughts for Generating Unconventional Objects",
+            "abstract": "Diffusion-based image generation models such as DALL-E 3 and Stable Diffusion-XL demonstrate remarkable capabilities in generating images with realistic and unique compositions. Yet, these models are not robust in precisely reasoning about physical and spatial configurations of objects, especially when instructed with unconventional, thereby out-of-distribution descriptions, such as\"a chair with five legs\". In this paper, we propose a language agent with chain-of-3D-thoughts (L3GO), an inference-time approach that can reason about part-based 3D mesh generation of unconventional objects that current data-driven diffusion models struggle with. More concretely, we use large language models as agents to compose a desired object via trial-and-error within the 3D simulation environment. To facilitate our investigation, we develop a new benchmark, Unconventionally Feasible Objects (UFO), as well as SimpleBlenv, a wrapper environment built on top of Blender where language agents can build and compose atomic building blocks via API calls. Human and automatic GPT-4V evaluations show that our approach surpasses the standard GPT-4 and other language agents (e.g., ReAct and Reflexion) for 3D mesh generation on ShapeNet. Moreover, when tested on our UFO benchmark, our approach outperforms other state-of-the-art text-to-2D image and text-to-3D models based on human evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111746399",
+                    "name": "Yutaro Yamada"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2284130273",
+                    "name": "Yuchen Lin"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2256550532",
+                    "name": "Ilker Yildirim"
+                },
+                {
+                    "authorId": "2266363632",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "a1fa960fdfcc08510d348f7c66028f3d91b497f8",
+            "title": "The Art of Saying No: Contextual Noncompliance in Language Models",
+            "abstract": "Chat-based language models are designed to be helpful, yet they should not comply with every user request. While most existing work primarily focuses on refusal of\"unsafe\"queries, we posit that the scope of noncompliance should be broadened. We introduce a comprehensive taxonomy of contextual noncompliance describing when and how models should not comply with user requests. Our taxonomy spans a wide range of categories including incomplete, unsupported, indeterminate, and humanizing requests (in addition to unsafe requests). To test noncompliance capabilities of language models, we use this taxonomy to develop a new evaluation suite of 1000 noncompliance prompts. We find that most existing models show significantly high compliance rates in certain previously understudied categories with models like GPT-4 incorrectly complying with as many as 30% of requests. To address these gaps, we explore different training strategies using a synthetically-generated training set of requests and expected noncompliant responses. Our experiments demonstrate that while direct finetuning of instruction-tuned models can lead to both over-refusal and a decline in general capabilities, using parameter efficient methods like low rank adapters helps to strike a good balance between appropriate noncompliance and other capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "2308339428",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2697425",
+                    "name": "Pradeep Dasigi"
+                },
+                {
+                    "authorId": "22330666",
+                    "name": "Valentina Pyatkin"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2279337376",
+                    "name": "Sarah Wiegreffe"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "2302810573",
+                    "name": "K. Chandu"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2258958466",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2292425227",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2259707400",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2264251662",
+                    "name": "Hanna Hajishirzi"
+                }
+            ]
+        },
+        {
+            "paperId": "a83af24920fac48e66e7cdbf5ed9fc77b19a210a",
+            "title": "Selective Vision is the Challenge for Visual Reasoning: A Benchmark for Visual Argument Understanding",
+            "abstract": "Visual arguments, often used in advertising or social causes, rely on images to persuade viewers to do or believe something. Understanding these arguments requires selective vision: only specific visual stimuli within an image are relevant to the argument, and relevance can only be understood within the context of a broader argumentative structure. While visual arguments are readily appreciated by human audiences, we ask: are today's AI capable of similar understanding? We present VisArgs, a dataset of 1,611 images annotated with 5,112 visual premises (with regions), 5,574 commonsense premises, and reasoning trees connecting them into structured arguments. We propose three tasks for evaluating visual argument understanding: premise localization, premise identification, and conclusion deduction. Experiments show that 1) machines struggle to capture visual cues: GPT-4-O achieved 78.5% accuracy, while humans reached 98.0%. Models also performed 19.5% worse when distinguishing between irrelevant objects within the image compared to external objects. 2) Providing relevant visual premises improved model performance significantly.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2004821977",
+                    "name": "Jiwan Chung"
+                },
+                {
+                    "authorId": "2309177771",
+                    "name": "Sungjae Lee"
+                },
+                {
+                    "authorId": "2308561234",
+                    "name": "Minseo Kim"
+                },
+                {
+                    "authorId": "2423429",
+                    "name": "Seungju Han"
+                },
+                {
+                    "authorId": "36737249",
+                    "name": "Ashkan Yousefpour"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2258802490",
+                    "name": "Youngjae Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "ac45bbf9940512d9d686cf8cd3a95969bc313570",
+            "title": "OLMo: Accelerating the Science of Language Models",
+            "abstract": "Language models (LMs) have become ubiquitous in both NLP research and in commercial product offerings. As their commercial importance has surged, the most powerful models have become closed off, gated behind proprietary interfaces, with important details of their training data, architectures, and development undisclosed. Given the importance of these details in scientifically studying these models, including their biases and potential risks, we believe it is essential for the research community to have access to powerful, truly open LMs. To this end, we have built OLMo, a competitive, truly Open Language Model, to enable the scientific study of language models. Unlike most prior efforts that have only released model weights and inference code, we release OLMo alongside open training data and training and evaluation code. We hope this release will empower the open research community and inspire a new wave of innovation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3458736",
+                    "name": "Dirk Groeneveld"
+                },
+                {
+                    "authorId": "2260133345",
+                    "name": "Iz Beltagy"
+                },
+                {
+                    "authorId": "2158819969",
+                    "name": "Pete Walsh"
+                },
+                {
+                    "authorId": "2166136235",
+                    "name": "Akshita Bhagia"
+                },
+                {
+                    "authorId": "2282136328",
+                    "name": "Rodney Kinney"
+                },
+                {
+                    "authorId": "3385516",
+                    "name": "Oyvind Tafjord"
+                },
+                {
+                    "authorId": "47286118",
+                    "name": "A. Jha"
+                },
+                {
+                    "authorId": "2056776606",
+                    "name": "Hamish Ivison"
+                },
+                {
+                    "authorId": "2124977543",
+                    "name": "Ian Magnusson"
+                },
+                {
+                    "authorId": "1705260",
+                    "name": "Yizhong Wang"
+                },
+                {
+                    "authorId": "2259924223",
+                    "name": "Shane Arora"
+                },
+                {
+                    "authorId": "2282136757",
+                    "name": "David Atkinson"
+                },
+                {
+                    "authorId": "2202417686",
+                    "name": "Russell Authur"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2527954",
+                    "name": "Arman Cohan"
+                },
+                {
+                    "authorId": "2282136556",
+                    "name": "Jennifer Dumas"
+                },
+                {
+                    "authorId": "51131518",
+                    "name": "Yanai Elazar"
+                },
+                {
+                    "authorId": "2261456046",
+                    "name": "Yuling Gu"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2236429",
+                    "name": "Tushar Khot"
+                },
+                {
+                    "authorId": "2282138468",
+                    "name": "William Merrill"
+                },
+                {
+                    "authorId": "2146964035",
+                    "name": "Jacob Daniel Morrison"
+                },
+                {
+                    "authorId": "2037383772",
+                    "name": "Niklas Muennighoff"
+                },
+                {
+                    "authorId": "23175870",
+                    "name": "Aakanksha Naik"
+                },
+                {
+                    "authorId": "2282136595",
+                    "name": "Crystal Nam"
+                },
+                {
+                    "authorId": "2267244582",
+                    "name": "Matthew E. Peters"
+                },
+                {
+                    "authorId": "22330666",
+                    "name": "Valentina Pyatkin"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2264248042",
+                    "name": "Dustin Schwenk"
+                },
+                {
+                    "authorId": "2282190660",
+                    "name": "Saurabh Shah"
+                },
+                {
+                    "authorId": "2282155558",
+                    "name": "Will Smith"
+                },
+                {
+                    "authorId": "2268272",
+                    "name": "Emma Strubell"
+                },
+                {
+                    "authorId": "34202134",
+                    "name": "Nishant Subramani"
+                },
+                {
+                    "authorId": "52193502",
+                    "name": "Mitchell Wortsman"
+                },
+                {
+                    "authorId": "2697425",
+                    "name": "Pradeep Dasigi"
+                },
+                {
+                    "authorId": "2267244197",
+                    "name": "Nathan Lambert"
+                },
+                {
+                    "authorId": "46666605",
+                    "name": "Kyle Richardson"
+                },
+                {
+                    "authorId": "2137813791",
+                    "name": "Luke S. Zettlemoyer"
+                },
+                {
+                    "authorId": "34176020",
+                    "name": "Jesse Dodge"
+                },
+                {
+                    "authorId": "46258841",
+                    "name": "Kyle Lo"
+                },
+                {
+                    "authorId": "3328733",
+                    "name": "Luca Soldaini"
+                },
+                {
+                    "authorId": "2264002618",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2264251662",
+                    "name": "Hanna Hajishirzi"
+                }
+            ]
+        },
+        {
+            "paperId": "c5533c8be71d749d330d02fba9a4f1cf3bc43914",
+            "title": "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models",
+            "abstract": "Given the growing influx of misinformation across news and social media, there is a critical need for systems that can provide effective real-time verification of news claims. Large language or multimodal model based verification has been proposed to scale up online policing mechanisms for mitigating spread of false and harmful content. While these can potentially reduce burden on human fact-checkers, such efforts may be hampered by foundation model training data becoming outdated. In this work, we test the limits of improving foundation model performance without continual updating through an initial study of knowledge transfer using either existing intra- and inter- domain benchmarks or explanations generated from large language models (LLMs). We evaluate on 12 public benchmarks for fact-checking and misinformation detection as well as two other tasks relevant to content moderation -- toxicity and stance detection. Our results on two recent multi-modal fact-checking benchmarks, Mocheg and Fakeddit, indicate that knowledge transfer strategies can improve Fakeddit performance over the state-of-the-art by up to 1.7% and Mocheg performance by up to 2.9%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2309214098",
+                    "name": "Jaeyoung Lee"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "2111510510",
+                    "name": "Youngjae Yu"
+                },
+                {
+                    "authorId": "3312309",
+                    "name": "Yonatan Bisk"
+                },
+                {
+                    "authorId": "2266363632",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "119902504",
+                    "name": "Saadia Gabriel"
+                }
+            ]
+        },
+        {
+            "paperId": "00c19d9818bf093a2eed323d1bd5c763c4f512b9",
+            "title": "Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms",
+            "abstract": "Commonsense norms are defeasible by context: reading books is usually great, but not when driving a car. While contexts can be explicitly described in language, in embodied scenarios, contexts are often provided visually. This type of visually grounded reasoning about defeasible commonsense norms is generally easy for humans, but (as we show) poses a challenge for machines, as it necessitates both visual understanding and reasoning about commonsense norms. We construct a new multimodal benchmark for studying visual-grounded commonsense norms: NORMLENS. NORMLENS consists of 10K human judgments accompanied by free-form explanations covering 2K multimodal situations, and serves as a probe to address two questions: (1) to what extent can models align with average human judgment? and (2) how well can models explain their predicted judgments? We find that state-of-the-art model judgments and explanations are not well-aligned with human annotation. Additionally, we present a new approach to better align models with humans by distilling social commonsense knowledge from large language models. The data and code are released at https://seungjuhan.me/normlens.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2423429",
+                    "name": "Seungju Han"
+                },
+                {
+                    "authorId": "2258780927",
+                    "name": "Junhyeok Kim"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "2004821977",
+                    "name": "Jiwan Chung"
+                },
+                {
+                    "authorId": "2258703708",
+                    "name": "Yejin Son"
+                },
+                {
+                    "authorId": "2257385142",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2258802490",
+                    "name": "Youngjae Yu"
+                }
+            ]
+        }
+    ]
+}

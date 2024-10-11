@@ -1,0 +1,177 @@
+{
+    "authorId": "2160390715",
+    "papers": [
+        {
+            "paperId": "3eb3cb33d2c807b88c78c12d48041ffeba2ef096",
+            "title": "Graph Neural Networks without Propagation",
+            "abstract": "Due to the simplicity, intuition and explanation, most Graph Neural Networks (GNNs) are proposed by following the pipeline of message passing. Although they achieve superior performances in many tasks, propagation-based GNNs possess three essential drawbacks. Firstly, the propagation tends to produce smooth effect, which meets the inductive bias of homophily, and causes two serious issues: over-smoothing issue and performance drop on networks with heterophily. Secondly, the propagations to each node are irrelevant, which prevents GNNs from modeling high-order relation, and cause the GNNs fragile to the attributes noises. Thirdly, propagation-based GNNs may be fragile to topology noise, since they heavily relay on propagation over the topology. Therefore, the propagation, as the key component of most GNNs, may be the essence of some serious issues in GNNs. To get to the root of these issue, this paper attempts to replace the propagation with a novel local operation. Quantitative experimental analysis reveals: 1) the existence of low-rank characteristic in the node attributes from ego-networks and 2) the performance improvement by reducing its rank. Motivated by this finding, this paper propose the Low-Rank GNNs, whose key component is the low-rank attribute matrix approximation in ego-network. The graph topology is employed to construct the ego-networks instead of message propagation, which is sensitive to topology noises. The proposed Low-Rank GNNs posses some attractive characteristics, including robust to topology and attribute noises, parameter-free and parallelizable. Experimental evaluations demonstrate the superior performance, robustness to noises and universality of the proposed Low-Rank GNNs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2215584803",
+                    "name": "Qiuliang Zhang"
+                },
+                {
+                    "authorId": "2215543502",
+                    "name": "Runjie Shi"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2188012894",
+                    "name": "Zhen Wang"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "370fb0f5dfb590fad83705e1afc2ba3570335542",
+            "title": "Difference Residual Graph Neural Networks",
+            "abstract": "Graph Neural Networks have been widely employed for multimodal fusion and embedding. To overcome over-smoothing issue, residual connections, which are designed for alleviating vanishing gradient problem in NNs, are adopted in Graph Neural Networks (GNNs) to incorporate local node information. However, these simple residual connections are ineffective on networks with heterophily, since the roles of both convolutional operations and residual connections in GNNs are significantly different from those in classic NNs. By considering the specific smoothing characteristic of graph convolutional operation, deep layers in GNNs are expected to focus on the data which can't be properly handled in shallow layers. To this end, a novel and universal Difference Residual Connections (DRC), which feed the difference of the output and input of previous layer as the input of the next layer, is proposed. Essentially, Difference Residual Connections is equivalent to inserting layers with opposite effect (e.g., sharpening) into the network to prevent the excessive effect (e.g., over-smoothing issue) induced by too many layers with the similar role (e.g., smoothing) in GNNs. From the perspective of optimization, DRC is the gradient descent method to minimize an objective function with both smoothing and sharpening terms. The analytic solution to this objective function is determined by both graph topology and node attributes, which theoretically proves that DRC can prevent over-smoothing issue. Extensive experiments demonstrate the superiority of DRC on real networks with both homophily and heterophily, and show that DRC can automatically determine the model depth and be adaptive to both shallow and deep models with two complementary components.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "118103314",
+                    "name": "Weihang Peng"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "a93a71de416b1b3a3793b38ebd28364d2af26244",
+            "title": "Self-Supervised Graph Representation Learning via Information Bottleneck",
+            "abstract": "Graph representation learning has become a mainstream method for processing network structured data, and most graph representation learning methods rely heavily on labeling information for downstream tasks. Since labeled information is rare in the real world, adopting self-supervised learning to solve the graph neural network problem is a significant challenge. Currently, existing graph neural network approaches attempt to maximize mutual information for self-supervised learning, which leads to a large amount of redundant information in the graph representation and thus affects the performance of downstream tasks. Therefore, the self-supervised graph information bottleneck (SGIB) proposed in this paper uses the symmetry and asymmetry of graphs to establish comparative learning and introduces the information bottleneck theory as a loss training model. This model extracts the common features of both views and the independent features of each view by maximizing the mutual information estimation between the local high-level representation of one view and the global summary vector of the other view. It also removes redundant information not relevant to the target task by minimizing the mutual information between the local high-level representations of the two views. Based on the extensive experimental results of three public datasets and two large-scale datasets, it has been shown that the SGIB model can learn higher quality node representations and that several classical network analysis experiments such as node classification and node clustering can be improved compared to existing models in an unsupervised environment. In addition, an in-depth network experiment is designed for in-depth analysis, and the results show that the SGIB model can also alleviate the over-smoothing problem to a certain extent. Therefore, we can infer from different network analysis experiments that it would be an effective improvement of the performance of downstream tasks through introducing information bottleneck theory to remove redundant information.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "9197345",
+                    "name": "Zichen Zheng"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "1591122272",
+                    "name": "Yajuan Zhang"
+                },
+                {
+                    "authorId": "1791440710",
+                    "name": "Zhengjun Lu"
+                },
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "f8b8d4db4334303aa2e432af9bffca56b85ca4c3",
+            "title": "Graph Neural Networks Beyond Compromise Between Attribute and Topology",
+            "abstract": "Although existing Graph Neural Networks (GNNs) based on message passing achieve state-of-the-art, the over-smoothing issue, node similarity distortion issue and dissatisfactory link prediction performance can\u2019t be ignored. This paper summarizes these issues as the interference between topology and attribute for the first time. By leveraging the recently proposed optimization perspective of GNNs, this interference is analyzed and ascribed to that the learned representation in GNNs essentially compromises between the topology and node attribute. To alleviate the interference, this paper attempts to break this compromise by proposing a novel objective function, which fits node attribute and topology with different representations and introduces mutual exclusion constraints to reduce the redundancy in both representations. The mutual exclusion employs the statistical dependence, which regards the representations from topology and attribute as the observations of two random variables, and is implemented with Hilbert-Schmidt Independence Criterion. Derived from the novel objective function, a novel GNN, i.e., Graph Neural Network Beyond Compromise (GNN-BC), is proposed to iteratively updates the representations of topology and attribute by simultaneously capturing semantic information and removing the common information, and the final representation is the concatenation of them. The performance improvements on node classification and link prediction demonstrate the superiority of GNN-BC on relieving the interference.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "118103314",
+                    "name": "Weihang Peng"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                }
+            ]
+        }
+    ]
+}

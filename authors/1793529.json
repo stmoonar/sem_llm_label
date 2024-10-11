@@ -1,0 +1,334 @@
+{
+    "authorId": "1793529",
+    "papers": [
+        {
+            "paperId": "b2e15c5fae78e97ceca1916349c62853ea193b2f",
+            "title": "Efficient Frameworks for Generalized Low-Rank Matrix Bandit Problems",
+            "abstract": "In the stochastic contextual low-rank matrix bandit problem, the expected reward of an action is given by the inner product between the action's feature matrix and some fixed, but initially unknown $d_1$ by $d_2$ matrix $\\Theta^*$ with rank $r \\ll \\{d_1, d_2\\}$, and an agent sequentially takes actions based on past experience to maximize the cumulative reward. In this paper, we study the generalized low-rank matrix bandit problem, which has been recently proposed in \\cite{lu2021low} under the Generalized Linear Model (GLM) framework. To overcome the computational infeasibility and theoretical restrain of existing algorithms on this problem, we first propose the G-ESTT framework that modifies the idea from \\cite{jun2019bilinear} by using Stein's method on the subspace estimation and then leverage the estimated subspaces via a regularization idea. Furthermore, we remarkably improve the efficiency of G-ESTT by using a novel exclusion idea on the estimated subspace instead, and propose the G-ESTS framework. We also show that G-ESTT can achieve the $\\tilde{O}(\\sqrt{(d_1+d_2)MrT})$ bound of regret while G-ESTS can achineve the $\\tilde{O}(\\sqrt{(d_1+d_2)^{3/2}Mr^{3/2}T})$ bound of regret under mild assumption up to logarithm terms, where $M$ is some problem dependent value. Under a reasonable assumption that $M = O((d_1+d_2)^2)$ in our problem setting, the regret of G-ESTT is consistent with the current best regret of $\\tilde{O}((d_1+d_2)^{3/2} \\sqrt{rT}/D_{rr})$~\\citep{lu2021low} ($D_{rr}$ will be defined later). For completeness, we conduct experiments to illustrate that our proposed algorithms, especially G-ESTS, are also computationally tractable and consistently outperform other state-of-the-art (generalized) linear matrix bandit methods based on a suite of simulations.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2278791962",
+                    "name": "Yue Kang"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2110859142",
+                    "name": "T. C. Lee"
+                }
+            ]
+        },
+        {
+            "paperId": "145c76206afac4958b4eb768e1f648ad980a2abb",
+            "title": "Serving Graph Compression for Graph Neural Networks",
+            "abstract": "Serving a GNN model online is challenging \u2014 in many applications when testing nodes are connected to training nodes, one has to propagate information from training nodes to testing nodes to achieve the best performance, and storing the whole training set (including training graph and node features) during inference stage is prohibitive for large-scale problems. In this paper, we study graph compression to reduce the storage requirement for GNN in serving. Given a GNN model to be served, we propose to construct a compressed graph with a smaller number of nodes. In serving time, one just needs to replace the original training set graph by this compressed graph, without the need of changing the actual GNN model and the forward pass. We carefully analyze the error in the forward pass and derive simple ways to construct the compressed graph to minimize the approximation error. Experimental results on semi-supervised node classification demonstrate that the proposed method can significantly reduce the serving space requirement for GNN inference.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3422911",
+                    "name": "Si Si"
+                },
+                {
+                    "authorId": "2111880653",
+                    "name": "Felix X. Yu"
+                },
+                {
+                    "authorId": "2241094",
+                    "name": "A. Rawat"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "49596260",
+                    "name": "Surinder Kumar"
+                }
+            ]
+        },
+        {
+            "paperId": "244ab847aee80cc3d0ab96f836f9e83630f5537d",
+            "title": "NeSSA: Near-Storage Data Selection for Accelerated Machine Learning Training",
+            "abstract": "Large-scale machine learning (ML) models rely on extremely large datasets to learn their exponentially growing number of parameters. While these models achieve unprecedented success, the increase in training time and hardware resources required is unsustainable. Further, we find that as dataset sizes increase, data movement becomes a significant component of overall training time. We propose NeSSA, a novel SmartSSD+GPU training architecture to intelligently select important subsets of large datasets near-storage, such that training on the subset mimics training on the full dataset with a very small loss in accuracy. To the best of our knowledge, this is the first work to propose such a near-storage data selection model for efficient ML training. We have evaluated our method for the CIFAR-10, SVHN, CINIC-10, CIFAR-100, TinyImageNet, and ImageNet-100 datasets. We also test across ResNet-20, ResNet-18, and ResNet-50 models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2090207616",
+                    "name": "Neha Prakriya"
+                },
+                {
+                    "authorId": "2116468252",
+                    "name": "Yu Yang"
+                },
+                {
+                    "authorId": "2389094",
+                    "name": "Baharan Mirzasoleiman"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2066032921",
+                    "name": "J. Cong"
+                }
+            ]
+        },
+        {
+            "paperId": "42f41d0d942cce30d741548cb533872a903fbd51",
+            "title": "Uncertainty Quantification for Extreme Classification",
+            "abstract": "Uncertainty quantification is one of the most crucial tasks to obtain trustworthy and reliable machine learning models for decision making. However, most research in this domain has only focused on problems with small label spaces and ignored eXtreme Multi-label Classification (XMC), which is an essential task in the era of big data for web-scale machine learning applications. Moreover, enormous label spaces could also lead to noisy retrieval results and intractable computational challenges for uncertainty quantification. In this paper, we aim to investigate general uncertainty quantification approaches for tree-based XMC models with a probabilistic ensemble-based framework. In particular, we analyze label-level and instance-level uncertainty in XMC, and propose a general approximation framework based on beam search to efficiently estimate the uncertainty with a theoretical guarantee under long-tail XMC predictions. Empirical studies on six large-scale real-world datasets show that our framework not only outperforms single models in predictive performance, but also can serve as strong uncertainty-based baselines for label misclassification and out-of-distribution detection, with significant speedup. Besides, our framework can further yield better state-of-the-art results based on deep XMC models with uncertainty quantification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3165179",
+                    "name": "Jyun-Yu Jiang"
+                },
+                {
+                    "authorId": "1702500",
+                    "name": "Wei-Cheng Chang"
+                },
+                {
+                    "authorId": "2138799241",
+                    "name": "Jiong Zhang"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "46185316",
+                    "name": "Hsiang-Fu Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "4c78c6bf6b56e7111d9bbbae591a444c1418d2d0",
+            "title": "Effective Robustness against Natural Distribution Shifts for Models with Different Training Data",
+            "abstract": "\"Effective robustness\"measures the extra out-of-distribution (OOD) robustness beyond what can be predicted from the in-distribution (ID) performance. Existing effective robustness evaluations typically use a single test set such as ImageNet to evaluate the ID accuracy. This becomes problematic when evaluating models trained on different data distributions, e.g., comparing models trained on ImageNet vs. zero-shot language-image pre-trained models trained on LAION. In this paper, we propose a new evaluation metric to evaluate and compare the effective robustness of models trained on different data. To do this, we control for the accuracy on multiple ID test sets that cover the training distributions for all the evaluated models. Our new evaluation metric provides a better estimate of effective robustness when there are models with different training data. It may also explain the surprising effective robustness gains of zero-shot CLIP-like models exhibited in prior works that used ImageNet as the only ID test set, while the gains diminish under our new evaluation. Additional artifacts including interactive visualizations are provided at https://shizhouxing.github.io/effective-robustness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2987927",
+                    "name": "Zhouxing Shi"
+                },
+                {
+                    "authorId": "2483738",
+                    "name": "Nicholas Carlini"
+                },
+                {
+                    "authorId": "2593082",
+                    "name": "Ananth Balashankar"
+                },
+                {
+                    "authorId": "152772922",
+                    "name": "Ludwig Schmidt"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2638246",
+                    "name": "Alex Beutel"
+                },
+                {
+                    "authorId": "145592705",
+                    "name": "Yao Qin"
+                }
+            ]
+        },
+        {
+            "paperId": "98dac28926ce0b0e77414d15d5761554cea6cbc2",
+            "title": "Representer Point Selection for Explaining Regularized High-dimensional Models",
+            "abstract": "We introduce a novel class of sample-based explanations we term high-dimensional representers, that can be used to explain the predictions of a regularized high-dimensional model in terms of importance weights for each of the training samples. Our workhorse is a novel representer theorem for general regularized high-dimensional models, which decomposes the model prediction in terms of contributions from each of the training samples: with positive (negative) values corresponding to positive (negative) impact training samples to the model's prediction. We derive consequences for the canonical instances of $\\ell_1$ regularized sparse models, and nuclear norm regularized low-rank models. As a case study, we further investigate the application of low-rank models in the context of collaborative filtering, where we instantiate high-dimensional representers for specific popular classes of models. Finally, we study the empirical performance of our proposed methods on three real-world binary classification datasets and two recommender system datasets. We also showcase the utility of high-dimensional representers in explaining model recommendations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "41018842",
+                    "name": "Che-Ping Tsai"
+                },
+                {
+                    "authorId": "2138799241",
+                    "name": "Jiong Zhang"
+                },
+                {
+                    "authorId": "121307942",
+                    "name": "Eli Chien"
+                },
+                {
+                    "authorId": "46185316",
+                    "name": "Hsiang-Fu Yu"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "145969795",
+                    "name": "Pradeep Ravikumar"
+                }
+            ]
+        },
+        {
+            "paperId": "a7f59b2162ae0ea2520753b1b9b17277490a9458",
+            "title": "Symbolic Discovery of Optimization Algorithms",
+            "abstract": "We present a method to formulate algorithm discovery as program search, and apply it to discover optimization algorithms for deep neural network training. We leverage efficient search techniques to explore an infinite and sparse program space. To bridge the large generalization gap between proxy and target tasks, we also introduce program selection and simplification strategies. Our method discovers a simple and effective optimization algorithm, $\\textbf{Lion}$ ($\\textit{Evo$\\textbf{L}$ved S$\\textbf{i}$gn M$\\textbf{o}$me$\\textbf{n}$tum}$). It is more memory-efficient than Adam as it only keeps track of the momentum. Different from adaptive optimizers, its update has the same magnitude for each parameter calculated through the sign operation. We compare Lion with widely used optimizers, such as Adam and Adafactor, for training a variety of models on different tasks. On image classification, Lion boosts the accuracy of ViT by up to 2% on ImageNet and saves up to 5x the pre-training compute on JFT. On vision-language contrastive learning, we achieve 88.3% $\\textit{zero-shot}$ and 91.1% $\\textit{fine-tuning}$ accuracy on ImageNet, surpassing the previous best results by 2% and 0.1%, respectively. On diffusion models, Lion outperforms Adam by achieving a better FID score and reducing the training compute by up to 2.3x. For autoregressive, masked language modeling, and fine-tuning, Lion exhibits a similar or better performance compared to Adam. Our analysis of Lion reveals that its performance gain grows with the training batch size. It also requires a smaller learning rate than Adam due to the larger norm of the update produced by the sign function. Additionally, we examine the limitations of Lion and identify scenarios where its improvements are small or not statistically significant. Lion is also successfully deployed in production systems such as Google search ads CTR model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143737082",
+                    "name": "Xiangning Chen"
+                },
+                {
+                    "authorId": "145246869",
+                    "name": "Chen Liang"
+                },
+                {
+                    "authorId": "2110408964",
+                    "name": "Da Huang"
+                },
+                {
+                    "authorId": "2892780",
+                    "name": "Esteban Real"
+                },
+                {
+                    "authorId": "4054249",
+                    "name": "Kaiyuan Wang"
+                },
+                {
+                    "authorId": "2187205985",
+                    "name": "Yao Liu"
+                },
+                {
+                    "authorId": "143950636",
+                    "name": "Hieu Pham"
+                },
+                {
+                    "authorId": "9929684",
+                    "name": "Xuanyi Dong"
+                },
+                {
+                    "authorId": "1821711",
+                    "name": "Thang Luong"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "2141538599",
+                    "name": "Yifeng Lu"
+                },
+                {
+                    "authorId": "1397917613",
+                    "name": "Quoc V. Le"
+                }
+            ]
+        },
+        {
+            "paperId": "a92f73da79442bc4a5d149a56b97eb46422a0a87",
+            "title": "Universality and Limitations of Prompt Tuning",
+            "abstract": "Despite the demonstrated empirical efficacy of prompt tuning to adapt a pretrained language model for a new task, the theoretical underpinnings of the difference between\"tuning parameters before the input\"against\"the tuning of model weights\"are limited. We thus take one of the first steps to understand the role of soft-prompt tuning for transformer-based architectures. By considering a general purpose architecture, we analyze prompt tuning from the lens of both: universal approximation and limitations with finite-depth fixed-weight pretrained transformers for continuous-valued functions. Our universality result guarantees the existence of a strong transformer with a prompt to approximate any sequence-to-sequence function in the set of Lipschitz functions. The limitations of prompt tuning for limited-depth transformers are first proved by constructing a set of datasets, that cannot be memorized by a prompt of any length for a given single encoder layer. We also provide a lower bound on the required number of tunable prompt parameters and compare the result with the number of parameters required for a low-rank update (based on LoRA) for a single-layer setting. We finally extend our analysis to multi-layer settings by providing sufficient conditions under which the transformer can at best learn datasets from invertible functions only. Our theoretical claims are also corroborated by empirical results.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108927851",
+                    "name": "Yihan Wang"
+                },
+                {
+                    "authorId": "134145671",
+                    "name": "Jatin Chauhan"
+                },
+                {
+                    "authorId": "40397893",
+                    "name": "Wei Wang"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                }
+            ]
+        },
+        {
+            "paperId": "b14ad759a3496f81fdc177105dbc1e062752a449",
+            "title": "Enhancing Unsupervised Semantic Parsing with Distributed Contextual Representations",
+            "abstract": "We extend a non-parametric Bayesian model of (Titov and Klementiev, 2011) to deal with homonymy and polysemy by leveraging distributed contextual word and phrase representations pre-trained on a large collection of unla-belled texts. Then, unsupervised semantic parsing is performed by decomposing sentences into fragments, clustering the fragments to abstract away syntactic variations of the same meaning, and predicting predicate-argument relations between the fragments. To better model the statistical dependencies between predicates and their arguments, we further conduct a hierarchical Pitman-Yor process. An improved Metropolis-Hastings merge-split sampler is proposed to speed up the mixing and convergence of Markov chains by leveraging pre-trained distributed representations. The experimental re-sults show that the models achieve better accuracy on both question-answering and relation extraction tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2223116564",
+                    "name": "Zixuan Ling"
+                },
+                {
+                    "authorId": "2152196565",
+                    "name": "Xiaoqing Zheng"
+                },
+                {
+                    "authorId": "153173130",
+                    "name": "Jianhan Xu"
+                },
+                {
+                    "authorId": "2118747855",
+                    "name": "Jinshu Lin"
+                },
+                {
+                    "authorId": "2782886",
+                    "name": "Kai-Wei Chang"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                },
+                {
+                    "authorId": "1790227",
+                    "name": "Xuanjing Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "c7e4da026f47339697a522508893f2fa261b52ea",
+            "title": "Can Agents Run Relay Race with Strangers? Generalization of RL to Out-of-Distribution Trajectories",
+            "abstract": "In this paper, we define, evaluate, and improve the ``relay-generalization'' performance of reinforcement learning (RL) agents on the out-of-distribution ``controllable'' states. Ideally, an RL agent that generally masters a task should reach its goal starting from any controllable state of the environment instead of memorizing a small set of trajectories. For example, a self-driving system should be able to take over the control from humans in the middle of driving and must continue to drive the car safely. To practically evaluate this type of generalization, we start the test agent from the middle of other independently well-trained \\emph{stranger} agents' trajectories. With extensive experimental evaluation, we show the prevalence of \\emph{generalization failure} on controllable states from stranger agents. For example, in the Humanoid environment, we observed that a well-trained Proximal Policy Optimization (PPO) agent, with only 3.9\\% failure rate during regular testing, failed on 81.6\\% of the states generated by well-trained stranger PPO agents. To improve\"relay generalization,\"we propose a novel method called Self-Trajectory Augmentation (STA), which will reset the environment to the agent's old states according to the Q function during training. After applying STA to the Soft Actor Critic's (SAC) training procedure, we reduced the failure rate of SAC under relay-evaluation by more than three times in most settings without impacting agent performance and increasing the needed number of environment interactions. Our code is available at https://github.com/lan-lc/STA.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "113289633",
+                    "name": "Li-Cheng Lan"
+                },
+                {
+                    "authorId": "2109067470",
+                    "name": "Huan Zhang"
+                },
+                {
+                    "authorId": "1793529",
+                    "name": "Cho-Jui Hsieh"
+                }
+            ]
+        }
+    ]
+}

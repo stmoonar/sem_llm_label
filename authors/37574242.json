@@ -1,0 +1,240 @@
+{
+    "authorId": "37574242",
+    "papers": [
+        {
+            "paperId": "174a9b78350e9561555052bc6901cc44782f4c62",
+            "title": "Estimating Numbers without Regression",
+            "abstract": "Despite recent successes in language models, their ability to represent numbers is insufficient. Humans conceptualize numbers based on their magnitudes, effectively projecting them on a number line; whereas subword tokenization fails to explicitly capture magnitude by splitting numbers into arbitrary chunks. To alleviate this shortcoming, alternative approaches have been proposed that modify numbers at various stages of the language modeling pipeline. These methods change either the (1) notation in which numbers are written (\\eg scientific vs decimal), the (2) vocabulary used to represent numbers or the entire (3) architecture of the underlying language model, to directly regress to a desired number. Previous work suggests that architectural change helps achieve state-of-the-art on number estimation but we find an insightful ablation: changing the model's vocabulary instead (\\eg introduce a new token for numbers in range 10-100) is a far better trade-off. In the context of masked number prediction, a carefully designed tokenization scheme is both the simplest to implement and sufficient, \\ie with similar performance to the state-of-the-art approach that requires making significant architectural changes. Finally, we report similar trends on the downstream task of numerical fact estimation (for Fermi Problems) and discuss reasons behind our findings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "2257003287",
+                    "name": "Jay Pujara"
+                },
+                {
+                    "authorId": "2257003334",
+                    "name": "Ashwin Kalyan"
+                }
+            ]
+        },
+        {
+            "paperId": "a401510c434b2274b299e9444085df0b18808aaa",
+            "title": "Learn Your Tokens: Word-Pooled Tokenization for Language Modeling",
+            "abstract": "Language models typically tokenize text into subwords, using a deterministic, hand-engineered heuristic of combining characters into longer surface-level strings such as 'ing' or whole words. Recent literature has repeatedly shown the limitations of such a tokenization strategy, particularly for documents not written in English and for representing numbers. On the other extreme, byte/character-level language models are much less restricted but suffer from increased sequence description lengths and a subsequent quadratic expansion in self-attention computation. Recent attempts to compress and limit these context lengths with fixed size convolutions is helpful but completely ignores the word boundary. This paper considers an alternative 'learn your tokens' scheme which utilizes the word boundary to pool bytes/characters into word representations, which are fed to the primary language model, before again decoding individual characters/bytes per word in parallel. We find that our moderately expressive and moderately fast end-to-end tokenizer outperform by over 300% both subwords and byte/character models over the intrinsic language modeling metric of next-word prediction across datasets. It particularly outshines on rare words, outperforming by a factor of 30! We extensively study the language modeling setup for all three categories of tokenizers and theoretically analyze how our end-to-end models can also be a strong trade-off in efficiency and robustness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "2259950109",
+                    "name": "Saurabh Ghanekar"
+                },
+                {
+                    "authorId": "2260304425",
+                    "name": "Xiaoyuan Zhu"
+                },
+                {
+                    "authorId": "2257003287",
+                    "name": "Jay Pujara"
+                }
+            ]
+        },
+        {
+            "paperId": "674265c672777b6d10d5455adc58a6cacb0d0cfe",
+            "title": "BPE beyond Word Boundary: How NOT to use Multi Word Expressions in Neural Machine Translation",
+            "abstract": "BPE tokenization merges characters into longer tokens by finding frequently occurring contiguous patterns within the word boundary. An intuitive relaxation would be to extend a BPE vocabulary with multi-word expressions (MWEs): bigrams (in\\_a), trigrams (out\\_of\\_the), and skip-grams (he . his). In the context of Neural Machine Translation (NMT), we replace the least frequent subword/whole-word tokens with the most frequent MWEs. We find that these modifications to BPE end up hurting the model, resulting in a net drop of BLEU and chrF scores across two language pairs. We observe that naively extending BPE beyond word boundaries results in incoherent tokens which are themselves better represented as individual words. Moreover, we find that Pointwise Mutual Information (PMI) instead of frequency finds better MWEs (e.g., New\\_York, Statue\\_of\\_Liberty, neither . nor) which consistently improves translation performance.We release all code at https://github.com/pegasus-lynx/mwe-bpe.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2281335564",
+                    "name": "Dipesh Kumar"
+                },
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                }
+            ]
+        },
+        {
+            "paperId": "28a5a53dafacebad8a7c47773079caeffb9a5baa",
+            "title": "Representing Numbers in NLP: a Survey and a Vision",
+            "abstract": "NLP systems rarely give special consideration to numbers found in text. This starkly contrasts with the consensus in neuroscience that, in the brain, numbers are represented differently from words. We arrange recent NLP work on numeracy into a comprehensive taxonomy of tasks and methods. We break down the subjective notion of numeracy into 7 subtasks, arranged along two dimensions: granularity (exact vs approximate) and units (abstract vs grounded). We analyze the myriad representational choices made by over a dozen previously published number encoders and decoders. We synthesize best practices for representing numbers in text and articulate a vision for holistic numeracy in NLP, comprised of design trade-offs and a unified evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "2634786",
+                    "name": "J. Pujara"
+                },
+                {
+                    "authorId": "144171096",
+                    "name": "Pedro A. Szekely"
+                },
+                {
+                    "authorId": "2512264",
+                    "name": "Filip Ilievski"
+                }
+            ]
+        },
+        {
+            "paperId": "31699d03a49e38295298f1b1a53185644abba12e",
+            "title": "Numeracy enhances the Literacy of Language Models",
+            "abstract": "Specialized number representations in NLP have shown improvements on numerical reasoning tasks like arithmetic word problems and masked number prediction. But humans also use numeracy to make better sense of world concepts, e.g., you can seat 5 people in your \u2018room\u2019 but not 500. Does a better grasp of numbers improve a model\u2019s understanding of other concepts and words? This paper studies the effect of using six different number encoders on the task of masked word prediction (MWP), as a proxy for evaluating literacy. To support this investigation, we develop Wiki-Convert, a 900,000 sentence dataset annotated with numbers and units, to avoid conflating nominal and ordinal number occurrences. We find a significant improvement in MWP for sentences containing numbers, that exponent embeddings are the best number encoders, yielding over 2 points jump in prediction accuracy over a BERT baseline, and that these enhanced literacy skills also generalize to contexts without annotated numbers. We release all code at https://git.io/JuZXn.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "2634786",
+                    "name": "J. Pujara"
+                },
+                {
+                    "authorId": "2065672209",
+                    "name": "F. Ilievski"
+                }
+            ]
+        },
+        {
+            "paperId": "0b3af7c1cd0d63b5e9f9c2b138b86c27e3c7994c",
+            "title": "Entity Linking to Knowledge Graphs to Infer Column Types and Properties",
+            "abstract": "This paper describes our broad goal of linking tabular data to semantic knowledge graphs, as well as our specific attempts at solving the Semantic Web Challenge on Tabular Data to Knowledge Graph Matching. Our efforts were split into a Candidate Generation and a Candidate Selection phase. The former involves searching for relevant entities in knowledge bases, while the latter involves picking the top candidate using various techniques such as heuristics (the \u2018TF-IDF\u2019 approach) and machine learning (the Neural Network Ranking model). We achieve an F1 score of 0.826 without any training data on the 400000+ cells to be annotated in Round 2 CEA challenge. On CTA and CPA variants, we score 1.099 and 0.790 respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "2100517979",
+                    "name": "Minda Hu"
+                },
+                {
+                    "authorId": "2053787260",
+                    "name": "Erdong Hu"
+                },
+                {
+                    "authorId": "35463223",
+                    "name": "Husain Zafar"
+                },
+                {
+                    "authorId": "1565726471",
+                    "name": "Naren Teja Divvala"
+                },
+                {
+                    "authorId": "2116288277",
+                    "name": "Amandeep Singh"
+                },
+                {
+                    "authorId": "2064322437",
+                    "name": "Ehsan Qasemi"
+                },
+                {
+                    "authorId": "2628881",
+                    "name": "Pedro A. Szekely"
+                },
+                {
+                    "authorId": "2634786",
+                    "name": "J. Pujara"
+                }
+            ]
+        },
+        {
+            "paperId": "12b13c06bc40f8831b248c2d641e301368998ad0",
+            "title": "SWOW-8500: Word Association task for Intrinsic Evaluation of Word Embeddings",
+            "abstract": "Downstream evaluation of pretrained word embeddings is expensive, more so for tasks where current state of the art models are very large architectures. Intrinsic evaluation using word similarity or analogy datasets, on the other hand, suffers from several disadvantages. We propose a novel intrinsic evaluation task employing large word association datasets (particularly the Small World of Words dataset). We observe correlations not just between performances on SWOW-8500 and previously proposed intrinsic tasks of word similarity prediction, but also with downstream tasks (eg. Text Classification and Natural Language Inference). Most importantly, we report better confidence intervals for scores on our word association task, with no fall in correlation with downstream performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "2111006735",
+                    "name": "Anil Kumar Singh"
+                }
+            ]
+        },
+        {
+            "paperId": "7acab041a2a4dbf50433a784fce2f81f99ec0760",
+            "title": "Are Online Reviews of Physicians Biased Against Female Providers?",
+            "abstract": "Patients increasingly seek out information regarding their healthcare online. Online reviews of caregivers in particular may influence from whom patients seek treatment. Are these sources biased against female providers? To address this question we analyze a new dataset of online patient reviews of male and female healthcare providers with respect to numerical ratings and language use. We perform both regression and (data-driven) qualitative analyses of language via neural embedding models induced over review texts. In both cases we account for provider specialty. To do so while learning embeddings, we explicitly induce specialty, sex, and rating embeddings from review meta-data via a \u2018matched-sampling\u2019 training regime. We find that females consistently receive less favorable numerical ratings overall, even after adjusting for specialty. To analyze language use in reviews of male versus female providers, we induce neural embeddings (distributed representations) of gender and qualitatively characterize the \u2018distributional semantics\u2019 that this induces. We observe differences in language use, e.g., analysis of average vector similarities over repeated runs reveal that many of the words closest to the coordinates in embedding space associated with positive sentiment and female providers describe interpersonal characteristics (sweet, considerate, caring, personable, compassionate): such descriptors do not seem as similar to the point corresponding to positive sentiment regarding male providers. To facilitate research in this direction we publicly release data, embeddings, and all code (including Jupyter notebooks) to reproduce our analyses and further explore the data: https://github.com/avi-jit/RateMDs.",
+            "fieldsOfStudy": [
+                "Psychology",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "143946641",
+                    "name": "Michael J. Paul"
+                },
+                {
+                    "authorId": "2489856",
+                    "name": "U. Sarkar"
+                },
+                {
+                    "authorId": "1912476",
+                    "name": "Byron C. Wallace"
+                }
+            ]
+        },
+        {
+            "paperId": "b3c1870184352a2e3ee2e5d60d87966b8e1557c6",
+            "title": "IJCNLP-2017 Task 3: Review Opinion Diversification (RevOpiD-2017)",
+            "abstract": "Unlike Entity Disambiguation in web search results, Opinion Disambiguation is a relatively unexplored topic. RevOpiD shared task at IJCNLP-2107 aimed to attract attention towards this research problem. In this paper, we summarize the first run of this task and introduce a new dataset that we have annotated for the purpose of evaluating Opinion Mining, Summarization and Disambiguation methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111006735",
+                    "name": "Anil Kumar Singh"
+                },
+                {
+                    "authorId": "37574242",
+                    "name": "Avijit Thawani"
+                },
+                {
+                    "authorId": "12757157",
+                    "name": "Mayank Panchal"
+                },
+                {
+                    "authorId": "2110761762",
+                    "name": "Anubhav Gupta"
+                },
+                {
+                    "authorId": "35660011",
+                    "name": "Julian McAuley"
+                }
+            ]
+        }
+    ]
+}

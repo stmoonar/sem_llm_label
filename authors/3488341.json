@@ -1,0 +1,305 @@
+{
+    "authorId": "3488341",
+    "papers": [
+        {
+            "paperId": "a3aaa10936e857f220f17c1f7105996da23cb313",
+            "title": "Ontology Enrichment for Effective Fine-grained Entity Typing",
+            "abstract": "Fine-grained entity typing (FET) is the task of identifying specific entity types at a fine-grained level for entity mentions based on their contextual information. Conventional methods for FET require extensive human annotation, which is time-consuming and costly. Recent studies have been developing weakly supervised or zero-shot approaches. We study the setting of zero-shot FET where only an ontology is provided. However, most existing ontology structures lack rich supporting information and even contain ambiguous relations, making them ineffective in guiding FET. Recently developed language models, though promising in various few-shot and zero-shot NLP tasks, may face challenges in zero-shot FET due to their lack of interaction with task-specific ontology. In this study, we propose OnEFET, where we (1) enrich each node in the ontology structure with two types of extra information: instance information for training sample augmentation and topic information to relate types to contexts, and (2) develop a coarse-to-fine typing algorithm that exploits the enriched information by training an entailment model with contrasting topics and instance-based augmented training samples. Our experiments show that OnEFET achieves high-quality fine-grained entity typing without human annotation, outperforming existing zero-shot methods by a large margin and rivaling supervised methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2074816851",
+                    "name": "Si-yuan Ouyang"
+                },
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "2243426954",
+                    "name": "Pranav Pillai"
+                },
+                {
+                    "authorId": "48379289",
+                    "name": "Yunyi Zhang"
+                },
+                {
+                    "authorId": "2261413719",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2257136881",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "a3dacba0c86fdb4ab063cecdc5922e563134f39c",
+            "title": "FineSum: Target-Oriented, Fine-Grained Opinion Summarization",
+            "abstract": "Target-oriented opinion summarization is to profile a target by extracting user opinions from multiple related documents. Instead of simply mining opinion ratings on a target (e.g., a restaurant) or on multiple aspects (e.g., food, service) of a target, it is desirable to go deeper, to mine opinion on fine-grained sub-aspects (e.g., fish). However, it is expensive to obtain high-quality annotations at such fine-grained scale. This leads to our proposal of a new framework, FineSum, which advances the frontier of opinion analysis in three aspects: (1) minimal supervision, where no document-summary pairs are provided, only aspect names and a few aspect/sentiment keywords are available; (2) fine-grained opinion analysis, where sentiment analysis drills down to a specific subject or characteristic within each general aspect; and (3) phrase-based summarization, where short phrases are taken as basic units for summarization, and semantically coherent phrases are gathered to improve the consistency and comprehensiveness of summary. Given a large corpus with no annotation, FineSum first automatically identifies potential spans of opinion phrases, and further reduces the noise in identification results using aspect and sentiment classifiers. It then constructs multiple fine-grained opinion clusters under each aspect and sentiment. Each cluster expresses uniform opinions towards certain sub-aspects (e.g., \"fish\" in \"food\" aspect) or characteristics (e.g., \"Mexican\" in \"food\" aspect). To accomplish this, we train a spherical word embedding space to explicitly represent different aspects and sentiments. We then distill the knowledge from embedding to a contextualized phrase classifier, and perform clustering using the contextualized opinion-aware phrase embedding. Both automatic evaluations on the benchmark and quantitative human evaluation validate the effectiveness of our approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "148048326",
+                    "name": "Suyu Ge"
+                },
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "bd3c4592ba04b3284552dc054ed78cd4c4cd9987",
+            "title": "Pretrained Language Representations for Text Understanding: A Weakly-Supervised Perspective",
+            "abstract": "Language representations pretrained on general-domain corpora and adapted to downstream task data have achieved enormous success in building natural language understanding (NLU) systems. While the standard supervised fine-tuning of pretrained language models (PLMs) has proven an effective approach for superior NLU performance, it often necessitates a large quantity of costly human-annotated training data. For example, the enormous success of ChatGPT and GPT-4 can be largely credited to their supervised fine-tuning with massive manually-labeled prompt-response training pairs. Unfortunately, obtaining large-scale human annotations is in general infeasible for most practitioners. To broaden the applicability of PLMs to various tasks and settings, weakly-supervised learning offers a promising direction to minimize the annotation requirements for PLM adaptions. In this tutorial, we cover the recent advancements in pretraining language models and adaptation methods for a wide range of NLU tasks. Our tutorial has a particular focus on weakly-supervised approaches that do not require massive human annotations. We will introduce the following topics in this tutorial: (1) pretraining language representation models that serve as the fundamentals for various NLU tasks, (2) extracting entities and hierarchical relations from unlabeled texts, (3) discovering topical structures from massive text corpora for text organization, and (4) understanding documents and sentences with weakly-supervised techniques.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "48379289",
+                    "name": "Yunyi Zhang"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "23c265ba884b92ecbd9d18641078d964697e4590",
+            "title": "Generating Training Data with Language Models: Towards Zero-Shot Language Understanding",
+            "abstract": "Pretrained language models (PLMs) have demonstrated remarkable performance in various natural language processing tasks: Unidirectional PLMs (e.g., GPT) are well known for their superior text generation capabilities; bidirectional PLMs (e.g., BERT) have been the prominent choice for natural language understanding (NLU) tasks. While both types of models have achieved promising few-shot learning performance, their potential for zero-shot learning has been underexplored. In this paper, we present a simple approach that uses both types of PLMs for fully zero-shot learning of NLU tasks without requiring any task-specific data: A unidirectional PLM generates class-conditioned texts guided by prompts, which are used as the training data for fine-tuning a bidirectional PLM. With quality training data selected based on the generation probability and regularization techniques (label smoothing and temporal ensembling) applied to the fine-tuning stage for better generalization and stability, our approach demonstrates strong performance across seven classification tasks of the GLUE benchmark (e.g., 72.3/73.8 on MNLI-m/mm and 92.8 on SST-2), significantly outperforming zero-shot prompting methods and achieving even comparable results to strong few-shot approaches using 32 training samples per class.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "2a725e4354ef4f5d567dcf8560bbb051f968a2a3",
+            "title": "Adapting Pretrained Representations for Text Mining",
+            "abstract": "Pretrained text representations, evolving from context-free word embeddings to contextualized language models, have brought text mining into a new era: By pretraining neural models on large-scale text corpora and then adapting them to task-specific data, generic linguistic features and knowledge can be effectively transferred to the target applications and remarkable performance has been achieved on many text mining tasks. Unfortunately, a formidable challenge exists in such a prominent pretrain-finetune paradigm: Large pretrained language models (PLMs) usually require a massive amount of training data for stable fine-tuning on downstream tasks, while human annotations in abundance can be costly to acquire. In this tutorial, we introduce recent advances in pretrained text representations, as well as their applications to a wide range of text mining tasks. We focus on minimally-supervised approaches that do not require massive human annotations, including (1) self-supervised text embeddings and pretrained language models that serve as the fundamentals for downstream tasks, (2) unsupervised and distantly-supervised methods for fundamental text mining applications, (3) unsupervised and seed-guided methods for topic discovery from massive text corpora and (4) weakly-supervised methods for text classification and advanced text mining tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "3fa70115248377c3d1517c9f978791a296fbc1dd",
+            "title": "Large Language Models Can Self-Improve",
+            "abstract": "Large Language Models (LLMs) have achieved excellent performances in various tasks. However, fine-tuning an LLM requires extensive supervision. Human, on the other hand, may improve their reasoning abilities by self-thinking without external inputs. In this work, we demonstrate that an LLM is also capable of self-improving with only unlabeled datasets. We use a pre-trained LLM to generate\"high-confidence\"rationale-augmented answers for unlabeled questions using Chain-of-Thought prompting and self-consistency, and fine-tune the LLM using those self-generated solutions as target outputs. We show that our approach improves the general reasoning ability of a 540B-parameter LLM (74.4%->82.1% on GSM8K, 78.2%->83.0% on DROP, 90.0%->94.4% on OpenBookQA, and 63.4%->67.9% on ANLI-A3) and achieves state-of-the-art-level performance, without any ground truth label. We conduct ablation studies and show that fine-tuning on reasoning is critical for self-improvement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "2046135",
+                    "name": "S. Gu"
+                },
+                {
+                    "authorId": "2153400663",
+                    "name": "Le Hou"
+                },
+                {
+                    "authorId": "9287688",
+                    "name": "Yuexin Wu"
+                },
+                {
+                    "authorId": "1524732527",
+                    "name": "Xuezhi Wang"
+                },
+                {
+                    "authorId": "40244451",
+                    "name": "Hongkun Yu"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "424b08ba24a7c3a23d877d61eb02c184e6cc50c9",
+            "title": "Topic Discovery via Latent Space Clustering of Pretrained Language Model Representations",
+            "abstract": "Topic models have been the prominent tools for automatic topic discovery from text corpora. Despite their effectiveness, topic models suffer from several limitations including the inability of modeling word ordering information in documents, the difficulty of incorporating external linguistic knowledge, and the lack of both accurate and efficient inference methods for approximating the intractable posterior. Recently, pretrained language models (PLMs) have brought astonishing performance improvements to a wide variety of tasks due to their superior representations of text. Interestingly, there have not been standard approaches to deploy PLMs for topic discovery as better alternatives to topic models. In this paper, we begin by analyzing the challenges of using PLM representations for topic discovery, and then propose a joint latent space learning and clustering framework built upon PLM embeddings. In the latent space, topic-word and document-topic distributions are jointly modeled so that the discovered topics can be interpreted by coherent and distinctive terms and meanwhile serve as meaningful summaries of the documents. Our model effectively leverages the strong representation power and superb linguistic features brought by PLMs for topic discovery, and is conceptually simpler than topic models. On two benchmark datasets in different domains, our model generates significantly more coherent and diverse topics than strong topic models, and offers better topic-wise document representations, based on both automatic and human evaluations.1",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "48379289",
+                    "name": "Yunyi Zhang"
+                },
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "43f9eafa33aaee285655fcda0c2f50fd0b5fc899",
+            "title": "All Birds with One Stone: Multi-task Text Classification for Efficient Inference with One Forward Pass",
+            "abstract": "Multi-Task Learning (MTL) models have shown their robustness, effectiveness, and efficiency for transferring learned knowledge across tasks. In real industrial applications such as web content classification, multiple classification tasks are predicted from the same input text such as a web article. However, at the serving time, the existing multitask transformer models such as prompt or adaptor based approaches need to conduct N forward passes for N tasks with O(N) computation cost. To tackle this problem, we propose a scalable method that can achieve stronger performance with close to O(1) computation cost via only one forward pass. To illustrate real application usage, we release a multitask dataset on news topic and style classification. Our experiments show that our proposed method outperforms strong baselines on both the GLUE benchmark and our news dataset. Our code and dataset are publicly available at https://bit.ly/mtop-code.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "2115346248",
+                    "name": "Tianqi Liu"
+                },
+                {
+                    "authorId": "2746747",
+                    "name": "Jialu Liu"
+                },
+                {
+                    "authorId": "143828990",
+                    "name": "\u00c1. Lelkes"
+                },
+                {
+                    "authorId": "82737548",
+                    "name": "Cong Yu"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "7f3bc301ae0e2bbb78a0d42f074865e87d908f9a",
+            "title": "Tuning Language Models as Training Data Generators for Augmentation-Enhanced Few-Shot Learning",
+            "abstract": "Recent studies have revealed the intriguing few-shot learning ability of pretrained language models (PLMs): They can quickly adapt to a new task when fine-tuned on a small amount of labeled data formulated as prompts, without requiring abundant task-specific annotations. Despite their promising performance, most existing few-shot approaches that only learn from the small training set still underperform fully supervised training by nontrivial margins. In this work, we study few-shot learning with PLMs from a different perspective: We first tune an autoregressive PLM on the few-shot samples and then use it as a generator to synthesize a large amount of novel training samples which augment the original training set. To encourage the generator to produce label-discriminative samples, we train it via weighted maximum likelihood where the weight of each token is automatically adjusted based on a discriminative meta-learning objective. A classification PLM can then be fine-tuned on both the few-shot and the synthetic samples with regularization for better generalization and stability. Our approach FewGen achieves an overall better result across seven classification tasks of the GLUE benchmark than existing few-shot learning methods, improving no-augmentation methods by 5+ average points, and outperforming augmentation methods by 3+ average points.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "2190108870",
+                    "name": "Martin Michalski"
+                },
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "8f87f0d14c0ea0932701ea377610d154202baee8",
+            "title": "Few-Shot Fine-Grained Entity Typing with Automatic Label Interpretation and Instance Generation",
+            "abstract": "We study the problem of few-shot Fine-grained Entity Typing (FET), where only a few annotated entity mentions with contexts are given for each entity type. Recently, prompt-based tuning has demonstrated superior performance to standard fine-tuning in few-shot scenarios by formulating the entity type classification task as a ''fill-in-the-blank'' problem. This allows effective utilization of the strong language modeling capability of Pre-trained Language Models (PLMs). Despite the success of current prompt-based tuning approaches, two major challenges remain: (1) the verbalizer in prompts is either manually designed or constructed from external knowledge bases, without considering the target corpus and label hierarchy information, and (2) current approaches mainly utilize the representation power of PLMs, but have not explored their generation power acquired through extensive general-domain pre-training. In this work, we propose a novel framework for few-shot FET consisting of two modules: (1) an entity type label interpretation module automatically learns to relate type labels to the vocabulary by jointly leveraging few-shot instances and the label hierarchy, and (2) a type-based contextualized instance generator produces new instances based on given instances to enlarge the training set for better generalization. On three benchmark datasets, our model outperforms existing methods by significant margins.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3488341",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        }
+    ]
+}

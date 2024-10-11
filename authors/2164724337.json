@@ -1,0 +1,353 @@
+{
+    "authorId": "2164724337",
+    "papers": [
+        {
+            "paperId": "06d1497141b8f3fc6eeff0c22fa6885a963d04d3",
+            "title": "Alleviating Structural Distribution Shift in Graph Anomaly Detection",
+            "abstract": "Graph anomaly detection (GAD) is a challenging binary classification problem due to its different structural distribution between anomalies and normal nodes --- abnormal nodes are a minority, therefore holding high heterophily and low homophily compared to normal nodes. Furthermore, due to various time factors and the annotation preferences of human experts, the heterophily and homophily can change across training and testing data, which is called structural distribution shift (SDS) in this paper. The mainstream methods are built on graph neural networks (GNNs), benefiting the classification of normals from aggregating homophilous neighbors, yet ignoring the SDS issue for anomalies and suffering from poor generalization. This work solves the problem from a feature view. We observe that the degree of SDS varies between anomalies and normal nodes. Hence to address the issue, the key lies in resisting high heterophily for anomalies meanwhile benefiting the learning of normals from homophily. Since different labels correspond to the difference of critical anomaly features which make great contributions to the GAD, we tease out the anomaly features on which we constrain to mitigate the effect of heterophilous neighbors and make them invariant. However, the prior distribution of anomaly features is dynamic and hard to estimate, we thus devise a prototype vector to infer and update this distribution during training. For normal nodes, we constrain the remaining features to preserve the connectivity of nodes and reinforce the influence of the homophilous neighborhood. We term our proposed framework asGraph Decomposition Network (GDN). Extensive experiments are conducted on two benchmark datasets, and the proposed framework achieves a remarkable performance boost in GAD, especially in an SDS environment where anomalies have largely different structural distribution across training and testing environments. Codes are open-sourced in https://github.com/blacksingular/wsdm_GDN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143792907",
+                    "name": "Yuan Gao"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2145312301",
+                    "name": "Zhenguang Liu"
+                },
+                {
+                    "authorId": "1986484",
+                    "name": "Huamin Feng"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "3ec5f0da304a606c5989de5b00e1246ee64b3e46",
+            "title": "kNN Prompting: Beyond-Context Learning with Calibration-Free Nearest Neighbor Inference",
+            "abstract": "In-Context Learning (ICL), which formulates target tasks as prompt completion conditioned on in-context demonstrations, has become the prevailing utilization of LLMs. In this paper, we first disclose an actual predicament for this typical usage that it can not scale up with training data due to context length restriction. Besides, existing works have shown that ICL also suffers from various biases and requires delicate calibration treatment. To address both challenges, we advocate a simple and effective solution, $k$NN Prompting, which first queries LLM with training data for distributed representations, then predicts test instances by simply referring to nearest neighbors. We conduct comprehensive experiments to demonstrate its two-fold superiority: 1) Calibration-Free: $k$NN Prompting does not directly align LLM output distribution with task-specific label space, instead leverages such distribution to align test and training instances. It significantly outperforms state-of-the-art calibration-based methods under comparable few-shot scenario. 2) Beyond-Context: $k$NN Prompting can further scale up effectively with as many training data as are available, continually bringing substantial improvements. The scaling trend holds across 10 orders of magnitude ranging from 2 shots to 1024 shots as well as different LLMs scales ranging from 0.8B to 30B. It successfully bridges data scaling into model scaling, and brings new potentials for the gradient-free paradigm of LLM deployment. Code is publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1754285124",
+                    "name": "Benfeng Xu"
+                },
+                {
+                    "authorId": "143906199",
+                    "name": "Quan Wang"
+                },
+                {
+                    "authorId": "1855978",
+                    "name": "Zhendong Mao"
+                },
+                {
+                    "authorId": "8020700",
+                    "name": "Yajuan Lyu"
+                },
+                {
+                    "authorId": "40430110",
+                    "name": "Qiaoqiao She"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "4a76ea74e48ee96a0b846c58a843b2031da7b9de",
+            "title": "Addressing Heterophily in Graph Anomaly Detection: A Perspective of Graph Spectrum",
+            "abstract": "Graph anomaly detection (GAD) suffers from heterophily \u2014 abnormal nodes are sparse so that they are connected to vast normal nodes. The current solutions upon Graph Neural Networks (GNNs) blindly smooth the representation of neiboring nodes, thus undermining the discriminative information of the anomalies. To alleviate the issue, recent studies identify and discard inter-class edges through estimating and comparing the node-level representation similarity. However, the representation of a single node can be misleading when the prediction error is high, thus hindering the performance of the edge indicator. In graph signal processing, the smoothness index is a widely adopted metric which plays the role of frequency in classical spectral analysis. Considering the ground truth Y to be a signal on graph, the smoothness index is equivalent to the value of the heterophily ratio. From this perspective, we aim to address the heterophily problem in the spectral domain. First, we point out that heterophily is positively associated with the frequency of a graph. Towards this end, we could prune inter-class edges by simply emphasizing and delineating the high-frequency components of the graph. Recall that graph Laplacian is a high-pass filter, we adopt it to measure the extent of 1-hop label changing of the center node and indicate high-frequency components. As GAD can be formulated as a semi-supervised binary classification problem, only part of the nodes are labeled. As an alternative, we use the prediction of the nodes to estimate it. Through our analysis, we show that prediction errors are less likely to affect the identification process. Extensive empirical evaluations on four benchmarks demonstrate the effectiveness of the indicator over popular homophilic, heterophilic, and tailored fraud detection methods. Our proposed indicator can effectively reduce the heterophily degree of the graph, thus boosting the overall GAD performance. Codes are open-sourced in https://github.com/blacksingular/GHRN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143792907",
+                    "name": "Yuan Gao"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2145312301",
+                    "name": "Zhenguang Liu"
+                },
+                {
+                    "authorId": "1986484",
+                    "name": "Huamin Feng"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "eb8fbfa937e46cb334d0264118cd019c769e841a",
+            "title": "MCDAN: A Multi-Scale Context-Enhanced Dynamic Attention Network for Diffusion Prediction",
+            "abstract": "Information diffusion prediction aims at predicting the target users in the information diffusion path on social networks. Prior works mainly focus on the observed structure or sequence of cascades, trying to predict to whom this cascade will be infected passively. In this study, we argue that user intent understanding is also a key part of information diffusion prediction. We thereby propose a novel Multi-scale Context-enhanced Dynamic Attention Network (MCDAN) to predict which user will most likely join the observed current cascades. Specifically, to consider the global interactive relationship among users, we take full advantage of user friendships and global cascading relationships, which are extracted from the social network and historical cascades, respectively. To refine the model's ability to understand the user's preference for the current cascade, we propose a multi-scale sequential hypergraph attention module to capture the dynamic preference of users at different time scales. Moreover, we design a contextual attention enhancement module to strengthen the interaction of user representations within the current cascade. Finally, to engage the user's own susceptibility, we construct a susceptibility label for each user based on user susceptibility analysis and use the rank of this label for auxiliary prediction. We conduct experiments over four widely used datasets and show that MCDAN significantly overperforms the state-of-the-art models. The average improvements are up to 5.41% in terms of Hits@100 and 8.47% in terms of MAP@100, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2222325351",
+                    "name": "Xiaowen Wang"
+                },
+                {
+                    "authorId": "1922529",
+                    "name": "Lanjun Wang"
+                },
+                {
+                    "authorId": "2788104",
+                    "name": "Yuting Su"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                },
+                {
+                    "authorId": "143602033",
+                    "name": "Anan Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "14eba9dc18b789cd84871d77639e91ae5f162af2",
+            "title": "Addressing Confounding Feature Issue for Causal Recommendation",
+            "abstract": "In recommender systems, some features directly affect whether an interaction would happen, making the happened interactions not necessarily indicate user preference. For instance, short videos are objectively easier to finish even though the user may not like the video. We term such feature as confounding feature, and video length is a confounding feature in video recommendation. If we fit a model on such interaction data, just as done by most data-driven recommender systems, the model will be biased to recommend short videos more, and deviate from user actual requirement. This work formulates and addresses the problem from the causal perspective. Assuming there are some factors affecting both the confounding feature and other item features, e.g., the video creator, we find the confounding feature opens a backdoor path behind user-item matching and introduces spurious correlation. To remove the effect of backdoor path, we propose a framework named Deconfounding Causal Recommendation(DCR), which performs intervened inference with do-calculus. Nevertheless, evaluating do-calculus requires to sum over the prediction on all possible values of confounding feature, significantly increasing the time cost. To address the efficiency challenge, we further propose a mixture-of-experts (MoE) model architecture, modeling each value of confounding feature with a separate expert module. Through this way, we retain the model expressiveness with few additional costs. We demonstrate DCR on the backbone model of neural factorization machine (NFM), showing that DCR leads to more accurate prediction of user preference with small inference time cost. We release our code at: https://github.com/zyang1580/DCR.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2987596",
+                    "name": "Chonggang Song"
+                },
+                {
+                    "authorId": "2111841396",
+                    "name": "Lingling Yi"
+                },
+                {
+                    "authorId": "9618786",
+                    "name": "Guohui Ling"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "40184ce4016efbe3466d68f613fc71a6aeec7d9c",
+            "title": "Addressing Unmeasured Confounder for Recommendation with Sensitivity Analysis",
+            "abstract": "Recommender systems should answer the intervention question \"if recommending an item to a user, what would the feedback be\", calling for estimating the causal effect of a recommendation on user feedback. Generally, this requires blocking the effect of confounders that simultaneously affect the recommendation and feedback. To mitigate the confounding bias, a strategy is incorporating propensity into model learning. However, existing methods forgo possible unmeasured confounders (e.g., user financial status), which can result in biased propensities and hurt recommendation performance. This work combats the risk of unmeasured confounders in recommender systems. Towards this end, we propose Robust Deconfounder (RD) that accounts for the effect of unmeasured confounders on propensities, under the mild assumption that the effect is bounded. It estimates the bound with sensitivity analysis, learning a recommender model robust to unmeasured confounders within the bound by adversarial learning. However, pursuing robustness within a bound may restrict model accuracy. To avoid the trade-off between robustness and accuracy, we further propose Benchmarked RD (BRD) that incorporates a pre-trained model into the learning as the benchmark. Theoretical analyses prove the stronger robustness of our methods compared to existing propensity-based deconfounders, and also prove the no-harm property of BRD. Our methods are applicable to any propensity-based estimators, where we select three representative ones: IPS, Doubly Robust, and AutoDebias. We conduct experiments on three real-world datasets to demonstrate the effectiveness of our methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046758017",
+                    "name": "Sihao Ding"
+                },
+                {
+                    "authorId": "2153093673",
+                    "name": "Peng Wu"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2165313960",
+                    "name": "Yitong Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2114122035",
+                    "name": "Yong Liao"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "5f29ab0bb7d43b2905ccc4bdf180517d17f4827c",
+            "title": "MFAN: Multi-modal Feature-enhanced Attention Networks for Rumor Detection",
+            "abstract": "Rumor spreaders are increasingly taking advantage of multimedia content to attract and mislead news consumers on social media. Although recent multimedia rumor detection models have exploited both textual and visual features for classification, they do not integrate the social structure features simultaneously, which have shown promising performance for rumor identification. It is challenging to combine the heterogeneous multi-modal data in consideration of their complex relationships. In this work, we propose a novel Multi-modal Feature-enhanced Attention Networks (MFAN) for rumor detection, which makes the first attempt to integrate textual, visual, and social graph features in one unified framework. Specifically, it considers both the complement and alignment relationships between different modalities to achieve better fusion. Moreover, it takes into account the incomplete links in the social network data due to data collection constraints and proposes to infer hidden links to learn better social graph features. The experimental results show that MFAN can detect rumors effectively and outperform state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145134560",
+                    "name": "Jiaqi Zheng"
+                },
+                {
+                    "authorId": "2108286283",
+                    "name": "Xi Zhang"
+                },
+                {
+                    "authorId": "2488590",
+                    "name": "Sanchuan Guo"
+                },
+                {
+                    "authorId": "2145348814",
+                    "name": "Quang Wang"
+                },
+                {
+                    "authorId": "3181822",
+                    "name": "W. Zang"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "d711ab66ce5ee9e631d356ad5b1bb7140cf3fefd",
+            "title": "Explainable Sparse Knowledge Graph Completion via High-order Graph Reasoning Network",
+            "abstract": "Knowledge Graphs (KGs) are becoming increasingly essential infrastructures in many applications while suffering from incompleteness issues. The KG completion task (KGC) automatically predicts missing facts based on an incomplete KG. However, existing methods perform unsatisfactorily in real-world scenarios. On the one hand, their performance will dramatically degrade along with the increasing sparsity of KGs. On the other hand, the inference procedure for prediction is an untrustworthy black box. This paper proposes a novel explainable model for sparse KGC, compositing high-order reasoning into a graph convolutional network, namely HoGRN. It can not only improve the generalization ability to mitigate the information insufficiency issue but also provide interpretability while maintaining the model's effectiveness and efficiency. There are two main components that are seamlessly integrated for joint optimization. First, the high-order reasoning component learns high-quality relation representations by capturing endogenous correlation among relations. This can reflect logical rules to justify a broader of missing facts. Second, the entity updating component leverages a weight-free Graph Convolutional Network (GCN) to efficiently model KG structures with interpretability. Unlike conventional methods, we conduct entity aggregation and design composition-based attention in the relational space without additional parameters. The lightweight design makes HoGRN better suitable for sparse settings. For evaluation, we have conducted extensive experiments-the results of HoGRN on several sparse KGs present impressive improvements (9% MRR gain on average). Further ablation and case studies demonstrate the effectiveness of the main components. Our codes will be released upon acceptance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2134837861",
+                    "name": "Weijia Chen"
+                },
+                {
+                    "authorId": "145014675",
+                    "name": "Yixin Cao"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "f5f1b274f202fe967603c66ca07f0b16cc637a1e",
+            "title": "Interpolative Distillation for Unifying Biased and Debiased Recommendation",
+            "abstract": "Most recommender systems evaluate model performance offline through either: 1) normal biased test on factual interactions; or 2) debiased test with records from the randomized controlled trial. In fact, both tests only reflect part of the whole picture: factual interactions are collected from the recommendation policy, fitting them better implies benefiting the platform with higher click or conversion rate; in contrast, debiased test eliminates system-induced biases and thus is more reflective of user true preference. Nevertheless, we find that existing models exhibit trade-off on the two tests, and there lacks methods that perform well on both tests. In this work, we aim to develop a win-win recommendation method that is strong on both tests. It is non-trivial, since it requires to learn a model that can make accurate prediction in both factual environment (ie normal biased test) and counterfactual environment (ie debiased test). Towards the goal, we perform environment-aware recommendation modeling by considering both environments. In particular, we propose an Interpolative Distillation (InterD) framework, which interpolates the biased and debiased models at user-item pair level by distilling a student model. We conduct experiments on three real-world datasets with both tests. Empirical results justify the rationality and effectiveness of InterD, which stands out on both tests especially demonstrates remarkable gains on less popular items.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2046758017",
+                    "name": "Sihao Ding"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2164713563",
+                    "name": "Jinqiu Jin"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2114122035",
+                    "name": "Yong Liao"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "2ecbd7a16fe964c8ddee0f94ebc47a64ea140336",
+            "title": "How to Retrain Recommender System?: A Sequential Meta-Learning Method",
+            "abstract": "Practical recommender systems need be periodically retrained to refresh the model with new interaction data. To pursue high model fidelity, it is usually desirable to retrain the model on both historical and new data, since it can account for both long-term and short-term user preference. However, a full model retraining could be very time-consuming and memory-costly, especially when the scale of historical data is large. In this work, we study the model retraining mechanism for recommender systems, a topic of high practical values but has been relatively little explored in the research community. Our first belief is that retraining the model on historical data is unnecessary, since the model has been trained on it before. Nevertheless, normal training on new data only may easily cause overfitting and forgetting issues, since the new data is of a smaller scale and contains fewer information on long-term user preference. To address this dilemma, we propose a new training method, aiming to abandon the historical data during retraining through learning to transfer the past training experience.Specifically, we design a neural network-based transfer component, which transforms the old model to a new model that is tailored for future recommendations. To learn the transfer component well, we optimize the \"future performance'' -- i.e., the recommendation accuracy evaluated in the next time period. Our Sequential Meta-Learning(SML) method offers a general training paradigm that is applicable to any differentiable model. We demonstrate SML on matrix factorization and conduct experiments on two real-world datasets. Empirical results show that SML not only achieves significant speed-up, but also outperforms the full model retraining in recommendation accuracy, validating the effectiveness of our proposals. We release our codes at: https://github.com/zyang1580/SML.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2972711",
+                    "name": "Chenxu Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2146059323",
+                    "name": "Meng Wang"
+                },
+                {
+                    "authorId": "2694924",
+                    "name": "Yan Li"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        }
+    ]
+}

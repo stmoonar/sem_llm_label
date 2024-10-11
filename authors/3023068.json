@@ -1,0 +1,745 @@
+{
+    "authorId": "3023068",
+    "papers": [
+        {
+            "paperId": "2ecf11920fbc331333520a46711df2322b77f8b6",
+            "title": "Artifacts or Abduction: How Do LLMs Answer Multiple-Choice Questions Without the Question?",
+            "abstract": "Multiple-choice question answering (MCQA) is often used to evaluate large language models (LLMs). To see if MCQA assesses LLMs as intended, we probe if LLMs can perform MCQA with choices-only prompts, where models must select the correct answer only from the choices. In three MCQA datasets and four LLMs, this prompt bests a majority baseline in 11/12 cases, with up to 0.33 accuracy gain. To help explain this behavior, we conduct an in-depth, black-box analysis on memorization, choice dynamics, and question inference. Our key findings are threefold. First, we find no evidence that the choices-only accuracy stems from memorization alone. Second, priors over individual choices do not fully explain choices-only accuracy, hinting that LLMs use the group dynamics of choices. Third, LLMs have some ability to infer a relevant question from choices, and surprisingly can sometimes even match the original question. Inferring the original question is an impressive reasoning strategy, but it cannot fully explain the high choices-only accuracy of LLMs in MCQA. Thus, while LLMs are not fully incapable of reasoning in MCQA, we still advocate for the use of stronger baselines in MCQA benchmarks, the design of robust MCQA datasets for fair evaluations, and further efforts to explain LLM decision-making.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2216486213",
+                    "name": "Nishant Balepur"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2034613",
+                    "name": "Rachel Rudinger"
+                }
+            ]
+        },
+        {
+            "paperId": "5d12dfd7278cb8da26f9fd1956cad3c15cea9863",
+            "title": "WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild",
+            "abstract": "We introduce WildBench, an automated evaluation framework designed to benchmark large language models (LLMs) using challenging, real-world user queries. WildBench consists of 1,024 tasks carefully selected from over one million human-chatbot conversation logs. For automated evaluation with WildBench, we have developed two metrics, WB-Reward and WB-Score, which are computable using advanced LLMs such as GPT-4-turbo. WildBench evaluation uses task-specific checklists to evaluate model outputs systematically and provides structured explanations that justify the scores and comparisons, resulting in more reliable and interpretable automatic judgments. WB-Reward employs fine-grained pairwise comparisons between model responses, generating five potential outcomes: much better, slightly better, slightly worse, much worse, or a tie. Unlike previous evaluations that employed a single baseline model, we selected three baseline models at varying performance levels to ensure a comprehensive pairwise evaluation. Additionally, we propose a simple method to mitigate length bias, by converting outcomes of ``slightly better/worse'' to ``tie'' if the winner response exceeds the loser one by more than $K$ characters. WB-Score evaluates the quality of model outputs individually, making it a fast and cost-efficient evaluation metric. WildBench results demonstrate a strong correlation with the human-voted Elo ratings from Chatbot Arena on hard tasks. Specifically, WB-Reward achieves a Pearson correlation of 0.98 with top-ranking models. Additionally, WB-Score reaches 0.95, surpassing both ArenaHard's 0.91 and AlpacaEval2.0's 0.89 for length-controlled win rates, as well as the 0.87 for regular win rates.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2273918810",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "2268298457",
+                    "name": "Yuntian Deng"
+                },
+                {
+                    "authorId": "2302810573",
+                    "name": "K. Chandu"
+                },
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "22330666",
+                    "name": "Valentina Pyatkin"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "2069676542",
+                    "name": "R. L. Bras"
+                },
+                {
+                    "authorId": "2257385142",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "62533c51d3395f1b570a347404304f000f498aa4",
+            "title": "BEAR: A Unified Framework for Evaluating Relational Knowledge in Causal and Masked Language Models",
+            "abstract": "Knowledge probing assesses to which degree a language model (LM) has successfully learned relational knowledge during pre-training. Probing is an inexpensive way to compare LMs of different sizes and training configurations. However, previous approaches rely on the objective function used in pre-training LMs and are thus applicable only to masked or causal LMs. As a result, comparing different types of LMs becomes impossible. To address this, we propose an approach that uses an LM's inherent ability to estimate the log-likelihood of any given textual statement. We carefully design an evaluation dataset of 7,731 instances (40,916 in a larger variant) from which we produce alternative statements for each relational fact, one of which is correct. We then evaluate whether an LM correctly assigns the highest log-likelihood to the correct statement. Our experimental evaluation of 22 common LMs shows that our proposed framework, BEAR, can effectively probe for knowledge across different LM types. We release the BEAR datasets and an open-source framework that implements the probing approach to the research community to facilitate the evaluation and development of LMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113252896",
+                    "name": "Boxi Cao"
+                },
+                {
+                    "authorId": "2116455765",
+                    "name": "Hongyu Lin"
+                },
+                {
+                    "authorId": "2118233348",
+                    "name": "Xianpei Han"
+                },
+                {
+                    "authorId": "2110832778",
+                    "name": "Le Sun"
+                },
+                {
+                    "authorId": "2291446789",
+                    "name": "Meng Yan"
+                },
+                {
+                    "authorId": "2291426020",
+                    "name": "Tong Liao"
+                },
+                {
+                    "authorId": "2291441068",
+                    "name": "Xue Jin"
+                },
+                {
+                    "authorId": "2291428838",
+                    "name": "Xu"
+                },
+                {
+                    "authorId": "2288154316",
+                    "name": "Alexis Conneau"
+                },
+                {
+                    "authorId": "40267343",
+                    "name": "Kartikay Khandelwal"
+                },
+                {
+                    "authorId": "39589154",
+                    "name": "Naman Goyal"
+                },
+                {
+                    "authorId": "2261961752",
+                    "name": "J. Devlin"
+                },
+                {
+                    "authorId": "2262085555",
+                    "name": "Ming-Wei Chang"
+                },
+                {
+                    "authorId": "2262196473",
+                    "name": "Kenton Lee"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yanai Elazar"
+                },
+                {
+                    "authorId": "9529535",
+                    "name": "Nora Kassner"
+                },
+                {
+                    "authorId": "2143278592",
+                    "name": "Shauli Ravfogel"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2285877067",
+                    "name": "Eduard Hovy"
+                },
+                {
+                    "authorId": "2258227712",
+                    "name": "Hinrich Sch\u00fctze"
+                }
+            ]
+        },
+        {
+            "paperId": "6c94d59a5f8ab934b9259967d59101c32072f9c2",
+            "title": "WildHallucinations: Evaluating Long-form Factuality in LLMs with Real-World Entity Queries",
+            "abstract": "While hallucinations of large language models (LLMs) prevail as a major challenge, existing evaluation benchmarks on factuality do not cover the diverse domains of knowledge that the real-world users of LLMs seek information about. To bridge this gap, we introduce WildHallucinations, a benchmark that evaluates factuality. It does so by prompting LLMs to generate information about entities mined from user-chatbot conversations in the wild. These generations are then automatically fact-checked against a systematically curated knowledge source collected from web search. Notably, half of these real-world entities do not have associated Wikipedia pages. We evaluate 118,785 generations from 15 LLMs on 7,919 entities. We find that LLMs consistently hallucinate more on entities without Wikipedia pages and exhibit varying hallucination rates across different domains. Finally, given the same base models, adding a retrieval component only slightly reduces hallucinations but does not eliminate hallucinations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266434757",
+                    "name": "Wenting Zhao"
+                },
+                {
+                    "authorId": "2312760350",
+                    "name": "Tanya Goyal"
+                },
+                {
+                    "authorId": "2277244466",
+                    "name": "Yu Ying Chiu"
+                },
+                {
+                    "authorId": "2112504145",
+                    "name": "Liwei Jiang"
+                },
+                {
+                    "authorId": "2263557371",
+                    "name": "Benjamin Newman"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2302810573",
+                    "name": "K. Chandu"
+                },
+                {
+                    "authorId": "2069676542",
+                    "name": "R. L. Bras"
+                },
+                {
+                    "authorId": "2064285348",
+                    "name": "Claire Cardie"
+                },
+                {
+                    "authorId": "2268298457",
+                    "name": "Yuntian Deng"
+                },
+                {
+                    "authorId": "2285939518",
+                    "name": "Yejin Choi"
+                }
+            ]
+        },
+        {
+            "paperId": "a1fa960fdfcc08510d348f7c66028f3d91b497f8",
+            "title": "The Art of Saying No: Contextual Noncompliance in Language Models",
+            "abstract": "Chat-based language models are designed to be helpful, yet they should not comply with every user request. While most existing work primarily focuses on refusal of\"unsafe\"queries, we posit that the scope of noncompliance should be broadened. We introduce a comprehensive taxonomy of contextual noncompliance describing when and how models should not comply with user requests. Our taxonomy spans a wide range of categories including incomplete, unsupported, indeterminate, and humanizing requests (in addition to unsafe requests). To test noncompliance capabilities of language models, we use this taxonomy to develop a new evaluation suite of 1000 noncompliance prompts. We find that most existing models show significantly high compliance rates in certain previously understudied categories with models like GPT-4 incorrectly complying with as many as 30% of requests. To address these gaps, we explore different training strategies using a synthetically-generated training set of requests and expected noncompliant responses. Our experiments demonstrate that while direct finetuning of instruction-tuned models can lead to both over-refusal and a decline in general capabilities, using parameter efficient methods like low rank adapters helps to strike a good balance between appropriate noncompliance and other capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "2308339428",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2697425",
+                    "name": "Pradeep Dasigi"
+                },
+                {
+                    "authorId": "22330666",
+                    "name": "Valentina Pyatkin"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2279337376",
+                    "name": "Sarah Wiegreffe"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "2302810573",
+                    "name": "K. Chandu"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2258958466",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2292425227",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2259707400",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2264251662",
+                    "name": "Hanna Hajishirzi"
+                }
+            ]
+        },
+        {
+            "paperId": "ac45bbf9940512d9d686cf8cd3a95969bc313570",
+            "title": "OLMo: Accelerating the Science of Language Models",
+            "abstract": "Language models (LMs) have become ubiquitous in both NLP research and in commercial product offerings. As their commercial importance has surged, the most powerful models have become closed off, gated behind proprietary interfaces, with important details of their training data, architectures, and development undisclosed. Given the importance of these details in scientifically studying these models, including their biases and potential risks, we believe it is essential for the research community to have access to powerful, truly open LMs. To this end, we have built OLMo, a competitive, truly Open Language Model, to enable the scientific study of language models. Unlike most prior efforts that have only released model weights and inference code, we release OLMo alongside open training data and training and evaluation code. We hope this release will empower the open research community and inspire a new wave of innovation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3458736",
+                    "name": "Dirk Groeneveld"
+                },
+                {
+                    "authorId": "2260133345",
+                    "name": "Iz Beltagy"
+                },
+                {
+                    "authorId": "2158819969",
+                    "name": "Pete Walsh"
+                },
+                {
+                    "authorId": "2166136235",
+                    "name": "Akshita Bhagia"
+                },
+                {
+                    "authorId": "2282136328",
+                    "name": "Rodney Kinney"
+                },
+                {
+                    "authorId": "3385516",
+                    "name": "Oyvind Tafjord"
+                },
+                {
+                    "authorId": "47286118",
+                    "name": "A. Jha"
+                },
+                {
+                    "authorId": "2056776606",
+                    "name": "Hamish Ivison"
+                },
+                {
+                    "authorId": "2124977543",
+                    "name": "Ian Magnusson"
+                },
+                {
+                    "authorId": "1705260",
+                    "name": "Yizhong Wang"
+                },
+                {
+                    "authorId": "2259924223",
+                    "name": "Shane Arora"
+                },
+                {
+                    "authorId": "2282136757",
+                    "name": "David Atkinson"
+                },
+                {
+                    "authorId": "2202417686",
+                    "name": "Russell Authur"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2527954",
+                    "name": "Arman Cohan"
+                },
+                {
+                    "authorId": "2282136556",
+                    "name": "Jennifer Dumas"
+                },
+                {
+                    "authorId": "51131518",
+                    "name": "Yanai Elazar"
+                },
+                {
+                    "authorId": "2261456046",
+                    "name": "Yuling Gu"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2236429",
+                    "name": "Tushar Khot"
+                },
+                {
+                    "authorId": "2282138468",
+                    "name": "William Merrill"
+                },
+                {
+                    "authorId": "2146964035",
+                    "name": "Jacob Daniel Morrison"
+                },
+                {
+                    "authorId": "2037383772",
+                    "name": "Niklas Muennighoff"
+                },
+                {
+                    "authorId": "23175870",
+                    "name": "Aakanksha Naik"
+                },
+                {
+                    "authorId": "2282136595",
+                    "name": "Crystal Nam"
+                },
+                {
+                    "authorId": "2267244582",
+                    "name": "Matthew E. Peters"
+                },
+                {
+                    "authorId": "22330666",
+                    "name": "Valentina Pyatkin"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2264248042",
+                    "name": "Dustin Schwenk"
+                },
+                {
+                    "authorId": "2282190660",
+                    "name": "Saurabh Shah"
+                },
+                {
+                    "authorId": "2282155558",
+                    "name": "Will Smith"
+                },
+                {
+                    "authorId": "2268272",
+                    "name": "Emma Strubell"
+                },
+                {
+                    "authorId": "34202134",
+                    "name": "Nishant Subramani"
+                },
+                {
+                    "authorId": "52193502",
+                    "name": "Mitchell Wortsman"
+                },
+                {
+                    "authorId": "2697425",
+                    "name": "Pradeep Dasigi"
+                },
+                {
+                    "authorId": "2267244197",
+                    "name": "Nathan Lambert"
+                },
+                {
+                    "authorId": "46666605",
+                    "name": "Kyle Richardson"
+                },
+                {
+                    "authorId": "2137813791",
+                    "name": "Luke S. Zettlemoyer"
+                },
+                {
+                    "authorId": "34176020",
+                    "name": "Jesse Dodge"
+                },
+                {
+                    "authorId": "46258841",
+                    "name": "Kyle Lo"
+                },
+                {
+                    "authorId": "3328733",
+                    "name": "Luca Soldaini"
+                },
+                {
+                    "authorId": "2264002618",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2264251662",
+                    "name": "Hanna Hajishirzi"
+                }
+            ]
+        },
+        {
+            "paperId": "ad1bb59e3e18a0dd8503c3961d6074f162baf710",
+            "title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+            "abstract": "Information about pretraining corpora used to train the current best-performing language models is seldom discussed: commercial models rarely detail their data, and even open models are often released without accompanying training data or recipes to reproduce them. As a result, it is challenging to conduct and advance scientific research on language modeling, such as understanding how training data impacts model capabilities and limitations. To facilitate scientific research on language model pretraining, we curate and release Dolma, a three-trillion-token English corpus, built from a diverse mixture of web content, scientific papers, code, public-domain books, social media, and encyclopedic materials. We extensively document Dolma, including its design principles, details about its construction, and a summary of its contents. We present analyses and experimental results on intermediate states of Dolma to share what we have learned about important data curation practices. Finally, we open-source our data curation toolkit to enable reproduction of our work as well as support further research in large-scale data curation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3328733",
+                    "name": "Luca Soldaini"
+                },
+                {
+                    "authorId": "2282136328",
+                    "name": "Rodney Kinney"
+                },
+                {
+                    "authorId": "2166136235",
+                    "name": "Akshita Bhagia"
+                },
+                {
+                    "authorId": "2264248042",
+                    "name": "Dustin Schwenk"
+                },
+                {
+                    "authorId": "2282136757",
+                    "name": "David Atkinson"
+                },
+                {
+                    "authorId": "2202417686",
+                    "name": "Russell Authur"
+                },
+                {
+                    "authorId": "50757607",
+                    "name": "Ben Bogin"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2282136556",
+                    "name": "Jennifer Dumas"
+                },
+                {
+                    "authorId": "51131518",
+                    "name": "Yanai Elazar"
+                },
+                {
+                    "authorId": "2275055850",
+                    "name": "Valentin Hofmann"
+                },
+                {
+                    "authorId": "47286118",
+                    "name": "A. Jha"
+                },
+                {
+                    "authorId": "2282203839",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "2259003726",
+                    "name": "L. Lucy"
+                },
+                {
+                    "authorId": "2156533327",
+                    "name": "Xinxi Lyu"
+                },
+                {
+                    "authorId": "2267244197",
+                    "name": "Nathan Lambert"
+                },
+                {
+                    "authorId": "2124977543",
+                    "name": "Ian Magnusson"
+                },
+                {
+                    "authorId": "2146964035",
+                    "name": "Jacob Daniel Morrison"
+                },
+                {
+                    "authorId": "2037383772",
+                    "name": "Niklas Muennighoff"
+                },
+                {
+                    "authorId": "23175870",
+                    "name": "Aakanksha Naik"
+                },
+                {
+                    "authorId": "2282136595",
+                    "name": "Crystal Nam"
+                },
+                {
+                    "authorId": "2267244582",
+                    "name": "Matthew E. Peters"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "46666605",
+                    "name": "Kyle Richardson"
+                },
+                {
+                    "authorId": "101568984",
+                    "name": "Zejiang Shen"
+                },
+                {
+                    "authorId": "2268272",
+                    "name": "Emma Strubell"
+                },
+                {
+                    "authorId": "34202134",
+                    "name": "Nishant Subramani"
+                },
+                {
+                    "authorId": "3385516",
+                    "name": "Oyvind Tafjord"
+                },
+                {
+                    "authorId": "2158819969",
+                    "name": "Pete Walsh"
+                },
+                {
+                    "authorId": "2137813791",
+                    "name": "Luke S. Zettlemoyer"
+                },
+                {
+                    "authorId": "2264002618",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2264251662",
+                    "name": "Hanna Hajishirzi"
+                },
+                {
+                    "authorId": "2260133345",
+                    "name": "Iz Beltagy"
+                },
+                {
+                    "authorId": "3458736",
+                    "name": "Dirk Groeneveld"
+                },
+                {
+                    "authorId": "34176020",
+                    "name": "Jesse Dodge"
+                },
+                {
+                    "authorId": "46258841",
+                    "name": "Kyle Lo"
+                }
+            ]
+        },
+        {
+            "paperId": "0b0525a0fdc1e18978e9861dcb4544a90c2e70ce",
+            "title": "Agent Lumos: Unified and Modular Training for Open-Source Language Agents",
+            "abstract": "Closed-source agents suffer from several issues such as a lack of affordability, transparency, and reproducibility, particularly on complex interactive tasks. This motivates the development of open-source alternatives. We introduce LUMOS, one of the first frameworks for training open-source LLM-based agents. LUMOS features a learnable, unified, and modular architecture with a planning module that learns high-level subgoal generation, and a grounding module trained to translate these into actions using various tools in the execution module. The design allows for modular upgrades and wider applicability to diverse interactive tasks. To foster generalizable agent learning, we collect large-scale, unified, and high-quality training annotations derived from diverse ground-truth reasoning rationales across various complex interactive tasks. On 9 datasets, LUMOS exhibits several key advantages: (1) LUMOS excels multiple larger open-source agents on the held-out datasets (unused for training) for each task type. LUMOS even surpasses GPT agents on QA and web tasks; (2) LUMOS outperforms open-source agents produced by chain-of-thoughts and unmodularized integrated training; and (3) LUMOS effectively generalizes to unseen tasks, outperforming 33B-scale agents and domain-specific agents.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144508458",
+                    "name": "Da Yin"
+                },
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "2259015895",
+                    "name": "Kai-Wei Chang"
+                },
+                {
+                    "authorId": "2266363632",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "51583409",
+                    "name": "Bill Yuchen Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "437cbaee4eaee0bf84abbe11750b86b091b9b756",
+            "title": "MacGyver: Are Large Language Models Creative Problem Solvers?",
+            "abstract": "We explore the creative problem-solving capabilities of modern LLMs in a novel constrained setting. To this end, we create MACGYVER, an automatically generated dataset consisting of over 1,600 real-world problems deliberately designed to trigger innovative usage of objects and necessitate out-of-the-box thinking. We then present our collection to both LLMs and humans to compare and contrast their problem-solving abilities. MACGYVER is challenging for both groups, but in unique and complementary ways. For instance, humans excel in tasks they are familiar with but struggle with domain-specific knowledge, leading to a higher variance. In contrast, LLMs, exposed to a variety of specialized knowledge, attempt broader problems but fail by proposing physically-infeasible actions. Finally, we provide a detailed error analysis of LLMs, and demonstrate the potential of enhancing their problem-solving ability with novel prompting techniques such as iterative step-wise reflection and divergent-convergent thinking.This work (1) introduces a fresh arena for intelligent agents focusing on intricate aspects of physical reasoning, planning, and unconventional thinking, which supplements the existing spectrum of machine intelligence; and (2) provides insight into the constrained problem-solving capabilities of both humans and AI.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48391421",
+                    "name": "Yufei Tian"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "3444092",
+                    "name": "Lianhui Qin"
+                },
+                {
+                    "authorId": "2069676542",
+                    "name": "R. L. Bras"
+                },
+                {
+                    "authorId": "2075275038",
+                    "name": "Raja Marjieh"
+                },
+                {
+                    "authorId": "2256996328",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "2266363632",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2263664277",
+                    "name": "Thomas L. Griffiths"
+                },
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                }
+            ]
+        },
+        {
+            "paperId": "600d9287efc4703bdb99ce39b5e8b37da0baa6f6",
+            "title": "The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning",
+            "abstract": "The alignment tuning process of large language models (LLMs) typically involves instruction learning through supervised fine-tuning (SFT) and preference tuning via reinforcement learning from human feedback (RLHF). A recent study, LIMA (Zhou et al. 2023), shows that using merely 1K examples for SFT can achieve significant alignment performance as well, suggesting that the effect of alignment tuning might be\"superficial.\"This raises questions about how exactly the alignment tuning transforms a base LLM. We analyze the effect of alignment tuning by examining the token distribution shift between base LLMs and their aligned counterpart. Our findings reveal that base LLMs and their alignment-tuned versions perform nearly identically in decoding on the majority of token positions. Most distribution shifts occur with stylistic tokens. These direct evidence strongly supports the Superficial Alignment Hypothesis suggested by LIMA. Based on these findings, we rethink the alignment of LLMs by posing the research question: how effectively can we align base LLMs without SFT or RLHF? To address this, we introduce a simple, tuning-free alignment method, URIAL. URIAL achieves effective alignment purely through in-context learning (ICL) with base LLMs, requiring as few as three constant stylistic examples and a system prompt. We conduct a fine-grained and interpretable evaluation on a diverse set of examples, named JUST-EVAL-INSTRUCT. Results demonstrate that base LLMs with URIAL can match or even surpass the performance of LLMs aligned with SFT or SFT+RLHF. We show that the gap between tuning-free and tuning-based alignment methods can be significantly reduced through strategic prompting and ICL. Our findings on the superficial nature of alignment tuning and results with URIAL suggest that deeper analysis and theoretical understanding of alignment is crucial to future LLM research.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51583409",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "50085131",
+                    "name": "Ximing Lu"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "1947172233",
+                    "name": "Melanie Sclar"
+                },
+                {
+                    "authorId": "37619618",
+                    "name": "Khyathi Raghavi Chandu"
+                },
+                {
+                    "authorId": "1857797",
+                    "name": "Chandra Bhagavatula"
+                },
+                {
+                    "authorId": "2259707400",
+                    "name": "Yejin Choi"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,484 @@
+{
+    "authorId": "2110922423",
+    "papers": [
+        {
+            "paperId": "c52772edbbbc408fe864716a74b08e4e076c0966",
+            "title": "Causal Distillation for Alleviating Performance Heterogeneity in Recommender Systems",
+            "abstract": "Recommendation performance usually exhibits a long-tail distribution over users \u2014 a small portion of head users enjoy much more accurate recommendation services than the others. We reveal two sources of this performance heterogeneity problem: the uneven distribution of historical interactions (a natural source); and the biased training of recommender models (a model source). As addressing this problem cannot sacrifice the overall performance, a wise choice is to eliminate the model bias while maintaining the natural heterogeneity. The key to debiased training lies in eliminating the effect of confounders that influence both the user's historical behaviors and the next behavior. The emerging causal recommendation methods achieve this by modeling the causal effect between user behaviors, however potentially neglect unobserved confounders (e.g., friend suggestions) that are hard to measure in practice. To address unobserved confounders, we resort to the front-door adjustment (FDA) in causal theory and propose a causal multi-teacher distillation framework (CausalD). FDA requires proper mediators in order to estimate the causal effects of historical behaviors on the next behavior. To achieve this, we equip CausalD with multiple heterogeneous recommendation models to model the mediator distribution. Then, the causal effect estimated by FDA is the expectation of recommendation prediction over the mediator distribution and the prior distribution of historical behaviors, which is technically achieved by multi-teacher ensemble. To pursue efficient inference, CausalD further distills multiple teachers into one student model to directly infer the causal effect for making recommendations. We instantiate CausalD on two representative models, DeepFM and DIN, and conduct extensive experiments on three real-world datasets, which validate the superiority of CausalD over state-of-the-art methods. Through in-depth analysis, we find that CausalD largely improves the performance of tail users, reduces the performance heterogeneity, and enhances the overall performance.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "2142708915",
+                    "name": "Ziqi Jiang"
+                },
+                {
+                    "authorId": "2110069725",
+                    "name": "Jiangchao Yao"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2315590980",
+                    "name": "Kun Kuang"
+                },
+                {
+                    "authorId": "2187385241",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2222777391",
+                    "name": "Shuo Li"
+                },
+                {
+                    "authorId": "2145952806",
+                    "name": "Hongxia Yang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "13b2af70b9c793cb44ea70ee3adcd756a60ef775",
+            "title": "DisCover: Disentangled Music Representation Learning for Cover Song Identification",
+            "abstract": "In the field of music information retrieval (MIR), cover song identification (CSI) is a challenging task that aims to identify cover versions of a query song from a massive collection. Existing works still suffer from high intra-song variances and inter-song correlations, due to the entangled nature of version-specific and version-invariant factors in their modeling. In this work, we set the goal of disentangling version-specific and version-invariant factors, which could make it easier for the model to learn invariant music representations for unseen query songs. We analyze the CSI task in a disentanglement view with the causal graph technique, and identify the intra-version and inter-version effects biasing the invariant learning. To block these effects, we propose the disentangled music representation learning framework (DisCover) for CSI. DisCover consists of two critical components: (1) Knowledge-guided Disentanglement Module (KDM) and (2) Gradient-based Adversarial Disentanglement Module (GADM), which block intra-version and inter-version biased effects, respectively. KDM minimizes the mutual information between the learned representations and version-variant factors that are identified with prior domain knowledge. GADM identifies version-variant factors by simulating the representation transitions between intra-song versions, and exploits adversarial distillation for effect blocking. Extensive comparisons with best-performing methods and in-depth analysis demonstrate the effectiveness of DisCover and the and necessity of disentanglement for CSI.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2129125609",
+                    "name": "Jiahao Xun"
+                },
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "2223871084",
+                    "name": "Yanting Yang"
+                },
+                {
+                    "authorId": "2108997533",
+                    "name": "Jieming Zhu"
+                },
+                {
+                    "authorId": "2114190458",
+                    "name": "Liqun Deng"
+                },
+                {
+                    "authorId": "2187385241",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "3065080",
+                    "name": "Zhenhua Dong"
+                },
+                {
+                    "authorId": "2181010470",
+                    "name": "Ruiqi Li"
+                },
+                {
+                    "authorId": "2144239338",
+                    "name": "Lichao Zhang"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "57cf07309da33bc48c3b89d436f15904fc32c986",
+            "title": "Video-Audio Domain Generalization via Confounder Disentanglement",
+            "abstract": "Existing video-audio understanding models are trained and evaluated in an intra-domain setting, facing performance degeneration in real-world applications where multiple domains and distribution shifts naturally exist. The key to video-audio domain generalization (VADG) lies in alleviating spurious correlations over multi-modal features. To achieve this goal, we resort to causal theory and attribute such correlation to confounders affecting both video-audio features and labels. We propose a DeVADG framework that conducts uni-modal and cross-modal deconfounding through back-door adjustment. DeVADG performs cross-modal disentanglement and obtains fine-grained confounders at both class-level and domain-level using half-sibling regression and unpaired domain transformation, which essentially identifies domain-variant factors and class-shared factors that cause spurious correlations between features and false labels. To promote VADG research, we collect a VADG-Action dataset for video-audio action recognition with over 5,000 video clips across four domains (e.g., cartoon and game) and ten action classes (e.g., cooking and riding). We conduct extensive experiments, i.e., multi-source DG, single-source DG, and qualitative analysis, validating the rationality of our causal analysis and the effectiveness of the DeVADG framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "2222968929",
+                    "name": "Xusheng Feng"
+                },
+                {
+                    "authorId": "2117590711",
+                    "name": "W. Fan"
+                },
+                {
+                    "authorId": "104108744",
+                    "name": "Wenjing Fang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2072613978",
+                    "name": "Wei Ji"
+                },
+                {
+                    "authorId": "2117893328",
+                    "name": "Shuo Li"
+                },
+                {
+                    "authorId": "2222600243",
+                    "name": "Li Wang"
+                },
+                {
+                    "authorId": "1965885413",
+                    "name": "Shanshan Zhao"
+                },
+                {
+                    "authorId": "47122432",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "6187dfe6a0d42c8d7f41013326f622d5d6911d65",
+            "title": "Denoising Multi-modal Sequential Recommenders with Contrastive Learning",
+            "abstract": "There is a rapidly-growing research interest in engaging users with multi-modal data for accurate user modeling on recommender systems. Existing multimedia recommenders have achieved substantial improvements by incorporating various modalities and devising delicate modules. However, when users decide to interact with items, most of them do not fully read the content of all modalities. We refer to modalities that directly cause users' behaviors as point-of-interests, which are important aspects to capture users' interests. In contrast, modalities that do not cause users' behaviors are potential noises and might mislead the learning of a recommendation model. Not surprisingly, little research in the literature has been devoted to denoising such potential noises due to the inaccessibility of users' explicit feedback on their point-of-interests. To bridge the gap, we propose a weakly-supervised framework based on contrastive learning for denoising multi-modal recommenders (dubbed Demure). In a weakly-supervised manner, Demure circumvents the requirement of users' explicit feedback and identifies the noises by analyzing the modalities of all interacted items from a given user.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2065759525",
+                    "name": "D. Yao"
+                },
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "47122432",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2108997533",
+                    "name": "Jieming Zhu"
+                },
+                {
+                    "authorId": "2108125912",
+                    "name": "Wenqiao Zhang"
+                },
+                {
+                    "authorId": "144142354",
+                    "name": "Rui Zhang"
+                },
+                {
+                    "authorId": "3945955",
+                    "name": "Xiaofei He"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "7395b2272f86d11af414c0d2fd7258ec731bc5f9",
+            "title": "Stable Prediction on Graphs with Agnostic Distribution Shifts",
+            "abstract": "Most graph neural networks (GNNs) are proposed and evaluated under independent and identically distributed (IID) training and testing data. In real-world applications, however, \u2217",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "2154972909",
+                    "name": "Yunze Tong"
+                },
+                {
+                    "authorId": "33870528",
+                    "name": "Kun Kuang"
+                },
+                {
+                    "authorId": "2238005533",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2238159891",
+                    "name": "Jiezhong Qiu"
+                },
+                {
+                    "authorId": "2151481549",
+                    "name": "Jin Yu"
+                },
+                {
+                    "authorId": "2238156073",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2145952841",
+                    "name": "Hongxia Yang"
+                },
+                {
+                    "authorId": "2238140921",
+                    "name": "Zhongfei Zhang"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "9ebd68585193e67976bc92c9489290796fe4d93b",
+            "title": "Personalized Latent Structure Learning for Recommendation",
+            "abstract": "In recommender systems, users\u2019 behavior data are driven by the interactions of user-item latent factors. To improve recommendation effectiveness and robustness, recent advances focus on latent factor disentanglement via variational inference. Despite significant progress, uncovering the underlying interactions, i.e., dependencies of latent factors, remains largely neglected by the literature. To bridge the gap, we investigate the joint disentanglement of user-item latent factors and the dependencies between them, namely latent structure learning. We propose to analyze the problem from the causal perspective, where a latent structure should ideally reproduce observational interaction data, and satisfy the structure acyclicity and dependency constraints, i.e., causal prerequisites. We further identify the recommendation-specific challenges for latent structure learning, i.e., the subjective nature of users\u2019 minds and the inaccessibility of private/sensitive user factors causing universally learned latent structure to be suboptimal for individuals. To address these challenges, we propose the personalized latent structure learning framework for recommendation, namely PlanRec, which incorporates 1) differentiable Reconstruction, Dependency, and Acyclicity regularizations to satisfy the causal prerequisites; 2) Personalized Structure Learning (PSL) which personalizes the universally learned dependencies through probabilistic modeling; and 3) uncertainty estimation which explicitly measures the uncertainty of structure personalization, and adaptively balances personalization and shared knowledge for different users. We conduct extensive experiments on two public benchmark datasets from MovieLens and Amazon, and a large-scale industrial dataset from Alipay. Empirical studies validate that PlanRec discovers effective shared/personalized structures, and successfully balances shared knowledge and personalization via rational uncertainty estimation.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2315590980",
+                    "name": "Kun Kuang"
+                },
+                {
+                    "authorId": "2108125912",
+                    "name": "Wenqiao Zhang"
+                },
+                {
+                    "authorId": "2187385241",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2145952806",
+                    "name": "Hongxia Yang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "a1975784784db088ec5125b488e9d5374fdef57a",
+            "title": "ANetQA: A Large-scale Benchmark for Fine-grained Compositional Reasoning over Untrimmed Videos",
+            "abstract": "Building benchmarks to systemically analyze different capabilities of video question answering (VideoQA) models is challenging yet crucial. Existing benchmarks often use non-compositional simple questions and suffer from language biases, making it difficult to diagnose model weaknesses incisively. A recent benchmark AGQA [8] poses a promising paradigm to generate QA pairs automatically from pre-annotated scene graphs, enabling it to measure diverse reasoning abilities with granular control. However, its questions have limitations in reasoning about the fine-grained semantics in videos as such information is absent in its scene graphs. To this end, we present ANetQA, a large-scale benchmark that supports fine-grained compositional reasoning over the challenging untrimmed videos from ActivityNet [4]. Similar to AGQA, the QA pairs in ANetQA are automatically generated from annotated video scene graphs. The fine-grained properties of ANetQA are reflected in the following: (i) untrimmed videos with fine-grained semantics; (ii) spatio-temporal scene graphs with fine-grained taxonomies; and (iii) diverse questions generated from fine-grained templates. ANetQA attains 1.4 billion unbalanced and 13.4 million balanced QA pairs, which is an order of magnitude larger than AGQA with a similar number of videos. Comprehensive experiments are performed for state-of-the-art methods. The best model achieves 44.5% accuracy while human performance tops out at 84.5%, leaving sufficient room for improvement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "2216492785",
+                    "name": "Lixiang Zheng"
+                },
+                {
+                    "authorId": "47122432",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                },
+                {
+                    "authorId": "2152732801",
+                    "name": "Jianping Fan"
+                },
+                {
+                    "authorId": "2145257973",
+                    "name": "Kui Ren"
+                },
+                {
+                    "authorId": "2153201715",
+                    "name": "Jun Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "ac9d007ee7b594ca854553eedbe6e70a56da91a9",
+            "title": "WINNER: Weakly-supervised hIerarchical decompositioN and aligNment for spatio-tEmporal video gRounding",
+            "abstract": "Spatio-temporal video grounding aims to localize the aligned visual tube corresponding to a language query. Existing techniques achieve such alignment by exploiting dense boundary and bounding box annotations, which can be prohibitively expensive. To bridge the gap, we investigate the weakly-supervised setting, where models learn from easily accessible video-language data without annotations. We identify that intra-sample spurious correlations among video-language components can be alleviated if the model captures the decomposed structures of video and language data. In this light, we propose a novel framework, namely WINNER, for hierarchical video-text understanding. WINNER first builds the language decomposition tree in a bottom-up manner, upon which the structural attention mechanism and top-down feature backtracking jointly build a multi-modal decomposition tree, permitting a hierarchical understanding of unstructured videos. The multi-modal decomposition tree serves as the basis for multi-hierarchy language-tube matching. A hierarchical contrastive learning objective is proposed to learn the multi-hierarchy correspondence and distinguishment with intra-sample and inter-sample video-text decomposition structures, achieving video-language decomposition structure alignment. Extensive experiments demonstrate the rationality of our design and its effectiveness beyond state-of-the-art weakly supervised methods, even some supervised methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31289209",
+                    "name": "Meng Li"
+                },
+                {
+                    "authorId": "2113289470",
+                    "name": "Hanqi Wang"
+                },
+                {
+                    "authorId": "2108125912",
+                    "name": "Wenqiao Zhang"
+                },
+                {
+                    "authorId": "1410814291",
+                    "name": "Jiaxu Miao"
+                },
+                {
+                    "authorId": "47122432",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "144540018",
+                    "name": "Wei Ji"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "c3a33641d4bf5d8cfe1d97b8083715b5ec78c156",
+            "title": "Multi-modal Action Chain Abductive Reasoning",
+            "abstract": "Abductive Reasoning, has long been considered to be at the core ability of humans, which enables us to infer the most plausible explanation of incomplete known phenomena in daily life. However, such critical reasoning capability is rarely investigated for contemporary AI systems under such limited observations. To facilitate this research community, this paper sheds new light on Abductive Reasoning by studying a new vision-language task, Multi-modal Action chain abductive Reasoning (MAR), together with a large-scale Abductive Reasoning dataset: Given an incomplete set of language described events, MAR aims to imagine the most plausible event by spatio-temporal grounding in past video and then infer the hypothesis of subsequent action chain that can best explain the language premise. To solve this task, we propose a strong baseline model that realizes MAR from two perspectives: (i) we first introduce the transformer, which learns to encode the observation to imagine the plausible event with explicitly interpretable event grounding in the video based on the commonsense knowledge recognition ability. (ii) To complete the assumption of a follow-up action chain, we design a novel symbolic module that can complete strict derivation of the progressive action chain layer by layer. We conducted extensive experiments on the proposed dataset, and the experimental study shows that the proposed model significantly outperforms existing video-language models in terms of effectiveness on our newly created MAR dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31289209",
+                    "name": "Meng Li"
+                },
+                {
+                    "authorId": "2158957515",
+                    "name": "Tianbao Wang"
+                },
+                {
+                    "authorId": "2311633854",
+                    "name": "Jiahe Xu"
+                },
+                {
+                    "authorId": "1988565577",
+                    "name": "Kairong Han"
+                },
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "47122432",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "1410814291",
+                    "name": "Jiaxu Miao"
+                },
+                {
+                    "authorId": "2108125912",
+                    "name": "Wenqiao Zhang"
+                },
+                {
+                    "authorId": "3290437",
+                    "name": "Shiliang Pu"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "ca1e270d25cc11fb69f5cc87fb08f112d0a954d0",
+            "title": "SLED: Structure Learning based Denoising for Recommendation",
+            "abstract": "In recommender systems, click behaviors play a fundamental role in mining users\u2019 interests and training models (clicked items as positive samples). Such signals are implicit feedback and are arguably less representative of users\u2019 inherent interests. Most existing works denoise implicit feedback by introducing external signals, such as gaze, dwell time, and \u201clike\u201d behaviors. However, such explicit feedback is not always routinely available, or might be problematic to collect on a large scale. In this paper, we identify that an interaction\u2019s related structural patterns in its neighborhood graph are potentially correlated with some outcome of implicit feedback (i.e., users\u2019 ratings after consuming items), analogous to findings in other domains such as social networks. Inspired by this finding, we propose a novel Structure LEarning based Denoising (SLED) framework for denoising recommendation without explicit signals, which consists of two phases: center-aware graph structure learning and denoised recommendation. Phase 1 pre-trains a structural encoder in a self-supervised manner and learns to capture an interaction\u2019s related structural patterns in its neighborhood graph. Phase 2 transfers the structure encoder to downstream recommendation datasets, which helps to down-weight the effect of noisy interactions on user interest modeling and loss calculation. We collect a relatively noisy industrial dataset across several days during a period of product promotion festival. Extensive experiments on this dataset and multiple public datasets demonstrate that the proposed SLED framework can significantly improve the recommendation quality over various base recommendation models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "71328060",
+                    "name": "Tan Jiang"
+                },
+                {
+                    "authorId": "33870528",
+                    "name": "Kun Kuang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2151481549",
+                    "name": "Jin Yu"
+                },
+                {
+                    "authorId": "47793076",
+                    "name": "Jianxin Ma"
+                },
+                {
+                    "authorId": "2187385241",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2141497540",
+                    "name": "Jianke Zhu"
+                },
+                {
+                    "authorId": "2145952841",
+                    "name": "Hongxia Yang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        }
+    ]
+}

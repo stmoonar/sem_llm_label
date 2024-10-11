@@ -1,0 +1,525 @@
+{
+    "authorId": "51431610",
+    "papers": [
+        {
+            "paperId": "0a6591b2d1fca32a4f6b6414c3b73b7cc7b79b5d",
+            "title": "Full Stage Learning to Rank: A Unified Framework for Multi-Stage Systems",
+            "abstract": "The Probability Ranking Principle (PRP) has been considered as the foundational standard in the design of information retrieval (IR) systems. The principle requires an IR module's returned list of results to be ranked with respect to the underlying user interests, so as to maximize the results' utility. Nevertheless, we point out that it is inappropriate to indiscriminately apply PRP through every stage of a contemporary IR system. Such systems contain multiple stages (e.g., retrieval, pre-ranking, ranking, and re-ranking stages, as examined in this paper). The selection bias inherent in the model of each stage significantly influences the results that are ultimately presented to users. To address this issue, we propose an improved ranking principle for multi-stage systems, namely the Generalized Probability Ranking Principle (GPRP), to emphasize both the selection bias in each stage of the system pipeline as well as the underlying interest of users. We realize GPRP via a unified algorithmic framework named Full Stage Learning to Rank. Our core idea is to first estimate the selection bias in the subsequent stages and then learn a ranking model that best complies with the downstream modules' selection bias so as to deliver its top ranked results to the final ranked list in the system's output. We performed extensive experiment evaluations of our developed Full Stage Learning to Rank solution, using both simulations and online A/B tests in one of the leading short-video recommendation platforms. The algorithm is proved to be effective in both retrieval and ranking stages. Since deployed, the algorithm has brought consistent and significant performance gain to the platform.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2293395261",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2300284323",
+                    "name": "Haijun Zhao"
+                },
+                {
+                    "authorId": "2302519916",
+                    "name": "Rui Huang"
+                },
+                {
+                    "authorId": "2300334834",
+                    "name": "Beichuan Zhang"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "2056580600",
+                    "name": "Yanan Niu"
+                },
+                {
+                    "authorId": "2290226180",
+                    "name": "Yang Song"
+                },
+                {
+                    "authorId": "2257375902",
+                    "name": "Hongning Wang"
+                },
+                {
+                    "authorId": "2266467527",
+                    "name": "Kun Gai"
+                }
+            ]
+        },
+        {
+            "paperId": "2efc97877af539325cd5a0c91ebac4307353c26e",
+            "title": "DimeRec: A Unified Framework for Enhanced Sequential Recommendation via Generative Diffusion Models",
+            "abstract": "Sequential Recommendation (SR) plays a pivotal role in recommender systems by tailoring recommendations to user preferences based on their non-stationary historical interactions. Achieving high-quality performance in SR requires attention to both item representation and diversity. However, designing an SR method that simultaneously optimizes these merits remains a long-standing challenge. In this study, we address this issue by integrating recent generative Diffusion Models (DM) into SR. DM has demonstrated utility in representation learning and diverse image generation. Nevertheless, a straightforward combination of SR and DM leads to sub-optimal performance due to discrepancies in learning objectives (recommendation vs. noise reconstruction) and the respective learning spaces (non-stationary vs. stationary). To overcome this, we propose a novel framework called DimeRec (\\textbf{Di}ffusion with \\textbf{m}ulti-interest \\textbf{e}nhanced \\textbf{Rec}ommender). DimeRec synergistically combines a guidance extraction module (GEM) and a generative diffusion aggregation module (DAM). The GEM extracts crucial stationary guidance signals from the user's non-stationary interaction history, while the DAM employs a generative diffusion process conditioned on GEM's outputs to reconstruct and generate consistent recommendations. Our numerical experiments demonstrate that DimeRec significantly outperforms established baseline methods across three publicly available datasets. Furthermore, we have successfully deployed DimeRec on a large-scale short video recommendation platform, serving hundreds of millions of users. Live A/B testing confirms that our method improves both users' time spent and result diversification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108768910",
+                    "name": "Wu Li"
+                },
+                {
+                    "authorId": "2302519916",
+                    "name": "Rui Huang"
+                },
+                {
+                    "authorId": "2300284323",
+                    "name": "Haijun Zhao"
+                },
+                {
+                    "authorId": "2316897203",
+                    "name": "Chi Liu"
+                },
+                {
+                    "authorId": "2293395261",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2317131070",
+                    "name": "Qi Liu"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "2295946193",
+                    "name": "Guorui Zhou"
+                },
+                {
+                    "authorId": "2267335798",
+                    "name": "Defu Lian"
+                },
+                {
+                    "authorId": "2306136062",
+                    "name": "Yang Song"
+                },
+                {
+                    "authorId": "2305763135",
+                    "name": "Wentian Bao"
+                },
+                {
+                    "authorId": "2257004786",
+                    "name": "Enyun Yu"
+                },
+                {
+                    "authorId": "2257003726",
+                    "name": "Wenwu Ou"
+                }
+            ]
+        },
+        {
+            "paperId": "3f29e6427379144c1efea79dc8f6c698816e4c70",
+            "title": "End-to-end training of Multimodal Model and ranking Model",
+            "abstract": "Traditional recommender systems heavily rely on ID features, which often encounter challenges related to cold-start and generalization. Modeling pre-extracted content features can mitigate these issues, but is still a suboptimal solution due to the discrepancies between training tasks and model parameters. End-to-end training presents a promising solution for these problems, yet most of the existing works mainly focus on retrieval models, leaving the multimodal techniques under-utilized. In this paper, we propose an industrial multimodal recommendation framework named EM3: End-to-end training of Multimodal Model and ranking Model, which sufficiently utilizes multimodal information and allows personalized ranking tasks to directly train the core modules in the multimodal model to obtain more task-oriented content features, without overburdening resource consumption. First, we propose Fusion-Q-Former, which consists of transformers and a set of trainable queries, to fuse different modalities and generate fixed-length and robust multimodal embeddings. Second, in our sequential modeling for user content interest, we utilize Low-Rank Adaptation technique to alleviate the conflict between huge resource consumption and long sequence length. Third, we propose a novel Content-ID-Contrastive learning task to complement the advantages of content and ID by aligning them with each other, obtaining more task-oriented content embeddings and more generalized ID embeddings. In experiments, we implement EM3 on different ranking models in two scenario, achieving significant improvements in both offline evaluation and online A/B test, verifying the generalizability of our method. Ablation studies and visualization are also performed. Furthermore, we also conduct experiments on two public datasets to show that our proposed method outperforms the state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2296421112",
+                    "name": "Xiuqi Deng"
+                },
+                {
+                    "authorId": "2295776602",
+                    "name": "Lu Xu"
+                },
+                {
+                    "authorId": "2295845908",
+                    "name": "Xiyao Li"
+                },
+                {
+                    "authorId": "2295813958",
+                    "name": "Jinkai Yu"
+                },
+                {
+                    "authorId": "2295729242",
+                    "name": "Erpeng Xue"
+                },
+                {
+                    "authorId": "2257052464",
+                    "name": "Zhongyuan Wang"
+                },
+                {
+                    "authorId": "2303045171",
+                    "name": "Di Zhang"
+                },
+                {
+                    "authorId": "2295905647",
+                    "name": "Zhaojie Liu"
+                },
+                {
+                    "authorId": "2295946193",
+                    "name": "Guorui Zhou"
+                },
+                {
+                    "authorId": "2295869250",
+                    "name": "Yang Song"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "2295875058",
+                    "name": "Shen Jiang"
+                },
+                {
+                    "authorId": "2295882156",
+                    "name": "Han Li"
+                }
+            ]
+        },
+        {
+            "paperId": "7b88483778f142a70b9d9de71af5f60798d2aaa0",
+            "title": "SHARK: A Lightweight Model Compression Approach for Large-scale Recommender Systems",
+            "abstract": "Increasing the size of embedding layers has shown to be effective in improving the performance of recommendation models, yet gradually causing their sizes to exceed terabytes in industrial recommender systems, and hence the increase of computing and storage costs. To save resources while maintaining model performances, we propose SHARK, the model compression practice we have summarized in the recommender system of industrial scenarios. SHARK consists of two main components. First, we use the novel first-order component of Taylor expansion as importance scores to prune the number of embedding tables (feature fields). Second, we introduce a new row-wise quantization method to apply different quantization strategies to each embedding. We conduct extensive experiments on both public and industrial datasets, demonstrating that each component of our proposed SHARK framework outperforms previous approaches. We conduct A/B tests in multiple models on Kuaishou, such as short video, e-commerce, and advertising recommendation models. The results of the online A/B test showed SHARK can effectively reduce the memory footprint of the embedded layer. For the short-video scenarios, the compressed model without any performance drop significantly saves 70% storage and thousands of machines, improves 30% queries per second (QPS), and has been deployed to serve hundreds of millions of users and process tens of billions of requests every day.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1727135",
+                    "name": "Beichuan Zhang"
+                },
+                {
+                    "authorId": "3180034",
+                    "name": "Chenggen Sun"
+                },
+                {
+                    "authorId": "34331333",
+                    "name": "Jianchao Tan"
+                },
+                {
+                    "authorId": "47298803",
+                    "name": "Xinjun Cai"
+                },
+                {
+                    "authorId": "2145806489",
+                    "name": "Jun Zhao"
+                },
+                {
+                    "authorId": "2041302727",
+                    "name": "Mengqi Miao"
+                },
+                {
+                    "authorId": "2065232556",
+                    "name": "Kang Yin"
+                },
+                {
+                    "authorId": "1452309960",
+                    "name": "Chengru Song"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "144404428",
+                    "name": "Yang Song"
+                }
+            ]
+        },
+        {
+            "paperId": "e43b1f4f8e20cb90e4437e5aef3f3323417eac11",
+            "title": "PANE-GNN: Unifying Positive and Negative Edges in Graph Neural Networks for Recommendation",
+            "abstract": "Recommender systems play a crucial role in addressing the issue of information overload by delivering personalized recommendations to users. In recent years, there has been a growing interest in leveraging graph neural networks (GNNs) for recommender systems, capitalizing on advancements in graph representation learning. These GNN-based models primarily focus on analyzing users' positive feedback while overlooking the valuable insights provided by their negative feedback. In this paper, we propose PANE-GNN, an innovative recommendation model that unifies Positive And Negative Edges in Graph Neural Networks for recommendation. By incorporating user preferences and dispreferences, our approach enhances the capability of recommender systems to offer personalized suggestions. PANE-GNN first partitions the raw rating graph into two distinct bipartite graphs based on positive and negative feedback. Subsequently, we employ two separate embeddings, the interest embedding and the disinterest embedding, to capture users' likes and dislikes, respectively. To facilitate effective information propagation, we design distinct message-passing mechanisms for positive and negative feedback. Furthermore, we introduce a distortion to the negative graph, which exclusively consists of negative feedback edges, for contrastive training. This distortion plays a crucial role in effectively denoising the negative feedback. The experimental results provide compelling evidence that PANE-GNN surpasses the existing state-of-the-art benchmark methods across four real-world datasets. These datasets include three commonly used recommender system datasets and one open-source short video recommendation dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "39789747",
+                    "name": "Ziyang Liu"
+                },
+                {
+                    "authorId": "2135743383",
+                    "name": "Chao-Hong Wang"
+                },
+                {
+                    "authorId": "2180607307",
+                    "name": "Jingcao Xu"
+                },
+                {
+                    "authorId": "2151102586",
+                    "name": "Cheng Wu"
+                },
+                {
+                    "authorId": "2052687617",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "144404428",
+                    "name": "Yang Song"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                }
+            ]
+        },
+        {
+            "paperId": "9123189c399c5d23a3b6bfa43c6df640c0a9aea7",
+            "title": "CAN: Feature Co-Action Network for Click-Through Rate Prediction",
+            "abstract": "Feature interaction has been recognized as an important problem in machine learning, which is also very essential for click-through rate (CTR) prediction tasks. In recent years, Deep Neural Networks (DNNs) can automatically learn implicit nonlinear interactions from original sparse features, and therefore have been widely used in industrial CTR prediction tasks. However, the implicit feature interactions learned in DNNs cannot fully retain the complete representation capacity of the original and empirical feature interactions (e.g., cartesian product) without loss. For example, a simple attempt to learn the combination of feature A and feature B < A, B > as the explicit cartesian product representation of new features can outperform previous implicit feature interaction models including factorization machine (FM)-based models and their variations. This indicates there is still a big gap between explicit and implicit feature interaction models. However, to learn all the explicit feature interaction (cartesian product) representations requires a very large sample size along with N times of original parameter space (where N is quite large in most industrial applications). In this paper, we propose a Co-Action Network (CAN) to approximate the explicit pairwise feature interactions without introducing too many additional parameters. More specifically, giving feature A and its associated feature B, their feature interaction is modeled by learning two sets of parameters: 1) the embedding of feature A, and 2) a Multi-Layer Perceptron (MLP) to represent feature B. The approximated feature interaction can be obtained by passing the embedding of feature A through the MLP network of feature B. We refer to such pairwise feature interaction as feature co-action, and such a Co-Action Network unit can provide a very powerful capacity to fitting complex feature interactions. In addition, FM can be viewed as a special case of the CAN unit when the MLP is a single layer with only one output. Experimental results on public and industrial datasets show that CAN outperforms state-of-the-art CTR models and the cartesian product method. Moreover, CAN has been deployed in the display advertisement system in Alibaba, obtaining 12% improvement on CTR and 8% on Revenue Per Mille (RPM), which is a great improvement to the business. The code for experiments in this paper is open-sourced\\footnotehttps://github.com/CAN-Paper/Co-Action-Network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9455314",
+                    "name": "Weijie Bian"
+                },
+                {
+                    "authorId": "12953211",
+                    "name": "Kailun Wu"
+                },
+                {
+                    "authorId": "9640563",
+                    "name": "Lejian Ren"
+                },
+                {
+                    "authorId": "37915354",
+                    "name": "Qi Pi"
+                },
+                {
+                    "authorId": "1591127778",
+                    "name": "Yujing Zhang"
+                },
+                {
+                    "authorId": "2075320306",
+                    "name": "Can Xiao"
+                },
+                {
+                    "authorId": "51055667",
+                    "name": "Xiang-Rong Sheng"
+                },
+                {
+                    "authorId": "153514203",
+                    "name": "Yong-Nan Zhu"
+                },
+                {
+                    "authorId": "2154453281",
+                    "name": "Zhangming Chan"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "71616566",
+                    "name": "Xinchen Luo"
+                },
+                {
+                    "authorId": "1683738",
+                    "name": "Shiming Xiang"
+                },
+                {
+                    "authorId": "35066946",
+                    "name": "Guorui Zhou"
+                },
+                {
+                    "authorId": "150345697",
+                    "name": "Xiaoqiang Zhu"
+                },
+                {
+                    "authorId": "2642895",
+                    "name": "Hongbo Deng"
+                }
+            ]
+        },
+        {
+            "paperId": "4e63451672ba22e1b28cce1efd73d81b5e82d2c4",
+            "title": "CAN: Revisiting Feature Co-Action for Click-Through Rate Prediction",
+            "abstract": "Inspired by the success of deep learning, recent industrial Click-Through Rate (CTR) prediction models have made the transition from traditional shallow approaches to deep approaches. Deep Neural Networks (DNNs) are known for its ability to learn non-linear interactions from raw feature automatically, however, the non-linear feature interaction is learned in an implicit manner. The non-linear interaction may be hard to capture and explicitly model the \\textit{co-action} of raw feature is beneficial for CTR prediction. \\textit{Co-action} refers to the collective effects of features toward final prediction. \nIn this paper, we argue that current CTR models do not fully explore the potential of feature co-action. We conduct experiments and show that the effect of feature co-action is underestimated seriously. Motivated by our observation, we propose feature Co-Action Network (CAN) to explore the potential of feature co-action. The proposed model can efficiently and effectively capture the feature co-action, which improves the model performance while reduce the storage and computation consumption. Experiment results on public and industrial datasets show that CAN outperforms state-of-the-art CTR models by a large margin. Up to now, CAN has been deployed in the Alibaba display advertisement system, obtaining averaging 12\\% improvement on CTR and 8\\% on RPM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9330280",
+                    "name": "Guorui Zhou"
+                },
+                {
+                    "authorId": "9455314",
+                    "name": "Weijie Bian"
+                },
+                {
+                    "authorId": "12953211",
+                    "name": "Kailun Wu"
+                },
+                {
+                    "authorId": "9640563",
+                    "name": "Lejian Ren"
+                },
+                {
+                    "authorId": "37915354",
+                    "name": "Qi Pi"
+                },
+                {
+                    "authorId": "1591127778",
+                    "name": "Yujing Zhang"
+                },
+                {
+                    "authorId": "2075320306",
+                    "name": "Can Xiao"
+                },
+                {
+                    "authorId": "51055667",
+                    "name": "Xiang-Rong Sheng"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "71616566",
+                    "name": "Xinchen Luo"
+                },
+                {
+                    "authorId": null,
+                    "name": "Chi Zhang"
+                },
+                {
+                    "authorId": "1381696125",
+                    "name": "Xianjie Qiao"
+                },
+                {
+                    "authorId": "1683738",
+                    "name": "Shiming Xiang"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                },
+                {
+                    "authorId": "150345697",
+                    "name": "Xiaoqiang Zhu"
+                },
+                {
+                    "authorId": "2110980100",
+                    "name": "Jian Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "93ed0337990b0296bdac1c91074e16a05b6d8990",
+            "title": "CAN: Feature Co-Action for Click-Through Rate Prediction",
+            "abstract": "Feature interaction has been recognized as an important problem in machine learning, which is also very essential for click-through rate (CTR) prediction tasks. In recent years, Deep Neural Networks (DNNs) can automatically learn implicit nonlinear interactions from original sparse features, and therefore have been widely used in industrial CTR prediction tasks. However, the implicit feature interactions learned in DNNs cannot fully retain the complete representation capacity of the original and empirical feature interactions (e.g., cartesian product) without loss. For example, a simple attempt to learn the combination of feature A and feature Bas the explicit cartesian product representation of new features can outperform previous implicit feature interaction models including factorization machine (FM)-based models and their variations. In this paper, we propose a Co-Action Network (CAN) to approximate the explicit pairwise feature interactions without introducing too many additional parameters. More specifically, giving feature A and its associated feature B, their feature interaction is modeled by learning two sets of parameters: 1) the embedding of feature A, and 2) a Multi-Layer Perceptron (MLP) to represent feature B. The approximated feature interaction can be obtained by passing the embedding of feature A through the MLP network of feature B. We refer to such pairwise feature interaction as feature co-action, and such a Co-Action Network unit can provide a very powerful capacity to fitting complex feature interactions. Experimental results on public and industrial datasets show that CAN outperforms state-of-the-art CTR models and the cartesian product method. Moreover, CAN has been deployed in the display advertisement system in Alibaba, obtaining 12\\% improvement on CTR and 8\\% on Revenue Per Mille (RPM), which is a great improvement to the business.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "9455314",
+                    "name": "Weijie Bian"
+                },
+                {
+                    "authorId": "12953211",
+                    "name": "Kailun Wu"
+                },
+                {
+                    "authorId": "9640563",
+                    "name": "Lejian Ren"
+                },
+                {
+                    "authorId": "37915354",
+                    "name": "Qi Pi"
+                },
+                {
+                    "authorId": "1591127778",
+                    "name": "Yujing Zhang"
+                },
+                {
+                    "authorId": "2075320306",
+                    "name": "Can Xiao"
+                },
+                {
+                    "authorId": "51055667",
+                    "name": "Xiang-Rong Sheng"
+                },
+                {
+                    "authorId": "153514203",
+                    "name": "Yong-Nan Zhu"
+                },
+                {
+                    "authorId": "51177175",
+                    "name": "Zhangming Chan"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "71616566",
+                    "name": "Xinchen Luo"
+                },
+                {
+                    "authorId": "1683738",
+                    "name": "Shiming Xiang"
+                },
+                {
+                    "authorId": "9330280",
+                    "name": "Guorui Zhou"
+                },
+                {
+                    "authorId": "150345697",
+                    "name": "Xiaoqiang Zhu"
+                },
+                {
+                    "authorId": "2642895",
+                    "name": "Hongbo Deng"
+                }
+            ]
+        },
+        {
+            "paperId": "70d5ceb59118334e1a6eed33a149234413147b92",
+            "title": "Deep Interest Evolution Network for Click-Through Rate Prediction",
+            "abstract": "Click-through rate (CTR) prediction, whose goal is to estimate the probability of a user clicking on the item, has become one of the core tasks in the advertising system. For CTR prediction model, it is necessary to capture the latent user interest behind the user behavior data. Besides, considering the changing of the external environment and the internal cognition, user interest evolves over time dynamically. There are several CTR prediction methods for interest modeling, while most of them regard the representation of behavior as the interest directly, and lack specially modeling for latent interest behind the concrete behavior. Moreover, little work considers the changing trend of the interest. In this paper, we propose a novel model, named Deep Interest Evolution Network (DIEN), for CTR prediction. Specifically, we design interest extractor layer to capture temporal interests from history behavior sequence. At this layer, we introduce an auxiliary loss to supervise interest extracting at each step. As user interests are diverse, especially in the e-commerce system, we propose interest evolving layer to capture interest evolving process that is relative to the target item. At interest evolving layer, attention mechanism is embedded into the sequential structure novelly, and the effects of relative interests are strengthened during interest evolution. In the experiments on both public and industrial datasets, DIEN significantly outperforms the state-of-the-art solutions. Notably, DIEN has been deployed in the display advertisement system of Taobao, and obtained 20.7% improvement on CTR.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "35066946",
+                    "name": "Guorui Zhou"
+                },
+                {
+                    "authorId": "51431610",
+                    "name": "Na Mou"
+                },
+                {
+                    "authorId": "2109755002",
+                    "name": "Ying Fan"
+                },
+                {
+                    "authorId": "37915354",
+                    "name": "Qi Pi"
+                },
+                {
+                    "authorId": "9455314",
+                    "name": "Weijie Bian"
+                },
+                {
+                    "authorId": "144161025",
+                    "name": "Chang Zhou"
+                },
+                {
+                    "authorId": "150345697",
+                    "name": "Xiaoqiang Zhu"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                }
+            ]
+        }
+    ]
+}

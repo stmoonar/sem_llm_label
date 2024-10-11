@@ -1,0 +1,141 @@
+{
+    "authorId": "2230045941",
+    "papers": [
+        {
+            "paperId": "2add25de304fbf12b75f3209532bf685972f29b9",
+            "title": "Debias Can be Unreliable: Mitigating Bias Issue in Evaluating Debiasing Recommendation",
+            "abstract": "Recent work has improved recommendation models remarkably by equipping them with debiasing methods. Due to the unavailability of fully-exposed datasets, most existing approaches resort to randomly-exposed datasets as a proxy for evaluating debiased models, employing traditional evaluation scheme to represent the recommendation performance. However, in this study, we reveal that traditional evaluation scheme is not suitable for randomly-exposed datasets, leading to inconsistency between the Recall performance obtained using randomly-exposed datasets and that obtained using fully-exposed datasets. Such inconsistency indicates the potential unreliability of experiment conclusions on previous debiasing techniques and calls for unbiased Recall evaluation using randomly-exposed datasets. To bridge the gap, we propose the Unbiased Recall Evaluation (URE) scheme, which adjusts the utilization of randomly-exposed datasets to unbiasedly estimate the true Recall performance on fully-exposed datasets. We provide theoretical evidence to demonstrate the rationality of URE and perform extensive experiments on real-world datasets to validate its soundness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2320452720",
+                    "name": "Chengbing Wang"
+                },
+                {
+                    "authorId": "2153422494",
+                    "name": "Wentao Shi"
+                },
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "2280911299",
+                    "name": "Fuli Feng"
+                }
+            ]
+        },
+        {
+            "paperId": "41064ca2325757137e5ef28ce01014a254c49997",
+            "title": "Proactive Recommendation with Iterative Preference Guidance",
+            "abstract": "Recommender systems mainly tailor personalized recommendations according to user interests learned from user feedback. However, such recommender systems passively cater to user interests and even reinforce existing interests in the feedback loop, leading to problems like filter bubbles and opinion polarization. To counteract this, proactive recommendation actively steers users towards developing new interests in a target item or topic by strategically modulating recommendation sequences. Existing work for proactive recommendation faces significant hurdles: 1) overlooking the user feedback in the guidance process; 2) lacking explicit modeling of the guiding objective; and 3) insufficient flexibility for integration into existing industrial recommender systems. To address these issues, we introduce an Iterative Preference Guidance (IPG) framework. IPG performs proactive recommendation in a flexible post-processing manner by ranking items according to their IPG scores that consider both interaction probability and guiding value. These scores are explicitly estimated with iteratively updated user representation that considers the most recent user interactions. Extensive experiments validate that IPG can effectively guide user interests toward target interests with a reasonable trade-off in recommender accuracy. The code is available at https://github.com/GabyUSTC/IPG-Rec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "2280911299",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2239071206",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "f062dd1f474cb57abf2970cc9e2acb1f2ab942f2",
+            "title": "Proactive Recommendation in Social Networks: Steering User Interest via Neighbor Influence",
+            "abstract": "Recommending items solely catering to users' historical interests narrows users' horizons. Recent works have considered steering target users beyond their historical interests by directly adjusting items exposed to them. However, the recommended items for direct steering might not align perfectly with users' interests evolution, detrimentally affecting target users' experience. To avoid this issue, we propose a new task named Proactive Recommendation in Social Networks (PRSN) that indirectly steers users' interest by utilizing the influence of social neighbors, i.e., indirect steering by adjusting the exposure of a target item to target users' neighbors. The key to PRSN lies in answering an interventional question: what would a target user's feedback be on a target item if the item is exposed to the user's different neighbors? To answer this question, we resort to causal inference and formalize PRSN as: (1) estimating the potential feedback of a user on an item, under the network interference by the item's exposure to the user's neighbors; and (2) adjusting the exposure of a target item to target users' neighbors to trade off steering performance and the damage to the neighbors' experience. To this end, we propose a Neighbor Interference Recommendation (NIRec) framework with two key modules: (1)an interference representation-based estimation module for modeling potential feedback; and (2) a post-learning-based optimization module for optimizing a target item's exposure to trade off steering performance and the neighbors' experience by greedy search. We conduct extensive semi-simulation experiments based on three real-world datasets, validating the steering effectiveness of NIRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "2301265313",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2051689367",
+                    "name": "Haoxuan Li"
+                },
+                {
+                    "authorId": "2302131228",
+                    "name": "Peng Wu"
+                },
+                {
+                    "authorId": "2280911299",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2239071206",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "28fa51f1b70869c1c8f610b25ddb841c83a8de2b",
+            "title": "Discriminative-Invariant Representation Learning for Unbiased Recommendation",
+            "abstract": "Selection bias hinders recommendation models from learning unbiased user preference. Recent works empirically reveal that pursuing invariant user and item representation across biased and unbiased data is crucial for counteracting selection bias. However, our theoretical analysis reveals that simply optimizing representation invariance is insufficient for addressing the selection bias \u2014 recommendation performance is bounded by both representation invariance and discriminability. Worse still, current invariant representation learning methods in recommendation neglect even hurt the representation discriminability due to data sparsity and label shift. In this light, we propose a new Discriminative-Invariant Representation Learning framework for unbiased recommendation, which incorporates label-conditional clustering and prior-guided contrasting into conventional invariant representation learning to mitigate the impact of data sparsity and label shift, respectively. We conduct extensive experiments on three real-world datasets, validating the rationality and effectiveness of the proposed framework. Code and supplementary materials are available at: https://github.com/HungPaan/DIRL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2153422494",
+                    "name": "Wentao Shi"
+                },
+                {
+                    "authorId": "8612672",
+                    "name": "Junkang Wu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        }
+    ]
+}

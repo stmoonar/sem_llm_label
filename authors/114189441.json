@@ -1,0 +1,277 @@
+{
+    "authorId": "114189441",
+    "papers": [
+        {
+            "paperId": "84c0871cca16a1c9ad4a82257ef228f1e3472bf0",
+            "title": "Towards Resource-adaptive Query Execution in Cloud Native Databases",
+            "abstract": "Modern cloud environments, characterized as resource-dynamic with new developments, see prevalence in ephemeral resources. Such resources can be unstable in resource availability, experiencing both anticipated and unforeseen terminations during utilization. Their prices, although attractive, can be fluctuating over time. The presence and prevalence of ephemeral resources in cloud environments pose a challenge to current cloud-native databases and workloads, which requires a rethink of design principles and necessitates the new primitives: query preemption, resource arbitration, and cost tolerance. In this paper, we design Ratchet, a resource-adaptive query execution framework, to realize the identified primitives. Ratchet enables adaptive query suspension and resumption at various granularities, resource arbitration for complex and heterogeneous workloads, and a fine-grained pricing model to utilize dynamic cloud resources without the risk of unexpectedly high prices. We also explore emerging directions to inspire future research.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2295154569",
+                    "name": "Rui Liu"
+                },
+                {
+                    "authorId": "2277573365",
+                    "name": "Jun Hyuk Chang"
+                },
+                {
+                    "authorId": "2277554230",
+                    "name": "Riki Otaki"
+                },
+                {
+                    "authorId": "2294881467",
+                    "name": "Zhe Heng Eng"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "2268711310",
+                    "name": "Michael Franklin"
+                },
+                {
+                    "authorId": "2277506095",
+                    "name": "Sanjay Krishnan"
+                }
+            ]
+        },
+        {
+            "paperId": "a719e4d4e171c25510809cb5d00f22394e3590d3",
+            "title": "AdaEdge: A Dynamic Compression Selection Framework for Resource Constrained Devices",
+            "abstract": "With the Internet of Things (IoT), a vast number of connected devices generate significant data, necessitating efficient compression techniques to manage storage costs and enhance query performance. However, \u201cone-size-fits-all\u201d approach to data compression is ineffective due to diverse applications, which vary in data characteristics, workloads, and hardware limitations. This paper introduces AdaEdge, a dynamic, hardware-conscious compression selection framework tailored for resource-constrained devices. AdaEdge is a best-effort compression selection frame- work designed to preserve application-critical information as much as possible within system constraints. It enhances the use of limited system resources through a dynamic data compression policy that considers the staleness and the significance of the data. AdaEdge applies a multi-armed bandit algorithm to assist compression selection, optimizing workload targets such as compression ratio, compression throughput, workload accuracy, or their weighted combinations. It supports both lossy and lossless compression selection, adapting to hardware constraints. It operates in both online and offline modes, addressing network constraints for edge nodes and evolving data policies to preserve workload-specific information. AdaEdge improves machine learning task accuracy by up to 30% over baseline within the same storage budget and by up to 20% in scenarios where lossless methods fall short due to low compression ratios. AdaEdge also shows robustness against data shifts and hardware variability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1726050553",
+                    "name": "Chunwei Liu"
+                },
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                }
+            ]
+        },
+        {
+            "paperId": "b1b220b214a60769d0810ca7571bfed3bb4be07b",
+            "title": "Riveter: Adaptive Query Suspension and Resumption Framework for Cloud Native Databases",
+            "abstract": "In modern cloud environments, ephemeral resources with intermittent availability and fluctuating monetary costs are becoming common. This dynamic nature presents a new challenge when deploying cloud-native databases: adaptive query execution, which can suspend queries when the resources are scarce or costs unexpectedly soar, and then resume them when the resources become available or cost-effective. Addressing this challenge requires the design and implementation of query suspension and resumption with a mechanism that can adaptively determine when, if, and how to suspend queries. In this paper, we propose Riveter, a query suspension and resumption framework that can adaptively pause ongoing queries using various strategies, including (1) a redo strategy that terminates queries and subsequently re-runs them, (2) a pipeline-level strategy that suspends a query once one of its pipelines has completed to reduce the storage requirements for intermediate data, (3) and a process-level strategy that enables the suspension of query execution processes at any given moment but generates a substantial volume of intermediate data for query resumption. We also devise a cost model to estimate query latency using various strategies and an algorithm to select the one that causes minimum latency. To demonstrate the effectiveness of Riveter, we conduct evaluations based on the TPC-H benchmark to investigate intermediate data persistence, strategy selection, and cost model-based estimation. Our results not only present the difference among the strategies of Riveter in terms of the size of persisted intermediate data and the time of triggering the suspension but also confirm the adaptive and efficient query suspension and resumption delivered by Riveter.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2295154569",
+                    "name": "Rui Liu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "2268711310",
+                    "name": "Michael Franklin"
+                },
+                {
+                    "authorId": "2277506095",
+                    "name": "Sanjay Krishnan"
+                }
+            ]
+        },
+        {
+            "paperId": "50e0c11becf84cc9c9b8756dc180bad2daa4ce88",
+            "title": "Accelerating Similarity Search for Elastic Measures: A Study and New Generalization of Lower Bounding Distances",
+            "abstract": "\n Similarity search is a core analytical task, and its performance critically depends on the choice of distance measure. For time-series querying, elastic measures achieve state-of-the-art accuracy but are computationally expensive. Thus, fast lower bounding (LB) measures prune unnecessary comparisons with elastic distances to accelerate similarity search. Despite decades of attention, there has never been a study to assess the progress in this area. In addition, the research has disproportionately focused on one popular elastic measure, while other accurate measures have received little or no attention. Therefore, there is merit in developing a framework to accumulate knowledge from previously developed LBs and eliminate the notoriously challenging task of designing separate LBs for each elastic measure. In this paper, we perform the first comprehensive study of 11 LBs spanning 5 elastic measures using 128 datasets. We identify four properties that constitute the effectiveness of LBs and propose the Generalized Lower Bounding (GLB) framework to satisfy all desirable properties. GLB creates cache-friendly summaries, adaptively exploits summaries of both query and target time series, and captures boundary distances in an unsupervised manner. GLB outperforms\n all\n LBs in speedup (e.g., up to 13.5\u00d7 faster against the strongest LB in terms of pruning power), establishes new state-of-the-art results for the 5 elastic measures, and provides the first LBs for 2 elastic measures with no known LBs. Overall, GLB enables the effective development of LBs to facilitate fast similarity search.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "25089941",
+                    "name": "Kaize Wu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "bab5e35001757719d0f8338f94dde2860dae784a",
+            "title": "How Large Language Models Will Disrupt Data Management",
+            "abstract": "Large language models (LLMs), such as GPT-4, are revolutionizing software's ability to understand, process, and synthesize language. The authors of this paper believe that this advance in technology is significant enough to prompt introspection in the data management community, similar to previous technological disruptions such as the advents of the world wide web, cloud computing, and statistical machine learning. We argue that the disruptive influence that LLMs will have on data management will come from two angles. (1) A number of hard database problems, namely, entity resolution, schema matching, data discovery, and query synthesis, hit a ceiling of automation because the system does not fully understand the semantics of the underlying data. Based on large training corpora of natural language, structured data, and code, LLMs have an unprecedented ability to ground database tuples, schemas, and queries in real-world concepts. We will provide examples of how LLMs may completely change our approaches to these problems. (2) LLMs blur the line between predictive models and information retrieval systems with their ability to answer questions. We will present examples showing how large databases and information retrieval systems have complementary functionality.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34568734",
+                    "name": "R. Fernandez"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                },
+                {
+                    "authorId": "2183988960",
+                    "name": "Sanjay Krishnan"
+                },
+                {
+                    "authorId": "2111727675",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "d2a0302d2060d77fa42afc07beac380c91805422",
+            "title": "Querying Time-Series Data: A Comprehensive Comparison of Distance Measures",
+            "abstract": "Distance measures are core building blocks in time-series analysis and the subject of active research for decades. Unfortunately, the most detailed experimental study in this area is outdated (over a decade old) and, naturally, does not re\ufb02ect recent progress. Importantly, this study (i) omitted multiple distance measures, including a classic measure in the time-series literature; (ii) considered only a single time-series normalization method; and (iii) reported only raw classi\ufb01cation error rates without statistically validating the \ufb01ndings, resulting in or fueling four misconceptions in the time-series literature. Motivated by the aforementioned drawbacks and our curiosity to shed some light on these misconceptions, we comprehensively evaluate 71 time-series distance measures. Speci\ufb01cally, our study includes (i) 8 normalization methods; (ii) 52 lock-step measures; (iii) 4 sliding measures; (iv) 7 elastic measures; (v) 4 kernel functions; and (vi) 4 embedding measures. We extensively evaluate these measures across 128 time-series datasets using rigorous statistical analysis. For the most promising measures, we present an accuracy-to-runtime analysis and summarize recent progress on a generalized lower bounding measure that accelerates all elastic distances. Our \ufb01ndings debunk four long-standing misconceptions that signi\ufb01cantly alter the landscape of what is known about existing distance measures. With the new foundations in place, we discuss open challenges and promising directions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "1726050553",
+                    "name": "Chunwei Liu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "2268711310",
+                    "name": "Michael Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "fc3b81275d1413b65f339ef3780b08ddc2df4f60",
+            "title": "Rotary: A Resource Arbitration Framework for Progressive Iterative Analytics",
+            "abstract": "Increasingly modern computing applications employ progressive iterative analytics, as best exemplified by two prevalent cases, approximate query processing (AQP) and deep learning training (DLT). In comparison to classic computing applications that only return the results after processing all the input data, progressive iterative analytics keep providing approximate or partial results to users by performing computations on a subset of the entire dataset until either the users are satisfied with the results, or the predefined completion criteria are achieved. Typically, progressive iterative analytic jobs have various completion criteria, produce diminishing returns, and process data at different rates, which necessitates a novel resource arbitration that can continuously prioritize the progressive iterative analytic jobs and determine if/when to reallocate and preempt the resources. We propose and design a resource arbitration framework, Rotary, and implement two resource arbitration systems, Rotary-AQP and Rotary-DLT, for approximate query processing and deep learning training. We build a TPC-H based AQP workload and a survey-based DLT workload to evaluate the two systems, respectively. The evaluation results demonstrate that Rotary-AQP and Rotary-DLT outperform the state-of-the-art systems and confirm the generality and practicality of the proposed resource arbitration framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2186804632",
+                    "name": "Rui Liu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                },
+                {
+                    "authorId": "40428703",
+                    "name": "S. Krishnan"
+                }
+            ]
+        },
+        {
+            "paperId": "0a818dfc6f263bed73c4c26fea354fc8cc412d01",
+            "title": "Summarizing Sets of Related ML-Driven Recommendations for Improving File Management in Cloud Storage",
+            "abstract": "Personal cloud storage systems increasingly offer recommendations to help users retrieve or manage files of interest. For example, Google Drive\u2019s Quick Access predicts and surfaces files likely to be accessed. However, when multiple, related recommendations are made, interfaces typically present recommended files and any accompanying explanations individually, burdening users. To improve the usability of ML-driven personal information management systems, we propose a new method for summarizing related file-management recommendations. We generate succinct summaries of groups of related files being recommended. Summaries reference the files\u2019 shared characteristics. Through a within-subjects online study in which participants received recommendations for groups of files in their own Google Drive, we compare our summaries to baselines like visualizing a decision tree model or simply listing the files in a group. Compared to the baselines, participants expressed greater understanding and confidence in accepting recommendations when shown our novel recommendation summaries.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "32722291",
+                    "name": "Will Brackenbury"
+                },
+                {
+                    "authorId": "3091414",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "2222651",
+                    "name": "Blase Ur"
+                }
+            ]
+        },
+        {
+            "paperId": "137d9bacd599459d143cd6eefbb5706d275791b6",
+            "title": "Fast Adaptive Similarity Search through Variance-Aware Quantization",
+            "abstract": "With the explosive growth of high-dimensional data, approximate methods emerge as promising solutions for nearest neighbor search. Among alternatives, quantization methods have gained attention due to the fast query responses and the low encoding and storage costs. Quantization methods decompose data dimensions into non-overlapping subspaces and encode data using a different dictionary per subspace. The state-of-the-art approach assigns dictionary sizes uniformly across subspaces while attempting to balance the relative importance of subspaces. Unfortunately, a uniform balance is not always achievable and may lead to unsatisfactory performance. Similarly, hardware-accelerated quantization methods may sacrifice accuracy to speed up the query execution. We propose a Variance-Aware Quantization (VAQ) method to encode data by intelligently adapting dictionary sizes to subspaces to alleviate these significant drawbacks. VAQ exploits intrinsic dimensionality reduction properties to derive the subspaces and only partially balances the importance of subspaces. Then, VAQ solves a constrained optimization problem to assign dictionary sizes proportionally to the importance of each subspace. In addition, VAQ accelerates the query execution by skipping data and subspaces through a hardware-oblivious algorithmic solution. To demonstrate the robustness of VAQ, we perform an extensive evaluation against quantization, hashing, and indexing methods using five large-scale benchmarking datasets. VAQ significantly outperforms the strongest hashing and quantization methods in accuracy while achieving up to 5\u00d7 speedup. Compared to the fastest but less accurate hardware-accelerated method, VAQ achieves a speedup@recall performance up to 14\u00d7. Importantly, a rigorous statistical comparison using over one hundred datasets reveals that VAQ significantly outperforms rival methods even with a half budget. Notably, VAQ's simple data skipping solution achieves competitive or better performance against index-based methods, highlighting the need for new indices for quantization methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "2057861070",
+                    "name": "Ikraduya Edian"
+                },
+                {
+                    "authorId": "1726050553",
+                    "name": "Chunwei Liu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "1e14a043a2f8de4595a74afa7546f7ff3a63a5dc",
+            "title": "FuzzyData: A Scalable Workload Generator for Testing Dataframe Workflow Systems",
+            "abstract": "Dataframes have become a popular means to represent, transform and analyze data. This approach has gained traction and a large user base for data science practitioners - resulting in a new wave of systems that implement a dataframe API but allow for performance, efficiency, and distributed/parallel extensions to systems such as R and pandas. However, unlike relational databases and NoSQL systems with a variety of benchmarking, testing, and workload generation suites, there is an acute lack of similar tools for dataframe-based systems. This paper presents fuzzydata, a first step in providing an extensible workflow generation system that targets dataframe-based APIs. We present an abstract data processing workflow model, random table and workflow generators, and three clients implemented using our model. Using fuzzydata, we can encode a real-world workflow or randomly generate workflows using various parameters. These workflows can be scaled and replayed on multiple systems to provide stress testing, performance evaluation, and a breakdown of performance bottlenecks present on popular dataframe systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "39751409",
+                    "name": "M. S. Rehman"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                }
+            ]
+        }
+    ]
+}

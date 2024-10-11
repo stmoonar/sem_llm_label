@@ -1,0 +1,300 @@
+{
+    "authorId": "143719920",
+    "papers": [
+        {
+            "paperId": "2e76f9e4ae025c93ca9c5439d2d15960f0c97fb0",
+            "title": "DDS2M: Self-Supervised Denoising Diffusion Spatio-Spectral Model for Hyperspectral Image Restoration",
+            "abstract": "Diffusion models have recently received a surge of interest due to their impressive performance for image restoration, especially in terms of noise robustness. However, existing diffusion-based methods are trained on a large amount of training data and perform very well in-distribution, but can be quite susceptible to distribution shift. This is especially inappropriate for data-starved hyperspectral image (HSI) restoration. To tackle this problem, this work puts forth a self-supervised diffusion model for HSI restoration, namely Denoising Diffusion Spatio-Spectral Model (DDS2M), which works by inferring the parameters of the proposed Variational Spatio-Spectral Module (VS2M) during the reverse diffusion process, solely using the degraded HSI without any extra training data. In VS2M, a variational inference-based loss function is customized to enable the untrained spatial and spectral networks to learn the posterior distribution, which serves as the transitions of the sampling chain to help reverse the diffusion process. Benefiting from its self-supervised nature and the diffusion process, DDS2M enjoys stronger generalization ability to various HSIs compared to existing diffusion-based methods and superior robustness to noise compared to existing HSI restoration methods. Extensive experiments on HSI denoising, noisy HSI completion and super-resolution on a variety of HSIs demonstrate DDS2M\u2019s superiority over the existing task-specific state-of-the-arts. Code is available at: https://github.com/miaoyuchun/DDS2M.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2053093202",
+                    "name": "Yuchun Miao"
+                },
+                {
+                    "authorId": "2107901992",
+                    "name": "Lefei Zhang"
+                },
+                {
+                    "authorId": "1720539",
+                    "name": "L. Zhang"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "6ddd21dd06d618666738b7252e8fd8c9b8989719",
+            "title": "HKNAS: Classification of Hyperspectral Imagery Based on Hyper Kernel Neural Architecture Search",
+            "abstract": "Recent neural architecture search (NAS)-based approaches have made great progress in the hyperspectral image (HSI) classification tasks. However, the architectures are usually optimized independently of the network weights, increasing searching time, and restricting model performances. To tackle these issues, in this article, different from previous methods that extra define structural parameters, we propose to directly generate structural parameters by utilizing the specifically designed hyper kernels, ingeniously converting the original complex dual optimization problem into easily implemented one-tier optimizations, and greatly shrinking searching costs. Then, we develop a hierarchical multimodule search space whose candidate operations only contain convolutions, and these operations can be integrated into unified kernels. Using the above searching strategy and searching space, we obtain three kinds of networks to separately conduct pixel-level or image-level classifications with 1-D or 3-D convolutions. In addition, by combining the proposed hyper kernel searching scheme with the 3-D convolution decomposition mechanism, we obtain diverse architectures to simulate 3-D convolutions, greatly improving network flexibilities. A series of quantitative and qualitative experiments on six public datasets demonstrate that the proposed methods achieve state-of-the-art results compared with other advanced NAS-based HSI classification approaches.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2119264380",
+                    "name": "Di Wang"
+                },
+                {
+                    "authorId": "145728792",
+                    "name": "Bo Du"
+                },
+                {
+                    "authorId": "1720539",
+                    "name": "L. Zhang"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "968b14dd15f2292221c55c2c8e4be10da4ca2942",
+            "title": "VTAE: Variational Transformer Autoencoder With Manifolds Learning",
+            "abstract": "Deep generative models have demonstrated successful applications in learning non-linear data distributions through a number of latent variables and these models use a non-linear function (generator) to map latent samples into the data space. On the other hand, the non-linearity of the generator implies that the latent space shows an unsatisfactory projection of the data space, which results in poor representation learning. This weak projection, however, can be addressed by a Riemannian metric, and we show that geodesics computation and accurate interpolations between data samples on the Riemannian manifold can substantially improve the performance of deep generative models. In this paper, a Variational spatial-Transformer AutoEncoder (VTAE) is proposed to minimize geodesics on a Riemannian manifold and improve representation learning. In particular, we carefully design the variational autoencoder with an encoded spatial-Transformer to explicitly expand the latent variable model to data on a Riemannian manifold, and obtain global context modelling. Moreover, to have smooth and plausible interpolations while traversing between two different objects\u2019 latent representations, we propose a geodesic interpolation network different from the existing models that use linear interpolation with inferior performance. Experiments on benchmarks show that our proposed model can improve predictive accuracy and versatility over a range of computer vision tasks, including image interpolations, and reconstructions.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "3129798",
+                    "name": "Pourya Shamsolmoali"
+                },
+                {
+                    "authorId": "2345767",
+                    "name": "Masoumeh Zareapoor"
+                },
+                {
+                    "authorId": "2146381981",
+                    "name": "Huiyu Zhou"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                },
+                {
+                    "authorId": "2158128246",
+                    "name": "Xuelong Li"
+                }
+            ]
+        },
+        {
+            "paperId": "0934c5952e9a8753b97a037b694adc2f78639c47",
+            "title": "Multibranch Adversarial Regression for Domain Adaptative Hand Pose Estimation",
+            "abstract": "Although hand pose estimation has achieved a great success in recent years, there are still challenges with RGB-based estimation tasks, the most significant of which is the absence of labeled training data. At present, the synthetic dataset has plenty of images with accurate annotation, but the difference from real-world datasets affects generalization. Therefore, a transfer learning strategy, which tries to transfer knowledge from a labeled source domain to an unlabeled target domain, is a frequent solution. Existing methods such as mean-teacher, Cyclegan, and MCD will train models with the help of some easily accessible domains such as synthetic data. However, these methods are not guaranteed to operate well in real-world settings due to the domain shift. In this paper, we design a new unsupervised domain adaptation method named Multi-branch Adversarial Regressors (MarsDA) in hand pose estimation, where it could be better for feature migration. Specifically, we first generate pseudo-labels for unlabeled target domain data. Then, the new adversarial training loss between multiple regression branches we designed for hand pose estimation is introduced to narrow the domain gap. In this way, our model can reduce the noise of pseudo labels caused by the domain gap and improve the accuracy of pseudo labels. We evaluate our method on two publicly available real-world datasets, H3D and STB. Experimental results show that our method outperforms existing methods by a large margin.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2068300673",
+                    "name": "Rui Jin"
+                },
+                {
+                    "authorId": "1519070643",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "2109660693",
+                    "name": "Jianyu Yang"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "09ad4fcb1d0d0e7e25932ec657880ee4d56152cd",
+            "title": "Neural Maximum a Posteriori Estimation on Unpaired Data for Motion Deblurring",
+            "abstract": "Real-world dynamic scene deblurring has long been a challenging task since paired blurry-sharp training data is unavailable. Conventional Maximum A Posteriori estimation and deep learning-based deblurring methods are restricted by handcrafted priors and synthetic blurry-sharp training pairs respectively, thereby failing to generalize to real dynamic blurriness. To this end, we propose a Neural Maximum A Posteriori (NeurMAP) estimation framework for training neural networks to recover blind motion information and sharp content from unpaired data. The proposed NeruMAP consists of a motion estimation network and a deblurring network which are trained jointly to model the (re)blurring process (i.e. likelihood function). Meanwhile, the motion estimation network is trained to explore the motion information in images by applying implicit dynamic motion prior, and in return enforces the deblurring network training (i.e. providing sharp image prior). The proposed NeurMAP is an orthogonal approach to existing deblurring neural networks, and is the first framework that enables training image deblurring networks on unpaired datasets. Experiments demonstrate our superiority on both quantitative metrics and visual quality over State-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108399598",
+                    "name": "Youjian Zhang"
+                },
+                {
+                    "authorId": "1409848027",
+                    "name": "Chaoyue Wang"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "3d7d18cb80cd74daca90d7487e2fbb52ddf31d0f",
+            "title": "Class-Wise Denoising for Robust Learning Under Label Noise",
+            "abstract": "Label noise is ubiquitous in many real-world scenarios which often misleads training algorithm and brings about the degraded classification performance. Therefore, many approaches have been proposed to correct the loss function given corrupted labels to combat such label noise. Among them, a trend of works achieve this goal by unbiasedly estimating the data centroid, which plays an important role in constructing an unbiased risk estimator for minimization. However, they usually handle the noisy labels in different classes all at once, so the local information inherited by each class is ignored which often leads to unsatisfactory performance. To address this defect, this paper presents a novel robust learning algorithm dubbed \u201c<bold>C</bold>lass-<bold>W</bold>ise <bold>D</bold>enoising\u201d (CWD), which tackles the noisy labels in a class-wise way to ease the entire noise correction task. Specifically, two virtual auxiliary sets are respectively constructed by presuming that the positive and negative labels in the training set are clean, so the original false-negative labels and false-positive ones are tackled separately. As a result, an improved centroid estimator can be designed which helps to yield more accurate risk estimator. Theoretically, we prove that: 1) the variance in centroid estimation can often be reduced by our CWD when compared with existing methods with unbiased centroid estimator; and 2) the performance of CWD trained on the noisy set will converge to that of the optimal classifier trained on the clean set with a convergence rate <inline-formula><tex-math notation=\"LaTeX\">$\\mathcal {O}(\\frac{1}{\\sqrt{n}})$</tex-math><alternatives><mml:math><mml:mrow><mml:mi mathvariant=\"script\">O</mml:mi><mml:mo>(</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:msqrt><mml:mi>n</mml:mi></mml:msqrt></mml:mfrac><mml:mo>)</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"gong-ieq1-3178690.gif\"/></alternatives></inline-formula> where <inline-formula><tex-math notation=\"LaTeX\">$n$</tex-math><alternatives><mml:math><mml:mi>n</mml:mi></mml:math><inline-graphic xlink:href=\"gong-ieq2-3178690.gif\"/></alternatives></inline-formula> is the number of the training examples. These sound theoretical properties critically enable our CWD to produce the improved classification performance under label noise, which is also demonstrated by the comparisons with ten representative state-of-the-art methods on a variety of benchmark datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "1443742776",
+                    "name": "Chen Gong"
+                },
+                {
+                    "authorId": "2150614344",
+                    "name": "Yongliang Ding"
+                },
+                {
+                    "authorId": "2087238859",
+                    "name": "Bo Han"
+                },
+                {
+                    "authorId": "47537639",
+                    "name": "Gang Niu"
+                },
+                {
+                    "authorId": "2146237708",
+                    "name": "Jian Yang"
+                },
+                {
+                    "authorId": "2167097200",
+                    "name": "Jane You"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                },
+                {
+                    "authorId": "67154907",
+                    "name": "Masashi Sugiyama"
+                }
+            ]
+        },
+        {
+            "paperId": "409950ed56675b8a7032b1c0b02d728c0de3d631",
+            "title": "Object-Agnostic Transformers for Video Referring Segmentation",
+            "abstract": "Video referring segmentation focuses on segmenting out the object in a video based on the corresponding textual description. Previous works have primarily tackled this task by devising two crucial parts, an intra-modal module for context modeling and an inter-modal module for heterogeneous alignment. However, there are two essential drawbacks of this approach: (1) it lacks joint learning of context modeling and heterogeneous alignment, leading to insufficient interactions among input elements; (2) both modules require task-specific expert knowledge to design, which severely limits the flexibility and generality of prior methods. To address these problems, we here propose a novel Object-Agnostic Transformer-based Network, called OATNet, that simultaneously conducts intra-modal and inter-modal learning for video referring segmentation, without the aid of object detection or category-specific pixel labeling. More specifically, we first directly feed the sequence of textual tokens and visual tokens (pixels rather than detected object bounding boxes) into a multi-modal encoder, where context and alignment are simultaneously and effectively explored. We then design a novel cascade segmentation network to decouple our task into coarse-grained segmentation and fine-grained refinement. Moreover, considering the difficulty of samples, a more balanced metric is provided to better diagnose the performance of the proposed method. Extensive experiments on two popular datasets, A2D Sentences and J-HMDB Sentences, demonstrate that our proposed approach noticeably outperforms state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143731154",
+                    "name": "Xu Yang"
+                },
+                {
+                    "authorId": "48016309",
+                    "name": "H. Wang"
+                },
+                {
+                    "authorId": "2054592983",
+                    "name": "De Xie"
+                },
+                {
+                    "authorId": "2084583049",
+                    "name": "Cheng Deng"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "448858586a20b503b5e8395f6cf00705b412e7ce",
+            "title": "Collaborative Pushing and Grasping of Tightly Stacked Objects via Deep Reinforcement Learning",
+            "abstract": "Directly grasping the tightly stacked objects may cause collisions and result in failures, degenerating the functionality of robotic arms. Inspired by the observation that first pushing objects to a state of mutual separation and then grasping them individually can effectively increase the success rate, we devise a novel deep Q-learning framework to achieve collaborative pushing and grasping. Specifically, an efficient non-maximum suppression policy (policyNMS) is proposed to dynamically evaluate pushing and grasping actions by enforcing a suppression constraint on unreasonable actions. Moreover, a novel data-driven pushing reward network called PR-Net is designed to effectively assess the degree of separation or aggregation between objects. To benchmark the proposed method, we establish a dataset containing common household items dataset (CHID) in both simulation and real scenarios. Although trained using simulation data only, experiment results validate that our method generalizes well to real scenarios and achieves a 97% grasp success rate at a fast speed for object separation in the real-world environment.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51285938",
+                    "name": "Yuxiang Yang"
+                },
+                {
+                    "authorId": "2121668007",
+                    "name": "Zhihao Ni"
+                },
+                {
+                    "authorId": "144455139",
+                    "name": "Mingyu Gao"
+                },
+                {
+                    "authorId": "1519066969",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "4b3f889350db0f88c1901f18be342d4b0067d834",
+            "title": "Towards Scale Consistent Monocular Visual Odometry by Learning from the Virtual World",
+            "abstract": "Monocular visual odometry (VO) has attracted extensive research attention by providing real-time vehicle motion from cost-effective camera images. However, state-of-the-art optimization-based monocular VO methods suffer from the scale inconsistency problem for long-term predictions. Deep learning has recently been introduced to address this issue by leveraging stereo sequences or ground-truth motions in the training dataset. However, it comes at an additional cost for data collection, and such training data may not be available in all datasets. In this work, we propose VRVO, a novel framework for retrieving the absolute scale from virtual data that can be easily obtained from modern simulation environments, whereas in the real domain no stereo or ground-truth data are required in either the training or inference phases. Specifically, we first train a scale-aware disparity network using both monocular real images and stereo virtual data. The virtual-to-real domain gap is bridged by using an adversarial training strategy to map images from both domains into a shared feature space. The resulting scale-consistent disparities are then integrated with a direct VO system by constructing a virtual stereo objective that ensures the scale consistency over long trajectories. Additionally, to address the suboptimality issue caused by the separate optimization backend and the learning process, we further propose a mutual reinforcement pipeline that allows bidirectional information flow between learning and optimization, which boosts the robustness and accuracy of each other. We demonstrate the effectiveness of our framework on the KITTI and vKITTI2 datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2142418483",
+                    "name": "Sen Zhang"
+                },
+                {
+                    "authorId": "1519070643",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "54ad69e66c9b2621fbac9229cf754d57efeb078f",
+            "title": "Fashionformer: A simple, Effective and Unified Baseline for Human Fashion Segmentation and Recognition",
+            "abstract": "Human fashion understanding is one crucial computer vision task since it has comprehensive information for real-world applications. This focus on joint human fashion segmentation and attribute recognition. Contrary to the previous works that separately model each task as a multi-head prediction problem, our insight is to bridge these two tasks with one unified model via vision transformer modeling to benefit each task. In particular, we introduce the object query for segmentation and the attribute query for attribute prediction. Both queries and their corresponding features can be linked via mask prediction. Then we adopt a two-stream query learning framework to learn the decoupled query representations.We design a novel Multi-Layer Rendering module for attribute stream to explore more fine-grained features. The decoder design shares the same spirit as DETR. Thus we name the proposed method \\textit{Fahsionformer}. Extensive experiments on three human fashion datasets illustrate the effectiveness of our approach. In particular, our method with the same backbone achieve \\textbf{relative 10\\% improvements} than previous works in case of \\textit{a joint metric (AP$^{\\text{mask}}_{\\text{IoU+F}_1}$) for both segmentation and attribute recognition}. To the best of our knowledge, we are the first unified end-to-end vision transformer framework for human fashion analysis. We hope this simple yet effective method can serve as a new flexible baseline for fashion analysis. Code is available at https://github.com/xushilin1/FashionFormer.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2162061678",
+                    "name": "Shilin Xu"
+                },
+                {
+                    "authorId": "92385001",
+                    "name": "Xiangtai Li"
+                },
+                {
+                    "authorId": "2115722333",
+                    "name": "Jingbo Wang"
+                },
+                {
+                    "authorId": "48502143",
+                    "name": "Guangliang Cheng"
+                },
+                {
+                    "authorId": "8230405",
+                    "name": "Yunhai Tong"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        }
+    ]
+}

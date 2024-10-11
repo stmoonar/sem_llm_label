@@ -1,0 +1,483 @@
+{
+    "authorId": "1404000098",
+    "papers": [
+        {
+            "paperId": "646ec133173ac3aa1a602935d2ea7eb2ec87f19d",
+            "title": "The role of noise in denoising models for anomaly detection in medical images",
+            "abstract": "Pathological brain lesions exhibit diverse appearance in brain images, in terms of intensity, texture, shape, size, and location. Comprehensive sets of data and annotations are difficult to acquire. Therefore, unsupervised anomaly detection approaches have been proposed using only normal data for training, with the aim of detecting outlier anomalous voxels at test time. Denoising methods, for instance classical denoising autoencoders (DAEs) and more recently emerging diffusion models, are a promising approach, however naive application of pixelwise noise leads to poor anomaly detection performance. We show that optimization of the spatial resolution and magnitude of the noise improves the performance of different model training regimes, with similar noise parameter adjustments giving good performance for both DAEs and diffusion models. Visual inspection of the reconstructions suggests that the training noise influences the trade-off between the extent of the detail that is reconstructed and the extent of erasure of anomalies, both of which contribute to better anomaly detection performance. We validate our findings on two real-world datasets (tumor detection in brain MRI and hemorrhage/ischemia/tumor detection in brain CT), showing good detection on diverse anomaly appearances. Overall, we find that a DAE trained with coarse noise is a fast and simple method that gives state-of-the-art accuracy. Diffusion models applied to anomaly detection are as yet in their infancy and provide a promising avenue for further research. Code for our DAE model and coarse noise is provided at: https://github.com/AntanasKascenas/DenoisingAE.",
+            "fieldsOfStudy": [
+                "Engineering",
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "41158824",
+                    "name": "Antanas Kascenas"
+                },
+                {
+                    "authorId": "2130572313",
+                    "name": "Pedro Sanchez"
+                },
+                {
+                    "authorId": "3491595",
+                    "name": "Patrick Schrempf"
+                },
+                {
+                    "authorId": "2144447379",
+                    "name": "C. Wang"
+                },
+                {
+                    "authorId": "2101278402",
+                    "name": "William Clackett"
+                },
+                {
+                    "authorId": "5989745",
+                    "name": "Shadia S. Mikhael"
+                },
+                {
+                    "authorId": "1620472230",
+                    "name": "J. Voisey"
+                },
+                {
+                    "authorId": "2510063",
+                    "name": "K. Goatman"
+                },
+                {
+                    "authorId": "2117586555",
+                    "name": "Alexander Weir"
+                },
+                {
+                    "authorId": "3251678",
+                    "name": "N. Pugeault"
+                },
+                {
+                    "authorId": "1919157",
+                    "name": "S. Tsaftaris"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                }
+            ]
+        },
+        {
+            "paperId": "77226b24fc0f02cde54a610e969016a35aef464e",
+            "title": "Compositionally Equivariant Representation Learning",
+            "abstract": "Deep learning models often need sufficient supervision (i.e., labelled data) in order to be trained effectively. By contrast, humans can swiftly learn to identify important anatomy in medical images like MRI and CT scans, with minimal guidance. This recognition capability easily generalises to new images from different medical facilities and to new tasks in different settings. This rapid and generalisable learning ability is largely due to the compositional structure of image patterns in the human brain, which are not well represented in current medical models. In this paper, we study the utilisation of compositionality in learning more interpretable and generalisable representations for medical image segmentation. Overall, we propose that the underlying generative factors that are used to generate the medical images satisfy compositional equivariance property, where each factor is compositional (e.g., corresponds to human anatomy) and also equivariant to the task. Hence, a good representation that approximates well the ground truth factor has to be compositionally equivariant. By modelling the compositional representations with learnable von-Mises-Fisher (vMF) kernels, we explore how different design and learning biases can be used to enforce the representations to be more compositionally equivariant under un-, weakly-, and semi-supervised settings. Extensive results show that our methods achieve the best performance over several strong baselines on the task of semi-supervised domain-generalised medical image segmentation. Code will be made publicly available upon acceptance at https://github.com/vios-s.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "145692128",
+                    "name": "Xiao Liu"
+                },
+                {
+                    "authorId": "2130572313",
+                    "name": "Pedro Sanchez"
+                },
+                {
+                    "authorId": "3418004",
+                    "name": "Spyridon Thermos"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                },
+                {
+                    "authorId": "1919157",
+                    "name": "S. Tsaftaris"
+                }
+            ]
+        },
+        {
+            "paperId": "a13d7bf7f3192cc38ff497b8c6589fe305ad81e5",
+            "title": "Finding-Aware Anatomical Tokens for Chest X-Ray Automated Reporting",
+            "abstract": "The task of radiology reporting comprises describing and interpreting the medical findings in radiographic images, including description of their location and appearance. Automated approaches to radiology reporting require the image to be encoded into a suitable token representation for input to the language model. Previous methods commonly use convolutional neural networks to encode an image into a series of image-level feature map representations. However, the generated reports often exhibit realistic style but imperfect accuracy. Inspired by recent works for image captioning in the general domain in which each visual token corresponds to an object detected in an image, we investigate whether using local tokens corresponding to anatomical structures can improve the quality of the generated reports. We introduce a novel adaptation of Faster R-CNN in which finding detection is performed for the candidate bounding boxes extracted during anatomical structure localisation. We use the resulting bounding box feature representations as our set of finding-aware anatomical tokens. This encourages the extracted anatomical tokens to be informative about the findings they contain (required for the final task of radiology reporting). Evaluating on the MIMIC-CXR dataset of chest X-Ray images, we show that task-aware anatomical tokens give state-of-the-art performance when integrated into an automated reporting pipeline, yielding generated reports with improved clinical accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "88768911",
+                    "name": "F. Serra"
+                },
+                {
+                    "authorId": "50097023",
+                    "name": "Chaoyang Wang"
+                },
+                {
+                    "authorId": "2775904",
+                    "name": "F. Deligianni"
+                },
+                {
+                    "authorId": "49694325",
+                    "name": "Jeffrey Stephen Dalton"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                }
+            ]
+        },
+        {
+            "paperId": "ace34d08c8600ddd364d09347295f4529d662a30",
+            "title": "Acute stroke CDS: automatic retrieval of thrombolysis contraindications from unstructured clinical letters",
+            "abstract": "Introduction Thrombolysis treatment for acute ischaemic stroke can lead to better outcomes if administered early enough. However, contraindications exist which put the patient at greater risk of a bleed (e.g. recent major surgery, anticoagulant medication). Therefore, clinicians must check a patient's past medical history before proceeding with treatment. In this work we present a machine learning approach for accurate automatic detection of this information in unstructured text documents such as discharge letters or referral letters, to support the clinician in making a decision about whether to administer thrombolysis. Methods We consulted local and national guidelines for thrombolysis eligibility, identifying 86 entities which are relevant to the thrombolysis decision. A total of 8,067 documents from 2,912 patients were manually annotated with these entities by medical students and clinicians. Using this data, we trained and validated several transformer-based named entity recognition (NER) models, focusing on transformer models which have been pre-trained on a biomedical corpus as these have shown most promise in the biomedical NER literature. Results Our best model was a PubMedBERT-based approach, which obtained a lenient micro/macro F1 score of 0.829/0.723. Ensembling 5 variants of this model gave a significant boost to precision, obtaining micro/macro F1 of 0.846/0.734 which approaches the human annotator performance of 0.847/0.839. We further propose numeric definitions for the concepts of name regularity (similarity of all spans which refer to an entity) and context regularity (similarity of all context surrounding mentions of an entity), using these to analyse the types of errors made by the system and finding that the name regularity of an entity is a stronger predictor of model performance than raw training set frequency. Discussion Overall, this work shows the potential of machine learning to provide clinical decision support (CDS) for the time-critical decision of thrombolysis administration in ischaemic stroke by quickly surfacing relevant information, leading to prompt treatment and hence to better patient outcomes.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2249046931",
+                    "name": "Murray Cutforth"
+                },
+                {
+                    "authorId": "2065273581",
+                    "name": "Hannah Watson"
+                },
+                {
+                    "authorId": "2107518532",
+                    "name": "C. Brown"
+                },
+                {
+                    "authorId": "2135755792",
+                    "name": "Chaoyang Wang"
+                },
+                {
+                    "authorId": "2053218033",
+                    "name": "Stuart Thomson"
+                },
+                {
+                    "authorId": "2068820424",
+                    "name": "D. Fell"
+                },
+                {
+                    "authorId": "18082980",
+                    "name": "Vismantas Dilys"
+                },
+                {
+                    "authorId": "103101855",
+                    "name": "Morag Scrimgeour"
+                },
+                {
+                    "authorId": "3491595",
+                    "name": "Patrick Schrempf"
+                },
+                {
+                    "authorId": "114307494",
+                    "name": "James Lesh"
+                },
+                {
+                    "authorId": "145173311",
+                    "name": "K. Muir"
+                },
+                {
+                    "authorId": "2117586555",
+                    "name": "Alexander Weir"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                }
+            ]
+        },
+        {
+            "paperId": "0308c284376e216191d41d52f345102c9ae89f08",
+            "title": "CMRE-UoG team at ImageCLEFmedical Caption 2022: Concept Detection and Image Captioning",
+            "abstract": "This work presents the proposed solutions of our team for the ImageCLEFmedical Caption 2022 task [1]. This task is structured as two subtasks: (1) Concept Detection subtask \u2013 which consists of detecting Concept Unique Identifiers (CUIs) from the Unified Medical Language System (UMLS) [2] attributed to each image; and (2) the Caption Prediction subtask \u2013 which involves generating an accurate description of the content of the image, based on the concepts detected in the first subtask. For both subtasks, the dataset corresponds to a subset of the Radiology Objects in the COntext (ROCO) dataset [3]. In the Concept Detection subtask, we experiment with two different strategies: a) supervised learning \u2013 we train a Convolutional Neural Network (CNN) [4, 5] to classify the full set of CUIs; b) image retrieval \u2013 we retrieve the top \ud835\udc3e most \u201csimilar\u201d images from the training set based on the cosine similarity score between the image representations (extracted from the last average pooling layer), and combine the associated CUIs using a soft majority voting approach, similar to the ImageCLEFmed Caption 2021 winning approach [6]. Our best submission consists of the second image retrieval approach, for which we used an ensemble of five different CNNs. This approach ranked 2nd with an F1 score equal to 0.451, with a margin of approximately 5 \u00d7 10 \u2212 4 from the 1st position. In the Caption Prediction subtask, we adopt an image encoder-decoder Transformer model [7], which takes as input the image representation \u2013 generated using a CNN image encoder \u2013 and generates a text caption describing the image. Furthermore, we considered a multimodal encoder-decoder Trans-former model, which differs from the previous by taking as an additional input the CUIs extracted from the previous subtask alongside an image representation. Our multimodal approach ranked 6th, with a BLEU score [8] of 0.291, and ranked 1st place in terms of ROUGE [9] (the secondary metric for this subtask), with a score of 0.201.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "88768911",
+                    "name": "F. Serra"
+                },
+                {
+                    "authorId": "2775904",
+                    "name": "F. Deligianni"
+                },
+                {
+                    "authorId": "145269114",
+                    "name": "Jeffrey Dalton"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                }
+            ]
+        },
+        {
+            "paperId": "1ffd02a5ef1ecd0321df2c3265234eee8bc3d151",
+            "title": "Diffusion Models for Causal Discovery via Topological Ordering",
+            "abstract": "Discovering causal relations from observational data becomes possible with additional assumptions such as considering the functional relations to be constrained as nonlinear with additive noise (ANM). Even with strong assumptions, causal discovery involves an expensive search problem over the space of directed acyclic graphs (DAGs). \\emph{Topological ordering} approaches reduce the optimisation space of causal discovery by searching over a permutation rather than graph space. For ANMs, the \\emph{Hessian} of the data log-likelihood can be used for finding leaf nodes in a causal graph, allowing its topological ordering. However, existing computational methods for obtaining the Hessian still do not scale as the number of variables and the number of samples increase. Therefore, inspired by recent innovations in diffusion probabilistic models (DPMs), we propose \\emph{DiffAN}\\footnote{Implementation is available at \\url{https://github.com/vios-s/DiffAN} .}, a topological ordering algorithm that leverages DPMs for learning a Hessian function. We introduce theory for updating the learned Hessian without re-training the neural network, and we show that computing with a subset of samples gives an accurate approximation of the ordering, which allows scaling to datasets with more samples and variables. We show empirically that our method scales exceptionally well to datasets with up to $500$ nodes and up to $10^5$ samples while still performing on par over small datasets with state-of-the-art causal discovery methods. Implementation is available at https://github.com/vios-s/DiffAN .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130572313",
+                    "name": "Pedro Sanchez"
+                },
+                {
+                    "authorId": "145692128",
+                    "name": "Xiao Liu"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                },
+                {
+                    "authorId": "1919157",
+                    "name": "S. Tsaftaris"
+                }
+            ]
+        },
+        {
+            "paperId": "2926c879967beb108dfdee854a91b811d0f96950",
+            "title": "Causal machine learning for healthcare and precision medicine",
+            "abstract": "Causal machine learning (CML) has experienced increasing popularity in healthcare. Beyond the inherent capabilities of adding domain knowledge into learning systems, CML provides a complete toolset for investigating how a system would react to an intervention (e.g. outcome given a treatment). Quantifying effects of interventions allows actionable decisions to be made while maintaining robustness in the presence of confounders. Here, we explore how causal inference can be incorporated into different aspects of clinical decision support systems by using recent advances in machine learning. Throughout this paper, we use Alzheimer\u2019s disease to create examples for illustrating how CML can be advantageous in clinical scenarios. Furthermore, we discuss important challenges present in healthcare applications such as processing high-dimensional and unstructured data, generalization to out-of-distribution samples and temporal relationships, that despite the great effort from the research community remain to be solved. Finally, we review lines of research within causal representation learning, causal discovery and causal reasoning which offer the potential towards addressing the aforementioned challenges.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130572313",
+                    "name": "Pedro Sanchez"
+                },
+                {
+                    "authorId": "1620472230",
+                    "name": "J. Voisey"
+                },
+                {
+                    "authorId": "2143749716",
+                    "name": "Tian Xia"
+                },
+                {
+                    "authorId": "2065273581",
+                    "name": "Hannah Watson"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                },
+                {
+                    "authorId": "1919157",
+                    "name": "S. Tsaftaris"
+                }
+            ]
+        },
+        {
+            "paperId": "2e3f983c6c679816724d3dd95beff8d592767e62",
+            "title": "Anomaly Detection via Context and Local Feature Matching",
+            "abstract": "Unsupervised anomaly detection in medical imaging is an exciting prospect due to the option of training only on healthy data, without the need for expensive segmentation annotations of many possible variations of outliers. Most current methods rely on image reconstruction error to produce anomaly scores, which favors detection of intensity outliers. We instead propose a discriminative method based on a deep learning self-supervised pixel-level classification task. We model context and local image feature information separately and set up a pixel-level classification task to discriminate between positive (matching) and negative (mismatching) context and local feature pairs. Negative matches are created using data transformations and context/local shuffling. At test-time, the model then perceives local regions containing anomalies to be negative matches. We evaluate our method on a surrogate task of tumor segmentation in brain MRI data and show significant performance improvements over baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "41158824",
+                    "name": "Antanas Kascenas"
+                },
+                {
+                    "authorId": "2163629018",
+                    "name": "Rory Young"
+                },
+                {
+                    "authorId": "11002730",
+                    "name": "B. S. Jensen"
+                },
+                {
+                    "authorId": "3251678",
+                    "name": "N. Pugeault"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                }
+            ]
+        },
+        {
+            "paperId": "63ff7c225079eba3838d45b11bb15a58037f1415",
+            "title": "MOOD 2020: A Public Benchmark for Out-of-Distribution Detection and Localization on Medical Images",
+            "abstract": "Detecting Out-of-Distribution (OoD) data is one of the greatest challenges in safe and robust deployment of machine learning algorithms in medicine. When the algorithms encounter cases that deviate from the distribution of the training data, they often produce incorrect and over-confident predictions. OoD detection algorithms aim to catch erroneous predictions in advance by analysing the data distribution and detecting potential instances of failure. Moreover, flagging OoD cases may support human readers in identifying incidental findings. Due to the increased interest in OoD algorithms, benchmarks for different domains have recently been established. In the medical imaging domain, for which reliable predictions are often essential, an open benchmark has been missing. We introduce the Medical-Out-Of-Distribution-Analysis-Challenge (MOOD) as an open, fair, and unbiased benchmark for OoD methods in the medical imaging domain. The analysis of the submitted algorithms shows that performance has a strong positive correlation with the perceived difficulty, and that all algorithms show a high variance for different anomalies, making it yet hard to recommend them for clinical practice. We also see a strong correlation between challenge ranking and performance on a simple toy test set, indicating that this might be a valuable addition as a proxy dataset during anomaly detection algorithm development.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7139645",
+                    "name": "David Zimmerer"
+                },
+                {
+                    "authorId": "93088018",
+                    "name": "Peter M. Full"
+                },
+                {
+                    "authorId": "7886986",
+                    "name": "Fabian Isensee"
+                },
+                {
+                    "authorId": "1661131601",
+                    "name": "Paul F. Jager"
+                },
+                {
+                    "authorId": "144784171",
+                    "name": "T. Adler"
+                },
+                {
+                    "authorId": "152800798",
+                    "name": "Jens Petersen"
+                },
+                {
+                    "authorId": "1923275244",
+                    "name": "Gregor Koehler"
+                },
+                {
+                    "authorId": "118012992",
+                    "name": "T. Ross"
+                },
+                {
+                    "authorId": "47131776",
+                    "name": "Annika Reinke"
+                },
+                {
+                    "authorId": "41158824",
+                    "name": "Antanas Kascenas"
+                },
+                {
+                    "authorId": "11002730",
+                    "name": "B. S. Jensen"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                },
+                {
+                    "authorId": "144748334",
+                    "name": "Jeremy Tan"
+                },
+                {
+                    "authorId": "9543707",
+                    "name": "Benjamin Hou"
+                },
+                {
+                    "authorId": "40703414",
+                    "name": "James Batten"
+                },
+                {
+                    "authorId": "152128293",
+                    "name": "Huaqi Qiu"
+                },
+                {
+                    "authorId": "2015193",
+                    "name": "Bernhard Kainz"
+                },
+                {
+                    "authorId": "2125336203",
+                    "name": "Nina Shvetsova"
+                },
+                {
+                    "authorId": "1491640350",
+                    "name": "Irina Fedulova"
+                },
+                {
+                    "authorId": "9454279",
+                    "name": "D. Dylov"
+                },
+                {
+                    "authorId": "2163530506",
+                    "name": "Baolun Yu"
+                },
+                {
+                    "authorId": "23151356",
+                    "name": "Jianyang Zhai"
+                },
+                {
+                    "authorId": "123925173",
+                    "name": "Jingtao Hu"
+                },
+                {
+                    "authorId": "2122911826",
+                    "name": "Runxuan Si"
+                },
+                {
+                    "authorId": "2516087",
+                    "name": "Sihang Zhou"
+                },
+                {
+                    "authorId": "1421268306",
+                    "name": "Siqi Wang"
+                },
+                {
+                    "authorId": "2144455690",
+                    "name": "Xinyang Li"
+                },
+                {
+                    "authorId": "2163539343",
+                    "name": "Xuerun Chen"
+                },
+                {
+                    "authorId": "2163745699",
+                    "name": "Yang Zhao"
+                },
+                {
+                    "authorId": "2037388029",
+                    "name": "Sergio Naval Marimont"
+                },
+                {
+                    "authorId": "32389902",
+                    "name": "G. Tarroni"
+                },
+                {
+                    "authorId": "5479644",
+                    "name": "Victor Saase"
+                },
+                {
+                    "authorId": "1397958668",
+                    "name": "L. Maier-Hein"
+                },
+                {
+                    "authorId": "2139962185",
+                    "name": "K. Maier-Hein"
+                }
+            ]
+        },
+        {
+            "paperId": "73c8455d790f168b4ac51e6ac74ffc276cec5561",
+            "title": "vMFNet: Compositionality Meets Domain-generalised Segmentation",
+            "abstract": "Training medical image segmentation models usually requires a large amount of labeled data. By contrast, humans can quickly learn to accurately recognise anatomy of interest from medical (e.g. MRI and CT) images with some limited guidance. Such recognition ability can easily generalise to new images from different clinical centres. This rapid and generalisable learning ability is mostly due to the compositional structure of image patterns in the human brain, which is less incorporated in medical image segmentation. In this paper, we model the compositional components (i.e. patterns) of human anatomy as learnable von-Mises-Fisher (vMF) kernels, which are robust to images collected from different domains (e.g. clinical centres). The image features can be decomposed to (or composed by) the components with the composing operations, i.e. the vMF likelihoods. The vMF likelihoods tell how likely each anatomical part is at each position of the image. Hence, the segmentation mask can be predicted based on the vMF likelihoods. Moreover, with a reconstruction module, unlabeled data can also be used to learn the vMF kernels and likelihoods by recombining them to reconstruct the input image. Extensive experiments show that the proposed vMFNet achieves improved generalisation performance on two benchmarks, especially when annotations are limited. Code is publicly available at: https://github.com/vios-s/vMFNet.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145692128",
+                    "name": "Xiao Liu"
+                },
+                {
+                    "authorId": "3418004",
+                    "name": "Spyridon Thermos"
+                },
+                {
+                    "authorId": "2130572313",
+                    "name": "Pedro Sanchez"
+                },
+                {
+                    "authorId": "1404000098",
+                    "name": "Alison Q. O'Neil"
+                },
+                {
+                    "authorId": "1919157",
+                    "name": "S. Tsaftaris"
+                }
+            ]
+        }
+    ]
+}

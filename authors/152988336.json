@@ -1,0 +1,366 @@
+{
+    "authorId": "152988336",
+    "papers": [
+        {
+            "paperId": "3dd86949c4028ac5d29428acd9e9439e7fc29fa0",
+            "title": "PAP-REC: Personalized Automatic Prompt for Recommendation Language Model",
+            "abstract": "Recently emerged prompt-based Recommendation Language Models (RLM) can solve multiple recommendation tasks uniformly. The RLMs make full use of the inherited knowledge learned from the abundant pre-training data to solve the downstream recommendation tasks by prompts, without introducing additional parameters or network training. However, handcrafted prompts require significant expertise and human effort since slightly rewriting prompts may cause massive performance changes. In this paper, we propose PAP-REC, a framework to generate the Personalized Automatic Prompt for RECommendation language models to mitigate the inefficiency and ineffectiveness problems derived from manually designed prompts. Specifically, personalized automatic prompts allow different users to have different prompt tokens for the same task, automatically generated using a gradient-based method. One challenge for personalized automatic prompt generation for recommendation language models is the extremely large search space, leading to a long convergence time. To effectively and efficiently address the problem, we develop surrogate metrics and leverage an alternative updating schedule for prompting recommendation language models. Experimental results show that our PAP-REC framework manages to generate personalized prompts, and the automatically generated prompts outperform manually constructed prompts and also outperform various baseline recommendation models. The source code of the work is available at https://github.com/rutgerswiselab/PAP-REC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109968285",
+                    "name": "Zelong Li"
+                },
+                {
+                    "authorId": "2111810606",
+                    "name": "Jianchao Ji"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "2007245028",
+                    "name": "Wenyue Hua"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "bb16e1cc304fdbf2e5a7e034cb0235fa1aa37a76",
+            "title": "IDGenRec: LLM-RecSys Alignment with Textual ID Learning",
+            "abstract": "Generative recommendation based on Large Language Models (LLMs) have transformed the traditional ranking-based recommendation style into a text-to-text generation paradigm. However, in contrast to standard NLP tasks that inherently operate on human vocabulary, current research in generative recommendations struggles to effectively encode recommendation items within the text-to-text framework using concise yet meaningful ID representations. To better align LLMs with recommendation needs, we propose IDGen, representing each item as a unique, concise, semantically rich, platform-agnostic textual ID using human language tokens. This is achieved by training a textual ID generator alongside the LLM-based recommender, enabling seamless integration of personalized recommendations into natural language generation. Notably, as user history is expressed in natural language and decoupled from the original dataset, our approach suggests the potential for a foundational generative recommendation model. Experiments show that our framework consistently surpasses existing models in sequential recommendation under standard experimental setting. Then, we explore the possibility of training a foundation recommendation model with the proposed method on data collected from 19 different datasets and tested its recommendation performance on 6 unseen datasets across different platforms under a completely zero-shot setting. The results show that the zero-shot performance of the pre-trained foundation model is comparable to or even better than some traditional recommendation models based on supervised training, showing the potential of the IDGen paradigm serving as the foundation model for generative recommendation. Code and data are open-sourced at https://github.com/agiresearch/IDGenRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110449137",
+                    "name": "Juntao Tan"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2007245028",
+                    "name": "Wenyue Hua"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "2109968285",
+                    "name": "Zelong Li"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "f89e85059a55b647c93822aefa7e985376e0ef20",
+            "title": "AIOS: LLM Agent Operating System",
+            "abstract": "The integration and deployment of large language model (LLM)-based intelligent agents have been fraught with challenges that compromise their efficiency and efficacy. Among these issues are sub-optimal scheduling and resource allocation of agent requests over the LLM, the difficulties in maintaining context during interactions between agent and LLM, and the complexities inherent in integrating heterogeneous agents with different capabilities and specializations. The rapid increase of agent quantity and complexity further exacerbates these issues, often leading to bottlenecks and sub-optimal utilization of resources. Inspired by these challenges, this paper presents AIOS, an LLM agent operating system, which embeds large language model into operating systems (OS) as the brain of the OS, enabling an operating system\"with soul\"-- an important step towards AGI. Specifically, AIOS is designed to optimize resource allocation, facilitate context switch across agents, enable concurrent execution of agents, provide tool service for agents, and maintain access control for agents. We present the architecture of such an operating system, outline the core challenges it aims to resolve, and provide the basic design and implementation of the AIOS. Our experiments on concurrent execution of multiple agents demonstrate the reliability and efficiency of our AIOS modules. Through this, we aim to not only improve the performance and efficiency of LLM agents but also to pioneer for better development and deployment of the AIOS ecosystem in the future. The project is open-source at https://github.com/agiresearch/AIOS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261740874",
+                    "name": "Kai Mei"
+                },
+                {
+                    "authorId": "2109968285",
+                    "name": "Zelong Li"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2124838724",
+                    "name": "Ruosong Ye"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "1c69b0adcce48eb2a99c30dcce8bf228761377d3",
+            "title": "Automated Data Denoising for Recommendation",
+            "abstract": "In real-world scenarios, most platforms collect both large-scale, naturally noisy implicit feedback and small-scale yet highly relevant explicit feedback. Due to the issue of data sparsity, implicit feedback is often the default choice for training recommender systems (RS), however, such data could be very noisy due to the randomness and diversity of user behaviors. For instance, a large portion of clicks may not reflect true user preferences and many purchases may result in negative reviews or returns. Fortunately, by utilizing the strengths of both types of feedback to compensate for the weaknesses of the other, we can mitigate the above issue at almost no cost. In this work, we propose an Automated Data Denoising framework, \\textbf{\\textit{AutoDenoise}}, for recommendation, which uses a small number of explicit data as validation set to guide the recommender training. Inspired by the generalized definition of curriculum learning (CL), AutoDenoise learns to automatically and dynamically assign the most appropriate (discrete or continuous) weights to each implicit data sample along the training process under the guidance of the validation performance. Specifically, we use a delicately designed controller network to generate the weights, combine the weights with the loss of each input data to train the recommender system, and optimize the controller with reinforcement learning to maximize the expected accuracy of the trained RS on the noise-free validation set. Thorough experiments indicate that AutoDenoise is able to boost the performance of the state-of-the-art recommendation algorithms on several public benchmark datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "145424190",
+                    "name": "M. Rahmani"
+                },
+                {
+                    "authorId": "2897833",
+                    "name": "Athirai Aravazhi Irissappane"
+                },
+                {
+                    "authorId": "2217196790",
+                    "name": "Jose Sepulveda"
+                },
+                {
+                    "authorId": "2148955491",
+                    "name": "Fei Wang"
+                },
+                {
+                    "authorId": "1697232",
+                    "name": "James Caverlee"
+                },
+                {
+                    "authorId": "1591136873",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "38179848e2d6a3ad373b1793848816111428ac36",
+            "title": "OpenAGI: When LLM Meets Domain Experts",
+            "abstract": "Human intelligence excels at combining basic skills to solve complex tasks. This capability is vital for Artificial Intelligence (AI) and should be embedded in comprehensive intelligent models, enabling them to harness expert models for complex task-solving towards Artificial General Intelligence (AGI). Large Language Models (LLMs) show promising learning and reasoning abilities, and can effectively use external models, tools or APIs to tackle complex problems. In this work, we introduce OpenAGI, an open-source AGI research platform designed for multi-step, real-world tasks. Specifically, OpenAGI uses a dual strategy, integrating standard benchmark tasks for benchmarking and evaluation, and open-ended tasks including more expandable models, tools or APIs for creative problem-solving. Tasks are presented as natural language queries to the LLM, which then selects and executes appropriate models. We also propose a Reinforcement Learning from Task Feedback (RLTF) mechanism that uses task results to improve the LLM's ability, which creates a self-improving AI feedback loop. While we acknowledge that AGI is a broad and multifaceted research challenge with no singularly defined solution path, the integration of LLMs with domain-specific expert models, inspired by mirroring the blend of general and specialized intelligence in humans, offers a promising approach towards AGI. We are open-sourcing the OpenAGI project's code, dataset, benchmarks, evaluation methods, and demo to foster community involvement in AGI advancement: https://github.com/agiresearch/OpenAGI.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "2007245028",
+                    "name": "Wenyue Hua"
+                },
+                {
+                    "authorId": "2111810606",
+                    "name": "Jianchao Ji"
+                },
+                {
+                    "authorId": "2110449137",
+                    "name": "Juntao Tan"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "3e82d12dbce6becdcae94e3ebb01dd569bdb734f",
+            "title": "Causal Inference for Recommendation: Foundations, Methods and Applications",
+            "abstract": "Recommender systems are important and powerful tools for various personalized services. Traditionally, these systems use data mining and machine learning techniques to make recommendations based on correlations found in the data. However, relying solely on correlation without considering the underlying causal mechanism may lead to various practical issues such as fairness, explainability, robustness, bias, echo chamber and controllability problems. Therefore, researchers in related area have begun incorporating causality into recommendation systems to address these issues. In this survey, we review the existing literature on causal inference in recommender systems. We discuss the fundamental concepts of both recommender systems and causal inference as well as their relationship, and review the existing work on causal methods for different problems in recommender systems. Finally, we discuss open problems and future directions in the field of causal inference for recommendations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2111810606",
+                    "name": "Jianchao Ji"
+                },
+                {
+                    "authorId": "48515097",
+                    "name": "Yunqi Li"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "2110449137",
+                    "name": "Juntao Tan"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "628219d6db682340eb40bc5122ed62dbccab3f34",
+            "title": "Counterfactual Collaborative Reasoning",
+            "abstract": "Causal reasoning and logical reasoning are two important types of reasoning abilities for human intelligence. However, their relationship has not been extensively explored under machine intelligence context. In this paper, we explore how the two reasoning abilities can be jointly modeled to enhance both accuracy and explainability of machine learning models. More specifically, by integrating two important types of reasoning ability--counterfactual reasoning and (neural) logical reasoning--we propose Counterfactual Collaborative Reasoning (CCR), which conducts counterfactual logic reasoning to improve the performance. In particular, we use recommender system as an example to show how CCR alleviate data scarcity, improve accuracy and enhance transparency. Technically, we leverage counterfactual reasoning to generate \"difficult\" counterfactual training examples for data augmentation, which--together with the original training examples--can enhance the model performance. Since the augmented data is model irrelevant, they can be used to enhance any model, enabling the wide applicability of the technique. Besides, most of the existing data augmentation methods focus on \"implicit data augmentation\" over users' implicit feedback, while our framework conducts \"explicit data augmentation\" over users explicit feedback based on counterfactual logic reasoning. Experiments on three real-world datasets show that CCR achieves better performance than non-augmented models and implicitly augmented models, and also improves model transparency by generating counterfactual explanations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111810606",
+                    "name": "Jianchao Ji"
+                },
+                {
+                    "authorId": "2109968285",
+                    "name": "Zelong Li"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2209210425",
+                    "name": "Max Xiong"
+                },
+                {
+                    "authorId": "2110449137",
+                    "name": "Juntao Tan"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "1728073",
+                    "name": "Hao Wang"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "74bb9644eb3bf4eacf43667999e6b7a2d20723c0",
+            "title": "Fairness-aware Differentially Private Collaborative Filtering",
+            "abstract": "Recently, there has been an increasing adoption of differential privacy guided algorithms for privacy-preserving machine learning tasks. However, the use of such algorithms comes with trade-offs in terms of algorithmic fairness, which has been widely acknowledged. Specifically, we have empirically observed that the classical collaborative filtering method, trained by differentially private stochastic gradient descent (DP-SGD), results in a disparate impact on user groups with respect to different user engagement levels. This, in turn, causes the original unfair model to become even more biased against inactive users. To address the above issues, we propose DP-Fair, a two-stage framework for collaborative filtering based algorithms. Specifically, it combines differential privacy mechanisms with fairness constraints to protect user privacy while ensuring fair recommendations. The experimental results, based on Amazon datasets, and user history logs collected from Etsy, one of the largest e-commerce platforms, demonstrate that our proposed method exhibits superior performance in terms of both overall accuracy and user group fairness on both shallow and deep recommendation models compared to vanilla DP-SGD.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48598603",
+                    "name": "Zhenhuan Yang"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "71797403",
+                    "name": "Congzhe Su"
+                },
+                {
+                    "authorId": "2506522",
+                    "name": "Dingxian Wang"
+                },
+                {
+                    "authorId": "47039784",
+                    "name": "Xiaoting Zhao"
+                },
+                {
+                    "authorId": "144359602",
+                    "name": "Yiming Ying"
+                }
+            ]
+        },
+        {
+            "paperId": "9ad3edeea4732cb44a26f39652a668d1a562b0cf",
+            "title": "War and Peace (WarAgent): Large Language Model-based Multi-Agent Simulation of World Wars",
+            "abstract": "Can we avoid wars at the crossroads of history? This question has been pursued by individuals, scholars, policymakers, and organizations throughout human history. In this research, we attempt to answer the question based on the recent advances of Artificial Intelligence (AI) and Large Language Models (LLMs). We propose \\textbf{WarAgent}, an LLM-powered multi-agent AI system, to simulate the participating countries, their decisions, and the consequences, in historical international conflicts, including the World War I (WWI), the World War II (WWII), and the Warring States Period (WSP) in Ancient China. By evaluating the simulation effectiveness, we examine the advancements and limitations of cutting-edge AI systems' abilities in studying complex collective human behaviors such as international conflicts under diverse settings. In these simulations, the emergent interactions among agents also offer a novel perspective for examining the triggers and conditions that lead to war. Our findings offer data-driven and AI-augmented insights that can redefine how we approach conflict resolution and peacekeeping strategies. The implications stretch beyond historical analysis, offering a blueprint for using AI to understand human history and possibly prevent future international conflicts. Code and data are available at \\url{https://github.com/agiresearch/WarAgent}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2007245028",
+                    "name": "Wenyue Hua"
+                },
+                {
+                    "authorId": "2268855367",
+                    "name": "Lizhou Fan"
+                },
+                {
+                    "authorId": "2261065167",
+                    "name": "Lingyao Li"
+                },
+                {
+                    "authorId": "2261740874",
+                    "name": "Kai Mei"
+                },
+                {
+                    "authorId": "2111810606",
+                    "name": "Jianchao Ji"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "12719373",
+                    "name": "Libby Hemphill"
+                },
+                {
+                    "authorId": "2261890014",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "cd200572cb6ef882b8dd9fcf5632f703820b5bc4",
+            "title": "User-Controllable Recommendation via Counterfactual Retrospective and Prospective Explanations",
+            "abstract": "Modern recommender systems utilize users' historical behaviors to generate personalized recommendations. However, these systems often lack user controllability, leading to diminished user satisfaction and trust in the systems. Acknowledging the recent advancements in explainable recommender systems that enhance users' understanding of recommendation mechanisms, we propose leveraging these advancements to improve user controllability. In this paper, we present a user-controllable recommender system that seamlessly integrates explainability and controllability within a unified framework. By providing both retrospective and prospective explanations through counterfactual reasoning, users can customize their control over the system by interacting with these explanations. Furthermore, we introduce and assess two attributes of controllability in recommendation systems: the complexity of controllability and the accuracy of controllability. Experimental evaluations on MovieLens and Yelp datasets substantiate the effectiveness of our proposed framework. Additionally, our experiments demonstrate that offering users control options can potentially enhance recommendation accuracy in the future. Source code and data are available at \\url{https://github.com/chrisjtan/ucr}.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110449137",
+                    "name": "Juntao Tan"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "2153095583",
+                    "name": "Yangchun Zhu"
+                },
+                {
+                    "authorId": "35846319",
+                    "name": "Yinglong Xia"
+                },
+                {
+                    "authorId": "33642939",
+                    "name": "Jiebo Luo"
+                },
+                {
+                    "authorId": "2111810606",
+                    "name": "Jianchao Ji"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ]
+        }
+    ]
+}

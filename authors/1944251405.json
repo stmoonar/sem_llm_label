@@ -1,0 +1,269 @@
+{
+    "authorId": "1944251405",
+    "papers": [
+        {
+            "paperId": "336605fc899aab6c5b375d1129bf656d246b9013",
+            "title": "GNN-RAG: Graph Neural Retrieval for Large Language Model Reasoning",
+            "abstract": "Knowledge Graphs (KGs) represent human-crafted factual knowledge in the form of triplets (head, relation, tail), which collectively form a graph. Question Answering over KGs (KGQA) is the task of answering natural questions grounding the reasoning to the information provided by the KG. Large Language Models (LLMs) are the state-of-the-art models for QA tasks due to their remarkable ability to understand natural language. On the other hand, Graph Neural Networks (GNNs) have been widely used for KGQA as they can handle the complex graph information stored in the KG. In this work, we introduce GNN-RAG, a novel method for combining language understanding abilities of LLMs with the reasoning abilities of GNNs in a retrieval-augmented generation (RAG) style. First, a GNN reasons over a dense KG subgraph to retrieve answer candidates for a given question. Second, the shortest paths in the KG that connect question entities and answer candidates are extracted to represent KG reasoning paths. The extracted paths are verbalized and given as input for LLM reasoning with RAG. In our GNN-RAG framework, the GNN acts as a dense subgraph reasoner to extract useful graph information, while the LLM leverages its natural language processing ability for ultimate KGQA. Furthermore, we develop a retrieval augmentation (RA) technique to further boost KGQA performance with GNN-RAG. Experimental results show that GNN-RAG achieves state-of-the-art performance in two widely used KGQA benchmarks (WebQSP and CWQ), outperforming or matching GPT-4 performance with a 7B tuned LLM. In addition, GNN-RAG excels on multi-hop and multi-entity questions outperforming competing approaches by 8.9--15.5% points at answer F1.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "2064547804",
+                    "name": "George Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "d094c9e8b0231aaf61c7f89caed91cb99afb7c00",
+            "title": "SemPool: Simple, robust, and interpretable KG pooling for enhancing language models",
+            "abstract": "Knowledge Graph (KG) powered question answering (QA) performs complex reasoning over language semantics as well as knowledge facts. Graph Neural Networks (GNNs) learn to aggregate information from the underlying KG, which is combined with Language Models (LMs) for effective reasoning with the given question. However, GNN-based methods for QA rely on the graph information of the candidate answer nodes, which limits their effectiveness in more challenging settings where critical answer information is not included in the KG. We propose a simple graph pooling approach that learns useful semantics of the KG that can aid the LM's reasoning and that its effectiveness is robust under graph perturbations. Our method, termed SemPool, represents KG facts with pre-trained LMs, learns to aggregate their semantic information, and fuses it at different layers of the LM. Our experimental results show that SemPool outperforms state-of-the-art GNN-based methods by 2.27% accuracy points on average when answer information is missing from the KG. In addition, SemPool offers interpretability on what type of graph information is fused at different LM layers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "2254264433",
+                    "name": "Petros Karypis"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "ecfa3f4802bf0feb6d4ecc5ff1ac19e8da784850",
+            "title": "Pack of LLMs: Model Fusion at Test-Time via Perplexity Optimization",
+            "abstract": "Fusing knowledge from multiple Large Language Models (LLMs) can combine their diverse strengths to achieve improved performance on a given task. However, current fusion approaches either rely on learning-based fusers that do not generalize to new LLMs, or do not take into account how well each LLM understands the input. In this work, we study LLM fusion at test-time, which enables leveraging knowledge from arbitrary user-specified LLMs during inference. We introduce Pack of LLMs (PackLLM), an effective method for test-time fusion that leverages each LLM's expertise, given an input prompt. PackLLM performs model fusion by solving an optimization problem for determining each LLM's importance, so that perplexity over the input prompt is minimized. First, our simple PackLLM-sim variant validates that perplexity is a good indicator for measuring each LLM's expertise. Second, our PackLLM-opt variant approximately solves the perplexity minimization problem via a greedy algorithm. The derived importance weights are used to combine the LLMs during inference. We conduct experiments with over 100 total LLMs on a diverse set of tasks. Experimental results show that (i) perplexity is a reliable measure for LLM fusion, (ii) PackLLM outperforms test-time fusion baselines by 1.89% accuracy points, and (iii) PackLLM can leverage new LLMs to improve performance over learning-based fusion approaches by 3.92-11.94% accuracy points.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "2254264433",
+                    "name": "Petros Karypis"
+                },
+                {
+                    "authorId": "2064547804",
+                    "name": "George Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "03613effe356d2a8815f899027d6a5868822fd93",
+            "title": "Which Examples to Annotate for In-Context Learning? Towards Effective and Efficient Selection",
+            "abstract": "Large Language Models (LLMs) can adapt to new tasks via in-context learning (ICL). ICL is efficient as it does not require any parameter updates to the trained LLM, but only few annotated examples as input for the LLM. In this work, we investigate an active learning approach for ICL, where there is a limited budget for annotating examples. We propose a model-adaptive optimization-free algorithm, termed AdaICL, which identifies examples that the model is uncertain about, and performs semantic diversity-based example selection. Diversity-based sampling improves overall effectiveness, while uncertainty sampling improves budget efficiency and helps the LLM learn new information. Moreover, AdaICL poses its sampling strategy as a Maximum Coverage problem, that dynamically adapts based on the model's feedback and can be approximately solved via greedy algorithms. Extensive experiments on nine datasets and seven LLMs show that AdaICL improves performance by 4.4% accuracy points over SOTA (7.7% relative improvement), is up to 3x more budget-efficient than performing annotations uniformly at random, while it outperforms SOTA with 2x fewer ICL examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "2263543517",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "51484cf02592a3551f944b7c6bf94fe902c0aa66",
+            "title": "Train Your Own GNN Teacher: Graph-Aware Distillation on Textual Graphs",
+            "abstract": "How can we learn effective node representations on textual graphs? Graph Neural Networks (GNNs) that use Language Models (LMs) to encode textual information of graphs achieve state-of-the-art performance in many node classification tasks. Yet, combining GNNs with LMs has not been widely explored for practical deployments due to its scalability issues. In this work, we tackle this challenge by developing a Graph-Aware Distillation framework (GRAD) to encode graph structures into an LM for graph-free, fast inference. Different from conventional knowledge distillation, GRAD jointly optimizes a GNN teacher and a graph-free student over the graph's nodes via a shared LM. This encourages the graph-free student to exploit graph information encoded by the GNN teacher while at the same time, enables the GNN teacher to better leverage textual information from unlabeled nodes. As a result, the teacher and the student models learn from each other to improve their overall performance. Experiments in eight node classification benchmarks in both transductive and inductive settings showcase GRAD's superiority over existing distillation approaches for textual graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "40043851",
+                    "name": "V. Ioannidis"
+                },
+                {
+                    "authorId": "2151226309",
+                    "name": "Shen Wang"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2121390172",
+                    "name": "Soji Adeshina"
+                },
+                {
+                    "authorId": "65743795",
+                    "name": "Jun Ma"
+                },
+                {
+                    "authorId": "1390716752",
+                    "name": "Han Zhao"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "f16753b11e7f48251d1e7dbabaec3f87953c59c1",
+            "title": "Global and Nodal Mutual Information Maximization in Heterogeneous Graphs",
+            "abstract": "Many real-world graphs involve different types of nodes and edges, being heterogeneous by nature. Heterogeneous graph representation learning embeds their rich structure and semantics into a low-dimensional space to facilitate graph related tasks. In this work, we propose a self-supervised method that learns representations by relying on mutual information maximization among different graph structures (metapaths). Our method, termed HeMI, promotes node-level and global-level shared semantics among nodes with contrastive learning, as well as it leverages interactions among metapaths. Experiments on node classification, node clustering, and link prediction show that HeMI outperforms existing approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "8d9e94353859dc4bda6daf680b9c509b5c2c90d5",
+            "title": "ReaRev: Adaptive Reasoning for Question Answering over Knowledge Graphs",
+            "abstract": "Knowledge Graph Question Answering (KGQA) involves retrieving entities as answers from a Knowledge Graph (KG) using natural language queries. The challenge is to learn to reason over question-relevant KG facts that traverse KG entities and lead to the question answers. To facilitate reasoning, the question is decoded into instructions, which are dense question representations used to guide the KG traversals. However, if the derived instructions do not exactly match the underlying KG information, they may lead to reasoning under irrelevant context. Our method, termed ReaRev, introduces a new way to KGQA reasoning with respect to both instruction decoding and execution. To improve instruction decoding, we perform reasoning in an adaptive manner, where KG-aware information is used to iteratively update the initial instructions. To improve instruction execution, we emulate breadth-first search (BFS) with graph neural networks (GNNs). The BFS strategy treats the instructions as a set and allows our method to decide on their execution order on the fly. Experimental results on three KGQA benchmarks demonstrate the ReaRev's effectiveness compared with previous state-of-the-art, especially when the KG is incomplete or when we tackle complex questions. Our code is publicly available at https://github.com/cmavro/ReaRev_KGQA.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "1f836ccdd422f35c1e2e470b1bcc7201b863cc63",
+            "title": "TempoQR: Temporal Question Reasoning over Knowledge Graphs",
+            "abstract": "Knowledge Graph Question Answering (KGQA) involves retrieving facts from a Knowledge Graph (KG) using natural language queries. A KG is a curated set of facts consisting of entities linked by relations. Certain facts include also temporal information forming a Temporal KG (TKG). Although many natural questions involve explicit or implicit time constraints, question answering (QA) over TKGs has been a relatively unexplored area. Existing solutions are mainly designed for simple temporal questions that can be answered directly by a single TKG fact.\n This paper puts forth a comprehensive embedding-based framework for answering complex questions over TKGs. Our method termed temporal question reasoning (TempoQR) exploits TKG embeddings to ground the question to the specific entities and time scope it refers to. It does so by augmenting the question embeddings with context, entity and time-aware information by employing three specialized modules. The first computes a textual representation of a given question, the second combines it with the entity embeddings for entities involved in the question, and the third generates question-specific time embeddings. Finally, a transformer-based encoder learns to fuse the generated temporal information with the question representation, which is used for answer predictions. Extensive experiments show that TempoQR improves accuracy by 25--45 percentage points on complex temporal questions over state-of-the-art approaches and it generalizes better to unseen question types.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "2145157804",
+                    "name": "Prasanna Lakkur Subramanyam"
+                },
+                {
+                    "authorId": "40043851",
+                    "name": "V. Ioannidis"
+                },
+                {
+                    "authorId": "2121390172",
+                    "name": "Soji Adeshina"
+                },
+                {
+                    "authorId": "48575315",
+                    "name": "Phillip Howard"
+                },
+                {
+                    "authorId": "2145154001",
+                    "name": "Tetiana Grinberg"
+                },
+                {
+                    "authorId": "2058623624",
+                    "name": "Nagib Hakim"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "7226980db3b4fb75e992f7891c9246b1eaa67cc1",
+            "title": "HeMI: Multi-view Embedding in Heterogeneous Graphs",
+            "abstract": "Many real-world graphs involve different types of nodes and relations between nodes, being heterogeneous by nature. The representation learning of heterogeneous graphs (HGs) embeds the rich structure and semantics of such graphs into a low-dimensional space and facilitates various data mining tasks, such as node classification, node clustering, and link prediction. In this paper, we propose a self-supervised method that learns HG representations by relying on knowledge exchange and discovery among different HG structural semantics (meta-paths). Specifically, by maximizing the mutual information of meta-path representations, we promote meta-path information fusion and consensus, and ensure that globally shared semantics are encoded. By extensive experiments on node classification, node clustering, and link prediction tasks, we show that the proposed self-supervision both outperforms and improves competing methods by 1% and up to 10% for all tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "bac37fee5a49e41567edfd521fa9229f8bc77858",
+            "title": "Auto-Tuned Weighted-Penalty Parameter ADMM for Distributed Optimal Power Flow",
+            "abstract": "The Alternating Direction Method of Multipliers (ADMM) is widely utilized to solve the distributed Optimal Power Flow (OPF) problem, providing convergence under certain assumptions. ADMM relies on a penalty parameter <inline-formula><tex-math notation=\"LaTeX\">$\\rho$</tex-math></inline-formula> to accelerate its convergence. The selection of appropriate values of <inline-formula><tex-math notation=\"LaTeX\">$\\rho$</tex-math></inline-formula> is crucial for the quality of the final solution and for the efficiency of the iterative process. In this paper, we propose a weighted-<inline-formula><tex-math notation=\"LaTeX\">$\\rho$</tex-math></inline-formula> ADMM, with its weights automatically determined by leveraging the nature of the optimal power flow problem. Specifically, the affinity matrix, a combination of the admittance matrix and Hessian matrix of the Lagrangian function of the associated OPF problem, is utilized to determine the penalty parameters. The convergence of the iterative scheme is analyzed and the effectiveness of the proposed methodology is validated through simulation experiments which show that the weighted-<inline-formula><tex-math notation=\"LaTeX\">$\\rho$</tex-math></inline-formula> ADMM overcomes the necessity for suitable initial parameter selection.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "40410083",
+                    "name": "M. Foti"
+                },
+                {
+                    "authorId": "1805602",
+                    "name": "M. Vavalis"
+                }
+            ]
+        }
+    ]
+}

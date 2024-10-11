@@ -1,0 +1,335 @@
+{
+    "authorId": "39358728",
+    "papers": [
+        {
+            "paperId": "2f1b41ff7394fe30d22c0b12ba40835fd32d0764",
+            "title": "Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models",
+            "abstract": "In the realm of vision-language understanding, the proficiency of models in interpreting and reasoning over visual content has become a cornerstone for numerous applications. However, it is challenging for the visual encoder in Large Vision-Language Models (LVLMs) to extract useful features tailored to questions that aid the language model's response. Furthermore, a common practice among existing LVLMs is to utilize lower-resolution images, which restricts the ability for visual recognition. Our work introduces the Chain-of-Spot (CoS) method, which we describe as Interactive Reasoning, a novel approach that enhances feature extraction by focusing on key regions of interest (ROI) within the image, corresponding to the posed questions or instructions. This technique allows LVLMs to access more detailed visual information without altering the original image resolution, thereby offering multi-granularity image features. By integrating Chain-of-Spot with instruct-following LLaVA-1.5 models, the process of image reasoning consistently improves performance across a wide range of multimodal datasets and benchmarks without bells and whistles and achieves new state-of-the-art results. Our empirical findings demonstrate a significant improvement in LVLMs' ability to understand and reason about visual content, paving the way for more sophisticated visual instruction-following applications. Code and models are available at https://github.com/dongyh20/Chain-of-Spot",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124814824",
+                    "name": "Zuyan Liu"
+                },
+                {
+                    "authorId": "2292401742",
+                    "name": "Yuhao Dong"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2256790031",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "31a1bbafebae80a1024302b34618fc98ecd80e98",
+            "title": "Efficient Inference of Vision Instruction-Following Models with Elastic Cache",
+            "abstract": "In the field of instruction-following large vision-language models (LVLMs), the efficient deployment of these models faces challenges, notably due to the high memory demands of their key-value (KV) caches. Conventional cache management strategies for LLMs focus on cache eviction, which often fails to address the specific needs of multimodal instruction-following models. Recognizing this gap, in this paper, we introduce Elastic Cache, a novel approach that benefits from applying distinct acceleration methods for instruction encoding and output generation stages. We investigate the metrics of importance in different stages and propose an importance-driven cache merging strategy to prune redundancy caches. Instead of discarding less important caches, our strategy identifies important key/value vectors as anchor points. Surrounding less important caches are then merged with these anchors, enhancing the preservation of contextual information in the KV caches while yielding an arbitrary acceleration ratio. For instruction encoding, we utilize the frequency to evaluate the importance of caches. Regarding output generation, we prioritize tokens based on their distance with an offset, by which both the initial and most recent tokens are retained. Results on a range of LVLMs demonstrate that Elastic Cache not only boosts efficiency but also notably outperforms existing pruning methods in language generation across various tasks. Code is available at https://github.com/liuzuyan/ElasticCache",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124814824",
+                    "name": "Zuyan Liu"
+                },
+                {
+                    "authorId": "67215934",
+                    "name": "Benlin Liu"
+                },
+                {
+                    "authorId": "2312936284",
+                    "name": "Jiahui Wang"
+                },
+                {
+                    "authorId": "2292401742",
+                    "name": "Yuhao Dong"
+                },
+                {
+                    "authorId": "2149509367",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2312923589",
+                    "name": "Ranjay Krishna"
+                },
+                {
+                    "authorId": "2313041241",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "85c514db4e90e1fd4200d858353f27a3cc2c29ad",
+            "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution",
+            "abstract": "Visual data comes in various forms, ranging from small icons of just a few pixels to long videos spanning hours. Existing multi-modal LLMs usually standardize these diverse visual inputs to a fixed resolution for visual encoders and yield similar numbers of tokens for LLMs. This approach is non-optimal for multimodal understanding and inefficient for processing inputs with long and short visual contents. To solve the problem, we propose Oryx, a unified multimodal architecture for the spatial-temporal understanding of images, videos, and multi-view 3D scenes. Oryx offers an on-demand solution to seamlessly and efficiently process visual inputs with arbitrary spatial sizes and temporal lengths through two core innovations: 1) a pre-trained OryxViT model that can encode images at any resolution into LLM-friendly visual representations; 2) a dynamic compressor module that supports 1x to 16x compression on visual tokens by request. These design features enable Oryx to accommodate extremely long visual contexts, such as videos, with lower resolution and high compression while maintaining high recognition precision for tasks like document understanding with native resolution and no compression. Beyond the architectural improvements, enhanced data curation and specialized training on long-context retrieval and spatial-aware data help Oryx achieve strong capabilities in image, video, and 3D multimodal understanding simultaneously. Our work is open-sourced at https://github.com/Oryx-mllm/Oryx.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124814824",
+                    "name": "Zuyan Liu"
+                },
+                {
+                    "authorId": "2257357379",
+                    "name": "Yuhao Dong"
+                },
+                {
+                    "authorId": "2321815866",
+                    "name": "Ziwei Liu"
+                },
+                {
+                    "authorId": "2321885484",
+                    "name": "Winston Hu"
+                },
+                {
+                    "authorId": "2313041241",
+                    "name": "Jiwen Lu"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                }
+            ]
+        },
+        {
+            "paperId": "9c577a200d4a5a50e9eda6c6f12f05f44cb0f6e9",
+            "title": "StableSwap: Stable Face Swapping in a Shared and Controllable Latent Space",
+            "abstract": "Person-agnostic face swapping has gained significant attention in recent years, as it offers the potential to enhance various real-world applications by combining high fidelity and identity consistency. However, conventional face swapping methods often rely on intricate adjustments of different loss functions, leading to instability during both the training and inference stages. In this work, we propose a simple yet effective framework named StableSwap with a reversible autoencoder to modify the face in a shared latent space. Our approach capitalizes on the information-rich image latent codes to tackle the challenges of complex editing tasks, utilizing the abundant details present in both the source and target faces. To ensure an expressive and robust latent space, we employ a latent alignment approach with perceptual and adversarial losses to optimize the autoencoder. Additionally, we devise a multi-stage identity injection module that samples multiple features with different facial priors and incorporates them to guide the latent image manipulation. By leveraging attention-based blocks, we fuse these futures and update the latent code in a mask-conditioned manner. Both quantitative and qualitative results on the mainstream benchmarks demonstrate that our StableSwap generates competitive identity-consistent swapped faces compared with state-of-the-art methods. Our method outperforms previous approaches in terms of ID Retrieval (98.68) and FID (2.49), while also exhibiting enhanced stability during model training. Beyond this, our model achieves region-controllable face swapping with the capability to perform more fine-grained operations in latent space.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2288503680",
+                    "name": "Yixuan Zhu"
+                },
+                {
+                    "authorId": "2118223312",
+                    "name": "Wenliang Zhao"
+                },
+                {
+                    "authorId": "35299091",
+                    "name": "Yansong Tang"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2256790031",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "2240226596",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "ebce477317d049e4de6391b98be828a78daad886",
+            "title": "X-3D: Explicit 3D Structure Modeling for Point Cloud Recognition",
+            "abstract": "Numerous prior studies predominantly emphasize constructing relation vectors for individual neighborhood points and generating dynamic kernels for each vector and embedding these into high-dimensional spaces to capture implicit local structures. However, we contend that such implicit high-dimensional structure modeling approch inadequately represents the local geometric structure of point clouds due to the absence of explicit structural information. Hence, we introduce X-3D, an explicit 3D structure modeling approach. X-3D functions by capturing the explicit local structural information within the input 3D space and employing it to produce dynamic kernels with shared weights for all neighborhood points within the current local region. This modeling approach introduces effective geometric prior and significantly diminishes the disparity between the local structure of the embedding space and the original input point cloud, thereby improving the extraction of local features. Experiments show that our method can be used on a variety of methods and achieves state-of-the-art performance on segmentation, classification, de-tection tasks with lower extra computational cost, such as 90.7% on ScanObjectNN for classification, 79.2% on S3DIS 6 fold and 74.3% on S3DIS Area 5 for segmentation, 76.3% on ScanNetV2 for segmentation and 64.5% mAP25, 46.9% mAP50 on SUN RGB-D and 69.0% mAP25, 51.1% mAP50 on ScanNetV2. Our code is available at https://github.com/sunshuofeng/X-3D.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2298065505",
+                    "name": "Shuofeng Sun"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2268428068",
+                    "name": "Jiwen Lu"
+                },
+                {
+                    "authorId": "2257299740",
+                    "name": "Haibin Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "f8d4973749d6696b5096d0ca4a3c1020056449b4",
+            "title": "Coarse Correspondence Elicit 3D Spacetime Understanding in Multimodal Language Model",
+            "abstract": "Multimodal language models (MLLMs) are increasingly being implemented in real-world environments, necessitating their ability to interpret 3D spaces and comprehend temporal dynamics. Despite their potential, current top models within our community still fall short in adequately understanding spatial and temporal dimensions. We introduce Coarse Correspondence, a simple, training-free, effective, and general-purpose visual prompting method to elicit 3D and temporal understanding in multimodal LLMs. Our method uses a lightweight tracking model to find object correspondences between frames in a video or between sets of image viewpoints. It selects the most frequent object instances and visualizes them with markers with unique IDs in the image. With this simple approach, we achieve state-of-the-art results on 3D understanding benchmarks including ScanQA (+20.5\\%) and a subset of OpenEQA (+9.7\\%), and on long-form video benchmarks such as EgoSchema (+6.0\\%). We also curate a small diagnostic dataset to evaluate whether MLLMs can reason about space from a described viewpoint other than the camera viewpoint. Again, Coarse Correspondence improves spatial perspective-taking abilities but we highlight that MLLMs struggle with this task. Together, we demonstrate that our simple prompting method can significantly aid downstream tasks that require 3D or temporal reasoning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "67215934",
+                    "name": "Benlin Liu"
+                },
+                {
+                    "authorId": "2292401742",
+                    "name": "Yuhao Dong"
+                },
+                {
+                    "authorId": "2306077601",
+                    "name": "Yiqin Wang"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2314295979",
+                    "name": "Yansong Tang"
+                },
+                {
+                    "authorId": "2297947162",
+                    "name": "Wei-Chiu Ma"
+                },
+                {
+                    "authorId": "2312923589",
+                    "name": "Ranjay Krishna"
+                }
+            ]
+        },
+        {
+            "paperId": "fadd982efce785bf471cd1a0ae28c6594e66db43",
+            "title": "Point-to-Pixel Prompting for Point Cloud Analysis With Pre-Trained Image Models",
+            "abstract": "Nowadays, pre-training big models on large-scale datasets has achieved great success and dominated many downstream tasks in natural language processing and 2D vision, while pre-training in 3D vision is still under development. In this paper, we provide a new perspective of transferring the pre-trained knowledge from 2D domain to 3D domain with Point-to-Pixel Prompting in data space and Pixel-to-Point distillation in feature space, exploiting shared knowledge in images and point clouds that display the same visual world. Following the principle of prompting engineering, Point-to-Pixel Prompting transforms point clouds into colorful images with geometry-preserved projection and geometry-aware coloring. Then the pre-trained image models can be directly implemented for point cloud tasks without structural changes or weight modifications. With projection correspondence in feature space, Pixel-to-Point distillation further regards pre-trained image models as the teacher model and distills pre-trained 2D knowledge to student point cloud models, remarkably enhancing inference efficiency and model capacity for point cloud analysis. We conduct extensive experiments in both object classification and scene segmentation under various settings to demonstrate the superiority of our method. In object classification, we reveal the important scale-up trend of Point-to-Pixel Prompting and attain 90.3% accuracy on ScanObjectNN dataset, surpassing previous literature by a large margin. In scene-level semantic segmentation, our method outperforms traditional 3D analysis approaches and shows competitive capacity in dense prediction tasks.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2142663191",
+                    "name": "Ziyi Wang"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2116330410",
+                    "name": "Xumin Yu"
+                },
+                {
+                    "authorId": "2256790031",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "28a840d36aeabb165804c293f9b91a47d118f3b9",
+            "title": "GFNet: Global Filter Networks for Visual Recognition",
+            "abstract": "Recent advances in self-attention and pure multi-layer perceptrons (MLP) models for vision have shown great potential in achieving promising performance with fewer inductive biases. These models are generally based on learning interaction among spatial locations from raw data. The complexity of self-attention and MLP grows quadratically as the image size increases, which makes these models hard to scale up when high-resolution features are required. In this paper, we present the Global Filter Network (GFNet), a conceptually simple yet computationally efficient architecture, that learns long-term spatial dependencies in the frequency domain with log-linear complexity. Our architecture replaces the self-attention layer in vision Transformers with three key operations: a 2D discrete Fourier transform, an element-wise multiplication between frequency-domain features and learnable global filters, and a 2D inverse Fourier transform. Based on this basic design, we develop a series of isotropic models with a Transformer-style simple architecture and CNN-style hierarchical models with better performance. Isotropic GFNet models exhibit favorable accuracy/complexity trade-offs compared to recent vision Transformers and pure MLP models. Hierarchical GFNet models can inherit successful designs in CNNs and be easily scaled up with larger model sizes and more training data, showing strong performance on both image classification (e.g., 85.0% top-1 accuracy on ImageNet-1 k without any extra data or supervision, and 87.4% accuracy with ImageNet-21 k pre-training) and dense prediction tasks (e.g., 54.3 mIoU on ADE20 k val). Our results demonstrate that GFNet can be a very competitive alternative to Transformer-based models and CNNs in terms of efficiency, generalization ability and robustness. Code is available at https://github.com/raoyongming/GFNet.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2118223312",
+                    "name": "Wenliang Zhao"
+                },
+                {
+                    "authorId": "1490318512",
+                    "name": "Zhengbiao Zhu"
+                },
+                {
+                    "authorId": "48128428",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "31b8e166dc898e48bd26d4d7676f1c40ac3fb0f5",
+            "title": "Take-A-Photo: 3D-to-2D Generative Pre-training of Point Cloud Models",
+            "abstract": "With the overwhelming trend of mask image modeling led by MAE, generative pre-training has shown a remarkable potential to boost the performance of fundamental models in 2D vision. However, in 3D vision, the over-reliance on Transformer-based backbones and the unordered nature of point clouds have restricted the further development of generative pre-training. In this paper, we propose a novel 3D-to-2D generative pre-training method that is adaptable to any point cloud model. We propose to generate view images from different instructed poses via the cross-attention mechanism as the pre-training scheme. Generating view images has more precise supervision than its point cloud counterpart, thus assisting 3D backbones to have a finer comprehension of the geometrical structure and stereoscopic relations of the point cloud. Experimental results have proved the superiority of our proposed 3D-to-2D generative pre-training over previous pre-training methods. Our method is also effective in boosting the performance of architecture-oriented approaches, achieving state-of-the-art performance when fine-tuning on ScanObjectNN classification and ShapeNet-Part segmentation tasks. Code is available at https://github.com/wangzy22/TakeAPhoto.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2142663191",
+                    "name": "Ziyi Wang"
+                },
+                {
+                    "authorId": "2116330410",
+                    "name": "Xumin Yu"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "48128428",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "50ff3d88ffb59fa31f4511ecd15f9bbe3565a1a0",
+            "title": "DiffSwap: High-Fidelity and Controllable Face Swapping via 3D-Aware Masked Diffusion",
+            "abstract": "In this paper, we propose DiffSwap, a diffusion model based framework for high-fidelity and controllable face swapping. Unlike previous work that relies on carefully designed network architectures and loss functions to fuse the information from the source and target faces, we reformulate the face swapping as a conditional inpainting task, performed by a powerful diffusion model guided by the desired face attributes (e.g., identity and landmarks). An important issue that makes it nontrivial to apply diffusion models to face swapping is that we cannot perform the time-consuming multi-step sampling to obtain the generated image during training. To overcome this, we propose a mid-point estimation method to efficiently recover a reasonable diffusion result of the swapped face with only 2 steps, which enables us to introduce identity constraints to improve the face swapping quality. Our framework enjoys several favorable properties more appealing than prior arts: 1) Controllable. Our method is based on conditional masked diffusion on the latent space, where the mask and the conditions can be fully controlled and customized. 2) High-fidelity. The formulation of conditional inpainting can fully exploit the generative ability of diffusion models and can preserve the background of target images with minimal artifacts. 3) Shape-preserving. The controllability of our method enables us to use 3D-aware landmarks as the condition during generation to preserve the shape of the source face. Extensive experiments on both FF++ and FFHQ demonstrate that our method can achieve state-of-the-art face swapping results both qualitatively and quantitatively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118223312",
+                    "name": "Wenliang Zhao"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "15243971",
+                    "name": "Weikang Shi"
+                },
+                {
+                    "authorId": "2124814824",
+                    "name": "Zuyan Liu"
+                },
+                {
+                    "authorId": "48128428",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        }
+    ]
+}

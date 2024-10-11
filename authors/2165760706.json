@@ -1,0 +1,249 @@
+{
+    "authorId": "2165760706",
+    "papers": [
+        {
+            "paperId": "33a7b7abf006d22de24c1471e6f6c93842a497b6",
+            "title": "GE2: A General and Efficient Knowledge Graph Embedding Learning System",
+            "abstract": "\n Graph embedding learning computes an embedding vector for each node in a graph and finds many applications in areas such as social networks, e-commerce, and medicine. We observe that existing graph embedding systems (e.g., PBG, DGL-KE, and Marius) have long CPU time and high CPU-GPU communication overhead, especially when using multiple GPUs. Moreover, it is cumbersome to implement negative sampling algorithms on them, which have many variants and are crucial for model quality. We propose a new system called GE\n 2\n , which achieves both generality and efficiency for graph embedding learning. In particular, we propose a general execution model that encompasses various negative sampling algorithms. Based on the execution model, we design a user-friendly API that allows users to easily express negative sampling algorithms. To support efficient training, we offload operations from CPU to GPU to enjoy high parallelism and reduce CPU time. We also design COVER, which, to our knowledge, is the first algorithm to manage data swap between CPU and multiple GPUs for small communication costs. Extensive experimental results show that, comparing with the state-of-the-art graph embedding systems, GE\n 2\n trains consistently faster across different models and datasets, where the speedup is usually over 2x and can be up to 7.5x.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153619495",
+                    "name": "Chenguang Zheng"
+                },
+                {
+                    "authorId": "10721810",
+                    "name": "Guanxian Jiang"
+                },
+                {
+                    "authorId": "2275058216",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "2113653096",
+                    "name": "Peiqi Yin"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "2290359677",
+                    "name": "James Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "53f6c0d74bfac92584a5aca2c07dbb803bafaf43",
+            "title": "Circinus: Fast Redundancy-Reduced Subgraph Matching",
+            "abstract": "Subgraph matching is one of the most important problems in graph analytics. Many algorithms and systems have been proposed for subgraph matching. Most of these works follow Ullmann's backtracking approach as it is memory-efficient in handling an explosive number of intermediate matching results. However, they have largely overlooked an intrinsic problem of backtracking, namely repeated computation, which contributes to a large portion of the heavy computation in subgraph matching. This paper proposes a subgraph matching system, Circinus, which enables effective computation sharing by a new compression-based backtracking method. Our extensive experiments show that Circinus significantly reduces repeated computation, which transfers to up to several orders of magnitude performance improvement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35295263",
+                    "name": "Tatiana Jin"
+                },
+                {
+                    "authorId": "2140550986",
+                    "name": "Boyang Li"
+                },
+                {
+                    "authorId": "2110464837",
+                    "name": "Yichao Li"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "2219393483",
+                    "name": "Qianli Ma"
+                },
+                {
+                    "authorId": "8890418",
+                    "name": "Yunjian Zhao"
+                },
+                {
+                    "authorId": "2108844303",
+                    "name": "Hongzhi Chen"
+                },
+                {
+                    "authorId": "46754559",
+                    "name": "James Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "5b671f29e7830283d983a7f18f745b12abd490f8",
+            "title": "DSP: Efficient GNN Training with Multiple GPUs",
+            "abstract": "Jointly utilizing multiple GPUs to train graph neural networks (GNNs) is crucial for handling large graphs and achieving high efficiency. However, we find that existing systems suffer from high communication costs and low GPU utilization due to improper data layout and training procedures. Thus, we propose a system dubbed Distributed Sampling and Pipelining (DSP) for multi-GPU GNN training. DSP adopts a tailored data layout to utilize the fast NVLink connections among the GPUs, which stores the graph topology and popular node features in GPU memory. For efficient graph sampling with multiple GPUs, we introduce a collective sampling primitive (CSP), which pushes the sampling tasks to data to reduce communication. We also design a producer-consumer-based pipeline, which allows tasks from different mini-batches to run congruently to improve GPU utilization. We compare DSP with state-of-the-art GNN training frameworks, and the results show that DSP consistently outperforms the baselines under different datasets, GNN models and GPU counts. The speedup of DSP can be up to 26x and is over 2x in most cases.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2153619495",
+                    "name": "Chenguang Zheng"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "4badcfd0f63b309f4d447af3f06ce3a0199158d2",
+            "title": "VSGM: View-Based GPU-Accelerated Subgraph Matching on Large Graphs",
+            "abstract": "Subgraph matching is a fundamental building block in graph analytics. Due to its high time complexity, GPU-based solutions have been proposed for sub graph matching. Most existing GPU-based works can only cope with relatively small graphs that fit in GPU memory. To support efficient subgraph matching on large graphs, we propose a view-based method to hide communication overhead and improve GPU utilization. We develop VSGM, a sub graph matching framework that supports efficient pipelined execution and multi-GPU architecture. Ex-tensive experimental evaluation shows that VSGM significantly outperforms the state-of-the-art solutions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10721810",
+                    "name": "Guanxian Jiang"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "35295263",
+                    "name": "Tatiana Jin"
+                },
+                {
+                    "authorId": "2140550986",
+                    "name": "Boyang Li"
+                },
+                {
+                    "authorId": "8890418",
+                    "name": "Yunjian Zhao"
+                },
+                {
+                    "authorId": "2110464837",
+                    "name": "Yichao Li"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "4d468c7b4345fcd25d40ca67313a743e6e164444",
+            "title": "HGL: Accelerating Heterogeneous GNN Training with Holistic Representation and Optimization",
+            "abstract": "Graph neural networks (GNNs) have shown to significantly improve graph analytics. Existing systems for GNN training are primarily designed for homogeneous graphs. In industry, however, most graphs are actually heterogeneous in nature (i.e., having multiple types of nodes and edges). Existing systems train a heterogeneous GNN (HetGNN) as a composition of homogeneous GNN (HomoGNN) and thus suffer from critical limitations such as lack of memory optimization and limited operator parallelism. To address these limitations, we propose HGL - a heterogeneity-aware system for GNN training. At the core of HGL is an intermediate representation, called HIR, which provides a holistic representation for GNNs and enables cross-relation optimization in HetGNN training. We devise tailored optimizations on HIR, including graph stitching, operator fusion and operator bundling. Compared with DGL and PyG, HGL achieves a speedup from 7 to 22 times for training HetGNNs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2209344431",
+                    "name": "Yuntao Gui"
+                },
+                {
+                    "authorId": "47096554",
+                    "name": "Yidi Wu"
+                },
+                {
+                    "authorId": "50841357",
+                    "name": "Han Yang"
+                },
+                {
+                    "authorId": "35295263",
+                    "name": "Tatiana Jin"
+                },
+                {
+                    "authorId": "2140550986",
+                    "name": "Boyang Li"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2087106044",
+                    "name": "Fan Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "6d7fa6739770b238af20eb99e474c3de23f01d6f",
+            "title": "RACE: One-sided RDMA-conscious Extendible Hashing",
+            "abstract": "Memory disaggregation is a promising technique in datacenters with the benefit of improving resource utilization, failure isolation, and elasticity. Hashing indexes have been widely used to provide fast lookup services in distributed memory systems. However, traditional hashing indexes become inefficient for disaggregated memory, since the computing power in the memory pool is too weak to execute complex index requests. To provide efficient indexing services in disaggregated memory scenarios, this article proposes RACE hashing, a one-sided RDMA-Conscious Extendible hashing index with lock-free remote concurrency control and efficient remote resizing. RACE hashing enables all index operations to be efficiently executed by using only one-sided RDMA verbs without involving any compute resource in the memory pool. To support remote concurrent access with high performance, RACE hashing leverages a lock-free remote concurrency control scheme to enable different clients to concurrently operate the same hashing index in the memory pool in a lock-free manner. To resize the hash table with low overheads, RACE hashing leverages an extendible remote resizing scheme to reduce extra RDMA accesses caused by extendible resizing and allow concurrent request execution during resizing. Extensive experimental results demonstrate that RACE hashing outperforms state-of-the-art distributed in-memory hashing indexes by 1.4\u201313.7\u00d7 in YCSB hybrid workloads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3020732",
+                    "name": "Pengfei Zuo"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "153552136",
+                    "name": "Jiazhao Sun"
+                },
+                {
+                    "authorId": "2145494928",
+                    "name": "Liu Yang"
+                },
+                {
+                    "authorId": "2193010",
+                    "name": "Shuangwu Zhang"
+                },
+                {
+                    "authorId": "1787338",
+                    "name": "Yu Hua"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2164311572",
+                    "name": "Rongfeng He"
+                },
+                {
+                    "authorId": "2164321263",
+                    "name": "Huabing Yan"
+                }
+            ]
+        }
+    ]
+}

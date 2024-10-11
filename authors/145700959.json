@@ -1,0 +1,871 @@
+{
+    "authorId": "145700959",
+    "papers": [
+        {
+            "paperId": "1b121e6c0d0c72560feda4ab538f749413c90494",
+            "title": "Efficiently Computing Similarities to Private Datasets",
+            "abstract": "Many methods in differentially private model training rely on computing the similarity between a query point (such as public or synthetic data) and private data. We abstract out this common subroutine and study the following fundamental algorithmic problem: Given a similarity function $f$ and a large high-dimensional private dataset $X \\subset \\mathbb{R}^d$, output a differentially private (DP) data structure which approximates $\\sum_{x \\in X} f(x,y)$ for any query $y$. We consider the cases where $f$ is a kernel function, such as $f(x,y) = e^{-\\|x-y\\|_2^2/\\sigma^2}$ (also known as DP kernel density estimation), or a distance function such as $f(x,y) = \\|x-y\\|_2$, among others. Our theoretical results improve upon prior work and give better privacy-utility trade-offs as well as faster query times for a wide range of kernels and distance functions. The unifying approach behind our results is leveraging `low-dimensional structures' present in the specific functions $f$ that we study, using tools such as provable dimensionality reduction, approximation theory, and one-dimensional decomposition of the functions. Our algorithms empirically exhibit improved query times and accuracy over prior state of the art. We also present an application to DP classification. Our experiments demonstrate that the simple methodology of classifying based on average similarity is orders of magnitude faster than prior DP-SGD based approaches for comparable accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2064251",
+                    "name": "A. Backurs"
+                },
+                {
+                    "authorId": "2243368744",
+                    "name": "Zinan Lin"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2291138215",
+                    "name": "Sandeep Silwal"
+                },
+                {
+                    "authorId": "2291141191",
+                    "name": "Jakub Tarnawski"
+                }
+            ]
+        },
+        {
+            "paperId": "4e111810eb68402d69ef3ff9fa3d78eb5990a9d0",
+            "title": "Streaming Algorithms for Connectivity Augmentation",
+            "abstract": "We study the $k$-connectivity augmentation problem ($k$-CAP) in the single-pass streaming model. Given a $(k-1)$-edge connected graph $G=(V,E)$ that is stored in memory, and a stream of weighted edges $L$ with weights in $\\{0,1,\\dots,W\\}$, the goal is to choose a minimum weight subset $L'\\subseteq L$ such that $G'=(V,E\\cup L')$ is $k$-edge connected. We give a $(2+\\epsilon)$-approximation algorithm for this problem which requires to store $O(\\epsilon^{-1} n\\log n)$ words. Moreover, we show our result is tight: Any algorithm with better than $2$-approximation for the problem requires $\\Omega(n^2)$ bits of space even when $k=2$. This establishes a gap between the optimal approximation factor one can obtain in the streaming vs the offline setting for $k$-CAP. We further consider a natural generalization to the fully streaming model where both $E$ and $L$ arrive in the stream in an arbitrary order. We show that this problem has a space lower bound that matches the best possible size of a spanner of the same approximation ratio. Following this, we give improved results for spanners on weighted graphs: We show a streaming algorithm that finds a $(2t-1+\\epsilon)$-approximate weighted spanner of size at most $O(\\epsilon^{-1} n^{1+1/t}\\log n)$ for integer $t$, whereas the best prior streaming algorithm for spanner on weighted graphs had size depending on $\\log W$. Using our spanner result, we provide an optimal $O(t)$-approximation for $k$-CAP in the fully streaming model with $O(nk + n^{1+1/t})$ words of space. Finally we apply our results to network design problems such as Steiner tree augmentation problem (STAP), $k$-edge connected spanning subgraph ($k$-ECSS), and the general Survivable Network Design problem (SNDP). In particular, we show a single-pass $O(t\\log k)$-approximation for SNDP using $O(kn^{1+1/t})$ words of space, where $k$ is the maximum connectivity requirement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284729088",
+                    "name": "Ce Jin"
+                },
+                {
+                    "authorId": "143998907",
+                    "name": "Michael Kapralov"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2115885855",
+                    "name": "A. Vakilian"
+                }
+            ]
+        },
+        {
+            "paperId": "1b6648ee99533c59e888d78a77972de16c26f105",
+            "title": "Tight Bounds for Volumetric Spanners and Applications",
+            "abstract": "Given a set of points of interest, a volumetric spanner is a subset of the points using which all the points can be expressed using\"small\"coefficients (measured in an appropriate norm). Formally, given a set of vectors $X = \\{v_1, v_2, \\dots, v_n\\}$, the goal is to find $T \\subseteq [n]$ such that every $v \\in X$ can be expressed as $\\sum_{i\\in T} \\alpha_i v_i$, with $\\|\\alpha\\|$ being small. This notion, which has also been referred to as a well-conditioned basis, has found several applications, including bandit linear optimization, determinant maximization, and matrix low rank approximation. In this paper, we give almost optimal bounds on the size of volumetric spanners for all $\\ell_p$ norms, and show that they can be constructed using a simple local search procedure. We then show the applications of our result to other tasks and in particular the problem of finding coresets for the Minimum Volume Enclosing Ellipsoid (MVEE) problem.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2280902977",
+                    "name": "Aditya Bhaskara"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2115885855",
+                    "name": "A. Vakilian"
+                }
+            ]
+        },
+        {
+            "paperId": "211ed9976eef7443dff6960b5d41a1907793663d",
+            "title": "Core-sets for Fair and Diverse Data Summarization",
+            "abstract": "We study core-set construction algorithms for the task of Diversity Maximization under fairness/partition constraint. Given a set of points $P$ in a metric space partitioned into $m$ groups, and given $k_1,\\ldots,k_m$, the goal of this problem is to pick $k_i$ points from each group $i$ such that the overall diversity of the $k=\\sum_i k_i$ picked points is maximized. We consider two natural diversity measures: sum-of-pairwise distances and sum-of-nearest-neighbor distances, and show improved core-set construction algorithms with respect to these measures. More precisely, we show the first constant factor core-set w.r.t. sum-of-pairwise distances whose size is independent of the size of the dataset and the aspect ratio. Second, we show the first core-set w.r.t. the sum-of-nearest-neighbor distances. Finally, we run several experiments showing the effectiveness of our core-set approach. In particular, we apply constrained diversity maximization to summarize a set of timed messages that takes into account the messages' recency. Specifically, the summary should include more recent messages compared to older ones. This is a real task in one of the largest communication platforms, affecting the experience of hundreds of millions daily active users. By utilizing our core-set method for this task, we achieve a 100x speed-up while losing the diversity by only a few percent. Moreover, our approach allows us to improve the space usage of the algorithm in the streaming setting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2863266",
+                    "name": "S. Trajanovski"
+                }
+            ]
+        },
+        {
+            "paperId": "28976990e107c66d33c238df88269eb12b5457ce",
+            "title": "Improved Diversity Maximization Algorithms for Matching and Pseudoforest",
+            "abstract": "In this work we consider the diversity maximization problem, where given a data set $X$ of $n$ elements, and a parameter $k$, the goal is to pick a subset of $X$ of size $k$ maximizing a certain diversity measure. [CH01] defined a variety of diversity measures based on pairwise distances between the points. A constant factor approximation algorithm was known for all those diversity measures except ``remote-matching'', where only an $O(\\log k)$ approximation was known. In this work we present an $O(1)$ approximation for this remaining notion. Further, we consider these notions from the perpective of composable coresets. [IMMM14] provided composable coresets with a constant factor approximation for all but ``remote-pseudoforest'' and ``remote-matching'', which again they only obtained a $O(\\log k)$ approximation. Here we also close the gap up to constants and present a constant factor composable coreset algorithm for these two notions. For remote-matching, our coreset has size only $O(k)$, and for remote-pseudoforest, our coreset has size $O(k^{1+\\varepsilon})$ for any $\\varepsilon>0$, for an $O(1/\\varepsilon)$-approximate coreset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "50812086",
+                    "name": "Shyam Narayanan"
+                }
+            ]
+        },
+        {
+            "paperId": "391c65dbc504694fd2561f71e92051f08a3651e3",
+            "title": "Differentially Private Approximate Near Neighbor Counting in High Dimensions",
+            "abstract": "Range counting (e.g., counting the number of data points falling into a given query ball) under differential privacy has been studied extensively. However, the current algorithms for this problem are subject to the following dichotomy. One class of algorithms suffers from an additive error that is a fixed polynomial in the number of points. Another class of algorithms allows for polylogarithmic additive error, but the error grows exponentially in the dimension. To achieve the latter, the problem is relaxed to allow a \u201cfuzzy\u201d definition of the range boundary, e.g., a count of the points in a ball of radius r might also include points in a ball of radius cr for some c > 1 . In this paper we present an efficient algorithm that offers a sweet spot between these two classes. The algorithm has an additive error that is an arbitrary small power of the data set size, depending on how fuzzy the range boundary is, as well as a small ( 1 + o (1) ) multiplicative error. Crucially, the amount of noise added has no dependence on the dimension. Our algorithm introduces a variant of Locality-Sensitive Hashing, utilizing it in a novel manner.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1738395",
+                    "name": "Alexandr Andoni"
+                },
+                {
+                    "authorId": "2245332411",
+                    "name": "Piotr Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2278240918",
+                    "name": "Shyam Narayanan"
+                }
+            ]
+        },
+        {
+            "paperId": "a869b30170ab01572b76e5f63e41b92ccce36069",
+            "title": "Approximation Algorithms for Fair Range Clustering",
+            "abstract": "This paper studies the fair range clustering problem in which the data points are from different demographic groups and the goal is to pick $k$ centers with the minimum clustering cost such that each group is at least minimally represented in the centers set and no group dominates the centers set. More precisely, given a set of $n$ points in a metric space $(P,d)$ where each point belongs to one of the $\\ell$ different demographics (i.e., $P = P_1 \\uplus P_2 \\uplus \\cdots \\uplus P_\\ell$) and a set of $\\ell$ intervals $[\\alpha_1, \\beta_1], \\cdots, [\\alpha_\\ell, \\beta_\\ell]$ on desired number of centers from each group, the goal is to pick a set of $k$ centers $C$ with minimum $\\ell_p$-clustering cost (i.e., $(\\sum_{v\\in P} d(v,C)^p)^{1/p}$) such that for each group $i\\in \\ell$, $|C\\cap P_i| \\in [\\alpha_i, \\beta_i]$. In particular, the fair range $\\ell_p$-clustering captures fair range $k$-center, $k$-median and $k$-means as its special cases. In this work, we provide efficient constant factor approximation algorithms for fair range $\\ell_p$-clustering for all values of $p\\in [1,\\infty)$.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180920617",
+                    "name": "S. S. Hotegni"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2347383",
+                    "name": "A. Vakilian"
+                }
+            ]
+        },
+        {
+            "paperId": "d29d7f5ab16429c0c06c361c9850c473f29c26c4",
+            "title": "Composable Coresets for Determinant Maximization: Greedy is Almost Optimal",
+            "abstract": "Given a set of $n$ vectors in $\\mathbb{R}^d$, the goal of the \\emph{determinant maximization} problem is to pick $k$ vectors with the maximum volume. Determinant maximization is the MAP-inference task for determinantal point processes (DPP) and has recently received considerable attention for modeling diversity. As most applications for the problem use large amounts of data, this problem has been studied in the relevant \\textit{composable coreset} setting. In particular, [Indyk-Mahabadi-OveisGharan-Rezaei--SODA'20, ICML'19] showed that one can get composable coresets with optimal approximation factor of $\\tilde O(k)^k$ for the problem, and that a local search algorithm achieves an almost optimal approximation guarantee of $O(k)^{2k}$. In this work, we show that the widely-used Greedy algorithm also provides composable coresets with an almost optimal approximation factor of $O(k)^{3k}$, which improves over the previously known guarantee of $C^{k^2}$, and supports the prior experimental results showing the practicality of the greedy algorithm as a coreset. Our main result follows by showing a local optimality property for Greedy: swapping a single point from the greedy solution with a vector that was not picked by the greedy algorithm can increase the volume by a factor of at most $(1+\\sqrt{k})$. This is tight up to the additive constant $1$. Finally, our experiments show that the local optimality of the greedy algorithm is even lower than the theoretical bound on real data sets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2215562762",
+                    "name": "Siddharth Gollapudi"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2316431746",
+                    "name": "Varun Sivashankar"
+                }
+            ]
+        },
+        {
+            "paperId": "ba818901c0e2108a7e5dda901e21668d21b050f2",
+            "title": "Sampling near neighbors in search for fairness",
+            "abstract": "Similarity search is a fundamental algorithmic primitive, widely used in many computer science disciplines. Given a set of points S and a radius parameter r > 0, the r-near neighbor (r-NN) problem asks for a data structure that, given any query point q, returns a point p within distance at most r from q. In this paper, we study the r-NN problem in the light of individual fairness and providing equal opportunities: all points that are within distance r from the query should have the same probability to be returned. The problem is of special interest in high dimensions, where Locality Sensitive Hashing (LSH), the theoretically leading approach to similarity search, does not provide any fairness guarantee. In this work, we show that LSH-based algorithms can be made fair, without a significant loss in efficiency. We propose several efficient data structures for the exact and approximate variants of the fair NN problem. Our approach works more generally for sampling uniformly from a sub-collection of sets of a given collection and can be used in a few other applications. We also carried out an experimental evaluation that highlights the inherent unfairness of existing NN data structures.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2138604826",
+                    "name": "Martin Aum\u00fcller"
+                },
+                {
+                    "authorId": "1388677326",
+                    "name": "Sariel Har-Peled"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1801719",
+                    "name": "R. Pagh"
+                },
+                {
+                    "authorId": "35007525",
+                    "name": "Francesco Silvestri"
+                }
+            ]
+        },
+        {
+            "paperId": "bf29045366926b222fcc8487d9c5f417b3283058",
+            "title": "Adaptive Sketches for Robust Regression with Importance Sampling",
+            "abstract": "We introduce data structures for solving robust regression through stochastic gradient descent (SGD) by sampling gradients with probability proportional to their norm, i.e., importance sampling. Although SGD is widely used for large scale machine learning, it is well-known for possibly experiencing slow convergence rates due to the high variance from uniform sampling. On the other hand, importance sampling can significantly decrease the variance but is usually difficult to implement because computing the sampling probabilities requires additional passes over the data, in which case standard gradient descent (GD) could be used instead. In this paper, we introduce an algorithm that approximately samples $T$ gradients of dimension $d$ from nearly the optimal importance sampling distribution for a robust regression problem over $n$ rows. Thus our algorithm effectively runs $T$ steps of SGD with importance sampling while using sublinear space and just making a single pass over the data. Our techniques also extend to performing importance sampling for second-order optimization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "143982862",
+                    "name": "David P. Woodruff"
+                },
+                {
+                    "authorId": "3393628",
+                    "name": "Samson Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "cdd2fee10a9b8364113768e368597f60d6a0de13",
+            "title": "Composable Coresets for Constrained Determinant Maximization and Beyond",
+            "abstract": "We study the task of determinant maximization under partition constraint, in the context of large data sets. Given a point set $V\\subset \\mathbb{R}^d$ that is partitioned into $s$ groups $V_1,..., V_s$, and integers $k_1,...,k_s$ where $k=\\sum_i k_i$, the goal is to pick $k_i$ points from group $i$ such that the overall determinant of the picked $k$ points is maximized. Determinant Maximization and its constrained variants have gained a lot of interest for modeling diversityand have found applications in the context of fairness and data summarization. We study the design of composable coresets for the constrained determinant maximization problem. Composable coresets are small subsets of the data that (approximately) preserve optimal solutions to optimization tasks and enable efficient solutions in several other large data models including the distributed and the streaming settings. In this work, we consider two regimes. For the case of $k>d$, we show a peeling algorithm that gives us a composable coreset of size $kd$ with an approximation factor of $d^{O(d)}$. We complement our results by showing that this approximation factor is tight. For the case of $k\\leq d$, we show that a simple modification of the previous algorithms results in an optimal coreset verified by our lower bounds. Our results apply to all strongly Rayleigh distribution and several other experimental design problems. In addition, we show coreset construction algorithms under the more general laminar matroid constraints.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "94477203",
+                    "name": "T. Vuong"
+                }
+            ]
+        },
+        {
+            "paperId": "8aee0d988420132550f9e53d68cfdb228a7df6ec",
+            "title": "Sampling a Near Neighbor in High Dimensions \u2014 Who is the Fairest of Them All?",
+            "abstract": "Similarity search is a fundamental algorithmic primitive, widely used in many computer science disciplines. Given a set of points S and a radius parameter r > 0, the r-near neighbor (r-NN) problem asks for a data structure that, given any query point q, returns a point p within distance at most r from q. In this paper, we study the r-NN problem in the light of individual fairness and providing equal opportunities: all points that are within distance r from the query should have the same probability to be returned. In the low-dimensional case, this problem was first studied by Hu, Qiao, and Tao (PODS 2014). Locality sensitive hashing (LSH), the theoretically strongest approach to similarity search in high dimensions, does not provide such a fairness guarantee. In this work, we show that LSH based algorithms can be made fair, without a significant loss in efficiency. We propose several efficient data structures for the exact and approximate variants of the fair NN problem. Our approach works more generally for sampling uniformly from a sub-collection of sets of a given collection and can be used in a few other applications. We also develop a data structure for fair similarity search under inner product that requires nearly-linear space and exploits locality sensitive filters. The paper concludes with an experimental evaluation that highlights the unfairness of state-of-the-art NN data structures and shows the performance of our algorithms on real-world datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2103394424",
+                    "name": "Martin Aumuller"
+                },
+                {
+                    "authorId": "1388677326",
+                    "name": "Sariel Har-Peled"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1801719",
+                    "name": "R. Pagh"
+                },
+                {
+                    "authorId": "35007525",
+                    "name": "Francesco Silvestri"
+                }
+            ]
+        },
+        {
+            "paperId": "9fc50ad15b7a12bac65444f030e1189bab1626e2",
+            "title": "Adaptive Single-Pass Stochastic Gradient Descent in Input Sparsity Time",
+            "abstract": "We study sampling algorithms for variance reduction methods for stochastic optimization. Although stochastic gradient descent (SGD) is widely used for large scale machine learning, it sometimes experiences slow convergence rates due to the high variance from uniform sampling. In this paper, we introduce an algorithm that approximately samples a gradient from the optimal distribution for a common finite-sum form with n terms, while just making a single pass over the data, using input sparsity time, and \\tOTd space. Our algorithm can be implemented in big data models such as the streaming and distributed models. Moreover, we show that our algorithm can be generalized to approximately sample Hessians and thus provides variance reduction for second-order methods as well. We demonstrate the efficiency of our algorithm on large-scale datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "143982862",
+                    "name": "David P. Woodruff"
+                },
+                {
+                    "authorId": "3393628",
+                    "name": "Samson Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "c589d8a3705095bb69d7df1d33095b9a552a37f3",
+            "title": "Two-Sided Kirszbraun Theorem",
+            "abstract": "In this paper, we prove a two-sided variant of the Kirszbraun theorem. Consider an arbitrary subset X of Euclidean space and its superset Y . Let f be a 1-Lipschitz map from X to R. The Kirszbraun theorem states that the map f can be extended to a 1-Lipschitz map f\u0303 from Y to R. While the extension f\u0303 does not increase distances between points, there is no guarantee that it does not decrease distances significantly. In fact, f\u0303 may even map distinct points to the same point (that is, it can infinitely decrease some distances). However, we prove that there exists a (1 + \u03b5)-Lipschitz outer extension f\u0303 : Y \u2192 R \u2032 that does not decrease distances more than \u201cnecessary\u201d. Namely, \u2225f\u0303(x) \u2212 f\u0303(y)\u2225 \u2265 c \u221a \u03b5min(\u2225x\u2212 y\u2225, inf a,b\u2208X (\u2225x\u2212 a\u2225 + \u2225f(a) \u2212 f(b)\u2225 + \u2225b\u2212 y\u2225)) for some absolutely constant c > 0. This bound is asymptotically optimal, since no L-Lipschitz extension g can have \u2225g(x) \u2212 g(y)\u2225 > Lmin(\u2225x\u2212 y\u2225, infa,b\u2208X(\u2225x\u2212 a\u2225 + \u2225f(a) \u2212 f(b)\u2225 + \u2225b\u2212 y\u2225)) even for a single pair of points x and y. In some applications, one is interested in the distances \u2225f\u0303(x) \u2212 f\u0303(y)\u2225 between images of points x, y \u2208 Y rather than in the map f\u0303 itself. The standard Kirszbraun theorem does not provide any method of computing these distances without computing the entire map f\u0303 first. In contrast, our theorem provides a simple approximate formula for distances \u2225f\u0303(x) \u2212 f\u0303(y)\u2225. 2012 ACM Subject Classification Theory of computation \u2192 Computational geometry; Mathematics of computing",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2064251",
+                    "name": "A. Backurs"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1721446",
+                    "name": "K. Makarychev"
+                },
+                {
+                    "authorId": "1688181",
+                    "name": "Yury Makarychev"
+                }
+            ]
+        },
+        {
+            "paperId": "f82fa87c8e619e5823459ad420aff224b32a6d91",
+            "title": "Fair near neighbor search via sampling",
+            "abstract": "Similarity search is a fundamental algorithmic primitive, widely used in many computer science disciplines. Given a set of points S and a radius parameter r > 0, the rnear neighbor (r-NN) problem asks for a data structure that, given any query point q, returns a point p within distance at most r from q. In this paper, we study the r-NN problem in the light of individual fairness and providing equal opportunities: all points that are within distance r from the query should have the same probability to be returned. In the low-dimensional case, this problem was first studied by Hu, Qiao, and Tao (PODS 2014). Locality sensitive hashing (LSH), the theoretically strongest approach to similarity search in high dimensions, does not provide such a fairness guarantee.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2138604826",
+                    "name": "Martin Aum\u00fcller"
+                },
+                {
+                    "authorId": "1388677326",
+                    "name": "Sariel Har-Peled"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1801719",
+                    "name": "R. Pagh"
+                },
+                {
+                    "authorId": "35007525",
+                    "name": "Francesco Silvestri"
+                }
+            ]
+        },
+        {
+            "paperId": "79308eb3db756ac3001e133b45a9dc0042e1e7ac",
+            "title": "Towards Better Approximation of Graph Crossing Number",
+            "abstract": "Graph Crossing Number is a fundamental and extensively studied problem with wide ranging applications. In this problem, the goal is to draw an input graph $G$ in the plane so as to minimize the number of crossings between the images of its edges. The problem is notoriously difficult, and despite extensive work, non-trivial approximation algorithms are only known for bounded-degree graphs. Even for this special case, the best current algorithm achieves a $\\tilde{O}(\\sqrt{n})$-approximation, while the best current negative results do not rule out constant-factor approximation. All current approximation algorithms for the problem build on the same paradigm, which is also used in practice: compute a set $E^{\\prime}$ of edges (called a planarizing set) such that $G\\ \\backslash\\ E^{\\prime}$ is planar; compute a planar drawing of $G\\ \\backslash\\ E^{\\prime}$; then add the drawings of the edges of $E^{\\prime}$ to the resulting drawing. Unfortunately, there are examples of graphs $G$, in which any implementation of this method must incur $\\Omega$ (OPT2) crossings, where OPT is the value of the optimal solution. This barrier seems to doom the only currently known approach to designing approximation algorithms for the problem, and to prevent it from yielding a better than $O(\\sqrt{n})$-approximation. In this paper we propose a new paradigm that allows us to overcome this barrier. We show an algorithm, that, given a bounded-degree graph G and a planarizing E' set of its edges, computes another planarizing edge set E\" with E' \u2286 E\", such that |E\"| is relatively small, and there exists a near-optimal drawing of in which no edges of participate in crossings. This allows us to reduce the Crossing Number problem to Crossing Number with Rotation System \u2013 a variant of the Crossing Number problem, in which the ordering of the edges incident to every vertex is fixed as part of input. In our reduction, we obtain an instance of this problem, where is roughly bounded by the crossing number of the original graph. We show a randomized algorithm for this new problem, that allows us to obtain an - approximation for Graph Crossing Number on bounded-degree graphs, for some constant.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2495534",
+                    "name": "Julia Chuzhoy"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "40366488",
+                    "name": "Zihan Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "8db45eed427f1db66a49022983f9bae217607013",
+            "title": "(Individual) Fairness for k-Clustering",
+            "abstract": "We give a local search based algorithm for $k$-median ($k$-means) clustering from the perspective of individual fairness. More precisely, for a point $x$ in a point set $P$ of size $n$, let $r(x)$ be the minimum radius such that the ball of radius $r(x)$ centered at $x$ has at least $n/k$ points from $P$. Intuitively, if a set of $k$ random points are chosen from $P$ as centers, every point $x\\in P$ expects to have a center within radius $r(x)$. An individually fair clustering provides such a guarantee for every point $x\\in P$. This notion of fairness was introduced in [Jung et al., 2019] where they showed how to get an approximately feasible $k$-clustering with respect to this fairness condition. \nIn this work, we show how to get an approximately optimal such fair $k$-clustering. The $k$-median ($k$-means) cost of our solution is within a constant factor of the cost of an optimal fair $k$-clustering, and our solution approximately satisfies the fairness condition (also within a constant factor). Further, we complement our theoretical bounds with empirical evaluation.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2347383",
+                    "name": "A. Vakilian"
+                }
+            ]
+        },
+        {
+            "paperId": "a8dd616e29db7efc71f0b5d1443fef3b9d072f8b",
+            "title": "Non-adaptive adaptive sampling on turnstile streams",
+            "abstract": "Adaptive sampling is a useful algorithmic tool for data summarization problems in the classical centralized setting, where the entire dataset is available to the single processor performing the computation. Adaptive sampling repeatedly selects rows of an underlying matrix A\u2208\u211d n\u00d7 d , where n\u226b d, with probabilities proportional to their distances to the subspace of the previously selected rows. Intuitively, adaptive sampling seems to be limited to trivial multi-pass algorithms in the streaming model of computation due to its inherently sequential nature of assigning sampling probabilities to each row only after the previous iteration is completed. Surprisingly, we show this is not the case by giving the first one-pass algorithms for adaptive sampling on turnstile streams and using space poly(d,k,logn), where k is the number of adaptive sampling rounds to be performed. Our adaptive sampling procedure has a number of applications to various data summarization problems that either improve state-of-the-art or have only been previously studied in the more relaxed row-arrival model. We give the first relative-error algorithm for column subset selection on turnstile streams. We show our adaptive sampling algorithm also gives the first relative-error algorithm for subspace approximation on turnstile streams that returns k noisy rows of A. The quality of the output can be improved to a (1+\u0454)-approximation at the tradeoff of a bicriteria algorithm that outputs a larger number of rows. We then give the first algorithm for projective clustering on turnstile streams that uses space sublinear in n. In fact, we use space poly(d,k,s,1/\u0454,logn) to output a (1+\u0454)-approximation, where s is the number of k-dimensional subspaces. Our adaptive sampling primitive also provides the first algorithm for volume maximization on turnstile streams. We complement our volume maximization algorithmic results with lower bounds that are tight up to lower order terms, even for multi-pass algorithms. By a similar construction, we also obtain lower bounds for volume maximization in the row-arrival model, which we match with competitive upper bounds.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2111443",
+                    "name": "Ilya P. Razenshteyn"
+                },
+                {
+                    "authorId": "143982862",
+                    "name": "David P. Woodruff"
+                },
+                {
+                    "authorId": "3393628",
+                    "name": "Samson Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "c84af21229d675a16ee6bda8a81fb1847712760f",
+            "title": "Streaming Complexity of SVMs",
+            "abstract": "We study the space complexity of solving the bias-regularized SVM problem in the streaming model. This is a classic supervised learning problem that has drawn lots of attention, including for developing fast algorithms for solving the problem approximately. One of the most widely used algorithms for approximately optimizing the SVM objective is Stochastic Gradient Descent (SGD), which requires only $O(\\frac{1}{\\lambda\\epsilon})$ random samples, and which immediately yields a streaming algorithm that uses $O(\\frac{d}{\\lambda\\epsilon})$ space. For related problems, better streaming algorithms are only known for smooth functions, unlike the SVM objective that we focus on in this work. We initiate an investigation of the space complexity for both finding an approximate optimum of this objective, and for the related ``point estimation'' problem of sketching the data set to evaluate the function value $F_\\lambda$ on any query $(\\theta, b)$. We show that, for both problems, for dimensions $d=1,2$, one can obtain streaming algorithms with space polynomially smaller than $\\frac{1}{\\lambda\\epsilon}$, which is the complexity of SGD for strongly convex functions like the bias-regularized SVM, and which is known to be tight in general, even for $d=1$. We also prove polynomial lower bounds for both point estimation and optimization. In particular, for point estimation we obtain a tight bound of $\\Theta(1/\\sqrt{\\epsilon})$ for $d=1$ and a nearly tight lower bound of $\\widetilde{\\Omega}(d/{\\epsilon}^2)$ for $d = \\Omega( \\log(1/\\epsilon))$. Finally, for optimization, we prove a $\\Omega(1/\\sqrt{\\epsilon})$ lower bound for $d = \\Omega( \\log(1/\\epsilon))$, and show similar bounds when $d$ is constant.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1738395",
+                    "name": "Alexandr Andoni"
+                },
+                {
+                    "authorId": "90909974",
+                    "name": "Collin Burns"
+                },
+                {
+                    "authorId": "39734316",
+                    "name": "Yi Li"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "143982862",
+                    "name": "David P. Woodruff"
+                }
+            ]
+        },
+        {
+            "paperId": "5bbb02cfe0ed6319d115a3a966c61c0e7102bd82",
+            "title": "Near Neighbor: Who is the Fairest of Them All?",
+            "abstract": "$\\newcommand{\\ball}{\\mathbb{B}}\\newcommand{\\dsQ}{\\mathcal{Q}}\\newcommand{\\dsS}{\\mathcal{S}}$In this work we study a fair variant of the near neighbor problem. Namely, given a set of $n$ points $P$ and a parameter $r$, the goal is to preprocess the points, such that given a query point $q$, any point in the $r$-neighborhood of the query, i.e., $\\ball(q,r)$, have the same probability of being reported as the near neighbor. \nWe show that LSH based algorithms can be made fair, without a significant loss in efficiency. Specifically, we show an algorithm that reports a point in the $r$-neighborhood of a query $q$ with almost uniform probability. The query time is proportional to $O\\bigl( \\mathrm{dns}(q.r) \\dsQ(n,c) \\bigr)$, and its space is $O(\\dsS(n,c))$, where $\\dsQ(n,c)$ and $\\dsS(n,c)$ are the query time and space of an LSH algorithm for $c$-approximate near neighbor, and $\\mathrm{dns}(q,r)$ is a function of the local density around $q$. \nOur approach works more generally for sampling uniformly from a sub-collection of sets of a given collection and can be used in a few other applications. Finally, we run experiments to show performance of our approach on real data.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1388677326",
+                    "name": "Sariel Har-Peled"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        },
+        {
+            "paperId": "cf6f6b96f139995b79c30ef06079fbd0e29b47d3",
+            "title": "Composable Core-sets for Determinant Maximization: A Simple Near-Optimal Algorithm",
+            "abstract": "``Composable core-sets'' are an efficient framework for solving optimization problems in massive data models. In this work, we consider efficient construction of composable core-sets for the determinant maximization problem. This can also be cast as the MAP inference task for determinantal point processes, that have recently gained a lot of interest for modeling diversity and fairness. The problem was recently studied in [IMOR'18], where they designed composable core-sets with the optimal approximation bound of $\\tilde O(k)^k$. On the other hand, the more practical Greedy algorithm has been previously used in similar contexts. In this work, first we provide a theoretical approximation guarantee of $O(C^{k^2})$ for the Greedy algorithm in the context of composable core-sets; Further, we propose to use a Local Search based algorithm that while being still practical, achieves a nearly optimal approximation bound of $O(k)^{2k}$; Finally, we implement all three algorithms and show the effectiveness of our proposed algorithm on standard data sets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "1681474",
+                    "name": "S. Gharan"
+                },
+                {
+                    "authorId": "2059329143",
+                    "name": "A. Rezaei"
+                }
+            ]
+        },
+        {
+            "paperId": "79359c0962374d35252566c2dcd6f833788121d5",
+            "title": "Set Cover in Sub-linear Time",
+            "abstract": "We study the classic set cover problem from the perspective of sub-linear algorithms. Given access to a collection of m sets over n elements in the query model, we show that sub-linear algorithms derived from existing techniques have almost tight query complexities. On one hand, first we show an adaptation of the streaming algorithm presented in [17] to the sub-linear query model, that returns an \u03b1-approximate cover using O(m(n/k)1/(\u03b1\u22121) + nk) queries to the input, where k denotes the value of a minimum set cover. We then complement this upper bound by proving that for lower values of k, the required number of queries is [EQUATION], even for estimating the optimal cover size. Moreover, we prove that even checking whether a given collection of sets covers all the elements would require \u03a9(nk) queries. These two lower bounds provide strong evidence that the upper bound is almost tight for certain values of the parameter k. On the other hand, we show that this bound is not optimal for larger values of the parameter k, as there exists a (1 + e)-approximation algorithm with O(mn/ke2) queries. We show that this bound is essentially tight for sufficiently small constant \u03f5, by establishing a lower bound of [EQUATION] query complexity. Our lower-bound results follow by carefully designing two distributions of instances that are hard to distinguish. In particular, our first lower bound involves a probabilistic construction of a certain set system with a minimum set cover of size \u03b1k, with the key property that a small number of \"almost uniformly distributed\" modifications can reduce the minimum set cover size down to k. Thus, these modifications are not detectable unless a large number of queries are asked. We believe that our probabilistic construction technique might find applications to lower bounds for other combinatorial optimization problems.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "145109224",
+                    "name": "R. Rubinfeld"
+                },
+                {
+                    "authorId": "2347383",
+                    "name": "A. Vakilian"
+                },
+                {
+                    "authorId": "2288505",
+                    "name": "Anak Yodpinyanee"
+                }
+            ]
+        },
+        {
+            "paperId": "8cce277151eccf5e40efb451d0cc29df1ff72745",
+            "title": "Composable Core-sets for Determinant Maximization Problems via Spectral Spanners",
+            "abstract": "We study a spectral generalization of classical combinatorial graph spanners to the spectral setting. Given a set of vectors $V\\subseteq \\Re^d$, we say a set $U\\subseteq V$ is an $\\alpha$-spectral spanner if for all $v\\in V$ there is a probability distribution $\\mu_v$ supported on $U$ such that $$vv^\\intercal \\preceq \\alpha\\cdot\\mathbb{E}_{u\\sim\\mu_v} uu^\\intercal.$$ We show that any set $V$ has an $\\tilde{O}(d)$-spectral spanner of size $\\tilde{O}(d)$ and this bound is almost optimal in the worst case. \nWe use spectral spanners to study composable core-sets for spectral problems. We show that for many objective functions one can use a spectral spanner, independent of the underlying functions, as a core-set and obtain almost optimal composable core-sets. For example, for the determinant maximization problem we obtain an $\\tilde{O}(k)^k$-composable core-set and we show that this is almost optimal in the worst case. \nOur algorithm is a spectral analogue of the classical greedy algorithm for finding (combinatorial) spanners in graphs. We expect that our spanners find many other applications in distributed or parallel models of computation. Our proof is spectral. As a side result of our techniques, we show that the rank of diagonally dominant lower-triangular matrices are robust under `small perturbations' which could be of independent interests.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1681474",
+                    "name": "S. Gharan"
+                },
+                {
+                    "authorId": "2059329143",
+                    "name": "A. Rezaei"
+                }
+            ]
+        },
+        {
+            "paperId": "cedde30bd4ae464e3fdef8f7e43ac33cebd6a57e",
+            "title": "Nonlinear dimension reduction via outer Bi-Lipschitz extensions",
+            "abstract": "We introduce and study the notion of *an outer bi-Lipschitz extension* of a map between Euclidean spaces. The notion is a natural analogue of the notion of *a Lipschitz extension* of a Lipschitz map. We show that for every map f there exists an outer bi-Lipschitz extension f\u2032 whose distortion is greater than that of f by at most a constant factor. This result can be seen as a counterpart of the classic Kirszbraun theorem for outer bi-Lipschitz extensions. We also study outer bi-Lipschitz extensions of near-isometric maps and show upper and lower bounds for them. Then, we present applications of our results to prioritized and terminal dimension reduction problems, described next. We prove a *prioritized* variant of the Johnson\u2013Lindenstrauss lemma: given a set of points X\u2282 \u211dd of size N and a permutation (\u201dpriority ranking\u201d) of X, there exists an embedding f of X into \u211dO(logN) with distortion O(loglogN) such that the point of rank j has only O(log3 + \u03b5 j) non-zero coordinates \u2013 more specifically, all but the first O(log3+\u03b5 j) coordinates are equal to 0; the distortion of f restricted to the first j points (according to the ranking) is at most O(loglogj). The result makes a progress towards answering an open question by Elkin, Filtser, and Neiman about prioritized dimension reductions. We prove that given a set X of N points in \u211cd, there exists a *terminal* dimension reduction embedding of \u211dd into \u211dd\u2032, where d\u2032 = O(logN/\u03b54), which preserves distances ||x\u2212y|| between points x\u2208 X and y \u2208 \u211dd, up to a multiplicative factor of 1 \u00b1 \u03b5. This improves a recent result by Elkin, Filtser, and Neiman. The dimension reductions that we obtain are nonlinear, and this nonlinearity is necessary.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1721446",
+                    "name": "K. Makarychev"
+                },
+                {
+                    "authorId": "1688181",
+                    "name": "Yury Makarychev"
+                },
+                {
+                    "authorId": "2111443",
+                    "name": "Ilya P. Razenshteyn"
+                }
+            ]
+        },
+        {
+            "paperId": "409360b14d9473d3bdbc21c98fabec731887f381",
+            "title": "Fractional Set Cover in the Streaming Model",
+            "abstract": "We study the Fractional Set Cover problem in the streaming model. That is, we consider the relaxation of the set cover problem over a universe of n elements and a collection of m sets, where each set can be picked fractionally, with a value in [0,1]. We present a randomized (1+a)-approximation algorithm that makes p passes over the data, and uses O(polylog(m,n,1/a) (mn^(O(1/(pa)))+n)) memory space. The algorithm works in both the set arrival and the edge arrival models. To the best of our knowledge, this is the first streaming result for the fractional set cover problem. We obtain our results by employing the multiplicative weights update framework in the streaming settings.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "145109224",
+                    "name": "R. Rubinfeld"
+                },
+                {
+                    "authorId": "5171324",
+                    "name": "Jonathan Ullman"
+                },
+                {
+                    "authorId": "2347383",
+                    "name": "A. Vakilian"
+                },
+                {
+                    "authorId": "2288505",
+                    "name": "Anak Yodpinyanee"
+                }
+            ]
+        },
+        {
+            "paperId": "45621bc76c5e1478636e667e44abc96675f94b9b",
+            "title": "LSH on the Hypercube Revisited",
+            "abstract": "LSH (locality sensitive hashing) had emerged as a powerful technique in nearest-neighbor search in high dimensions [IM98, HIM12]. Given a point set $P$ in a metric space, and given parameters $r$ and $\\varepsilon > 0$, the task is to preprocess the point set, such that given a query point $q$, one can quickly decide if $q$ is in distance at most $\\leq r$ or $\\geq (1+\\varepsilon)r$ from the point set $P$. Once such a near-neighbor data-structure is available, one can reduce the general nearest-neighbor search to logarithmic number of queries in such structures [IM98, Har01, HIM12]. \nIn this note, we revisit the most basic settings, where $P$ is a set of points in the binary hypercube $\\{0,1\\}^d$, under the $L_1$/Hamming metric, and present a short description of the LSH scheme in this case. We emphasize that there is no new contribution in this note, except (maybe) the presentation itself, which is inspired by the authors recent work [HM17].",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1388677326",
+                    "name": "Sariel Har-Peled"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        },
+        {
+            "paperId": "48a81a16c68fa660fafcc9253169183e6849511f",
+            "title": "Sublinear algorithms for massive data problems",
+            "abstract": "In this thesis, we present algorithms and prove lower bounds for fundamental computational problems in the models that address massive data sets. The models include streaming algorithms, sublinear time algorithms, property testing algorithms, sublinear query time algorithms with preprocessing, or computing small summaries for large data. More precisely, we study the following problems. The (Approximate) Nearest Neighbor problem models the task of searching among a large data set of objects. Given a data set of n points in a high dimensional space, its goal is to search for the closest point in the data set to a given query point, in sublinear time, and by suitably preprocessing the data. This problem has numerous applications in image and video databases, information retrieval, clustering, and many others. In these applications, the points model the objects in a large data set, and their closeness measure similarity between the objects. However, for the purpose of many applications, the basic formulation of Nearest Neighbor as described, encounters several challenges which we address in this thesis: we show how to deal with the case where the data is corrupted or incomplete, how to handle multiple related queries, and how to handle a data set of more complex objects rather than simple points. Next, we show a general approach for solving massive data problems. We introduce the notion of Composable Coresets, de ned as small summaries of multiple data sets that can be aggregated together to summarize the whole data. We show how to compute such summaries for several clustering problems, and at the same time, demonstrate that no such summaries are possible for other natural problems such as maximum coverage. Finally, we study the Set Cover problem in alternate sublinear models: streaming algorithms (where one makes a small number of passes over the data using small storage), and sublinear time algorithms (where one computes the answer without reading the whole input). We present tight approximation algorithms for the Set Cover problem in both of these models. In this thesis, we introduce theoretical problems and concepts that model computational issues arising in databases, computer vision and other areas. Most of the presented algorithms are simple and practical to implement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        },
+        {
+            "paperId": "96785aec1fb97f697e7a0ea09e8f09144c5ac02b",
+            "title": "Simultaneous Nearest Neighbor Search",
+            "abstract": "Motivated by applications in computer vision and databases, we introduce and study the Simultaneous Nearest Neighbor Search (SNN) problem. Given a set of data points, the goal of SNN is to design a data structure that, given a collection of queries, finds a collection of close points that are compatible with each other. Formally, we are given $k$ query points $Q=q_1,\\cdots,q_k$, and a compatibility graph $G$ with vertices in $Q$, and the goal is to return data points $p_1,\\cdots,p_k$ that minimize (i) the weighted sum of the distances from $q_i$ to $p_i$ and (ii) the weighted sum, over all edges $(i,j)$ in the compatibility graph $G$, of the distances between $p_i$ and $p_j$. The problem has several applications, where one wants to return a set of consistent answers to multiple related queries. This generalizes well-studied computational problems, including NN, Aggregate NN and the 0-extension problem. \nIn this paper we propose and analyze the following general two-step method for designing efficient data structures for SNN. In the first step, for each query point $q_i$ we find its (approximate) nearest neighbor point $\\hat{p}_i$; this can be done efficiently using existing approximate nearest neighbor structures. In the second step, we solve an off-line optimization problem over sets $q_1,\\cdots,q_k$ and $\\hat{p}_1,\\cdots,\\hat{p}_k$; this can be done efficiently given that $k$ is much smaller than $n$. Even though $\\hat{p}_1,\\cdots,\\hat{p}_k$ might not constitute the optimal answers to queries $q_1,\\cdots,q_k$, we show that, for the unweighted case, the resulting algorithm is $O(\\log k/\\log \\log k)$-approximation. Also, we show that the approximation factor can be in fact reduced to a constant for compatibility graphs frequently occurring in practice. \nFinally, we show that the \"empirical approximation factor\" provided by the above approach is very close to 1.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "2633757",
+                    "name": "Robert D. Kleinberg"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "145155436",
+                    "name": "Yang Yuan"
+                }
+            ]
+        },
+        {
+            "paperId": "ccedc6d206d54ef96e8f02c2d135edd8c39df3ca",
+            "title": "Approximate Sparse Linear Regression",
+            "abstract": "In the Sparse Linear Regression (SLR) problem, given a $d \\times n$ matrix $M$ and a $d$-dimensional query $q$, the goal is to compute a $k$-sparse $n$-dimensional vector $\\tau$ such that the error $||M \\tau-q||$ is minimized. This problem is equivalent to the following geometric problem: given a set $P$ of $n$ points and a query point $q$ in $d$ dimensions, find the closest $k$-dimensional subspace to $q$, that is spanned by a subset of $k$ points in $P$. In this paper, we present data-structures/algorithms and conditional lower bounds for several variants of this problem (such as finding the closest induced $k$ dimensional flat/simplex instead of a subspace). \nIn particular, we present approximation algorithms for the online variants of the above problems with query time $\\tilde O(n^{k-1})$, which are of interest in the \"low sparsity regime\" where $k$ is small, e.g., $2$ or $3$. For $k=d$, this matches, up to polylogarithmic factors, the lower bound that relies on the affinely degenerate conjecture (i.e., deciding if $n$ points in $\\mathbb{R}^d$ contains $d+1$ points contained in a hyperplane takes $\\Omega(n^d)$ time). Moreover, our algorithms involve formulating and solving several geometric subproblems, which we believe to be of independent interest.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1388677326",
+                    "name": "Sariel Har-Peled"
+                },
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        },
+        {
+            "paperId": "62d689f9d4596a8d6e34b71b7ef5f3009b2319a2",
+            "title": "Proximity in the Age of Distraction: Robust Approximate Nearest Neighbor Search",
+            "abstract": "We introduce a new variant of the nearest neighbor search problem, which allows for some coordinates of the dataset to be arbitrarily corrupted or unknown. Formally, given a dataset of $n$ points $P=\\{ x_1,\\ldots, x_n\\}$ in high-dimensions, and a parameter $k$, the goal is to preprocess the dataset, such that given a query point $q$, one can compute quickly a point $x \\in P$, such that the distance of the query to the point $x$ is minimized, when ignoring the \"optimal\" $k$ coordinates. Note, that the coordinates being ignored are a function of both the query point and the point returned. \nWe present a general reduction from this problem to answering ANN queries, which is similar in spirit to LSH (locality sensitive hashing) [IM98]. Specifically, we give a sampling technique which achieves a bi-criterion approximation for this problem. If the distance to the nearest neighbor after ignoring $k$ coordinates is $r$, the data-structure returns a point that is within a distance of $O(r)$ after ignoring $O(k)$ coordinates. We also present other applications and further extensions and refinements of the above result. \nThe new data-structures are simple and (arguably) elegant, and should be practical -- specifically, all bounds are polynomial in all relevant parameters (including the dimension of the space, and the robustness parameter $k$).",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1388677326",
+                    "name": "Sariel Har-Peled"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        },
+        {
+            "paperId": "efec55d4e071b1cec5188d79bd9bde71ae7c4b80",
+            "title": "Approximate Nearest Line Search in High Dimensions",
+            "abstract": "We consider the Approximate Nearest Line Search (NLS) problem. Given a set L of N lines in the high dimensional Euclidean space Rd, the goal is to build a data structure that, given a query point q \u2208 Rd, reports a line l \u2208 L such that its distance to the query is within (1 + e) factor of the distance of the closest line to the query point q. The problem is a natural generalization of the well-studied Approximate Nearest Neighbor problem for point sets (ANN), and is a natural first step towards understanding how to build efficient nearest-neighbor data structures for objects that are more complex than points. \n \nOur main result is a data structure that, for any fixed e > 0, reports the approximate nearest line in time (d + log N + 1/e)O(1) using O(N + d)O(1/e2) space. This is the first high-dimensional data structure for this problem with poly-logarithmic query time and polynomial space. In contrast, the best previous data structure for this problem, due to Magen [16], required quasi-polynomial space. Up to polynomials, the bounds achieved by our data structure match the performance of the best algorithm for the approximate nearest neighbor problem for point sets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        },
+        {
+            "paperId": "ff1d019415bdcfb465e0e2784593c134ce66c707",
+            "title": "Towards Tight Bounds for the Streaming Set Cover Problem",
+            "abstract": "We consider the classic Set Cover problem in the data stream model. For n elements and m sets (m \u2265 n) we give a O(1/\u03b4)-pass algorithm with a strongly sub-linear ~O(mn\u03b4) space and logarithmic approximation factor. This yields a significant improvement over the earlier algorithm of Demaine et al. [10] that uses exponentially larger number of passes. We complement this result by showing that the tradeoff between the number of passes and space exhibited by our algorithm is tight, at least when the approximation factor is equal to 1. Specifically, we show that any algorithm that computes set cover exactly using ({1 over 2\u03b4}-1) passes must use ~\u03a9(mn\u03b4) space in the regime of m=O(n). Furthermore, we consider the problem in the geometric setting where the elements are points in R2 and sets are either discs, axis-parallel rectangles, or fat triangles in the plane, and show that our algorithm (with a slight modification) uses the optimal ~O(n) space to find a logarithmic approximation in O(1/\u03b4) passes. Finally, we show that any randomized one-pass algorithm that distinguishes between covers of size 2 and 3 must use a linear (i.e., \u03a9(mn)) amount of space. This is the first result showing that a randomized, approximate algorithm cannot achieve a space bound that is sublinear in the input size. This indicates that using multiple passes might be necessary in order to achieve sub-linear space bounds for this problem while guaranteeing small approximation factors.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "2115885855",
+                    "name": "A. Vakilian"
+                }
+            ]
+        },
+        {
+            "paperId": "d36ee86a7fb79b18b6324409e1c39ad4fac5058e",
+            "title": "Composable core-sets for diversity and coverage maximization",
+            "abstract": "In this paper we consider efficient construction of \"composable core-sets\" for basic diversity and coverage maximization problems. A core-set for a point-set in a metric space is a subset of the point-set with the property that an approximate solution to the whole point-set can be obtained given the core-set alone. A composable core-set has the property that for a collection of sets, the approximate solution to the union of the sets in the collection can be obtained given the union of the composable core-sets for the point sets in the collection. Using composable core-sets one can obtain efficient solutions to a wide variety of massive data processing applications, including nearest neighbor search, streaming algorithms and map-reduce computation. Our main results are algorithms for constructing composable core-sets for several notions of \"diversity objective functions\", a topic that attracted a significant amount of research over the last few years. The composable core-sets we construct are small and accurate: their approximation factor almost matches that of the best \"off-line\" algorithms for the relevant optimization problems (up to a constant factor). Moreover, we also show applications of our results to diverse nearest neighbor search, streaming algorithms and map-reduce computation. Finally, we show that for an alternative notion of diversity maximization based on the maximum coverage problem small composable core-sets do not exist.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "145967611",
+                    "name": "Mohammad Mahdian"
+                },
+                {
+                    "authorId": "1728881",
+                    "name": "V. Mirrokni"
+                }
+            ]
+        },
+        {
+            "paperId": "1ad2e5534204a23b910785fded53d9a0b7ef677c",
+            "title": "Diverse near neighbor problem",
+            "abstract": "Motivated by the recent research on diversity-aware search, we investigate the k-diverse near neighbor reporting problem. The problem is defined as follows: given a query point q, report the maximum diversity set S of k points in the ball of radius r around q. The diversity of a set S is measured by the minimum distance between any pair of points in $S$ (the higher, the better). We present two approximation algorithms for the case where the points live in a d-dimensional Hamming space. Our algorithms guarantee query times that are sub-linear in n and only polynomial in the diversity parameter k, as well as the dimension d. For low values of k, our algorithms achieve sub-linear query times even if the number of points within distance r from a query $q$ is linear in $n$. To the best of our knowledge, these are the first known algorithms of this type that offer provable guarantees.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "3009678",
+                    "name": "Sofiane Abbar"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                },
+                {
+                    "authorId": "1757762",
+                    "name": "Kasturi R. Varadarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "d05b74a72d9799498958143a3255a76edb91470e",
+            "title": "Real-time recommendation of diverse related articles",
+            "abstract": "News articles typically drive a lot of traffic in the form of comments posted by users on a news site. Such user-generated content tends to carry additional information such as entities and sentiment. In general, when articles are recommended to users, only popularity (e.g., most shared and most commented), recency, and sometimes (manual) editors' picks (based on daily hot topics), are considered. We formalize a novel recommendation problem where the goal is to find the closest most diverse articles to the one the user is currently browsing. Our diversity measure incorporates entities and sentiment extracted from comments. Given the real-time nature of our recommendations, we explore the applicability of nearest neighbor algorithms to solve the problem. Our user study on real opinion articles from aljazeera.net and reuters.com validates the use of entities and sentiment extracted from articles and their comments to achieve news diversity when compared to content-based diversity. Finally, our performance experiments show the real-time feasibility of our solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3009678",
+                    "name": "Sofiane Abbar"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "1688317",
+                    "name": "P. Indyk"
+                },
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        },
+        {
+            "paperId": "d30a496ec35fcb5100d0925d2269851463c83a79",
+            "title": "Approximate nearest neighbor and its many variants",
+            "abstract": "This thesis investigates two variants of the approximate nearest neighbor problem. First, motivated by the recent research on diversity-aware search, we investigate the k-diverse near neighbor reporting problem. The problem is defined as follows: given a query point q, report the maximum diversity set S of k points in the ball of radius r around q. The diversity of a set S is measured by the minimum distance between any pair of points in S (the higher, the better). We present two approximation algorithms for the case where the points live in a d-dimensional Hamming space. Our algorithms guarantee query times that are sub-linear in n and only polynomial in the diversity parameter k, as well as the dimension d. For low values of k, our algorithms achieve sub-linear query times even if the number of points within distance r from a query q is linear in n. To the best of our knowledge, these are the first known algorithms of this type that offer provable guarantees. In the other variant, we consider the approximate line near neighbor (LNN) problem. Here, the database consists of a set of lines instead of points but the query is still a point. Let L be a set of n lines in the d dimensional euclidean space R. The goal is to preprocess the set of lines so that we can answer the Line Near Neighbor (LNN) queries in sub-linear time. That is, given the query point q \u2208 R, we want to report a line ` \u2208 L (if there is any), such that dist(q, `) \u2264 r for some threshold value r, where dist(q, `) is the euclidean distance between them. We start by illustrating the solution to the problem in the case where there are only two lines in the database and present a data structure in this case. Then we show a recursive algorithm that merges these data structures and solve the problem for the general case of n lines. The algorithm has polynomial space and performs only a logarithmic number of calls to the approximate nearest neighbor subproblem. Thesis Supervisor: Piotr Indyk Title: Professor",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145700959",
+                    "name": "S. Mahabadi"
+                }
+            ]
+        }
+    ]
+}

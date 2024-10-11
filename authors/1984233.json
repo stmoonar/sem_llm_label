@@ -1,0 +1,241 @@
+{
+    "authorId": "1984233",
+    "papers": [
+        {
+            "paperId": "478766ecd4cde7ae323c02cd5c74ad5595e3569b",
+            "title": "Constructing Bisimulation Summaries on a Multi-Core Graph Processing Framework",
+            "abstract": "Bisimulation summaries of graph data have multiple applications, including facilitating graph exploration and enabling query optimization techniques, but efficient, scalable, summary construction is challenging. The literature describes parallel construction algorithms using message-passing, and these have been recently adapted to MapReduce environments. The fixpoint nature of bisimulation is well suited to iterative graph processing, but the existing MapReduce solutions do not drastically decrease per-iteration times as the computation progresses. In this paper, we focus on leveraging parallel multi-core graph frameworks with the goal of constructing summaries in roughly the same amount of time that it takes to input the data into the framework (for a range of real world data graphs) and output the summary. To achieve our goal we introduce a singleton optimization that significantly reduces per-iteration times after only a few iterations. We present experimental results validating that our scalable GraphChi implementation achieves our goal with bisimulation summaries of million to billion edge graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                }
+            ]
+        },
+        {
+            "paperId": "877b0990c8ce2edb62cbe2de4fdc508398f8fc16",
+            "title": "S+EPPs: Construct and Explore Bisimulation Summaries, plus Optimize Navigational Queries; all on Existing SPARQL Systems",
+            "abstract": "We demonstrate S+EPPs, a system that provides fast construction of bisimulation summaries using graph analytics platforms, and then enhances existing SPARQL engines to support summary-based exploration and navigational query optimization. The construction component adds a novel optimization to a parallel bisimulation algorithm implemented on a multi-core graph processing framework. We show that for several large, disk resident, real world graphs, full summary construction can be completed in roughly the same time as the data load. The query translation component supports Extended Property Paths (EPPs), an enhancement of SPARQL 1.1 property paths that can express a significantly larger class of navigational queries. EPPs are implemented via rewritings into a widely used SPARQL subset. The optimization component can (transparently to users) translate EPPs defined on instance graphs into EPPs that take advantage of bisimulation summaries. S+EPPs combines the query and optimization translations to enable summary-based optimization of graph traversal queries on top of off-the-shelf SPARQL processors. The demonstration showcases the construction of bisimulation summaries of graphs (ranging from millions to billions of edges), together with the exploration benefits and the navigational query speedups obtained by leveraging summaries stored alongside the original datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                },
+                {
+                    "authorId": "1705291",
+                    "name": "Valeria Fionda"
+                },
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "145750056",
+                    "name": "G. Pirr\u00f2"
+                }
+            ]
+        },
+        {
+            "paperId": "3371d31a036b967e9e60936b25f64efbd088c7db",
+            "title": "Rewriting Queries over Summaries of Big Data Graphs",
+            "abstract": "This short paper reports on the benefits that traversal queries over existing graph stores (such as RDF databases) can gain from a class of optimizations based on summaries. Summaries, also known as structural indexes, have been extensively covered in the literature (see [2] for a brief overview). Despite this, summary-based optimizations are not widely implemented. To make both graph traversal queries and summaries readily available in existing RDF stores, we have devised a translation that outputs SPARQL queries that execute over summaries directly represented in RDF. In what follows, we give an overview of our proposal, illustrate it with an example, and mention preliminary evaluation results on real-world data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                },
+                {
+                    "authorId": "1705291",
+                    "name": "Valeria Fionda"
+                },
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "145750056",
+                    "name": "G. Pirr\u00f2"
+                }
+            ]
+        },
+        {
+            "paperId": "e7cf18c3b497120d1f571abcd842ca2d969c7453",
+            "title": "Entity matching for semistructured data in the Cloud",
+            "abstract": "The rapid expansion of available information, on the Web or inside companies, is increasing. With Cloud infrastructure maturing (including tools for parallel data processing, text analytics, clustering, etc.), there is more interest in integrating data to produce higher-value content. New challenges, notably include entity matching over large volumes of heterogeneous data.\n In this paper, we describe an approach for entity matching over large amounts of semistructured data in the Cloud. The approach combines ChuQL[4], a recently proposed extension of XQuery with MapReduce, and a blocking technique for entity matching which can be efficiently executed on top of MapReduce. We illustrate the proposed approach by applying it to extract automatically and enrich references in Wikipedia and report on an experimental evaluation of the approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2587068",
+                    "name": "M. Paradies"
+                },
+                {
+                    "authorId": "2346141",
+                    "name": "S. Malaika"
+                },
+                {
+                    "authorId": "1753075",
+                    "name": "J\u00e9r\u00f4me Sim\u00e9on"
+                },
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "1716839",
+                    "name": "K. Sattler"
+                }
+            ]
+        },
+        {
+            "paperId": "7b6f0b44efd396aa8e3061509148b57361826353",
+            "title": "Having a ChuQL at XML on the Cloud",
+            "abstract": "MapReduce/Hadoop has gained acceptance as a framework to process, transform, integrate, and analyze massive amounts of Web data on the Cloud. The MapReduce model (simple, fault tolerant, data parallelism on elastic clouds of commodity servers) is also attractive for processing enterprise and scientific data. Despite XML ubiquity, there is yet little support for XML processing on top of MapReduce. In this paper, we describe ChuQL, a MapReduce extension to XQuery, with its corresponding Hadoop implementation. The ChuQL language incorporates records to support the key/value data model of MapReduce, leverages higher-order functions to provide clean semantics, and exploits side-effects to fully expose to XQuery developers the Hadoop framework. The ChuQL implementation distributes computation to multiple XQuery engines, providing developers with an expressive language to describe tasks over big data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                },
+                {
+                    "authorId": "1753075",
+                    "name": "J\u00e9r\u00f4me Sim\u00e9on"
+                }
+            ]
+        },
+        {
+            "paperId": "f0e869d197dcdf33727b6e588300350bc3907d5a",
+            "title": "ChuQL: processing XML with XQuery using Hadoop",
+            "abstract": "Hadoop provides an economical tool for processing large amounts of data; its success has been fueled in part by features such as fault-tolerance and a simple processing model. The amount of XML used in scientific, government, and enterprise data has grown substantially. and there are several high-level languages developed for Hadoop that can process semi-structured data like XML. ChuQL is a recently proposed extension to XQuery for processing XML natively using Hadoop. \n \nThe current implementation of ChuQL leverages an existing main-memory XQuery processor and faces two challenges; intermediate XML values growing larger than memory and huge quantities of output files. We describe two ChuQL constructs to overcome these limitations: using an iterator to process XML value sequences, and partitioning the job output. We give experimental evidence to help evaluate the tradeoffs when using these advanced ChuQL features.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                },
+                {
+                    "authorId": "1753075",
+                    "name": "J\u00e9r\u00f4me Sim\u00e9on"
+                }
+            ]
+        },
+        {
+            "paperId": "60d00c10938037a24defa173b18b51b39619eef9",
+            "title": "Exploring RDF Usage and Interlinking in the Linked Open Data Cloud using ExpLOD",
+            "abstract": "Publishing interlinked RDF datasets as links between data items identied using dereferenceable URIs on the web brings forward a number of issues. A key challenge is to understand the data, the schema, and the interlinks that are actually used both within and across linked datasets. Understanding actual RDF usage is critical in the increasingly common situations where terms from dierent vocabularies are mixed. In this demonstration we present a tool, ExpLOD, that supports exploring summaries of RDF usage and interlinking among datasets from the Linked Open Data cloud. ExpLOD\u2019s summaries are based on a novel mechanism that combines text labels and bisimulation contractions. The labels assigned to resources in RDF graphs are hierarchical, enabling summarization at different granularities. The bisimulation contractions are applied to subgraphs dened via queries, providing for summarization of arbitrary large or small graph neighbourhoods. Our tool also generates SPARQL queries from summaries.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                }
+            ]
+        },
+        {
+            "paperId": "de2bfdb2f0c8ebf8bfd892ae1742750b0e578ff0",
+            "title": "Web data processing on the cloud",
+            "abstract": "Cloud computing is emerging as a highly scalable, fault-tolerant, and cost-effective way to process large amounts of information on the Web. Thanks in part to new data processing paradigms designed with the Cloud in mind (such as MapReduce[1], HDFS[2], Cassandra[3], etc), it is quickly gaining acceptance as a viable platform for organizations that need to store, process, and publish large amounts of data. MapReduce is attractive for processing data on the Cloud, to a large extent, because of its simplicity and flexibility. Implementations of MapReduce usually include a simple API used to describe which part of the processing is done in parallel (Map phase), and which part of the processing is done after grouping data on a single machine (Reduce phase). It does not rely on a pre-existing data model, making it possible to process any kind of information independently of the model. Cloud applications have notably been used to perform off-line analytical processing such as analyzing web request logs, computing user recommendations, and understanding scenes in images [4].",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                },
+                {
+                    "authorId": "1753075",
+                    "name": "J\u00e9r\u00f4me Sim\u00e9on"
+                }
+            ]
+        },
+        {
+            "paperId": "fc7782a3983ec5873428aa7579a9f3b238a46939",
+            "title": "DescribeX: Interacting with AxPRE Summaries",
+            "abstract": "DescribeX is a visual, interactive tool for exploring the underlying structure of an XML collection. DescribeX implements a framework for creating XML summaries described using axis path regular expressions (abbreviated AxPRE). AxPRE's capture all the bisimilarity-based proposals in the summary literature and they can be used to define new and more expressive summaries. This demonstration shows how DescribeX helps to analyze diverse XML collections in one particular scenario: the analysis of protein-protein interaction XML data from multiple providers that conform to the PSI-MI schema.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2206453758",
+                    "name": "M. Ali"
+                },
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                },
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "3043378",
+                    "name": "Flavio Rizzolo"
+                }
+            ]
+        },
+        {
+            "paperId": "f8634b66ea6c16c7498502b75790cfffbe1e198e",
+            "title": "Exploring PSI-MI XML Collections Using DescribeX",
+            "abstract": "Summary PSI-MI has been endorsed by the protein informatics community as a standard XML data exchange format for protein-protein interaction datasets. While many public databases support the standard, there is a degree of heterogeneity in the way the proposed XML schema is interpreted and instantiated by different data providers. Analysis of schema instantiation in large collections of XML data is a challenging task that is unsupported by existing tools. In this study we use DescribeX, a novel visualization technique of (semi-)structured XML formats, to quantitatively and qualitatively analyze PSI-MI XML collections at the instance level with the goal of gaining insights about schema usage and to study specific questions such as: adequacy of controlled vocabularies, detection of common instance patterns, and evolution of different data collections. Our analysis shows DescribeX enhances understanding the instance-level structure of PSI-MI data sources and is a useful tool for standards designers, software developers, and PSI-MI data providers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2298298",
+                    "name": "Reza Samavi"
+                },
+                {
+                    "authorId": "1735847",
+                    "name": "M. Consens"
+                },
+                {
+                    "authorId": "1984233",
+                    "name": "S. Khatchadourian"
+                },
+                {
+                    "authorId": "1685859",
+                    "name": "T. Topaloglou"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,239 @@
+{
+    "authorId": "2143830649",
+    "papers": [
+        {
+            "paperId": "01f516f0b0798973454cbdfd997594fe4e93eec6",
+            "title": "From Minimum Change to Maximum Density: On Determining Near-Optimal S-Repair",
+            "abstract": "Dirty data are commonly observed in real applications, making cleaning them a key step in data preparation. The widely adopted idea of cleaning dirty data is based on detecting conflicts w.r.t. integrity constraints. Typical S-repair methods remove a minimal set of tuples (to avoid excessive removal and information loss) such that integrity constraints are no longer violated in remaining tuples. Unfortunately, multiple candidates of minimal removal sets may exist and are difficult to determine which one is indeed proper. We intuitively notice that a clean tuple often has more close neighbors (i.e., higher density) than dirty tuples. Hence, in this paper, we study the problem of finding the optimal S-repair under integrity constraints with the highest density, among various minimal removal sets. Our major contributions include (1) the np-hardness analysis on solving the problem, (2) a heuristic algorithm for efficiently tackling the problem and returning the optimal solution in certain cases, (3) an approximation performance bounded method with the same optimal solution guarantee. Experiments on real datasets collected from industry with real-world errors demonstrate the superiority of our work in cleaning dirty tuples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "1721029",
+                    "name": "Xiaojie Yuan"
+                }
+            ]
+        },
+        {
+            "paperId": "28efb5f6ead1532e5fdcda295ba909fd50b9401e",
+            "title": "High Precision \u2260 High Cost: Temporal Data Fusion for Multiple Low-Precision Sensors",
+            "abstract": "High-quality data are crucial for practical applications, but obtaining them through high-precision sensors comes at a high cost. To guarantee the trade-off between cost and precision, we may use multiple low-precision sensors to obtain the nearly accurate data fusion results at an affordable cost. The commonly used techniques, such as the Kalman filter and truth discovery methods, typically compute fusion values by combining all the observations according to predictions or sensor reliability. However, low-precision sensors can often cause outliers, and such methods combining all observations are susceptible to interference. To handle this problem, we select a single observation from multiple sensor readings as the fusion result for each timestamp. The selection strategy is guided by the maximum likelihood estimation, to determine the most probable changing trends of fusion results with adjacent timestamps. Our major contributions include (1) the problem formalization and NP-hardness analysis on finding the fusion result with the maximum likelihood w.r.t. local fusion models, (2) exact algorithms based on dynamic programming for tackling the problem, (3) efficient approximation methods with performance guarantees. Experiments on various real datasets and downstream applications demonstrate the superiority and practicality of our work in low-precision sensor data fusion.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2304744331",
+                    "name": "Jingyu Zhu"
+                },
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2304139265",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2304295699",
+                    "name": "Xiaojie Yuan"
+                }
+            ]
+        },
+        {
+            "paperId": "5edbfac40cbdcc55d336f1f04ede9863f7ee2256",
+            "title": "Win-Win: On Simultaneous Clustering and Imputing over Incomplete Data",
+            "abstract": "Although clustering methods have shown promising performance in various applications, they cannot effectively handle incomplete data. Existing studies often impute missing values first before clustering analysis and conduct these two processes separately. However, inaccurate imputation does not necessarily contribute positively to the subsequent clustering. Intuitively, accurate imputation and clustering can serve and benefit from each other, where clustering-based imputation methods typically utilize cluster signals to impute incomplete data and accurate fillings are expected to bring more valuable data for clustering. Therefore, in this manuscript, rather than considering two tasks independently or conducting them respectively, we study simultaneous clustering and imputing over incomplete data. The immediate benefit is that such a strategy improves both clustering and imputation performance simultaneously, to get a win-win result. Our major technical highlights include (1) the problem formalization and NP-hardness analysis on computing simultaneous clustering and imputing results, (2) exact solutions by transforming the problem as the integer linear programming (ILP) formulation, and (3) efficient approximation algorithms based on the linear programming (LP) relaxation and local neighbors (LN) solution, with approximation guarantees. Experiments on various real-world datasets demonstrate the superiority of our work in clustering and imputing incomplete data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2304744331",
+                    "name": "Jingyu Zhu"
+                },
+                {
+                    "authorId": "2108894387",
+                    "name": "Xiao Xu"
+                },
+                {
+                    "authorId": "2119022892",
+                    "name": "Xian Xu"
+                },
+                {
+                    "authorId": "1423667463",
+                    "name": "Yuyao Sun"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2318819809",
+                    "name": "Xiang Li"
+                },
+                {
+                    "authorId": "2304295699",
+                    "name": "Xiaojie Yuan"
+                }
+            ]
+        },
+        {
+            "paperId": "f83eb48b360c6f4151f3dc3a0aa78af6d9161001",
+            "title": "Confidence Bounded Replica Currency Estimation",
+            "abstract": "Replicas of the same data item often exhibit varying consistency levels when executing read and write requests due to system availability and network limitations. When one or more replicas respond to a query, estimating the currency (or staleness) of the returned data item (without accessing the other replicas) is essential for applications requiring timely data. Depending on how confident the estimation is, the query may dynamically decide to return the retrieved replicas, or wait for the remaining replicas to respond. The replica currency estimation is expected to be accurate and extremely time efficient without introducing large overhead during query processing. In this paper, we provide theoretical bounds on the confidence of replica currency estimation. Our system computes with a minimum probability p, whether the retrieved replicas are current or stale. Using this confidence-bounded replica currency estimation, we implement a novel DYNAMIC read consistency level in the open-source, NoSQL database, Cassandra. Experiments show that the proposed replica currency estimation is intuitive and efficient. In most tested scenarios, with various query loads and cluster configurations, we show our estimations with confidence levels of at least 0.99 while keeping query latency low (close to reading ONE replica). Moreover, the overheads introduced due to estimation scoring and training are low, incurring only 0.76% to 1.17% of the query processing and replica synchronization time costs, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2115547300",
+                    "name": "Zheng Zheng"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "39311225",
+                    "name": "Fei Chiang"
+                }
+            ]
+        },
+        {
+            "paperId": "bf91b26b3ad674982c80dbfa312fbad7da141eb9",
+            "title": "From Minimum Change to Maximum Density: On S-Repair under Integrity Constraints",
+            "abstract": "To clean dirty data, integrity constraints are often employed. A typical S-repair model removes a minimal set of tuples (to avoid excessive removal and information loss) such that the integrity constraints are no longer violated in the remaining tuples. However, multiple candidates of minimal removal sets exist and are difficult to determine. We intuitively notice that a clean tuple often has more close neighbors (i.e., higher density) than dirty tuples. In this sense, our study proposes to return the S-repair under integrity constraints with the highest density, among various minimal removal sets. We explicitly analyze the hardness of maximizing S-repair density under integrity constraints, together with efficient approximation. Extensive experiments over real datasets collected from industry with real-world errors show that our proposal can achieve higher accuracy in cleaning dirty tuples, compared to the state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                }
+            ]
+        },
+        {
+            "paperId": "058fec4be89e9afa12398560ec254c13fc74cca4",
+            "title": "Swapping Repair for Misplaced Attribute Values",
+            "abstract": "Misplaced data in a tuple are prevalent, e.g., a value \"Passport\" is misplaced in the passenger-name attribute, which should belong to the travel-document attribute instead. While repairing in-attribute errors have been widely studied, i.e., to repair the error by other values in the attribute domain, misplacement errors are surprisingly untouched, where the true value is simply misplaced in some other attribute of the same tuple. For instance, the true passenger-name is indeed misplaced in the travel-document attribute of the record. In this sense, we need a novel swapping repair model (to swap the misplaced passenger-name and travel-document values \"Passport\" and \"John Adam\" in the same tuple). Determining a proper swapping repair, however, is non-trivial. The minimum change criterion, evaluating the distance between the swapping repaired values, is obviously meaningless, since they are from different attribute domains. Intuitively, one may examine whether the swapped value (\"John Adam\") is similar to other values in the corresponding attribute domain (passenger-name). In a holistic view of all (swapped) attributes, we propose to evaluate the likelihood of a swapping repaired tuple by studying its distances (similarity) to neighbors. The rationale of distance likelihood refers to the Poisson process of nearest neighbor appearance. The optimum repair problem is to find a swapping repair with the maximum likelihood on distances. Experiments over datasets with real-world misplaced attribute values demonstrate the effectiveness of our proposal in repairing misplacement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2109118305",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2016222572",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "70f6dee1496677872ade27a194251201f943005d",
+            "title": "Enriching Data Imputation under Similarity Rule Constraints",
+            "abstract": "Incomplete information often occurs along with many database applications, e.g., in data integration, data cleaning, or data exchange. The idea of data imputation is often to fill the missing data with the values of its neighbors who share the same/similar information. Such neighbors could either be identified certainly by editing rules or extensively by similarity relationships. Owing to data sparsity, the number of neighbors identified by editing rules w.r.t. value equality is rather limited, especially in the presence of data values with variances. To enrich the imputation candidates, a natural idea is to extensively consider the neighbors with similarity relationship. However, the candidates suggested by these (heterogenous) similarity neighbors may conflict with each other. In this paper, we propose to utilize the similarity rules with tolerance to small variations (instead of the aforesaid editing rules with strict equality constraints) to rule out the invalid candidates provided by similarity neighbors. To enrich the data imputation, i.e., imputing the missing values more, we study the problem of maximizing the missing data imputation. Our major contributions include (1) the np-hardness analysis on solving as well as approximating the problem, (2) exact algorithms for tackling the problem, and (3) efficient approximation with performance guarantees. Experiments on real and synthetic data sets demonstrate the superiority of our proposal in filling accuracy. We also demonstrate that the record matching application is indeed improved, after applying the proposed imputation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "3358457",
+                    "name": "Aoqian Zhang"
+                },
+                {
+                    "authorId": "49330176",
+                    "name": "Lei Chen"
+                },
+                {
+                    "authorId": "2016222572",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "7b39c86dfbf3612950a81dbfb91178ab82229102",
+            "title": "Imputing Various Incomplete Attributes via Distance Likelihood Maximization",
+            "abstract": "Missing values may appear in various attributes. By \"various\", we mean (1) different types of values in a tuple, such as numerical or categorical, and (2) different attributes in a tuple, either the dependent or determinant attributes of regression models or dependency rules. Such varieties unfortunately prevent the imputation performing. In this paper, we propose to study the distance models that predict distances between tuples for missing data imputation. The immediate benefits are in two aspects, (1) uniformly processing and collaboratively utilizing the distances on all the attributes with various types of values, and (2) rather than enumerating the combinations of imputation candidates on various attributes, we can directly calculate the most likely distances of missing values to other complete ones and thus infer the corresponding imputations. Our major technical highlights include (1) introducing the imputation statistically explainable by the likelihood on distances, (2) proving NP-hardness of finding the maximum likelihood imputation, and (3) devising the approximation algorithm with performance guarantees. Experiments over datasets with real missing values demonstrate the superiority of the proposed method compared to 11 existing approaches in 5 categories. Our proposal improves not only the imputation accuracy but also the downstream applications such as classification, clustering and record matching.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "f407419ca725e68fb5accd2413c8a30783922f0e",
+            "title": "Learning Individual Models for Imputation",
+            "abstract": "Missing numerical values are prevalent, e.g., owing to unreliable sensor reading, collection and transmission among heterogeneous sources. Unlike categorized data imputation over a limited domain, the numerical values suffer from two issues: (1) sparsity problem, the incomplete tuple may not have sufficient complete neighbors sharing the same/similar values for imputation, owing to the (almost) infinite domain; (2) heterogeneity problem, different tuples may not fit the same (regression) model. In this study, enlightened by the conditional dependencies that hold conditionally over certain tuples rather than the whole relation, we propose to learn a regression model individually for each complete tuple together with its neighbors. Our IIM, Imputation via Individual Models, thus no longer relies on sharing similar values among the k complete neighbors for imputation, but utilizes their regression results by the aforesaid learned individual (not necessary the same) models. Remarkably, we show that some existing methods are indeed special cases of our IIM, under the extreme settings of the number \u2113 of learning neighbors considered in individual learning. In this sense, a proper number \u2113 of neighbors is essential to learn the individual models (avoid over-fitting or under-fitting). We propose to adaptively learn individual models over various number \u2113 of neighbors for different complete tuples. By devising efficient incremental computation, the time complexity of learning a model reduces from linear to constant. Experiments on real data demonstrate that our IIM with adaptive learning achieves higher imputation accuracy than the existing approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358457",
+                    "name": "Aoqian Zhang"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2016222572",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        }
+    ]
+}

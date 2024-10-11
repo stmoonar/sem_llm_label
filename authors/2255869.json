@@ -1,0 +1,251 @@
+{
+    "authorId": "2255869",
+    "papers": [
+        {
+            "paperId": "38f8684bbe2cfef9537198ef3bd0b95779cefdf6",
+            "title": "Network Fault-tolerant and Byzantine-resilient Social Learning via Collaborative Hierarchical Non-Bayesian Learning",
+            "abstract": "As the network scale increases, existing fully distributed solutions start to lag behind the real-world challenges such as (1) slow information propagation, (2) network communication failures, and (3) external adversarial attacks. In this paper, we focus on hierarchical system architecture and address the problem of non-Bayesian learning over networks that are vulnerable to communication failures and adversarial attacks. On network communication, we consider packet-dropping link failures. We first propose a hierarchical robust push-sum algorithm that can achieve average consensus despite frequent packet-dropping link failures. We provide a sparse information fusion rule between the parameter server and arbitrarily selected network representatives. Then, interleaving the consensus update step with a dual averaging update with Kullback-Leibler (KL) divergence as the proximal function, we obtain a packet-dropping fault-tolerant non-Bayesian learning algorithm with provable convergence guarantees. On external adversarial attacks, we consider Byzantine attacks in which the compromised agents can send maliciously calibrated messages to others (including both the agents and the parameter server). To avoid the curse of dimensionality of Byzantine consensus, we solve the non-Bayesian learning problem via running multiple dynamics, each of which only involves Byzantine consensus with scalar inputs. To facilitate resilient information propagation across sub-networks, we use a novel Byzantine-resilient gossiping-type rule at the parameter server.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2193423144",
+                    "name": "Connor Mclaughlin"
+                },
+                {
+                    "authorId": "83880197",
+                    "name": "Matthew Ding"
+                },
+                {
+                    "authorId": "2225252866",
+                    "name": "Denis Edogmus"
+                },
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                }
+            ]
+        },
+        {
+            "paperId": "ae475585c41f10897c12108530cea97b463a1df7",
+            "title": "Towards Bias Correction of FedAvg over Nonuniform and Time-Varying Communications",
+            "abstract": "Federated learning (FL) is a decentralized learning framework wherein a parameter server (PS) and a collection of clients collaboratively trains a model via minimizing a global objective. Communication bandwidth is a scarce resource; in each round, the PS aggregates the updates from a subset of clients only. In this paper, we focus on non-convex minimization that is vulnerable to non-uniform and time-varying communication failures between the PS and the clients. Specifically, in each round $t$, the link between the PS and client $i$ is active with probability $p_{i}^{t}$, which is unknown to both the PS and the clients. This arises when the channel conditions are heterogeneous across clients and are changing over time. We show that when the $p_{i}^{t}$ 's are not uniform, Federated Average (FedAvg) - the most widely adopted FL algorithm - fails to minimize the global objective. Observing this, we propose Federated Postponed Broadcast (FedPBC) which is a simple variant of FedAvg. It differs from FedAvg in that the PS postpones broadcasting the global model till the end of each round. We show that FedPBC converges to a stationary point of the original objective. The introduced staleness is mild and there is no noticeable slowdown. Both theoretical analysis and numerical results are provided. On the technical front, postponing the global model broadcasts enables implicit gossiping among the clients with active links at round $t$. Despite ${p}_{i}^{t}$ 's are time-varying, we are able to bound the perturbation of the global model dynamics via the techniques of controlling the gossip-type information mixing errors.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2186824884",
+                    "name": "Ming Xiang"
+                },
+                {
+                    "authorId": "1776006",
+                    "name": "Stratis Ioannidis"
+                },
+                {
+                    "authorId": "1687842",
+                    "name": "E. Yeh"
+                },
+                {
+                    "authorId": "1393650147",
+                    "name": "Carlee Joe-Wong"
+                },
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                }
+            ]
+        },
+        {
+            "paperId": "ce38d4dfdefbc7dc190972607d41f61086c3db6b",
+            "title": "Federated Learning in the Presence of Adversarial Client Unavailability",
+            "abstract": "Federated learning is a decentralized machine learning framework that enables collaborative model training without revealing raw data. Due to the diverse hardware and software limitations, a client may not always be available for the computation requests from the parameter server. An emerging line of research is devoted to tackling arbitrary client unavailability. However, existing work still imposes structural assumptions on the unavailability patterns, impeding their applicability in challenging scenarios wherein the unavailability patterns are beyond the control of the parameter server. Moreover, in harsh environments like battlefields, adversaries can selectively and adaptively silence specific clients. In this paper, we relax the structural assumptions and consider adversarial client unavailability. To quantify the degrees of client unavailability, we use the notion of $\\epsilon$-adversary dropout fraction. We show that simple variants of FedAvg or FedProx, albeit completely agnostic to $\\epsilon$, converge to an estimation error on the order of $\\epsilon (G^2 + \\sigma^2)$ for non-convex global objectives and $\\epsilon(G^2 + \\sigma^2)/\\mu^2$ for $\\mu$ strongly convex global objectives, where $G$ is a heterogeneity parameter and $\\sigma^2$ is the noise level. Conversely, we prove that any algorithm has to suffer an estimation error of at least $\\epsilon (G^2 + \\sigma^2)/8$ and $\\epsilon(G^2 + \\sigma^2)/(8\\mu^2)$ for non-convex global objectives and $\\mu$-strongly convex global objectives. Furthermore, the convergence speeds of the FedAvg or FedProx variants are $O(1/\\sqrt{T})$ for non-convex objectives and $O(1/T)$ for strongly-convex objectives, both of which are the best possible for any first-order method that only has access to noisy gradients.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                },
+                {
+                    "authorId": "46372563",
+                    "name": "Jiaming Xu"
+                },
+                {
+                    "authorId": "39497950",
+                    "name": "Pengkun Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "e4b0579d9d52a947033d85ea54e034cb7355a129",
+            "title": "Privacy-Preserving and Uncertainty-Aware Federated Trajectory Prediction for Connected Autonomous Vehicles",
+            "abstract": "Deep learning is the method of choice for trajectory prediction for autonomous vehicles. Unfortunately, its data-hungry nature implicitly requires the availability of sufficiently rich and high-quality centralized datasets, which easily leads to privacy leakage. Besides, uncertainty-awareness becomes increasingly important for safety-crucial cyber physical systems whose prediction module heavily relies on machine learning tools. In this paper, we relax the data collection requirement and enhance uncertainty-awareness by using Federated Learning on Connected Autonomous Vehicles with an uncertainty-aware global objective. We name our algorithm as FLTP. We further introduce ALFLTP which boosts FLTP via using active learning techniques in adaptatively selecting participating clients. We consider two different metrics negative log-likelihood (NLL) and aleatoric uncertainty (AU) for client selection. Experiments on Argoverse dataset show that FLTP significantly outperforms the model trained on local data. In addition, ALFLTP-AU converges faster in training regression loss and performs better in terms of Miss Rate (MR) than FLTP in most rounds, and has more stable round-wise performance than ALFLTP-NLL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2210984484",
+                    "name": "Muzi Peng"
+                },
+                {
+                    "authorId": "2184291210",
+                    "name": "Jiangwei Wang"
+                },
+                {
+                    "authorId": "2451800",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2064423453",
+                    "name": "Fei Miao"
+                },
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                }
+            ]
+        },
+        {
+            "paperId": "f530c308b5b7bed926e6a19271469e7b78551738",
+            "title": "Fast and Robust State Estimation and Tracking via Hierarchical Learning",
+            "abstract": "Fast and reliable state estimation and tracking are essential for real-time situation awareness in Cyber-Physical Systems (CPS) operating in tactical environments or complicated civilian environments. Traditional centralized solutions do not scale well whereas existing fully distributed solutions over large networks suffer slow convergence, and are vulnerable to a wide spectrum of communication failures. In this paper, we aim to speed up the convergence and enhance the resilience of state estimation and tracking for large-scale networks using a simple hierarchical system architecture. We propose two ``consensus + innovation'' algorithms, both of which rely on a novel hierarchical push-sum consensus component. We characterize their convergence rates under a linear local observation model and minimal technical assumptions. We numerically validate our algorithms through simulation studies of underwater acoustic networks and large-scale synthetic networks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2193423144",
+                    "name": "Connor Mclaughlin"
+                },
+                {
+                    "authorId": "83880197",
+                    "name": "Matthew Ding"
+                },
+                {
+                    "authorId": "2220962977",
+                    "name": "Deniz Edogmus"
+                },
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                }
+            ]
+        },
+        {
+            "paperId": "8e8b5d984fcc68258790a8d04b273b2fa1e7afa5",
+            "title": "\u03b2-Stochastic Sign SGD: A Byzantine Resilient and Differentially Private Gradient Compressor for Federated Learning",
+            "abstract": ",",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2186824884",
+                    "name": "Ming Xiang"
+                },
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                }
+            ]
+        },
+        {
+            "paperId": "c94dbdedc8568bd9f09baa31c3ffff864e8969f0",
+            "title": "Global Convergence of Federated Learning for Mixed Regression",
+            "abstract": "This paper studies the problem of model training under Federated Learning when clients exhibit cluster structures. We contextualize this problem in mixed regression, where each client has limited local data generated from one of k unknown regression models. We design an algorithm that achieves global convergence from any arbitrary initialization, and works even when local data volume is highly unbalanced \u2013 there could exist clients that contain <inline-formula> <tex-math notation=\"LaTeX\">$O(1)$ </tex-math></inline-formula> data points only. Our algorithm is intended for the scenario where the parameter server can recruit one client per cluster referred to as \u201canchor clients\u201d, and each anchor client possesses <inline-formula> <tex-math notation=\"LaTeX\">$\\tilde {\\Omega }(k)$ </tex-math></inline-formula> data points. Our algorithm first runs moment descent on this set of anchor clients to obtain coarse model estimates. Subsequently, every client alternately estimates its cluster labels and refines the model estimates based on FedAvg or FedProx. A key innovation in our analysis is a uniform estimate of the clustering errors, which we prove by bounding the Vapnik-Chervonenkis dimension of general polynomial concept classes based on the theory of algebraic geometry.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                },
+                {
+                    "authorId": "46372563",
+                    "name": "Jiaming Xu"
+                },
+                {
+                    "authorId": "39497950",
+                    "name": "Pengkun Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "cb490f8b1dcc3c37159afde7c2b4a53f3e131a45",
+            "title": "Experimental Design Networks: A Paradigm for Serving Heterogeneous Learners under Networking Constraints",
+            "abstract": "Significant advances in edge computing capabilities enable learning to occur at geographically diverse locations. In general, the training data needed in those learning tasks are not only heterogeneous but also not fully generated locally. In this paper, we propose an experimental design network paradigm, wherein learner nodes train possibly different Bayesian linear regression models via consuming data streams generated by data source nodes over a network. We formulate this problem as a social welfare optimization problem in which the global objective is defined as the sum of experimental design objectives of individual learners, and the decision variables are the data transmission strategies subject to network constraints. We first show that, assuming Poisson data streams, the global objective is a continuous DR-submodular function. We then propose a Frank-Wolfe type algorithm that outputs a solution within a 1 \u2013 1/e factor from the optimal. Our algorithm contains a novel gradient estimation component which is carefully designed based on Poisson tail bounds and sampling. Finally, we complement our theoretical findings through extensive experiments. Our numerical evaluation shows that the proposed algorithm outperforms several baseline algorithms both in maximizing the global objective and in the quality of the trained models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2119034261",
+                    "name": "Yuezhou Liu"
+                },
+                {
+                    "authorId": "2110616763",
+                    "name": "Yuanyuan Li"
+                },
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                },
+                {
+                    "authorId": "1687842",
+                    "name": "E. Yeh"
+                },
+                {
+                    "authorId": "1776006",
+                    "name": "Stratis Ioannidis"
+                }
+            ]
+        },
+        {
+            "paperId": "f468ed9b81f8159a6ab7f8991b4fa0131aa9b6fa",
+            "title": "Distributed Non-Convex Optimization with One-Bit Compressors on Heterogeneous Data: Efficient and Resilient Algorithms",
+            "abstract": "Federated Learning (FL) is a nascent decentralized learning framework under which a massive collection of heterogeneous clients collaboratively train a model without revealing their local data. Scarce communication, privacy leakage, and Byzantine attacks are the key bottlenecks of system scalability. In this paper, we focus on communication-efficient distributed (stochastic) gradient descent for non-convex optimization, a driving force of FL. We propose two algorithms, named {\\em Adaptive Stochastic Sign SGD (Ada-StoSign)} and {\\em $\\beta$-Stochastic Sign SGD ($\\beta$-StoSign)}, each of which compresses the local gradients into bit vectors. To handle unbounded gradients, Ada-StoSign uses a novel norm tracking function that adaptively adjusts a coarse estimation on the $\\ell_{\\infty}$ of the local gradients - a key parameter used in gradient compression. We show that Ada-StoSign converges in expectation with a rate $O(\\log T/\\sqrt{T} + 1/\\sqrt{M})$, where $M$ is the number of clients. To the best of our knowledge, when $M$ is sufficiently large, Ada-StoSign outperforms the state-of-the-art sign-based method whose convergence rate is $O(T^{-1/4})$. Under bounded gradient assumption, $\\beta$-StoSign achieves quantifiable Byzantine resilience and privacy assurances, and works with partial client participation and mini-batch gradients which could be unbounded. We corroborate and complement our theories by experiments on MNIST and CIFAR-10 datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2186824884",
+                    "name": "Ming Xiang"
+                },
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                }
+            ]
+        },
+        {
+            "paperId": "2337c6f074d79d2418ae9840a4b57c9739bf37cc",
+            "title": "Achieving Statistical Optimality of Federated Learning: Beyond Stationary Points",
+            "abstract": "Federated Learning (FL) is a promising framework that has great potentials in privacy preservation and in lowering the computation load at the cloud. FedAvg and FedProx are two widely adopted algorithms. However, recent work raised concerns on these two methods: (1) their \ufb01xed points do not correspond to the stationary points of the original optimization problem, and (2) the common model found might not generalize well locally. In this paper, we alleviate these concerns. Towards this, we adopt the statistical learning perspective yet allow the distributions to be heterogeneous and the local data to be unbalanced. We show, in the general kernel regression setting, that both FedAvg and FedProx converge to the minimax-optimal error rates. Moreover, when the kernel function has a \ufb01nite rank, the convergence is exponentially fast. Our results further analytically quantify the impact of the model heterogeneity and characterize the federation gain \u2013 the reduction of the estimation error for a worker to join the federated learning compared to the best local estimator. To the best of our knowledge, we are the \ufb01rst to show the achievability of minimax error rates under FedAvg and FedProx , and the \ufb01rst to characterize the gains in joining FL. Numerical experiments further corroborate our theoretical \ufb01ndings on the statistical optimality of FedAvg and FedProx and the federation gains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2255869",
+                    "name": "Lili Su"
+                },
+                {
+                    "authorId": "47883294",
+                    "name": "Jiaming Xu"
+                },
+                {
+                    "authorId": "39497950",
+                    "name": "Pengkun Yang"
+                }
+            ]
+        }
+    ]
+}

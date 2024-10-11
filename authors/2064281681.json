@@ -1,0 +1,142 @@
+{
+    "authorId": "2064281681",
+    "papers": [
+        {
+            "paperId": "a7b45516f388e719f91d329a2a4e76f8f85e3ee7",
+            "title": "Body Measurement Prediction Fairness",
+            "abstract": "E-Commerce size and fit recommendations can be improved by using customer images to estimate body measurements. We are developing a body measurement fairness evaluation to determine if Zalando\u2019s AI/ML driven body measurement pipelines systematically underperform for customers of certain gender, body shape, or skin tone. The fairness evaluation produces four unfairness scores. The first is a gender unfairness score: the difference in average performance between genders. The second and third are body shape and skin tone unfairness scores: the difference in average performance between smallest and largest bodies, and lightest and deepest skin tones, respectively. The fourth is an intersectional unfairness score: the number of customers that are members of clusters associated with significant underperformance. We demonstrate the fairness pipeline on one body measurement pipeline candidate in the development stage showing that body shape receives the most significant unfairness score. This work allows us to catch unfair body measurement pipelines during experimentation and development stages to help our team avoid deploying unfair models into production.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "5001153",
+                    "name": "Alex Loosley"
+                },
+                {
+                    "authorId": "2064281681",
+                    "name": "Amrollah Seifoddini"
+                },
+                {
+                    "authorId": "6042867",
+                    "name": "A. Canopoli"
+                },
+                {
+                    "authorId": "41154657",
+                    "name": "Meike Zehlike"
+                }
+            ]
+        },
+        {
+            "paperId": "b7d3d872ac2260b92ae11cb0b0173e9e2e2af0ca",
+            "title": "ALiSNet: Accurate and Lightweight Human Segmentation Network for Fashion E-Commerce",
+            "abstract": "Accurately estimating human body shape from photos can enable innovative applications in fashion, from mass customization, to size and fit recommendations and virtual try-on. Body silhouettes calculated from user pictures are effective representations of the body shape for downstream tasks. Smartphones provide a convenient way for users to capture images of their body, and on-device image processing allows predicting body segmentation while protecting users privacy. Existing off-the-shelf methods for human segmentation are closed source and cannot be specialized for our application of body shape and measurement estimation. Therefore, we create a new segmentation model by simplifying Semantic FPN with PointRend, an existing accurate model. We finetune this model on a high-quality dataset of humans in a restricted set of poses relevant for our application. We obtain our final model, ALiSNet, with a size of 4MB and 97.6$\\pm$1.0$\\%$ mIoU, compared to Apple Person Segmentation, which has an accuracy of 94.4$\\pm$5.7$\\%$ mIoU on our dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2064281681",
+                    "name": "Amrollah Seifoddini"
+                },
+                {
+                    "authorId": "2097412302",
+                    "name": "K. Vernooij"
+                },
+                {
+                    "authorId": "2210766150",
+                    "name": "Timon K\u00fcnzle"
+                },
+                {
+                    "authorId": "6042867",
+                    "name": "A. Canopoli"
+                },
+                {
+                    "authorId": "2791380",
+                    "name": "Malte F. Alf"
+                },
+                {
+                    "authorId": "145800409",
+                    "name": "Anna Volokitin"
+                },
+                {
+                    "authorId": "1776917",
+                    "name": "Reza Shirvany"
+                }
+            ]
+        },
+        {
+            "paperId": "4ba56237ab5878008c7ce014f6b1031fe1d731a6",
+            "title": "GarNet++: Improving Fast and Accurate Static 3D Cloth Draping by Curvature Loss",
+            "abstract": "In this paper, we tackle the problem of static 3D cloth draping on virtual human bodies. We introduce a two-stream deep network model that produces a visually plausible draping of a template cloth on virtual 3D bodies by extracting features from both the body and garment shapes. Our network learns to mimic a physics-based simulation (PBS) method while requiring two orders of magnitude less computation time. To train the network, we introduce loss terms inspired by PBS to produce plausible results and make the model collision-aware. To increase the details of the draped garment, we introduce two loss functions that penalize the difference between the curvature of the predicted cloth and PBS. Particularly, we study the impact of mean curvature normal and a novel detail-preserving loss both qualitatively and quantitatively. Our new curvature loss computes the local covariance matrices of the 3D points, and compares the Rayleigh quotients of the prediction and PBS. This leads to more details while performing favorably or comparably against the loss that considers mean curvature normal vectors in the 3D triangulated meshes. We validate our framework on four garment types for various body shapes and poses. Finally, we achieve superior performance against a recently proposed data-driven method.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131286",
+                    "name": "Erhan Gundogdu"
+                },
+                {
+                    "authorId": "2066226610",
+                    "name": "Victor Constantin"
+                },
+                {
+                    "authorId": "3380804",
+                    "name": "Shaifali Parashar"
+                },
+                {
+                    "authorId": "2064281681",
+                    "name": "Amrollah Seifoddini"
+                },
+                {
+                    "authorId": "2112620866",
+                    "name": "Minh Dang"
+                },
+                {
+                    "authorId": "2862871",
+                    "name": "M. Salzmann"
+                },
+                {
+                    "authorId": "153918727",
+                    "name": "P. Fua"
+                }
+            ]
+        },
+        {
+            "paperId": "020338c6f227134b499d547e518f460409c08e46",
+            "title": "GarNet: A Two-Stream Network for Fast and Accurate 3D Cloth Draping",
+            "abstract": "While Physics-Based Simulation (PBS) can accurately drape a 3D garment on a 3D body, it remains too costly for real-time applications, such as virtual try-on. By contrast, inference in a deep network, requiring a single forward pass, is much faster. Taking advantage of this, we propose a novel architecture to fit a 3D garment template to a 3D body. Specifically, we build upon the recent progress in 3D point cloud processing with deep networks to extract garment features at varying levels of detail, including point-wise, patch-wise and global features. We fuse these features with those extracted in parallel from the 3D body, so as to model the cloth-body interactions. The resulting two-stream architecture, which we call as GarNet, is trained using a loss function inspired by physics-based modeling, and delivers visually plausible garment shapes whose 3D points are, on average, less than 1 cm away from those of a PBS method, while running 100 times faster. Moreover, the proposed method can model various garment types with different cutting patterns when parameters of those patterns are given as input to the network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131286",
+                    "name": "Erhan Gundogdu"
+                },
+                {
+                    "authorId": "2066226610",
+                    "name": "Victor Constantin"
+                },
+                {
+                    "authorId": "2064281681",
+                    "name": "Amrollah Seifoddini"
+                },
+                {
+                    "authorId": "2112620866",
+                    "name": "Minh Dang"
+                },
+                {
+                    "authorId": "2862871",
+                    "name": "M. Salzmann"
+                },
+                {
+                    "authorId": "1717736",
+                    "name": "P. Fua"
+                }
+            ]
+        }
+    ]
+}

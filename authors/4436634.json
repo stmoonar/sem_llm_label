@@ -1,0 +1,281 @@
+{
+    "authorId": "4436634",
+    "papers": [
+        {
+            "paperId": "77bea3b38d2e1e62a8ea95fb157a8bd9f91ede73",
+            "title": "Breaking and Fixing Virtual Channels: Domino Attack and Donner",
+            "abstract": "\u2014Payment channel networks (PCNs) mitigate the scalability issues of current decentralized cryptocurrencies. They allow for arbitrarily many payments between users connected through a path of intermediate payment channels, while requiring interacting with the blockchain only to open and close the chan- nels. Unfortunately, PCNs are (i) tailored to payments, excluding more complex smart contract functionalities, such as the oracle- enabling Discreet Log Contracts and (ii) their need for active participation from intermediaries may make payments unreliable, slower, expensive, and privacy-invasive. Virtual channels are among the most promising techniques to mitigate these issues, allowing two endpoints of a path to create a direct channel over the intermediaries without any interaction with the blockchain. After such a virtual channel is constructed, (i) the endpoints can use this direct channel for applications other than payments and (ii) the intermediaries are no longer involved in updates. In this work, we first introduce the Domino attack, a new DoS/griefing style attack that leverages virtual channels to destruct the PCN itself and is inherent to the design adopted by the existing Bitcoin-compatible virtual channels. We then demonstrate its severity by a quantitative analysis on a snapshot of the Lightning Network (LN), the most widely deployed PCN at present. We finally discuss other serious drawbacks of existing virtual channel designs, such as the support for only a single intermediary, a latency and blockchain overhead linear in the path length, or a non-constant storage overhead per user. We then present Donner, the first virtual channel construction that overcomes the shortcomings above, by relying on a novel design paradigm. We formally define and prove security and privacy properties in the Universal Composability framework. Our evaluation shows that Donner is efficient, reduces the on- chain number of transactions for disputes from linear in the path length to a single one, which is the key to prevent Domino attacks, and reduces the storage overhead from logarithmic in the path length to constant. Donner is Bitcoin-compatible and can be easily integrated in the LN",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "143854459",
+                    "name": "Aniket Kate"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "8240b2aff7ead1adeb59ffb16bf6d893d7480fe9",
+            "title": "CryptoVampire: Automated Reasoning for the Complete Symbolic Attacker Cryptographic Model",
+            "abstract": "Cryptographic protocols are hard to design and prove correct, as witnessed by the ever-growing list of attacks even on protocol standards. Symbolic models of cryptography enable automated formal security proofs of such protocols against an idealized cryptographic model, which abstracts away from the algebraic properties of cryptographic schemes and thus misses attacks. Computational models of cryptography yield rigorous guarantees but support at present only interactive proofs and/or restricted classes of protocols (e.g., stateless ones). A promising approach is given by the computationally complete symbolic attacker (CCSA) model, formalized in the BC Logic, which aims at bridging and getting the best of the two worlds, obtaining cryptographic guarantees by symbolic protocol analysis. The BC Logic is supported by a recently developed interactive theorem prover, namely Squirrel, which enables machine-checked interactive security proofs, as opposed to automated ones, thus requiring expert knowledge both in the cryptographic space as well as on the reasoning side.In this paper, we introduce the CryptoVampire cryptographic protocol verifier, which for the first time fully automates proofs of trace properties in the BC Logic. The key technical contribution is a first-order formalization of protocol properties with tailored handling of subterm relations. As such, we overcome the burden of interactive proving in higher-order logic and automatically establish soundness of cryptographic protocols using only first-order reasoning. Our first-order encoding of cryptographic protocols is challenging for various reasons. On the theoretical side, we restrict full first-order logic with cryptographic axioms to ensure that, by losing the expressivity of the higher-order BC Logic, we do not lose soundness of cryptographic protocols in our first-order encoding. On the practical side, CryptoVampire integrates dedicated proof techniques using first-order saturation algorithms and heuristics, which all together enable leveraging the state-of-the-art Vampire first-order automated theorem prover as the underlying proving engine of CryptoVampire. Our experimental results showcase the effectiveness of CryptoVampire as a standalone verifier as well as in terms of automation support for Squirrel.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2218044847",
+                    "name": "Simon Jeanteur"
+                },
+                {
+                    "authorId": "2215821139",
+                    "name": "Laura Kov'acs"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                },
+                {
+                    "authorId": "2076236670",
+                    "name": "Michael Rawson"
+                }
+            ]
+        },
+        {
+            "paperId": "ad5605c004e041c3aff0b172a8b4d844ae31997b",
+            "title": "Glimpse: On-Demand PoW Light Client with Constant-Size Storage for DeFi",
+            "abstract": "Cross-chain communication is instrumental in unleashing the full potential of blockchain technologies, as it allows users and developers to exploit the unique design features and the profit opportunities of different existing blockchains. The majority of interoperability solutions are provided by centralized exchanges and bridge protocols based on a trusted majority, both introducing undesirable trust assumptions compared to native blockchain assets. Hence, increasing attention has been given to decentralized solutions: Light and super-light clients paved the way for chain relays, which allow verifying on a blockchain the state of another blockchain by respectively verifying and storing a linear and logarithmic amount of data. Unfortunately, relays turn out to be inefficient in terms of computational costs, storage, or compatibility. We introduce Glimpse , an on-demand bridge that leverages a novel on-demand light client construction with only constant on-chain storage, cost, and computational overhead. Glimpse is expressive , enabling a plethora of DeFi and off-chain applications such as lending, pegs, proofs of oracle at-testations, and betting hubs. Glimpse also remains compatible with blockchains featuring a limited scripting language such as the Liquid Network (a pegged sidechain of Bitcoin), for which we present a concrete instantiation. We prove Glimpse security in the Universal Composability (UC) framework and further conduct an economic analysis. We evaluate the cost of Glimpse for Bitcoin-like chains: verifying a simple transaction has at most 700 bytes of on-chain overhead, resulting in a one-time fee of $3, only twice as much as a standard Bitcoin transaction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284664628",
+                    "name": "Giulia Scaffino"
+                },
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "1453875103",
+                    "name": "Zeta Avarikioti"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "b388cbb43e513844636b8b102248511387b724a8",
+            "title": "Cookie Crumbles: Breaking and Fixing Web Session Integrity",
+            "abstract": "This artifact is provided to support the evaluation of all the re-sults presented in the paper. In particular, (i) the cross-browser testing suite used to validate the results presented in Table 2, (ii) the toolchain developed to automatically test server-side cookie parsers (Section 4.2.2), (iii) the dataset and processing code of our cookie measurement study (Section 4.4), (iv) re-producible proof-of-concept attacks against vulnerable Web frameworks (Section 6), as well as (v) the ProVerif models and scripts (Section 7).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49325435",
+                    "name": "M. Squarcina"
+                },
+                {
+                    "authorId": "3057055",
+                    "name": "P. Ad\u00e3o"
+                },
+                {
+                    "authorId": "40109135",
+                    "name": "Lorenzo Veronese"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "71a1614275ae50f310a3baf45194c9f6baa9994e",
+            "title": "Sleepy Channels: Bi-directional Payment Channels without Watchtowers",
+            "abstract": "Payment channels (PC) are a promising solution to the scalability issue of cryptocurrencies, allowing users to perform the bulk of the transactions off-chain without needing to post everything on the blockchain. Many PC proposals however, suffer from a severe limitation: Both parties need to constantly monitor the blockchain to ensure that the other party did not post an outdated transaction. If this event happens, the honest party needs to react promptly and engage in a punishment procedure. This means that prolonged absence periods (e.g., a power outage) may be exploited by malicious users. As a mitigation, the community has introduced watchtowers, a third-party monitoring the blockchain on behalf of off-line users. Unfortunately, watchtowers are either trusted, which is critical from a security perspective, or they have to lock a certain amount of coins, called collateral, for each monitored PC in order to be held accountable, which is financially infeasible for a large network. We present Sleepy Channels, the first bi-directional PC protocol without watchtowers (or any other third party) that supports an unbounded number of payments and does not require parties to be persistently online. The key idea is to confine the period in which PC updates can be validated on-chain to a short, pre-determined time window, which is when the PC parties have to be online. This behavior is incentivized by letting the parties lock a collateral in the PC, which can be adjusted depending on their mutual trust and which they get back much sooner if they are online during this time window. Our protocol is compatible with any blockchain that is capable of verifying digital signatures (e.g., Bitcoin), as shown by our proof of concept. Moreover, our experimental results show that Sleepy Channels impose a communication and computation overhead similar to state-of-the-art PC protocols while removing watchtower's collateral and fees for the monitoring service.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "51054562",
+                    "name": "Sri Aravinda Krishnan Thyagarajan"
+                },
+                {
+                    "authorId": "2103014",
+                    "name": "Giulio Malavolta"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "80e6400f4ed21a2cbf87c41cdcb660fcd1fd7ebc",
+            "title": "Foundations of Coin Mixing Services",
+            "abstract": "Coin mixing services allow users to mix their cryptocurrency coins and thus enable unlinkable payments in a way that prevents tracking of honest users' coins by both the service provider and the users themselves. The easy bootstrapping of new users and backwards compatibility with cryptocurrencies (such as Bitcoin) with limited support for scripts are attractive features of this architecture, which has recently gained considerable attention in both academia and industry. A recent work of Tairi et al. [IEEE S&P 2021] formalizes the notion of a coin mixing service and proposes A2L, a new cryptographic protocol that simultaneously achieves high efficiency and interoperability. In this work, we identify a gap in their formal model and substantiate the issue by showing two concrete counterexamples: we show how to construct two encryption schemes that satisfy their definitions but lead to a completely insecure system. To amend this situation, we investigate secure constructions of coin mixing services. First, we develop the notion of blind conditional signatures (BCS), which acts as the cryptographic core for coin mixing services. We propose game-based security definitions for BCS and propose A2L+, a modified version of the protocol by Tairi et al. that satisfies our security definitions. Our analysis is in an idealized model (akin to the algebraic group model) and assumes the hardness of the one-more discrete logarithm problem. Finally, we propose A2L-UC, another construction of BCS that achieves the stronger notion of UC-security (in the standard model), albeit with a significant increase in computation cost. This suggests that constructing a coin mixing service protocol secure under composition requires more complex cryptographic machinery than initially thought.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9032985",
+                    "name": "Noemi Glaeser"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                },
+                {
+                    "authorId": "2103014",
+                    "name": "Giulio Malavolta"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "1418521163",
+                    "name": "Erkan Tairi"
+                },
+                {
+                    "authorId": "51054562",
+                    "name": "Sri Aravinda Krishnan Thyagarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "99201b59863a99cd93bae87a24ac9703ae845904",
+            "title": "Glimpse: On-Demand, Cross-Chain Communication for Efficient DeFi Applications on Bitcoin-based Blockchains",
+            "abstract": "\u2014Cross-chain communication is instrumental in un-leashing the full potential of blockchain technologies, as it allows users and developers to exploit the unique design features and the profit opportunities of different existing blockchains. Solutions based on trusted third parties (TTPs) suffer from security and scalability drawbacks; hence, increasing attention has recently been given to decentralized solutions. Lock contracts (e.g., HTLCs and adaptor signatures) and chain relays emerged as the two most prominent attempts to achieve cross-chain communication without TTPs. Lock contracts enable efficient synchronization of single transactions over different chains but are limited in expressiveness as they only support the development of a restricted class of applications (e.g., atomic swaps). On the other hand, chain relays enable the development of arbitrary cross-chain applications but are extremely expensive to operate in practice because they need to synchronize every on-chain transaction, besides assuming a quasi Turing-complete scripting language, which makes them incompatible with Bitcoin-based and scriptless blockchains. We introduce Glimpse, a novel on-demand cross-chain synchronization primitive , which is both efficient in terms of on-chain costs and computational overhead, and expressive in terms of applications it supports. The key idea of Glimpse is to synchronize transactions on-demand, i.e., only those relevant to realize the cross-chain application of interest. We present a concrete instantiation which is compatible with blockchains featuring a limited scripting language (e.g., Bitcoin-based chains like Liquid), and, yet, can be used as a building block for the design of DeFi applications such as lending, pegs, wrapping/un-wrapping of tokens, Proof-of-Burn, and verification of multiple oracle attestations. We formally define and prove Glimpse security in the Universal Composability (UC) framework and conduct an economical security analysis to identify the secure parameter space in the rational setting. Finally, we evaluate the cost of Glimpse for Bitcoin-like chains, showing that verifying a simple transaction has at most 700 bytes of on-chain overhead, resulting in a one-time fee of 3$, only twice as much as a basic Bitcoin transaction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284664628",
+                    "name": "Giulia Scaffino"
+                },
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "1453875103",
+                    "name": "Zeta Avarikioti"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "b78bdfc919388fc5f2c8c2efb3f876166d5b8fa7",
+            "title": "WebSpec: Towards Machine-Checked Analysis of Browser Security Mechanisms",
+            "abstract": "The complexity of browsers has steadily increased over the years, driven by the continuous introduction and update of Web platform components, such as novel Web APIs and security mechanisms. Their specifications are manually reviewed by experts to identify potential security issues. However, this process has proved to be error-prone due to the extensiveness of modern browser specifications and the interplay between new and existing Web platform components. To tackle this problem, we developed WebSpec, the first formal security framework for the analysis of browser security mechanisms, which enables both the automatic discovery of logical flaws and the development of machine-checked security proofs. WebSpec, in particular, includes a comprehensive semantic model of the browser in the Coq proof assistant, a formalization in this model of ten Web security invariants, and a toolchain turning the Coq model and the Web invariants into SMT-lib formulas to enable model checking with the Z3 theorem prover. If a violation is found, the toolchain automatically generates executable tests corresponding to the discovered attack trace, which is validated across major browsers.We showcase the effectiveness of WebSpec by discovering two new logical flaws caused by the interaction of different browser mechanisms and by identifying three previously discovered logical flaws in the current Web platform, as well as five in old versions. Finally, we show how WebSpec can aid the verification of our proposed changes to amend the reported inconsistencies affecting the current Web platform.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40109135",
+                    "name": "Lorenzo Veronese"
+                },
+                {
+                    "authorId": "35473384",
+                    "name": "Benjamin Farinier"
+                },
+                {
+                    "authorId": "2141763778",
+                    "name": "Pedro Miguel Sousa Bernardo"
+                },
+                {
+                    "authorId": "47251506",
+                    "name": "M. Tempesta"
+                },
+                {
+                    "authorId": "49325435",
+                    "name": "M. Squarcina"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "f74ee198502562f40797aa0f41c0d948568b7a84",
+            "title": "Thora: Atomic and Privacy-Preserving Multi-Channel Updates",
+            "abstract": "Most blockchain-based cryptocurrencies suffer from a heavily limited transaction throughput, which is a barrier to their growing adoption. Payment channel networks (PCNs) are one of the promising solutions to this problem. PCNs reduce the on-chain load of transactions and increase the throughput by processing many payments off-chain. In fact, any two users connected via a path of payment channels (i.e., joint addresses between the two channel end-points) can perform payments, and the underlying blockchain is used only when there is a dispute between users. Unfortunately, payments in PCNs can only be conducted securely along a path, which prevents the design of many interesting applications. Moreover, the most widely used implementation, the Lightning Network in Bitcoin, suffers from a collateral lock time linear in the path length, it is affected by security issues, and it relies on specific scripting features called Hash Timelock Contracts that hinders the applicability of the underlying protocol in other blockchains. In this work, we present Thora, the first Bitcoin-compatible off-chain protocol that enables the atomic update of arbitrary channels (i.e., not necessarily forming a path). This enables the design of a number of new off-chain applications, such as payments across different PCNs sharing the same blockchain, secure and trustless crowdfunding, and channel rebalancing. Our construction requires no specific scripting functionalities other than digital signatures and timelocks, thereby being applicable to a wider range of blockchains. We formally define security and privacy in the Universal Composability framework and show that our cryptographic protocol is a realization thereof. In our performance evaluation, we show that our construction requires only constant collateral, independently from the number of channels, and has only a moderate off-chain communication as well as computation overhead.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "2158016744",
+                    "name": "Kasra Abbaszadeh"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "049f3567c49f24183600feaa6202f09b220a0626",
+            "title": "Blitz: Secure Multi-Hop Payments Without Two-Phase Commits",
+            "abstract": "Payment-channel networks (PCN) are the most prominent approach to tackle the scalability issues of current permis-sionless blockchains. A PCN reduces the load on-chain by allowing arbitrarily many off-chain multi-hop payments (MHP) between any two users connected through a path of payment channels. Unfortunately, current protocols for MHP are far from satisfactory. One round MHP (e.g., Interledger) are inse-cure as a malicious intermediary can steal the payment funds. Two-round MHP (e.g., Lightning Network (LN)) follow the 2-phase-commit paradigm as in databases to overcome this issue. However, when tied with economical incentives, 2-phase-commit brings other security threats (i.e., wormhole attacks), staggered collateral (i.e., funds are locked for a time proportional to the payment path length) and dependency on speci\ufb01c scripting language functionality (e.g., hash time lock contracts) that hinders a wider deployment in practice. We present Blitz, a novel MHP protocol that demonstrates for the \ufb01rst time that we can achieve the best of the two worlds: a single round MHP where no malicious intermediary can steal coins. Moreover, Blitz provides privacy for sender and receiver, it is not prone to the wormhole attack and it requires only constant collateral. Additionally, we construct MHP us-ing only digital signatures and a timelock functionality, both available at the core of virtually every cryptocurrency today. We provide the cryptographic details of Blitz and we formally prove its security. Furthermore, our experimental evaluation on an LN snapshot shows that the LN collateral results in between 4x and 33x more unsuccessful payments than the",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "143854459",
+                    "name": "Aniket Kate"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        }
+    ]
+}

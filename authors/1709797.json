@@ -1,0 +1,449 @@
+{
+    "authorId": "1709797",
+    "papers": [
+        {
+            "paperId": "8fb92f51434543c4a8cd4980f84cf04552c712cc",
+            "title": "Efficient Tool Use with Chain-of-Abstraction Reasoning",
+            "abstract": "To achieve faithful reasoning that aligns with human expectations, large language models (LLMs) need to ground their reasoning to real-world knowledge (e.g., web facts, math and physical rules). Tools help LLMs access this external knowledge, but there remains challenges for fine-tuning LLM agents (e.g., Toolformer) to invoke tools in multi-step reasoning problems, where inter-connected tool calls require holistic and efficient tool usage planning. In this work, we propose a new method for LLMs to better leverage tools in multi-step reasoning. Our method, Chain-of-Abstraction (CoA), trains LLMs to first decode reasoning chains with abstract placeholders, and then call domain tools to reify each reasoning chain by filling in specific knowledge. This planning with abstract chains enables LLMs to learn more general reasoning strategies, which are robust to shifts of domain knowledge (e.g., math results) relevant to different reasoning questions. It also allows LLMs to perform decoding and calling of external tools in parallel, which avoids the inference delay caused by waiting for tool responses. In mathematical reasoning and Wiki QA domains, we show that our method consistently outperforms previous chain-of-thought and tool-augmented baselines on both in-distribution and out-of-distribution test sets, with an average ~6% absolute QA accuracy improvement. LLM agents trained with our method also show more efficient tool use, with inference speed being on average ~1.4x faster than baseline tool-augmented LLMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2282084596",
+                    "name": "Silin Gao"
+                },
+                {
+                    "authorId": "2173509991",
+                    "name": "Jane Dwivedi-Yu"
+                },
+                {
+                    "authorId": "2266801111",
+                    "name": "Ping Yu"
+                },
+                {
+                    "authorId": "2268821530",
+                    "name": "X. Tan"
+                },
+                {
+                    "authorId": "10721120",
+                    "name": "Ramakanth Pasunuru"
+                },
+                {
+                    "authorId": "2253669449",
+                    "name": "Olga Golovneva"
+                },
+                {
+                    "authorId": "2266467601",
+                    "name": "Koustuv Sinha"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "2691021",
+                    "name": "Antoine Bosselut"
+                },
+                {
+                    "authorId": "2261365525",
+                    "name": "Tianlu Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "01d31fb9fc6ab36df6627b8555b64789113eb7a5",
+            "title": "RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment",
+            "abstract": "We propose Reinforcement Learning from Contrastive Distillation (RLCD), a method for aligning language models to follow principles expressed in natural language (e.g., to be more harmless) without using human feedback. RLCD creates preference pairs from two contrasting model outputs, one using a positive prompt designed to encourage following the given principles, and one using a negative prompt designed to encourage violating them. Using two different prompts causes model outputs to be more differentiated on average, resulting in cleaner preference labels in the absence of human annotations. We then use the preference pairs to train a preference model, which is in turn used to improve a base unaligned language model via reinforcement learning. Empirically, RLCD outperforms RLAIF (Bai et al., 2022b) and context distillation (Huang et al., 2022) baselines across three diverse alignment tasks--harmlessness, helpfulness, and story outline generation--and when using both 7B and 30B model scales for simulating preference data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410652795",
+                    "name": "Kevin Yang"
+                },
+                {
+                    "authorId": "38666915",
+                    "name": "D. Klein"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "1932187449",
+                    "name": "Yuandong Tian"
+                }
+            ]
+        },
+        {
+            "paperId": "0a89829b68a10ee441357b64cb521a6379e953b2",
+            "title": "Open-Domain Text Evaluation via Contrastive Distribution Methods",
+            "abstract": "Recent advancements in open-domain text generation, driven by the power of large pre-trained language models (LLMs), have demonstrated remarkable performance. However, assessing these models' generation quality remains a challenge. In this paper, we introduce a novel method for evaluating open-domain text generation called Contrastive Distribution Methods (CDM). Leveraging the connection between increasing model parameters and enhanced LLM performance, CDM creates a mapping from the _contrast_ of two probabilistic distributions -- one known to be superior to the other -- to quality measures. We investigate CDM for open-domain text generation evaluation under two paradigms: 1) _Generative_ CDM, which harnesses the contrast of two language models' distributions to generate synthetic examples for training discriminator-based metrics; 2) _Discriminative_ CDM, which directly uses distribution disparities between two language models for evaluation. Our experiments on coherence evaluation for multi-turn dialogue and commonsense evaluation for controllable generation demonstrate CDM's superior correlate with human judgment than existing automatic evaluation metrics, highlighting the strong performance and generalizability of our approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167235968",
+                    "name": "Sidi Lu"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "1785372925",
+                    "name": "Tianlu Wang"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                }
+            ]
+        },
+        {
+            "paperId": "0a90d5f56150eafd3ac88e4406b17496fedf529a",
+            "title": "Look-back Decoding for Open-Ended Text Generation",
+            "abstract": "Given a prefix (context), open-ended generation aims to decode texts that are coherent, which do not abruptly drift from previous topics, and informative, which do not suffer from undesired repetitions. In this paper, we propose Look-back, an improved decoding algorithm that leverages the Kullback-Leibler divergence to track the distribution distance between current and historical decoding steps. Thus Look-back can automatically predict potential repetitive phrase and topic drift, and remove tokens that may cause the failure modes, restricting the next token probability distribution within a plausible distance to the history. We perform decoding experiments on document continuation and story generation, and demonstrate that Look-back is able to generate more fluent and coherent text, outperforming other strong decoding methods significantly in both automatic and human evaluations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2072804453",
+                    "name": "Nan Xu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Chunting Zhou"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "2378954",
+                    "name": "Xuezhe Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "1266477120913d274346b044b4cc72ea893b1382",
+            "title": "Walking Down the Memory Maze: Beyond Context Limit through Interactive Reading",
+            "abstract": "Large language models (LLMs) have advanced in large strides due to the effectiveness of the self-attention mechanism that processes and compares all tokens at once. However, this mechanism comes with a fundamental issue -- the predetermined context window is bound to be limited. Despite attempts to extend the context window through methods like extrapolating the positional embedding, using recurrence, or selectively retrieving essential parts of the long sequence, long-text understanding continues to be a challenge. We propose an alternative approach which instead treats the LLM as an interactive agent, allowing it to decide how to read the text via iterative prompting. We introduce MemWalker, a method that first processes the long context into a tree of summary nodes. Upon receiving a query, the model navigates this tree in search of relevant information, and responds once it gathers sufficient information. On long-text question answering tasks our method outperforms baseline approaches that use long context windows, recurrence, and retrieval. We show that, beyond effective reading, MemWalker enhances explainability by highlighting the reasoning steps as it interactively reads the text; pinpointing the relevant text segments related to the query.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108271953",
+                    "name": "Howard Chen"
+                },
+                {
+                    "authorId": "10721120",
+                    "name": "Ramakanth Pasunuru"
+                },
+                {
+                    "authorId": "2243265350",
+                    "name": "Jason Weston"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                }
+            ]
+        },
+        {
+            "paperId": "1671d70a135b1e28b3a9cbc830feaa9b0c57df32",
+            "title": "Don't throw away your value model! Generating more preferable text with Value-Guided Monte-Carlo Tree Search decoding",
+            "abstract": "Inference-time search algorithms such as Monte-Carlo Tree Search (MCTS) may seem unnecessary when generating natural language text based on state-of-the-art reinforcement learning such as Proximal Policy Optimization (PPO). In this paper, we demonstrate that it is possible to get extra mileage out of PPO by integrating MCTS on top. The key idea is not to throw out the value network, a byproduct of PPO training for evaluating partial output sequences, when decoding text out of the policy network. More concretely, we present a novel value-guided decoding algorithm called PPO-MCTS, which can integrate the value network from PPO to work closely with the policy network during inference-time generation. Compared to prior approaches based on MCTS for controlled text generation, the key strength of our approach is to reduce the fundamental mismatch of the scoring mechanisms of the partial outputs between training and test. Evaluation on four text generation tasks demonstrate that PPO-MCTS greatly improves the preferability of generated text compared to the standard practice of using only the PPO policy. Our results demonstrate the promise of search algorithms even on top of the aligned language models from PPO, and the under-explored benefit of the value network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144174497",
+                    "name": "Jiacheng Liu"
+                },
+                {
+                    "authorId": "2112929180",
+                    "name": "Andrew Cohen"
+                },
+                {
+                    "authorId": "10721120",
+                    "name": "Ramakanth Pasunuru"
+                },
+                {
+                    "authorId": "1699545",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2548384",
+                    "name": "Hannaneh Hajishirzi"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                }
+            ]
+        },
+        {
+            "paperId": "1a735015a1f7ef4f2ba2273ce5fcaaacfa9d1ea2",
+            "title": "Scaling Autoregressive Multi-Modal Models: Pretraining and Instruction Tuning",
+            "abstract": "We present CM3Leon (pronounced\"Chameleon\"), a retrieval-augmented, token-based, decoder-only multi-modal language model capable of generating and infilling both text and images. CM3Leon uses the CM3 multi-modal architecture but additionally shows the extreme benefits of scaling up and tuning on more diverse instruction-style data. It is the first multi-modal model trained with a recipe adapted from text-only language models, including a large-scale retrieval-augmented pre-training stage and a second multi-task supervised fine-tuning (SFT) stage. It is also a general-purpose model that can do both text-to-image and image-to-text generation, allowing us to introduce self-contained contrastive decoding methods that produce high-quality outputs. Extensive experiments demonstrate that this recipe is highly effective for multi-modal models. CM3Leon achieves state-of-the-art performance in text-to-image generation with 5x less training compute than comparable methods (zero-shot MS-COCO FID of 4.88). After SFT, CM3Leon can also demonstrate unprecedented levels of controllability in tasks ranging from language-guided image editing to image-controlled generation and segmentation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49297123",
+                    "name": "L. Yu"
+                },
+                {
+                    "authorId": "2237986629",
+                    "name": "Bowen Shi"
+                },
+                {
+                    "authorId": "10721120",
+                    "name": "Ramakanth Pasunuru"
+                },
+                {
+                    "authorId": "2237984026",
+                    "name": "Benjamin Muller"
+                },
+                {
+                    "authorId": "100664938",
+                    "name": "O. Yu. Golovneva"
+                },
+                {
+                    "authorId": "2238056517",
+                    "name": "Tianlu Wang"
+                },
+                {
+                    "authorId": "2237983657",
+                    "name": "Arun Babu"
+                },
+                {
+                    "authorId": "2237987675",
+                    "name": "Binh Tang"
+                },
+                {
+                    "authorId": "2253591308",
+                    "name": "Brian Karrer"
+                },
+                {
+                    "authorId": "2086827528",
+                    "name": "Shelly Sheynin"
+                },
+                {
+                    "authorId": "51519704",
+                    "name": "Candace Ross"
+                },
+                {
+                    "authorId": "33964593",
+                    "name": "Adam Polyak"
+                },
+                {
+                    "authorId": "2237983588",
+                    "name": "Russell Howes"
+                },
+                {
+                    "authorId": "2237990986",
+                    "name": "Vasu Sharma"
+                },
+                {
+                    "authorId": "2214843767",
+                    "name": "Puxin Xu"
+                },
+                {
+                    "authorId": "2040866961",
+                    "name": "Hovhannes Tamoyan"
+                },
+                {
+                    "authorId": "1388005058",
+                    "name": "Oron Ashual"
+                },
+                {
+                    "authorId": "2323917189",
+                    "name": "Uriel Singer"
+                },
+                {
+                    "authorId": "2530311",
+                    "name": "Shang-Wen Li"
+                },
+                {
+                    "authorId": "2238121623",
+                    "name": "Susan Zhang"
+                },
+                {
+                    "authorId": "2191899140",
+                    "name": "Rich James"
+                },
+                {
+                    "authorId": "134007132",
+                    "name": "Gargi Ghosh"
+                },
+                {
+                    "authorId": "2188620",
+                    "name": "Yaniv Taigman"
+                },
+                {
+                    "authorId": "1399159921",
+                    "name": "Maryam Fazel-Zarandi"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "1982950",
+                    "name": "Luke Zettlemoyer"
+                },
+                {
+                    "authorId": "2201435",
+                    "name": "Armen Aghajanyan"
+                }
+            ]
+        },
+        {
+            "paperId": "1d8472bbf71ccf60550126d136b53699a2f4f685",
+            "title": "DOMINO: A Dual-System for Multi-step Visual Language Reasoning",
+            "abstract": "Visual language reasoning requires a system to extract text or numbers from information-dense images like charts or plots and perform logical or arithmetic reasoning to arrive at an answer. To tackle this task, existing work relies on either (1) an end-to-end vision-language model trained on a large amount of data, or (2) a two-stage pipeline where a captioning model converts the image into text that is further read by another large language model to deduce the answer. However, the former approach forces the model to answer a complex question with one single step, and the latter approach is prone to inaccurate or distracting information in the converted text that can confuse the language model. In this work, we propose a dual-system for multi-step multimodal reasoning, which consists of a\"System-1\"step for visual information extraction and a\"System-2\"step for deliberate reasoning. Given an input, System-2 breaks down the question into atomic sub-steps, each guiding System-1 to extract the information required for reasoning from the image. Experiments on chart and plot datasets show that our method with a pre-trained System-2 module performs competitively compared to prior work on in- and out-of-distribution data. By fine-tuning the System-2 module (LLaMA-2 70B) on only a small amount of data on multi-step reasoning, the accuracy of our method is further improved and surpasses the best fully-supervised end-to-end approach by 5.7% and a pipeline approach with FlanPaLM (540B) by 7.5% on a challenging dataset with human-authored questions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2253897738",
+                    "name": "Peifang Wang"
+                },
+                {
+                    "authorId": "2253669449",
+                    "name": "Olga Golovneva"
+                },
+                {
+                    "authorId": "2201435",
+                    "name": "Armen Aghajanyan"
+                },
+                {
+                    "authorId": "2256826212",
+                    "name": "Xiang Ren"
+                },
+                {
+                    "authorId": "1998918",
+                    "name": "Muhao Chen"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "1399159921",
+                    "name": "Maryam Fazel-Zarandi"
+                }
+            ]
+        },
+        {
+            "paperId": "2029349c55c1dba3493c5b3bd25152f18ba21ae2",
+            "title": "Augmented Language Models: a Survey",
+            "abstract": "This survey reviews works in which language models (LMs) are augmented with reasoning skills and the ability to use tools. The former is defined as decomposing a potentially complex task into simpler subtasks while the latter consists in calling external modules such as a code interpreter. LMs can leverage these augmentations separately or in combination via heuristics, or learn to do so from demonstrations. While adhering to a standard missing tokens prediction objective, such augmented LMs can use various, possibly non-parametric external modules to expand their context processing ability, thus departing from the pure language modeling paradigm. We therefore refer to them as Augmented Language Models (ALMs). The missing token objective allows ALMs to learn to reason, use tools, and even act, while still performing standard natural language tasks and even outperforming most regular LMs on several benchmarks. In this work, after reviewing current advance in ALMs, we conclude that this new research direction has the potential to address common limitations of traditional LMs such as interpretability, consistency, and scalability issues.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51888120",
+                    "name": "Gr\u00e9goire Mialon"
+                },
+                {
+                    "authorId": "145188261",
+                    "name": "Roberto Dess\u00ec"
+                },
+                {
+                    "authorId": "3376175",
+                    "name": "M. Lomeli"
+                },
+                {
+                    "authorId": "31434304",
+                    "name": "Christoforos Nalmpantis"
+                },
+                {
+                    "authorId": "10721120",
+                    "name": "Ramakanth Pasunuru"
+                },
+                {
+                    "authorId": "48647153",
+                    "name": "Roberta Raileanu"
+                },
+                {
+                    "authorId": "3361236",
+                    "name": "Baptiste Rozi\u00e8re"
+                },
+                {
+                    "authorId": "32246932",
+                    "name": "Timo Schick"
+                },
+                {
+                    "authorId": "2173509991",
+                    "name": "Jane Dwivedi-Yu"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "3024698",
+                    "name": "Edouard Grave"
+                },
+                {
+                    "authorId": "1688882",
+                    "name": "Yann LeCun"
+                },
+                {
+                    "authorId": "90745780",
+                    "name": "Thomas Scialom"
+                }
+            ]
+        },
+        {
+            "paperId": "2218ab2653ed2ab651a03d98056e2d6ae1d99132",
+            "title": "Branch-Solve-Merge Improves Large Language Model Evaluation and Generation",
+            "abstract": "Large Language Models (LLMs) are frequently used for multi-faceted language generation and evaluation tasks that involve satisfying intricate user constraints or taking into account multiple aspects and criteria. However, their performance can fall short, due to the model\u2019s lack of coherence and inability to plan and decompose the problem. We propose Branch-Solve-Merge (BSM), a Large Language Model program (Schlag et al., 2023) for tackling such challenging natural language tasks. It consists of branch, solve, and merge modules that are parameterized with specific prompts to the base LLM. These three modules plan a decomposition of the task into multiple parallel sub-tasks, independently solve them, and fuse the solutions to the sub-tasks. We apply our method to the tasks of LLM response evaluation and constrained text generation and evaluate its effectiveness with multiple LLMs, including Vicuna, LLaMA-2-chat, and GPT-4. BSM improves the evaluation correctness and consistency for each LLM by enhancing human-LLM agreement by up to 26%, reducing length and pairwise position biases by up to 50%, and allowing LLaMA-2-chat to match or outperform GPT-4 on most domains. On a constraint story generation task, BSM improves the coherence of stories while also improving constraint satisfaction by 12%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35106509",
+                    "name": "Swarnadeep Saha"
+                },
+                {
+                    "authorId": "2253752918",
+                    "name": "Omer Levy"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "2253762115",
+                    "name": "Mohit Bansal"
+                },
+                {
+                    "authorId": "2243265350",
+                    "name": "Jason Weston"
+                },
+                {
+                    "authorId": "2243015223",
+                    "name": "Xian Li"
+                }
+            ]
+        }
+    ]
+}

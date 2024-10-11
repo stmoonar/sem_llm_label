@@ -1,0 +1,290 @@
+{
+    "authorId": "2113917675",
+    "papers": [
+        {
+            "paperId": "0d7c59d6f0284aa6770872e5cf747cf703c71017",
+            "title": "Detecting Anomalies in Time Series Using Kernel Density Approaches",
+            "abstract": "This paper introduces a novel anomaly detection approach tailored for time series data with exclusive reliance on normal events during training. Our key innovation lies in the application of kernel-density estimation (KDE) to scrutinize reconstruction errors, providing an empirically derived probability distribution for normal events post-reconstruction. This non-parametric density estimation technique offers a nuanced understanding of anomaly detection, differentiating it from prevalent threshold-based mechanisms in existing methodologies. In post-training, events are encoded, decoded, and evaluated against the estimated density, providing a comprehensive notion of normality. In addition, we propose a data augmentation strategy involving variational autoencoder-generated events and a smoothing step for enhanced model robustness. The significance of our autoencoder-based approach is evident in its capacity to learn normal representation without prior anomaly knowledge. Through the KDE step on reconstruction errors, our method addresses the versatility of anomalies, departing from assumptions tied to larger reconstruction errors for anomalous events. Our proposed likelihood measure then distinguishes normal from anomalous events, providing a concise yet comprehensive anomaly detection solution. The extensive experimental results support the feasibility of our proposed method, yielding significantly improved classification performance by nearly 10% on the UCR benchmark data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2289749614",
+                    "name": "Robin Frehner"
+                },
+                {
+                    "authorId": "2274944101",
+                    "name": "Kesheng Wu"
+                },
+                {
+                    "authorId": "2200490166",
+                    "name": "Alexander Sim"
+                },
+                {
+                    "authorId": "2257122868",
+                    "name": "Jinoh Kim"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "5cc58130f8741bf10c4407e61f4c576f145255a0",
+            "title": "StatBot.Swiss: Bilingual Open Data Exploration in Natural Language",
+            "abstract": "The potential for improvements brought by Large Language Models (LLMs) in Text-to-SQL systems is mostly assessed on monolingual English datasets. However, LLMs' performance for other languages remains vastly unexplored. In this work, we release the StatBot.Swiss dataset, the first bilingual benchmark for evaluating Text-to-SQL systems based on real-world applications. The StatBot.Swiss dataset contains 455 natural language/SQL-pairs over 35 big databases with varying level of complexity for both English and German. We evaluate the performance of state-of-the-art LLMs such as GPT-3.5-Turbo and mixtral-8x7b-instruct for the Text-to-SQL translation task using an in-context learning approach. Our experimental analysis illustrates that current LLMs struggle to generalize well in generating SQL queries on our novel bilingual dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2280642427",
+                    "name": "Farhad Nooralahzadeh"
+                },
+                {
+                    "authorId": "2284214271",
+                    "name": "Yi Zhang"
+                },
+                {
+                    "authorId": "2305743108",
+                    "name": "Ellery Smith"
+                },
+                {
+                    "authorId": "2304749080",
+                    "name": "Sabine Maennel"
+                },
+                {
+                    "authorId": "2304750773",
+                    "name": "Cyril Matthey-Doret"
+                },
+                {
+                    "authorId": "89149089",
+                    "name": "R. D. Fondeville"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "9317abf3795d35a138e53c815bed97df6ee970a6",
+            "title": "Evaluating the Data Model Robustness of Text-to-SQL Systems Based on Real User Queries",
+            "abstract": "Text-to-SQL systems (also known as NL-to-SQL systems) have become an increasingly popular solution for bridging the gap between user capabilities and SQL-based data access. These systems translate user requests in natural language to valid SQL statements for a specific database. Recent Text-to-SQL systems have benefited from the rapid improvement of transformer-based language models. However, while Text-to-SQL systems that incorporate such models continuously reach new high scores on -- often synthetic -- benchmark datasets, a systematic exploration of their robustness towards different data models in a real-world, realistic scenario is notably missing. This paper provides the first in-depth evaluation of the data model robustness of Text-to-SQL systems in practice based on a multi-year international project focused on Text-to-SQL interfaces. Our evaluation is based on a real-world deployment of FootballDB, a system that was deployed over a 9 month period in the context of the FIFA World Cup 2022, during which about 6K natural language questions were asked and executed. All of our data is based on real user questions that were asked live to the system. We manually labeled and translated a subset of these questions for three different data models. For each data model, we explore the performance of representative Text-to-SQL systems and language models. We further quantify the impact of training data size, pre-, and post-processing steps as well as language model inference time. Our comprehensive evaluation sheds light on the design choices of real-world Text-to-SQL systems and their impact on moving from research prototypes to real deployments. Last, we provide a new benchmark dataset to the community, which is the first to enable the evaluation of different data models for the same dataset and is substantially more challenging than most previous datasets in terms of query complexity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284665905",
+                    "name": "Jonathan F\u00fcrst"
+                },
+                {
+                    "authorId": "2072251887",
+                    "name": "Catherine Kosten"
+                },
+                {
+                    "authorId": "2428180",
+                    "name": "F. Nooralahzadeh"
+                },
+                {
+                    "authorId": "2284214271",
+                    "name": "Yi Zhang"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "dcd5f89d21d397485fa385120e98ec49a2164193",
+            "title": "QardEst: Using Quantum Machine Learning for Cardinality Estimation of Join Queries",
+            "abstract": "Classical and learned query optimizers (LQOs) use cardinality estimations as one of the critical inputs for query planning. Thus, accurately predicting the cardinality of arbitrary queries plays a vital role in query optimization. A recent boom in novel deep learning methods stimulated not only the rise of LQOs but also contributed to the appearance of learned cardinality estimators (LCEs). However, the majority of them are based on classical neural networks, ignoring that multivariate correlations between attributes across different tables could be naturally represented via entanglements in quantum circuits. In this paper, we introduce QardEst - Quantum Cardinality Estimator - a novel quantum neural network approach to estimate the cardinality of join queries. Our experiments conducted with a similar number of trainable parameters suggest that quantum neural networks executed on a quantum simulator outperform classical neural networks in terms of mean squared error as well as the q-error.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2308851658",
+                    "name": "Florian Kittelmann"
+                },
+                {
+                    "authorId": "2237808883",
+                    "name": "Pavel Sulimov"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "0274eae9c16cace90332eedcdbf17dc404428888",
+            "title": "The Role of Data Scientists in Modern Enterprises - Experience from Data Science Education",
+            "abstract": "\"Data Scientist\" has often been considered as the sexiest job of the 21st century. As a consequence, the spectrum of data science education programs has increased significantly in recent years, and there is a high demand for data scientists at many companies. However, what training is required to become a data scientist? What is the role of data scientists in current enterprises? Is the training well-aligned to the practical needs of a job? In this article, we will address these questions by evaluating a survey of people who were trained in a continuing education program in data science in Switzerland. Our study sheds lights on the practical aspects of the data science education and how this newly-gained knowledge can successfully be applied in an enterprise. One of the highlights from the point of view of the database community is the important role of SQL in data science.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1994108",
+                    "name": "Thoralf Mildenberger"
+                },
+                {
+                    "authorId": "3075644",
+                    "name": "Martin Braschler"
+                },
+                {
+                    "authorId": "2511312",
+                    "name": "A. Ruckstuhl"
+                },
+                {
+                    "authorId": "2878852",
+                    "name": "R. Vorburger"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "4ac0d89d022a9ca89967cd812800e18618e83b3f",
+            "title": "Spider4SPARQL: A Complex Benchmark for Evaluating Knowledge Graph Question Answering Systems",
+            "abstract": "With the recent spike in the number and availability of Large Language Models (LLMs), it has become increasingly important to provide large and realistic benchmarks for evaluating Knowledge Graph Question Answering (KGQA) systems. So far the majority of benchmarks rely on pattern-based SPARQL query generation approaches. The subsequent natural language (NL) question generation is conducted through crowdsourcing or other automated methods, such as rule-based paraphrasing or NL question templates. Although some of these datasets are of considerable size, their pitfall lies in their pattern-based generation approaches, which do not always generalize well to the vague and linguistically diverse questions asked by humans in real-world contexts. In this paper, we introduce Spider4SPARQL -a new SPARQL benchmark dataset featuring 9,693 previously existing manually generated NL questions and 4,721 unique, novel, and complex SPARQL queries of varying complexity. In addition to the NL/SPARQL pairs, we also provide their corresponding 166 knowledge graphs and ontologies, which cover 138 different domains. Our complex benchmark enables novel ways of evaluating the strengths and weaknesses of modern KGQA systems. We evaluate the system with state-of-the-art KGQA systems as well as LLMs, which achieve only up to 45% execution accuracy, demonstrating that Spider4SPARQL is a challenging benchmark for future research.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2072251887",
+                    "name": "Catherine Kosten"
+                },
+                {
+                    "authorId": "1410039219",
+                    "name": "Philippe Cudr\u00e9-Mauroux"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "876b9a41b847596f003d10171bdadafa81e4da35",
+            "title": "Multiple Query Optimization Using a Gate-Based Quantum Computer",
+            "abstract": "Quantum computing promises to solve difficult optimization problems in chemistry, physics and mathematics more efficiently than classical computers. However, it requires fault-tolerant quantum computers with millions of qubits; a technological challenge still not mastered by engineers. To lower the barrier, hybrid algorithms combining classical and quantum computers are used, where quantum computing is only used for those parts of computation that cannot be solved efficiently otherwise. In this paper, we tackle the multiple query optimization problem (MQO), an important NP-hard problem in database research. We present an implementation based on a scheme called quantum approximate optimization algorithm to solve the MQO on a gate-based quantum computer. We perform a detailed experimental evaluation of our implementation and compare its performance against a competing approach that employs a quantum annealer \u2013 another type of quantum computer. Our implementation shows a qubit efficiency of close to 99%, which is almost a factor of 2 higher than the state-of-the-art implementation. We emphasize that the problems we can solve with current gate-based quantum technology are fairly small and might not seem practical yet compared to state-of-the-art classical query optimizers. However, our experiments on using a hybrid approach of classical and quantum computing show that our implementation scales favourably with larger problem sizes. Hence, we conclude that our approach shows promising results for near-term quantum computers and thus sets the stage for a challenging avenue of novel database research.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2120264814",
+                    "name": "Tobias Fankhauser"
+                },
+                {
+                    "authorId": "2258163911",
+                    "name": "Marc E. Sol\u00e8r"
+                },
+                {
+                    "authorId": "49213721",
+                    "name": "R. F\u00fcchslin"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "dcabc3ff8545659dfef9b0bab6d0159897fc711f",
+            "title": "Data-driven information extraction and enrichment of molecular profiling data for cancer cell lines",
+            "abstract": "Abstract Motivation With the proliferation of research means and computational methodologies, published biomedical literature is growing exponentially in numbers and volume. Cancer cell lines are frequently used models in biological and medical research that are currently applied for a wide range of purposes, from studies of cellular mechanisms to drug development, which has led to a wealth of related data and publications. Sifting through large quantities of text to gather relevant information on cell lines of interest is tedious and extremely slow when performed by humans. Hence, novel computational information extraction and correlation mechanisms are required to boost meaningful knowledge extraction. Results In this work, we present the design, implementation, and application of a novel data extraction and exploration system. This system extracts deep semantic relations between textual entities from scientific literature to enrich existing structured clinical data concerning cancer cell lines. We introduce a new public data exploration portal, which enables automatic linking of genomic copy number variants plots with ranked, related entities such as affected genes. Each relation is accompanied by literature-derived evidences, allowing for deep, yet rapid, literature search, using existing structured data as a springboard. Availability and implementation Our system is publicly available on the web at https://cancercelllines.org.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "153437025",
+                    "name": "Ellery Smith"
+                },
+                {
+                    "authorId": "2051316573",
+                    "name": "Rahel Paloots"
+                },
+                {
+                    "authorId": "2221008554",
+                    "name": "Dimitris Giagkos"
+                },
+                {
+                    "authorId": "1845926",
+                    "name": "M. Baudis"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "e7a4e7b349b70b1681978cd57a59a6e1684b219f",
+            "title": "ScienceBenchmark: A Complex Real-World Benchmark for Evaluating Natural Language to SQL Systems",
+            "abstract": "Natural Language to SQL systems (NL-to-SQL) have recently shown improved accuracy (exceeding 80%) for natural language to SQL query translation due to the emergence of transformer-based language models, and the popularity of the Spider benchmark. However, Spider mainly contains simple databases with few tables, columns, and entries, which do not reflect a realistic setting. Moreover, complex real-world databases with domain-specific content have little to no training data available in the form of NL/SQL-pairs leading to poor performance of existing NL-to-SQL systems.\n \n In this paper, we introduce\n ScienceBenchmark\n , a new complex NL-to-SQL benchmark for three real-world, highly domain-specific databases. For this new benchmark, SQL experts and domain experts created high-quality NL/SQL-pairs for each domain. To garner more data, we extended the small amount of human-generated data with synthetic data generated using GPT-3. We show that our benchmark is highly challenging, as the top performing systems on Spider achieve a very low performance on our benchmark. Thus, the challenge is many-fold: creating NL-to-SQL systems for highly complex domains with a small amount of hand-made training data augmented with synthetic data. To our knowledge,\n ScienceBenchmark\n is the first NL-to-SQL benchmark designed with complex real-world scientific databases, containing challenging training and test data carefully validated by domain experts.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46867002",
+                    "name": "Yi Zhang"
+                },
+                {
+                    "authorId": "145116511",
+                    "name": "Jan Deriu"
+                },
+                {
+                    "authorId": "2055401797",
+                    "name": "George Katsogiannis-Meimarakis"
+                },
+                {
+                    "authorId": "2072251887",
+                    "name": "Catherine Kosten"
+                },
+                {
+                    "authorId": "1680709",
+                    "name": "Georgia Koutrika"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        },
+        {
+            "paperId": "e967d2838588d8a97a0872f58a8473f77b5f38ea",
+            "title": "Is Your Learned Query Optimizer Behaving As You Expect? A Machine Learning Perspective",
+            "abstract": "The current boom of learned query optimizers (LQO) can be explained not only by the general continuous improvement of deep learning (DL) methods but also by the straightforward formulation of a query optimization problem (QOP) as a machine learning (ML) one. The idea is often to replace dynamic programming approaches, widespread for solving QOP, with more powerful methods such as reinforcement learning. However, such a rapid \"game change\" in the field of QOP could not pass without consequences - other parts of the ML pipeline, except for predictive model development, have large improvement potential. For instance, different LQOs introduce their own restrictions on training data generation from queries, use an arbitrary train/validation approach, and evaluate on a voluntary split of benchmark queries.\n \n In this paper, we attempt to standardize the ML pipeline for evaluating LQOs by introducing a new\n end-to-end benchmarking framework.\n Additionally, we guide the reader through each data science stage in the ML pipeline and provide novel insights from the machine learning perspective, considering the specifics of QOP. Finally, we perform a\n rigorous evaluation of existing LQOs, showing that PostgreSQL outperforms these LQOs in almost all experiments depending on the train/test splits.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1876399399",
+                    "name": "Claude Lehmann"
+                },
+                {
+                    "authorId": "2237808883",
+                    "name": "Pavel Sulimov"
+                },
+                {
+                    "authorId": "2113917675",
+                    "name": "Kurt Stockinger"
+                }
+            ]
+        }
+    ]
+}

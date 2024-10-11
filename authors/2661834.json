@@ -1,0 +1,445 @@
+{
+    "authorId": "2661834",
+    "papers": [
+        {
+            "paperId": "c3db98f8d333da2e31cfe1956e58c6b00993c269",
+            "title": "Graph Contrastive Learning Reimagined: Exploring Universality",
+            "abstract": "Real-world graphs exhibit diverse structures, including homophilic and heterophilic patterns, necessitating the development of a universal Graph Contrastive Learning (GCL) framework. Nonetheless, the existing GCLs, especially those with a local focus, lack universality due to the mismatch between the input graph structure and the homophily assumption for two primary components of GCLs. Firstly, the encoder, commonly Graph Convolution Network (GCN), operates as a low-pass filter, which assumes the input graph to be homophilic. This makes it challenging to aggregate features from neighbor nodes of the same class on heterophilic graphs. Secondly, the local positive sampling regards neighbor nodes as positive samples, which is inspired by the homophily assumption. This results in feature similarity amplification for the samples from the different classes (i.e., FALSE positive samples). Therefore, it is crucial to feed the encoder and positive sampling of GCLs with homophilic graph structures. This paper presents a novel GCL framework, named gRaph cOntraStive Exploring uNiversality (ROSEN), designed to achieve this objective. Specifically, ROSEN equips a local graph structure inference module, utilizing the Block Diagonal Property (BDP) of the affinity matrix extracted from node ego networks. This module can generate the homophilic graph structure by selectively removing disassortative edges. Extensive evaluations validate the effectiveness and universality of ROSEN across node classification and node clustering tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258983204",
+                    "name": "Jiaming Zhuo"
+                },
+                {
+                    "authorId": "2298902011",
+                    "name": "Can Cui"
+                },
+                {
+                    "authorId": "2258976852",
+                    "name": "Kun Fu"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2258959961",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2259851578",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2255826390",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "2259628664",
+                    "name": "Zhen Wang"
+                },
+                {
+                    "authorId": "2259620725",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2258970173",
+                    "name": "Liang Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "d283cefad8daaa64e0a4d1d0f82bfb03614289a6",
+            "title": "Improving Graph Contrastive Learning via Adaptive Positive Sampling",
+            "abstract": "Graph Contrastive Learning (GCL), a Self-Supervised Learning (SSL) architecture tailored for graphs, has shown notable potential for mitigating label scarcity. Its core idea is to amplify feature similarities between the positive sample pairs and reduce them between the negative sample pairs. Unfortunately, most existing GCLs consistently present sub-optimal performances on both homophilic and heterophilic graphs. This is primarily attributed to two limitations of positive sampling, that is, incomplete local sampling and blind sampling. To address these limitations, this paper introduces a novel GCL framework with an adaptive positive sampling module, named grapH contrastivE Adaptive Positive Samples (HEATS). Motivated by the observation that the affinity matrix corresponding to optimal positive sample sets has a block-diagonal structure with equal weights within each block, a self-expressive learning objective incorporating the block and idempotent constraint is presented. This learning objective and the contrastive learning objective are iteratively optimized to improve the adaptability and robustness of HEATS. Extensive experiments on graphs and images validate the effectiveness and generality of HEATS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258983204",
+                    "name": "Jiaming Zhuo"
+                },
+                {
+                    "authorId": "2298913268",
+                    "name": "Feiyang Qin"
+                },
+                {
+                    "authorId": "2298902011",
+                    "name": "Can Cui"
+                },
+                {
+                    "authorId": "2258976852",
+                    "name": "Kun Fu"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2298954125",
+                    "name": "Mengzhu Wang"
+                },
+                {
+                    "authorId": "2255826390",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "2259851578",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2259628664",
+                    "name": "Zhen Wang"
+                },
+                {
+                    "authorId": "2259620725",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2258970173",
+                    "name": "Liang Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "fdd7056aa4886f1ba692f5b84d73e50eea8966b7",
+            "title": "GAUSS: GrAph-customized Universal Self-Supervised Learning",
+            "abstract": "To make Graph Neural Networks (GNNs) meet the requirements of the Web, the universality and the generalization become two important research directions. On one hand, many universal GNNs are presented for semi-supervised tasks on both homophilic and non-homophilic graphs by distinguishing homophilic and heterophilic edges with the help of labels. On the other hand, self-supervised learning (SSL) algorithms on graphs are presented by leveraging the self-supervised learning schemes from computer vision and natural language processing. Unfortunately, graph universal self-supervised learning remains resolved. Most existing SSL methods on graphs, which often employ two-layer GCN as the encoder and train the mapping functions, can't alter the low-passing filtering characteristic of GCN. Therefore, to be universal, SSL must becustomized for the graph, i.e., learning the graph. However, learning the graph via universal GNNs is disabled in SSL, since their distinguishability on homophilic and heterophilic edges disappears without the labels. To overcome this difficulty, this paper proposes novel GrAph-customized Universal Self-Supervised Learning (GAUSS) by exploiting local attribute distribution. The main idea is to replace the global parameters with locally learnable propagation. To make the propagation matrix demonstrate the affinity between the nodes, the self-representative learning framework is employed with k-block diagonal regularization. Extensive experiments on synthetic and real-world datasets demonstrate its effectiveness, universality and robustness to noises.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258970173",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2301000149",
+                    "name": "Weixiao Hu"
+                },
+                {
+                    "authorId": "2300507511",
+                    "name": "Jizhong Xu"
+                },
+                {
+                    "authorId": "2215543502",
+                    "name": "Runjie Shi"
+                },
+                {
+                    "authorId": "2258959961",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2259851578",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2259620725",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2259628664",
+                    "name": "Zhen Wang"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2255826390",
+                    "name": "Yuanfang Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "3eb3cb33d2c807b88c78c12d48041ffeba2ef096",
+            "title": "Graph Neural Networks without Propagation",
+            "abstract": "Due to the simplicity, intuition and explanation, most Graph Neural Networks (GNNs) are proposed by following the pipeline of message passing. Although they achieve superior performances in many tasks, propagation-based GNNs possess three essential drawbacks. Firstly, the propagation tends to produce smooth effect, which meets the inductive bias of homophily, and causes two serious issues: over-smoothing issue and performance drop on networks with heterophily. Secondly, the propagations to each node are irrelevant, which prevents GNNs from modeling high-order relation, and cause the GNNs fragile to the attributes noises. Thirdly, propagation-based GNNs may be fragile to topology noise, since they heavily relay on propagation over the topology. Therefore, the propagation, as the key component of most GNNs, may be the essence of some serious issues in GNNs. To get to the root of these issue, this paper attempts to replace the propagation with a novel local operation. Quantitative experimental analysis reveals: 1) the existence of low-rank characteristic in the node attributes from ego-networks and 2) the performance improvement by reducing its rank. Motivated by this finding, this paper propose the Low-Rank GNNs, whose key component is the low-rank attribute matrix approximation in ego-network. The graph topology is employed to construct the ego-networks instead of message propagation, which is sensitive to topology noises. The proposed Low-Rank GNNs posses some attractive characteristics, including robust to topology and attribute noises, parameter-free and parallelizable. Experimental evaluations demonstrate the superior performance, robustness to noises and universality of the proposed Low-Rank GNNs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2215584803",
+                    "name": "Qiuliang Zhang"
+                },
+                {
+                    "authorId": "2215543502",
+                    "name": "Runjie Shi"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2188012894",
+                    "name": "Zhen Wang"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "6d35b28af908c1f6e2c9de2f30e12a9573480ddc",
+            "title": "Self-supervised Graph Neural Networks via Low-Rank Decomposition",
+            "abstract": "Self-supervised learning is introduced to train graph neural networks (GNNs) by employing propagation-based GNNs designed for semi-supervised learning tasks. Unfortunately, this common choice tends to cause two serious issues. Firstly, global parameters cause the model lack the ability to capture the local property. Secondly, it is dif\ufb01cult to handle networks beyond homophily without label information. This paper tends to break through the common choice of employing propagation-based GNNs, which aggregate representations of nodes belonging to different classes and tend to lose discriminative information. If the propagation in each ego-network is just between the nodes from the same class, the obtained representation matrix should follow the low-rank characteristic. To meet this requirement, this paper proposes the Low-Rank Decomposition-based GNNs (LRD-GNN-Matrix) by employing Low-Rank Decomposition to the attribute matrix. Furthermore, to incorporate long-distance information, Low-Rank Tensor Decomposition-based GNN (LRD-GNN-Tensor) is proposed by constructing the node attribute tensor from selected similar ego-networks and performing Low-Rank Tensor Decomposition. The employed tensor nuclear norm facilitates the capture of the long-distance relationship between original and selected similar ego-networks. Extensive experiments demonstrate the superior performance and the robustness of LRD-GNNs",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258970173",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2215543502",
+                    "name": "Runjie Shi"
+                },
+                {
+                    "authorId": "2215584803",
+                    "name": "Qiuliang Zhang"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2259628664",
+                    "name": "Zhen Wang"
+                },
+                {
+                    "authorId": "2259851578",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2259620725",
+                    "name": "Xiaochun Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "72121f1771e6446bca3783f493177d1470dec8b0",
+            "title": "Graph Reciprocal Neural Networks by Abstracting Node as Attribute",
+            "abstract": "Graph neural network (GNN) can be formulated as the multiplication of the topology-related matrix (adjacency or Laplacian matrix) and node attribute matrix, i.e., operation in node-wise. Unfortunately, this unified formula reveals two inherent drawbacks. Firstly, the topology and node attribute are not reciprocal but biased. From employment, the topology information is repeatedly employed, while the node attribute is only used once. From parameterization perspective, the node attribute is parameterized with highly expressive MLPs, while topology is not. Secondly, the graph topology can not be fully explored. Only the local pairwise relation is explored, but the mesoscopic community structure, which is one of the most prominent characteristics of networks, is ignored. To alleviate these issues, this paper proposes the Graph Reciprocal Network (GRN) by treating node attribute and topology reciprocal. Firstly, it is illustrated that the node can be regarded and utilized as another kind of attribute. Secondly, a novel node representation scheme is proposed from the theory of Quadratic Networks, with a theoretical guarantee of the fine-grained element-wise product of the representations of the topology and attribute. Extensive experiments demonstrate the superior performance and robustness of the proposed GRN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258970173",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2259865074",
+                    "name": "Jiayi Wang"
+                },
+                {
+                    "authorId": "2259851578",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2259620725",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2259628664",
+                    "name": "Zhen Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "a07a662d043e54aab0374409e3dd055aaa226000",
+            "title": "Long Short-Term Graph Memory Against Class-imbalanced Over-smoothing",
+            "abstract": "Most Graph Neural Networks (GNNs) follow the message-passing scheme. Residual connection is an effective strategy to tackle GNNs' over-smoothing issue and performance reduction issue on non-homophilic networks. Unfortunately, the coarse-grained residual connection still suffers from class-imbalanced over-smoothing issue, due to the fixed and linear combination of topology and attribute in node representation learning. To make the combination flexible to capture complicated relationship, this paper reveals that the residual connection needs to be node-dependent, layer-dependent, and related to both topology and attribute. To alleviate the difficulty in specifying complicated relationship, this paper presents a novel perspective on GNNs, i.e., the representations of one node in different layers can be seen as a sequence of states. From this perspective, existing residual connections are not flexible enough for sequence modeling. Therefore, a novel node-dependent residual connection, i.e., Long Short-Term Graph Memory Network (LSTGM) is proposed to employ Long Short-Term Memory (LSTM), to model the sequence of node representation. To make the graph topology fully employed, LSTGM innovatively enhances the updated memory and three gates with graph topology. A speedup version is also proposed for effective training. Experimental evaluations on real-world datasets demonstrate their effectiveness in preventing over-smoothing issue and handling networks with heterophily.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258970173",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2259865074",
+                    "name": "Jiayi Wang"
+                },
+                {
+                    "authorId": "2259663053",
+                    "name": "Tingting Zhang"
+                },
+                {
+                    "authorId": "2258959961",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2259851578",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2255826390",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2259628664",
+                    "name": "Zhen Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "b363c210b1b273de140aa13c29fd030447a2489e",
+            "title": "Propagation is All You Need: A New Framework for Representation Learning and Classifier Training on Graphs",
+            "abstract": "Graph Neural Networks (GNNs) have been the standard toolkit for processing non-euclidean spatial data since their powerful capability in graph representation learning. Unfortunately, their training strategy for network parameters is inefficient since it is directly inherited from classic Neural Networks (NNs), ignoring the characteristic of GNNs. To alleviate this issue, experimental analyses are performed to investigate the knowledge captured in classifier parameters during network training. We conclude that the parameter features, i.e., the column vectors of the classifier parameter matrix, are cluster representations with high discriminability. And after a theoretical analysis, we conclude that the discriminability of these features is obtained from the feature propagation from nodes to parameters. Furthermore, an experiment verifies that compared with cluster centroids, the parameter features are more potential for augmenting the feature propagation between nodes. Accordingly, a novel GNN-specific training framework is proposed by simultaneously updating node representations and classifier parameters via a unified feature propagation scheme. Moreover, two augmentation schemes are implemented for the framework, named Full Propagation Augmentation (FPA) and Simplified Full Propagation Augmentation (SFPA). Specifically, FPA augmentates the feature propagation of each node with the updated classifier parameters. SFPA only augments nodes with the classifier parameters corresponding to their clusters. Theoretically, FPA is equivalent to optimizing a novel graph learning objective, which demonstrates the universality of the proposed framework to existing GNNs. Extensive experiments demonstrate the superior performance and the universality of the proposed framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258983204",
+                    "name": "Jiaming Zhuo"
+                },
+                {
+                    "authorId": "2258976852",
+                    "name": "Kun Fu"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "2258974835",
+                    "name": "Liang Yang\u2217"
+                }
+            ]
+        },
+        {
+            "paperId": "1163c29ae6a26b1cd8d85280740410e99001a959",
+            "title": "Self-Supervised Graph Neural Networks via Diverse and Interactive Message Passing",
+            "abstract": "By interpreting Graph Neural Networks (GNNs) as the message passing from the spatial perspective, their success is attributed to Laplacian smoothing. However, it also leads to serious over-smoothing issue by stacking many layers. Recently, many efforts have been paid to overcome this issue in semi-supervised learning. Unfortunately, it is more serious in unsupervised node representation learning task due to the lack of supervision information. Thus, most of the unsupervised or self-supervised GNNs often employ \\textit{one-layer GCN} as the encoder. Essentially, the over-smoothing issue is caused by the over-simplification of the existing message passing, which possesses two intrinsic limits: blind message and uniform passing. In this paper, a novel Diverse and Interactive Message Passing (DIMP) is proposed for self-supervised learning by overcoming these limits. Firstly, to prevent the message from blindness and make it interactive between two connected nodes, the message is determined by both the two connected nodes instead of the attributes of one node. Secondly, to prevent the passing from uniformness and make it diverse over different attribute channels, different propagation weights are assigned to different elements in the message. To this end, a natural implementation of the message in DIMP is the element-wise product of the representations of two connected nodes. From the perspective of numerical optimization, the proposed DIMP is equivalent to performing an overlapping community detection via expectation-maximization (EM). Both the objective function of the community detection and the convergence of EM algorithm guarantee that DMIP can prevent from over-smoothing issue. Extensive evaluations on node-level and graph-level tasks demonstrate the superiority of DIMP on improving performance and overcoming over-smoothing issue.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "2145775206",
+                    "name": "Cheng Chen"
+                },
+                {
+                    "authorId": "1409858224",
+                    "name": "Weixun Li"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "1719250",
+                    "name": "Xiaochun Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "370fb0f5dfb590fad83705e1afc2ba3570335542",
+            "title": "Difference Residual Graph Neural Networks",
+            "abstract": "Graph Neural Networks have been widely employed for multimodal fusion and embedding. To overcome over-smoothing issue, residual connections, which are designed for alleviating vanishing gradient problem in NNs, are adopted in Graph Neural Networks (GNNs) to incorporate local node information. However, these simple residual connections are ineffective on networks with heterophily, since the roles of both convolutional operations and residual connections in GNNs are significantly different from those in classic NNs. By considering the specific smoothing characteristic of graph convolutional operation, deep layers in GNNs are expected to focus on the data which can't be properly handled in shallow layers. To this end, a novel and universal Difference Residual Connections (DRC), which feed the difference of the output and input of previous layer as the input of the next layer, is proposed. Essentially, Difference Residual Connections is equivalent to inserting layers with opposite effect (e.g., sharpening) into the network to prevent the excessive effect (e.g., over-smoothing issue) induced by too many layers with the similar role (e.g., smoothing) in GNNs. From the perspective of optimization, DRC is the gradient descent method to minimize an objective function with both smoothing and sharpening terms. The analytic solution to this objective function is determined by both graph topology and node attributes, which theoretically proves that DRC can prevent over-smoothing issue. Extensive experiments demonstrate the superiority of DRC on real networks with both homophily and heterophily, and show that DRC can automatically determine the model depth and be adaptive to both shallow and deep models with two complementary components.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143921529",
+                    "name": "Liang Yang"
+                },
+                {
+                    "authorId": "118103314",
+                    "name": "Weihang Peng"
+                },
+                {
+                    "authorId": "2160390715",
+                    "name": "Wenmiao Zhou"
+                },
+                {
+                    "authorId": "2661834",
+                    "name": "Bingxin Niu"
+                },
+                {
+                    "authorId": "6413344",
+                    "name": "Junhua Gu"
+                },
+                {
+                    "authorId": "2109150586",
+                    "name": "Chuan Wang"
+                },
+                {
+                    "authorId": "2613860",
+                    "name": "Yuanfang Guo"
+                },
+                {
+                    "authorId": "40137924",
+                    "name": "Dongxiao He"
+                },
+                {
+                    "authorId": "2149214322",
+                    "name": "Xiaochun Cao"
+                }
+            ]
+        }
+    ]
+}

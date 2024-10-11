@@ -1,0 +1,321 @@
+{
+    "authorId": "143666627",
+    "papers": [
+        {
+            "paperId": "50e0c11becf84cc9c9b8756dc180bad2daa4ce88",
+            "title": "Accelerating Similarity Search for Elastic Measures: A Study and New Generalization of Lower Bounding Distances",
+            "abstract": "\n Similarity search is a core analytical task, and its performance critically depends on the choice of distance measure. For time-series querying, elastic measures achieve state-of-the-art accuracy but are computationally expensive. Thus, fast lower bounding (LB) measures prune unnecessary comparisons with elastic distances to accelerate similarity search. Despite decades of attention, there has never been a study to assess the progress in this area. In addition, the research has disproportionately focused on one popular elastic measure, while other accurate measures have received little or no attention. Therefore, there is merit in developing a framework to accumulate knowledge from previously developed LBs and eliminate the notoriously challenging task of designing separate LBs for each elastic measure. In this paper, we perform the first comprehensive study of 11 LBs spanning 5 elastic measures using 128 datasets. We identify four properties that constitute the effectiveness of LBs and propose the Generalized Lower Bounding (GLB) framework to satisfy all desirable properties. GLB creates cache-friendly summaries, adaptively exploits summaries of both query and target time series, and captures boundary distances in an unsupervised manner. GLB outperforms\n all\n LBs in speedup (e.g., up to 13.5\u00d7 faster against the strongest LB in terms of pruning power), establishes new state-of-the-art results for the 5 elastic measures, and provides the first LBs for 2 elastic measures with no known LBs. Overall, GLB enables the effective development of LBs to facilitate fast similarity search.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "25089941",
+                    "name": "Kaize Wu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "bab5e35001757719d0f8338f94dde2860dae784a",
+            "title": "How Large Language Models Will Disrupt Data Management",
+            "abstract": "Large language models (LLMs), such as GPT-4, are revolutionizing software's ability to understand, process, and synthesize language. The authors of this paper believe that this advance in technology is significant enough to prompt introspection in the data management community, similar to previous technological disruptions such as the advents of the world wide web, cloud computing, and statistical machine learning. We argue that the disruptive influence that LLMs will have on data management will come from two angles. (1) A number of hard database problems, namely, entity resolution, schema matching, data discovery, and query synthesis, hit a ceiling of automation because the system does not fully understand the semantics of the underlying data. Based on large training corpora of natural language, structured data, and code, LLMs have an unprecedented ability to ground database tuples, schemas, and queries in real-world concepts. We will provide examples of how LLMs may completely change our approaches to these problems. (2) LLMs blur the line between predictive models and information retrieval systems with their ability to answer questions. We will present examples showing how large databases and information retrieval systems have complementary functionality.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34568734",
+                    "name": "R. Fernandez"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                },
+                {
+                    "authorId": "2183988960",
+                    "name": "Sanjay Krishnan"
+                },
+                {
+                    "authorId": "2111727675",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "fc3b81275d1413b65f339ef3780b08ddc2df4f60",
+            "title": "Rotary: A Resource Arbitration Framework for Progressive Iterative Analytics",
+            "abstract": "Increasingly modern computing applications employ progressive iterative analytics, as best exemplified by two prevalent cases, approximate query processing (AQP) and deep learning training (DLT). In comparison to classic computing applications that only return the results after processing all the input data, progressive iterative analytics keep providing approximate or partial results to users by performing computations on a subset of the entire dataset until either the users are satisfied with the results, or the predefined completion criteria are achieved. Typically, progressive iterative analytic jobs have various completion criteria, produce diminishing returns, and process data at different rates, which necessitates a novel resource arbitration that can continuously prioritize the progressive iterative analytic jobs and determine if/when to reallocate and preempt the resources. We propose and design a resource arbitration framework, Rotary, and implement two resource arbitration systems, Rotary-AQP and Rotary-DLT, for approximate query processing and deep learning training. We build a TPC-H based AQP workload and a survey-based DLT workload to evaluate the two systems, respectively. The evaluation results demonstrate that Rotary-AQP and Rotary-DLT outperform the state-of-the-art systems and confirm the generality and practicality of the proposed resource arbitration framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2186804632",
+                    "name": "Rui Liu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                },
+                {
+                    "authorId": "40428703",
+                    "name": "S. Krishnan"
+                }
+            ]
+        },
+        {
+            "paperId": "137d9bacd599459d143cd6eefbb5706d275791b6",
+            "title": "Fast Adaptive Similarity Search through Variance-Aware Quantization",
+            "abstract": "With the explosive growth of high-dimensional data, approximate methods emerge as promising solutions for nearest neighbor search. Among alternatives, quantization methods have gained attention due to the fast query responses and the low encoding and storage costs. Quantization methods decompose data dimensions into non-overlapping subspaces and encode data using a different dictionary per subspace. The state-of-the-art approach assigns dictionary sizes uniformly across subspaces while attempting to balance the relative importance of subspaces. Unfortunately, a uniform balance is not always achievable and may lead to unsatisfactory performance. Similarly, hardware-accelerated quantization methods may sacrifice accuracy to speed up the query execution. We propose a Variance-Aware Quantization (VAQ) method to encode data by intelligently adapting dictionary sizes to subspaces to alleviate these significant drawbacks. VAQ exploits intrinsic dimensionality reduction properties to derive the subspaces and only partially balances the importance of subspaces. Then, VAQ solves a constrained optimization problem to assign dictionary sizes proportionally to the importance of each subspace. In addition, VAQ accelerates the query execution by skipping data and subspaces through a hardware-oblivious algorithmic solution. To demonstrate the robustness of VAQ, we perform an extensive evaluation against quantization, hashing, and indexing methods using five large-scale benchmarking datasets. VAQ significantly outperforms the strongest hashing and quantization methods in accuracy while achieving up to 5\u00d7 speedup. Compared to the fastest but less accurate hardware-accelerated method, VAQ achieves a speedup@recall performance up to 14\u00d7. Importantly, a rigorous statistical comparison using over one hundred datasets reveals that VAQ significantly outperforms rival methods even with a half budget. Notably, VAQ's simple data skipping solution achieves competitive or better performance against index-based methods, highlighting the need for new indices for quantization methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "2057861070",
+                    "name": "Ikraduya Edian"
+                },
+                {
+                    "authorId": "1726050553",
+                    "name": "Chunwei Liu"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "72b579f4d34c5be86722ead5b8a14645ae092105",
+            "title": "Theseus: Navigating the Labyrinth of Time-Series Anomaly Detection",
+            "abstract": "The detection of anomalies in time series has gained ample academic and industrial attention, yet, no comprehensive benchmark exists to evaluate time-series anomaly detection methods. Therefore, there is no final verdict on which method performs the best (and under what conditions). Consequently, we often observe methods performing exceptionally well on one dataset but surprisingly poorly on another, creating an illusion of progress. To address these issues, we thoroughly studied over one hundred papers, and summarized our effort in TSB-UAD, a new benchmark to evaluate univariate time series anomaly detection methods. In this paper, we describe Theseus, a modular and extensible web application that helps users navigate through the benchmark, and reason about the merits and drawbacks of both anomaly detection methods and accuracy measures, under different conditions. Overall, our system enables users to compare 12 anomaly detection methods on 1980 time series, using 13 accuracy measures, and decide on the most suitable method and measure for some application.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720881471",
+                    "name": "Paul Boniol"
+                },
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "8332236",
+                    "name": "Yuhao Kang"
+                },
+                {
+                    "authorId": "1725167",
+                    "name": "Themis Palpanas"
+                },
+                {
+                    "authorId": "32360997",
+                    "name": "R. Tsay"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "f354feb334584568d0aea9aa8a7697e318ebb7ac",
+            "title": "TSB-UAD: An End-to-End Benchmark Suite for Univariate Time-Series Anomaly Detection",
+            "abstract": "The detection of anomalies in time series has gained ample academic and industrial attention. However, no comprehensive benchmark exists to evaluate time-series anomaly detection methods. It is common to use (i) proprietary or synthetic data, often biased to support particular claims; or (ii) a limited collection of publicly available datasets. Consequently, we often observe methods performing exceptionally well in one dataset but surprisingly poorly in another, creating an illusion of progress. To address the issues above, we thoroughly studied over one hundred papers to identify, collect, process, and systematically format datasets proposed in the past decades. We summarize our effort in TSB-UAD, a new benchmark to ease the evaluation of univariate time-series anomaly detection methods. Overall, TSB-UAD contains 13766 time series with labeled anomalies spanning different domains with high variability of anomaly types, ratios, and sizes. TSB-UAD includes 18 previously proposed datasets containing 1980 time series and we contribute two collections of datasets. Specifically, we generate 958 time series using a principled methodology for transforming 126 time-series classification datasets into time series with labeled anomalies. In addition, we present data transformations with which we introduce new anomalies, resulting in 10828 time series with varying complexity for anomaly detection. Finally, we evaluate 12 representative methods demonstrating that TSB-UAD is a robust resource for assessing anomaly detection methods. We make our data and code available at www.timeseries.org/TSB-UAD. TSB-UAD provides a valuable, reproducible, and frequently updated resource to establish a leaderboard of univariate time-series anomaly detection methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "8332236",
+                    "name": "Yuhao Kang"
+                },
+                {
+                    "authorId": "1720881471",
+                    "name": "Paul Boniol"
+                },
+                {
+                    "authorId": "2173928492",
+                    "name": "Ruey Tsay"
+                },
+                {
+                    "authorId": "1725167",
+                    "name": "Themis Palpanas"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "f93004d558d9f9cbc98d8667c9ae606e5b3ef9b7",
+            "title": "Volume Under the Surface: A New Accuracy Evaluation Measure for Time-Series Anomaly Detection",
+            "abstract": "Anomaly detection (AD) is a fundamental task for time-series analytics with important implications for the downstream performance of many applications. In contrast to other domains where AD mainly focuses on point-based anomalies (i.e., outliers in standalone observations), AD for time series is also concerned with range-based anomalies (i.e., outliers spanning multiple observations). Nevertheless, it is common to use traditional point-based information retrieval measures, such as Precision, Recall, and F-score, to assess the quality of methods by thresholding the anomaly score to mark each point as an anomaly or not. However, mapping discrete labels into continuous data introduces unavoidable shortcomings, complicating the evaluation of range-based anomalies. Notably, the choice of evaluation measure may significantly bias the experimental outcome. Despite over six decades of attention, there has never been a large-scale systematic quantitative and qualitative analysis of time-series AD evaluation measures. This paper extensively evaluates quality measures for time-series AD to assess their robustness under noise, misalignments, and different anomaly cardinality ratios. Our results indicate that measures producing quality values independently of a threshold (i.e., AUC-ROC and AUC-PR) are more suitable for time-series AD. Motivated by this observation, we first extend the AUC-based measures to account for range-based anomalies. Then, we introduce a new family of parameter-free and threshold-independent measures, VUS (Volume Under the Surface), to evaluate methods while varying parameters. Our findings demonstrate that our four measures are significantly more robust in assessing the quality of time-series AD methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "1720881471",
+                    "name": "Paul Boniol"
+                },
+                {
+                    "authorId": "1725167",
+                    "name": "Themis Palpanas"
+                },
+                {
+                    "authorId": "2173928492",
+                    "name": "Ruey Tsay"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "249187d9ab287c8d08c3c993dccf80f7ca4ba3ea",
+            "title": "SAND in Action: Subsequence Anomaly Detection for Streams",
+            "abstract": "Subsequence anomaly detection in long data series is a significant problem. While the demand for real-time analytics and decision making increases, anomaly detection methods have to operate over streams and handle drifts in data distribution. Nevertheless, existing approaches either require prior domain knowledge or become cumbersome and expensive to use in situations with recurrent anomalies of the same type. Moreover, subsequence anomaly detection methods usually require access to the entire dataset and are not able to learn and detect anomalies in streaming settings. To address these limitations, we propose SAND, a novel online system suitable for domain-agnostic anomaly detection. SAND relies on a novel steaming methodology to incrementally update a model that adapts to distribution drifts and omits obsolete data. We demonstrate our system over different streaming scenarios and compare SAND with other subsequence anomaly detection methods. PVLDB Reference Format: Paul Boniol, John Paparrizos, Themis Palpanas, and Michael J. Franklin. SAND in Action: Subsequence Anomaly Detection for Streams. PVLDB, 14(12): 2867 2870, 2021. doi:10.14778/3476311.3476365",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720881471",
+                    "name": "Paul Boniol"
+                },
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "1725167",
+                    "name": "Themis Palpanas"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        },
+        {
+            "paperId": "535adc7b8dbb66b5bfc7b5e3285131c78d226091",
+            "title": "VergeDB: A Database for IoT Analytics on Edge Devices",
+            "abstract": "The proliferation of Internet-of-Things (IoT) applications requires new systems to collect, store, and analyze time-series data at an enormous scale. We believe that meeting these scaling demands will require a signi\ufb01cant amount of data processing to happen on edge devices. This paper presents VergeDB, a database for adaptive and task-aware compression of IoT data that supports complex analytical tasks and machine learning as \ufb01rst-class operations. VergeDB serves as either a lightweight storage engine that compresses the data based on downstream tasks or as an edge-based database that manages both compression and in-situ analytics on raw and compressed data. By optimizing for available computation resources, storage capacity, and network band-width, VergeDB will take decisions to maximize throughput, data compression, and downstream task accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "1726050553",
+                    "name": "Chunwei Liu"
+                },
+                {
+                    "authorId": "8854920",
+                    "name": "Bruno Barbarioli"
+                },
+                {
+                    "authorId": "2115742276",
+                    "name": "John Hwang"
+                },
+                {
+                    "authorId": "2057861070",
+                    "name": "Ikraduya Edian"
+                },
+                {
+                    "authorId": "114189441",
+                    "name": "Aaron J. Elmore"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                },
+                {
+                    "authorId": "40428703",
+                    "name": "S. Krishnan"
+                }
+            ]
+        },
+        {
+            "paperId": "bede74dcbd724e0fce6fb5c50d8eebdb71cc564d",
+            "title": "SAND: Streaming Subsequence Anomaly Detection",
+            "abstract": "With the increasing demand for real-time analytics and decision making, anomaly detection methods need to operate over streams of values and handle drifts in data distribution. Unfortunately, existing approaches have severe limitations: they either require prior domain knowledge or become cumbersome and expensive to use in situations with recurrent anomalies of the same type. In addition, subsequence anomaly detection methods usually require access to the entire dataset and are not able to learn and detect anomalies in streaming settings. To address these problems, we propose SAND, a novel online method suitable for domain-agnostic anomaly detection. SAND aims to detect anomalies based on their distance to a model that represents normal behavior. SAND relies on a novel steaming methodology to incrementally update such model, which adapts to distribution drifts and omits obsolete data. The experimental results on several real-world datasets demonstrate that SAND correctly identifies single and recurrent anomalies without prior knowledge of the characteristics of these anomalies. SAND outperforms by a large margin the current state-of-the-art algorithms in terms of accuracy while achieving orders of magnitude speedups.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720881471",
+                    "name": "Paul Boniol"
+                },
+                {
+                    "authorId": "2516699",
+                    "name": "John Paparrizos"
+                },
+                {
+                    "authorId": "1725167",
+                    "name": "Themis Palpanas"
+                },
+                {
+                    "authorId": "143666627",
+                    "name": "M. Franklin"
+                }
+            ]
+        }
+    ]
+}

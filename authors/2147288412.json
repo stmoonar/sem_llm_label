@@ -1,0 +1,163 @@
+{
+    "authorId": "2147288412",
+    "papers": [
+        {
+            "paperId": "c3b0b832befe74d3a785b1bd31bf42fad14cfafa",
+            "title": "Scalable Dynamic Embedding Size Search for Streaming Recommendation",
+            "abstract": "Recommender systems typically represent users and items by learning their embeddings, which are usually set to uniform dimensions and dominate the model parameters. However, real-world recommender systems often operate in streaming recommendation scenarios, where the number of users and items continues to grow, leading to substantial storage resource consumption for these embeddings. Although a few methods attempt to mitigate this by employing embedding size search strategies to assign different embedding dimensions in streaming recommendations, they assume that the embedding size grows with the frequency of users/items, which eventually still exceeds the predefined memory budget over time. To address this issue, this paper proposes to learn Scalable Lightweight Embeddings for streaming recommendation, called SCALL, which can adaptively adjust the embedding sizes of users/items within a given memory budget over time. Specifically, we propose to sample embedding sizes from a probabilistic distribution, with the guarantee to meet any predefined memory budget. By fixing the memory budget, the proposed embedding size sampling strategy can increase and decrease the embedding sizes in accordance to the frequency of the corresponding users or items. Furthermore, we develop a reinforcement learning-based search paradigm that models each state with mean pooling to keep the length of the state vectors fixed, invariant to the changing number of users and items. As a result, the proposed method can provide embedding sizes to unseen users and items. Comprehensive empirical evaluations on two public datasets affirm the advantageous effectiveness of our proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2147288412",
+                    "name": "Yunke Qu"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "2280284088",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2312340860",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "09c47cf6e0b173057ebd28c60086db627c1b4bf3",
+            "title": "Continuous Input Embedding Size Search For Recommender Systems",
+            "abstract": "Latent factor models are the most popular backbones for today's recommender systems owing to their prominent performance. Latent factor models represent users and items as real-valued embedding vectors for pairwise similarity computation, and all embeddings are traditionally restricted to a uniform size that is relatively large (e.g., 256-dimensional). With the exponentially expanding user base and item catalog in contemporary e commerce, this design is admittedly becoming memory-inefficient. To facilitate lightweight recommendation, reinforcement learning (RL) has recently opened up opportunities for identifying varying embedding sizes for different users/items. However, challenged by search efficiency and learning an optimal RL policy, existing RL-based methods are restricted to highly discrete, predefined embedding size choices. This leads to a largely overlooked potential of introducing finer granularity into embedding sizes to obtain better recommendation effectiveness under a given memory budget. In this paper, we propose continuous input embedding size search (CIESS), a novel RL-based method that operates on a continuous search space with arbitrary embedding sizes to choose from. In CIESS, we further present an innovative random walk-based exploration strategy to allow the RL policy to efficiently explore more candidate embedding sizes and converge to a better decision. CIESS is also model-agnostic and hence generalizable to a variety of latent factor RSs, whilst experiments on two real-world datasets have shown state-of-the-art performance of CIESS under different memory budgets when paired with three popular recommendation models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2147288412",
+                    "name": "Yunke Qu"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2116711312",
+                    "name": "Xiang Zhao"
+                },
+                {
+                    "authorId": "101457473",
+                    "name": "Li-zhen Cui"
+                },
+                {
+                    "authorId": "2052687617",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "123a7363c628ab2658a72305d80fd95a61a0b224",
+            "title": "Budgeted Embedding Table For Recommender Systems",
+            "abstract": "At the heart of contemporary recommender systems (RSs) are latent factor models that provide quality recommendation experience to users. These models use embedding vectors, which are typically of a uniform and fixed size, to represent users and items. As the number of users and items continues to grow, this design becomes inefficient and hard to scale. Recent lightweight embedding methods have enabled different users and items to have diverse embedding sizes, but are commonly subject to two major drawbacks. Firstly, they limit the embedding size search to optimizing a heuristic balancing the recommendation quality and the memory complexity, where the trade-off coefficient needs to be manually tuned for every memory budget requested. The implicitly enforced memory complexity term can even fail to cap the parameter usage, making the resultant embedding table fail to meet the memory budget strictly. Secondly, most solutions, especially reinforcement learning based ones derive and optimize the embedding size for each each user/item on an instance-by-instance basis, which impedes the search efficiency. In this paper, we propose Budgeted Embedding Table (BET), a novel method that generates table-level actions (i.e., embedding sizes for all users and items) that is guaranteed to meet pre-specified memory budgets. Furthermore, by leveraging a set-based action formulation and engaging set representation learning, we present an innovative action search strategy powered by an action fitness predictor that efficiently evaluates each table-level action. Experiments have shown state-of-the-art performance on two real-world datasets when BET is paired with three popular recommender models under different memory budgets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2147288412",
+                    "name": "Yunke Qu"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "7c8f5a37f3ace090f4a4585bcdf44401b1d29a66",
+            "title": "Combining Human and Machine Confidence in Truthfulness Assessment",
+            "abstract": "Automatically detecting online misinformation at scale is a challenging and interdisciplinary problem. Deciding what is to be considered truthful information is sometimes controversial and also difficult for educated experts. As the scale of the problem increases, human-in-the-loop approaches to truthfulness that combine both the scalability of machine learning (ML) and the accuracy of human contributions have been considered. In this work, we look at the potential to automatically combine machine-based systems with human-based systems. The former exploit superviseds ML approaches; the latter involve either crowd workers (i.e., human non-experts) or human experts. Since both ML and crowdsourcing approaches can produce a score indicating the level of confidence on their truthfulness judgments (either algorithmic or self-reported, respectively), we address the question of whether it is feasible to make use of such confidence scores to effectively and efficiently combine three approaches: (i) machine-based methods, (ii) crowd workers, and (iii) human experts. The three approaches differ significantly, as they range from available, cheap, fast, scalable, but less accurate to scarce, expensive, slow, not scalable, but highly accurate.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2147288412",
+                    "name": "Yunke Qu"
+                },
+                {
+                    "authorId": "3445334",
+                    "name": "Kevin Roitero"
+                },
+                {
+                    "authorId": "2065380079",
+                    "name": "David La Barbera"
+                },
+                {
+                    "authorId": "1630446247",
+                    "name": "Damiano Spina"
+                },
+                {
+                    "authorId": "1726978",
+                    "name": "Stefano Mizzaro"
+                },
+                {
+                    "authorId": "1694274",
+                    "name": "Gianluca Demartini"
+                }
+            ]
+        },
+        {
+            "paperId": "59cccd5458b3a54f8893aca1b487bb8b9c482854",
+            "title": "Human-in-the-Loop Systems for Truthfulness: A Study of Human and Machine Confidence",
+            "abstract": "Automatically detecting online misinformation at scale is a challenging and interdisciplinary problem. Deciding what is to be considered truthful information is sometimes controversial and dif\ufb01cult also for educated experts. As the scale of the problem increases, human-in-the-loop approaches to truthfulness that combine both the scalability of machine learning (ML) and the accuracy of human contributions have been considered. In this work we look at the potential to automatically combine machine-based systems with human-based systems. The former exploit supervised ML approaches; the latter involve either crowd workers (i.e., human non-experts) or human experts. Since both ML and crowdsourcing approaches can produce a score indicating the level of con\ufb01dence on their truthfulness judgments (either algorithmic or self-reported, respectively), we address the question of whether it is feasible to make use of such con\ufb01dence scores to effectively and ef\ufb01ciently combine three approaches: (i) machine-based methods; (ii) crowd workers, and (iii) human experts. The three approaches differ signi\ufb01cantly as they range from available, cheap, fast, scalable, but less accurate to scarce, expensive, slow, not scalable, but highly accurate.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2147288412",
+                    "name": "Yunke Qu"
+                },
+                {
+                    "authorId": "3445334",
+                    "name": "Kevin Roitero"
+                },
+                {
+                    "authorId": "1726978",
+                    "name": "Stefano Mizzaro"
+                },
+                {
+                    "authorId": "1630446247",
+                    "name": "Damiano Spina"
+                },
+                {
+                    "authorId": "1694274",
+                    "name": "Gianluca Demartini"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,277 @@
+{
+    "authorId": "1824294087",
+    "papers": [
+        {
+            "paperId": "09c3a340f5d6bb8b9b9f6a4a77326c0d692d4c66",
+            "title": "AdaPT: A Set of Guidelines for Hyperbolic Multimodal Multilingual NLP",
+            "abstract": "The Euclidean space is the familiar space for training neural models and performing arithmetic operations. However, many data types inherently possess complex geometries, and model training methods involve operating over their latent representations, which cannot be effectively captured in the Euclidean space. The hyperbolic space provides a more generalized representative geometry to model the hierarchical complexities of the tree-like structure of natural language. We propose A DA PT a set of guidelines for initialization, parametrization, and training of neural networks, which adapts to the dataset and can be used with different manifolds. A DA PT can be generalized over any existing neural network training methodology and leads to more stable training without a substantial increase in training time. We apply A DA PT guidelines over two state-of-the-art deep learning approaches and empirically demonstrate its effectiveness through experiments on three tasks over 12 languages across speech and text. Through extensive qualitative analysis, we put forward the applicability of A DA PT as a set of guidelines optimally utilizing the manifold geometry, which can be extended to various downstream tasks across languages and modalities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51042088",
+                    "name": "Ramit Sawhney"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "2069609589",
+                    "name": "Vishwa Shah"
+                },
+                {
+                    "authorId": "71188587",
+                    "name": "Megh Thakkar"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "cf1f64c42044706ff571159fff8ad92ccb10e6a6",
+            "title": "CodeUpdateArena: Benchmarking Knowledge Editing on API Updates",
+            "abstract": "Large language models (LLMs) are increasingly being used to synthesize and reason about source code. However, the static nature of these models' knowledge does not reflect the fact that libraries and API functions they invoke are continuously evolving, with functionality being added or changing. While numerous benchmarks evaluate how LLMs can generate code, no prior work has studied how an LLMs' knowledge about code API functions can be updated. To fill this gap, we present CodeUpdateArena, a benchmark for knowledge editing in the code domain. An instance in our benchmark consists of a synthetic API function update paired with a program synthesis example that uses the updated functionality; our goal is to update an LLM to be able to solve this program synthesis example without providing documentation of the update at inference time. Compared to knowledge editing for facts encoded in text, success here is more challenging: a code LLM must correctly reason about the semantics of the modified function rather than just reproduce its syntax. Our dataset is constructed by first prompting GPT-4 to generate atomic and executable function updates. Then, for each update, we generate program synthesis examples whose code solutions are prone to use the update. Our benchmark covers updates of various types to 54 functions from seven diverse Python packages, with a total of 670 program synthesis examples. Our experiments show that prepending documentation of the update to open-source code LLMs (i.e., DeepSeek, CodeLlama) does not allow them to incorporate changes for problem solving, and existing knowledge editing techniques also have substantial room for improvement. We hope our benchmark will inspire new methods for knowledge updating in code LLMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2310603569",
+                    "name": "Zeyu Leo Liu"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "2297740292",
+                    "name": "Xi Ye"
+                },
+                {
+                    "authorId": "2266842055",
+                    "name": "Eunsol Choi"
+                },
+                {
+                    "authorId": "1814094",
+                    "name": "Greg Durrett"
+                }
+            ]
+        },
+        {
+            "paperId": "eee3bf09bcc997a3586e29f7d3c3d37a42aff87d",
+            "title": "FaithEval: Can Your Language Model Stay Faithful to Context, Even If\"The Moon is Made of Marshmallows\"",
+            "abstract": "Ensuring faithfulness to context in large language models (LLMs) and retrieval-augmented generation (RAG) systems is crucial for reliable deployment in real-world applications, as incorrect or unsupported information can erode user trust. Despite advancements on standard benchmarks, faithfulness hallucination-where models generate responses misaligned with the provided context-remains a significant challenge. In this work, we introduce FaithEval, a novel and comprehensive benchmark tailored to evaluate the faithfulness of LLMs in contextual scenarios across three diverse tasks: unanswerable, inconsistent, and counterfactual contexts. These tasks simulate real-world challenges where retrieval mechanisms may surface incomplete, contradictory, or fabricated information. FaithEval comprises 4.9K high-quality problems in total, validated through a rigorous four-stage context construction and validation framework, employing both LLM-based auto-evaluation and human validation. Our extensive study across a wide range of open-source and proprietary models reveals that even state-of-the-art models often struggle to remain faithful to the given context, and that larger models do not necessarily exhibit improved faithfulness.Project is available at: \\url{https://github.com/SalesforceAIResearch/FaithEval}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2321601631",
+                    "name": "Yifei Ming"
+                },
+                {
+                    "authorId": "3234247",
+                    "name": "Senthil Purushwalkam"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "2321405223",
+                    "name": "Zixuan Ke"
+                },
+                {
+                    "authorId": "1399659909",
+                    "name": "Xuan-Phi Nguyen"
+                },
+                {
+                    "authorId": "2267728986",
+                    "name": "Caiming Xiong"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "f321cce0932f2a257849a195c0cac1194a8b11d7",
+            "title": "SFR-RAG: Towards Contextually Faithful LLMs",
+            "abstract": "Retrieval Augmented Generation (RAG), a paradigm that integrates external contextual information with large language models (LLMs) to enhance factual accuracy and relevance, has emerged as a pivotal area in generative AI. The LLMs used in RAG applications are required to faithfully and completely comprehend the provided context and users' questions, avoid hallucination, handle unanswerable, counterfactual or otherwise low-quality and irrelevant contexts, perform complex multi-hop reasoning and produce reliable citations. In this paper, we introduce SFR-RAG, a small LLM that is instruction-tuned with an emphasis on context-grounded generation and hallucination minimization. We also present ContextualBench, a new evaluation framework compiling multiple popular and diverse RAG benchmarks, such as HotpotQA and TriviaQA, with consistent RAG settings to ensure reproducibility and consistency in model assessments. Experimental results demonstrate that our SFR-RAG-9B model outperforms leading baselines such as Command-R+ (104B) and GPT-4o, achieving state-of-the-art results in 3 out of 7 benchmarks in ContextualBench with significantly fewer parameters. The model is also shown to be resilient to alteration in the contextual information and behave appropriately when relevant context is removed. Additionally, the SFR-RAG model maintains competitive performance in general instruction-following tasks and function-calling capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1399659909",
+                    "name": "Xuan-Phi Nguyen"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "3234247",
+                    "name": "Senthil Purushwalkam"
+                },
+                {
+                    "authorId": "2321406326",
+                    "name": "Austin Xu"
+                },
+                {
+                    "authorId": "2258571998",
+                    "name": "Hailin Chen"
+                },
+                {
+                    "authorId": "2321601631",
+                    "name": "Yifei Ming"
+                },
+                {
+                    "authorId": "2321405223",
+                    "name": "Zixuan Ke"
+                },
+                {
+                    "authorId": "2321404956",
+                    "name": "Silvio Savarese"
+                },
+                {
+                    "authorId": "2321408694",
+                    "name": "Caiming Xong"
+                },
+                {
+                    "authorId": "2313536726",
+                    "name": "Shafiq Joty"
+                }
+            ]
+        },
+        {
+            "paperId": "7604ddaaeed7441b9822cd081cfca56b77125e65",
+            "title": "Can LLMs solve generative visual analogies?",
+            "abstract": "Recent experiments with large language models (LLMs) have provided some evidence that these models can perform abstract analogical reasoning [1], including textual puzzles similar to Raven\u2019s progressive matrices. We consider a visual analogical reasoning task that was solved using neuro-symbolic techniques in [2], and investigate how LLMs fare on this task. The task involves learning a sequence of transformations by which a sample input/output pair of images are related so as to analogously transform a test input. Note that unlike the analogical reasoning tasks in [1], this task involves generating an output as opposed to selecting from a set of choices. We evaluated various LLMs including GPT-4, GPT 3.5-turbo (ChatGPT), and GPT3 on this task for differing lengths of the sequence of transformations relating the input and output. Our results suggest that GPT-4 performs the best overall, while GPT 3.5-turbo and GPT3 perform strongly on shorter program lengths. At the same time, the performance of LLMs for this task falls far short of the neuro-symbolic approach used earlier, and we speculate as to why this may be the case, at least as of now.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "143725466",
+                    "name": "Gautam M. Shroff"
+                },
+                {
+                    "authorId": "2241242261",
+                    "name": "Ashwin Srinivasan"
+                },
+                {
+                    "authorId": "3213990",
+                    "name": "L. Vig"
+                }
+            ]
+        },
+        {
+            "paperId": "779541469ba3ea6f4ba5f8d4af944b88d11a7da4",
+            "title": "A Comparative Study on the Impact of Model Compression Techniques on Fairness in Language Models",
+            "abstract": "Compression techniques for deep learning have become increasingly popular, particularly in settings where latency and memory constraints are imposed. Several methods, such as pruning, distillation, and quantization, have been adopted for compressing models, each providing distinct advantages. However, existing literature demonstrates that compressing deep learning models could affect their fairness. Our analysis involves a comprehensive evaluation of pruned, distilled, and quantized language models, which we benchmark across a range of intrinsic and extrinsic metrics for measuring bias in text classification. We also investigate the impact of using multilingual models and evaluation measures. Our findings highlight the significance of considering both the pre-trained model and the chosen compression strategy in developing equitable language technologies. The results also indicate that compression strategies can have an adverse effect on fairness measures.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1455192856",
+                    "name": "Krithika Ramesh"
+                },
+                {
+                    "authorId": "1585915155",
+                    "name": "Arnav Chavan"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "3010457",
+                    "name": "Sunayana Sitaram"
+                }
+            ]
+        },
+        {
+            "paperId": "610fb4e05db08943a6b313426df37a59cc25c270",
+            "title": "CIAug: Equipping Interpolative Augmentation with Curriculum Learning",
+            "abstract": "Interpolative data augmentation has proven to be effective for NLP tasks. Despite its merits, the sample selection process in mixup is random, which might make it difficult for the model to generalize better and converge faster. We propose CIAug, a novel curriculum-based learning method that builds upon mixup. It leverages the relative position of samples in hyperbolic embedding space as a complexity measure to gradually mix up increasingly difficult and diverse samples along training. CIAug achieves state-of-the-art results over existing interpolative augmentation methods on 10 benchmark datasets across 4 languages in text classification and named-entity recognition tasks. It also converges and achieves benchmark F1 scores 3 times faster. We empirically analyze the various components of CIAug, and evaluate its robustness against adversarial attacks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51042088",
+                    "name": "Ramit Sawhney"
+                },
+                {
+                    "authorId": "2161000447",
+                    "name": "Ritesh Soun"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "71188587",
+                    "name": "Megh Thakkar"
+                },
+                {
+                    "authorId": "2175482552",
+                    "name": "Sarvagya Malaviya"
+                },
+                {
+                    "authorId": "1826312",
+                    "name": "Yuval Pinter"
+                }
+            ]
+        },
+        {
+            "paperId": "cf4275634ccf8102d080842db300e7585b9f7f42",
+            "title": "DMix: Adaptive Distance-aware Interpolative Mixup",
+            "abstract": "Interpolation-based regularisation methods such as Mixup, which generate virtual training samples, have proven to be effective for various tasks and modalities.We extend Mixup and propose DMix, an adaptive distance-aware interpolative Mixup that selects samples based on their diversity in the embedding space. DMix leverages the hyperbolic space as a similarity measure among input samples for a richer encoded representation.DMix achieves state-of-the-art results on sentence classification over existing data augmentation methods on 8 benchmark datasets across English, Arabic, Turkish, and Hindi languages while achieving benchmark F1 scores in 3 times less number of iterations.We probe the effectiveness of DMix in conjunction with various similarity measures and qualitatively analyze the different components.DMix being generalizable, can be applied to various tasks, models and modalities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51042088",
+                    "name": "Ramit Sawhney"
+                },
+                {
+                    "authorId": "71188587",
+                    "name": "Megh Thakkar"
+                },
+                {
+                    "authorId": "1824294087",
+                    "name": "Shrey Pandit"
+                },
+                {
+                    "authorId": "2161000447",
+                    "name": "Ritesh Soun"
+                },
+                {
+                    "authorId": "1860892",
+                    "name": "Di Jin"
+                },
+                {
+                    "authorId": "2143919864",
+                    "name": "Diyi Yang"
+                },
+                {
+                    "authorId": "2125481734",
+                    "name": "Lucie Flek"
+                }
+            ]
+        }
+    ]
+}

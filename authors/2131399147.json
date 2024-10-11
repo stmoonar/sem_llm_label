@@ -1,0 +1,355 @@
+{
+    "authorId": "2131399147",
+    "papers": [
+        {
+            "paperId": "2c5dfb926795f467cbcd143e73cdeddd1d0fa6f6",
+            "title": "Now It Sounds Like You: Learning Personalized Vocabulary On Device",
+            "abstract": "In recent years, Federated Learning (FL) has shown significant advancements in its ability to perform various natural language processing (NLP) tasks. This work focuses on applying personalized FL for on-device language modeling. Due to limitations of memory and latency, these models cannot support the complexity of sub-word tokenization or beam search decoding, resulting in the decision to deploy a closed-vocabulary language model. However, closed-vocabulary models are unable to handle out-of-vocabulary (OOV) words belonging to specific users. To address this issue, We propose a novel technique called \"OOV expansion\" that improves OOV coverage and increases model accuracy while minimizing the impact on memory and latency. This method introduces a personalized \"OOV adapter\" that effectively transfers knowledge from a central model and learns word embedding for personalized vocabulary. OOV expansion significantly outperforms standard FL personalization methods on a set of common FL benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "16230274",
+                    "name": "Sida Wang"
+                },
+                {
+                    "authorId": "2052661789",
+                    "name": "Ashish Shenoy"
+                },
+                {
+                    "authorId": "40060585",
+                    "name": "P. Chuang"
+                },
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                }
+            ]
+        },
+        {
+            "paperId": "6a52182f4e103870290a13baf476d90e5ee9322a",
+            "title": "On Noisy Evaluation in Federated Hyperparameter Tuning",
+            "abstract": "Hyperparameter tuning is critical to the success of federated learning applications. Unfortunately, appropriately selecting hyperparameters is challenging in federated networks. Issues of scale, privacy, and heterogeneity introduce noise in the tuning process and make it difficult to evaluate the performance of various hyperparameters. In this work, we perform the first systematic study on the effect of noisy evaluation in federated hyperparameter tuning. We first identify and rigorously explore key sources of noise, including client subsampling, data and systems heterogeneity, and data privacy. Surprisingly, our results indicate that even small amounts of noise can significantly impact tuning methods-reducing the performance of state-of-the-art approaches to that of naive baselines. To address noisy evaluation in such scenarios, we propose a simple and effective approach that leverages public proxy data to boost the evaluation signal. Our work establishes general challenges, baselines, and best practices for future work in federated hyperparameter tuning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2060761330",
+                    "name": "Kevin Kuo"
+                },
+                {
+                    "authorId": "15810130",
+                    "name": "Pratiksha Thaker"
+                },
+                {
+                    "authorId": "10398264",
+                    "name": "M. Khodak"
+                },
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "1400485275",
+                    "name": "Daniel Jiang"
+                },
+                {
+                    "authorId": "145532827",
+                    "name": "Ameet Talwalkar"
+                },
+                {
+                    "authorId": "145260024",
+                    "name": "Virginia Smith"
+                }
+            ]
+        },
+        {
+            "paperId": "ae8598ad1b4a1828f9d4042b16c388565423542e",
+            "title": "Where to Begin? On the Impact of Pre-Training and Initialization in Federated Learning",
+            "abstract": "An oft-cited challenge of federated learning is the presence of heterogeneity. \\emph{Data heterogeneity} refers to the fact that data from different clients may follow very different distributions. \\emph{System heterogeneity} refers to client devices having different system capabilities. A considerable number of federated optimization methods address this challenge. In the literature, empirical evaluations usually start federated training from random initialization. However, in many practical applications of federated learning, the server has access to proxy data for the training task that can be used to pre-train a model before starting federated training. Using four standard federated learning benchmark datasets, we empirically study the impact of starting from a pre-trained model in federated learning. Unsurprisingly, starting from a pre-trained model reduces the training time required to reach a target error rate and enables the training of more accurate models (up to 40\\%) than is possible when starting from random initialization. Surprisingly, we also find that starting federated learning from a pre-trained initialization reduces the effect of both data and system heterogeneity. We recommend future work proposing and evaluating federated optimization methods to evaluate the performance when starting from random and pre-trained initializations. This study raises several questions for further work on understanding the role of heterogeneity in federated optimization. \\footnote{Our code is available at: \\url{https://github.com/facebookresearch/where_to_begin}}",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "2142938396",
+                    "name": "Jianyu Wang"
+                },
+                {
+                    "authorId": "40243893",
+                    "name": "Kshitiz Malik"
+                },
+                {
+                    "authorId": "2095979",
+                    "name": "Maziar Sanjabi"
+                },
+                {
+                    "authorId": "2066127975",
+                    "name": "Michael G. Rabbat"
+                },
+                {
+                    "authorId": "2149781051",
+                    "name": "AI Meta"
+                }
+            ]
+        },
+        {
+            "paperId": "f42cb48e487171e7408b9f2ebf2d7dd5b5a4d675",
+            "title": "Where to Begin? Exploring the Impact of Pre-Training and Initialization in Federated Learning",
+            "abstract": "An oft-cited challenge of federated learning is the presence of data heterogeneity \u2014 the data at different clients may follow very different distributions. Several federated optimization methods have been proposed to address these challenges. In the literature, empirical evaluations usually start federated training from a random initialization. However, in many practical applications of federated learning, the server has access to proxy data for the training task which can be used to pre-train a model before starting federated training. We empirically study the impact of starting from a pre-trained model in federated learning using four common federated learning benchmark datasets. Unsurprisingly, starting from a pre-trained model reduces the training time required to reach a target error rate and enables training more accurate models (by up to 40%) than is possible than when starting from a random initialization. Surprisingly, we also \ufb01nd that the effect of data heterogeneity is much less signi\ufb01cant when starting federated training from a pre-trained initialization. Rather, when starting from a pre-trained model, using an adaptive optimizer at the server, such as F ED A DAM , consistently leads to the best accuracy. We recommend that future work proposing and evaluating federated optimization methods consider the performance when starting both random and pre-trained initializations. We also believe this study raises several questions for further work on understanding the role of heterogeneity in federated optimization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "40243893",
+                    "name": "Kshitiz Malik"
+                },
+                {
+                    "authorId": "2095979",
+                    "name": "Maziar Sanjabi"
+                },
+                {
+                    "authorId": "2066127975",
+                    "name": "Michael G. Rabbat"
+                }
+            ]
+        },
+        {
+            "paperId": "fc721f4fd6260ed3b86c64eaa204375e18863aad",
+            "title": "Where to Begin? On the Impact of Pre-Training and Initialization in Federated Learning",
+            "abstract": "An oft-cited challenge of federated learning is the presence of heterogeneity. \\emph{Data heterogeneity} refers to the fact that data from different clients may follow very different distributions. \\emph{System heterogeneity} refers to the fact that client devices have different system capabilities. A considerable number of federated optimization methods address this challenge. In the literature, empirical evaluations usually start federated training from random initialization. However, in many practical applications of federated learning, the server has access to proxy data for the training task that can be used to pre-train a model before starting federated training. We empirically study the impact of starting from a pre-trained model in federated learning using four standard federated learning benchmark datasets. Unsurprisingly, starting from a pre-trained model reduces the training time required to reach a target error rate and enables the training of more accurate models (up to 40\\%) than is possible when starting from random initialization. Surprisingly, we also find that starting federated learning from a pre-trained initialization reduces the effect of both data and system heterogeneity. We recommend that future work proposing and evaluating federated optimization methods evaluate the performance when starting from random and pre-trained initializations. We also believe this study raises several questions for further work on understanding the role of heterogeneity in federated optimization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "2142938396",
+                    "name": "Jianyu Wang"
+                },
+                {
+                    "authorId": "40243893",
+                    "name": "Kshitiz Malik"
+                },
+                {
+                    "authorId": "2095979",
+                    "name": "Maziar Sanjabi"
+                },
+                {
+                    "authorId": "2066127975",
+                    "name": "Michael G. Rabbat"
+                }
+            ]
+        },
+        {
+            "paperId": "fc98ec17f28a06a2c3e283296494844eccba816f",
+            "title": "Towards Fair Federated Recommendation Learning: Characterizing the Inter-Dependence of System and Data Heterogeneity",
+            "abstract": "Federated learning (FL) is an effective mechanism for data privacy in recommender systems that runs machine learning model training on-device. While prior FL optimizations tackled the data and system heterogeneity challenges, they assume the two are independent of each other. This fundamental assumption is not reflective of real-world, large-scale recommender systems \u2014 data and system heterogeneity are tightly intertwined. This paper takes a data-driven approach to show the inter-dependence of data and system heterogeneity in real-world data and quantifies its impact on the overall model quality and fairness. We design a framework, RF2, to model the inter-dependence and evaluate its impact on state-of-the-art model optimization techniques for federated recommendation tasks. We demonstrate that the impact on fairness can be severe under realistic heterogeneity scenarios, by up to 15.8\u201341 \u00d7 compared to a simple setup assumed in most (if not all) prior work. The result shows that modeling realistic system-induced data heterogeneity is essential to achieving fair federated recommendation learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10995410",
+                    "name": "Kiwan Maeng"
+                },
+                {
+                    "authorId": "14760580",
+                    "name": "Haiyu Lu"
+                },
+                {
+                    "authorId": "145557680",
+                    "name": "Luca Melis"
+                },
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "2066127975",
+                    "name": "Michael G. Rabbat"
+                },
+                {
+                    "authorId": "2797270",
+                    "name": "Carole-Jean Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "38fca90fef15b226dbae8db408c5efe8066dde1c",
+            "title": "Federated Learning with Buffered Asynchronous Aggregation",
+            "abstract": "Scalability and privacy are two critical concerns for cross-device federated learning (FL) systems. In this work, we identify that synchronous FL - synchronized aggregation of client updates in FL - cannot scale efficiently beyond a few hundred clients training in parallel. It leads to diminishing returns in model performance and training speed, analogous to large-batch training. On the other hand, asynchronous aggregation of client updates in FL (i.e., asynchronous FL) alleviates the scalability issue. However, aggregating individual client updates is incompatible with Secure Aggregation, which could result in an undesirable level of privacy for the system. To address these concerns, we propose a novel buffered asynchronous aggregation method, FedBuff, that is agnostic to the choice of optimizer, and combines the best properties of synchronous and asynchronous FL. We empirically demonstrate that FedBuff is 3.3x more efficient than synchronous FL and up to 2.5x more efficient than asynchronous FL, while being compatible with privacy-preserving technologies such as Secure Aggregation and differential privacy. We provide theoretical convergence guarantees in a smooth non-convex setting. Finally, we show that under differentially private training, FedBuff can outperform FedAvgM at low privacy settings and achieve the same utility for higher privacy settings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "40243893",
+                    "name": "Kshitiz Malik"
+                },
+                {
+                    "authorId": "19277351",
+                    "name": "Hongyuan Zhan"
+                },
+                {
+                    "authorId": "36737249",
+                    "name": "Ashkan Yousefpour"
+                },
+                {
+                    "authorId": "2066127975",
+                    "name": "Michael G. Rabbat"
+                },
+                {
+                    "authorId": "2107060266",
+                    "name": "Mani Malek"
+                },
+                {
+                    "authorId": "68973739",
+                    "name": "Dzmitry Huba"
+                }
+            ]
+        },
+        {
+            "paperId": "b87b5797b661d6137301dd3167d573a94493936e",
+            "title": "Papaya: Practical, Private, and Scalable Federated Learning",
+            "abstract": "Cross-device Federated Learning (FL) is a distributed learning paradigm with several challenges that differentiate it from traditional distributed learning, variability in the system characteristics on each device, and millions of clients coordinating with a central server being primary ones. Most FL systems described in the literature are synchronous - they perform a synchronized aggregation of model updates from individual clients. Scaling synchronous FL is challenging since increasing the number of clients training in parallel leads to diminishing returns in training speed, analogous to large-batch training. Moreover, stragglers hinder synchronous FL training. In this work, we outline a production asynchronous FL system design. Our work tackles the aforementioned issues, sketches of some of the system design challenges and their solutions, and touches upon principles that emerged from building a production FL system for millions of clients. Empirically, we demonstrate that asynchronous FL converges faster than synchronous FL when training across nearly one hundred million devices. In particular, in high concurrency settings, asynchronous FL is 5x faster and has nearly 8x less communication overhead than synchronous FL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "68973739",
+                    "name": "Dzmitry Huba"
+                },
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "40243893",
+                    "name": "Kshitiz Malik"
+                },
+                {
+                    "authorId": "3252651",
+                    "name": "Ruiyu Zhu"
+                },
+                {
+                    "authorId": "2066127975",
+                    "name": "Michael G. Rabbat"
+                },
+                {
+                    "authorId": "36737249",
+                    "name": "Ashkan Yousefpour"
+                },
+                {
+                    "authorId": "2797270",
+                    "name": "Carole-Jean Wu"
+                },
+                {
+                    "authorId": "19277351",
+                    "name": "Hongyuan Zhan"
+                },
+                {
+                    "authorId": "2139735162",
+                    "name": "Pavel Ustinov"
+                },
+                {
+                    "authorId": "47490833",
+                    "name": "H. Srinivas"
+                },
+                {
+                    "authorId": "2150030991",
+                    "name": "Kaikai Wang"
+                },
+                {
+                    "authorId": "2139734446",
+                    "name": "Anthony Shoumikhin"
+                },
+                {
+                    "authorId": "2146537748",
+                    "name": "Jesik Min"
+                },
+                {
+                    "authorId": "2107060266",
+                    "name": "Mani Malek"
+                }
+            ]
+        },
+        {
+            "paperId": "bea1187a1f8a68f1a93f0c2fa10d31f93a30f84e",
+            "title": "Opacus: User-Friendly Differential Privacy Library in PyTorch",
+            "abstract": "We introduce Opacus, a free, open-source PyTorch library for training deep learning models with differential privacy (hosted at opacus.ai). Opacus is designed for simplicity, flexibility, and speed. It provides a simple and user-friendly API, and enables machine learning practitioners to make a training pipeline private by adding as little as two lines to their code. It supports a wide variety of layers, including multi-head attention, convolution, LSTM, GRU (and generic RNN), and embedding, right out of the box and provides the means for supporting other user-defined layers. Opacus computes batched per-sample gradients, providing higher efficiency compared to the traditional\"micro batch\"approach. In this paper we present Opacus, detail the principles that drove its implementation and unique features, and benchmark it against other frameworks for training models with differential privacy as well as standard PyTorch.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "36737249",
+                    "name": "Ashkan Yousefpour"
+                },
+                {
+                    "authorId": "2107059646",
+                    "name": "I. Shilov"
+                },
+                {
+                    "authorId": "2319225824",
+                    "name": "Alexandre Sablayrolles"
+                },
+                {
+                    "authorId": "1389630028",
+                    "name": "Davide Testuggine"
+                },
+                {
+                    "authorId": "2107060033",
+                    "name": "Karthik Prasad"
+                },
+                {
+                    "authorId": "2107060266",
+                    "name": "Mani Malek"
+                },
+                {
+                    "authorId": "2131399147",
+                    "name": "John Nguyen"
+                },
+                {
+                    "authorId": "2129469303",
+                    "name": "Sayan Gosh"
+                },
+                {
+                    "authorId": "2528900",
+                    "name": "Akash Bharadwaj"
+                },
+                {
+                    "authorId": "2024689450",
+                    "name": "Jessica Zhao"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2065193618",
+                    "name": "Ilya Mironov"
+                }
+            ]
+        }
+    ]
+}

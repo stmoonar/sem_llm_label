@@ -1,0 +1,321 @@
+{
+    "authorId": "1746034",
+    "papers": [
+        {
+            "paperId": "7498c80eb1c4765472133aa29d92661cc7612f7c",
+            "title": "Using Domain Knowledge to Guide Dialog Structure Induction via Neural Probabilistic Soft Logic",
+            "abstract": "Dialog Structure Induction (DSI) is the task of inferring the latent dialog structure (i.e., a set of dialog states and their temporal transitions) of a given goal-oriented dialog. It is a critical component for modern dialog system design and discourse analysis. Existing DSI approaches are often purely data-driven, deploy models that infer latent states without access to domain knowledge, underperform when the training corpus is limited/noisy, or have difficulty when test dialogs exhibit distributional shifts from the training domain. This work explores a neural-symbolic approach as a potential solution to these problems. We introduce Neural Probabilistic Soft Logic Dialogue Structure Induction (NEUPSL DSI), a principled approach that injects symbolic knowledge into the latent space of a generative neural model. We conduct a thorough empirical investigation on the effect of NEUPSL DSI learning on hidden representation quality, few-shot learning, and out-of-domain generalization performance. Over three dialog structure induction datasets and across unsupervised and semi-supervised settings for standard and cross-domain generalization, the injection of symbolic knowledge using NEUPSL DSI provides a consistent boost in performance over the canonical baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "2117782275",
+                    "name": "Quan Yuan"
+                },
+                {
+                    "authorId": "2108345570",
+                    "name": "J. Liu"
+                },
+                {
+                    "authorId": "2173102324",
+                    "name": "Mehran Kazemi"
+                },
+                {
+                    "authorId": "143812128",
+                    "name": "Deepak Ramachandran"
+                },
+                {
+                    "authorId": "2113816700",
+                    "name": "Tania Bedrax-Weiss"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ]
+        },
+        {
+            "paperId": "6710e66648fe6846397ccecf72478effb44d7bc1",
+            "title": "ESC: Exploration with Soft Commonsense Constraints for Zero-shot Object Navigation",
+            "abstract": "The ability to accurately locate and navigate to a specific object is a crucial capability for embodied agents that operate in the real world and interact with objects to complete tasks. Such object navigation tasks usually require large-scale training in visual environments with labeled objects, which generalizes poorly to novel objects in unknown environments. In this work, we present a novel zero-shot object navigation method, Exploration with Soft Commonsense constraints (ESC), that transfers commonsense knowledge in pre-trained models to open-world object navigation without any navigation experience nor any other training on the visual environments. First, ESC leverages a pre-trained vision and language model for open-world prompt-based grounding and a pre-trained commonsense language model for room and object reasoning. Then ESC converts commonsense knowledge into navigation actions by modeling it as soft logic predicates for efficient exploration. Extensive experiments on MP3D, HM3D, and RoboTHOR benchmarks show that our ESC method improves significantly over baselines, and achieves new state-of-the-art results for zero-shot object navigation (e.g., 288% relative Success Rate improvement than CoW on MP3D).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9368148",
+                    "name": "KAI-QING Zhou"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "1785381533",
+                    "name": "Yilin Shen"
+                },
+                {
+                    "authorId": "2196885587",
+                    "name": "Hongxia Jin"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                },
+                {
+                    "authorId": "47120131",
+                    "name": "X. Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "8ff40d110889181f32e73079650a9c55a7be85c9",
+            "title": "Collective Grounding: Applying Database Techniques to Grounding Templated Models",
+            "abstract": "\n The process of instantiating, or \"grounding\", a first-order model is a fundamental component of reasoning in logic. It has been widely studied in the context of theorem proving, database theory, and artificial intelligence. Within the relational learning community, the concept of grounding has been expanded to apply to models that use more general\n templates\n in the place of first-order logical formulae. In order to perform inference, grounding of these templates is required for instantiating a distribution over possible worlds. However, because of the complex data dependencies stemming from instantiating generalized templates with interconnected data, grounding is often the key computational bottleneck to relational learning. While we motivate our work in the context of relational learning, similar issues arise in probabilistic databases, particularly those that do not make strong tuple independence assumptions. In this paper, we investigate how key techniques from relational database theory can be utilized to improve the computational efficiency of the grounding process. We introduce the notion of\n collective grounding\n which treats logical programs not as a collection of independent rules, but instead as a joint set of interdependent workloads that can be shared. We introduce the theoretical concept of collective grounding, the components necessary in a collective grounding system, implementations of these components, and show how to use database theory to speed up these components. We demonstrate collective groundings effectiveness on seven popular datasets, and show up to a 70% reduction in runtime using collective grounding. Our results are fully reproducible and all code, data, and experimental scripts are included.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48082844",
+                    "name": "Eriq Augustine"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ]
+        },
+        {
+            "paperId": "2b4ae4ecdc312f2f0b73427d009af67f2142df41",
+            "title": "CausalDialogue: Modeling Utterance-level Causality in Conversations",
+            "abstract": "Despite their widespread adoption, neural conversation models have yet to exhibit natural chat capabilities with humans. In this research, we examine user utterances as causes and generated responses as effects, recognizing that changes in a cause should produce a different effect. To further explore this concept, we have compiled and expanded upon a new dataset called CausalDialogue through crowd-sourcing. This dataset includes multiple cause-effect pairs within a directed acyclic graph (DAG) structure. Our analysis reveals that traditional loss functions struggle to effectively incorporate the DAG structure, leading us to propose a causality-enhanced method called Exponential Maximum Average Treatment Effect (ExMATE) to enhance the impact of causality at the utterance level in training neural conversation models. To evaluate the needs of considering causality in dialogue generation, we built a comprehensive benchmark on CausalDialogue dataset using different models, inference, and training methods. Through experiments, we find that a causality-inspired loss like ExMATE can improve the diversity and agility of conventional loss function and there is still room for improvement to reach human-level quality on this new dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "41017887",
+                    "name": "Yi-Lin Tuan"
+                },
+                {
+                    "authorId": "2044198106",
+                    "name": "Alon Albalak"
+                },
+                {
+                    "authorId": "145738382",
+                    "name": "Wenda Xu"
+                },
+                {
+                    "authorId": "48227633",
+                    "name": "Michael Stephen Saxon"
+                },
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                },
+                {
+                    "authorId": "1682479",
+                    "name": "William Yang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "45645b392ce5cd914007b5ae2c572c0cd591e835",
+            "title": "Emotion Recognition in Conversation using Probabilistic Soft Logic",
+            "abstract": "Creating agents that can both appropriately respond to conversations and understand complex human linguistic tendencies and social cues has been a long standing challenge in the NLP community. A recent pillar of research revolves around emotion recognition in conversation (ERC); a sub-field of emotion recognition that focuses on conversations or dialogues that contain two or more utterances. In this work, we explore an approach to ERC that exploits the use of neural embeddings along with complex structures in dialogues. We implement our approach in a framework called Probabilistic Soft Logic (PSL), a declarative templating language that uses first-order like logical rules, that when combined with data, define a particular class of graphical model. Additionally, PSL provides functionality for the incorporation of results from neural models into PSL models. This allows our model to take advantage of advanced neural methods, such as sentence embeddings, and logical reasoning over the structure of a dialogue. We compare our method with state-of-the-art purely neural ERC systems, and see almost a 20% improvement. With these results, we provide an extensive qualitative and quantitative analysis over the DailyDialog conversation dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48082844",
+                    "name": "Eriq Augustine"
+                },
+                {
+                    "authorId": "3674787",
+                    "name": "Pegah Jandaghi"
+                },
+                {
+                    "authorId": "2044198106",
+                    "name": "Alon Albalak"
+                },
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "51118486",
+                    "name": "Charles Dickens"
+                },
+                {
+                    "authorId": "2145535635",
+                    "name": "William Wang"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ]
+        },
+        {
+            "paperId": "4a1a0338634e1bd4c32eb289bb52fe0c7a409abc",
+            "title": "NeuPSL: Neural Probabilistic Soft Logic",
+            "abstract": "In this paper, we introduce Neural Probabilistic Soft Logic (NeuPSL), a novel neuro-symbolic (NeSy) framework that unites state-of-the-art symbolic reasoning with the low-level perception of deep neural networks. To model the boundary between neural and symbolic representations, we propose a family of energy-based models, NeSy Energy-Based Models, and show that they are general enough to include NeuPSL and many other NeSy approaches. Using this framework, we show how to seamlessly integrate neural and symbolic parameter learning and inference in NeuPSL. Through an extensive empirical evaluation, we demonstrate the benefits of using NeSy methods, achieving upwards of 30% improvement over independent neural network models. On a well-established NeSy task, MNIST-Addition, NeuPSL demonstrates its joint reasoning capabilities by outperforming existing NeSy approaches by up to 10% in low-data settings. Furthermore, NeuPSL achieves a 5% boost in performance over state-of-the-art NeSy methods in a canonical citation network task with up to a 40 times speed up.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "51118486",
+                    "name": "Charles Dickens"
+                },
+                {
+                    "authorId": "48082844",
+                    "name": "Eriq Augustine"
+                },
+                {
+                    "authorId": "2044198106",
+                    "name": "Alon Albalak"
+                },
+                {
+                    "authorId": "2145535635",
+                    "name": "William Wang"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ]
+        },
+        {
+            "paperId": "59707fbd3308257628470d94e56c8165bf4e1cff",
+            "title": "FETA: A Benchmark for Few-Sample Task Transfer in Open-Domain Dialogue",
+            "abstract": "Task transfer, transferring knowledge contained in related tasks, holds the promise of reducing the quantity of labeled data required to fine-tune language models. Dialogue understanding encompasses many diverse tasks, yet task transfer has not been thoroughly studied in conversational AI. This work explores conversational task transfer by introducing FETA: a benchmark for FEw-sample TAsk transfer in open-domain dialogue.FETA contains two underlying sets of conversations upon which there are 10 and 7 tasks annotated, enabling the study of intra-dataset task transfer; task transfer without domain adaptation. We utilize three popular language models and three learning algorithms to analyze the transferability between 132 source-target task pairs and create a baseline for future work.We run experiments in the single- and multi-source settings and report valuable findings, e.g., most performance trends are model-specific, and span extraction and multiple-choice tasks benefit the most from task transfer.In addition to task transfer, FETA can be a valuable resource for future research into the efficiency and generalizability of pre-training datasets and model architectures, as well as for learning settings such as continual and multitask learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2044198106",
+                    "name": "Alon Albalak"
+                },
+                {
+                    "authorId": "41017887",
+                    "name": "Yi-Lin Tuan"
+                },
+                {
+                    "authorId": "3674787",
+                    "name": "Pegah Jandaghi"
+                },
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "2164988411",
+                    "name": "Luke Yoffe"
+                },
+                {
+                    "authorId": "143812128",
+                    "name": "Deepak Ramachandran"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                },
+                {
+                    "authorId": "2634786",
+                    "name": "J. Pujara"
+                },
+                {
+                    "authorId": "1682479",
+                    "name": "William Yang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "6ee39bd7166a0cdd5e2472c5d2f784bd2b3f4fe6",
+            "title": "Visual Sudoku Puzzle Classification: A Suite of Collective Neuro-Symbolic Tasks",
+            "abstract": "Neuro-symbolic computing (NeSy) is an emerging field that has the goal of integrating the low-level representational power of deep neural networks with high-level symbolic reasoning. Due to the youth of the field and the complexity of neuro-symbolic integration, there are few benchmarks that showcase the powers of NeSy, and even fewer built specifically with NeSy in mind. To address the lack of NeSy benchmarks, we introduce Visual Sudoku Puzzle Classification (ViSudo-PC). ViSudo-PC is a new NeSy benchmark dataset combining visual perception with relational constraints. The goal of the benchmark is to both highlight opportunities and elicit challenges. In addition to providing a new NeSy benchmark suite, we also provide an exploratory analysis that showcases ViSudo-PC\u2019s difficulty and possibilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48082844",
+                    "name": "Eriq Augustine"
+                },
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "51118486",
+                    "name": "Charles Dickens"
+                },
+                {
+                    "authorId": "2634786",
+                    "name": "J. Pujara"
+                },
+                {
+                    "authorId": "1682479",
+                    "name": "William Yang Wang"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ]
+        },
+        {
+            "paperId": "89bb97c3ec06de6b408055a9f1edf6d80a76d24e",
+            "title": "The Power of (Statistical) Relational Thinking",
+            "abstract": "Taking into account relational structure during data mining can lead to better results, both in terms of quality and computational efficiency. This structure may be captured in the schema, in links between entities (e.g., graphs) or in rules describing the domain (e.g., knowledge graphs). Further, for richly structured prediction problems, there is often a need for a mix of both logical reasoning and statistical inference. In this talk, I will give an introduction to the field of Statistical Relational Learning (SRL), and I'll identify useful tips and tricks for exploiting structure in both the input and output space. I'll describe our recent work on highly scalable approaches for statistical relational inference. I'll close by introducing a broader interpretation of relational thinking that reveals new research opportunities (and challenges!).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ]
+        },
+        {
+            "paperId": "971cd1f82199a6b387e6e1f29aa5bd064965e825",
+            "title": "Multi-relational Affinity Propagation",
+            "abstract": "There is a growing need for clustering algorithms which can operate in complex settings where there are multiple entity types with potential dependencies captured in different kinds of links. In this work, we present a novel approach for multi-relational clustering based on both the similarity of the entities' features, along with the multi-relational structure of the network among the entities. Our approach extends the affinity propagation clustering algorithm to multi-relational domains and encodes a variety of relational constraints to capture the dependencies across different node types in the underlying network. In contrast to the original formulation of affinity propagation that relies on enforcing hard constraints on the output clusters, we model the relational dependencies as soft constraints, allowing control over how they influence the final clustering of the nodes. This formulation allows us to balance between the homogeneity of the entities within the resulting clusters and their connections to clusters of nodes of the same and differing types. This in turn facilitates the exploration of the middle ground between feature-based similarity clustering, community detection, and block modeling in multi-relational networks. We present results on clustering a sample from Digg.com, a richly structured online social news website. We show that our proposed algorithm outperforms other clustering approaches on a variety of evaluation measures. We also analyze the impact of different parameter settings on the clustering output, in terms of both the homogeneity and the connectedness of the resulting clusters.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145173648",
+                    "name": "Hossam Sharara"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ]
+        }
+    ]
+}

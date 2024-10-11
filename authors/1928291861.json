@@ -1,0 +1,349 @@
+{
+    "authorId": "1928291861",
+    "papers": [
+        {
+            "paperId": "02d161ae84ef3e6a832ccefb9544288d21c89aea",
+            "title": "ManyDG: Many-domain Generalization for Healthcare Applications",
+            "abstract": "The vast amount of health data has been continuously collected for each patient, providing opportunities to support diverse healthcare predictive tasks such as seizure detection and hospitalization prediction. Existing models are mostly trained on other patients data and evaluated on new patients. Many of them might suffer from poor generalizability. One key reason can be overfitting due to the unique information related to patient identities and their data collection environments, referred to as patient covariates in the paper. These patient covariates usually do not contribute to predicting the targets but are often difficult to remove. As a result, they can bias the model training process and impede generalization. In healthcare applications, most existing domain generalization methods assume a small number of domains. In this paper, considering the diversity of patient covariates, we propose a new setting by treating each patient as a separate domain (leading to many domains). We develop a new domain generalization method ManyDG, that can scale to such many-domain problems. Our method identifies the patient domain covariates by mutual reconstruction and removes them via an orthogonal projection step. Extensive experiments show that ManyDG can boost the generalization performance on multiple real-world healthcare tasks (e.g., 3.7% Jaccard improvements on MIMIC drug recommendation) and support realistic but challenging settings such as insufficient data and continuous learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2271898731",
+                    "name": "M. Westover"
+                },
+                {
+                    "authorId": "49991208",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "4e97e3fa40e7f2c5ceaa7c434945afb35df267d4",
+            "title": "BIOT: Cross-data Biosignal Learning in the Wild",
+            "abstract": "Biological signals, such as electroencephalograms (EEG), play a crucial role in numerous clinical applications, exhibiting diverse data formats and quality profiles. Current deep learning models for biosignals are typically specialized for specific datasets and clinical settings, limiting their broader applicability. Motivated by the success of large language models in text processing, we explore the development of foundational models that are trained from multiple data sources and can be fine-tuned on different downstream biosignal tasks. To overcome the unique challenges associated with biosignals of various formats, such as mismatched channels, variable sample lengths, and prevalent missing values, we propose a Biosignal Transformer (\\method). The proposed \\method model can enable cross-data learning with mismatched channels, variable lengths, and missing values by tokenizing diverse biosignals into unified\"biosignal sentences\". Specifically, we tokenize each channel into fixed-length segments containing local signal features, flattening them to form consistent\"sentences\". Channel embeddings and {\\em relative} position embeddings are added to preserve spatio-temporal features. The \\method model is versatile and applicable to various biosignal learning settings across different datasets, including joint pre-training for larger models. Comprehensive evaluations on EEG, electrocardiogram (ECG), and human activity sensory signals demonstrate that \\method outperforms robust baselines in common settings and facilitates learning across multiple datasets with different formats. Use CHB-MIT seizure detection task as an example, our vanilla \\method model shows 3\\% improvement over baselines in balanced accuracy, and the pre-trained \\method models (optimized from other data sources) can further bring up to 4\\% improvements.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2271898731",
+                    "name": "M. Westover"
+                },
+                {
+                    "authorId": "49991208",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "be2d3ce48d9e3ae590e9d3fb5b0224ac479faef4",
+            "title": "Multi-faceted analysis and prediction for the outbreak of pediatric respiratory syncytial virus",
+            "abstract": "OBJECTIVES\nRespiratory syncytial virus (RSV) is a significant cause of pediatric hospitalizations. This article aims to utilize multisource data and leverage the tensor methods to uncover distinct RSV geographic clusters and develop an accurate RSV prediction model for future seasons.\n\n\nMATERIALS AND METHODS\nThis study utilizes 5-year RSV data from sources, including medical claims, CDC surveillance data, and Google search trends. We conduct spatiotemporal tensor analysis and prediction for pediatric RSV in the United States by designing (i) a nonnegative tensor factorization model for pediatric RSV diseases and location clustering; (ii) and a recurrent neural network tensor regression model for county-level trend prediction using the disease and location features.\n\n\nRESULTS\nWe identify a clustering hierarchy of pediatric diseases: Three common geographic clusters of RSV outbreaks were identified from independent sources, showing an annual RSV trend shifting across different US regions, from the South and Southeast regions to the Central and Northeast regions and then to the West and Northwest regions, while precipitation and temperature were found as correlative factors with the coefficient of determination R2\u22480.5, respectively. Our regression model accurately predicted the 2022-2023 RSV season at the county level, achieving R2\u22480.3 mean absolute error MAE\u2009<\u20090.4 and a Pearson correlation greater than 0.75, which significantly outperforms the baselines with P-values <.05.\n\n\nCONCLUSION\nOur proposed framework provides a thorough analysis of RSV disease in the United States, which enables healthcare providers to better prepare for potential outbreaks, anticipate increased demand for services and supplies, and save more lives with timely interventions.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2202531615",
+                    "name": "Junyi Gao"
+                },
+                {
+                    "authorId": "28331874",
+                    "name": "Lucas Glass"
+                },
+                {
+                    "authorId": "2179107330",
+                    "name": "Adam Cross"
+                },
+                {
+                    "authorId": "2249887353",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "d9b45ee6b0b9b391dd7fec4839b3294c7b6e7069",
+            "title": "BIOT: Biosignal Transformer for Cross-data Learning in the Wild",
+            "abstract": "Biological signals, such as electroencephalograms (EEG), play a crucial role in numerous clinical applications, exhibiting diverse data formats and quality profiles. Current deep learning models for biosignals (based on CNN, RNN, and Transformers) are typically specialized for specific datasets and clinical settings, limiting their broader applicability. This paper explores the development of a flexible biosignal encoder architecture that can enable pre-training on multiple datasets and fine-tuned on downstream biosignal tasks with different formats. To overcome the unique challenges associated with biosignals of various formats, such as mismatched channels, variable sample lengths, and prevalent missing values, we propose Biosignal Transformer ( BIOT ). The proposed BIOT model can enable cross-data learning with mismatched channels, variable lengths, and missing values by tokenizing different biosignals into unified \"sentences\" structure. Specifically, we tokenize each channel separately into fixed-length segments containing local signal features and then re-arrange the segments to form a long \"sentence\". Channel embeddings and relative position embeddings are added to each segment (viewed as \"token\") to preserve spatio-temporal features. The BIOT model is versatile and applicable to various biosignal learning settings across different datasets, including joint pre-training for larger models. Comprehensive evaluations on EEG, electrocardiogram (ECG), and human activity sensory signals demonstrate that BIOT outperforms robust baselines in common settings and facilitates learning across multiple datasets with different formats. Using CHB-MIT seizure detection task as an example, our vanilla BIOT model shows 3% improvement over baselines in balanced accuracy, and the pre-trained BIOT models (optimized from other data sources) can further bring up to 4% improvements. Our repository is public at https://github",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2271898731",
+                    "name": "M. Westover"
+                },
+                {
+                    "authorId": "2288833763",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "e9b2af5a0f20859b4df2d4ba60973763f9e47d32",
+            "title": "PyHealth: A Deep Learning Toolkit for Healthcare Applications",
+            "abstract": "Deep learning (DL) has emerged as a promising tool in healthcare applications. However, the reproducibility of many studies in this field is limited by the lack of accessible code implementations and standard benchmarks. To address the issue, we create PyHealth, a comprehensive library to build, deploy, and validate DL pipelines for healthcare applications. PyHealth supports various data modalities, including electronic health records (EHRs), physiological signals, medical images, and clinical text. It offers various advanced DL models and maintains comprehensive medical knowledge systems. The library is designed to support both DL researchers and clinical data scientists. Upon the time of writing, PyHealth has received 633 stars, 130 forks, and 15k+ downloads in total on GitHub. This tutorial will provide an overview of PyHealth, present different modules, and showcase their functionality through hands-on demos. Participants can follow along and gain hands-on experience on the Google Colab platform during the session.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2157497569",
+                    "name": "Zhenbang Wu"
+                },
+                {
+                    "authorId": "2227483280",
+                    "name": "Patrick Jiang"
+                },
+                {
+                    "authorId": "2046763041",
+                    "name": "Zhen Lin"
+                },
+                {
+                    "authorId": "2202531615",
+                    "name": "Junyi Gao"
+                },
+                {
+                    "authorId": "2227531018",
+                    "name": "Benjamin P. Danek"
+                },
+                {
+                    "authorId": "49991208",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "4ad7b82af43177f6722d1a72357f1ae9555596a8",
+            "title": "GOCPT: Generalized Online Canonical Polyadic Tensor Factorization and Completion",
+            "abstract": "Low-rank tensor factorization or completion is well-studied and applied in various online settings, such as online tensor factorization (where the temporal mode grows) and online tensor completion (where incomplete slices arrive gradually). However, in many real-world settings, tensors may have more complex evolving patterns: (i) one or more modes can grow; (ii) missing entries may be filled; (iii) existing tensor elements can change. Existing methods cannot support such complex scenarios. To fill the gap, this paper proposes a Generalized Online Canonical Polyadic (CP) Tensor factorization and completion framework (named GOCPT) for this general setting, where we maintain the CP structure of such dynamic tensors during the evolution. We show that existing online tensor factorization and completion setups can be unified under the GOCPT framework. Furthermore, we propose a variant, named GOCPTE, to deal with cases where historical tensor elements are unavailable (e.g., privacy protection), which achieves similar fitness as GOCPT but with much less computational cost. Experimental results demonstrate that our GOCPT can improve fitness by up to 2.8% on the JHU Covid data and 9.2% on a proprietary patient claim dataset over baselines. Our variant GOCPTE shows up to 1.2% and 5.5% fitness improvement on two datasets with about 20% speedup compared to the best model.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2047235443",
+                    "name": "Cheng Qian"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "713574d23ae796c562c4cdfc8db2554c013e778f",
+            "title": "KLAttack: Towards Adversarial Attack and Defense on Neural Dependency Parsing Models",
+            "abstract": "Although neural language models achieve great performance on many Natural Language Processing tasks, they suffer from various adversarial attacks. Previous works mainly focus on semantic adversarial examples, which have similar semantics to the original sentences, while syntactic adversarial attacks against the dependency parsing task are still in an early stage of research. In this paper, we propose a novel method KLAttack, crafting word-level adversarial examples to attack neural-network-based dependency parsing models. Specifically, we retrieve the class probabilities from the victim dependency parsing model and compute the KL divergence by masking every word in a sentence. Then we use pre-trained language models and reference parsers to generate candidates for substitution. Experiments on the English Penn Treebank (PTB) dataset show that our method improves the attack success rate against Deep Biaffine Parser by up to 13.04% compared with previous related studies. Based on KLAttack, we further propose Syntax-Aware Transformer for Input Reconstruction, a denoiser to recover the original sentences from the adversarial examples. Trained adversarially with successfully attacked sentences from KLAttack, we enhance the robustness of the dependency parsing models by concatenating the denoiser ahead of the victim models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118199022",
+                    "name": "Yutao Luo"
+                },
+                {
+                    "authorId": "2182525360",
+                    "name": "Menghua Lu"
+                },
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "150112803",
+                    "name": "Gongshen Liu"
+                },
+                {
+                    "authorId": "2283446356",
+                    "name": "Shilin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "4453debd5a39ebf5b6ba30f15591df9d2a0bfbca",
+            "title": "Simulating Online Social Response: A Stimulus/Response Perspective",
+            "abstract": "The paper describes a methodology for simulating online social media activities that occur in response to external events. A large number of social media simulators model information diffusion on online social networks. However, information cascades do not originate in vacuum. Rather, they often originate as a reaction to events external to the online medium. Thus, to predict activity on the social medium, one must investigate the relation between external stimuli and online social responses. The paper presents a simulation pipeline that features stimulus/response models describing how social systems react to external events of relevance to them. Two case studies are presented to test the fidelity of different models. One investigates online responses to events in the Venezuela election crisis. The other investigates online responses to developments of the China Pakistan Economic Corridor (CPEC). These case studies indicate that simple macroscopic stimulus/response models can accurately predict aggregate online trends.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                },
+                {
+                    "authorId": "2116316264",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2800541",
+                    "name": "Minhao Jiang"
+                },
+                {
+                    "authorId": "3375249",
+                    "name": "Yuning Mao"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "46336131",
+                    "name": "Wenda Qiu"
+                },
+                {
+                    "authorId": "1630209136",
+                    "name": "Dachun Sun"
+                },
+                {
+                    "authorId": "2144408471",
+                    "name": "Ruijie Wang"
+                },
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "2156738282",
+                    "name": "Zhenzhou Yang"
+                },
+                {
+                    "authorId": "2108262811",
+                    "name": "Xinyang Zhang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2116349248",
+                    "name": "Sam Cohen"
+                },
+                {
+                    "authorId": "19213617",
+                    "name": "James Flamino"
+                },
+                {
+                    "authorId": "3205143",
+                    "name": "G. Korniss"
+                },
+                {
+                    "authorId": "145286740",
+                    "name": "O. Malik"
+                },
+                {
+                    "authorId": "66689754",
+                    "name": "Aamir Mandviwalla"
+                },
+                {
+                    "authorId": "144133315",
+                    "name": "B. Szyma\u0144ski"
+                },
+                {
+                    "authorId": "2155898245",
+                    "name": "Lake Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "452dac4ac42d55073ce26cb27499e0ae36e4776d",
+            "title": "MTC: Multiresolution Tensor Completion from Partial and Coarse Observations",
+            "abstract": "Existing tensor completion formulation mostly relies on partial observations from a single tensor. However, tensors extracted from real-world data often are more complex due to: (i) Partial observation: Only a small subset of tensor elements are available. (ii) Coarse observation: Some tensor modes only present coarse and aggregated patterns (e.g., monthly summary instead of daily reports). In this paper, we are given a subset of the tensor and some aggregated/coarse observations (along one or more modes) and seek to recover the original fine-granular tensor with low-rank factorization. We formulate a coupled tensor completion problem and propose an efficient Multi-resolution Tensor Completion model (MTC) to solve the problem. Our MTC model explores tensor mode properties and leverages the hierarchy of resolutions to recursively initialize an optimization setup, and optimizes on the coupled system using alternating least squares. MTC ensures low computational and space complexity. We evaluate our model on two COVID-19 related spatio-temporal tensors. The experiments show that MTC could provide 65.20% and 75.79% percentage of fitness (PoF) in tensor completion with only 5% fine granular observations, which is 27.96% relative improvement over the best baseline. To evaluate the learned low-rank factors, we also design a tensor prediction task for daily and cumulative disease case predictions, where MTC achieves 50% in PoF and 30% relative improvements over the best baseline.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "98772624",
+                    "name": "Navjot Singh"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "2047235443",
+                    "name": "Cheng Qian"
+                },
+                {
+                    "authorId": "2880213",
+                    "name": "Edgar Solomonik"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "48f33243a039bdc9d429bfe40f5c01e6b644dc24",
+            "title": "SafeDrug: Dual Molecular Graph Encoders for Recommending Effective and Safe Drug Combinations",
+            "abstract": "Medication recommendation is an essential task of AI for healthcare. Existing works focused on recommending drug combinations for patients with complex health conditions solely based on their electronic health records. Thus, they have the following limitations: (1) some important data such as drug molecule structures have not been utilized in the recommendation process. (2) drug-drug interactions (DDI) are modeled implicitly, which can lead to sub-optimal results. To address these limitations, we propose a DDI-controllable drug recommendation model named SafeDrug to leverage drugs\u2019 molecule structures and model DDIs explicitly. SafeDrug is equipped with a global message passing neural network (MPNN) module and a local bipartite learning module to fully encode the connectivity and functionality of drug molecules. SafeDrug also has a controllable loss function to control DDI level in the recommended drug combinations effectively. On a benchmark dataset, our SafeDrug is relatively shown to reduce DDI by 19.43% and improves 2.88% on Jaccard similarity between recommended and actually prescribed drug combinations over previous approaches. Moreover, SafeDrug also requires much fewer parameters than previous deep learning based approaches, leading to faster training by about 14% and around 2\u00d7 speed-up in inference.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "2068198592",
+                    "name": "Fenglong Ma"
+                },
+                {
+                    "authorId": "28331874",
+                    "name": "Lucas Glass"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ]
+        }
+    ]
+}

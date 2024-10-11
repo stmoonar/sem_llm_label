@@ -1,0 +1,470 @@
+{
+    "authorId": "2253397454",
+    "papers": [
+        {
+            "paperId": "0a2cdb13a15d95a5ab05aa5ec921518aa3655e93",
+            "title": "All Against Some: Efficient Integration of Large Language Models for Message Passing in Graph Neural Networks",
+            "abstract": "Graph Neural Networks (GNNs) have attracted immense attention in the past decade due to their numerous real-world applications built around graph-structured data. On the other hand, Large Language Models (LLMs) with extensive pretrained knowledge and powerful semantic comprehension abilities have recently shown a remarkable ability to benefit applications using vision and text data. In this paper, we investigate how LLMs can be leveraged in a computationally efficient fashion to benefit rich graph-structured data, a modality relatively unexplored in LLM literature. Prior works in this area exploit LLMs to augment every node features in an ad-hoc fashion (not scalable for large graphs), use natural language to describe the complex structural information of graphs, or perform computationally expensive finetuning of LLMs in conjunction with GNNs. We propose E-LLaGNN (Efficient LLMs augmented GNNs), a framework with an on-demand LLM service that enriches message passing procedure of graph learning by enhancing a limited fraction of nodes from the graph. More specifically, E-LLaGNN relies on sampling high-quality neighborhoods using LLMs, followed by on-demand neighborhood feature enhancement using diverse prompts from our prompt catalog, and finally information aggregation using message passing from conventional GNN architectures. We explore several heuristics-based active node selection strategies to limit the computational and memory footprint of LLMs when handling millions of nodes. Through extensive experiments&ablation on popular graph benchmarks of varying scales (Cora, PubMed, ArXiv,&Products), we illustrate the effectiveness of our E-LLaGNN framework and reveal many interesting capabilities such as improved gradient flow in deep GNNs, LLM-free inference ability etc.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2262444503",
+                    "name": "Nurendra Choudhary"
+                },
+                {
+                    "authorId": "2299329980",
+                    "name": "Ravinarayana Adkathimar"
+                },
+                {
+                    "authorId": "1390172802",
+                    "name": "M. P. Alagappan"
+                },
+                {
+                    "authorId": "46566733",
+                    "name": "G. Hiranandani"
+                },
+                {
+                    "authorId": "2279770479",
+                    "name": "Ying Ding"
+                },
+                {
+                    "authorId": "2254949434",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                }
+            ]
+        },
+        {
+            "paperId": "0fa9b8a28cf379360ad56b7c778ce7ffc43bea5e",
+            "title": "LLaGA: Large Language and Graph Assistant",
+            "abstract": "Graph Neural Networks (GNNs) have empowered the advance in graph-structured data analysis. Recently, the rise of Large Language Models (LLMs) like GPT-4 has heralded a new era in deep learning. However, their application to graph data poses distinct challenges due to the inherent difficulty of translating graph structures to language. To this end, we introduce the Large Language and Graph Assistant (LLaGA), an innovative model that effectively integrates LLM capabilities to handle the complexities of graph-structured data. LLaGA retains the general-purpose nature of LLMs while adapting graph data into a format compatible with LLM input. LLaGA achieves this by reorganizing graph nodes to structure-aware sequences and then mapping these into the token embedding space through a versatile projector. LLaGA excels in versatility, generalizability and interpretability, allowing it to perform consistently well across different datasets and tasks, extend its ability to unseen datasets or tasks, and provide explanations for graphs. Our extensive experiments across popular graph benchmarks show that LLaGA delivers outstanding performance across four datasets and three tasks using one single model, surpassing state-of-the-art graph models in both supervised and zero-shot scenarios. Our code is available at \\url{https://github.com/VITA-Group/LLaGA}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284222685",
+                    "name": "Runjin Chen"
+                },
+                {
+                    "authorId": "2256340293",
+                    "name": "Tong Zhao"
+                },
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2253409421",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "2254949434",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "273adc94be0d5248c01e9ce9da38418654efd61a",
+            "title": "Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients",
+            "abstract": "Training Large Language Models (LLMs) is memory-intensive due to the large number of parameters and associated optimization states. GaLore, a recent method, reduces memory usage by projecting weight gradients into a low-rank subspace without compromising performance. However, GaLore relies on time-consuming Singular Value Decomposition (SVD) operations to identify the subspace, and the frequent subspace updates lead to significant training time overhead. Moreover, GaLore offers minimal improvements in accuracy and efficiency compared to LoRA in more accessible fine-tuning scenarios. To address these limitations, we introduce Q-Galore, a novel approach that substantially reduces memory usage by combining quantization and low-rank projection, surpassing the benefits of GaLore. Our method is based on two key observations: (i) the gradient subspace exhibits diverse properties, with some layers converging early in training while others are subject to frequent changes; (ii) the projection matrices are highly resilient to low-bit quantization. Leveraging these insights, Q-GaLore adaptively updates the gradient subspace based on its convergence statistics, achieving comparable performance while significantly reducing the number of SVD operations. We maintain the projection matrices in INT4 format and weights in INT8 format, incorporating stochastic rounding to capture accumulated gradient information. This approach enables a high-precision training trajectory using only low-precision weights. We demonstrate that Q-GaLore achieves highly competitive performance with exceptional memory efficiency. At pre-training, Q-GaLore facilitates training a LLaMA-7B model from scratch on a single NVIDIA RTX 4060 Ti with only 16 GB memory. At fine-tuning, it reduces memory consumption by up to 50% compared to LoRA and GaLore, while consistently outperforming QLoRA at the same memory cost.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109338656",
+                    "name": "Zhenyu (Allen) Zhang"
+                },
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2254142682",
+                    "name": "Lu Yin"
+                },
+                {
+                    "authorId": "2309666084",
+                    "name": "Shiwei Liu"
+                },
+                {
+                    "authorId": "2310775826",
+                    "name": "Jiawei Zhao"
+                },
+                {
+                    "authorId": "2249538771",
+                    "name": "Yuandong Tian"
+                },
+                {
+                    "authorId": "2284563898",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "6df92ef64a8b18db8ad4e6e282c42ec6698113bd",
+            "title": "From GaLore to WeLore: How Low-Rank Weights Non-uniformly Emerge from Low-Rank Gradients",
+            "abstract": "Modern Large Language Models (LLMs) are composed of matrices with billions of elements, making their storage and processing quite demanding in terms of computational resources and memory usage. Being significantly large, such matrices can often be expressed in low-rank format with potential to relax resource requirements. Unlike prior works which focus on developing novel matrix decomposition algorithms, in this work we first study the emergence of low-rank structures across matrices within different layers of LLMs and establish a consequential relationship between the gradient dynamics and emerging low-rank expressiveness of matrices. Our findings reveal that different layers exhibit varying levels of converged low-rank structure, necessitating a non-uniform rank reduction across them to minimize performance drop due to compression. In view of that, we present Weight Low-Rank Projection (WeLore) that unifies weight compression and memory-efficient fine-tuning as ONE, in a data-agnostic and one-shot way. WeLore capitalizes the heavy-tail distribution of singular values to identify a suitable rank reduction ratio for matrices within LLMs. Going beyond only as a compression technique, WeLore categorizes weight matrices into Low-rank Components (LRCs) and Non-Low-rank Components (N-LRCs) based on their ability to express themselves as low-rank. Our gradient perspective and extensive experiments illustrate that LRCs tend to have better finetuning capabilities and can closely mimic (sometimes outperform) the training loss trajectory and performance of full-finetuning with notable memory and compute footprint reduction. For example, finetuning a 50\\% compressed LLaMa-2 7B model using only a fraction of parameters in LRCs (WeLore) can outperform its full finetuning with ~3x better throughput and ~0.6x GPU requirement. Our codes are available at \\url{https://github.com/VITA-Group/welore}",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2254142682",
+                    "name": "Lu Yin"
+                },
+                {
+                    "authorId": "2109338656",
+                    "name": "Zhenyu (Allen) Zhang"
+                },
+                {
+                    "authorId": "2255081092",
+                    "name": "Shiwei Liu"
+                },
+                {
+                    "authorId": "2310775826",
+                    "name": "Jiawei Zhao"
+                },
+                {
+                    "authorId": "2249538771",
+                    "name": "Yuandong Tian"
+                },
+                {
+                    "authorId": "2284563898",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "96c3a6156546d0447fa2b3327e55bc5973e01d57",
+            "title": "FFN-SkipLLM: A Hidden Gem for Autoregressive Decoding with Adaptive Feed Forward Skipping",
+            "abstract": "Autoregressive Large Language Models (e.g., LLaMa, GPTs) are omnipresent achieving remarkable success in language understanding and generation. However, such impressive capability typically comes with a substantial model size, which presents significant challenges for autoregressive token-by-token generation. To mitigate computation overload incurred during generation, several early-exit and layer-dropping strategies have been proposed. Despite some promising success due to the redundancy across LLMs layers on metrics like Rough-L/BLUE, our careful knowledge-intensive evaluation unveils issues such as generation collapse, hallucination of wrong facts, and noticeable performance drop even at the trivial exit ratio of 10-15% of layers. We attribute these errors primarily to ineffective handling of the KV cache through state copying during early-exit. In this work, we observed the saturation of computationally expensive feed-forward blocks of LLM layers and proposed FFN-SkipLLM, which is a novel fine-grained skip strategy of autoregressive LLMs. More specifically, FFN-SkipLLM is an input-adaptive feed-forward skipping strategy that can skip 25-30% of FFN blocks of LLMs with marginal change in performance on knowledge-intensive generation tasks without any requirement to handle KV cache. Our extensive experiments and ablation across benchmarks like MT-Bench, Factoid-QA, and variable-length text summarization illustrate how our simple and ease-at-use method can facilitate faster autoregressive decoding.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2264069110",
+                    "name": "Bodun Hu"
+                },
+                {
+                    "authorId": "2254142682",
+                    "name": "Lu Yin"
+                },
+                {
+                    "authorId": "2462957",
+                    "name": "Yeonju Ro"
+                },
+                {
+                    "authorId": "2304152885",
+                    "name": "Shiwei Liu"
+                },
+                {
+                    "authorId": "2295593785",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "2262444276",
+                    "name": "Aditya Akella"
+                }
+            ]
+        },
+        {
+            "paperId": "b0a890c4726b98139e51669f39dafbad568c352f",
+            "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+            "abstract": "Compressing high-capability Large Language Models (LLMs) has emerged as a favored strategy for resource-efficient inferences. While state-of-the-art (SoTA) compression methods boast impressive advancements in preserving benign task performance, the potential risks of compression in terms of safety and trustworthiness have been largely neglected. This study conducts the first, thorough evaluation of three (3) leading LLMs using five (5) SoTA compression techniques across eight (8) trustworthiness dimensions. Our experiments highlight the intricate interplay between compression and trustworthiness, revealing some interesting patterns. We find that quantization is currently a more effective approach than pruning in achieving efficiency and trustworthiness simultaneously. For instance, a 4-bit quantized model retains the trustworthiness of its original counterpart, but model pruning significantly degrades trustworthiness, even at 50% sparsity. Moreover, employing quantization within a moderate bit range could unexpectedly improve certain trustworthiness dimensions such as ethics and fairness. Conversely, extreme quantization to very low bit levels (3 bits) tends to reduce trustworthiness significantly. This increased risk cannot be uncovered by looking at benign performance alone, in turn, mandating comprehensive trustworthiness evaluation in practice. These findings culminate in practical recommendations for simultaneously achieving high utility, efficiency, and trustworthiness in LLMs. Code and models are available at https://decoding-comp-trust.github.io.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284689881",
+                    "name": "Junyuan Hong"
+                },
+                {
+                    "authorId": "2004228925",
+                    "name": "Jinhao Duan"
+                },
+                {
+                    "authorId": "2271352866",
+                    "name": "Chenhui Zhang"
+                },
+                {
+                    "authorId": "2145304800",
+                    "name": "Zhangheng Li"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2223592525",
+                    "name": "Kelsey Lieberman"
+                },
+                {
+                    "authorId": "7753616",
+                    "name": "James Diffenderfer"
+                },
+                {
+                    "authorId": "41053241",
+                    "name": "Brian Bartoldson"
+                },
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2240897954",
+                    "name": "Kaidi Xu"
+                },
+                {
+                    "authorId": "1749353",
+                    "name": "B. Kailkhura"
+                },
+                {
+                    "authorId": "3422872",
+                    "name": "Dan Hendrycks"
+                },
+                {
+                    "authorId": "2293597685",
+                    "name": "Dawn Song"
+                },
+                {
+                    "authorId": "2237946662",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2272134552",
+                    "name": "Bo Li"
+                }
+            ]
+        },
+        {
+            "paperId": "4e13ecf80443a4135d516b7ba77eca82b5c6d347",
+            "title": "Compressing LLMs: The Truth is Rarely Pure and Never Simple",
+            "abstract": "Despite their remarkable achievements, modern Large Language Models (LLMs) face exorbitant computational and memory footprints. Recently, several works have shown significant success in training-free and data-free compression (pruning and quantization) of LLMs that achieve 50 - 60% sparsity and reduce the bit width to 3 or 4 bits per weight, with negligible degradation of perplexity over the uncompressed baseline. As recent research efforts are focused on developing increasingly sophisticated compression methods, our work takes a step back and re-evaluates the effectiveness of existing SoTA compression methods, which rely on a fairly simple and widely questioned metric, perplexity (even for dense LLMs). We introduce Knowledge-Intensive Compressed LLM BenchmarK (LLM-KICK), a collection of carefully curated tasks to redefine the evaluation protocol for compressed LLMs, which have significant alignment with their dense counterparts and perplexity fail to capture subtle change in their true capabilities. LLM-KICK unveils many favorable merits and unfortunate plights of current SoTA compression methods: all pruning methods suffer significant performance degradation, sometimes at trivial sparsity ratios (e.g., 25-30%), and fail for N:M sparsity in knowledge-intensive tasks; current quantization methods are more successful than pruning; yet, pruned LLMs even at $\\geq 50$% sparsity are robust in-context retrieval and summarization systems; among others. LLM-KICK is designed to holistically access compressed LLMs' ability for language understanding, reasoning, generation, in-context retrieval, in-context summarization, etc. We hope our study can foster the development of better LLM compression methods. The reproduced codes are available at https://github.com/VITA-Group/llm-kick.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2253397669",
+                    "name": "Zhe Gan"
+                },
+                {
+                    "authorId": "2239065938",
+                    "name": "Xianzhi Du"
+                },
+                {
+                    "authorId": "2256276486",
+                    "name": "Bowen Zhang"
+                },
+                {
+                    "authorId": "2254949434",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2249897805",
+                    "name": "Yinfei Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "6bfd1c8cc501a78fdb88c00a6e25da7a78de925a",
+            "title": "Junk DNA Hypothesis: A Task-Centric Angle of LLM Pre-trained Weights through Sparsity",
+            "abstract": "validate",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2254142682",
+                    "name": "Lu Yin"
+                },
+                {
+                    "authorId": "2255081092",
+                    "name": "Shiwei Liu"
+                },
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2253458053",
+                    "name": "Souvik Kundu"
+                },
+                {
+                    "authorId": "2254949434",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "91d08d821131cadde0e7610d25fa9e71cdd0df93",
+            "title": "Pruning Small Pre-Trained Weights Irreversibly and Monotonically Impairs\"Difficult\"Downstream Tasks in LLMs",
+            "abstract": "We present Junk DNA Hypothesis by adopting a novel task-centric angle for the pre-trained weights of large language models (LLMs). It has been believed that weights in LLMs contain significant redundancy, leading to the conception that a considerable chunk of the parameters can be removed by pruning without compromising performance. Contrary to this belief, this paper presents a counter-argument: small-magnitude weights of pre-trained model weights encode vital knowledge essential for tackling difficult downstream tasks - manifested as the monotonic relationship between the performance drop of downstream tasks across the difficulty spectrum, as we prune more pre-trained weights by magnitude. Moreover, we reveal that these seemingly inconsequential weights can result in irreparable loss of knowledge and performance degradation in difficult tasks, even when downstream continual training is allowed. Interestingly, our evaluations show that the other popular compression, namely quantization, fails to exhibit similar monotonic effect and does not as convincingly disentangle this task-difficulty information. To study formally, we introduce several quantifiable metrics to gauge the downstream task difficulty: (1) within the same task category, and (2) across different task categories. Our extensive experiments substantiate the Junk DNA Hypothesis across a diverse range of model sizes, tasks, datasets, and even pruning methods. Codes are available at: https://github.com/VITA-Group/Junk_DNA_Hypothesis.git.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2254142682",
+                    "name": "Lu Yin"
+                },
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2255081092",
+                    "name": "Shiwei Liu"
+                },
+                {
+                    "authorId": "2965493",
+                    "name": "Souvik Kundu"
+                },
+                {
+                    "authorId": "2254949434",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "c0e4b2d53b36d75b2cf8826949eb6ba64591618e",
+            "title": "Towards long-tailed, multi-label disease classification from chest X-ray: Overview of the CXR-LT challenge",
+            "abstract": "Many real-world image recognition problems, such as diagnostic medical imaging exams, are \u201clong-tailed\u201d \u2013 there are a few common findings followed by many more relatively rare conditions. In chest radiography, diagnosis is both a long-tailed and multi-label problem, as patients often present with multiple findings simultaneously. While researchers have begun to study the problem of long-tailed learning in medical image recognition, few have studied the interaction of label imbalance and label co-occurrence posed by long-tailed, multi-label disease classification. To engage with the research community on this emerging topic, we conducted an open challenge, CXR-LT, on long-tailed, multi-label thorax disease classification from chest X-rays (CXRs). We publicly release a large-scale benchmark dataset of over 350,000 CXRs, each labeled with at least one of 26 clinical findings following a long-tailed distribution. We synthesize common themes of top-performing solutions, providing practical recommendations for long-tailed, multi-label medical image classification. Finally, we use these insights to propose a path forward involving vision-language foundation models for few- and zero-shot disease classification.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "117578645",
+                    "name": "G. Holste"
+                },
+                {
+                    "authorId": "2261543341",
+                    "name": "Yiliang Zhou"
+                },
+                {
+                    "authorId": "2143256233",
+                    "name": "Song Wang"
+                },
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "1490865400",
+                    "name": "Mingquan Lin"
+                },
+                {
+                    "authorId": "2261493972",
+                    "name": "Sherry Zhuge"
+                },
+                {
+                    "authorId": "2297635938",
+                    "name": "Yuzhe Yang"
+                },
+                {
+                    "authorId": "2261690692",
+                    "name": "Dongkyun Kim"
+                },
+                {
+                    "authorId": "2214178889",
+                    "name": "Trong-Hieu Nguyen-Mau"
+                },
+                {
+                    "authorId": "2172507185",
+                    "name": "Minh-Triet Tran"
+                },
+                {
+                    "authorId": "2261454827",
+                    "name": "Jaehyup Jeong"
+                },
+                {
+                    "authorId": "2261616701",
+                    "name": "Wongi Park"
+                },
+                {
+                    "authorId": "2261490225",
+                    "name": "Jongbin Ryu"
+                },
+                {
+                    "authorId": "2305472550",
+                    "name": "Feng Hong"
+                },
+                {
+                    "authorId": "2191899511",
+                    "name": "Arsh Verma"
+                },
+                {
+                    "authorId": "2261494514",
+                    "name": "Yosuke Yamagishi"
+                },
+                {
+                    "authorId": "2261783085",
+                    "name": "Changhyun Kim"
+                },
+                {
+                    "authorId": "2257988850",
+                    "name": "Hyeryeong Seo"
+                },
+                {
+                    "authorId": "2258149238",
+                    "name": "Myungjoo Kang"
+                },
+                {
+                    "authorId": "2237763287",
+                    "name": "L. Celi"
+                },
+                {
+                    "authorId": "2237807642",
+                    "name": "Zhiyong Lu"
+                },
+                {
+                    "authorId": "2188835221",
+                    "name": "Ronald M. Summers"
+                },
+                {
+                    "authorId": "2253858053",
+                    "name": "George Shih"
+                },
+                {
+                    "authorId": "2248972119",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2256805957",
+                    "name": "Yifan Peng"
+                }
+            ]
+        }
+    ]
+}

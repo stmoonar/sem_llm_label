@@ -1,0 +1,701 @@
+{
+    "authorId": "1686699",
+    "papers": [
+        {
+            "paperId": "14194ecda18739458ff80748d5dda7799df449c8",
+            "title": "Adaptive Task-Oriented Resource Allocation for Large Dynamic Workflows on Opportunistic Resources",
+            "abstract": "Dynamic workflow management systems offer a solution to the problem of distributing a local application by packaging individual computations and their dependencies on-the-fly into tasks executable on remote workers. Such independent task execution allows workers to be launched in an opportunistic manner to maximize the current pool of resources at any given time, either through opportunistic systems (e.g., HTCondor, AWS Spot Instances), or conventional systems (e.g., SLURM, SGE) with backfilling enabled, as opposed to monolithic or message-passing applications requiring a fixed block of non-preemptible workers. However, the dynamic nature of task generation presents a significant challenge in terms of resource management as tasks must be allocated with some unknown amount of resources pre-execution but are only observable at runtime. This in turn results in potentially huge resource waste per task as (1) users lack direct knowledge about the relationship between tasks and resources, and thus cannot correctly specify the amount of resources a task needs in advance, and (2) workflows and tasks may exhibit stochastic behaviors at runtime, which complicates the process of resource management.In this paper, we (1) argue for the need of an adaptive resource allocator capable of allocating tasks at runtime and adjusting to random fluctuations and abrupt changes in a dynamic workflow without requiring any prior knowledge, and (2) introduce Greedy Bucketing and Exhaustive Bucketing: two robust, online, general-purpose, and prior-free allocation algorithms capable of producing quality estimates of a task\u2019s resource consumption as the workflow runs. Our results show that a resource allocator equipped with either algorithm consistently outperforms 5 alternative allocation algorithms on 7 diverse workflows and incurs at most 1.6 ms overhead per allocation in the steady state.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2135635772",
+                    "name": "T. Phung"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "3ee4a1589e7c982123f7ad0ff9c45bc6e09728e2",
+            "title": "Accelerating Function-Centric Applications by Discovering, Distributing, and Retaining Reusable Context in Workflow Systems",
+            "abstract": "Workflow systems provide a convenient way for users to write large-scale applications by composing independent tasks into large graphs that can be executed concurrently on high-performance clusters. In many newer workflow systems, tasks are often expressed as a combination of function invocations in a high-level language. Because necessary code and data are not statically known prior to execution, they must be moved into the cluster at runtime. An obvious way of doing this is to translate function invocations into self-contained executable programs and run them as usual, but this brings a hefty performance penalty: a function invocation now needs to piggyback its context with extra code and data to a remote node, and the remote node needs to take extra time to reconstruct the invocation\u2019s context before executing it, both detrimental to lightweight short-running functions. A better solution for workflow systems is to treat functions and invocations as first-class abstractions: subsequent invocations of the same function on a worker node should only pay for the cost of context setup once and reuse the context between different invocations. The remaining problems lie in discovering, distributing, and retaining the reusable context among workers. In this paper, we discuss the rationale and design requirement of these mechanisms to support context reuse, and implement them in TaskVine, a data-intensive distributed framework and execution engine. Our results from executing a large-scale neural network inference application and a molecular design application show that treating functions and invocations as first-class abstractions reduces the execution time of the applications by",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2135635772",
+                    "name": "T. Phung"
+                },
+                {
+                    "authorId": "2257433022",
+                    "name": "Colin Thomas"
+                },
+                {
+                    "authorId": "2256987355",
+                    "name": "Logan Ward"
+                },
+                {
+                    "authorId": "2141693724",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "531d92d2909ad09f33317df288af8bdd650a6972",
+            "title": "TaskVine: Managing In-Cluster Storage for High-Throughput Data Intensive Workflows",
+            "abstract": "Many scientific applications are expressed as high-throughput workflows that consist of large graphs of data assets and tasks to be executed on large parallel and distributed systems. A challenge in executing these workflows is managing data: both datasets and software must be efficiently distributed to cluster nodes; intermediate data must be conveyed between tasks; output data must be delivered to its destination. Scaling problems result when these actions are performed in an uncoordinated manner on a shared filesystem. To address this problem, we introduce TaskVine: a system for exploiting the aggregate local storage and network capacity of a large cluster. TaskVine tracks the lifetime of data in a workflow \u2013from archival sources to final outputs\u2013 making use of local storage to distribute, and re-use data wherever possible. We describe the architecture and novel capabilities of TaskVine, and demonstrate its use with applications in genomics, high energy physics, molecular dynamics, and machine learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2069499392",
+                    "name": "Barry Sly-Delgado"
+                },
+                {
+                    "authorId": "2135635772",
+                    "name": "T. Phung"
+                },
+                {
+                    "authorId": "2257433022",
+                    "name": "Colin Thomas"
+                },
+                {
+                    "authorId": "2122714276",
+                    "name": "David Simonetti"
+                },
+                {
+                    "authorId": "2257388402",
+                    "name": "Andrew Hennessee"
+                },
+                {
+                    "authorId": "50883695",
+                    "name": "Benjam\u00edn Tovar"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "54967ec9ad0a3f85587cd8010fa79af6829e5154",
+            "title": "Maximizing Data Utility for HPC Python Workflow Execution",
+            "abstract": "Large-scale HPC workflows are increasingly implemented in dynamic languages such as Python, which allow for more rapid development than traditional techniques. However, the cost of executing Python applications at scale is often dominated by the distribution of common datasets and complex software dependencies. As the application scales up, data distribution becomes a limiting factor that prevents scaling beyond a few hundred nodes. To address this problem, we present the integration of Parsl (a Python-native parallel programming library) with TaskVine (a data-intensive workflow execution engine). Instead of relying on a shared filesystem to provide data to tasks on demand, Parsl is able to express advance data needs to TaskVine, which then performs efficient data distribution at runtime. This combination provides a performance speedup of 1.48x over the typical method of on-demand paging from the shared filesystem, while also providing an average task speedup of 1.79x with 2048 tasks and 256 nodes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2135635772",
+                    "name": "T. Phung"
+                },
+                {
+                    "authorId": "2312041894",
+                    "name": "Ben Clifford"
+                },
+                {
+                    "authorId": "2141693724",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "76270da136437afe081222d7dff9774cb45c87f5",
+            "title": "VisDict: Improving Communication Via a Visual Dictionary in a Science Gateway",
+            "abstract": "Effective communication is vital for academic project success, particularly in multidisciplinary teams with diverse backgrounds and disciplines. Misunderstandings can arise from differing interpretations of terms, which may go unnoticed. VisDict aims to bridge this gap by creating a visual dictionary within a science gateway to facilitate clear communication between workflow providers and domain researchers. This innovative approach translates computational science concepts into fields like physics and biology. This article delves into our method for building the visual dictionary, the insights gained from curating initial entries, and future plans for automated expansion and illustration of relevant terms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1702333",
+                    "name": "S. Gesing"
+                },
+                {
+                    "authorId": "1687896",
+                    "name": "E. Deelman"
+                },
+                {
+                    "authorId": "69857300",
+                    "name": "M. Hildreth"
+                },
+                {
+                    "authorId": "134655271",
+                    "name": "R. Makhija"
+                },
+                {
+                    "authorId": "144205872",
+                    "name": "M. McDowell"
+                },
+                {
+                    "authorId": "2058845515",
+                    "name": "Natalie K. Meyers"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "794ba58adbce4d1630bbf3e3001347c2643f9a65",
+            "title": "Workflows Community Summit 2022: A Roadmap Revolution",
+            "abstract": "Scientific workflows have become integral tools in broad scientific computing use cases. Science discovery is increasingly dependent on workflows to orchestrate large and complex scientific experiments that range from execution of a cloud-based data preprocessing pipeline to multi-facility instrument-to-edge-to-HPC computational workflows. Given the changing landscape of scientific computing and the evolving needs of emerging scientific applications, it is paramount that the development of novel scientific workflows and system functionalities seek to increase the efficiency, resilience, and pervasiveness of existing systems and applications. Specifically, the proliferation of machine learning/artificial intelligence (ML/AI) workflows, need for processing large scale datasets produced by instruments at the edge, intensification of near real-time data processing, support for long-term experiment campaigns, and emergence of quantum computing as an adjunct to HPC, have significantly changed the functional and operational requirements of workflow systems. Workflow systems now need to, for example, support data streams from the edge-to-cloud-to-HPC enable the management of many small-sized files, allow data reduction while ensuring high accuracy, orchestrate distributed services (workflows, instruments, data movement, provenance, publication, etc.) across computing and user facilities, among others. Further, to accelerate science, it is also necessary that these systems implement specifications/standards and APIs for seamless (horizontal and vertical) integration between systems and applications, as well as enabling the publication of workflows and their associated products according to the FAIR principles. This document reports on discussions and findings from the 2022 international edition of the Workflows Community Summit that took place on November 29 and 30, 2022.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2140039842",
+                    "name": "Rafael Ferreira da Silva"
+                },
+                {
+                    "authorId": "1799983",
+                    "name": "Rosa M. Badia"
+                },
+                {
+                    "authorId": "2213299279",
+                    "name": "Venkat Bala"
+                },
+                {
+                    "authorId": "152409031",
+                    "name": "Deborah Bard"
+                },
+                {
+                    "authorId": "145466013",
+                    "name": "P. Bremer"
+                },
+                {
+                    "authorId": "2213305232",
+                    "name": "Ian Buckley"
+                },
+                {
+                    "authorId": "2304561021",
+                    "name": "Silvina Ca\u00edno-Lores"
+                },
+                {
+                    "authorId": "3091414",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "46555127",
+                    "name": "C. Goble"
+                },
+                {
+                    "authorId": "1693678",
+                    "name": "S. Jha"
+                },
+                {
+                    "authorId": "2059296518",
+                    "name": "D. Katz"
+                },
+                {
+                    "authorId": "33947553",
+                    "name": "D. Laney"
+                },
+                {
+                    "authorId": "145203664",
+                    "name": "M. Parashar"
+                },
+                {
+                    "authorId": "35531371",
+                    "name": "F. Suter"
+                },
+                {
+                    "authorId": "50329328",
+                    "name": "N. Tyler"
+                },
+                {
+                    "authorId": "2066071",
+                    "name": "T. Uram"
+                },
+                {
+                    "authorId": "1729053",
+                    "name": "I. Altintas"
+                },
+                {
+                    "authorId": "121299213",
+                    "name": "S. Andersson"
+                },
+                {
+                    "authorId": "144110414",
+                    "name": "W. Arndt"
+                },
+                {
+                    "authorId": "2057561277",
+                    "name": "J. Aznar"
+                },
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "1960359",
+                    "name": "B. Bali\u015b"
+                },
+                {
+                    "authorId": "108377253",
+                    "name": "Chris E. Blanton"
+                },
+                {
+                    "authorId": "2199664",
+                    "name": "K. Braghetto"
+                },
+                {
+                    "authorId": "2651403",
+                    "name": "Aharon Brodutch"
+                },
+                {
+                    "authorId": "2213427261",
+                    "name": "Paul Brunk"
+                },
+                {
+                    "authorId": "1707417",
+                    "name": "H. Casanova"
+                },
+                {
+                    "authorId": "104449865",
+                    "name": "Alba Cervera Lierta"
+                },
+                {
+                    "authorId": "2213298896",
+                    "name": "Justin Chigu"
+                },
+                {
+                    "authorId": "1572245697",
+                    "name": "T. Coleman"
+                },
+                {
+                    "authorId": "2065988217",
+                    "name": "Nick Collier"
+                },
+                {
+                    "authorId": "2120657141",
+                    "name": "Iacopo Colonnelli"
+                },
+                {
+                    "authorId": "144108029",
+                    "name": "Frederik Coppens"
+                },
+                {
+                    "authorId": "144361904",
+                    "name": "M. Crusoe"
+                },
+                {
+                    "authorId": "2058475897",
+                    "name": "W. Cunningham"
+                },
+                {
+                    "authorId": "3362335",
+                    "name": "B. Kinoshita"
+                },
+                {
+                    "authorId": "3062856",
+                    "name": "Paolo Di Tommaso"
+                },
+                {
+                    "authorId": "2802678",
+                    "name": "C. Doutriaux"
+                },
+                {
+                    "authorId": "143916458",
+                    "name": "M. Downton"
+                },
+                {
+                    "authorId": "1799299",
+                    "name": "W. Elwasif"
+                },
+                {
+                    "authorId": "144504471",
+                    "name": "B. Enders"
+                },
+                {
+                    "authorId": "17606192",
+                    "name": "Chris Erdmann"
+                },
+                {
+                    "authorId": "1719226",
+                    "name": "T. Fahringer"
+                },
+                {
+                    "authorId": "84336109",
+                    "name": "Ludmilla Figueiredo"
+                },
+                {
+                    "authorId": "1698908",
+                    "name": "Rosa Filgueira"
+                },
+                {
+                    "authorId": "1443779643",
+                    "name": "M. Foltin"
+                },
+                {
+                    "authorId": "2850787",
+                    "name": "A. Fouilloux"
+                },
+                {
+                    "authorId": "2811678",
+                    "name": "Luiz M. R. Gadelha"
+                },
+                {
+                    "authorId": "2053600243",
+                    "name": "Andrew Gallo"
+                },
+                {
+                    "authorId": "2079451840",
+                    "name": "A. G. Saez"
+                },
+                {
+                    "authorId": "1398926410",
+                    "name": "D. Garijo"
+                },
+                {
+                    "authorId": "2027553659",
+                    "name": "R. Gerlach"
+                },
+                {
+                    "authorId": "2072840094",
+                    "name": "Ryan E. Grant"
+                },
+                {
+                    "authorId": "51124744",
+                    "name": "Samuel Grayson"
+                },
+                {
+                    "authorId": "2923900",
+                    "name": "Patricia A. Grubel"
+                },
+                {
+                    "authorId": "48985473",
+                    "name": "Johan O. R. Gustafsson"
+                },
+                {
+                    "authorId": "2308097253",
+                    "name": "Val\u00e9rie Hayot-Sasson"
+                },
+                {
+                    "authorId": "2053161325",
+                    "name": "Oscar R. Hernandez"
+                },
+                {
+                    "authorId": "1967862",
+                    "name": "Marcus Hilbrich"
+                },
+                {
+                    "authorId": "2205970689",
+                    "name": "Annmary Justine"
+                },
+                {
+                    "authorId": "152142617",
+                    "name": "I. Laflotte"
+                },
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "50631038",
+                    "name": "Andr\u00e9 Luckow"
+                },
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "145341601",
+                    "name": "K. Maheshwari"
+                },
+                {
+                    "authorId": "3299313",
+                    "name": "Motohiko Matsuda"
+                },
+                {
+                    "authorId": "3421209",
+                    "name": "Doriana Medic"
+                },
+                {
+                    "authorId": "102153641",
+                    "name": "P. Mendygral"
+                },
+                {
+                    "authorId": "32733424",
+                    "name": "M. Michalewicz"
+                },
+                {
+                    "authorId": "2489735",
+                    "name": "J. Nonaka"
+                },
+                {
+                    "authorId": "40258733",
+                    "name": "Maciej Pawlik"
+                },
+                {
+                    "authorId": "34635073",
+                    "name": "L. Pottier"
+                },
+                {
+                    "authorId": "32809071",
+                    "name": "Line C. Pouchard"
+                },
+                {
+                    "authorId": "2213308235",
+                    "name": "Mathias Putz"
+                },
+                {
+                    "authorId": "46254996",
+                    "name": "Santosh Kumar Radha"
+                },
+                {
+                    "authorId": "1792683",
+                    "name": "L. Ramakrishnan"
+                },
+                {
+                    "authorId": "3445802",
+                    "name": "S. Ristov"
+                },
+                {
+                    "authorId": "1961788",
+                    "name": "P. Romano"
+                },
+                {
+                    "authorId": "21168032",
+                    "name": "Daniel Rosendo"
+                },
+                {
+                    "authorId": "3493555",
+                    "name": "M. Ruefenacht"
+                },
+                {
+                    "authorId": "2771040",
+                    "name": "Katarzyna Rycerz"
+                },
+                {
+                    "authorId": "2653506",
+                    "name": "Nishant Saurabh"
+                },
+                {
+                    "authorId": "144276915",
+                    "name": "V. Savchenko"
+                },
+                {
+                    "authorId": "2057456497",
+                    "name": "Martin Schulz"
+                },
+                {
+                    "authorId": "2037776232",
+                    "name": "C. Simpson"
+                },
+                {
+                    "authorId": "66188222",
+                    "name": "R. Sirvent"
+                },
+                {
+                    "authorId": "8884013",
+                    "name": "Tyler J. Skluzacek"
+                },
+                {
+                    "authorId": "1399487720",
+                    "name": "S. Soiland-Reyes"
+                },
+                {
+                    "authorId": "144712722",
+                    "name": "Renan Souza"
+                },
+                {
+                    "authorId": "1750800",
+                    "name": "S. Sukumar"
+                },
+                {
+                    "authorId": "48064827",
+                    "name": "Ziheng Sun"
+                },
+                {
+                    "authorId": "1746329",
+                    "name": "A. Sussman"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                },
+                {
+                    "authorId": "2072191295",
+                    "name": "Mikhail Titov"
+                },
+                {
+                    "authorId": "50883695",
+                    "name": "Benjam\u00edn Tovar"
+                },
+                {
+                    "authorId": "2643562",
+                    "name": "Aalap Tripathy"
+                },
+                {
+                    "authorId": "1840916",
+                    "name": "M. Turilli"
+                },
+                {
+                    "authorId": "2165288240",
+                    "name": "Bartosz Tuznik"
+                },
+                {
+                    "authorId": "1942636",
+                    "name": "H. V. Dam"
+                },
+                {
+                    "authorId": "2006915860",
+                    "name": "Aurelio Vivas"
+                },
+                {
+                    "authorId": "47766095",
+                    "name": "Logan T. Ward"
+                },
+                {
+                    "authorId": "2946172",
+                    "name": "Patrick M. Widener"
+                },
+                {
+                    "authorId": "153569593",
+                    "name": "Sean R. Wilkinson"
+                },
+                {
+                    "authorId": "2169430585",
+                    "name": "Justyna Zawalska"
+                },
+                {
+                    "authorId": "2065914488",
+                    "name": "M. Zulfiqar"
+                }
+            ]
+        },
+        {
+            "paperId": "8c01f81e7746c64a4f7bcd232a15f9c06f2db131",
+            "title": "Landlord: Coordinating Dynamic Software Environments to Reduce Container Sprawl",
+            "abstract": "Containers provide customizable software environments that are independent from the system on which they are deployed. Online services for task execution must often generate containers on the fly to meet user-generated requests. However, as the number of users grows and container environments are changed and updated over time, there is an explosion in the number of containers that must be managed, despite the fact that there is significant overlap among many of the containers in use. We analyze a trace of container launches on the public Binder service and demonstrate the performance and resource usage issues associated with container sprawl. We present Landlord, an algorithm that coalesces related container environments, and show that it can improve container reuse and reduce the number of container builds required in the Binder trace by 40%. We perform a sensitivity analysis of Landlord using randomized synthetic workloads on a high-energy physics (HEP) software repository and demonstrate that Landlord shows benefits for container management across a wide range of usage patterns. Finally, we compare Landlord to offline clustering, and observe that the continuous churn in software necessitates an online approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "39462321",
+                    "name": "Tim Shaffer"
+                },
+                {
+                    "authorId": "2135635772",
+                    "name": "T. Phung"
+                },
+                {
+                    "authorId": "3091414",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "d85be1d68ce4fc5dcab74ab56a0173f99e1d2e96",
+            "title": "Mixed Modality Workflows in TaskVine",
+            "abstract": "Modern scientific workflows desire to mix several different computing modalities: self-contained computational tasks, data-intensive transformations, and serverless function calls. To date, these modalities have required distinct system architectures with different scheduling objectives and constraints. In this paper, we describe how TaskVine, a new workflow execution platform, combines these modalities into an execution platform with shared abstractions. We demonstrate results of the system executing a machine learning workflow with combined standalone tasks and serverless functions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2122714276",
+                    "name": "David Simonetti"
+                },
+                {
+                    "authorId": "50883695",
+                    "name": "Benjam\u00edn Tovar"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "2ec970989c72e3abfb56031a167257d2684e6dff",
+            "title": "Dynamic Task Shaping for High Throughput Data Analysis Applications in High Energy Physics",
+            "abstract": "Distributed data analysis frameworks are widely used for processing large datasets generated by instruments in scientific fields such as astronomy, genomics, and particle physics. Such frameworks partition petabyte-size datasets into chunks and execute many parallel tasks to search for common patterns, locate unusual signals, or compute aggregate properties. When well-configured, such frameworks make it easy to churn through large quantities of data on large clusters. However, configuring frameworks presents a challenge for end users, who must select a variety of parameters such as the blocking of the input data, the number of tasks, the resources allocated to each task, and the size of nodes on which they run. If poorly configured, the result may perform many orders of magnitude worse than optimal, or the application may even fail to make progress at all. Even if a good configuration is found through painstaking observations, the performance may change drastically when the input data or analysis kernel changes. This paper considers the problem of automatically configuring a data analysis application for high energy physics (TopEFT) built upon standard frameworks for physics analysis (Coffea) and distributed tasking (Work Queue). We observe the inherent variability within the application, demonstrate the problems of poor configuration, and then develop several techniques for automatically sizing tasks to meet goals of resource consumption, and overall application completion.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50883695",
+                    "name": "Benjam\u00edn Tovar"
+                },
+                {
+                    "authorId": "2055112914",
+                    "name": "Ben Lyons"
+                },
+                {
+                    "authorId": "1396630556",
+                    "name": "K. Mohrman"
+                },
+                {
+                    "authorId": "2069499392",
+                    "name": "Barry Sly-Delgado"
+                },
+                {
+                    "authorId": "1716753",
+                    "name": "K. Lannon"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        },
+        {
+            "paperId": "532f512ea6deca5a746a07722fc08f845b3d9025",
+            "title": "PONCHO: Dynamic Package Synthesis for Distributed and Serverless Python Applications",
+            "abstract": "An increasing number of distributed applications operate by dispatching function invocations across the nodes of a distributed system. To operate correctly, the code and data dependencies of the function must be distributed along with the invocations in some way. When translating applications to work on large scale distributed systems, managing these dependencies becomes challenging: delivery must be scalable to thousands of nodes; the dependencies must be consistent across the system; and the method must be usable by an unprivileged developer. As a solution, in this paper we present PONCHO, which is a lightweight Python based toolkit which allows users to discover, package, and deploy dependencies as an integral part of distributed applications. PONCHO encapsulates a set of commands to be executed within an environment. PONCHO offers a lightweight solution to create and manage environments increasing the portability of scientific applications as well as reproducibility. In this paper, we evaluate PONCHO with real-world applications in the fields of physics, computational chemistry, and hyperparameter optimization, We observe the challenges that arise when creating and distributing an environment and measure the overheads that emerge as a result.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2069499392",
+                    "name": "Barry Sly-Delgado"
+                },
+                {
+                    "authorId": "2153472055",
+                    "name": "Nick Locascio"
+                },
+                {
+                    "authorId": "2122714276",
+                    "name": "David Simonetti"
+                },
+                {
+                    "authorId": "3997933",
+                    "name": "B. Wiseman"
+                },
+                {
+                    "authorId": "50883695",
+                    "name": "Benjam\u00edn Tovar"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                }
+            ]
+        }
+    ]
+}

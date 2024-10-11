@@ -1,0 +1,271 @@
+{
+    "authorId": "2191418397",
+    "papers": [
+        {
+            "paperId": "55d322ddac05dcf89fc43cc859ca136471877bbd",
+            "title": "Knowledge Planning in Large Language Models for Domain-Aligned Counseling Summarization",
+            "abstract": "In mental health counseling, condensing dialogues into concise and relevant summaries (aka counseling notes) holds pivotal significance. Large Language Models (LLMs) exhibit remarkable capabilities in various generative tasks; however, their adaptation to domain-specific intricacies remains challenging, especially within mental health contexts. Unlike standard LLMs, mental health experts first plan to apply domain knowledge in writing summaries. Our work enhances LLMs' ability by introducing a novel planning engine to orchestrate structuring knowledge alignment. To achieve high-order planning, we divide knowledge encapsulation into two major phases: (i) holding dialogue structure and (ii) incorporating domain-specific knowledge. We employ a planning engine on Llama-2, resulting in a novel framework, PIECE. Our proposed system employs knowledge filtering-cum-scaffolding to encapsulate domain knowledge. Additionally, PIECE leverages sheaf convolution learning to enhance its understanding of the dialogue's structural nuances. We compare PIECE with 14 baseline methods and observe a significant improvement across ROUGE and Bleurt scores. Further, expert evaluation and analyses validate the generation quality to be effective, sometimes even surpassing the gold standard. We further benchmark PIECE with other LLMs and report improvement, including Llama-2 (+2.72%), Mistral (+2.04%), and Zephyr (+1.59%), to justify the generalizability of the planning engine.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "2322611822",
+                    "name": "Smriti Joshi"
+                },
+                {
+                    "authorId": "2249914540",
+                    "name": "Tanmoy Chakraborty"
+                },
+                {
+                    "authorId": "2249917924",
+                    "name": "Md. Shad Akhtar"
+                }
+            ]
+        },
+        {
+            "paperId": "bf7b68ecb49f3b7d20535f5f1be40a14d1e2f511",
+            "title": "Exploring the Efficacy of Large Language Models in Summarizing Mental Health Counseling Sessions: Benchmark Study",
+            "abstract": "Background Comprehensive session summaries enable effective continuity in mental health counseling, facilitating informed therapy planning. However, manual summarization presents a significant challenge, diverting experts\u2019 attention from the core counseling process. Leveraging advances in automatic summarization to streamline the summarization process addresses this issue because this enables mental health professionals to access concise summaries of lengthy therapy sessions, thereby increasing their efficiency. However, existing approaches often overlook the nuanced intricacies inherent in counseling interactions. Objective This study evaluates the effectiveness of state-of-the-art large language models (LLMs) in selectively summarizing various components of therapy sessions through aspect-based summarization, aiming to benchmark their performance. Methods We first created Mental Health Counseling-Component\u2013Guided Dialogue Summaries, a benchmarking data set that consists of 191 counseling sessions with summaries focused on 3 distinct counseling components (also known as counseling aspects). Next, we assessed the capabilities of 11 state-of-the-art LLMs in addressing the task of counseling-component\u2013guided summarization. The generated summaries were evaluated quantitatively using standard summarization metrics and verified qualitatively by mental health professionals. Results Our findings demonstrated the superior performance of task-specific LLMs such as MentalLlama, Mistral, and MentalBART evaluated using standard quantitative metrics such as Recall-Oriented Understudy for Gisting Evaluation (ROUGE)-1, ROUGE-2, ROUGE-L, and Bidirectional Encoder Representations from Transformers Score across all aspects of the counseling components. Furthermore, expert evaluation revealed that Mistral superseded both MentalLlama and MentalBART across 6 parameters: affective attitude, burden, ethicality, coherence, opportunity costs, and perceived effectiveness. However, these models exhibit a common weakness in terms of room for improvement in the opportunity costs and perceived effectiveness metrics. Conclusions While LLMs fine-tuned specifically on mental health domain data display better performance based on automatic evaluation scores, expert assessments indicate that these models are not yet reliable for clinical application. Further refinement and validation are necessary before their implementation in practice.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149558802",
+                    "name": "Prottay Kumar Adhikary"
+                },
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "2109682506",
+                    "name": "Shivani Kumar"
+                },
+                {
+                    "authorId": "2288339722",
+                    "name": "Salam Michael Singh"
+                },
+                {
+                    "authorId": "2288267226",
+                    "name": "Puneet Manuja"
+                },
+                {
+                    "authorId": "5472512",
+                    "name": "Jini K. Gopinath"
+                },
+                {
+                    "authorId": "2288260613",
+                    "name": "Vijay Krishnan"
+                },
+                {
+                    "authorId": "2288265427",
+                    "name": "Swati Kedia"
+                },
+                {
+                    "authorId": "3456991",
+                    "name": "K. Deb"
+                },
+                {
+                    "authorId": "2249914540",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "64daf0dd3cf9adef433d568627e2c3a784219878",
+            "title": "Response-act Guided Reinforced Dialogue Generation for Mental Health Counseling",
+            "abstract": "Virtual Mental Health Assistants (VMHAs) have become a prevalent method for receiving mental health counseling in the digital healthcare space. An assistive counseling conversation commences with natural open-ended topics to familiarize the client with the environment and later converges into more fine-grained domain-specific topics. Unlike other conversational systems, which are categorized as open-domain or task-oriented systems, VMHAs possess a hybrid conversational flow. These counseling bots need to comprehend various aspects of the conversation, such as dialogue-acts, intents, etc., to engage the client in an effective and appropriate conversation. Although the surge in digital health research highlights applications of many general-purpose response generation systems, they are barely suitable in the mental health domain \u2013 the prime reason is the lack of understanding in the mental health counseling conversation. Moreover, in general, dialogue-act guided response generators are either limited to a template-based paradigm or lack appropriate semantics in dialogue generation. To this end, we propose READER \u2013 a REsponse-Act guided reinforced Dialogue genERation model for the mental health counseling conversations. READER is built on transformer to jointly predict a potential dialogue-act dt + 1 for the next utterance (aka response-act) and to generate an appropriate response (ut + 1). Through the transformer-reinforcement-learning (TRL) with Proximal Policy Optimization (PPO), we guide the response generator to abide by dt + 1 and ensure the semantic richness of the responses via BERTScore in our reward computation. We evaluate READER on HOPE, a benchmark counseling conversation dataset and observe that it outperforms several baselines across several evaluation metrics \u2013 METEOR, ROUGE, and BERTScore.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "26658735",
+                    "name": "Ishan Pandey"
+                },
+                {
+                    "authorId": "46815454",
+                    "name": "Md. Shad Akhtar"
+                },
+                {
+                    "authorId": "144054829",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "b2e3c56b78741c3ebb6941ba8ba9e26a3d42a614",
+            "title": "Critical Behavioral Traits Foster Peer Engagement in Online Mental Health Communities",
+            "abstract": "Online Mental Health Communities (OMHCs), such as Reddit, have witnessed a surge in popularity as go-to platforms for seeking information and support in managing mental health needs. Platforms like Reddit offer immediate interactions with peers, granting users a vital space for seeking mental health assistance. However, the largely unregulated nature of these platforms introduces intricate challenges for both users and society at large. This study explores the factors that drive peer engagement within counseling threads, aiming to enhance our understanding of this critical phenomenon. We introduce BeCOPE, a novel behavior encoded Peer counseling dataset comprising over 10,118 posts and 58,279 comments sourced from 21 mental health-specific subreddits. The dataset is annotated using three major fine-grained behavior labels: (a) intent, (b) criticism, and (c) readability, along with the emotion labels. Our analysis indicates the prominence of \u201cself-criticism\u201d as the most prevalent form of criticism expressed by help-seekers, accounting for a significant 43% of interactions. Intriguingly, we observe that individuals who explicitly express their need for help are 18.01% more likely to receive assistance compared to those who present \u201csurveys\u201d or engage in \u201crants.\u201d Furthermore, we highlight the pivotal role of well-articulated problem descriptions, showing that superior readability effectively doubles the likelihood of receiving the sought-after support. Our study emphasizes the essential role of OMHCs in offering personalized guidance and unveils behavior-driven engagement patterns.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "2237805886",
+                    "name": "Tanya Gupta"
+                },
+                {
+                    "authorId": "2237805177",
+                    "name": "Alison Cerezo"
+                },
+                {
+                    "authorId": "31424899",
+                    "name": "S. P. Lord"
+                },
+                {
+                    "authorId": "46815454",
+                    "name": "Md. Shad Akhtar"
+                },
+                {
+                    "authorId": "144054829",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "1f810c0b505b8c5734b86e2e1ac966171d7702a6",
+            "title": "A Computational Approach to Understand Mental Health from Reddit: Knowledge-aware Multitask Learning Framework",
+            "abstract": "Analyzing gender is critical to study mental health (MH) support in CVD (cardiovascular disease). The existing studies on using social media for extracting MH symptoms consider symptom detection and tend to ignore user context, disease, or gender. The current study aims to design and evaluate a system to capture how MH symptoms associated with CVD are expressed differently with the gender on social media. We observe that the reliable detection of MH symptoms expressed by persons with heart disease in user posts is challenging because of the co-existence of (dis)similar MH symptoms in one post and due to variation in the description of symptoms based on gender. We collect a corpus of 150k items (posts and comments) annotated using the subreddit labels and transfer learning approaches. We propose GeM, a novel task-adaptive multi-task learning approach to identify the MH symptoms in CVD patients based on gender. Specifically, we adopt a knowledge-assisted RoBERTa based bi-encoder model to capture CVD-related MH symptoms. Moreover, it enhances the reliability for differentiating the gender language in MH symptoms when compared to the state-of-art language models. Our model achieves high (statistically significant) performance and predicts four labels of MH issues and two gender labels, which outperforms RoBERTa, improving the recall by 2.14% on the symptom identification task and by 2.55% on the gender identification task.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46189109",
+                    "name": "Usha Lokala"
+                },
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "2061341707",
+                    "name": "T. Dastidar"
+                },
+                {
+                    "authorId": "144054829",
+                    "name": "Tanmoy Chakraborty"
+                },
+                {
+                    "authorId": "2159553413",
+                    "name": "Md Shad Akthar"
+                },
+                {
+                    "authorId": "1952327",
+                    "name": "M. Panahiazar"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                }
+            ]
+        },
+        {
+            "paperId": "238be21b51c82b9e588514e6359d66f42974d57a",
+            "title": "Counseling Summarization Using Mental Health Knowledge Guided Utterance Filtering",
+            "abstract": "The psychotherapy intervention technique is a multifaceted conversation between a therapist and a patient. Unlike general clinical discussions, psychotherapy's core components (viz. symptoms) are hard to distinguish, thus becoming a complex problem to summarize later. A structured counseling conversation may contain discussions about symptoms, history of mental health issues, or the discovery of the patient's behavior. It may also contain discussion filler words irrelevant to a clinical summary. We refer to these elements of structured psychotherapy as counseling components. In this paper, the aim is mental health counseling summarization to build upon domain knowledge and to help clinicians quickly glean meaning. We create a new dataset after annotating 12.9K utterances of counseling components and reference summaries for each dialogue. Further, we propose ConSum, a novel counseling-component guided summarization model. ConSum undergoes three independent modules. First, to assess the presence of depressive symptoms, it filters utterances utilizing the Patient Health Questionnaire (PHQ-9), while the second and third modules aim to classify counseling components. At last, we propose a problem-specific Mental Health Information Capture (MHIC) evaluation metric for counseling summaries. Our comparative study shows that we improve on performance and generate cohesive, semantic, and coherent summaries. We comprehensively analyze the generated summaries to investigate the capturing of psychotherapy elements. Human and clinical evaluations on the summary show that ConSum generates quality summary. Further, mental health experts validate the clinical acceptability of the ConSum. Lastly, we discuss the uniqueness in mental health counseling summarization in the real world and show evidences of its deployment on an online application with the support of mpathic.ai",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "2151858197",
+                    "name": "Tharun Suresh"
+                },
+                {
+                    "authorId": "31424899",
+                    "name": "S. P. Lord"
+                },
+                {
+                    "authorId": "46815454",
+                    "name": "Md. Shad Akhtar"
+                },
+                {
+                    "authorId": "144054829",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "8b9c8f4d7ab08ba5c0c364ffc2ec0d89b7590b9f",
+            "title": "A Hybrid Approach of Prediction Using Rating and Review Data",
+            "abstract": "A collaborative filtering technique has proven to be the preferable approach for personalized recommendations. Traditionally, collaborative filtering recommends target items to those users who have similar tastes. The performance of collaborative filtering degrades significantly when a considerable number of users do not provide ratings on recommended products. In such a scenario, the dataset utilized in recommendation becomes highly sparse, and ratings become very few or none co-rated. To mitigate the problem, as mentioned earlier, and to improve the performance of collaborative filtering, we propose an approach that adopts users' textual reviews and ratings both in the rating prediction. The dataset used is Amazon fine Food Reviews containing rating and text review with 568454 reviews from October 1999 to October 2012. The proposed model is tested on the collected dataset. The experimental results provide the proper evidence that the proposed model outperforms other traditional algorithms of collaborative filtering techniques.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "2052566512",
+                    "name": "Rafeeq Ahmed"
+                },
+                {
+                    "authorId": "2149921611",
+                    "name": "Pradeep Kumar Singh"
+                },
+                {
+                    "authorId": "2689815",
+                    "name": "Mohammed Mahmod Shuaib"
+                },
+                {
+                    "authorId": "2137060593",
+                    "name": "Tanweer Alam"
+                }
+            ]
+        },
+        {
+            "paperId": "46af47efcc2b11c0b68cab3f59326115835ad0ab",
+            "title": "Speaker and Time-aware Joint Contextual Learning for Dialogue-act Classification in Counselling Conversations",
+            "abstract": "The onset of the COVID-19 pandemic has brought the mental health of people under risk. Social counselling has gained remarkable significance in this environment. Unlike general goal-oriented dialogues, a conversation between a patient and a therapist is considerably implicit, though the objective of the conversation is quite apparent. In such a case, understanding the intent of the patient is imperative in providing effective counselling in therapy sessions, and the same applies to a dialogue system as well. In this work, we take forward a small but an important step in the development of an automated dialogue system for mental-health counselling. We develop a novel dataset, named HOPE, to provide a platform for the dialogue-act classification in counselling conversations. We identify the requirement of such conversation and propose twelve domain-specific dialogue-act (DAC) labels. We collect ~ 12.9K utterances from publicly-available counselling session videos on YouTube, extract their transcripts, clean, and annotate them with DAC labels. Further, we propose SPARTA, a transformer-based architecture with a novel speaker- and time-aware contextual learning for the dialogue-act classification. Our evaluation shows convincing performance over several baselines, achieving state-of-the-art on HOPE. We also supplement our experiments with extensive empirical and qualitative analyses of SPARTA.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2008212226",
+                    "name": "Ganeshan Malhotra"
+                },
+                {
+                    "authorId": "2053570954",
+                    "name": "Abdul Waheed"
+                },
+                {
+                    "authorId": "2191418397",
+                    "name": "Aseem Srivastava"
+                },
+                {
+                    "authorId": "46815454",
+                    "name": "Md. Shad Akhtar"
+                },
+                {
+                    "authorId": "144054829",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,289 @@
+{
+    "authorId": "144656147",
+    "papers": [
+        {
+            "paperId": "0e2d94dc044191825c0137817a928cae7ea95a7f",
+            "title": "Ou: Automating the Parallelization of Zero-Knowledge Protocols",
+            "abstract": "A zero-knowledge proof (ZKP) is a powerful cryptographic primitive used in many decentralized or privacy-focused applications. However, the high overhead of ZKPs can restrict their practical applicability. We design a programming language, Ou, aimed at easing the programmer's burden when writing efficient ZKPs, and a compiler framework, Lian, that automates the analysis and distribution of statements to a computing cluster. Ou uses programming language semantics, formal methods, and combinatorial optimization to automatically partition an Ou program into efficiently sized chunks for parallel ZK-proving and/or verification. We contribute: (1) A front-end language where users can write proof statements as imperative programs in a familiar syntax; (2) A compiler architecture and implementation that automatically analyzes the program and compiles it into an optimized IR that can be lifted to a variety of ZKP constructions; and (3) A cutting algorithm, based on Pseudo-Boolean optimization and Integer Linear Programming, that reorders instructions and then partitions the program into efficiently sized chunks for parallel evaluation and efficient state reconciliation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1380151268",
+                    "name": "Yuyang Sang"
+                },
+                {
+                    "authorId": "2065660489",
+                    "name": "Ning Luo"
+                },
+                {
+                    "authorId": "2007693530",
+                    "name": "Samuel Judson"
+                },
+                {
+                    "authorId": "2219634695",
+                    "name": "Ben Chaimberg"
+                },
+                {
+                    "authorId": "1682679",
+                    "name": "Timos Antonopoulos"
+                },
+                {
+                    "authorId": "144129720",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2869954",
+                    "name": "R. Piskac"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "155a78999114ae9d972a31cad35876548b42562d",
+            "title": "A Compositional Theory of Linearizability",
+            "abstract": "Compositionality is at the core of programming languages research and has become an important goal toward scalable verification of large systems. Despite that, there is no compositional account of linearizability, the gold standard of correctness for concurrent objects. In this paper, we develop a compositional semantics for linearizable concurrent objects. We start by showcasing a common issue, which is independent of linearizability, in the construction of compositional models of concurrent computation: interaction with the neutral element for composition can lead to emergent behaviors, a hindrance to compositionality. Category theory provides a solution for the issue in the form of the Karoubi envelope. Surprisingly, and this is the main discovery of our work, this abstract construction is deeply related to linearizability and leads to a novel formulation of it. Notably, this new formulation neither relies on atomicity nor directly upon happens-before ordering and is only possible because of compositionality, revealing that linearizability and compositionality are intrinsically related to each other. We use this new, and compositional, understanding of linearizability to revisit much of the theory of linearizability, providing novel, simple, algebraic proofs of the locality property and of an analogue of the equivalence with observational refinement. We show our techniques can be used in practice by connecting our semantics with a simple program logic that is nonetheless sound concerning this generalized linearizability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2188156614",
+                    "name": "Arthur Oliveira Vale"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                },
+                {
+                    "authorId": "2116664540",
+                    "name": "Yixuan Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "a839a634c566b10780588614b02c6f7c44b54149",
+            "title": "A Bottom-Up Approach to a Unified Semantic Interface for Verified Compositional Compilation",
+            "abstract": "Verified compositional compilation (VCC) is a notion of modular verification of compilers that supports compilation of heterogeneous programs. The key to achieve VCC is to design a semantic interface that enables composition of correctness theorems for compiling individual modules. Most of the existing techniques for VCC fix a semantic interface from the very beginning and force it down to every single compiler pass. This requires significant changes to the existing framework and makes it difficult to understand the relationship between conditions enforced by the semantic interface and the actual requirements of compiler passes. A different approach is to design appropriate semantic interfaces for individual compiler passes and combine them into a unified interface which faithfully reflects the requirements of underlying compiler passes. However, this requires vertically composable simulation relations, which were traditionally considered very difficult to construct even with extensive changes to compiler verification frameworks. We propose a solution to construction of unified semantic interfaces for VCC with a bottom-up approach. Our starting point is CompCertO, an extension of CompCert -- the state-of-the-art verified compiler -- that supports VCC but lacks a unified interface. We discover that a CompCert Kripke Logical Relation (CKLR) in CompCertO provides a uniform notion of memory protection for evolving memory states across modules and is transitively composable. Based on this uniform and composable CKLR, we then merge the simulation relations for all the compiler pass in CompCertO (except for three value analysis passes) into a unified interface. We demonstrate the conciseness and effectiveness of this unified interface by applying it to verify the compositional compilation of a non-trivial heterogeneous program with mutual recursion.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146303774",
+                    "name": "Ling Zhang"
+                },
+                {
+                    "authorId": "2108069729",
+                    "name": "Yuting Wang"
+                },
+                {
+                    "authorId": "27976883",
+                    "name": "J\u00e9r\u00e9mie Koenig"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "0d6dd7342ff33e5d60d61d087d0110d8fc232485",
+            "title": "Adore: atomic distributed objects with certified reconfiguration",
+            "abstract": "Finding the right abstraction is critical for reasoning about complex systems such as distributed protocols like Paxos and Raft. Despite a recent abundance of impressive verification work in this area, we claim the ways that past efforts model distributed state are not ideal for protocol-level reasoning: they either hide important details, or leak too much complexity from the network. As evidence we observe that nearly all of them avoid the complex, but important issue of reconfiguration. Reconfiguration's primary challenge lies in how it interacts with a protocol's core safety invariants. To handle this increased complexity, we introduce the Adore model, whose novel abstract state hides network-level communications while capturing dependencies between committed and uncommitted states, as well as metadata like election quorums. It includes first-class support for a generic reconfiguration command that can be instantiated with a variety of implementations. Under this model, the subtle interactions between reconfiguration and the core protocol become clear, and with this insight we completed the first mechanized proof of safety of a reconfigurable consensus protocol.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "52096665",
+                    "name": "Wolf Honor\u00e9"
+                },
+                {
+                    "authorId": "2796888",
+                    "name": "Ji-Yong Shin"
+                },
+                {
+                    "authorId": "1857504",
+                    "name": "Jieung Kim"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "39ca7fe00e6da6b09dc0b7512677d17f50a5aa71",
+            "title": "Verified compilation of C programs with a nominal memory model",
+            "abstract": "Memory models play an important role in verified compilation of imperative programming languages. A representative one is the block-based memory model of CompCert---the state-of-the-art verified C compiler. Despite its success, the abstraction over memory space provided by CompCert's memory model is still primitive and inflexible. In essence, it uses a fixed representation for identifying memory blocks in a global memory space and uses a globally shared state for distinguishing between used and unused blocks. Therefore, any reasoning about memory must work uniformly for the global memory; it is impossible to individually reason about different sub-regions of memory (i.e., the stack and global definitions). This not only incurs unnecessary complexity in compiler verification, but also poses significant difficulty for supporting verified compilation of open or concurrent programs which need to work with contextual memory, as manifested in many previous extensions of CompCert. To remove the above limitations, we propose an enhancement to the block-based memory model based on nominal techniques; we call it the nominal memory model. By adopting the key concepts of nominal techniques such as atomic names and supports to model the memory space, we are able to 1) generalize the representation of memory blocks to any types satisfying the properties of atomic names and 2) remove the global constraints for managing memory blocks, enabling flexible memory structures for open and concurrent programs. To demonstrate the effectiveness of the nominal memory model, we develop a series of extensions of CompCert based on it. These extensions show that the nominal memory model 1) supports a general framework for verified compilation of C programs, 2) enables intuitive reasoning of compiler transformations on partial memory; and 3) enables modular reasoning about programs working with contextual memory. We also demonstrate that these extensions require limited changes to the original CompCert, making the verification techniques based on the nominal memory model easy to adopt.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108069729",
+                    "name": "Yuting Wang"
+                },
+                {
+                    "authorId": "2146303774",
+                    "name": "Ling Zhang"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                },
+                {
+                    "authorId": "27976883",
+                    "name": "J\u00e9r\u00e9mie Koenig"
+                }
+            ]
+        },
+        {
+            "paperId": "7ac367ed674ce0e43562e65805da09f24d944e7d",
+            "title": "Compositional virtual timelines: verifying dynamic-priority partitions with algorithmic temporal isolation",
+            "abstract": "Real-time systems power safety-critical applications that require strong isolation among each other. Such isolation needs to be enforced at two orthogonal levels. On the micro-architectural level, this mainly involves avoiding interference through micro-architectural states, such as cache lines. On the algorithmic level, this is usually achieved by adopting real-time partitions to reserve resources for each application. Implementations of such systems are often complex and require formal verification to guarantee proper isolation. In this paper, we focus on algorithmic isolation, which is mainly related to scheduling-induced interferences. We address earliest-deadline-first (EDF) partitions to achieve compositionality and utilization, while imposing constraints on tasks' periods and enforcing budgets on these periodic partitions to ensure isolation between each other. The formal verification of such a real-time OS kernel is challenging due to the inherent complexity of the dynamic priority assignment on the partition level. We tackle this problem by adopting a dynamically constructed abstraction to lift the reasoning of a concrete scheduler into an abstract domain. Using this framework, we verify a real-time operating system kernel with budget-enforcing EDF partitions and prove that it indeed ensures isolation between partitions. All the proofs are mechanized in Coq.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "153699240",
+                    "name": "Meng-qi Liu"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                },
+                {
+                    "authorId": "2149051019",
+                    "name": "Hao Chen"
+                },
+                {
+                    "authorId": "143772258",
+                    "name": "Man-Ki Yoon"
+                },
+                {
+                    "authorId": "1753484856",
+                    "name": "Jung-Eun Kim"
+                }
+            ]
+        },
+        {
+            "paperId": "97ef2409c2c054931b09681e13e92b8768440528",
+            "title": "Layered and object-based game semantics",
+            "abstract": "Large-scale software verification relies critically on the use of compositional languages, semantic models, specifications, and verification techniques. Recent work on certified abstraction layers synthesizes game semantics, the refinement calculus, and algebraic effects to enable the composition of heterogeneous components into larger certified systems. However, in existing models of certified abstraction layers, compositionality is restricted by the lack of encapsulation of state. In this paper, we present a novel game model for certified abstraction layers where the semantics of layer interfaces and implementations are defined solely based on their observable behaviors. Our key idea is to leverage Reddy's pioneer work on modeling the semantics of imperative languages not as functions on global states but as objects with their observable behaviors. We show that a layer interface can be modeled as an object type (i.e., a layer signature) plus an object strategy. A layer implementation is then essentially a regular map, in the sense of Reddy, from an object with the underlay signature to that with the overlay signature. A layer implementation is certified when its composition with the underlay object strategy implements the overlay object strategy. We also describe an extension that allows for non-determinism in layer interfaces. After formulating layer implementations as regular maps between object spaces, we move to concurrency and design a notion of concurrent object space, where sequential traces may be identified modulo permutation of independent operations. We show how to express protected shared object concurrency, and a ticket lock implementation, in a simple model based on regular maps between concurrent object spaces.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2188156614",
+                    "name": "Arthur Oliveira Vale"
+                },
+                {
+                    "authorId": "1691365",
+                    "name": "Paul-Andr\u00e9 Melli\u00e8s"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                },
+                {
+                    "authorId": "27976883",
+                    "name": "J\u00e9r\u00e9mie Koenig"
+                },
+                {
+                    "authorId": "2600395",
+                    "name": "L\u00e9o Stefanesco"
+                }
+            ]
+        },
+        {
+            "paperId": "bb0d0531705e1f3e531910a72c3aa38e67d0d8e4",
+            "title": "TimeDice: Schedulability-Preserving Priority Inversion for Mitigating Covert Timing Channels Between Real-time Partitions",
+            "abstract": "Timing predictability is a precondition for successful communication over a covert timing channel. Real-time systems are particularly vulnerable to timing channels because real-time applications can easily have temporal locality due to limited uncertainty in schedules. In this paper, we show that real-time applications can create hidden information flow even when the temporal isolation among the time partitions is strictly enforced. We then introduce an online algorithm that randomizes time-partition schedules to reduce the temporal locality, while guaranteeing the schedulability of, and thus the temporal isolation among, time partitions. We also present an analysis of the cost of the randomization on the responsiveness of real-time tasks. From an implementation on a Linux-based real-time operating system, we validate the analysis and evaluate the scheduling overhead as well as the impact on an experimental real-time system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143772258",
+                    "name": "Man-Ki Yoon"
+                },
+                {
+                    "authorId": "1753484856",
+                    "name": "Jung-Eun Kim"
+                },
+                {
+                    "authorId": "35638962",
+                    "name": "Richard M. Bradford"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "0e65f84e9e7360d6b460dc3b1febf617463bb532",
+            "title": "Blinder: Partition-Oblivious Hierarchical Scheduling",
+            "abstract": "Hierarchical scheduling enables modular reasoning about the temporal behavior of individual applications by partitioning CPU time and thus isolating potential misbehavior. However, conventional time-partitioning mechanisms fail to achieve strong temporal isolation from a security perspective; variations in the executions of partitions can be perceived by others, which enables an algorithmic covert timing-channel between partitions that are completely isolated from each other in the utilization of time. Thus, we present a run-time algorithm that makes partitions oblivious to others\u2019 varying behaviors even when an adversary has full control over their timings. It enables the use of dynamic time-partitioning mechanisms that provide improved responsiveness, while guaranteeing the algorithmic-level non-interference that static approaches would achieve. From an implementation on an open-source operating system, we evaluate the costs of the solution in terms of the responsiveness as well as scheduling overhead.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143772258",
+                    "name": "Man-Ki Yoon"
+                },
+                {
+                    "authorId": "153699240",
+                    "name": "Meng-qi Liu"
+                },
+                {
+                    "authorId": "2149051019",
+                    "name": "Hao Chen"
+                },
+                {
+                    "authorId": "1753484856",
+                    "name": "Jung-Eun Kim"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "2d34c40f1cca62bb6dba73e14719d15a8e954285",
+            "title": "Much ADO about failures: a fault-aware model for compositional verification of strongly consistent distributed systems",
+            "abstract": "Despite recent advances, guaranteeing the correctness of large-scale distributed applications without compromising performance remains a challenging problem. Network and node failures are inevitable and, for some applications, careful control over how they are handled is essential. Unfortunately, existing approaches either completely hide these failures behind an atomic state machine replication (SMR) interface, or expose all of the network-level details, sacrificing atomicity. We propose a novel, compositional, atomic distributed object (ADO) model for strongly consistent distributed systems that combines the best of both options. The object-oriented API abstracts over protocol-specific details and decouples high-level correctness reasoning from implementation choices. At the same time, it intentionally exposes an abstract view of certain key distributed failure cases, thus allowing for more fine-grained control over them than SMR-like models. We demonstrate that proving properties even of composite distributed systems can be straightforward with our Coq verification framework, Advert, thanks to the ADO model. We also show that a variety of common protocols including multi-Paxos and Chain Replication refine the ADO semantics, which allows one to freely choose among them for an application's implementation without modifying ADO-level correctness proofs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "52096665",
+                    "name": "Wolf Honor\u00e9"
+                },
+                {
+                    "authorId": "1857504",
+                    "name": "Jieung Kim"
+                },
+                {
+                    "authorId": "2796888",
+                    "name": "Ji-Yong Shin"
+                },
+                {
+                    "authorId": "144656147",
+                    "name": "Zhong Shao"
+                }
+            ]
+        }
+    ]
+}

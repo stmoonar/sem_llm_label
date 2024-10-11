@@ -1,0 +1,375 @@
+{
+    "authorId": "1512189758",
+    "papers": [
+        {
+            "paperId": "16b136b0d588f01ffefa51d230281306ab047706",
+            "title": "WiseGraph: Optimizing GNN with Joint Workload Partition of Graph and Operations",
+            "abstract": "Graph Neural Network (GNN) has emerged as an important workload for learning on graphs. With the size of graph data and the complexity of GNN model architectures increasing, developing an efficient GNN system grows more important. As GNN has heavy neural computation workloads on a large graph, it is crucial to partition the entire workload into smaller parts for parallel execution and optimization. However, existing approaches separately partition graph data and GNN operations, resulting in inefficiency and large data movement overhead. To address this problem, we present WiseGraph, a GNN training framework exploring the joint optimization space of graph data partition and GNN operation partition. To bridge the gap between the two classes of partitions, we propose a workload abstraction tailored to GNN, gTask, which can not only describe existing GNN partition strategies as special cases but also exploit new optimization opportunities. Based on gTasks, WiseGraph effectively generates partition plans adaptive to input graph data and GNN models. Evaluation on five typical GNN models shows that WiseGraph outperforms existing GNN frameworks by 2.04\u00d7 and 2.22\u00d7 for single and multiple GPU training. WiseGraph is publicly available at https://github.com/xxcclong/CxGNN-Compute/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2149970563",
+                    "name": "Liyan Zheng"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "122923921",
+                    "name": "Yuyang Jin"
+                },
+                {
+                    "authorId": "2297419080",
+                    "name": "Qihao Zhang"
+                },
+                {
+                    "authorId": "2297419442",
+                    "name": "Runqing Zhang"
+                },
+                {
+                    "authorId": "2266718273",
+                    "name": "Zhen Zheng"
+                },
+                {
+                    "authorId": "2297739566",
+                    "name": "Youngmin Yi"
+                },
+                {
+                    "authorId": "2111115725",
+                    "name": "Xipeng Shen"
+                }
+            ]
+        },
+        {
+            "paperId": "46210e170045df3c0c50a17bb63e6de480d62f9d",
+            "title": "FreshGNN: Reducing Memory Access via Stable Historical Embeddings for Graph Neural Network Training",
+            "abstract": "A key performance bottleneck when training graph neural network (GNN) models on large, real-world graphs is loading node features onto a GPU. Due to limited GPU memory, expensive data movement is necessary to facilitate the storage of these features on alternative devices with slower access (e.g. CPU memory). Moreover, the irregularity of graph structures contributes to poor data locality which further exacerbates the problem. Consequently, existing frameworks capable of efficiently training large GNN models usually incur a significant accuracy degradation because of the currently-available shortcuts involved. To address these limitations, we instead propose FreshGNN, a general-purpose GNN mini-batch training framework that leverages a historical cache for storing and reusing GNN node embeddings instead of re-computing them through fetching raw features at every iteration. Critical to its success, the corresponding cache policy is designed, using a combination of gradient-based and staleness criteria, to selectively screen those embeddings which are relatively stable and can be cached, from those that need to be re-computed to reduce estimation errors and subsequent downstream accuracy loss. When paired with complementary system enhancements to support this selective historical cache, FreshGNN is able to accelerate the training speed on large graph datasets such as ogbn-papers100M and MAG240M by 3.4\u00d7 up to 20.5\u00d7 and reduce the memory access by 59%, with less than 1% influence on test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "51ec39dbf82a0f4ee73a056f09048a5c625b3809",
+            "title": "PowerFusion: A Tensor Compiler with Explicit Data Movement Description and Instruction-level Graph IR",
+            "abstract": "Deep neural networks (DNNs) are of critical use in different domains. To accelerate DNN computation, tensor compilers are proposed to generate efficient code on different domain-specific accelerators. Existing tensor compilers mainly focus on optimizing computation efficiency. However, memory access is becoming a key performance bottleneck because the computational performance of accelerators is increasing much faster than memory performance. The lack of direct description of memory access and data dependence in current tensor compilers' intermediate representation (IR) brings significant challenges to generate memory-efficient code. In this paper, we propose IntelliGen, a tensor compiler that can generate high-performance code for memory-intensive operators by considering both computation and data movement optimizations. IntelliGen represent a DNN program using GIR, which includes primitives indicating its computation, data movement, and parallel strategies. This information will be further composed as an instruction-level dataflow graph to perform holistic optimizations by searching different memory access patterns and computation operations, and generating memory-efficient code on different hardware. We evaluate IntelliGen on NVIDIA GPU, AMD GPU, and Cambricon MLU, showing speedup up to 1.97x, 2.93x, and 16.91x(1.28x, 1.23x, and 2.31x on average), respectively, compared to current most performant frameworks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124489983",
+                    "name": "Zixuan Ma"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "2222811637",
+                    "name": "Jingze Xing"
+                },
+                {
+                    "authorId": "2149970563",
+                    "name": "Liyan Zheng"
+                },
+                {
+                    "authorId": "2111574245",
+                    "name": "Chen Zhang"
+                },
+                {
+                    "authorId": "47709883",
+                    "name": "Huanqi Cao"
+                },
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1388991745",
+                    "name": "Shizhi Tang"
+                },
+                {
+                    "authorId": "2108242653",
+                    "name": "Penghan Wang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                }
+            ]
+        },
+        {
+            "paperId": "f2352a48f86fc783bb2537a1b5c97cdc4ddd852e",
+            "title": "EINNET: Optimizing Tensor Programs with Derivation-Based Transformations",
+            "abstract": "Boosting the execution performance of deep neural networks (DNNs) is critical due to their wide adoption in real-world applications. However, existing approaches to optimizing the tensor computation of DNNs only consider transformations representable by a fixed set of predefined tensor operators, resulting in a highly restricted optimization space. To address this issue, we propose E IN N ET , a derivation-based tensor program optimizer. E IN N ET optimizes tensor programs by leveraging transformations between general tensor algebra expressions and automatically creating new operators desired by transformations, enabling a significantly larger search space that includes those supported by prior works as special cases. Evaluation on seven DNNs shows that E IN N ET outperforms existing tensor program optimizers by up to 2 . 72 \u00d7 (1 . 52 \u00d7 on average) on NVIDIA A100 and up to 2 . 68 \u00d7 (1 . 55 \u00d7 on average) on NVIDIA V100. E IN N ET is publicly available at https://github.com/InfiniTensor/InfiniTensor .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149970563",
+                    "name": "Liyan Zheng"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2180542283",
+                    "name": "Muyan Hu"
+                },
+                {
+                    "authorId": "2124489983",
+                    "name": "Zixuan Ma"
+                },
+                {
+                    "authorId": "2180313650",
+                    "name": "Tuowei Wang"
+                },
+                {
+                    "authorId": "2223131831",
+                    "name": "Shuhong Huang"
+                },
+                {
+                    "authorId": "2270842291",
+                    "name": "Xupeng Miao"
+                },
+                {
+                    "authorId": "1388991745",
+                    "name": "Shizhi Tang"
+                },
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "2271058444",
+                    "name": "Zhihao Jia"
+                }
+            ]
+        },
+        {
+            "paperId": "e8d3b3944576d1c6722b832c4ebb9f85c6f549e1",
+            "title": "OLLIE: Derivation-based Tensor Program Optimizer",
+            "abstract": "Boosting the runtime performance of deep neural networks (DNNs) is critical due to their wide adoption in real-world tasks. Existing approaches to optimizing the tensor algebra expression of a DNN only consider expressions representable by a fixed set of predefined operators, missing possible optimization opportunities between general expressions. We propose OLLIE, the first derivation-based tensor program optimizer. OLLIE optimizes tensor programs by leveraging transformations between general tensor algebra expressions, enabling a significantly larger expression search space that includes those supported by prior work as special cases. OLLIE uses a hybrid derivation-based optimizer that effectively combines explorative and guided derivations to quickly discover highly optimized expressions. Evaluation on seven DNNs shows that OLLIE can outperform existing optimizers by up to 2.73$\\times$ (1.46$\\times$ on average) on an A100 GPU and up to 2.68$\\times$ (1.51$\\times$) on a V100 GPU, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149970563",
+                    "name": "Liyan Zheng"
+                },
+                {
+                    "authorId": "2130322731",
+                    "name": "Haojie Wang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2180542283",
+                    "name": "Muyan Hu"
+                },
+                {
+                    "authorId": "2124489983",
+                    "name": "Zixuan Ma"
+                },
+                {
+                    "authorId": "2180313650",
+                    "name": "Tuowei Wang"
+                },
+                {
+                    "authorId": "1388991745",
+                    "name": "Shizhi Tang"
+                },
+                {
+                    "authorId": "2130291078",
+                    "name": "Lei Xie"
+                },
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "2072782550",
+                    "name": "Zhihao Jia"
+                }
+            ]
+        },
+        {
+            "paperId": "a1f73b1513042de5b1604a5a8bd8497f29a05325",
+            "title": "Critique of \u201cPlanetary Normal Mode Computation: Parallel Algorithms, Performance, and Reproducibility\u201d by SCC Team From Tsinghua University",
+            "abstract": "In this article we present our results from the SC19 Student Cluster Competition Reproducibility Challenge. The challenge entails reproducing the article entitled \u201cComputing Planetary Interior Normal Modes with A Highly Parallel Polynomial Filtering Eigensolver\u201d presented at SC\u201918, which proposes a parallel polynomial filtered Lanczos algorithm to directly calculate the planetary normal modes of heterogeneous planets. The proposed algorithm showed excellent performance with relatively low memory consumption and high parallel efficiency. In this work, we reproduce the scaling tests in that article on a cluster using Intel Cascade Lake architecture and use the proposed algorithm to illustrate specific normal modes of Mars. We compare the results obtained on our cluster with those in the original article. We also design a new metric to better analyze the results. In addition, we use the profiling tool Intel VTune Amplifier to explain our discoveries. Our results demonstrate that the given models show great scalability, which is similar to the original article. The required normal modes of Mars are also successfully calculated and visualized.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111574245",
+                    "name": "Chen Zhang"
+                },
+                {
+                    "authorId": "2109529409",
+                    "name": "Chenggang Zhao"
+                },
+                {
+                    "authorId": "151050884",
+                    "name": "Jiaao He"
+                },
+                {
+                    "authorId": "2118529462",
+                    "name": "Shengqi Chen"
+                },
+                {
+                    "authorId": "2149970563",
+                    "name": "Liyan Zheng"
+                },
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1849503",
+                    "name": "Wentao Han"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                }
+            ]
+        },
+        {
+            "paperId": "edb7a4e369d9d73d876d66b8a4a5c6b3497fbda8",
+            "title": "Understanding and bridging the gaps in current GNN performance optimizations",
+            "abstract": "Graph Neural Network (GNN) has recently drawn a rapid increase of interest in many domains for its effectiveness in learning over graphs. Maximizing its performance is essential for many tasks, but remains preliminarily understood. In this work, we provide an in-depth examination of the state-of-the-art GNN frameworks, revealing five major gaps in the current frameworks in optimizing GNN performance, especially in handling the special complexities of GNN over traditional graph or DNN operations. Based on the insights, we put together a set of optimizations to fill the gaps. These optimizations leverage the state-of-the-art GPU optimization techniques and tailor them to the special properties of GNN. Experimental results show that these optimizations achieve 1.37\u00d7--15.5\u00d7 performance improvement over the state-of-the-art frameworks on various GNN models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2115547171",
+                    "name": "Zhen Zheng"
+                },
+                {
+                    "authorId": "1714079",
+                    "name": "Youngmin Yi"
+                },
+                {
+                    "authorId": "37914192",
+                    "name": "Xipeng Shen"
+                }
+            ]
+        },
+        {
+            "paperId": "0166a1a5679ba9118386a733b6e0d2e916214c15",
+            "title": "A Comprehensive Evaluation of RDMA-enabled Concurrency Control Protocols",
+            "abstract": "On-line transaction processing (OLTP) applications require efficient distributed transaction execution. When a transaction accesses multiple records in remote machines, network performance is a crucial factor affecting transaction latency and throughput. Due to its high bandwidth and very low latency, RDMA (Remote Direct Memory Access) has achieved much higher performance for distributed transactions than traditional TCP-based systems. RDMA provides primitives for both two-sided and one-sided communication. Although recent works have intensively studied the benefits of RDMA in distributed transaction systems, they either focus on primitive-level comparisons of two communication models (one-sided vs. two-sided) or only study one concurrency control protocol. A comprehensive understanding of the implication of RDMA for various concurrency control protocols is an open problem. \nIn this paper, we build RCC, the first unified and comprehensive RDMA-enabled distributed transaction processing framework supporting six concurrency control protocols using either two-sided or one-sided primitives. We intensively optimize the performance of each protocol without bias, using known techniques such as co-routines, outstanding requests, and doorbell batching. Based on RCC, we conduct the first and most comprehensive (to the best of our knowledge) study of the six representative distributed concurrency control protocols on two clusters with different RDMA network capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144448298",
+                    "name": "Chao Wang"
+                },
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "2288203548",
+                    "name": "Xuehai Qian"
+                }
+            ]
+        },
+        {
+            "paperId": "90cc9a659c7b476993e9ebed6fb9e2b9cf4ca05e",
+            "title": "Comprehensive Framework of RDMA-enabled Concurrency Control Protocols",
+            "abstract": "In this paper, we develop RCC, the first unified and comprehensive RDMA-enabled distributed transaction processing framework supporting six serializable concurrency control protocols: not only the classical protocols NOWAIT, WAITDIE, and OCC, but also more advanced MVCC and SUNDIAL, and even CALVIN, the deterministic concurrency control protocol. Our goal is to unbiasedly compare the protocols in a common execution environment with the concurrency control protocol being the only changeable component. We focus on the correct and efficient implementation using key techniques, such as co-routines, outstanding requests, and doorbell batching, with two-sided and one-sided communication primitives. Based on RCC, we get the deep insights that cannot be obtained by any existing systems. Most importantly, we obtain the execution stage latency breakdowns with one-sided and two-sided primitive for each protocol, which are analyzed to develop more efficient hybrid implementations. Our results show that three hybrid designs are indeed better than both one-sided and two-sided implementations by up to 17.8%. We believe that RCC is a significant advance over the state-of-the-art; it can both provide performance insights and be used as the common infrastructure for fast prototyping new implementations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144448298",
+                    "name": "Chao Wang"
+                },
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "2288203548",
+                    "name": "Xuehai Qian"
+                }
+            ]
+        }
+    ]
+}

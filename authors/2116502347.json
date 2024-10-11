@@ -1,0 +1,289 @@
+{
+    "authorId": "2116502347",
+    "papers": [
+        {
+            "paperId": "5b671f29e7830283d983a7f18f745b12abd490f8",
+            "title": "DSP: Efficient GNN Training with Multiple GPUs",
+            "abstract": "Jointly utilizing multiple GPUs to train graph neural networks (GNNs) is crucial for handling large graphs and achieving high efficiency. However, we find that existing systems suffer from high communication costs and low GPU utilization due to improper data layout and training procedures. Thus, we propose a system dubbed Distributed Sampling and Pipelining (DSP) for multi-GPU GNN training. DSP adopts a tailored data layout to utilize the fast NVLink connections among the GPUs, which stores the graph topology and popular node features in GPU memory. For efficient graph sampling with multiple GPUs, we introduce a collective sampling primitive (CSP), which pushes the sampling tasks to data to reduce communication. We also design a producer-consumer-based pipeline, which allows tasks from different mini-batches to run congruently to improve GPU utilization. We compare DSP with state-of-the-art GNN training frameworks, and the results show that DSP consistently outperforms the baselines under different datasets, GNN models and GPU counts. The speedup of DSP can be up to 26x and is over 2x in most cases.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2153619495",
+                    "name": "Chenguang Zheng"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "89d8efa27d65012ce1ba4e89489bfad5e5e6b454",
+            "title": "Graph Feature Management: Impact, Challenges and Opportunities",
+            "abstract": "Graph features are crucial to many applications such as recommender systems and risk management systems. The process to obtain useful graph features involves ingesting data from various upstream data sources, defining the desired graph features for the required applications, constructing a feature engineering workflow to compute the features, and storing and managing the resulting features for downstream tasks (e.g., graph AI and graph BI) and for future reuse. To the majority of users, especially SMEs and non-tech companies, this process poses daunting challenges as it requires users to not only learn various methods (e.g., graph analytical algorithms, non-GNN graph embeddings, GNNs) to define graph features and program their computation, but also learn many infrastructures (e.g., upstream databases, downstream ML systems, graph analytics systems) to compute, manage and use the graph features in production. These challenges have significantly restricted the wider applications of graph technologies such as graph AI and graph BI currently in industry. The current solution provided by major graph database vendors (e.g., Amazon Neptune, Neo4j, Tiger-Graph) is to connect various upstream and downstream systems to their own graph database, which is used to compute and manage graph features. However, such a solution ties users to a specific graph infrastructure that may not be the preferred infrastructure and may even require them to re-develop their applications on a new infrastructure. In addition, a specific graph database or infrastructure often does not have the best performance for all workloads and certainly does not support the computation of all types of graph features. As a result, the existing solution limits users' flexibility in choosing their own infrastructure and their productivity in developing their applications. In Part 1 of this talk, I will introduce various types of graph features and their applications. Then I will present some trends in using graph databases for graph feature computation and management, analyze the limitations of the existing methods, and identify the requirements of a graph feature management solution that is practical and highly usable to average users. In Part 2 of this talk, I will introduce our ongoing project that aims at providing a highly usable graph feature platform. Our solution decouples graph feature logic specification and management (i.e., how features are defined, coded and managed) from the generation and execution of the workflow for feature computation (i.e., execution plan generation and the actual execution), so that users can flexibly select different infrastructures suitable for the computation of specific types of graph features. It also manages the upstream, downstream and feature engineering and serving infrastructures, so as to free users from tedious tasks associated with deploying infrastructures and connecting them in a feature engineering dataflow. Thus, users can focus on creating and delivering innovative feature workflow logic. Finally, I will also highlight some possible future directions about graph feature management.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "6d7fa6739770b238af20eb99e474c3de23f01d6f",
+            "title": "RACE: One-sided RDMA-conscious Extendible Hashing",
+            "abstract": "Memory disaggregation is a promising technique in datacenters with the benefit of improving resource utilization, failure isolation, and elasticity. Hashing indexes have been widely used to provide fast lookup services in distributed memory systems. However, traditional hashing indexes become inefficient for disaggregated memory, since the computing power in the memory pool is too weak to execute complex index requests. To provide efficient indexing services in disaggregated memory scenarios, this article proposes RACE hashing, a one-sided RDMA-Conscious Extendible hashing index with lock-free remote concurrency control and efficient remote resizing. RACE hashing enables all index operations to be efficiently executed by using only one-sided RDMA verbs without involving any compute resource in the memory pool. To support remote concurrent access with high performance, RACE hashing leverages a lock-free remote concurrency control scheme to enable different clients to concurrently operate the same hashing index in the memory pool in a lock-free manner. To resize the hash table with low overheads, RACE hashing leverages an extendible remote resizing scheme to reduce extra RDMA accesses caused by extendible resizing and allow concurrent request execution during resizing. Extensive experimental results demonstrate that RACE hashing outperforms state-of-the-art distributed in-memory hashing indexes by 1.4\u201313.7\u00d7 in YCSB hybrid workloads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3020732",
+                    "name": "Pengfei Zuo"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "153552136",
+                    "name": "Jiazhao Sun"
+                },
+                {
+                    "authorId": "2145494928",
+                    "name": "Liu Yang"
+                },
+                {
+                    "authorId": "2193010",
+                    "name": "Shuangwu Zhang"
+                },
+                {
+                    "authorId": "1787338",
+                    "name": "Yu Hua"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2164311572",
+                    "name": "Rongfeng He"
+                },
+                {
+                    "authorId": "2164321263",
+                    "name": "Huabing Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
+            "title": "G-Tran: A High Performance Distributed Graph Database with a Decentralized Architecture",
+            "abstract": "Graph transaction processing poses unique challenges such as random data access due to the irregularity of graph structures, low throughput and high abort rate due to the relatively large read/write sets in graph transactions. To address these challenges, we present G-Tran, a remote direct memory access (RDMA)-enabled distributed in-memory graph database with serializable and snapshot isolation support. First, we propose a graph-native data store to achieve good data locality and fast data access for transactional updates and queries. Second, G-Tran adopts a fully decentralized architecture that leverages RDMA to process distributed transactions with the massively parallel processing (MPP) model, which can achieve high performance by utilizing all computing resources. In addition, we propose a new multi-version optimistic concurrency control (MV-OCC) protocol with two optimizations to address the issue of large read/write sets in graph transactions. Extensive experiments show that G-Tran achieves competitive performance compared with other popular graph databases on benchmark workloads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108844303",
+                    "name": "Hongzhi Chen"
+                },
+                {
+                    "authorId": "2145413970",
+                    "name": "Changji Li"
+                },
+                {
+                    "authorId": "72117196",
+                    "name": "Che Zheng"
+                },
+                {
+                    "authorId": "2150609388",
+                    "name": "Chenghuan Huang"
+                },
+                {
+                    "authorId": "2115219530",
+                    "name": "Juncheng Fang"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2151811827",
+                    "name": "Jian Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
+            "title": "ByteGraph: A High-Performance Distributed Graph Database in ByteDance",
+            "abstract": "Most products at ByteDance, e.g., TikTok, Douyin, and Toutiao, naturally generate massive amounts of graph data. To efficiently store, query and update massive graph data is challenging for the broad range of products at ByteDance with various performance requirements. We categorize graph workloads at ByteDance into three types: online analytical, transaction, and serving processing, where each workload has its own characteristics. Existing graph databases have different performance bottlenecks in handling these workloads and none can efficiently handle the scale of graphs at ByteDance. We developed ByteGraph to process these graph workloads with high throughput, low latency and high scalability. There are several key designs in ByteGraph that make it efficient for processing our workloads, including edge-trees to store adjacency lists for high parallelism and low memory usage, adaptive optimizations on thread pools and indexes, and geographic replications to achieve fault tolerance and availability. ByteGraph has been in production use for several years and its performance has shown to be robust for processing a wide range of graph workloads at ByteDance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145413970",
+                    "name": "Changji Li"
+                },
+                {
+                    "authorId": "2108844303",
+                    "name": "Hongzhi Chen"
+                },
+                {
+                    "authorId": "2167037428",
+                    "name": "Shuai Zhang"
+                },
+                {
+                    "authorId": "1490915504",
+                    "name": "Ying-Xin Hu"
+                },
+                {
+                    "authorId": "2145763285",
+                    "name": "Chao Chen"
+                },
+                {
+                    "authorId": "2109512262",
+                    "name": "Zhenjie Zhang"
+                },
+                {
+                    "authorId": "123816348",
+                    "name": "Meng"
+                },
+                {
+                    "authorId": "2088215217",
+                    "name": "Li"
+                },
+                {
+                    "authorId": "2193954145",
+                    "name": "Xiangchen Li"
+                },
+                {
+                    "authorId": "32058742",
+                    "name": "Dongqing Han"
+                },
+                {
+                    "authorId": "2116124684",
+                    "name": "Xiaohui Chen"
+                },
+                {
+                    "authorId": "2144671306",
+                    "name": "Xudong Wang"
+                },
+                {
+                    "authorId": "2424392",
+                    "name": "Hui-dong Zhu"
+                },
+                {
+                    "authorId": "2182246691",
+                    "name": "Xu-Dong Fu"
+                },
+                {
+                    "authorId": "2112662828",
+                    "name": "Ting Wu"
+                },
+                {
+                    "authorId": "2184079980",
+                    "name": "Hongfei Tan"
+                },
+                {
+                    "authorId": "113398129",
+                    "name": "Hengtian Ding"
+                },
+                {
+                    "authorId": "2695617",
+                    "name": "Meng-Ti Liu"
+                },
+                {
+                    "authorId": "2174235132",
+                    "name": "Kang Wang"
+                },
+                {
+                    "authorId": "2112409349",
+                    "name": "Ting Ye"
+                },
+                {
+                    "authorId": "46255707",
+                    "name": "Lei Li"
+                },
+                {
+                    "authorId": "2157513188",
+                    "name": "Xin Li"
+                },
+                {
+                    "authorId": "2153604994",
+                    "name": "Yu Wang"
+                },
+                {
+                    "authorId": "2113918898",
+                    "name": "Chen Zheng"
+                },
+                {
+                    "authorId": "50841357",
+                    "name": "Han Yang"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "e10bec036d6f8917dc787f501ece2c88920bd9e5",
+            "title": "End-to-End Java Security Performance Enhancements for Oracle SPARC Servers",
+            "abstract": "In this paper we investigate the performance of cryptographic operations, when used in Java applications. We demonstrate the advantage of using built-in hardware accelerator for cryptographic operations on SPARC servers. In particular, we demonstrate the advantage of hardware cryptographic instructions invoked via AES and SHA intrinsics, implemented in the Java Virtual Machine (JVM), over the more traditional Java Native Interface (JNI) calls. For the purpose of our study, we modified the SPECweb2005 benchmark by adding modern banking requirements, and created a new workload which we call the End-to-End Java Security (EEJS) workload. Using the workload, we compare different Java Cryptographic Service Providers (CSPs) and arrive at the conclusion that hardware cryptography has significant performance advantage for Java applications. With the EEJS workload, we also identify several enhancements applicable to the Java Secure Socket Extension (JSSE).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153518091",
+                    "name": "Luyang Wang"
+                },
+                {
+                    "authorId": "48444486",
+                    "name": "P. Bhattacharya"
+                },
+                {
+                    "authorId": "2118360529",
+                    "name": "Yao-Min Chen"
+                },
+                {
+                    "authorId": "2114034544",
+                    "name": "Shrinivas Joshi"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                }
+            ]
+        }
+    ]
+}

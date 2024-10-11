@@ -1,0 +1,273 @@
+{
+    "authorId": "2822290",
+    "papers": [
+        {
+            "paperId": "44e77bdc6dd8c2e039daf1d6b537f304f75b362d",
+            "title": "All Roads Lead to Rome? Exploring Representational Similarities Between Latent Spaces of Generative Image Models",
+            "abstract": "Do different generative image models secretly learn similar underlying representations? We investigate this by measuring the latent space similarity of four different models: VAEs, GANs, Normalizing Flows (NFs), and Diffusion Models (DMs). Our methodology involves training linear maps between frozen latent spaces to\"stitch\"arbitrary pairs of encoders and decoders and measuring output-based and probe-based metrics on the resulting\"stitched'' models. Our main findings are that linear maps between latent spaces of performant models preserve most visual information even when latent sizes differ; for CelebA models, gender is the most similarly represented probe-able attribute. Finally we show on an NF that latent space representations converge early in training.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2224843950",
+                    "name": "Charumathi Badrinath"
+                },
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2041293215",
+                    "name": "Alexander X. Oesterling"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "2310699647",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "8362c45885738f5246e163a9763e0270d229ca6b",
+            "title": "Interpreting CLIP with Sparse Linear Concept Embeddings (SpLiCE)",
+            "abstract": "CLIP embeddings have demonstrated remarkable performance across a wide range of computer vision tasks. However, these high-dimensional, dense vector representations are not easily interpretable, restricting their usefulness in downstream applications that require transparency. In this work, we empirically show that CLIP's latent space is highly structured, and consequently that CLIP representations can be decomposed into their underlying semantic components. We leverage this understanding to propose a novel method, Sparse Linear Concept Embeddings (SpLiCE), for transforming CLIP representations into sparse linear combinations of human-interpretable concepts. Distinct from previous work, SpLiCE does not require concept labels and can be applied post hoc. Through extensive experimentation with multiple real-world datasets, we validate that the representations output by SpLiCE can explain and even replace traditional dense CLIP representations, maintaining equivalent downstream performance while significantly improving their interpretability. We also demonstrate several use cases of SpLiCE representations including detecting spurious correlations, model editing, and quantifying semantic shifts in datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2041293215",
+                    "name": "Alexander X. Oesterling"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "144717568",
+                    "name": "F. Calmon"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "1ab91d6ac7afc1a0121487a9089fa70edc1634d4",
+            "title": "Certifying LLM Safety against Adversarial Prompting",
+            "abstract": "Large language models (LLMs) are vulnerable to adversarial attacks that add malicious tokens to an input prompt to bypass the safety guardrails of an LLM and cause it to produce harmful content. In this work, we introduce erase-and-check, the first framework for defending against adversarial prompts with certifiable safety guarantees. Given a prompt, our procedure erases tokens individually and inspects the resulting subsequences using a safety filter. Our safety certificate guarantees that harmful prompts are not mislabeled as safe due to an adversarial attack up to a certain size. We implement the safety filter in two ways, using Llama 2 and DistilBERT, and compare the performance of erase-and-check for the two cases. We defend against three attack modes: i) adversarial suffix, where an adversarial sequence is appended at the end of a harmful prompt; ii) adversarial insertion, where the adversarial sequence is inserted anywhere in the middle of the prompt; and iii) adversarial infusion, where adversarial tokens are inserted at arbitrary positions in the prompt, not necessarily as a contiguous block. Our experimental results demonstrate that this procedure can obtain strong certified safety guarantees on harmful prompts while maintaining good empirical performance on safe prompts. Additionally, we propose three efficient empirical defenses: i) RandEC, a randomized subsampling version of erase-and-check; ii) GreedyEC, which greedily erases tokens that maximize the softmax score of the harmful class; and iii) GradEC, which uses gradient information to optimize tokens to erase. We demonstrate their effectiveness against adversarial prompts generated by the Greedy Coordinate Gradient (GCG) attack algorithm. The code for our experiments is available at https://github.com/aounon/certified-llm-safety.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31910622",
+                    "name": "Aounon Kumar"
+                },
+                {
+                    "authorId": "40228633",
+                    "name": "Chirag Agarwal"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "34389431",
+                    "name": "S. Feizi"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "5c46a0bfb23a1df660ba41cb1de387ced85bcf0a",
+            "title": "Which Models have Perceptually-Aligned Gradients? An Explanation via Off-Manifold Robustness",
+            "abstract": "One of the remarkable properties of robust computer vision models is that their input-gradients are often aligned with human perception, referred to in the literature as perceptually-aligned gradients (PAGs). Despite only being trained for classification, PAGs cause robust models to have rudimentary generative capabilities, including image generation, denoising, and in-painting. However, the underlying mechanisms behind these phenomena remain unknown. In this work, we provide a first explanation of PAGs via \\emph{off-manifold robustness}, which states that models must be more robust off- the data manifold than they are on-manifold. We first demonstrate theoretically that off-manifold robustness leads input gradients to lie approximately on the data manifold, explaining their perceptual alignment. We then show that Bayes optimal models satisfy off-manifold robustness, and confirm the same empirically for robust models trained via gradient norm regularization, randomized smoothing, and adversarial training with projected gradient descent. Quantifying the perceptual alignment of model gradients via their similarity with the gradients of generative models, we show that off-manifold robustness correlates well with perceptual alignment. Finally, based on the levels of on- and off-manifold robustness, we identify three different regimes of robustness that affect both perceptual alignment and model accuracy: weak robustness, bayes-aligned robustness, and excessive robustness. Code is available at \\url{https://github.com/tml-tuebingen/pags}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1802528351",
+                    "name": "Sebastian Bordt"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "7e605b9d32d9a248810b7802ffe55ce1ea273ba0",
+            "title": "Discriminative Feature Attributions: Bridging Post Hoc Explainability and Inherent Interpretability",
+            "abstract": "With the increased deployment of machine learning models in various real-world applications, researchers and practitioners alike have emphasized the need for explanations of model behaviour. To this end, two broad strategies have been outlined in prior literature to explain models. Post hoc explanation methods explain the behaviour of complex black-box models by identifying features critical to model predictions; however, prior work has shown that these explanations may not be faithful, in that they incorrectly attribute high importance to features that are unimportant or non-discriminative for the underlying task. Inherently interpretable models, on the other hand, circumvent these issues by explicitly encoding explanations into model architecture, meaning their explanations are naturally faithful, but they often exhibit poor predictive performance due to their limited expressive power. In this work, we identify a key reason for the lack of faithfulness of feature attributions: the lack of robustness of the underlying black-box models, especially to the erasure of unimportant distractor features in the input. To address this issue, we propose Distractor Erasure Tuning (DiET), a method that adapts black-box models to be robust to distractor erasure, thus providing discriminative and faithful attributions. This strategy naturally combines the ease of use of post hoc explanations with the faithfulness of inherently interpretable models. We perform extensive experiments on semi-synthetic and real-world datasets and show that DiET produces models that (1) closely approximate the original black-box models they are intended to explain, and (2) yield explanations that match approximate ground truths available by construction. Our code is made public at https://github.com/AI4LIFE-GROUP/DiET.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "a734f0f57f205aa86b83f4d0d3660f83b669da83",
+            "title": "Characterizing Data Point Vulnerability via Average-Case Robustness",
+            "abstract": "Studying the robustness of machine learning models is important to ensure consistent model behaviour across real-world settings. To this end, adversarial robustness is a standard framework, which views robustness of predictions through a binary lens: either a worst-case adversarial misclassification exists in the local region around an input, or it does not. However, this binary perspective does not account for the degrees of vulnerability, as data points with a larger number of misclassified examples in their neighborhoods are more vulnerable. In this work, we consider a complementary framework for robustness, called average-case robustness, which measures the fraction of points in a local region that provides consistent predictions. However, computing this quantity is hard, as standard Monte Carlo approaches are inefficient especially for high-dimensional inputs. In this work, we propose the first analytical estimators for average-case robustness for multi-class classifiers. We show empirically that our estimators are accurate and efficient for standard deep learning models and demonstrate their usefulness for identifying vulnerable data points, as well as quantifying robustness bias of models. Overall, our tools provide a complementary view to robustness, improving our ability to characterize model behaviour.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154279258",
+                    "name": "Tessa Han"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "c271f5d1286bbdc0efd8ed1bc6e9bde028eed725",
+            "title": "Verifiable Feature Attributions: A Bridge between Post Hoc Explainability and Inherent Interpretability",
+            "abstract": "As machine learning models are increasingly employed in medicine, researchers, healthcare organizations, providers, and patients have all emphasized the need for greater transparency. To provide explanations of models in high-stakes applications, two broad strategies have been outlined in prior literature. Post hoc explanation methods explain the behaviour of complex black-box models by highlighting image regions critical to model predictions; however, prior work has shown that these explanations may not be faithful, and even more concerning is our inability to verify them. Specifically, it is nontrivial to evaluate if a given feature attribution is correct with respect to the underlying model. Inherently interpretable models, on the other hand, circumvent this by explicitly encoding explanations into model architecture, making their explanations naturally faithful and verifiable, but they often exhibit poor predictive performance due to their limited expressive power. In this work, we aim to bridge the gap between the aforementioned strategies by proposing Verifiabil-ity Tuning (VerT), a method that transforms black-box models into models with verifiable feature attributions. We begin by introducing a formal theoretical framework to understand verifiability and show that attributions produced by standard models cannot be verified. We then leverage this framework to propose a method for building verifiable models and feature attributions from black-box models. Finally, we perform extensive experiments on semi-synthetic and real-world datasets, and show that VerT produces models (1) yield explanations that are correct and verifiable and (2) are faithful to the original black-box models they are meant to explain.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "c5bc3b4acead2ace82bfb6019e838c6726453b08",
+            "title": "Word-Level Explanations for Analyzing Bias in Text-to-Image Models",
+            "abstract": "Text-to-image models take a sentence (i.e., prompt) and generate images associated with this input prompt. These models have created award wining-art, videos, and even synthetic datasets. However, text-to-image (T2I) models can generate images that underrepresent minorities based on race and sex. This paper investigates which word in the input prompt is responsible for bias in generated images. We introduce a method for computing scores for each word in the prompt; these scores represent its influence on biases in the model's output. Our method follows the principle of \\emph{explaining by removing}, leveraging masked language models to calculate the influence scores. We perform experiments on Stable Diffusion to demonstrate that our method identifies the replication of societal stereotypes in generated images.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2219860360",
+                    "name": "Alexander Lin"
+                },
+                {
+                    "authorId": "153835786",
+                    "name": "Lucas Monteiro Paes"
+                },
+                {
+                    "authorId": "2219860381",
+                    "name": "Sree Harsha Tanneru"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "e539a02db0862dc11b202eb9e7f98c783653b59c",
+            "title": "On Minimizing the Impact of Dataset Shifts on Actionable Explanations",
+            "abstract": "The Right to Explanation is an important regulatory principle that allows individuals to request actionable explanations for algorithmic decisions. However, several technical challenges arise when providing such actionable explanations in practice. For instance, models are periodically retrained to handle dataset shifts. This process may invalidate some of the previously prescribed explanations, thus rendering them unactionable. But, it is unclear if and when such invalidations occur, and what factors determine explanation stability i.e., if an explanation remains unchanged amidst model retraining due to dataset shifts. In this paper, we address the aforementioned gaps and provide one of the first theoretical and empirical characterizations of the factors influencing explanation stability. To this end, we conduct rigorous theoretical analysis to demonstrate that model curvature, weight decay parameters while training, and the magnitude of the dataset shift are key factors that determine the extent of explanation (in)stability. Extensive experimentation with real-world datasets not only validates our theoretical results, but also demonstrates that the aforementioned factors dramatically impact the stability of explanations produced by various state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146994380",
+                    "name": "Anna P. Meyer"
+                },
+                {
+                    "authorId": "2081992675",
+                    "name": "D. Ley"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "f0a8521a86e0c41caa4d80c64459fbe9d15c1ec7",
+            "title": "Consistent Explanations in the Face of Model Indeterminacy via Ensembling",
+            "abstract": "This work addresses the challenge of providing consistent explanations for predictive models in the presence of model indeterminacy, which arises due to the existence of multiple (nearly) equally well-performing models for a given dataset and task. Despite their similar performance, such models often exhibit inconsistent or even contradictory explanations for their predictions, posing challenges to end users who rely on these models to make critical decisions. Recognizing this issue, we introduce ensemble methods as an approach to enhance the consistency of the explanations provided in these scenarios. Leveraging insights from recent work on neural network loss landscapes and mode connectivity, we devise ensemble strategies to efficiently explore the underspecification set -- the set of models with performance variations resulting solely from changes in the random seed during training. Experiments on five benchmark financial datasets reveal that ensembling can yield significant improvements when it comes to explanation similarity, and demonstrate the potential of existing ensemble methods to explore the underspecification set efficiently. Our findings highlight the importance of considering model indeterminacy when interpreting explanations and showcase the effectiveness of ensembles in enhancing the reliability of explanations in machine learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2081992675",
+                    "name": "D. Ley"
+                },
+                {
+                    "authorId": "2144484107",
+                    "name": "Leonard Tang"
+                },
+                {
+                    "authorId": "2219923616",
+                    "name": "Matthew Nazari"
+                },
+                {
+                    "authorId": "2140049314",
+                    "name": "Hongjin Lin"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        }
+    ]
+}

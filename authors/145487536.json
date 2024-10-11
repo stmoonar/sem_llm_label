@@ -1,0 +1,330 @@
+{
+    "authorId": "145487536",
+    "papers": [
+        {
+            "paperId": "9d0967140af698db0ad3c7ee30da9bd8614b6a35",
+            "title": "Towards a Unified Understanding of Uncertainty Quantification in Traffic Flow Forecasting",
+            "abstract": "Uncertainty is an essential consideration for time series forecasting tasks. In this work, we focus on quantifying the uncertainty of traffic forecasting from a unified perspective. We develop a novel traffic forecasting framework, namely Deep Spatio-Temporal Uncertainty Quantification (DeepSTUQ), which can estimate both aleatoric and epistemic uncertainty. Specifically, we first leverage a spatio-temporal model to model the complex spatio-temporal correlations of traffic data. Subsequently, two independent sub-neural networks maximizing the heterogeneous log-likelihood are developed to estimate aleatoric uncertainty. To estimate epistemic uncertainty, we combine the merits of variational inference and deep ensembling by integrating the Monte Carlo dropout and the Adaptive Weight Averaging re-training methods, respectively. Furthermore, to relax the Gaussianity assumption, mitigate overfitting, and improve horizon-wise uncertainty quantification performance, we define a new calibration method called Multi-horizon Conformal Calibration (MHCC). Finally, we provide a theoretical analysis of the proposed unified approach based on the PAC-Bayes theory. Extensive experiments are conducted on four public datasets, and the empirical results suggest that the proposed method outperforms state-of-the-art methods in terms of both point prediction and uncertainty quantification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1476823980",
+                    "name": "Weizhu Qian"
+                },
+                {
+                    "authorId": "76994402",
+                    "name": "Yan Zhao"
+                },
+                {
+                    "authorId": "2679444",
+                    "name": "Dalin Zhang"
+                },
+                {
+                    "authorId": "2238546037",
+                    "name": "Bowei Chen"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2237328591",
+                    "name": "Xiaofang Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "100ea10a293e7fb92ed3862b2379bd1062c4ebec",
+            "title": "Asymmetric Color Transfer with Consistent Modality Learning",
+            "abstract": "The mono-color dual-lens system widely exists in the smartphone that captures asymmetric stereo image pairs, including high-resolution (HR) monochrome images and low-resolution (LR) color images. Asymmetric color transfer aims to reconstruct an HR color image by transferring the color information of the LR color image to the HR monochrome image. However, the inconsistency of spectral resolution and spatial resolution between stereo image pairs poses a challenge for establishing reliable stereo correspondence for precise color transfer. Previous works have not adequately addressed this issue. In this paper, we propose a dual-modality consistency learning framework to assist the establishment of reliable stereo correspondence. According to the complementarity of color and frequency information between stereo images, a dual-branch Stereo Information Complementary Module (SICM) is devised to perform the consistent modality learning in feature domain. Specifically, we meticulously design the stereo frequency and color modulation mechanism equipped in the SICM for capturing the information complementarity between dual-modal features. Furthermore, a parallax attention distillation is proposed to drive consistent modality learning for better stereo matching. Extensive experiments demonstrate that our model outperforms the state-of-the-art methods in the Flickr1024 dataset and has superior generalization ability over the KITTI dataset and real-world scenarios. The code is available at https://github.com/keviner1/SICNet.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2110284557",
+                    "name": "Jie Huang"
+                },
+                {
+                    "authorId": "2121684731",
+                    "name": "Man Zhou"
+                },
+                {
+                    "authorId": "2152335165",
+                    "name": "Fengmei Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "47ff231bb97a8ff9bdc7a79cb7f98a2075350d0e",
+            "title": "DiffKendall: A Novel Approach for Few-Shot Learning with Differentiable Kendall's Rank Correlation",
+            "abstract": "Few-shot learning aims to adapt models trained on the base dataset to novel tasks where the categories were not seen by the model before. This often leads to a relatively uniform distribution of feature values across channels on novel classes, posing challenges in determining channel importance for novel tasks. Standard few-shot learning methods employ geometric similarity metrics such as cosine similarity and negative Euclidean distance to gauge the semantic relatedness between two features. However, features with high geometric similarities may carry distinct semantics, especially in the context of few-shot learning. In this paper, we demonstrate that the importance ranking of feature channels is a more reliable indicator for few-shot learning than geometric similarity metrics. We observe that replacing the geometric similarity metric with Kendall's rank correlation only during inference is able to improve the performance of few-shot learning across a wide range of methods and datasets with different domains. Furthermore, we propose a carefully designed differentiable loss for meta-training to address the non-differentiability issue of Kendall's rank correlation. By replacing geometric similarity with differentiable Kendall's rank correlation, our method can integrate with numerous existing few-shot approaches and is ready for integrating with future state-of-the-art methods that rely on geometric similarity metrics. Extensive experiments validate the efficacy of the rank-correlation-based approach, showcasing a significant improvement in few-shot learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2973831",
+                    "name": "Huishuai Zhang"
+                },
+                {
+                    "authorId": "8007867",
+                    "name": "Weiran Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "4c27a3dfb43596cacbdba2e6806cd15ff5e0313a",
+            "title": "Graph Condensation for Inductive Node Representation Learning",
+            "abstract": "Graph neural networks (GNNs) encounter significant computational challenges when handling large-scale graphs, which severely restricts their efficacy across diverse applications. To address this limitation, graph condensation has emerged as a promising technique, which constructs a small synthetic graph for efficiently training GNNs while retaining performance. However, due to the topology structure among nodes, graph condensation is limited to condensing only the observed training nodes and their corresponding structure, thus lacking the ability to effectively handle the unseen data. Consequently, the original large graph is still required in the inference stage to perform message passing to inductive nodes, resulting in substantial computational demands. To overcome this issue, we propose mapping-aware graph condensation (MCond), explicitly learning the one-to-many node mapping from original nodes to synthetic nodes to seamlessly integrate new nodes into the synthetic graph for inductive representation learning. This enables direct information propagation on the synthetic graph, which is much more efficient than on the original large graph. Specifically, MCond employs an alternating optimization scheme with innovative loss terms from transductive and inductive perspectives, facilitating the mutual promotion between graph condensation and node mapping learning. Extensive experiments demonstrate the efficacy of our approach in inductive inference. On the Reddit dataset, MCond achieves up to 121.5\u00d7 inference speedup and 55.9\u00d7 reduction in storage requirements compared with counterparts based on the original graph.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2192083394",
+                    "name": "Xin Gao"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2183027408",
+                    "name": "Yilong Zang"
+                },
+                {
+                    "authorId": "2136776515",
+                    "name": "Wentao Zhang"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "616f11bcb826c7140dc2be7aecbfa647ade4338e",
+            "title": "To Predict or to Reject: Causal Effect Estimation with Uncertainty on Networked Data",
+            "abstract": "Due to the imbalanced nature of networked observational data, the causal effect predictions for some individuals can severely violate the positivity/overlap assumption, rendering unreliable estimations. Nevertheless, this potential risk of individual-level treatment effect estimation on networked data has been largely under-explored. To create a more trustworthy causal effect estimator, we propose the uncertainty-aware graph deep kernel learning (GraphDKL) framework with Lipschitz constraint to model the prediction uncertainty with Gaussian process and identify unreliable estimations. To the best of our knowledge, GraphDKL is the first framework to tackle the violation of positivity assumption when performing causal effect estimation with graphs. With extensive experiments, we demonstrate the superiority of our proposed method in uncertainty-aware causal effect estimation on networked data. The code of GraphDKL is available at https://github.com/uqhwen2/GraphDKL.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2220537781",
+                    "name": "Hechuan Wen"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2242728642",
+                    "name": "Li Kheng Chai"
+                },
+                {
+                    "authorId": "2092368",
+                    "name": "S. Sadiq"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "6710e66648fe6846397ccecf72478effb44d7bc1",
+            "title": "ESC: Exploration with Soft Commonsense Constraints for Zero-shot Object Navigation",
+            "abstract": "The ability to accurately locate and navigate to a specific object is a crucial capability for embodied agents that operate in the real world and interact with objects to complete tasks. Such object navigation tasks usually require large-scale training in visual environments with labeled objects, which generalizes poorly to novel objects in unknown environments. In this work, we present a novel zero-shot object navigation method, Exploration with Soft Commonsense constraints (ESC), that transfers commonsense knowledge in pre-trained models to open-world object navigation without any navigation experience nor any other training on the visual environments. First, ESC leverages a pre-trained vision and language model for open-world prompt-based grounding and a pre-trained commonsense language model for room and object reasoning. Then ESC converts commonsense knowledge into navigation actions by modeling it as soft logic predicates for efficient exploration. Extensive experiments on MP3D, HM3D, and RoboTHOR benchmarks show that our ESC method improves significantly over baselines, and achieves new state-of-the-art results for zero-shot object navigation (e.g., 288% relative Success Rate improvement than CoW on MP3D).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9368148",
+                    "name": "KAI-QING Zhou"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2111682654",
+                    "name": "Connor Pryor"
+                },
+                {
+                    "authorId": "1785381533",
+                    "name": "Yilin Shen"
+                },
+                {
+                    "authorId": "2196885587",
+                    "name": "Hongxia Jin"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                },
+                {
+                    "authorId": "47120131",
+                    "name": "X. Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "8b6a7caa792665e7b383a44188286187270cab20",
+            "title": "Graph Contrastive Learning with Generative Adversarial Network",
+            "abstract": "Graph Neural Networks (GNNs) have demonstrated promising results on exploiting node representations for many downstream tasks through supervised end-to-end training. To deal with the widespread label scarcity issue in real-world applications, Graph Contrastive Learning (GCL) is leveraged to train GNNs with limited or even no labels by maximizing the mutual information between nodes in its augmented views generated from the original graph. However, the distribution of graphs remains unconsidered in view generation, resulting in the ignorance of unseen edges in most existing literature, which is empirically shown to be able to improve GCL's performance in our experiments. To this end, we propose to incorporate graph generative adversarial networks (GANs) to learn the distribution of views for GCL, in order to i) automatically capture the characteristic of graphs for augmentations, and ii) jointly train the graph GAN model and the GCL model. Specifically, we present GACN, a novel Generative Adversarial Contrastive learning Network for graph representation learning. GACN develops a view generator and a view discriminator to generate augmented views automatically in an adversarial style. Then, GACN leverages these views to train a GNN encoder with two carefully designed self-supervised learning losses, including the graph contrastive loss and the Bayesian personalized ranking Loss. Furthermore, we design an optimization framework to train all GACN modules jointly. Extensive experiments on seven real-world datasets show that GACN is able to generate high-quality augmented views for GCL and is superior to twelve state-of-the-art baseline methods. Noticeably, our proposed GACN surprisingly discovers that the generated views in data augmentation finally conform to the well-known preferential attachment rule in online networks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2151102586",
+                    "name": "Cheng Wu"
+                },
+                {
+                    "authorId": "2135743383",
+                    "name": "Chao-Hong Wang"
+                },
+                {
+                    "authorId": "2180607307",
+                    "name": "Jingcao Xu"
+                },
+                {
+                    "authorId": "2117941439",
+                    "name": "Ziyang Liu"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2218644324",
+                    "name": "Xiaowei Wang"
+                },
+                {
+                    "authorId": "144404428",
+                    "name": "Yang Song"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                }
+            ]
+        },
+        {
+            "paperId": "a10343d3326679e4e043689c0a767f414ef6f207",
+            "title": "Recovering Packet Collisions below the Noise Floor in Multi-gateway LoRa Networks",
+            "abstract": "LoRa has been widely applied in various vertical areas such as smart grids, smart cities, etc. Packet collisions caused by concurrent transmissions have become one of the major limitations of LoRa networks due to the ALOHA MAC protocol and dense deployment. The existing studies on packet recovery usually assume that the collided packet signals are above the noise floor. However, considering the large-scale deployment and low-power nature of LoRa communications, many collided packets are below the noise floor. Consequently, the existing schemes will suffer from significant performance degradation in practical LoRa networks. To address this issue, we propose CPR, a Cooperative Packet Recovery mechanism aiming at recovering the collided packets below the noise floor. CPR firstly employs the incoherence of signals and noises at multiple gateways to detect and extract the frequency features of the collided packets hidden in the noise. Then, CPR adopts a novel gateway selection strategy to select the most appropriate gateways based on their packet power domain features extracted from collision detection, such that the interference can be eliminated and the original packets can be recovered. Extensive experimental results demonstrate that CPR can significantly increase the symbol recovery ratio in low-SNR scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "100950768",
+                    "name": "Wenliang Mao"
+                },
+                {
+                    "authorId": "2146629465",
+                    "name": "Zhiwei Zhao"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2165744386",
+                    "name": "Geyong Min"
+                }
+            ]
+        },
+        {
+            "paperId": "a9a55f1efe4edf147456fcadf88cda14b0399993",
+            "title": "R2H: Building Multimodal Navigation Helpers that Respond to Help",
+            "abstract": "The ability to assist humans during a navigation task in a supportive role is crucial for intelligent agents. Such agents, equipped with environment knowledge and conversational abilities, can guide individuals through unfamiliar terrains by generating natural language responses to their inquiries, grounded in the visual information of their surroundings. However, these multimodal conversational navigation helpers are still underdeveloped. This paper proposes a new benchmark, Respond to Help (R2H) , to build multimodal navigation helpers that can respond to help, based on existing dialog-based embodied datasets. R2H mainly includes two tasks: (1) Respond to Dialog History (RDH), which assesses the helper agent\u2019s ability to generate informative responses based on a given dialog history, and (2) Respond during Interaction (RdI), which evaluates the helper agent\u2019s ability to maintain effective and consistent cooperation with a task performer agent during navigation in real-time. Furthermore, we propose a novel task-oriented multimodal response generation model that can see and respond, named SeeRee , as the navigation helper to guide the task performer in embodied tasks. Through both automatic and human evaluations, we show that SeeRee produces more effective and informative responses than baseline methods in assisting the task per-former with different navigation tasks. Project website: https://sites.google.com/view/ respond2help/home .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118165871",
+                    "name": "Yue Fan"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "145612104",
+                    "name": "Jing Gu"
+                },
+                {
+                    "authorId": "48631993",
+                    "name": "Xin Eric Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "b6909d1d8c9b0c3b45f90163769e486d58b9b8dc",
+            "title": "Learning Sample Relationship for Exposure Correction",
+            "abstract": "Exposure correction task aims to correct the underexposure and its adverse overexposure images to the normal exposure in a single network. As well recognized, the optimization flow is the opposite. Despite great advancement, existing exposure correction methods are usually trained with a mini-batch of both underexposure and overexposure mixed samples and have not explored the relationship between them to solve the optimization inconsistency. In this paper, we introduce a new perspective to conjunct their optimization processes by correlating and constraining the relationship of correction procedure in a mini-batch. The core designs of our framework consist of two steps: 1) formulating the exposure relationship of samples across the batch dimension via a context-irrelevant pretext task. 2) delivering the above sample relationship design as the regularization term within the loss function to promote optimization consistency. The proposed sample relationship design as a general term can be easily integrated into existing exposure correction methods without any computational burden in inference time. Extensive experiments over multiple representative exposure correction benchmarks demonstrate consistent performance gains by introducing our sample relationship design.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110284557",
+                    "name": "Jie Huang"
+                },
+                {
+                    "authorId": "2152335165",
+                    "name": "Fengmei Zhao"
+                },
+                {
+                    "authorId": "2121684731",
+                    "name": "Man Zhou"
+                },
+                {
+                    "authorId": "2166974008",
+                    "name": "Jie Xiao"
+                },
+                {
+                    "authorId": "104219880",
+                    "name": "Naishan Zheng"
+                },
+                {
+                    "authorId": "145487536",
+                    "name": "Kai Zheng"
+                },
+                {
+                    "authorId": "2352456",
+                    "name": "Zhiwei Xiong"
+                }
+            ]
+        }
+    ]
+}

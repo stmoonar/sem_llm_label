@@ -1,0 +1,439 @@
+{
+    "authorId": "3130228",
+    "papers": [
+        {
+            "paperId": "260282639dce1984c1a065aa4feae41cea0fed06",
+            "title": "Bilingual Adaptation of Monolingual Foundation Models",
+            "abstract": "We present an efficient method for adapting a monolingual Large Language Model (LLM) to another language, addressing challenges of catastrophic forgetting and tokenizer limitations. We focus this study on adapting Llama 2 to Arabic. Our two-stage approach begins with expanding the vocabulary and training only the embeddings matrix, followed by full model continual pre-training on a bilingual corpus. By continually pre-training on a mix of Arabic and English corpora, the model retains its proficiency in English while acquiring capabilities in Arabic. Our approach results in significant improvements in Arabic and slight enhancements in English, demonstrating cost-effective cross-lingual transfer. We perform ablations on embedding initialization techniques, data mix ratios, and learning rates and release a detailed training recipe. To demonstrate generalizability of this approach we also adapted Llama 3 8B to Arabic and Llama 2 13B to Hindi.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2238627171",
+                    "name": "Gurpreet Gosal"
+                },
+                {
+                    "authorId": "2312005159",
+                    "name": "Yishi Xu"
+                },
+                {
+                    "authorId": "2311889065",
+                    "name": "Gokul Ramakrishnan"
+                },
+                {
+                    "authorId": "2311894591",
+                    "name": "Rituraj Joshi"
+                },
+                {
+                    "authorId": "2311892291",
+                    "name": "Avraham Sheinin"
+                },
+                {
+                    "authorId": "2311991181",
+                    "name": "Zhiming Chen"
+                },
+                {
+                    "authorId": "2311891083",
+                    "name": "Biswajit Mishra"
+                },
+                {
+                    "authorId": "2243228182",
+                    "name": "Natalia Vassilieva"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                },
+                {
+                    "authorId": "1880394",
+                    "name": "Neha Sengupta"
+                },
+                {
+                    "authorId": "2311888768",
+                    "name": "Sunil Kumar Sahu"
+                },
+                {
+                    "authorId": "2087720002",
+                    "name": "Bokang Jia"
+                },
+                {
+                    "authorId": "2311887646",
+                    "name": "Onkar Pandit"
+                },
+                {
+                    "authorId": "2235818050",
+                    "name": "Satheesh Katipomu"
+                },
+                {
+                    "authorId": "2203791403",
+                    "name": "Samta Kamboj"
+                },
+                {
+                    "authorId": "2313594182",
+                    "name": "Samujjwal Ghosh"
+                },
+                {
+                    "authorId": "2235794681",
+                    "name": "Rahul Pal"
+                },
+                {
+                    "authorId": "2311889115",
+                    "name": "Parvez Mullah"
+                },
+                {
+                    "authorId": "2311887505",
+                    "name": "Soundar Doraiswamy"
+                },
+                {
+                    "authorId": "2311887344",
+                    "name": "Mohamed El Karim Chami"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                }
+            ]
+        },
+        {
+            "paperId": "cd41cb858e2e3868a183f44a9ca1e8255533165e",
+            "title": "Sparse maximal update parameterization: A holistic approach to sparse training dynamics",
+            "abstract": "Several challenges make it difficult for sparse neural networks to compete with dense models. First, setting a large fraction of weights to zero impairs forward and gradient signal propagation. Second, sparse studies often need to test multiple sparsity levels, while also introducing new hyperparameters (HPs), leading to prohibitive tuning costs. Indeed, the standard practice is to re-use the learning HPs originally crafted for dense models. Unfortunately, we show sparse and dense networks do not share the same optimal HPs. Without stable dynamics and effective training recipes, it is costly to test sparsity at scale, which is key to surpassing dense networks and making the business case for sparsity acceleration in hardware. A holistic approach is needed to tackle these challenges and we propose S$\\mu$Par as one such approach. S$\\mu$Par ensures activations, gradients, and weight updates all scale independently of sparsity level. Further, by reparameterizing the HPs, S$\\mu$Par enables the same HP values to be optimal as we vary both sparsity level and model width. HPs can be tuned on small dense networks and transferred to large sparse models, greatly reducing tuning costs. On large-scale language modeling, S$\\mu$Par training improves loss by up to 8.2% over the common approach of using the dense model standard parameterization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1564139903",
+                    "name": "Nolan Dey"
+                },
+                {
+                    "authorId": "2303254223",
+                    "name": "Shane Bergsma"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                }
+            ]
+        },
+        {
+            "paperId": "fb9dfabf5e91ed4e903da01f9c34dcbfecb11efc",
+            "title": "MediSwift: Efficient Sparse Pre-trained Biomedical Language Models",
+            "abstract": "Large language models (LLMs) are typically trained on general source data for various domains, but a recent surge in domain-specific LLMs has shown their potential to outperform general-purpose models in domain-specific tasks (e.g., biomedicine). Although domain-specific pre-training enhances efficiency and leads to smaller models, the computational costs of training these LLMs remain high, posing budgeting challenges. We introduce MediSwift, a suite of biomedical LMs that leverage sparse pre-training on domain-specific biomedical text data. By inducing up to 75% weight sparsity during the pre-training phase, MediSwift achieves a 2-2.5x reduction in training FLOPs. Notably, all sparse pre-training was performed on the Cerebras CS-2 system, which is specifically designed to realize the acceleration benefits from unstructured weight sparsity, thereby significantly enhancing the efficiency of the MediSwift models. Through subsequent dense fine-tuning and strategic soft prompting, MediSwift models outperform existing LLMs up to 7B parameters on biomedical tasks, setting new benchmarks w.r.t efficiency-accuracy on tasks such as PubMedQA. Our results show that sparse pre-training, along with dense fine-tuning and soft prompting, offers an effective method for creating high-performing, computationally efficient models in specialized domains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51153332",
+                    "name": "Vithursan Thangarasa"
+                },
+                {
+                    "authorId": "2289846001",
+                    "name": "Mahmoud Salem"
+                },
+                {
+                    "authorId": "2289848171",
+                    "name": "Shreyas Saxena"
+                },
+                {
+                    "authorId": "2212028628",
+                    "name": "Kevin Leong"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                },
+                {
+                    "authorId": "2212029838",
+                    "name": "Sean Lie"
+                }
+            ]
+        },
+        {
+            "paperId": "39bb5d44735c07b1e1f4341a2d4bc8d5e783f491",
+            "title": "SlimPajama-DC: Understanding Data Combinations for LLM Training",
+            "abstract": "This paper aims to understand the impacts of various data combinations (e.g., web text, Wikipedia, GitHub, books) on the pretraining of large language models using SlimPajama. SlimPajama is a rigorously deduplicated, multi-source dataset, which has been refined and further deduplicated to 627B tokens from the extensive 1.2T token RedPajama dataset contributed by Together. We have termed our research as SlimPajama-DC, an empirical analysis designed to uncover fundamental characteristics and best practices associated with employing SlimPajama in the training of large language models. During our research with SlimPajama, two pivotal observations emerged: (1) Global deduplication vs. local deduplication. We analyze and discuss how global (across different sources of datasets) and local (within the single source of dataset) deduplications affect the performance of trained models. (2) Proportions of highly-deduplicated multi-source datasets in the combination. To study this, we construct six configurations on SlimPajama dataset and train individual ones using 1.3B Cerebras-GPT model with Alibi and SwiGLU. Our best configuration outperforms the 1.3B model trained on RedPajama using the same number of training tokens by a significant margin. All our 1.3B models are trained on Cerebras 16$\\times$ CS-2 cluster with a total of 80 PFLOP/s in bf16 mixed precision. We further extend our discoveries (such as increasing data diversity is crucial after global deduplication) on a 7B model with large batch-size training. Our SlimPajama-DC models are available at: https://huggingface.co/MBZUAI-LLM/SlimPajama-DC and the separate SlimPajama-DC datasets are available at: https://huggingface.co/datasets/MBZUAI-LLM/SlimPajama-627B-DC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2243374493",
+                    "name": "Zhiqiang Shen"
+                },
+                {
+                    "authorId": "2242959702",
+                    "name": "Tianhua Tao"
+                },
+                {
+                    "authorId": "2243392466",
+                    "name": "Liqun Ma"
+                },
+                {
+                    "authorId": "2934259",
+                    "name": "W. Neiswanger"
+                },
+                {
+                    "authorId": "100468503",
+                    "name": "Zhengzhong Liu"
+                },
+                {
+                    "authorId": "2254303011",
+                    "name": "Hongyi Wang"
+                },
+                {
+                    "authorId": "10918587",
+                    "name": "Bowen Tan"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                },
+                {
+                    "authorId": "2243228182",
+                    "name": "Natalia Vassilieva"
+                },
+                {
+                    "authorId": "2243228174",
+                    "name": "Daria Soboleva"
+                },
+                {
+                    "authorId": "2243234805",
+                    "name": "Eric P. Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "44b7adbd196e69c8771734aa8c9af5fd69c04370",
+            "title": "BTLM-3B-8K: 7B Parameter Performance in a 3B Parameter Model",
+            "abstract": "We introduce the Bittensor Language Model, called\"BTLM-3B-8K\", a new state-of-the-art 3 billion parameter open-source language model. BTLM-3B-8K was trained on 627B tokens from the SlimPajama dataset with a mixture of 2,048 and 8,192 context lengths. BTLM-3B-8K outperforms all existing 3B parameter models by 2-5.5% across downstream tasks. BTLM-3B-8K is even competitive with some 7B parameter models. Additionally, BTLM-3B-8K provides excellent long context performance, outperforming MPT-7B-8K and XGen-7B-8K on tasks up to 8,192 context length. We trained the model on a cleaned and deduplicated SlimPajama dataset; aggressively tuned the \\textmu P hyperparameters and schedule; used ALiBi position embeddings; and adopted the SwiGLU nonlinearity. On Hugging Face, the most popular models have 7B parameters, indicating that users prefer the quality-size ratio of 7B models. Compacting the 7B parameter model to one with 3B parameters, with little performance impact, is an important milestone. BTLM-3B-8K needs only 3GB of memory with 4-bit precision and takes 2.5x less inference compute than 7B models, helping to open up access to a powerful language model on mobile and edge devices. BTLM-3B-8K is available under an Apache 2.0 license on Hugging Face: https://huggingface.co/cerebras/btlm-3b-8k-base.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1564139903",
+                    "name": "Nolan Dey"
+                },
+                {
+                    "authorId": "2243228174",
+                    "name": "Daria Soboleva"
+                },
+                {
+                    "authorId": "2243335766",
+                    "name": "Faisal Al-Khateeb"
+                },
+                {
+                    "authorId": "2243383177",
+                    "name": "Bowen Yang"
+                },
+                {
+                    "authorId": "2213728244",
+                    "name": "Ribhu Pathria"
+                },
+                {
+                    "authorId": "2213732240",
+                    "name": "Hemant Khachane"
+                },
+                {
+                    "authorId": "2243337041",
+                    "name": "Shaheer Muhammad"
+                },
+                {
+                    "authorId": "2311991181",
+                    "name": "Zhiming Chen"
+                },
+                {
+                    "authorId": "2243336038",
+                    "name": "Robert Myers"
+                },
+                {
+                    "authorId": "2243336766",
+                    "name": "Jacob Robert Steeves"
+                },
+                {
+                    "authorId": "2243228182",
+                    "name": "Natalia Vassilieva"
+                },
+                {
+                    "authorId": "2243336770",
+                    "name": "Marvin Tom"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                }
+            ]
+        },
+        {
+            "paperId": "5d8fec20573bc89ec72151277974919c85d8bdfd",
+            "title": "Position Interpolation Improves ALiBi Extrapolation",
+            "abstract": "Linear position interpolation helps pre-trained models using rotary position embeddings (RoPE) to extrapolate to longer sequence lengths. We propose using linear position interpolation to extend the extrapolation range of models using Attention with Linear Biases (ALiBi). We find position interpolation significantly improves extrapolation capability on upstream language modelling and downstream summarization and retrieval tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2243335766",
+                    "name": "Faisal Al-Khateeb"
+                },
+                {
+                    "authorId": "1564139903",
+                    "name": "Nolan Dey"
+                },
+                {
+                    "authorId": "2243228174",
+                    "name": "Daria Soboleva"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                }
+            ]
+        },
+        {
+            "paperId": "ece77610adfb0fb162dd22ef694f2777393c319a",
+            "title": "Cerebras-GPT: Open Compute-Optimal Language Models Trained on the Cerebras Wafer-Scale Cluster",
+            "abstract": "We study recent research advances that improve large language models through efficient pre-training and scaling, and open datasets and tools. We combine these advances to introduce Cerebras-GPT, a family of open compute-optimal language models scaled from 111M to 13B parameters. We train Cerebras-GPT models on the Eleuther Pile dataset following DeepMind Chinchilla scaling rules for efficient pre-training (highest accuracy for a given compute budget). We characterize the predictable power-law scaling and compare Cerebras-GPT with other publicly-available models to show all Cerebras-GPT models have state-of-the-art training efficiency on both pre-training and downstream objectives. We describe our learnings including how Maximal Update Parameterization ($\\mu$P) can further improve large model scaling, improving accuracy and hyperparameter predictability at scale. We release our pre-trained models and code, making this paper the first open and reproducible work comparing compute-optimal model scaling to models trained on fixed dataset sizes. Cerebras-GPT models are available on HuggingFace: https://huggingface.co/cerebras.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1564139903",
+                    "name": "Nolan Dey"
+                },
+                {
+                    "authorId": "30554007",
+                    "name": "G. Gosal"
+                },
+                {
+                    "authorId": "2111354124",
+                    "name": "Zhiming Chen"
+                },
+                {
+                    "authorId": "2213732240",
+                    "name": "Hemant Khachane"
+                },
+                {
+                    "authorId": "2058346405",
+                    "name": "William Marshall"
+                },
+                {
+                    "authorId": "2213728244",
+                    "name": "Ribhu Pathria"
+                },
+                {
+                    "authorId": "36339016",
+                    "name": "Marvin Tom"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                }
+            ]
+        },
+        {
+            "paperId": "7265a46ddcae3b2ebefbebf0b5cee1cf6d229085",
+            "title": "RevBiFPN: The Fully Reversible Bidirectional Feature Pyramid Network",
+            "abstract": "This work introduces RevSilo, the first reversible bidirectional multi-scale feature fusion module. Like other reversible methods, RevSilo eliminates the need to store hidden activations by recomputing them. However, existing reversible methods do not apply to multi-scale feature fusion and are, therefore, not applicable to a large class of networks. Bidirectional multi-scale feature fusion promotes local and global coherence and has become a de facto design principle for networks targeting spatially sensitive tasks, e.g., HRNet (Sun et al., 2019a) and EfficientDet (Tan et al., 2020). These networks achieve state-of-the-art results across various computer vision tasks when paired with high-resolution inputs. However, training them requires substantial accelerator memory for saving large, multi-resolution activations. These memory requirements inherently cap the size of neural networks, limiting improvements that come from scale. Operating across resolution scales, RevSilo alleviates these issues. Stacking RevSilos, we create RevBiFPN, a fully reversible bidirectional feature pyramid network. RevBiFPN is competitive with networks such as EfficientNet while using up to 19.8x lesser training memory for image classification. When fine-tuned on MS COCO, RevBiFPN provides up to a 2.5% boost in AP over HRNet using fewer MACs and a 2.4x reduction in training-time memory.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "120486138",
+                    "name": "Vitaliy Chiley"
+                },
+                {
+                    "authorId": "51153332",
+                    "name": "Vithursan Thangarasa"
+                },
+                {
+                    "authorId": "1922581610",
+                    "name": "Abhay Gupta"
+                },
+                {
+                    "authorId": "46238336",
+                    "name": "Anshul Samar"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                },
+                {
+                    "authorId": "1703049",
+                    "name": "D. DeCoste"
+                }
+            ]
+        },
+        {
+            "paperId": "978dbc014f9d6116169c0dcaf8480c49319703ba",
+            "title": "Efficiently Disentangle Causal Representations",
+            "abstract": "This paper proposes an efficient approach to learning disentangled representations with causal mechanisms based on the difference of conditional probabilities in original and new distributions. We approximate the difference with models' generalization abilities so that it fits in the standard machine learning framework and can be efficiently computed. In contrast to the state-of-the-art approach, which relies on the learner's adaptation speed to new distribution, the proposed approach only requires evaluating the model's generalization ability. We provide a theoretical explanation for the advantage of the proposed method, and our experiments show that the proposed technique is 1.9--11.0$\\times$ more sample efficient and 9.4--32.4 times quicker than the previous method on various tasks. The source code is available at \\url{https://github.com/yuanpeng16/EDCR}.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111188503",
+                    "name": "Yuanpeng Li"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                },
+                {
+                    "authorId": "1712479",
+                    "name": "Mohamed Elhoseiny"
+                },
+                {
+                    "authorId": "2116733833",
+                    "name": "Liang Zhao"
+                },
+                {
+                    "authorId": "2244184",
+                    "name": "Kenneth Ward Church"
+                }
+            ]
+        },
+        {
+            "paperId": "dac4e6b4214d594974d713bcc8b361af80cfb31b",
+            "title": "Time Dependency, Data Flow, and Competitive Advantage",
+            "abstract": "Data is fundamental to machine learning-based products and services and is considered strategic due to its externalities for businesses, governments, non-profits, and more generally for society. It is renowned that the value of organizations (businesses, government agencies and programs, and even industries) scales with the volume of available data. What is often less appreciated is that the data value in making useful organizational predictions will range widely and is prominently a function of data characteristics and underlying algorithms. \n \nIn this research, our goal is to study how the value of data changes over time and how this change varies across contexts and business areas (e.g. next word prediction in the context of history, sports, politics). We focus on data from Reddit.com and compare the value\u2019s time-dependency across various Reddit topics (Subreddits). We make this comparison by measuring the rate at which user-generated text data loses its relevance to the algorithmic prediction of conversations. We show that different subreddits have different rates of relevance decline over time. \n \nRelating the text topics to various business areas of interest, we argue that competing in a business area in which data value decays rapidly alters strategies to acquire competitive advantage. When data value decays rapidly, access to a continuous flow of data will be more valuable than access to a fixed stock of data. In this kind of setting, improving user engagement and increasing user-base help creating and maintaining a competitive advantage.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Economics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2040293",
+                    "name": "E. Valavi"
+                },
+                {
+                    "authorId": "3130228",
+                    "name": "Joel Hestness"
+                },
+                {
+                    "authorId": "2699592",
+                    "name": "M. Iansiti"
+                },
+                {
+                    "authorId": "2774880",
+                    "name": "Newsha Ardalani"
+                },
+                {
+                    "authorId": "2230586296",
+                    "name": "Feng Zhu"
+                },
+                {
+                    "authorId": "1644191713",
+                    "name": "K. Lakhani"
+                }
+            ]
+        }
+    ]
+}

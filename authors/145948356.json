@@ -1,0 +1,339 @@
+{
+    "authorId": "145948356",
+    "papers": [
+        {
+            "paperId": "0e523bd5345125874191e066f8cc73257063215c",
+            "title": "Unified Dense Subgraph Detection: Fast Spectral Theory Based Algorithms",
+            "abstract": "How can we effectively detect fake reviews or fraudulent links on a website? How can we spot communities that suddenly appear based on users\u2019 interactions? And how can we efficiently find the minimum cut in a large graph? All of these are related to the finding of dense subgraphs, a significant primitive problem in graph analysis with extensive applications across various domains. In this paper, we focus on formulating the problem of the densest subgraph detection and theoretically compare and contrast several correlated problems. Moreover, we propose a unified framework, <sc>GenDS</sc>, for the densest subgraph detection, provide some theoretical analysis based on the network flow and spectral graph theory, and devise simple and computationally efficient algorithms, <sc>SpecGDS</sc> and <sc>GepGDS</sc>, to solve it by leveraging the spectral properties and greedy search. We conduct thorough experiments on 40 real-world networks with up to 1.47 billion edges from various domains. We demonstrate that our <sc>SpecGDS</sc> yields up to <inline-formula><tex-math notation=\"LaTeX\">$58.6 \\ \\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>58</mml:mn><mml:mo>.</mml:mo><mml:mn>6</mml:mn><mml:mspace width=\"4pt\"/><mml:mo>\u00d7</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"feng-ieq1-3272574.gif\"/></alternatives></inline-formula>speedup and achieves better or approximately equal-quality solutions for the densest subgraph detection compared to the baselines. <sc>GepGDS</sc> also reveals some properties of generalized eigenvalue problems for the <sc>GenDS</sc>. Also, our methods scale linearly with the graph size and are proven effective in applications such as finding collaborations that appear suddenly in an extensive, time-evolving co-authorship network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2152939828",
+                    "name": "Shenghua Liu"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                },
+                {
+                    "authorId": "1717004",
+                    "name": "Xueqi Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "73d8b0794b863f16ba63c4e2291a7c914824c0ec",
+            "title": "Graph Descriptive Order Improves Reasoning with Large Language Model",
+            "abstract": "In recent years, large language models have achieved state-of-the-art performance across multiple domains. However, the progress in the field of graph reasoning with LLM remains limited. Our work delves into this gap by thoroughly investigating graph reasoning with LLMs. In this work, we reveal the impact of the order of graph description on LLMs' graph reasoning performance, which significantly affects LLMs' reasoning abilities. By altering this order, we enhance the performance of LLMs from 42.22\\% to 70\\%. Furthermore, we introduce the Scaled Graph Reasoning benchmark for assessing LLMs' performance across various graph sizes and evaluate the relationship between LLMs' graph reasoning abilities and graph size. We discover that the graph reasoning performance of LLMs does not monotonically decrease with the increase in graph size. The experiments span several mainstream models, including GPT-3.5, LLaMA-2-7B, and LLaMA-2-13B, to offer a comprehensive evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265258857",
+                    "name": "Yuyao Ge"
+                },
+                {
+                    "authorId": "2280336349",
+                    "name": "Shenghua Liu"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2280335494",
+                    "name": "Lingrui Mei"
+                },
+                {
+                    "authorId": "2265294904",
+                    "name": "Lizhe Chen"
+                },
+                {
+                    "authorId": "2226196831",
+                    "name": "Xueqi Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "02fdffee1dcc17b69c10e18512b4916e8b79d42e",
+            "title": "Towards Better Graph Representation Learning with Parameterized Decomposition & Filtering",
+            "abstract": "Proposing an effective and flexible matrix to represent a graph is a fundamental challenge that has been explored from multiple perspectives, e.g., filtering in Graph Fourier Transforms. In this work, we develop a novel and general framework which unifies many existing GNN models from the view of parameterized decomposition and filtering, and show how it helps to enhance the flexibility of GNNs while alleviating the smoothness and amplification issues of existing models. Essentially, we show that the extensively studied spectral graph convolutions with learnable polynomial filters are constrained variants of this formulation, and releasing these constraints enables our model to express the desired decomposition and filtering simultaneously. Based on this generalized framework, we develop models that are simple in implementation but achieve significant improvements and computational efficiency on a variety of graph learning tasks. Code is available at https://github.com/qslim/PDF.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2150426854",
+                    "name": "Mingqi Yang"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2115437382",
+                    "name": "Yanming Shen"
+                },
+                {
+                    "authorId": "2019961",
+                    "name": "Bryan Hooi"
+                }
+            ]
+        },
+        {
+            "paperId": "be19bb89159b720e4a7b8612a57a3b8e3f2451af",
+            "title": "Fast Searching The Densest Subgraph And Decomposition With Local Optimality",
+            "abstract": "Densest Subgraph Problem (DSP) is an important primitive problem with a wide range of applications, including fraud detection, community detection and DNA motif discovery. Edge-based density is one of the most common metrics in DSP. Although a maximum flow algorithm can exactly solve it in polynomial time, the increasing amount of data and the high complexity of algorithms motivate scientists to find approximation algorithms. Among these, its duality of linear programming derives several iterative algorithms including Greedy++, Frank-Wolfe and FISTA which redistribute edge weights to find the densest subgraph, however, these iterative algorithms vibrate around the optimal solution, which are not satisfactory for fast convergence. We propose our main algorithm Locally Optimal Weight Distribution (LOWD) to distribute the remaining edge weights in a locally optimal operation to converge to the optimal solution monotonically. Theoretically, we show that it will reach the optimal state of a specific linear programming which is called locally-dense decomposition. Besides, we show that it is not necessary to consider most of the edges in the original graph. Therefore, we develop a pruning algorithm using a modified Counting Sort to prune graphs by removing unnecessary edges and nodes, and then we can search the densest subgraph in a much smaller graph.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "114689037",
+                    "name": "Yu Zhu"
+                },
+                {
+                    "authorId": "2152939828",
+                    "name": "Shenghua Liu"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2226196831",
+                    "name": "Xueqi Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "0e8240c14201d4b87c4cc026acad4020a672cc0f",
+            "title": "MonLAD: Money Laundering Agents Detection in Transaction Streams",
+            "abstract": "Given a stream of money transactions between accounts in a bank, how can we accurately detect money laundering agent accounts and suspected behaviors in real-time? Money laundering agents try to hide the origin of illegally obtained money by dispersive multiple small transactions and evade detection by smart strategies. Therefore, it is challenging to accurately catch such fraudsters in an unsupervised manner. Existing approaches do not consider the characteristics of those agent accounts and are not suitable to the streaming settings. Therefore, we propose MonLAD and MonLAD-W to detect money laundering agent accounts in a transaction stream by keeping track of their residuals and other features; we devise AnoScore algorithm to find anomalies based on the robust measure of statistical deviation. Experimental results show that MonLAD outperforms the state-of-the-art baselines on real-world data and finds various suspicious behavior patterns of money laundering. Additionally, several detected suspected accounts have been manually-verified as agents in real money laundering scenario.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144851774",
+                    "name": "Xiaobing Sun"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2152939828",
+                    "name": "Shenghua Liu"
+                },
+                {
+                    "authorId": "41092234",
+                    "name": "Yuyang Xie"
+                },
+                {
+                    "authorId": "3224168",
+                    "name": "Siddharth Bhatia"
+                },
+                {
+                    "authorId": "2019961",
+                    "name": "Bryan Hooi"
+                },
+                {
+                    "authorId": "2118788801",
+                    "name": "Wenhan Wang"
+                },
+                {
+                    "authorId": "1717004",
+                    "name": "Xueqi Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "175618cbd605169252264b4528a647970779c05c",
+            "title": "Hierarchical Dense Pattern Detection in Tensors",
+            "abstract": "Dense subtensor detection gains remarkable success in spotting anomalies and fraudulent behaviors for multi-aspect data (i.e., tensors), like in social media and event streams. Existing methods detect the densest subtensors flatly and separately, with the underlying assumption that those subtensors are exclusive. However, many real-world tensors usually present hierarchical properties, e.g., the core-periphery structure and dynamic communities in networks. It is also unexplored how to fuse the prior knowledge into dense pattern detection to capture the local behavior. In this article, we propose CatchCore, a novel framework to efficiently find the hierarchical dense subtensors. We first design a unified metric for dense subtensor detection, which can be optimized with gradient-based methods. With the proposed metric, CatchCore detects hierarchical dense subtensors through the hierarchy-wise alternative optimization and finds local dense patterns concerning some items in a query manner. Finally, we utilize the minimum description length principle to measure the quality of detection results and select the optimal hierarchical dense subtensors. Extensive experiments on synthetic and real-world datasets demonstrate that CatchCore outperforms the top competitors in accuracy for detecting dense subtensors and anomaly patterns, like network attacks. Additionally, CatchCore successfully identifies a hierarchical researcher co-authorship group with intense interactions in the DBLP dataset; it can also capture core collaboration and multi-hop relations around some query objects. Meanwhile, CatchCore also scales linearly with all aspects of tensors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2152939828",
+                    "name": "Shenghua Liu"
+                },
+                {
+                    "authorId": "2110251463",
+                    "name": "Xueqi Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "2cc2864b2ee3b5cd34bb73be79619ff4cff906cd",
+            "title": "Birds of a Feather Trust Together: Knowing When to Trust a Classifier via Adaptive Neighborhood Aggregation",
+            "abstract": "How do we know when the predictions made by a classifier can be trusted? This is a fundamental problem that also has immense practical applicability, especially in safety-critical areas such as medicine and autonomous driving. The de facto approach of using the classifier's softmax outputs as a proxy for trustworthiness suffers from the over-confidence issue; while the most recent works incur problems such as additional retraining cost and accuracy versus trustworthiness trade-off. In this work, we argue that the trustworthiness of a classifier's prediction for a sample is highly associated with two factors: the sample's neighborhood information and the classifier's output. To combine the best of both worlds, we design a model-agnostic post-hoc approach NeighborAgg to leverage the two essential information via an adaptive neighborhood aggregation. Theoretically, we show that NeighborAgg is a generalized version of a one-hop graph convolutional network, inheriting the powerful modeling ability to capture the varying similarity between samples within each class. We also extend our approach to the closely related task of mislabel detection and provide a theoretical coverage guarantee to bound the false negative. Empirically, extensive experiments on image and tabular benchmarks verify our theory and suggest that NeighborAgg outperforms other methods, achieving state-of-the-art trustworthiness performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "38827926",
+                    "name": "Miao Xiong"
+                },
+                {
+                    "authorId": "2153699643",
+                    "name": "Shen Li"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2063950812",
+                    "name": "Ailin Deng"
+                },
+                {
+                    "authorId": "2154499886",
+                    "name": "Jihai Zhang"
+                },
+                {
+                    "authorId": "2019961",
+                    "name": "Bryan Hooi"
+                }
+            ]
+        },
+        {
+            "paperId": "6ef770d11e3e5918646b2f5a97c0bcc8bc9b9256",
+            "title": "AdaRNN: Adaptive Learning and Forecasting of Time Series",
+            "abstract": "Time series has wide applications in the real world and is known to be difficult to forecast. Since its statistical properties change over time, its distribution also changes temporally, which will cause severe distribution shift problem to existing methods. However, it remains unexplored to model the time series in the distribution perspective. In this paper, we term this as Temporal Covariate Shift (TCS). This paper proposes Adaptive RNNs (AdaRNN) to tackle the TCS problem by building an adaptive model that generalizes well on the unseen test data. AdaRNN is sequentially composed of two novel algorithms. First, we propose Temporal Distribution Characterization to better characterize the distribution information in the TS. Second, we propose Temporal Distribution Matching to reduce the distribution mismatch in TS to learn the adaptive TS model. AdaRNN is a general framework with flexible distribution distances integrated. Experiments on human activity recognition, air quality prediction, and financial analysis show that AdaRNN outperforms the latest methods by a classification accuracy of 2.6% and significantly reduces the RMSE by 9.0%. We also show that the temporal distribution matching algorithm can be extended in Transformer structure to boost its performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153962847",
+                    "name": "Yuntao Du"
+                },
+                {
+                    "authorId": "1519290245",
+                    "name": "Jindong Wang"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "1746914",
+                    "name": "Sinno Jialin Pan"
+                },
+                {
+                    "authorId": "2066169077",
+                    "name": "Tao Qin"
+                },
+                {
+                    "authorId": "2105167673",
+                    "name": "Renjun Xu"
+                },
+                {
+                    "authorId": "2108882970",
+                    "name": "Chongjun Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "ab2a770ddcd58f0bf9a5056c287330adcdfe8c1f",
+            "title": "Learning Invariant Representations across Domains and Tasks",
+            "abstract": "Being expensive and time-consuming to collect massive COVID-19 image samples to train deep classification models, transfer learning is a promising approach by transferring knowledge from the abundant typical pneumonia datasets for COVID-19 image classification. However, negative transfer may deteriorate the performance due to the feature distribution divergence between two datasets and task semantic difference in diagnosing pneumonia and COVID-19 that rely on different characteristics. It is even more challenging when the target dataset has no labels available, i.e., unsupervised task transfer learning. In this paper, we propose a novel Task Adaptation Network (TAN) to solve this unsupervised task transfer problem. In addition to learning transferable features via domain-adversarial training, we propose a novel task semantic adaptor that uses the learning-to-learn strategy to adapt the task semantics. Experiments on three public COVID-19 datasets demonstrate that our proposed method achieves superior performance. Especially on COVID-DA dataset, TAN significantly increases the recall and F1 score by 5.0% and 7.8% compared to recently strong baselines. Moreover, we show that TAN also achieves superior performance on several public domain adaptation benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "1519290245",
+                    "name": "Jindong Wang"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2144545128",
+                    "name": "Chang Liu"
+                },
+                {
+                    "authorId": "1786336",
+                    "name": "Chaohui Yu"
+                },
+                {
+                    "authorId": "1968460",
+                    "name": "Min Du"
+                },
+                {
+                    "authorId": "2105167673",
+                    "name": "Renjun Xu"
+                },
+                {
+                    "authorId": "143826491",
+                    "name": "Tao Qin"
+                },
+                {
+                    "authorId": "2110264337",
+                    "name": "Tie-Yan Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "54572b3a9c0768c71fc7226ceb5d8e907c761da8",
+            "title": "Learning to Match Distributions for Domain Adaptation",
+            "abstract": "When the training and test data are from different distributions, domain adaptation is needed to reduce dataset bias to improve the model's generalization ability. Since it is difficult to directly match the cross-domain joint distributions, existing methods tend to reduce the marginal or conditional distribution divergence using predefined distances such as MMD and adversarial-based discrepancies. However, it remains challenging to determine which method is suitable for a given application since they are built with certain priors or bias. Thus they may fail to uncover the underlying relationship between transferable features and joint distributions. This paper proposes Learning to Match (L2M) to automatically learn the cross-domain distribution matching without relying on hand-crafted priors on the matching loss. Instead, L2M reduces the inductive bias by using a meta-network to learn the distribution matching loss in a data-driven way. L2M is a general framework that unifies task-independent and human-designed matching features. We design a novel optimization algorithm for this challenging objective with self-supervised label propagation. Experiments on public datasets substantiate the superiority of L2M over SOTA methods. Moreover, we apply L2M to transfer from pneumonia to COVID-19 chest X-ray images with remarkable performance. L2M can also be extended in other distribution matching applications where we show in a trial experiment that L2M generates more realistic and sharper MNIST samples.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1786336",
+                    "name": "Chaohui Yu"
+                },
+                {
+                    "authorId": "1519290245",
+                    "name": "Jindong Wang"
+                },
+                {
+                    "authorId": "2144545128",
+                    "name": "Chang Liu"
+                },
+                {
+                    "authorId": "143826491",
+                    "name": "Tao Qin"
+                },
+                {
+                    "authorId": "2105167673",
+                    "name": "Renjun Xu"
+                },
+                {
+                    "authorId": "145948356",
+                    "name": "Wenjie Feng"
+                },
+                {
+                    "authorId": "2109360525",
+                    "name": "Yiqiang Chen"
+                },
+                {
+                    "authorId": "2110264337",
+                    "name": "Tie-Yan Liu"
+                }
+            ]
+        }
+    ]
+}

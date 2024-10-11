@@ -1,0 +1,413 @@
+{
+    "authorId": "2143375428",
+    "papers": [
+        {
+            "paperId": "038e2ca1c859ebde11c428286e680a672c1c03f3",
+            "title": "FINAL: Factorized Interaction Layer for CTR Prediction",
+            "abstract": "Multi-layer perceptron (MLP) serves as a core component in many deep models for click-through rate (CTR) prediction. However, vanilla MLP networks are inefficient in learning multiplicative feature interactions, making feature interaction learning an essential topic for CTR prediction. Existing feature interaction networks are effective in complementing the learning of MLPs, but they often fall short of the performance of MLPs when applied alone. Thus, their integration with MLP networks is necessary to achieve improved performance. This situation motivates us to explore a better alternative to the MLP backbone that could potentially replace MLPs. Inspired by factorization machines, in this paper, we propose FINAL, a factorized interaction layer that extends the widely-used linear layer and is capable of learning 2nd-order feature interactions. Similar to MLPs, multiple FINAL layers can be stacked into a FINAL block, yielding feature interactions with an exponential degree growth. We unify feature interactions and MLPs into a single FINAL block and empirically show its effectiveness as a replacement for the MLP block. Furthermore, we explore the ensemble of two FINAL blocks as an enhanced two-stream CTR model, setting a new state-of-the-art on open benchmark datasets. FINAL can be easily adopted as a building block and has achieved business metric gains in multiple applications at Huawei. Our source code will be made available at MindSpore/models and FuxiCTR/model_zoo.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108997533",
+                    "name": "Jieming Zhu"
+                },
+                {
+                    "authorId": "3789712",
+                    "name": "Qinglin Jia"
+                },
+                {
+                    "authorId": "24140498",
+                    "name": "Guohao Cai"
+                },
+                {
+                    "authorId": "29969336",
+                    "name": "Quanyu Dai"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "3065080",
+                    "name": "Zhenhua Dong"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                },
+                {
+                    "authorId": "2163112250",
+                    "name": "Rui Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "487000bfc0bc3a56334edbe5a81648ac557824d0",
+            "title": "Task Adaptive Multi-learner Network for Joint CTR and CVR Estimation",
+            "abstract": "CTR and CVR are critical factors in personalized applications, and many methods jointly estimate them via multi-task learning to alleviate the ultra-sparsity of conversion behaviors. However, it is still difficult to predict CVR accurately and robustly due to the limited and even biased knowledge extracted by the single model tower optimized on insufficient conversion samples. In this paper, we propose a task adaptive multi-learner (TAML) framework for joint CTR and CVR prediction. We design a hierarchical task adaptive knowledge representation module with different experts to capture knowledge in different granularities, which can effectively exploit the commonalities between CTR and CVR estimation tasks meanwhile keeping their unique characteristics. We apply multiple learners to extract data knowledge from various views and fuse their predictions to obtain accurate and robust scores. To facilitate knowledge sharing across learners, we further perform self-distillation that uses the fused scores to teach different learners. Thorough offline and online experiments show the superiority of TAML in different Ad ranking tasks, and we have deployed it in Huawei\u2019s online advertising platform to serve the main traffic.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144500584",
+                    "name": "Xiaofan Liu"
+                },
+                {
+                    "authorId": "3789712",
+                    "name": "Qinglin Jia"
+                },
+                {
+                    "authorId": "15161448",
+                    "name": "Chuhan Wu"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "2215625511",
+                    "name": "Dai Quanyu"
+                },
+                {
+                    "authorId": "2215701244",
+                    "name": "Lin Bo"
+                },
+                {
+                    "authorId": "144142354",
+                    "name": "Rui Zhang"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "52bff4c13bd03292d99474dbe6fe2484336a4520",
+            "title": "Unbiased Delayed Feedback Label Correction for Conversion Rate Prediction",
+            "abstract": "Conversion rate prediction is critical to many online applications such as digital display advertising. To capture dynamic data distribution, industrial systems often require retraining models on recent data daily or weekly. However, the delay of conversion behavior usually leads to incorrect labeling, which is called delayed feedback problem. Existing work may fail to introduce the correct information about false negative samples due to data sparsity and dynamic data distribution. To directly introduce the correct feedback label information, we propose an Unbiased delayed feedback Label Correction framework (ULC), which uses an auxiliary model to correct labels for observed negative feedback samples. Firstly, we theoretically prove that the label-corrected loss is an unbiased estimate of the oracle loss using true labels. Then, as there are no ready training data for label correction, counterfactual labeling is used to construct artificial training data. Furthermore, since counterfactual labeling utilizes only partial training data, we design an embedding-based alternative training method to enhance performance. Comparative experiments on both public and private datasets and detailed analyses show that our proposed approach effectively alleviates the delayed feedback problem and consistently outperforms the previous state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115568639",
+                    "name": "Yifan Wang"
+                },
+                {
+                    "authorId": "3685571",
+                    "name": "Peijie Sun"
+                },
+                {
+                    "authorId": "39767557",
+                    "name": "M. Zhang"
+                },
+                {
+                    "authorId": "3789712",
+                    "name": "Qinglin Jia"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "8093158",
+                    "name": "Shaoping Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "5e61d8504ed4ab3999a2118b9b1ba5c6cf322c7c",
+            "title": "Contrastive Multi-view Framework for Customer Lifetime Value Prediction",
+            "abstract": "Accurate customer lifetime value (LTV) prediction can help service providers optimize their marketing policies in customer-centric applications. However, the heavy sparsity of consumption events and the interference of data variance and noise obstruct LTV estimation. Many existing LTV prediction methods directly train a single-view LTV predictor on consumption samples, which may yield inaccurate and even biased knowledge extraction. In this paper, we propose a contrastive multi-view framework for LTV prediction, which is a plug-and-play solution compatible with various backbone models. It synthesizes multiple heterogeneous LTV regressors with complementary knowledge to improve model robustness and captures sample relatedness via contrastive learning to mitigate the dependency on data abundance. Concretely, we use a decomposed scheme that converts the LTV prediction problem into a combination of estimating consumption probability and payment amount. To alleviate the impact of noisy data on model learning, we propose a multi-view framework that jointly optimizes multiple types of regressors with diverse characteristics and advantages to encode and fuse comprehensive knowledge. To fully exploit the potential of limited training samples, we propose a hybrid contrastive learning method to help capture the relatedness between samples in both classification and regression tasks. We conduct extensive experiments on a real-world game LTV prediction dataset and the results validate the effectiveness of our method. We have deployed our solution online in Huawei's mobile game center and achieved 32.26% of total payment amount gains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "15161448",
+                    "name": "Chuhan Wu"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "3789712",
+                    "name": "Qinglin Jia"
+                },
+                {
+                    "authorId": "2149670667",
+                    "name": "Hong Zhu"
+                },
+                {
+                    "authorId": "2220572561",
+                    "name": "Yuan Fang"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "61bbc4c25c507107895bfe710ebc72cbbe8e2190",
+            "title": "Learning Binarized Graph Representations with Multi-faceted Quantization Reinforcement for Top-K Recommendation",
+            "abstract": "Learning vectorized embeddings is at the core of various recommender systems for user-item matching. To perform efficient online inference, representation quantization, aiming to embed the latent features by a compact sequence of discrete numbers, recently shows the promising potentiality in optimizing both memory and computation overheads. However, existing work merely focuses on numerical quantization whilst ignoring the concomitant information loss issue, which, consequently, leads to conspicuous performance degradation. In this paper, we propose a novel quantization framework to learn Binarized Graph Representations for Top-K Recommendation (BiGeaR). We introduce multi-faceted quantization reinforcement at the pre-, mid-, and post-stage of binarized representation learning, which substantially retains the informativeness against embedding binarization. In addition to saving the memory footprint, it further develops solid online inference acceleration with bitwise operations, providing alternative flexibility for the realistic deployment. The empirical results over five large real-world benchmarks show that BiGeaR achieves about 22%~40% performance improvement over the state-of-the-art quantization-based recommender system, and recovers about 95%~102% of the performance capability of the best full-precision counterpart with over 8\u00d7 time and space reduction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2681738",
+                    "name": "Yankai Chen"
+                },
+                {
+                    "authorId": "3339005",
+                    "name": "Huifeng Guo"
+                },
+                {
+                    "authorId": "2135319291",
+                    "name": "Yingxue Zhang"
+                },
+                {
+                    "authorId": "74142381",
+                    "name": "Chen Ma"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "145310663",
+                    "name": "Irwin King"
+                }
+            ]
+        },
+        {
+            "paperId": "94d1a5bf45778fec0156520476e1b1285da9f174",
+            "title": "IntTower: The Next Generation of Two-Tower Model for Pre-Ranking System",
+            "abstract": "Scoring a large number of candidates precisely in several milliseconds is vital for industrial pre-ranking systems. Existing pre-ranking systems primarily adopt the two-tower model since the \"user-item decoupling architecture\" paradigm is able to balance the efficiency and effectiveness. However, the cost of high efficiency is the neglect of the potential information interaction between user and item towers, hindering the prediction accuracy critically. In this paper, we show it is possible to design a two-tower model that emphasizes both information interactions and inference efficiency. The proposed model, IntTower (short for Interaction enhanced Two-Tower), consists of Light-SE, FE-Block and CIR modules. Specifically, lightweight Light-SE module is used to identify the importance of different features and obtain refined feature representations in each tower. FE-Block module performs fine-grained and early feature interactions to capture the interactive signals between user and item towers explicitly and CIR module leverages a contrastive interaction regularization to further enhance the interactions implicitly. Experimental results on three public datasets show that IntTower outperforms the SOTA pre-ranking models significantly and even achieves comparable performance in comparison with the ranking models. Moreover, we further verify the effectiveness of IntTower on a large-scale advertisement pre-ranking system. The code of IntTower is publicly available https://gitee.com/mindspore/models/tree/master/research/recommend/IntTower.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108750218",
+                    "name": "Xiangyang Li"
+                },
+                {
+                    "authorId": "92633145",
+                    "name": "Bo Chen"
+                },
+                {
+                    "authorId": "3339005",
+                    "name": "Huifeng Guo"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "2115802321",
+                    "name": "Chenxu Zhu"
+                },
+                {
+                    "authorId": "46550737",
+                    "name": "Xiang Long"
+                },
+                {
+                    "authorId": "48831399",
+                    "name": "Sujian Li"
+                },
+                {
+                    "authorId": "2116640929",
+                    "name": "Yichao Wang"
+                },
+                {
+                    "authorId": "2109155646",
+                    "name": "Wei Guo"
+                },
+                {
+                    "authorId": "2187856345",
+                    "name": "Longxia Mao"
+                },
+                {
+                    "authorId": "48211506",
+                    "name": "Jinxing Liu"
+                },
+                {
+                    "authorId": "3065080",
+                    "name": "Zhenhua Dong"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "0460e506d240d9b1e24abe16355bf599ff19003c",
+            "title": "Towards Low-loss 1-bit Quantization of User-item Representations for Top-K Recommendation",
+            "abstract": "Due to the promising advantages in space compression and inference acceleration, quantized representation learning for recommender systems has become an emerging research direction recently. As the target is to embed latent features in the discrete embedding space, developing quantization for user-item representations with a few low-precision integers confronts the challenge of high information loss, thus leading to unsatisfactory performance in Top-K recommendation. In this work, we study the problem of representation learning for recommendation with 1-bit quantization. We propose a model named Low-loss Quantized Graph Convolutional Network (L^2Q-GCN). Different from previous work that plugs quantization as the final encoder of user-item embeddings, L^2Q-GCN learns the quantized representations whilst capturing the structural information of user-item interaction graphs at different semantic levels. This achieves the substantial retention of intermediate interactive information, alleviating the feature smoothing issue for ranking caused by numerical quantization. To further improve the model performance, we also present an advanced solution named L^2Q-GCN-anl with quantization approximation and annealing training strategy. We conduct extensive experiments on four benchmarks over Top-K recommendation task. The experimental results show that, with nearly 9x representation storage compression, L^2Q-GCN-anl attains about 90~99% performance recovery compared to the state-of-the-art model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2681738",
+                    "name": "Yankai Chen"
+                },
+                {
+                    "authorId": "2108464021",
+                    "name": "Yifei Zhang"
+                },
+                {
+                    "authorId": "2135319291",
+                    "name": "Yingxue Zhang"
+                },
+                {
+                    "authorId": "3339005",
+                    "name": "Huifeng Guo"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                },
+                {
+                    "authorId": "1996703",
+                    "name": "Xiuqiang He"
+                },
+                {
+                    "authorId": "145310663",
+                    "name": "Irwin King"
+                }
+            ]
+        },
+        {
+            "paperId": "353703998af16aecc32b2f530bbbc1a001ca4afc",
+            "title": "AMM: Attentive Multi-field Matching for News Recommendation",
+            "abstract": "Personalized news recommendation is a critical technology to help users find interested news, and how to precisely match users' interests and candidate news lies in the core of news recommendation. Existing studies generally learn user's interest vector by aggregating his/her browsed news and then match it with the candidate news vector, which may lose the textual semantic matching signals for recommendation. In this paper, we propose an Attentive Multi-field Matching (AMM) framework for news recommendation which captures the semantic matching representations between each browsed news and candidate news, and then aggregates them as final user-news matching signal. In addition, our method incorporates multi-field information and designs a within-field and cross-field matching mechanism, which leverages complementary information from different fields (e.g., titles, abstracts and bodies) and obtain the multi-field matching representations. To achieve a comprehensive semantic understanding, we employ the most popular language model BERT to learn the matching representation of each browsed-candidate news pair, and incorporate the attention mechanism in aggregating procedure to characterize the importance of each matching representation for the final user-news matching signal. Experiments on the real world datasets validate the effectiveness of AMM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145908338",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "3789712",
+                    "name": "Qinglin Jia"
+                },
+                {
+                    "authorId": "2118820179",
+                    "name": "Chuyuan Wang"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "2144715839",
+                    "name": "Zhaowei Wang"
+                },
+                {
+                    "authorId": "1996703",
+                    "name": "Xiuqiang He"
+                }
+            ]
+        },
+        {
+            "paperId": "7d3c8b9cfa5a4147b7f1cb195bfc83fd64118757",
+            "title": "RMBERT: News Recommendation via Recurrent Reasoning Memory Network over BERT",
+            "abstract": "Personalized news recommendation aims to alleviate information overload and help users find news of their interests. Accurately matching candidate news and users' interests is the key to news recommendation. Most existing methods separately encode each user and news into vectors by news contents and then match the two vectors. However, a user's interest may differ in each news or each topic of one news. It's necessary to dynamically learn user and news vector and model their interaction. In this work, we present Recurrent Reasoning Memory Network over BERT (RMBERT) for news recommendation. Compared with other methods, our approach can leverage the ability of content modeling from BERT. Moreover, the recurrent reasoning memory network which performs a series of attention based reasoning steps can dynamically learn user and news vector and model their interaction in each step. As a result, our approach can better model user's interests. We conduct extensive experiments on a real-world news recommendation dataset and the results show that our approach significantly outperforms existing state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3789712",
+                    "name": "Qinglin Jia"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "2145908338",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "1996703",
+                    "name": "Xiuqiang He"
+                },
+                {
+                    "authorId": "2108997533",
+                    "name": "Jieming Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "a137248bde9f69281eae387feae83a8ed6eba887",
+            "title": "Why Do We Click: Visual Impression-aware News Recommendation",
+            "abstract": "There is a soaring interest in the news recommendation research scenario due to the information overload. To accurately capture users' interests, we propose to model multi-modal features, in addition to the news titles that are widely used in existing works, for news recommendation. Besides, existing research pays little attention to the click decision-making process in designing multi-modal modeling modules. In this work, inspired by the fact that users make their click decisions mostly based on the visual impression they perceive when browsing news, we propose to capture such visual impression information with visual-semantic modeling for news recommendation. In this paper, we refer to visual impression as the region of the news displayed on the user interface of a news application, which delivers both content and layout information to users. Specifically, we devise the local impression modeling module to simultaneously attend to decomposed details in the impression when understanding the semantic meaning of news title, which could explicitly get close to the process of users reading news. In addition, we inspect the impression from a global view and take structural information, such as the arrangement of different fields and spatial position of different words on the impression, into the modeling of multiple modalities. To accommodate the research of visual impression-aware news recommendation, we extend the text-dominated news recommendation dataset MIND by adding snapshot impression images and will release it to nourish the research field. Extensive comparisons with the state-of-the-art news recommenders along with the in-depth analyses demonstrate the effectiveness of the proposed method and the promising capability of modeling visual impressions for the content-based recommenders.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2129125609",
+                    "name": "Jiahao Xun"
+                },
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "47122432",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2108997533",
+                    "name": "Jieming Zhu"
+                },
+                {
+                    "authorId": "2145908338",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "2143375428",
+                    "name": "Jingjie Li"
+                },
+                {
+                    "authorId": "1996703",
+                    "name": "Xiuqiang He"
+                },
+                {
+                    "authorId": "3945955",
+                    "name": "Xiaofei He"
+                },
+                {
+                    "authorId": "144078686",
+                    "name": "Tat-Seng Chua"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        }
+    ]
+}

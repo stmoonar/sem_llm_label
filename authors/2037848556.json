@@ -1,0 +1,274 @@
+{
+    "authorId": "2037848556",
+    "papers": [
+        {
+            "paperId": "860ba78f9789bbfc99c299b18558ca19430d8fea",
+            "title": "LLM-SR: Scientific Equation Discovery via Programming with Large Language Models",
+            "abstract": "Mathematical equations have been unreasonably effective in describing complex natural phenomena across various scientific disciplines. However, discovering such insightful equations from data presents significant challenges due to the necessity of navigating extremely high-dimensional combinatorial and nonlinear hypothesis spaces. Traditional methods of equation discovery, commonly known as symbolic regression, largely focus on extracting equations from data alone, often neglecting the rich domain-specific prior knowledge that scientists typically depend on. To bridge this gap, we introduce LLM-SR, a novel approach that leverages the extensive scientific knowledge and robust code generation capabilities of Large Language Models (LLMs) to discover scientific equations from data in an efficient manner. Specifically, LLM-SR treats equations as programs with mathematical operators and combines LLMs' scientific priors with evolutionary search over equation programs. The LLM iteratively proposes new equation skeleton hypotheses, drawing from its physical understanding, which are then optimized against data to estimate skeleton parameters. We demonstrate LLM-SR's effectiveness across three diverse scientific domains, where it discovers physically accurate equations that provide significantly better fits to in-domain and out-of-domain data compared to the well-established symbolic regression baselines. Incorporating scientific prior knowledge also enables LLM-SR to search the equation space more efficiently than baselines. Code is available at: https://github.com/deep-symbolic-mathematics/LLM-SR",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "1999900316",
+                    "name": "Kazem Meidani"
+                },
+                {
+                    "authorId": "2152953535",
+                    "name": "Shashank Gupta"
+                },
+                {
+                    "authorId": "3614493",
+                    "name": "A. Farimani"
+                },
+                {
+                    "authorId": "2262444977",
+                    "name": "Chandan K. Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "0a6bc37a07a37e3573d36e10cc11669eca0ff903",
+            "title": "Execution-based Code Generation using Deep Reinforcement Learning",
+            "abstract": "The utilization of programming language (PL) models, pre-trained on large-scale code corpora, as a means of automating software engineering processes has demonstrated considerable potential in streamlining various code generation tasks such as code completion, code translation, and program synthesis. However, current approaches mainly rely on supervised fine-tuning objectives borrowed from text generation, neglecting unique sequence-level characteristics of code, including but not limited to compilability as well as syntactic and functional correctness. To address this limitation, we propose PPOCoder, a new framework for code generation that synergistically combines pre-trained PL models with Proximal Policy Optimization (PPO) which is a widely used deep reinforcement learning technique. By utilizing non-differentiable feedback from code execution and structure alignment, PPOCoder seamlessly integrates external code-specific knowledge into the model optimization process. It's important to note that PPOCoder is a task-agnostic and model-agnostic framework that can be used across different code generation tasks and PLs. Extensive experiments on three code generation tasks demonstrate the effectiveness of our proposed approach compared to SOTA methods, achieving significant improvements in compilation success rates and functional correctness across different PLs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "2171130495",
+                    "name": "Aneesh Jain"
+                },
+                {
+                    "authorId": "2121914227",
+                    "name": "Sindhu Tipirneni"
+                },
+                {
+                    "authorId": "144417522",
+                    "name": "Chandan K. Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "287a30043ad1c3e349095af7e3e42d3be3b6c0c9",
+            "title": "SNIP: Bridging Mathematical Symbolic and Numeric Realms with Unified Pre-training",
+            "abstract": "In an era where symbolic mathematical equations are indispensable for modeling complex natural phenomena, scientific inquiry often involves collecting observations and translating them into mathematical expressions. Recently, deep learning has emerged as a powerful tool for extracting insights from data. However, existing models typically specialize in either numeric or symbolic domains, and are usually trained in a supervised manner tailored to specific tasks. This approach neglects the substantial benefits that could arise from a task-agnostic multi-modal understanding between symbolic equations and their numeric counterparts. To bridge the gap, we introduce SNIP, a Symbolic-Numeric Integrated Pre-training model, which employs contrastive learning between symbolic and numeric domains, enhancing their mutual similarities in the embeddings. By performing latent space analysis, we observe that SNIP provides cross-domain insights into the representations, revealing that symbolic supervision enhances the embeddings of numeric data and vice versa. We evaluate SNIP across diverse tasks, including symbolic-to-numeric mathematical property prediction and numeric-to-symbolic equation discovery, commonly known as symbolic regression. Results show that SNIP effectively transfers to various tasks, consistently outperforming fully supervised baselines and competing strongly with established task-specific methods, especially in the low data regime scenarios where available data is limited. Code and model are available at: https://github.com/deep-symbolic-mathematics/Multimodal-Math-Pretraining",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1999900316",
+                    "name": "Kazem Meidani"
+                },
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "2262444977",
+                    "name": "Chandan K. Reddy"
+                },
+                {
+                    "authorId": "3614493",
+                    "name": "A. Farimani"
+                }
+            ]
+        },
+        {
+            "paperId": "295b40b0e734987aa6fa41d18a0673bf6eb51d03",
+            "title": "Graph-based Multi-ODE Neural Networks for Spatio-Temporal Traffic Forecasting",
+            "abstract": "There is a recent surge in the development of spatio-temporal forecasting models in the transportation domain. Long-range traffic forecasting, however, remains a challenging task due to the intricate and extensive spatio-temporal correlations observed in traffic networks. Current works primarily rely on road networks with graph structures and learn representations using graph neural networks (GNNs), but this approach suffers from over-smoothing problem in deep architectures. To tackle this problem, recent methods introduced the combination of GNNs with residual connections or neural ordinary differential equations (ODE). However, current graph ODE models face two key limitations in feature extraction: (1) they lean towards global temporal patterns, overlooking local patterns that are important for unexpected events; and (2) they lack dynamic semantic edges in their architectural design. In this paper, we propose a novel architecture called Graph-based Multi-ODE Neural Networks (GRAM-ODE) which is designed with multiple connective ODE-GNN modules to learn better representations by capturing different views of complex local and global dynamic spatio-temporal dependencies. We also add some techniques like shared weights and divergence constraints into the intermediate layers of distinct ODE-GNN modules to further improve their communication towards the forecasting task. Our extensive set of experiments conducted on six real-world datasets demonstrate the superior performance of GRAM-ODE compared with state-of-the-art baselines as well as the contribution of different components to the overall performance. The code is available at https://github.com/zbliu98/GRAM-ODE",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1739188800",
+                    "name": "Zibo Liu"
+                },
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "144417522",
+                    "name": "Chandan K. Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "b7016f306bb22ed98036c218c30f1c4d301d034c",
+            "title": "Transformer-based Planning for Symbolic Regression",
+            "abstract": "Symbolic regression (SR) is a challenging task in machine learning that involves finding a mathematical expression for a function based on its values. Recent advancements in SR have demonstrated the effectiveness of pre-trained transformer-based models in generating equations as sequences, leveraging large-scale pre-training on synthetic datasets and offering notable advantages in terms of inference time over classical Genetic Programming (GP) methods. However, these models primarily rely on supervised pre-training goals borrowed from text generation and overlook equation discovery objectives like accuracy and complexity. To address this, we propose TPSR, a Transformer-based Planning strategy for Symbolic Regression that incorporates Monte Carlo Tree Search into the transformer decoding process. Unlike conventional decoding strategies, TPSR enables the integration of non-differentiable feedback, such as fitting accuracy and complexity, as external sources of knowledge into the transformer-based equation generation process. Extensive experiments on various datasets show that our approach outperforms state-of-the-art methods, enhancing the model's fitting-complexity trade-off, extrapolation abilities, and robustness to noise.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "1999900316",
+                    "name": "Kazem Meidani"
+                },
+                {
+                    "authorId": "3614493",
+                    "name": "A. Farimani"
+                },
+                {
+                    "authorId": "144417522",
+                    "name": "Chandan K. Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "9844adb1e564ea48c09540a81cd5e10ded4f93f4",
+            "title": "Task-Driven Privacy-Preserving Data-Sharing Framework for the Industrial Internet",
+            "abstract": "Industrial Internet provides a collaborative computational platform for participating enterprises, allowing the collection of big data for machine learning tasks. Despite the promise of training and deployment acceleration, and the potential to optimize decision-making processes through data-sharing, the adoption of such technologies is impacted by the increasing concerns about information privacy. As enterprises prefer to keep data private, this limits interoperability. While prior work has largely explored privacy-preserving mechanisms, the proposed methods naively average or randomly sample data shared from all participants instead of selecting the most well-suited subsets for a particular downstream learning task. Motivated by the lack of effective data-sharing mechanisms for heterogeneous machine learning tasks in Industrial Internet, we propose PriED, a task-driven data-sharing framework that selectively fuses shared data and local data from participants to improve supervised learning performance. PriED utilizes privacy-preserving data distillation to facilitate data exchange, and dynamic data selection to optimize downstream machine learning tasks. We demonstrate performance improvements on a real semiconductor manufacturing case study.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "2111108386",
+                    "name": "Yingyan Zeng"
+                },
+                {
+                    "authorId": "2004145852",
+                    "name": "Muntasir Wahed"
+                },
+                {
+                    "authorId": "2203131370",
+                    "name": "Avi Seth"
+                },
+                {
+                    "authorId": "2146543541",
+                    "name": "Ran Jin"
+                },
+                {
+                    "authorId": "2099420",
+                    "name": "Ismini Lourentzou"
+                }
+            ]
+        },
+        {
+            "paperId": "9d04207832d24a5a0b675cbc4ce88c847dcfb8e2",
+            "title": "Contextual Bandit Guided Data Farming for Deep Neural Networks in Manufacturing Industrial Internet",
+            "abstract": "Deep Neural Networks (DNNs) have shown superior performance in supervised learning in Industrial Internet applications, such as quality modeling, virtual inspection, etc. However, the performance of DNNs relies on large and high quality data sets with sufficient sample sizes and appropriate distributions. Additionally, collecting and labeling large data sets can be labor-intensive and may fall short of meeting the online computational needs, including the fact that more samples in training may not always improve the modeling performance. Inspired by the theory of Design of Experiments, we propose a Contextual Bandit-based Representation Design (CBRD) to generate data suitable for training DNNs. The CBRD combines the offline experimental design criteria as the arms of a contextual bandit model for DNN training in a joint and interactive way for online batch data. A low-dimensional representation of the input design space learned by variational autoencoder is used to generate new samples. The integration of VAE and contextual bandit enables the generation of samples adaptive to modeling performance. A real case study of Aerosol\u00ae Jet Printing process is used to demonstrate the merits of the CBRD method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111108386",
+                    "name": "Yingyan Zeng"
+                },
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "40803596",
+                    "name": "Syed Hasib Akhter Faruqui"
+                },
+                {
+                    "authorId": "2182218",
+                    "name": "A. Alaeddini"
+                },
+                {
+                    "authorId": "31840472",
+                    "name": "R. Jin"
+                }
+            ]
+        },
+        {
+            "paperId": "b3d19374137ad7fa8724676bdb48ffe9e0e9a672",
+            "title": "Adaptively Weighted Top-N Recommendation for Organ Matching",
+            "abstract": "Reducing the shortage of organ donations to meet the demands of patients on the waiting list has being a major challenge in organ transplantation. Because of the shortage, organ matching decision is the most critical decision to assign the limited viable organs to the most \u201csuitable\u201d patients. Currently, organ matching decisions are only made by matching scores calculated via scoring models, which are built by the first principles. However, these models may disagree with the actual post-transplantation matching performance (e.g., patient's post-transplant quality of life (QoL) or graft failure measurements). In this paper, we formulate the organ matching decision-making as a top-N recommendation problem and propose an Adaptively Weighted Top-N Recommendation (AWTR) method. AWTR improves performance of the current scoring models by using limited actual matching performance in historical datasets as well as the collected covariates from organ donors and patients. AWTR sacrifices the overall recommendation accuracy by emphasizing the recommendation and ranking accuracy for top-N matched patients. The proposed method is validated in a simulation study, where KAS [60] is used to simulate the organ-patient recommendation response. The results show that our proposed method outperforms seven state-of-the-art top-N recommendation benchmark methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "49795092",
+                    "name": "Xiaoyu Chen"
+                },
+                {
+                    "authorId": "31840472",
+                    "name": "R. Jin"
+                }
+            ]
+        },
+        {
+            "paperId": "f9c245eed7aa070acc7de80ec98b3182be38ae64",
+            "title": "Deep Neural Network Pipelines for Multivariate Time Series Classification in Smart Manufacturing",
+            "abstract": "In smart manufacturing, multivariate time series (MTS) data from interconnected sensors and actuators have been collected to model the product quality. However, high dimensional MTS data associated with complex functional structures has posed significant challenges for classical machine learning and statistical learning methods. As alternatives, deep neural networks (DNN) with highly non-linear structures and various data augmentation, pre-processing, and tuning techniques have been investigated for MTS data modeling. The recent transformation of step-by-step offline data analytics to the fast end-to-end computation pipelines motivated us to investigate DNN pipelines for MTS classification problems. However, execution of all the candidate DNN pipelines is computationally expensive, which calls for an effective approach. Thus, the adaptive top-N linear generative-discriminative (AT-LinGD) method is proposed as a learning to rank method that learns top-N ranked pipelines by iteratively exploring a small subset of all possible pipelines. It generates latent variables to describe pipelines and explore them to update the exploration set in a sequential manner. Thus, the adaptively generated latent variables enable the efficient and accurate ranking of the top-N pipelines with limited execution. A real case study of aerosol\u00ae jet printing process demonstrates the merits of the AT-LinGD model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                },
+                {
+                    "authorId": "2111108386",
+                    "name": "Yingyan Zeng"
+                },
+                {
+                    "authorId": "49795092",
+                    "name": "Xiaoyu Chen"
+                },
+                {
+                    "authorId": "31840472",
+                    "name": "R. Jin"
+                },
+                {
+                    "authorId": "35946980",
+                    "name": "Xinwei Deng"
+                },
+                {
+                    "authorId": "2140444815",
+                    "name": "Chuck Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "a76ed593ec2049c1ca9eb20fcfdb3bb3b4de6052",
+            "title": "Planar Maximum Coverage Location Problem with Partial Coverage, Continuous Spatial Demand, and Adjustable Quality of Service",
+            "abstract": "We consider a generalization of the classical planar maximum coverage location problem (PMCLP) in which partial coverage is allowed, facilities have adjustable quality of service (QoS) or service range, and demand zones and service zone of each facility are represented by two-dimensional spatial objects such as rectangles, circles, polygons, etc. We denote this generalization by PMCLP-PC-QoS. A key challenge in this problem is to simultaneously decide position of the facilities on a continuous two-dimensional plane and their QoS. We present a greedy algorithm and a pseudo-greedy algorithm for it, and provide their approximation ratios. We also investigate theoretical properties and propose exact algorithms for solving: (1) PMCLP-PC-QoS where demand and service zones are represented by axis-parallel rectangles (denoted by PMCLP-PCR-QoS), which also has applications in camera surveillance and satellite imaging; and (2) one dimensional PMCLP-PC-QoS which has applications in river cleanups. These results extend and strengthen the only known exact algorithm for PMCLP-PCR-QoS with fixed and same QoS by Bansal and Kianfar [INFORMS Journal on Computing 29(1), 152-169, 2017]. We present results of our computational experiments conducted to evaluate the performance of our proposed exact and approximation algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "39392710",
+                    "name": "M. Bansal"
+                },
+                {
+                    "authorId": "2037848556",
+                    "name": "Parshin Shojaee"
+                }
+            ]
+        }
+    ]
+}

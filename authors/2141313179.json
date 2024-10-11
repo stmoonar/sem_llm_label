@@ -1,0 +1,485 @@
+{
+    "authorId": "2141313179",
+    "papers": [
+        {
+            "paperId": "1c1b5bc728cb6c59574e77987441ec066bea9109",
+            "title": "ProSparse: Introducing and Enhancing Intrinsic Activation Sparsity within Large Language Models",
+            "abstract": "Activation sparsity refers to the existence of considerable weakly-contributed elements among activation outputs. As a prevalent property of the models using the ReLU activation function, activation sparsity has been proven a promising paradigm to boost model inference efficiency. Nevertheless, most large language models (LLMs) adopt activation functions without intrinsic activation sparsity (e.g., GELU and Swish). Some recent efforts have explored introducing ReLU or its variants as the substitutive activation function to help LLMs achieve activation sparsity and inference acceleration, but few can simultaneously obtain high sparsity and comparable model performance. This paper introduces a simple and effective sparsification method named\"ProSparse\"to push LLMs for higher activation sparsity while maintaining comparable performance. Specifically, after substituting the activation function of LLMs with ReLU, ProSparse adopts progressive sparsity regularization with a factor smoothly increasing along the multi-stage sine curves. This can enhance activation sparsity and mitigate performance degradation by avoiding radical shifts in activation distributions. With ProSparse, we obtain high sparsity of 89.32% for LLaMA2-7B, 88.80% for LLaMA2-13B, and 87.89% for end-size MiniCPM-1B, respectively, achieving comparable performance to their original Swish-activated versions. These present the most sparsely activated models among open-source LLaMA versions and competitive end-size models, considerably surpassing ReluLLaMA-7B (66.98%) and ReluLLaMA-13B (71.56%). Our inference acceleration experiments further demonstrate the significant practical acceleration potential of LLMs with higher activation sparsity, obtaining up to 4.52$\\times$ inference speedup.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283100077",
+                    "name": "Chenyang Song"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2284975505",
+                    "name": "Xiyu Shi"
+                },
+                {
+                    "authorId": "2223171532",
+                    "name": "Kuai Li"
+                },
+                {
+                    "authorId": "2248149386",
+                    "name": "Chen Chen"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2256694218",
+                    "name": "Guanglin Li"
+                },
+                {
+                    "authorId": "2285186908",
+                    "name": "Tao Yang"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "26e13e1da4f47c93c9ad0daf9cc9e2bb4ffd063d",
+            "title": "InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory",
+            "abstract": "Large language models (LLMs) have emerged as a cornerstone in real-world applications with lengthy streaming inputs (e.g., LLM-driven agents). However, existing LLMs, pre-trained on sequences with a restricted maximum length, cannot process longer sequences due to the out-of-domain and distraction issues. Common solutions often involve continual pre-training on longer sequences, which will introduce expensive computational overhead and uncontrollable change in model capabilities. In this paper, we unveil the intrinsic capacity of LLMs for understanding extremely long sequences without any fine-tuning. To this end, we introduce a training-free memory-based method, InfLLM. Specifically, InfLLM stores distant contexts into additional memory units and employs an efficient mechanism to lookup token-relevant units for attention computation. Thereby, InfLLM allows LLMs to efficiently process long sequences with a limited context window and well capture long-distance dependencies. Without any training, InfLLM enables LLMs that are pre-trained on sequences consisting of a few thousand tokens to achieve comparable performance with competitive baselines that continually train these LLMs on long sequences. Even when the sequence length is scaled to $1,024$K, InfLLM still effectively captures long-distance dependencies. Our code can be found in \\url{https://github.com/thunlp/InfLLM}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51131083",
+                    "name": "Chaojun Xiao"
+                },
+                {
+                    "authorId": "2261405658",
+                    "name": "Pengle Zhang"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2427350",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2621696",
+                    "name": "Zhengyan Zhang"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2249530374",
+                    "name": "Song Han"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "504f3713a74c66d61a46fe658988861302eb088d",
+            "title": "States Hidden in Hidden States: LLMs Emerge Discrete State Representations Implicitly",
+            "abstract": "Large Language Models (LLMs) exhibit various emergent abilities. Among these abilities, some might reveal the internal working mechanisms of models. In this paper, we uncover a novel emergent capability in models: the intrinsic ability to perform extended sequences of calculations without relying on chain-of-thought step-by-step solutions. Remarkably, the most advanced models can directly output the results of two-digit number additions with lengths extending up to 15 addends. We hypothesize that the model emerges Implicit Discrete State Representations (IDSRs) within its hidden states and performs symbolic calculations internally. To test this hypothesis, we design a sequence of experiments that look into the hidden states. Specifically, we first confirm that IDSRs exist. Then, we provide interesting observations about the formation of IDSRs from layer, digit, and sequence perspectives. Finally, we confirm that models indeed use IDSRs to produce the final answers. However, we also discover that these state representations are far from lossless in current open-sourced models, leading to inaccuracies in their final performance. Our work presents a novel exploration of LLMs' symbolic calculation abilities and the underlying mechanisms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284931475",
+                    "name": "Junhao Chen"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "77da0a75cb33c27269b5114a5334fd2228a31dea",
+            "title": "LEGENT: Open Platform for Embodied Agents",
+            "abstract": "Despite advancements in Large Language Models (LLMs) and Large Multimodal Models (LMMs), their integration into language-grounded, human-like embodied agents remains incomplete, hindering complex real-life task performance in physical environments. Existing integrations often feature limited open sourcing, challenging collective progress in this field. We introduce LEGENT, an open, scalable platform for developing embodied agents using LLMs and LMMs. LEGENT offers a dual approach: a rich, interactive 3D environment with communicable and actionable agents, paired with a user-friendly interface, and a sophisticated data generation pipeline utilizing advanced algorithms to exploit supervision from simulated worlds at scale. In our experiments, an embryonic vision-language-action model trained on LEGENT-generated data surpasses GPT-4V in embodied tasks, showcasing promising generalization capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2651000",
+                    "name": "Zhili Cheng"
+                },
+                {
+                    "authorId": "2298946235",
+                    "name": "Zhitong Wang"
+                },
+                {
+                    "authorId": "92837695",
+                    "name": "Jinyi Hu"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2299762652",
+                    "name": "An Liu"
+                },
+                {
+                    "authorId": "2295757664",
+                    "name": "Yuge Tu"
+                },
+                {
+                    "authorId": "2299163375",
+                    "name": "Pengkai Li"
+                },
+                {
+                    "authorId": "2298950269",
+                    "name": "Lei Shi"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "7d417465bdf254f8b4491c0e4adbace8f49010ab",
+            "title": "Unified View of Grokking, Double Descent and Emergent Abilities: A Perspective from Circuits Competition",
+            "abstract": "Recent studies have uncovered intriguing phenomena in deep learning, such as grokking, double descent, and emergent abilities in large language models, which challenge human intuition and are crucial for a deeper understanding of neural models. In this paper, we present a comprehensive framework that provides a unified view of these three phenomena, focusing on the competition between memorization and generalization circuits. This approach, initially employed to explain grokking, is extended in our work to encompass a wider range of model sizes and training data volumes. Our framework delineates four distinct training dynamics, each depending on varying combinations of model size and training data quantity. Utilizing this framework, we provide a detailed analysis of the double descent phenomenon and propose two verifiable predictions regarding its occurrence, both substantiated by our experimental results. Moreover, we expand our framework to the multi-task learning paradigm, demonstrating how algorithm tasks can be turned into emergent abilities. This offers a novel perspective to understand emergent abilities in Large Language Models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2286459314",
+                    "name": "Yufei Huang"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2284728053",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "bb39d2b273d4c75f8e489f1f66dec42a7e14c5fd",
+            "title": "DebugBench: Evaluating Debugging Capability of Large Language Models",
+            "abstract": "Large Language Models (LLMs) have demonstrated exceptional coding capability. However, as another critical component of programming proficiency, the debugging capability of LLMs remains relatively unexplored. Previous evaluations of LLMs' debugging ability are significantly limited by the risk of data leakage, the scale of the dataset, and the variety of tested bugs. To overcome these deficiencies, we introduce `DebugBench', an LLM debugging benchmark consisting of 4,253 instances. It covers four major bug categories and 18 minor types in C++, Java, and Python. To construct DebugBench, we collect code snippets from the LeetCode community, implant bugs into source data with GPT-4, and assure rigorous quality checks. We evaluate two commercial and four open-source models in a zero-shot scenario. We find that (1) while closed-source models exhibit inferior debugging performance compared to humans, open-source models relatively lower pass rate scores; (2) the complexity of debugging notably fluctuates depending on the bug category; (3) incorporating runtime feedback has a clear impact on debugging performance which is not always helpful. As an extension, we also compare LLM debugging and code generation, revealing a strong correlation between them for closed-source models. These findings will benefit the development of LLMs in debugging.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214603370",
+                    "name": "Runchu Tian"
+                },
+                {
+                    "authorId": "2114059497",
+                    "name": "Yining Ye"
+                },
+                {
+                    "authorId": "50625437",
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "2214579778",
+                    "name": "Xin Cong"
+                },
+                {
+                    "authorId": "2427350",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "bcf2c7e3f4ed64c8294c35a59220a26dd4f40060",
+            "title": "OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems",
+            "abstract": "Recent advancements have seen Large Language Models (LLMs) and Large Multimodal Models (LMMs) surpassing general human capabilities in various tasks, approaching the proficiency level of human experts across multiple domains. With traditional benchmarks becoming less challenging for these models, new rigorous challenges are essential to gauge their advanced abilities. In this work, we present OlympiadBench, an Olympiad-level bilingual multimodal scientific benchmark, featuring 8,476 problems from Olympiad-level mathematics and physics competitions, including the Chinese college entrance exam. Each problem is detailed with expert-level annotations for step-by-step reasoning. Evaluating top-tier models on OlympiadBench, we implement a comprehensive assessment methodology to accurately evaluate model responses. Notably, the best-performing model, GPT-4V, attains an average score of 17.97% on OlympiadBench, with a mere 10.74% in physics, highlighting the benchmark rigor and the intricacy of physical reasoning. Our analysis orienting GPT-4V points out prevalent issues with hallucinations, knowledge omissions, and logical fallacies. We hope that our challenging benchmark can serve as a valuable resource for helping future AGI research endeavors. The data and evaluation code are available at \\url{https://github.com/OpenBMB/OlympiadBench}",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2256951801",
+                    "name": "Chaoqun He"
+                },
+                {
+                    "authorId": "2284865622",
+                    "name": "Renjie Luo"
+                },
+                {
+                    "authorId": "2115834034",
+                    "name": "Yuzhuo Bai"
+                },
+                {
+                    "authorId": "1576223501",
+                    "name": "Shengding Hu"
+                },
+                {
+                    "authorId": "2284862784",
+                    "name": "Zhen Leng Thai"
+                },
+                {
+                    "authorId": "2284950045",
+                    "name": "Junhao Shen"
+                },
+                {
+                    "authorId": "92837695",
+                    "name": "Jinyi Hu"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2284934074",
+                    "name": "Yujie Huang"
+                },
+                {
+                    "authorId": "2284948840",
+                    "name": "Yuxiang Zhang"
+                },
+                {
+                    "authorId": "2284873062",
+                    "name": "Jie Liu"
+                },
+                {
+                    "authorId": "2284939498",
+                    "name": "Lei Qi"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "bef263083bf5ea965c37b152bc5f0b43aaf74824",
+            "title": "Beyond Natural Language: LLMs Leveraging Alternative Formats for Enhanced Reasoning and Communication",
+            "abstract": "Natural language (NL) has long been the predominant format for human cognition and communication, and by extension, has been similarly pivotal in the development and application of Large Language Models (LLMs). Yet, besides NL, LLMs have seen various non-NL formats during pre-training, such as code and logical expression. NL's status as the optimal format for LLMs, particularly in single-LLM reasoning and multi-agent communication, has not been thoroughly examined. In this work, we challenge the default use of NL by exploring the utility of non-NL formats in these contexts. We show that allowing LLMs to autonomously select the most suitable format before reasoning or communicating leads to a 3.3 to 5.7\\% improvement in reasoning efficiency for different LLMs, and up to a 72.7\\% reduction in token usage in multi-agent communication, all while maintaining communicative effectiveness. Our comprehensive analysis further reveals that LLMs can devise a format from limited task instructions and that the devised format is effectively transferable across different LLMs. Intriguingly, the structured communication format decided by LLMs exhibits notable parallels with established agent communication languages, suggesting a natural evolution towards efficient, structured communication in agent communication. Our code is released at \\url{https://github.com/thunlp/AutoForm}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109136284",
+                    "name": "Weize Chen"
+                },
+                {
+                    "authorId": "2232928180",
+                    "name": "Chenfei Yuan"
+                },
+                {
+                    "authorId": "2288556899",
+                    "name": "Jiarui Yuan"
+                },
+                {
+                    "authorId": "48576745",
+                    "name": "Yusheng Su"
+                },
+                {
+                    "authorId": "2214580084",
+                    "name": "Cheng Qian"
+                },
+                {
+                    "authorId": "2257052321",
+                    "name": "Cheng Yang"
+                },
+                {
+                    "authorId": "2257007994",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "c21022a4dca7b1a32d2f79818cb7e51df712372f",
+            "title": "UltraLink: An Open-Source Knowledge-Enhanced Multilingual Supervised Fine-tuning Dataset",
+            "abstract": "Open-source large language models (LLMs) have gained significant strength across diverse fields. Nevertheless, the majority of studies primarily concentrate on English, with only limited exploration into the realm of multilingual abilities. In this work, we therefore construct an open-source multilingual supervised fine-tuning dataset. Different from previous works that simply translate English instructions, we consider both the language-specific and language-agnostic abilities of LLMs. Firstly, we introduce a knowledge-grounded data augmentation approach to elicit more language-specific knowledge of LLMs, improving their ability to serve users from different countries. Moreover, we find modern LLMs possess strong cross-lingual transfer capabilities, thus repeatedly learning identical content in various languages is not necessary. Consequently, we can substantially prune the language-agnostic supervised fine-tuning (SFT) data without any performance degradation, making multilingual SFT more efficient. The resulting UltraLink dataset comprises approximately 1 million samples across five languages (i.e., En, Zh, Ru, Fr, Es), and the proposed data construction method can be easily extended to other languages. UltraLink-LM, which is trained on UltraLink, outperforms several representative baselines across many tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283173813",
+                    "name": "Haoyu Wang"
+                },
+                {
+                    "authorId": "2267033597",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "2277242040",
+                    "name": "Yukun Yan"
+                },
+                {
+                    "authorId": "2283197093",
+                    "name": "Xujia Wang"
+                },
+                {
+                    "authorId": "2283302531",
+                    "name": "Zhiyu Yang"
+                },
+                {
+                    "authorId": "2239055610",
+                    "name": "Yuzhuang Xu"
+                },
+                {
+                    "authorId": "49047064",
+                    "name": "Zhenghao Liu"
+                },
+                {
+                    "authorId": "46649145",
+                    "name": "Ning Ding"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "c86b98d0b5fe07e46fd862f47f717271c45b96fe",
+            "title": "UniMem: Towards a Unified View of Long-Context Large Language Models",
+            "abstract": "Long-context processing is a critical ability that constrains the applicability of large language models (LLMs). Although there exist various methods devoted to enhancing the long-context processing ability of LLMs, they are developed in an isolated manner and lack systematic analysis and integration of their strengths, hindering further developments. In this paper, we introduce UniMem, a Unified framework that reformulates existing long-context methods from the view of Memory augmentation of LLMs. Distinguished by its four core dimensions-Memory Management, Memory Writing, Memory Reading, and Memory Injection, UniMem empowers researchers to conduct systematic exploration of long-context methods. We re-formulate 16 existing methods based on UniMem and analyze four representative methods: Transformer-XL, Memorizing Transformer, RMT, and Longformer into equivalent UniMem forms to reveal their design principles and strengths. Based on these analyses, we propose UniMix, an innovative approach that integrates the strengths of these algorithms. Experimental results show that UniMix achieves superior performance in handling long contexts with significantly lower perplexity than baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257383989",
+                    "name": "Junjie Fang"
+                },
+                {
+                    "authorId": "2153720923",
+                    "name": "Likai Tang"
+                },
+                {
+                    "authorId": "2282538520",
+                    "name": "Hongzhe Bi"
+                },
+                {
+                    "authorId": "50625437",
+                    "name": "Yujia Qin"
+                },
+                {
+                    "authorId": "2109509345",
+                    "name": "Si Sun"
+                },
+                {
+                    "authorId": "2282619799",
+                    "name": "Zhenyu Li"
+                },
+                {
+                    "authorId": "2282714061",
+                    "name": "Haolun Li"
+                },
+                {
+                    "authorId": "2282543766",
+                    "name": "Yongjian Li"
+                },
+                {
+                    "authorId": "2214579778",
+                    "name": "Xin Cong"
+                },
+                {
+                    "authorId": "2277242040",
+                    "name": "Yukun Yan"
+                },
+                {
+                    "authorId": "2257017314",
+                    "name": "Xiaodong Shi"
+                },
+                {
+                    "authorId": "2282508059",
+                    "name": "Sen Song"
+                },
+                {
+                    "authorId": "2427350",
+                    "name": "Yankai Lin"
+                },
+                {
+                    "authorId": "2141313179",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2273551430",
+                    "name": "Maosong Sun"
+                }
+            ]
+        }
+    ]
+}

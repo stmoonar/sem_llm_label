@@ -1,0 +1,287 @@
+{
+    "authorId": "89583148",
+    "papers": [
+        {
+            "paperId": "41c5c6b6074d9672e3bd639f5a6fc5a3f2422c2f",
+            "title": "Machine Unlearning Fails to Remove Data Poisoning Attacks",
+            "abstract": "We revisit the efficacy of several practical methods for approximate machine unlearning developed for large-scale deep learning. In addition to complying with data deletion requests, one often-cited potential application for unlearning methods is to remove the effects of training on poisoned data. We experimentally demonstrate that, while existing unlearning methods have been demonstrated to be effective in a number of evaluation settings (e.g., alleviating membership inference attacks), they fail to remove the effects of data poisoning, across a variety of types of poisoning attacks (indiscriminate, targeted, and a newly-introduced Gaussian poisoning attack) and models (image classifiers and LLMs); even when granted a relatively large compute budget. In order to precisely characterize unlearning efficacy, we introduce new evaluation metrics for unlearning based on data poisoning. Our results suggest that a broader perspective, including a wider variety of evaluations, is required to avoid a false sense of confidence in machine unlearning procedures for deep learning without provable guarantees. Moreover, while unlearning methods show some signs of being useful to efficiently remove poisoned datapoints without having to retrain, our work suggests that these methods are not yet\"ready for prime time\", and currently provide limited benefit over retraining.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "1742282375",
+                    "name": "Jimmy Z. Di"
+                },
+                {
+                    "authorId": "2308116595",
+                    "name": "Yiwei Lu"
+                },
+                {
+                    "authorId": "2284763541",
+                    "name": "Gautam Kamath"
+                },
+                {
+                    "authorId": "22265444",
+                    "name": "Ayush Sekhari"
+                },
+                {
+                    "authorId": "2273685865",
+                    "name": "Seth Neel"
+                }
+            ]
+        },
+        {
+            "paperId": "4a95e054e90b6802f2f5eaf8626b2a484fe6a868",
+            "title": "Explaining the Model, Protecting Your Data: Revealing and Mitigating the Data Privacy Risks of Post-Hoc Model Explanations via Membership Inference",
+            "abstract": "Predictive machine learning models are becoming increasingly deployed in high-stakes contexts involving sensitive personal data; in these contexts, there is a trade-off between model explainability and data privacy. In this work, we push the boundaries of this trade-off: with a focus on foundation models for image classification fine-tuning, we reveal unforeseen privacy risks of post-hoc model explanations and subsequently offer mitigation strategies for such risks. First, we construct VAR-LRT and L1/L2-LRT, two new membership inference attacks based on feature attribution explanations that are significantly more successful than existing explanation-leveraging attacks, particularly in the low false-positive rate regime that allows an adversary to identify specific training set members with confidence. Second, we find empirically that optimized differentially private fine-tuning substantially diminishes the success of the aforementioned attacks, while maintaining high model accuracy. We carry out a systematic empirical investigation of our 2 new attacks with 5 vision transformer architectures, 5 benchmark datasets, 4 state-of-the-art post-hoc explanation methods, and 4 privacy strength settings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2230177657",
+                    "name": "Catherine Huang"
+                },
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "65a45d8f9bb1d804e097675f8887328099938aa6",
+            "title": "Towards Non-Adversarial Algorithmic Recourse",
+            "abstract": "The streams of research on adversarial examples and counterfactual explanations have largely been growing independently. This has led to several recent works trying to elucidate their similarities and differences. Most prominently, it has been argued that adversarial examples, as opposed to counterfactual explanations, have a unique characteristic in that they lead to a misclassification compared to the ground truth. However, the computational goals and methodologies employed in existing counterfactual explanation and adversarial example generation methods often lack alignment with this requirement. Using formal definitions of adversarial examples and counterfactual explanations, we introduce non-adversarial algorithmic recourse and outline why in high-stakes situations, it is imperative to obtain counterfactual explanations that do not exhibit adversarial characteristics. We subsequently investigate how different components in the objective functions, e.g., the machine learning model or cost function used to measure distance, determine whether the outcome can be considered an adversarial example or not. Our experiments on common datasets highlight that these design choices are often more critical in deciding whether recourse is non-adversarial than whether recourse or attack algorithms are used. Furthermore, we show that choosing a robust and accurate machine learning model results in less adversarial recourse desired in practice.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130899453",
+                    "name": "Tobias Leemann"
+                },
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "32208207",
+                    "name": "Bardh Prenkaj"
+                },
+                {
+                    "authorId": "1686448",
+                    "name": "Gjergji Kasneci"
+                }
+            ]
+        },
+        {
+            "paperId": "6cc6d59984853e5ddcbd696c443b14244d305b50",
+            "title": "In-Context Unlearning: Language Models as Few Shot Unlearners",
+            "abstract": "Machine unlearning, the study of efficiently removing the impact of specific training instances on a model, has garnered increased attention in recent years due to regulatory guidelines such as the \\emph{Right to be Forgotten}. Achieving precise unlearning typically involves fully retraining the model and is computationally infeasible in case of very large models such as Large Language Models (LLMs). To this end, recent work has proposed several algorithms which approximate the removal of training data without retraining the model. These algorithms crucially rely on access to the model parameters in order to update them, an assumption that may not hold in practice due to computational constraints or having only query access to the LLMs. In this work, we propose a new class of unlearning methods for LLMs called ``In-Context Unlearning.'' This method unlearns instances from the model by simply providing specific kinds of inputs in context, without the need to update model parameters. To unlearn specific training instances, we present these instances to the LLMs at inference time along with labels that differ from their ground truth. Our experimental results demonstrate that in-context unlearning performs on par with, or in some cases outperforms other state-of-the-art methods that require access to model parameters, effectively removing the influence of specific instances on the model while preserving test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "2273685865",
+                    "name": "Seth Neel"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "e33ae42f40196754c0189cd6e30c4c246da012df",
+            "title": "Gaussian Membership Inference Privacy",
+            "abstract": "We propose a novel and practical privacy notion called $f$-Membership Inference Privacy ($f$-MIP), which explicitly considers the capabilities of realistic adversaries under the membership inference attack threat model. Consequently, $f$-MIP offers interpretable privacy guarantees and improved utility (e.g., better classification accuracy). In particular, we derive a parametric family of $f$-MIP guarantees that we refer to as $\\mu$-Gaussian Membership Inference Privacy ($\\mu$-GMIP) by theoretically analyzing likelihood ratio-based membership inference attacks on stochastic gradient descent (SGD). Our analysis highlights that models trained with standard SGD already offer an elementary level of MIP. Additionally, we show how $f$-MIP can be amplified by adding noise to gradient updates. Our analysis further yields an analytical membership inference attack that offers two distinct advantages over previous approaches. First, unlike existing state-of-the-art attacks that require training hundreds of shadow models, our attack does not require any shadow model. Second, our analytical attack enables straightforward auditing of our privacy notion $f$-MIP. Finally, we quantify how various hyperparameters (e.g., batch size, number of model parameters) and specific data characteristics determine an attacker's ability to accurately infer a point's membership in the training set. We demonstrate the effectiveness of our method on models trained on vision and tabular datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130899453",
+                    "name": "Tobias Leemann"
+                },
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "1686448",
+                    "name": "Gjergji Kasneci"
+                }
+            ]
+        },
+        {
+            "paperId": "394bd431e522b86581086bcb5cd9be161cf1cdf4",
+            "title": "Language Models are Realistic Tabular Data Generators",
+            "abstract": "Tabular data is among the oldest and most ubiquitous forms of data. However, the generation of synthetic samples with the original data's characteristics remains a significant challenge for tabular data. While many generative models from the computer vision domain, such as variational autoencoders or generative adversarial networks, have been adapted for tabular data generation, less research has been directed towards recent transformer-based large language models (LLMs), which are also generative in nature. To this end, we propose GReaT (Generation of Realistic Tabular data), which exploits an auto-regressive generative LLM to sample synthetic and yet highly realistic tabular data. Furthermore, GReaT can model tabular data distributions by conditioning on any subset of features; the remaining features are sampled without additional overhead. We demonstrate the effectiveness of the proposed approach in a series of experiments that quantify the validity and quality of the produced data samples from multiple angles. We find that GReaT maintains state-of-the-art performance across numerous real-world and synthetic data sets with heterogeneous feature types coming in various sizes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152648871",
+                    "name": "V. Borisov"
+                },
+                {
+                    "authorId": "2130899842",
+                    "name": "Kathrin Se\u00dfler"
+                },
+                {
+                    "authorId": "2130899453",
+                    "name": "Tobias Leemann"
+                },
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "1686448",
+                    "name": "Gjergji Kasneci"
+                }
+            ]
+        },
+        {
+            "paperId": "4c027a1e9ac888db8d9f99abd9f1ae11f5e2478d",
+            "title": "I Prefer Not to Say: Protecting User Consent in Models with Optional Personal Data",
+            "abstract": "We examine machine learning models in a setup where individuals have the choice to share optional personal information with a decision-making system, as seen in modern insurance pricing models. Some users consent to their data being used whereas others object and keep their data undisclosed. In this work, we show that the decision not to share data can be considered as information in itself that should be protected to respect users' privacy. This observation raises the overlooked problem of how to ensure that users who protect their personal data do not suffer any disadvantages as a result. To address this problem, we formalize protection requirements for models which only use the information for which active user consent was obtained. This excludes implicit information contained in the decision to share data or not. We offer the first solution to this problem by proposing the notion of Protected User Consent (PUC), which we prove to be loss-optimal under our protection requirement. We observe that privacy and performance are not fundamentally at odds with each other and that it is possible for a decision maker to benefit from additional data while respecting users' consent. To learn PUC-compliant models, we devise a model-agnostic data augmentation strategy with finite sample convergence guarantees. Finally, we analyze the implications of PUC on challenging real datasets, tasks, and models.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130899453",
+                    "name": "Tobias Leemann"
+                },
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "2188779718",
+                    "name": "Christian Thomas Eberle"
+                },
+                {
+                    "authorId": "1686448",
+                    "name": "Gjergji Kasneci"
+                }
+            ]
+        },
+        {
+            "paperId": "517f446ab3ff339459cab39cf12691d925d75a36",
+            "title": "Probabilistically Robust Recourse: Navigating the Trade-offs between Costs and Robustness in Algorithmic Recourse",
+            "abstract": "As machine learning models are increasingly being employed to make consequential decisions in real-world settings, it becomes critical to ensure that individuals who are adversely impacted (e.g., loan denied) by the predictions of these models are provided with a means for recourse. While several approaches have been proposed to construct recourses for affected individuals, the recourses output by these methods either achieve low costs (i.e., ease-of-implementation) or robustness to small perturbations (i.e., noisy implementations of recourses), but not both due to the inherent trade-offs between the recourse costs and robustness. Furthermore, prior approaches do not provide end users with any agency over navigating the aforementioned trade-offs. In this work, we address the above challenges by proposing the first algorithmic framework which enables users to effectively manage the recourse cost vs. robustness trade-offs. More specifically, our framework Probabilistically ROBust rEcourse (\\texttt{PROBE}) lets users choose the probability with which a recourse could get invalidated (recourse invalidation rate) if small changes are made to the recourse i.e., the recourse is implemented somewhat noisily. To this end, we propose a novel objective function which simultaneously minimizes the gap between the achieved (resulting) and desired recourse invalidation rates, minimizes recourse costs, and also ensures that the resulting recourse achieves a positive model prediction. We develop novel theoretical results to characterize the recourse invalidation rates corresponding to any given instance w.r.t. different classes of underlying models (e.g., linear models, tree based models etc.), and leverage these results to efficiently optimize the proposed objective. Experimental evaluation with multiple real world datasets demonstrates the efficacy of the proposed framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "2158813275",
+                    "name": "Teresa Datta"
+                },
+                {
+                    "authorId": "2158815650",
+                    "name": "Johannes van-den-Heuvel"
+                },
+                {
+                    "authorId": "1686448",
+                    "name": "Gjergji Kasneci"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "6c98af72fe9ebad8470638bfcf25bd3eecad1107",
+            "title": "OpenXAI: Towards a Transparent Evaluation of Model Explanations",
+            "abstract": "While several types of post hoc explanation methods (e.g., feature attribution methods) have been proposed in recent literature, there is little to no work on systematically benchmarking these methods in an ef\ufb01cient and transparent manner. Here, we introduce OpenXAI, a comprehensive and extensible open-source framework for evaluating and benchmarking post hoc explanation methods. OpenXAI comprises of the following key components: (i) a \ufb02exible synthetic data generator and a collection of diverse real-world datasets, pre-trained models, and state-of-the-art feature attribution methods, (ii) open-source implementations of twenty-two quantitative metrics for evaluating faithfulness, stability (robustness), and fairness of explanation methods, and (iii) the \ufb01rst ever public XAI leaderboards to benchmark explanations. OpenXAI is easily extensible, as users can readily evaluate custom explanation methods and incorporate them into our leaderboards. Overall, OpenXAI provides an automated end-to-end pipeline that not only simpli\ufb01es and standardizes the evaluation of post hoc explanation methods, but also promotes transparency and reproducibility in benchmarking these methods. OpenXAI datasets and data loaders, implementations of state-of-the-art explanation methods and evaluation metrics, as well as leaderboards are publicly available at https://open-xai.github.io/ .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40228633",
+                    "name": "Chirag Agarwal"
+                },
+                {
+                    "authorId": "2158817696",
+                    "name": "Eshika Saxena"
+                },
+                {
+                    "authorId": "1387484410",
+                    "name": "Satyapriya Krishna"
+                },
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "2142541079",
+                    "name": "Nari Johnson"
+                },
+                {
+                    "authorId": "65971246",
+                    "name": "Isha Puri"
+                },
+                {
+                    "authorId": "2095762",
+                    "name": "M. Zitnik"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "6d640b7f8176b24d9696785f1a8c3763cce5ee29",
+            "title": "I Prefer not to Say: Operationalizing Fair and User-guided Data Minimization",
+            "abstract": "To grant users greater authority over their personal data, policymakers have sug-gested tighter data protection regulations (e.g., GDPR, CCPA). One key principle within these regulations is data minimization, which urges companies and institu-tions to only collect data that is relevant and adequate for the purpose of the data analysis. In this work, we take a user-centric perspective on this regulation, and let individual users decide which data they deem adequate and relevant to be processed by a machine-learned model. We require that users who decide to provide optional information should appropriately bene\ufb01t from sharing their data, while users who rely on the mandate to leave their data undisclosed should not be penalized for doing so. This gives rise to the overlooked problem of fair treatment between individuals providing additional information and those choosing not to. While the classical fairness literature focuses on fair treatment between advantaged and disadvantaged groups, an initial look at this problem through the lens of classical fairness notions reveals that they are incompatible with these desiderata. We offer a solution to this problem by proposing the notion of Optional Feature Fairness (OFF) that follows from our requirements. To operationalize OFF, we derive a multi-model strategy and a tractable logistic regression model. We analyze the effect and the cost of applying OFF on several real-world data sets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130899453",
+                    "name": "Tobias Leemann"
+                },
+                {
+                    "authorId": "89583148",
+                    "name": "Martin Pawelczyk"
+                },
+                {
+                    "authorId": "2188779718",
+                    "name": "Christian Thomas Eberle"
+                },
+                {
+                    "authorId": "1686448",
+                    "name": "Gjergji Kasneci"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,211 @@
+{
+    "authorId": "2223163421",
+    "papers": [
+        {
+            "paperId": "2dc0c0a00544cd306abec905a98e4701e2401ba2",
+            "title": "OpenTab: Advancing Large Language Models as Open-domain Table Reasoners",
+            "abstract": "Large Language Models (LLMs) trained on large volumes of data excel at various natural language tasks, but they cannot handle tasks requiring knowledge that has not been trained on previously. One solution is to use a retriever that fetches relevant information to expand LLM's knowledge scope. However, existing textual-oriented retrieval-based LLMs are not ideal on structured table data due to diversified data modalities and large table sizes. In this work, we propose OpenTab, an open-domain table reasoning framework powered by LLMs. Overall, OpenTab leverages table retriever to fetch relevant tables and then generates SQL programs to parse the retrieved tables efficiently. Utilizing the intermediate data derived from the SQL executions, it conducts grounded inference to produce accurate response. Extensive experimental evaluation shows that OpenTab significantly outperforms baselines in both open- and closed-domain settings, achieving up to 21.5% higher accuracy. We further run ablation studies to validate the efficacy of our proposed designs of the system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284981676",
+                    "name": "Kezhi Kong"
+                },
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2223137915",
+                    "name": "Chuan Lei"
+                },
+                {
+                    "authorId": "2263543517",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "03613effe356d2a8815f899027d6a5868822fd93",
+            "title": "Which Examples to Annotate for In-Context Learning? Towards Effective and Efficient Selection",
+            "abstract": "Large Language Models (LLMs) can adapt to new tasks via in-context learning (ICL). ICL is efficient as it does not require any parameter updates to the trained LLM, but only few annotated examples as input for the LLM. In this work, we investigate an active learning approach for ICL, where there is a limited budget for annotating examples. We propose a model-adaptive optimization-free algorithm, termed AdaICL, which identifies examples that the model is uncertain about, and performs semantic diversity-based example selection. Diversity-based sampling improves overall effectiveness, while uncertainty sampling improves budget efficiency and helps the LLM learn new information. Moreover, AdaICL poses its sampling strategy as a Maximum Coverage problem, that dynamically adapts based on the model's feedback and can be approximately solved via greedy algorithms. Extensive experiments on nine datasets and seven LLMs show that AdaICL improves performance by 4.4% accuracy points over SOTA (7.7% relative improvement), is up to 3x more budget-efficient than performing annotations uniformly at random, while it outperforms SOTA with 2x fewer ICL examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "2263543517",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "38b75403553508c7623196f10d625c1d162510e5",
+            "title": "NameGuess: Column Name Expansion for Tabular Data",
+            "abstract": "Recent advances in large language models have revolutionized many sectors, including the database industry. One common challenge when dealing with large volumes of tabular data is the pervasive use of abbreviated column names, which can negatively impact performance on various data search, access, and understanding tasks. To address this issue, we introduce a new task, called NameGuess, to expand column names (used in database schema) as a natural language generation problem. We create a training dataset of 384K abbreviated-expanded column pairs using a new data fabrication method and a human-annotated evaluation benchmark that includes 9.2K examples from real-world tables. To tackle the complexities associated with polysemy and ambiguity in NameGuess, we enhance auto-regressive language models by conditioning on table content and column header names -- yielding a fine-tuned model (with 2.7B parameters) that matches human performance. Furthermore, we conduct a comprehensive analysis (on multiple LLMs) to validate the effectiveness of table content in NameGuess and identify promising future opportunities. Code has been made available at https://github.com/amazon-science/nameguess.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2261294497",
+                    "name": "Shen Wang"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "cebb57a614baa91597557cc2199da1b8330d1bfe",
+            "title": "Automatic Table Union Search with Tabular Representation Learning",
+            "abstract": "Given a data lake of tabular data as well as a query table, how can we retrieve all the tables in the data lake that can be unioned with the query table? Table union search constitutes an essential task in data discovery and preparation as it enables data scientists to navigate massive open data repositories. Existing methods identify uniability based on column representations (word surface forms or token embeddings) and column relation represented by column representation similarity. However, the semantic similarity obtained between column representations is often insufficient to reveal latent relational features to describe the column relation between pair of columns and not robust to the table noise. To address these issues, in this paper, we propose a multi-stage self-supervised table union search framework called A UTO TUS , which represents column relation as a vector\u2013 column relational representation and learn column relational representation in a multi-stage manner that can better describe column relation for table unionability prediction. In particular, the large language model powered contextualized column relation encoder is updated by adaptive clustering and pseudo label classification iteratively so that the better column relational representation can be learned. Moreover, to improve the robustness of the model against table noises, we",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109906988",
+                    "name": "Xuming Hu"
+                },
+                {
+                    "authorId": "2151226033",
+                    "name": "Shen Wang"
+                },
+                {
+                    "authorId": "2099585332",
+                    "name": "Xiao Qin"
+                },
+                {
+                    "authorId": "2223137915",
+                    "name": "Chuan Lei"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                },
+                {
+                    "authorId": "2138521152",
+                    "name": "Asterios Katsifodimos"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "2114092431",
+                    "name": "Lijie Wen"
+                },
+                {
+                    "authorId": "2191036692",
+                    "name": "Philip S. Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "e274f9e367fb3b7fd1a777d6984df7b7f13c3411",
+            "title": "Mixed-Type Tabular Data Synthesis with Score-based Diffusion in Latent Space",
+            "abstract": "Recent advances in tabular data generation have greatly enhanced synthetic data quality. However, extending diffusion models to tabular data is challenging due to the intricately varied distributions and a blend of data types of tabular data. This paper introduces Tabsyn, a methodology that synthesizes tabular data by leveraging a diffusion model within a variational autoencoder (VAE) crafted latent space. The key advantages of the proposed Tabsyn include (1) Generality: the ability to handle a broad spectrum of data types by converting them into a single unified space and explicitly capture inter-column relations; (2) Quality: optimizing the distribution of latent embeddings to enhance the subsequent training of diffusion models, which helps generate high-quality synthetic data, (3) Speed: much fewer number of reverse steps and faster synthesis speed than existing diffusion-based methods. Extensive experiments on six datasets with five metrics demonstrate that Tabsyn outperforms existing methods. Specifically, it reduces the error rates by 86% and 67% for column-wise distribution and pair-wise column correlation estimations compared with the most competitive baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258788681",
+                    "name": "Hengrui Zhang"
+                },
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2258942704",
+                    "name": "Xiao Qin"
+                },
+                {
+                    "authorId": "2257160535",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        }
+    ]
+}

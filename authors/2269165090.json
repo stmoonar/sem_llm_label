@@ -1,0 +1,141 @@
+{
+    "authorId": "2269165090",
+    "papers": [
+        {
+            "paperId": "5316598d39df1bf47240eb4a8dc0f4770ec3fa72",
+            "title": "OpenHEXAI: An Open-Source Framework for Human-Centered Evaluation of Explainable Machine Learning",
+            "abstract": "Recently, there has been a surge of explainable AI (XAI) methods driven by the need for understanding machine learning model behaviors in high-stakes scenarios. However, properly evaluating the effectiveness of the XAI methods inevitably requires the involvement of human subjects, and conducting human-centered benchmarks is challenging in a number of ways: designing and implementing user studies is complex; numerous design choices in the design space of user study lead to problems of reproducibility; and running user studies can be challenging and even daunting for machine learning researchers. To address these challenges, this paper presents OpenHEXAI, an open-source framework for human-centered evaluation of XAI methods. OpenHEXAI features (1) a collection of diverse benchmark datasets, pre-trained models, and post hoc explanation methods; (2) an easy-to-use web application for user study; (3) comprehensive evaluation metrics for the effectiveness of post hoc explanation methods in the context of human-AI decision making tasks; (4) best practice recommendations of experiment documentation; and (5) convenient tools for power analysis and cost estimation. OpenHEAXI is the first large-scale infrastructural effort to facilitate human-centered benchmarks of XAI methods. It simplifies the design and implementation of user studies for XAI methods, thus allowing researchers and practitioners to focus on the scientific questions. Additionally, it enhances reproducibility through standardized designs. Based on OpenHEXAI, we further conduct a systematic benchmark of four state-of-the-art post hoc explanation methods and compare their impacts on human-AI decision making tasks in terms of accuracy, fairness, as well as users' trust and understanding of the machine learning model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261475382",
+                    "name": "Jiaqi Ma"
+                },
+                {
+                    "authorId": "120801533",
+                    "name": "Vivian Lai"
+                },
+                {
+                    "authorId": "49889218",
+                    "name": "Yiming Zhang"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2290718096",
+                    "name": "Paul Hamilton"
+                },
+                {
+                    "authorId": "1725415927",
+                    "name": "Davor Ljubenkov"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                },
+                {
+                    "authorId": "2269165090",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "716fd0d190723ee78b4000292987bdbdd4516b3d",
+            "title": "GPT-4V Cannot Generate Radiology Reports Yet",
+            "abstract": "GPT-4V's purported strong multimodal abilities raise interests in using it to automate radiology report writing, but there lacks thorough evaluations. In this work, we perform a systematic evaluation of GPT-4V in generating radiology reports on two chest X-ray report datasets: MIMIC-CXR and IU X-Ray. We attempt to directly generate reports using GPT-4V through different prompting strategies and find that it fails terribly in both lexical metrics and clinical efficacy metrics. To understand the low performance, we decompose the task into two steps: 1) the medical image reasoning step of predicting medical condition labels from images; and 2) the report synthesis step of generating reports from (groundtruth) conditions. We show that GPT-4V's performance in image reasoning is consistently low across different prompts. In fact, the distributions of model-predicted labels remain constant regardless of which groundtruth conditions are present on the image, suggesting that the model is not interpreting chest X-rays meaningfully. Even when given groundtruth conditions in report synthesis, its generated reports are less correct and less natural-sounding than a finetuned LLaMA-2. Altogether, our findings cast doubt on the viability of using GPT-4V in a radiology workflow.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2311890798",
+                    "name": "Yuyang Jiang"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2268763537",
+                    "name": "Dang Nguyen"
+                },
+                {
+                    "authorId": "2252958415",
+                    "name": "Benjamin M. Mervak"
+                },
+                {
+                    "authorId": "2269165090",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "6af6e5b1acb39ac21d1730192f7e6617199f383d",
+            "title": "Pragmatic Radiology Report Generation",
+            "abstract": "When pneumonia is not found on a chest X-ray, should the report describe this negative observation or omit it? We argue that this question cannot be answered from the X-ray alone and requires a pragmatic perspective, which captures the communicative goal that radiology reports serve between radiologists and patients. However, the standard image-to-text formulation for radiology report generation fails to incorporate such pragmatic intents. Following this pragmatic perspective, we demonstrate that the indication, which describes why a patient comes for an X-ray, drives the mentions of negative observations and introduce indications as additional input to report generation. With respect to the output, we develop a framework to identify uninferable information from the image as a source of model hallucinations, and limit them by cleaning groundtruth reports. Finally, we use indications and cleaned groundtruth reports to develop pragmatic models, and show that they outperform existing methods not only in new pragmatics-inspired metrics (+4.3 Negative F1) but also in standard metrics (+6.3 Positive F1 and +11.0 BLEU-2).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268763537",
+                    "name": "Dang Nguyen"
+                },
+                {
+                    "authorId": "2131059444",
+                    "name": "Chacha Chen"
+                },
+                {
+                    "authorId": "2268756369",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "2269165090",
+                    "name": "Chenhao Tan"
+                }
+            ]
+        },
+        {
+            "paperId": "29c29d19a1d6fc62b19251547ce9df351e49763e",
+            "title": "Human-AI Collaboration via Conditional Delegation: A Case Study of Content Moderation",
+            "abstract": "Despite impressive performance in many benchmark datasets, AI models can still make mistakes, especially among out-of-distribution examples. It remains an open question how such imperfect models can be used effectively in collaboration with humans. Prior work has focused on AI assistance that helps people make individual high-stakes decisions, which is not scalable for a large amount of relatively low-stakes decisions, e.g., moderating social media comments. Instead, we propose conditional delegation as an alternative paradigm for human-AI collaboration where humans create rules to indicate trustworthy regions of a model. Using content moderation as a testbed, we develop novel interfaces to assist humans in creating conditional delegation rules and conduct a randomized experiment with two datasets to simulate in-distribution and out-of-distribution scenarios. Our study demonstrates the promise of conditional delegation in improving model performance and provides insights into design for this novel paradigm, including the effect of AI explanations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "120801533",
+                    "name": "Vivian Lai"
+                },
+                {
+                    "authorId": "40502796",
+                    "name": "Samuel Carton"
+                },
+                {
+                    "authorId": "2163452640",
+                    "name": "Rajat Bhatnagar"
+                },
+                {
+                    "authorId": "2268772828",
+                    "name": "Vera Liao"
+                },
+                {
+                    "authorId": "2108127520",
+                    "name": "Yunfeng Zhang"
+                },
+                {
+                    "authorId": "2269165090",
+                    "name": "Chenhao Tan"
+                },
+                {
+                    "authorId": "144921048",
+                    "name": "Q. Liao"
+                }
+            ]
+        }
+    ]
+}

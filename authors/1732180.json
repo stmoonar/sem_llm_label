@@ -1,0 +1,2626 @@
+{
+    "authorId": "1732180",
+    "papers": [
+        {
+            "paperId": "382c224b266ce97c04db4e6d02d1f388e23eee30",
+            "title": "Where Do You Want To Invest? Predicting Startup Funding From Freely, Publicly Available Web Information",
+            "abstract": "We consider in this paper the problem of predicting the ability of a startup to attract investments using freely, publicly available data. Information about startups on the web usually comes either as unstructured data from news, social networks, and websites or as structured data from commercial databases, such as Crunchbase. The possibility of predicting the success of a startup from structured databases has been studied in the literature and it has been shown that initial public offerings (IPOs), mergers and acquisitions (M\\&A) as well as funding events can be predicted with various machine learning techniques. In such studies, heterogeneous information from the web and social networks is usually used as a complement to the information coming from databases. However, building and maintaining such databases demands tremendous human effort. We thus study here whether one can solely rely on readily available sources of information, such as the website of a startup, its social media activity as well as its presence on the web, to predict its funding events. As illustrated in our experiments, the method we propose yields results comparable to the ones making also use of structured data available in private databases.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2061372394",
+                    "name": "Mariia Garkavenko"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "9965236",
+                    "name": "Hamid Mirisaee"
+                },
+                {
+                    "authorId": "1827845",
+                    "name": "C\u00e9dric Lagnier"
+                },
+                {
+                    "authorId": "2994981",
+                    "name": "Agn\u00e8s Guerraz"
+                }
+            ]
+        },
+        {
+            "paperId": "4f4da385851f8dce9190e90d59784f21d5ec200c",
+            "title": "Intra-document Block Pre-ranking for BERT-based Long Document Information Retrieval - Abstract",
+            "abstract": "Information retrieval using transformer architectures, especially pretrained models like BERT, has seen great improvements. However, due to the quadratic complexity of the self-attention mechanism, for long documents, directly using such models is unsatisfactory. Truncating long documents is a widely adopted approach. Other researchers also propose to separate a long document into passages, each of which can be treated by a standard BERT model. The other solution is modifying the self-attention mechanism to make it sparser. However, these approaches either lose information or have high computational complexity and memory requirement. We propose a slightly different approach that firstly pre-ranks passages within a long document according to the query, after which the filtered top-ranking passages are combined for later ranking to obtain the document relevance score. Experiments on IR collections demonstrate the SOTA level effectiveness of the proposed approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Minghan Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "9d9fdc77f6931c25997b2f56bd8183499ac29a3b",
+            "title": "Domain Adaptation for Dense Retrieval through Self-Supervision by Pseudo-Relevance Labeling",
+            "abstract": "Although neural information retrieval has witnessed great improvements, recent works showed that the generalization ability of dense retrieval models on target domains with different distributions is limited, which contrasts with the results obtained with interaction-based models. To address this issue, researchers have resorted to adversarial learning and query generation approaches; both approaches nevertheless resulted in limited improvements. In this paper, we propose to use a self-supervision approach in which pseudo-relevance labels are automatically generated on the target domain. To do so, we first use the standard BM25 model on the target domain to obtain a first ranking of documents, and then use the interaction-based model T53B to re-rank top documents. We further combine this approach with knowledge distillation relying on an interaction-based teacher model trained on the source domain. Our experiments reveal that pseudo-relevance labeling using T53B and the MiniLM teacher performs on average better than other approaches and helps improve the state-of-the-art query generation approach GPL when it is fine-tuned on the pseudo-relevance labeled data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Minghan Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "a890ecfa2eb8b5db0e47fd5e5562b35f92f5220e",
+            "title": "Listwise Learning to Rank Based on Approximate Rank Indicators",
+            "abstract": "We study here a way to approximate information retrieval metrics through a softmax-based approximation of the rank indicator function. Indeed, this latter function is a key component in the design of information retrieval metrics, as well as in the design of the ranking and sorting functions. Obtaining a good approximation for it thus opens the door to differentiable approximations of many evaluation measures that can in turn be used in neural end-to-end approaches. We first prove theoretically that the approximations proposed are of good quality, prior to validate them experimentally on both learning to rank and text-based information retrieval tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2955690",
+                    "name": "Thibaut Thonet"
+                },
+                {
+                    "authorId": "2562951",
+                    "name": "Yagmur Gizem Cinar"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": null,
+                    "name": "Minghan Li"
+                },
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                }
+            ]
+        },
+        {
+            "paperId": "c641b74e5ee79c154cd3ff0082f985be51ad5cb4",
+            "title": "BERT-based Dense Intra-ranking and Contextualized Late Interaction via Multi-task Learning for Long Document Retrieval",
+            "abstract": "Combining query tokens and document tokens and inputting them to pre-trained transformer models like BERT, an approach known as interaction-based, has shown state-of-the-art effectiveness for information retrieval. However, the computational complexity of this approach is high due to the online self-attention computation. In contrast, dense retrieval methods in representation-based approaches are known to be efficient, however less effective. A tradeoff between the two is reached with late interaction methods like ColBERT, which attempt to benefit from both approaches: contextualized token embeddings can be pre-calculated over BERT for fine-grained effective interaction while preserving efficiency. However, despite its success in passage retrieval, it's not straightforward to use this approach for long document retrieval. In this paper, we propose a cascaded late interaction approach using a single model for long document retrieval. Fast intra-ranking by dot product is used to select relevant passages, then fine-grained interaction of pre-stored token embeddings is used to generate passage scores which are aggregated to the final document score. Multi-task learning is used to train a BERT model to optimize both a dot product and a fine-grained interaction loss functions. Our experiments reveal that the proposed approach obtains near state-of-the-art level effectiveness while being efficient on such collections as TREC 2019.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Minghan Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "0343fa636b05487d6db6c29136d36a17c38715cc",
+            "title": "The Power of Selecting Key Blocks with Local Pre-ranking for Long Document Information Retrieval",
+            "abstract": "Les r\u00e9seaux neuronaux profonds et les mod\u00e8les fond\u00e9s sur les transformeurs comme BERT ont envahi le domaine de la recherche d\u2019informations (RI) ces derni\u00e8res ann\u00e9es. Leur succ\u00e8s est li\u00e9 au m\u00e9canisme d\u2019auto-attention qui permet de capturer les d\u00e9pendances entre les mots ind\u00e9pendamment de leur distance. Cependant, en raison de sa complexit\u00e9 quadratique dans le nombre de mots, ce m\u00e9canisme ne peut \u00eatre directement utilis\u00e9 sur de longues s\u00e9quences, ce qui ne permet pas de d\u00e9ployer enti\u00e8rement les mod\u00e8les neuronaux sur des documents longs pouvant contenir des milliers de mots. Trois strat\u00e9gies standard ont \u00e9t\u00e9 adopt\u00e9es pour contourner ce probl\u00e8me. La premi\u00e8re consiste \u00e0 tronquer les documents longs, la deuxi\u00e8me \u00e0 segmenter les documents longs en passages plus courts et la derni\u00e8re \u00e0 remplacer le module d\u2019auto-attention par des modules d\u2019attention parcimonieux. Dans le premier cas, des informations importantes peuvent \u00eatre perdues et le jugement de pertinence n\u2019est fond\u00e9 que sur une partie de l\u2019information contenue dans le document. Dans le deuxi\u00e8me cas, une architecture hi\u00e9rarchique peut \u00eatre adopt\u00e9e pour construire une repr\u00e9sentation du document sur la base des repr\u00e9sentations de chaque passage. Cela dit, malgr\u00e9 ses r\u00e9sultats prometteurs, cette strat\u00e9gie reste co\u00fbteuse en temps, en m\u00e9moire et en \u00e9nergie. Dans le troisi\u00e8me cas, les contraintes de parcimonie peuvent conduire \u00e0 manquer des d\u00e9pendances importantes et, in fine, \u00e0 des r\u00e9sultats sous-optimaux. L\u2019approche que nous proposons est l\u00e9g\u00e8rement diff\u00e9rente de ces strat\u00e9gies et vise \u00e0 capturer, dans les documents longs, les blocs les plus importants permettant de d\u00e9cider du statut, pertinent ou non, de l\u2019ensemble du document. Elle repose sur trois \u00e9tapes principales : (a) la s\u00e9lection de blocs cl\u00e9s (c\u2019est-\u00e0-dire susceptibles d\u2019\u00eatre pertinents) avec un pr\u00e9-classement local en utilisant soit des mod\u00e8les de RI classiques, soit un module d\u2019apprentissage, (b) l\u2019apprentissage d\u2019une repr\u00e9sentation conjointe des requ\u00eates et des blocs cl\u00e9s \u00e0 l\u2019aide d\u2019un mod\u00e8le BERT standard, et (c) le calcul d\u2019un score de pertinence final qui peut \u00eatre consid\u00e9r\u00e9 comme une agr\u00e9gation d\u2019informations de pertinence locale. Dans cet article, nous menons tout d\u2019abord une analyse qui r\u00e9v\u00e8le que les signaux de pertinence peuvent appara\u00eetre \u00e0 diff\u00e9rents endroits dans les documents et que de tels signaux sont mieux captur\u00e9s par des relations s\u00e9mantiques que par des correspondances exactes. Nous examinons ensuite plusieurs m\u00e9thodes pour s\u00e9lectionner les blocs pertinents et montrons comment int\u00e9grer ces m\u00e9thodes dans les mod\u00e8les r\u00e9cents de RI.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Minghan Li"
+                },
+                {
+                    "authorId": "47105726",
+                    "name": "Diana Nicoleta Popa"
+                },
+                {
+                    "authorId": "1413536304",
+                    "name": "Johan Chagnon"
+                },
+                {
+                    "authorId": "2562951",
+                    "name": "Yagmur Gizem Cinar"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "93a1bae6d6e27ac26687ea3e4d34635f35371f7f",
+            "title": "Efficient bilingual lexicon extraction from comparable corpora based on formal concepts analysis",
+            "abstract": "Abstract Bilingual corpora are an essential resource used to cross the language barrier in multilingual natural language processing tasks. Among bilingual corpora, comparable corpora have been the subject of many studies as they are both frequent and easily available. In this paper, we propose to make use of formal concept analysis to first construct concept vectors which can be used to enhance comparable corpora through clustering techniques. We then show how one can extract bilingual lexicons of improved quality from these enhanced corpora. We finally show that the bilingual lexicons obtained can complement existing bilingual dictionaries and improve cross-language information retrieval systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3220024",
+                    "name": "Mohamed Chebel"
+                },
+                {
+                    "authorId": "35496449",
+                    "name": "Chiraz Latiri"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "9583d94fe6297acb3f287329dff6fe09b1c5c4c2",
+            "title": "KeyBLD: Selecting Key Blocks with Local Pre-ranking for Long Document Information Retrieval",
+            "abstract": "Transformer-based models, and especially pre-trained language models like BERT, have shown great success on a variety of Natural Language Processing and Information Retrieval tasks. However, such models have difficulties to process long documents due to the quadratic complexity of the self-attention mechanism. Recent works either truncate long documents or segment them into passages that can be treated by a standard BERT model. A hierarchical architecture, such as a transformer, can be further adopted to build a document-level representation on top of the representations of each passage. However, these approaches either lose information or have high computational complexity (and are both time and energy consuming in this latter case). We follow here a slightly different approach in which one first selects key blocks of a long document by local query-block pre-ranking, and then aggregates few blocks to form a short document that can be processed by a model such as BERT. Experiments conducted on standard Information Retrieval datasets demonstrate the effectiveness of the proposed approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47629325",
+                    "name": "Minghan Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "c80fc58fa992dda2ee2752093c6f8b41b95db138",
+            "title": "SmoothI: Smooth Rank Indicators for Differentiable IR Metrics",
+            "abstract": "Information retrieval (IR) systems traditionally aim to maximize metrics built on rankings, such as precision or NDCG. However, the non-differentiability of the ranking operation prevents direct optimization of such metrics in state-of-the-art neural IR models, which rely entirely on the ability to compute meaningful gradients. To address this shortcoming, we propose SmoothI, a smooth approximation of rank indicators that serves as a basic building block to devise differentiable approximations of IR metrics. We further provide theoretical guarantees on SmoothI and derived approximations, showing in particular that the approximation errors decrease exponentially with an inverse temperature-like hyperparameter that controls the quality of the approximations. Extensive experiments conducted on four standard learning-to-rank datasets validate the efficacy of the listwise losses based on SmoothI, in comparison to previously proposed ones. Additional experiments with a vanilla BERT ranking model on a text-based IR task also confirm the benefits of our listwise approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2955690",
+                    "name": "Thibaut Thonet"
+                },
+                {
+                    "authorId": "2562951",
+                    "name": "Yagmur Gizem Cinar"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "47629325",
+                    "name": "Minghan Li"
+                },
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                }
+            ]
+        },
+        {
+            "paperId": "6991848c3a49e1f3b2802f9f428c5e621a5fd88c",
+            "title": "Scaling Causal Inference in Additive Noise Models",
+            "abstract": "The discovery of causal relationships from observations is a fundamental and difficult problem. We address it in the context of Additive Noise Models, and show, through both consistency analysis and experiments, that the state-of-art causal inference procedure on such models can be made simpler and faster, without loss of performance. Indeed, the method we propose uses one regressor instead of two in the bivariate case and 2(d \u2212 1) regressors instead of (d 2 \u2212 1) in the multivariate case with d random variables. In addition, we show how one can, from the regressors we use, accelerate the computation of the Hilbert-Schmidt Independence Criterion, a standard independence measure used in several causal inference procedures.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1416957940",
+                    "name": "Karim Assaad"
+                },
+                {
+                    "authorId": "2876902",
+                    "name": "Emilie Devijver"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1417015033",
+                    "name": "Ali Ait-Bachir"
+                }
+            ]
+        },
+        {
+            "paperId": "8b46221e85e9ca25644c0ba7b4881483663d2e22",
+            "title": "Implicit Discourse Relation Classification with Syntax-Aware Contextualized Word Representations",
+            "abstract": "Automatically identifying implicit discourse relations requires an in-depth semantic understanding of the text fragments involved in such relations. While early work investigated the usefulness of different classes of input features, current state-of-the-art models mostly rely on standard pre-trained word embeddings to model the arguments of a discourse relation. In this paper, we introduce a method to compute contextualized representations of words, leveraging information from the sentence dependency parse, to improve argument representation. The resulting token embeddings encode the structure of the sentence from a dependency point of view in their representations. Experimental results show that the proposed representations achieve state-of-the-art results when input to standard neural network architectures, surpassing complex models that use additional data and consider the interaction between arguments.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47105726",
+                    "name": "Diana Nicoleta Popa"
+                },
+                {
+                    "authorId": "144781195",
+                    "name": "J. Perez"
+                },
+                {
+                    "authorId": "144915758",
+                    "name": "James Henderson"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "051d9f7eee4332f18f3a5e0a8166528a8b155f53",
+            "title": "Char2char Generation with Reranking for the E2E NLG Challenge",
+            "abstract": "This paper describes our submission to the E2E NLG Challenge. Recently, neural seq2seq approaches have become mainstream in NLG, often resorting to pre- (respectively post-) processing delexicalization (relexicalization) steps at the word-level to handle rare words. By contrast, we train a simple character level seq2seq model, which requires no pre/post-processing (delexicalization, tokenization or even lowercasing), with surprisingly good results. For further improvement, we explore two re-ranking approaches for scoring candidates. We also introduce a synthetic dataset creation procedure, which opens up a new way of creating artificial datasets for Natural Language Generation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144992211",
+                    "name": "Shubham Agarwal"
+                },
+                {
+                    "authorId": "2954698",
+                    "name": "Marc Dymetman"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "196236c5a391a6fff34a7d1d2a982a3a46725937",
+            "title": "Semantic Annotation in the Biomedical Domain: Large-scale Classification and BioASQ",
+            "abstract": "Semantic annotation in the biomedical domain raises the problem of classifying texts with large-scale taxonomies, a problem sometimes referred to as extreme classification. In this presentation, we will give an overview of this problem and the main solutions proposed, with a focus on textual collections and the BioASQ challenge.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "2823fd6cc28ceabda2710b81237888e7507e6da9",
+            "title": "Uncertain Trees: Dealing with Uncertain Inputs in Regression Trees.",
+            "abstract": "Tree-based ensemble methods, as Random Forests and Gradient Boosted Trees, have been successfully used for regression in many applications and research studies. Furthermore, these methods have been extended in order to deal with uncertainty in the output variable, using for example a quantile loss in Random Forests (Meinshausen, 2006). To the best of our knowledge, no extension has been provided yet for dealing with uncertainties in the input variables, even though such uncertainties are common in practical situations. We propose here such an extension by showing how standard regression trees optimizing a quadratic loss can be adapted and learned while taking into account the uncertainties in the inputs. By doing so, one no longer assumes that an observation lies into a single region of the regression tree, but rather that it belongs to each region with a certain probability. Experiments conducted on several data sets illustrate the good behavior of the proposed extension.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "30784787",
+                    "name": "Myriam Tami"
+                },
+                {
+                    "authorId": "2889171",
+                    "name": "M. Clausel"
+                },
+                {
+                    "authorId": "2876902",
+                    "name": "Emilie Devijver"
+                },
+                {
+                    "authorId": "34610498",
+                    "name": "A. Dulac"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2159002",
+                    "name": "S. Janaqi"
+                },
+                {
+                    "authorId": "2776796",
+                    "name": "M. Ch\u00e8bre"
+                }
+            ]
+        },
+        {
+            "paperId": "4572e01a6f9140d486f3dd18d7142d53bf05e448",
+            "title": "Measuring bilingual corpus comparability",
+            "abstract": "Abstract Comparable corpora serve as an important substitute for parallel resources in cases of under-resourced language pairs. Previous work mostly aims to find a better strategy to exploit existing comparable corpora, while ignoring the variety in corpus quality. The quality of comparable corpora affects a lot its usability in practice, a fact that has been justified by several studies. However, researchers have not been able to establish a widely accepted and fully validated framework to measure corpus quality. We will thus investigate in this paper a comprehensive methodology to deal with the quality of comparable corpora. To be exact, we will propose several comparability measures and a quantitative strategy to test those measures. Our experiments show that the proposed comparability measure can capture gold-standard comparability levels very well and is robust to the bilingual dictionary used. Moreover, we will show in the task of bilingual lexicon extraction that the proposed measure correlates well with the performance of the real world application.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2151287788",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2111298981",
+                    "name": "Dan Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "843b86e94ee75f40f458b73de6efb4b125e8e4ee",
+            "title": "Personalized and Diverse Task Composition in Crowdsourcing",
+            "abstract": "We study task composition in crowdsourcing and the effect of personalization and diversity on performance. A central process in crowdsourcing is task assignment, the mechanism through which workers find tasks. On popular platforms such as Amazon Mechanical Turk, task assignment is facilitated by the ability to sort tasks by dimensions such as creation date or reward amount. Task composition improves task assignment by producing for each worker, a personalized summary of tasks, referred to as a Composite Task (CT). We propose different ways of producing CTs and formulate an optimization problem that finds for a worker, the most relevant and diverse CTs. We show empirically that workers\u2019 experience is greatly improved due to personalization that enforces an adequation of CTs with workers\u2019 skills and preferences. We also study and formalize various ways of diversifying tasks in each CT. Task diversity is grounded in organization studies that have shown its impact on worker motivation\u00a0 [33] . Our experiments show that diverse CTs contribute to improving outcome quality. More specifically, we show that while task throughput and worker retention are best with ranked lists, crowdwork quality reaches its best with CTs diversified by requesters, thereby confirming that workers look to expose their \u201cgood\u201d work to many requesters.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "27052776",
+                    "name": "Maha Alsayasneh"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2067225211",
+                    "name": "V. Leroy"
+                },
+                {
+                    "authorId": "3416184",
+                    "name": "Julien Pilourdault"
+                },
+                {
+                    "authorId": "3039205",
+                    "name": "R. M. Borromeo"
+                },
+                {
+                    "authorId": "48449806",
+                    "name": "Motomichi Toyama"
+                },
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                }
+            ]
+        },
+        {
+            "paperId": "1012cab0c954d5fc41cb033f7388a1bfee4c643b",
+            "title": "Topical Coherence in LDA-based Models through Induced Segmentation",
+            "abstract": "This paper presents an LDA-based model that generates topically coherent segments within documents by jointly segmenting documents and assigning topics to their words. The coherence between topics is ensured through a copula, binding the topics associated to the words of a segment. In addition, this model relies on both document and segment specific topic distributions so as to capture fine grained differences in topic assignments. We show that the proposed model naturally encompasses other state-of-the-art LDA-based models designed for similar tasks. Furthermore, our experiments, conducted on six different publicly available datasets, show the effectiveness of our model in terms of perplexity, Normalized Pointwise Mutual Information, which captures the coherence between the generated topics, and the Micro F1 measure for text classification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440447",
+                    "name": "Hesam Amoualian"
+                },
+                {
+                    "authorId": "143844110",
+                    "name": "Wei Lu"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1951080",
+                    "name": "Georgios Balikas"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "2889171",
+                    "name": "M. Clausel"
+                }
+            ]
+        },
+        {
+            "paperId": "14f34026f2ce1914aac35fb947d23fd3932ed720",
+            "title": "On Inductive Abilities of Latent Factor Models for Relational Learning",
+            "abstract": "\n \n \nLatent factor models are increasingly popular for modeling multi-relational knowledge graphs. By their vectorial nature, it is not only hard to interpret why this class of models works so well, but also to understand where they fail and how they might be improved. We conduct an experimental survey of state-of-the-art models, not towards a purely comparative end, but as a means to get insight about their inductive abilities. To assess the strengths and weaknesses of each model, we create simple tasks that exhibit first, atomic properties of binary relations, and then, common inter-relational inference through synthetic genealogies. Based on these experimental results, we propose new research directions to improve on existing models. \n \n \n",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057146",
+                    "name": "Th\u00e9o Trouillon"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "3344005",
+                    "name": "C. Dance"
+                },
+                {
+                    "authorId": "1684865",
+                    "name": "Guillaume Bouchard"
+                }
+            ]
+        },
+        {
+            "paperId": "3f4e1c06bc494a7a622ef9f6146afe6956d363b4",
+            "title": "A Study of Stochastic Mixed Membership Models for Link Prediction in Social Networks",
+            "abstract": "We assess here whether standard stochastic mixed membership models are adapted for link prediction in social networks by studying how they handle homophily and preferential attachment. According to the homophily hypothesis, two vertices are more likely to be connected if they share common characteristics whereas preferential attachment states that a vertex prefers to join the more connected nodes existing in the network. To study these properties, we first introduce formal definitions of these phenomena; we then study how stochastic mixed membership models relate to these definitions. Our theoretical analysis reveals that standard stochastic mixed membership models comply with homophily with the similarity that underlies them. For preferential attachment, the situation is more contrasted: if these models do not comply with global preferential attachment, their compliance to local preferential attachment depends on whether the memberships to latent factors are hard or soft, and in the latter case on whether the underlying latent factor distribution is bursty or not. We illustrate these elements on synthetic and real networks by using the generative properties of Bayesian model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34610498",
+                    "name": "A. Dulac"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1725600",
+                    "name": "C. Largeron"
+                }
+            ]
+        },
+        {
+            "paperId": "6d1b1cac95bd88496fdaa106628ec95ebce1acf6",
+            "title": "Time Series Forecasting using RNNs: an Extended Attention Mechanism to Model Periods and Handle Missing Values",
+            "abstract": "In this paper, we study the use of recurrent neural networks (RNNs) for modeling and forecasting time series. We first illustrate the fact that standard sequence-to-sequence RNNs neither capture well periods in time series nor handle well missing values, even though many real life times series are periodic and contain missing values. We then propose an extended attention mechanism that can be deployed on top of any RNN and that is designed to capture periods and make the RNN more robust to missing values. We show the effectiveness of this novel model through extensive experiments with multiple univariate and multivariate datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2562951",
+                    "name": "Yagmur Gizem Cinar"
+                },
+                {
+                    "authorId": "9965236",
+                    "name": "Hamid Mirisaee"
+                },
+                {
+                    "authorId": "1868168",
+                    "name": "Parantapa Goswami"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1404571875",
+                    "name": "Ali A\u00eft-Bachir"
+                },
+                {
+                    "authorId": "50821814",
+                    "name": "V. Strijov"
+                }
+            ]
+        },
+        {
+            "paperId": "a4dfb121275a6408d290b803baf8c9caeb23dc5b",
+            "title": "Knowledge Graph Completion via Complex Tensor Factorization",
+            "abstract": "In statistical relational learning, knowledge graph completion deals with automatically understanding the structure of large knowledge graphs---labeled directed graphs---and predicting missing relationships---labeled edges. State-of-the-art embedding models propose different trade-offs between modeling expressiveness, and time and space complexity. We reconcile both expressiveness and complexity through the use of complex-valued embeddings and explore the link between such complex-valued embeddings and unitary diagonalization. We corroborate our approach theoretically and show that all real square matrices---thus all possible relation/adjacency matrices---are the real part of some unitarily diagonalizable matrix. This results opens the door to a lot of other applications of square matrices factorization. Our approach based on complex embeddings is arguably simple, as it only involves a Hermitian dot product, the complex counterpart of the standard dot product between real vectors, whereas other methods resort to more and more complicated composition functions to increase their expressiveness. The proposed complex embeddings are scalable to large data sets as it remains linear in both space and time, while consistently outperforming alternative approaches on standard link prediction benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057146",
+                    "name": "Th\u00e9o Trouillon"
+                },
+                {
+                    "authorId": "3344005",
+                    "name": "C. Dance"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1851564",
+                    "name": "Johannes Welbl"
+                },
+                {
+                    "authorId": "48662861",
+                    "name": "Sebastian Riedel"
+                },
+                {
+                    "authorId": "1684865",
+                    "name": "Guillaume Bouchard"
+                }
+            ]
+        },
+        {
+            "paperId": "1d26471711c953dc1a2369cd3dfe674c65f6381b",
+            "title": "Task Composition in Crowdsourcing",
+            "abstract": "Crowdsourcing has gained popularity in a variety of domains as an increasing number of jobs are \"taskified\" and completed independently by a set of workers. A central process in crowdsourcing is the mechanism through which workers find tasks. On popular platforms such as Amazon Mechanical Turk, tasks can be sorted by dimensions such as creation date or reward amount. Research efforts on task assignment have focused on adopting a requester-centric approach whereby tasks are proposed to workers in order to maximize overall task throughput, result quality and cost. In this paper, we advocate the need to complement that with a worker-centric approach to task assignment, and examine the problem of producing, for each worker, a personalized summary of tasks that preserves overall task throughput. We formalize task composition for workers as an optimization problem that finds a representative set of k valid and relevant Composite Tasks (CTs). Validity enforces that a composite task complies with the task arrival rate and satisfies the worker's expected wage. Relevance imposes that tasks match the worker's qualifications. We show empirically that workers' experience is greatly improved due to task homogeneity in each CT and to the adequation of CTs with workers' skills. As a result task throughput is improved.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2067225211",
+                    "name": "V. Leroy"
+                },
+                {
+                    "authorId": "3416184",
+                    "name": "Julien Pilourdault"
+                },
+                {
+                    "authorId": "3039205",
+                    "name": "R. M. Borromeo"
+                },
+                {
+                    "authorId": "48449806",
+                    "name": "Motomichi Toyama"
+                }
+            ]
+        },
+        {
+            "paperId": "2218e2e1df2c3adfb70e0def2e326a39928aacfc",
+            "title": "Complex Embeddings for Simple Link Prediction",
+            "abstract": "In statistical relational learning, the link prediction problem is key to automatically understand the structure of large knowledge bases. As in previous studies, we propose to solve this problem through latent factorization. However, here we make use of complex valued embeddings. The composition of complex embeddings can handle a large variety of binary relations, among them symmetric and antisymmetric relations. Compared to state-of-the-art models such as Neural Tensor Network and Holographic Embeddings, our approach based on complex embeddings is arguably simpler, as it only uses the Hermitian dot product, the complex counterpart of the standard dot product between real vectors. Our approach is scalable to large datasets as it remains linear in both space and time, while consistently outperforming alternative approaches on standard link prediction benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057146",
+                    "name": "Th\u00e9o Trouillon"
+                },
+                {
+                    "authorId": "1851564",
+                    "name": "Johannes Welbl"
+                },
+                {
+                    "authorId": "48662861",
+                    "name": "Sebastian Riedel"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1684865",
+                    "name": "Guillaume Bouchard"
+                }
+            ]
+        },
+        {
+            "paperId": "3b8167dd56dced46db2695b2ab15812553bf490f",
+            "title": "Similarity Learning for Time Series Classification",
+            "abstract": "Multivariate time series naturally exist in many fields, like energy, bioinformatics, signal processing, and finance. Most of these applications need to be able to compare these structured data. In this context, dynamic time warping (DTW) is probably the most common comparison measure. However, not much research effort has been put into improving it by learning. In this paper, we propose a novel method for learning similarities based on DTW, in order to improve time series classification. Making use of the uniform stability framework, we provide the first theoretical guarantees in the form of a generalization bound for linear classification. The experimental study shows that the proposed approach is efficient, while yielding sparse classifiers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2378427",
+                    "name": "Maria-Irina Nicolae"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1749327",
+                    "name": "Amaury Habrard"
+                },
+                {
+                    "authorId": "1738336",
+                    "name": "M. Sebban"
+                }
+            ]
+        },
+        {
+            "paperId": "400828710f967a264e9b196574f0f848b352e591",
+            "title": "Streaming-LDA: A Copula-based Approach to Modeling Topic Dependencies in Document Streams",
+            "abstract": "We propose in this paper two new models for modeling topic and word-topic dependencies between consecutive documents in document streams. The first model is a direct extension of Latent Dirichlet Allocation model (LDA) and makes use of a Dirichlet distribution to balance the influence of the LDA prior parameters wrt to topic and word-topic distribution of the previous document. The second extension makes use of copulas, which constitute a generic tools to model dependencies between random variables. We rely here on Archimedean copulas, and more precisely on Franck copulas, as they are symmetric and associative and are thus appropriate for exchangeable random variables. Our experiments, conducted on three standard collections that have been used in several studies on topic modeling, show that our proposals outperform previous ones (as dynamic topic models and temporal \\LDA), both in terms of perplexity and for tracking similar topics in a document stream.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440447",
+                    "name": "Hesam Amoualian"
+                },
+                {
+                    "authorId": "2889171",
+                    "name": "M. Clausel"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                }
+            ]
+        },
+        {
+            "paperId": "69b43e96553c5e3f8194f6cdb06b503f0bd14c0a",
+            "title": "Natural Language Generation through Character-based RNNs with Finite-state Prior Knowledge",
+            "abstract": "Recently Wen et al. (2015) have proposed a Recurrent Neural Network (RNN) approach to the generation of utterances from dialog acts, and shown that although their model requires less effort to develop than a rule-based system, it is able to improve certain aspects of the utterances, in particular their naturalness. However their system employs generation at the word-level, which requires one to pre-process the data by substituting named entities with placeholders. This pre-processing prevents the model from handling some contextual effects and from managing multiple occurrences of the same attribute. Our approach uses a character-level model, which unlike the word-level model makes it possible to learn to \u201ccopy\u201d information from the dialog act to the target without having to pre-process the input. In order to avoid generating non-words and inventing information not present in the input, we propose a method for incorporating prior knowledge into the RNN in the form of a weighted finite-state automaton over character sequences. Automatic and human evaluations show improved performance over baselines on several evaluation criteria.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "38962424",
+                    "name": "Raghav Goyal"
+                },
+                {
+                    "authorId": "2954698",
+                    "name": "Marc Dymetman"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "726b5705c2c826b07fbd246adf3c90ccbcafcff6",
+            "title": "Modeling topic dependencies in semantically coherent text spans with copulas",
+            "abstract": "The exchangeability assumption in topic models like Latent Dirichlet Allocation (LDA) often results in inferring inconsistent topics for the words of text spans like noun-phrases, which are usually expected to be topically coherent. We propose copulaLDA, that extends LDA by integrating part of the text structure to the model and relaxes the conditional independence assumption between the word-specific latent topics given the per-document topic distributions. To this end, we assume that the words of text spans like noun-phrases are topically bound and we model this dependence with copulas. We demonstrate empirically the effectiveness of copulaLDA on both intrinsic and extrinsic evaluation tasks on several publicly available corpora.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1951080",
+                    "name": "Georgios Balikas"
+                },
+                {
+                    "authorId": "3440447",
+                    "name": "Hesam Amoualian"
+                },
+                {
+                    "authorId": "2889171",
+                    "name": "M. Clausel"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                }
+            ]
+        },
+        {
+            "paperId": "85facedd79682822d244a312f3192f271610b362",
+            "title": "A study of different keyword activity prediction problems in social media",
+            "abstract": "Forecasting keyword activities in social networking sites has been the subject of many studies, as such activities represent, in many cases, a direct estimate of the spread of real-world phenomena, e.g. box-office revenues or flu epidemic. Most of these studies rely on point-wise, regression-like prediction algorithms and focus on few, usually unambiguous, keywords. We study in this paper the impact of keyword activity on three different problems: a) classification of keywords according to the increase of their activity in the near future; b) prediction of the activity value of each keyword in the near future; c) ranking of a set of keywords according to their future activity values. It is the first time, to our knowledge, that such dimensions are evaluated in this framework. Our experiments are conducted on a large dataset built by monitoring Twitter over a year. The different methods tested are evaluated using standard scores as well as a newly defined, application driven quality measure.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2083651056",
+                    "name": "Fran\u00e7ois Kawala"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1765141",
+                    "name": "A. Chouakria"
+                },
+                {
+                    "authorId": "3008835",
+                    "name": "E. Diemert"
+                }
+            ]
+        },
+        {
+            "paperId": "8e4c0579a401201116c74acd766c86258ae0f9c9",
+            "title": "Efficient local search for L1 and L2 binary matrix factorization",
+            "abstract": "Rank K Binary Matrix Factorization (BMF) approximates a binary matrix by the product of two binary matrices of lower rank, K. Several researchers have addressed this problem, focusing on either approximations of rank 1 or higher, using either the L 1 or L 2-norms for measuring the quality of the approximation. The rank 1 problem (for which the L 1 and L 2-norms are equivalent) has been shown to be related to the Integer Linear Programming (ILP) problem. We first show here that the alternating strategy with the L 2-norm, at the core of several methods used to solve BMF, can be reformulated as an Unconstrained Binary Quadratic Programming (UBQP) problem. This reformulation allows us to use local search procedures designed for UBQP in order to improve the solutions of BMF. We then introduce a new local search dedicated to the BMF problem. We show in particular that this solution is in average faster than the previously proposed ones. We then assess its behavior on several collections and methods and show that it significantly improves methods targeting the L 2-norms on all the datasets considered; for the L 1-norm, the improvement is also significant for real, structured datasets and for the BMF problem without the binary reconstruction constraint.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2701917",
+                    "name": "Seyed Hamid Mirisaee"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1693038",
+                    "name": "A. Termier"
+                }
+            ]
+        },
+        {
+            "paperId": "921a1600404a7e73680801eec9e556cfbb430b59",
+            "title": "Expansion de requ\u00eates par apprentissage",
+            "abstract": "We propose in this paper a learning query expansion approach using association rules. The query expansion problem is modeled as a supervised classification problem which aims at identifying the appropriate set of association rules to expand a given query. A training data set is generated using a GA based exploring algorithm of the association rules space. Classification is made by the method of the decision tree and the Random Forest method . The experiments are conducted on the French texts SDA95 collection of CLEF evaluation campaign 2003. The results show an improvement in task performance IR. MOTS-CL\u00c9S : r\u00e8gles d\u2019association, expansion de requ\u00eates, apprentissage supervis\u00e9.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35068661",
+                    "name": "Ahlem Bouziri"
+                },
+                {
+                    "authorId": "2324964",
+                    "name": "C. Latiri"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "94f4804f784d20e03adaba8f743f9e736167cfc4",
+            "title": "Learning Taxonomy Adaptation in Large-scale Classification",
+            "abstract": "In this paper, we study flat and hierarchical classification strategies in the context of large-scale taxonomies. Addressing the problem from a learning-theoretic point of view, we first propose a multi-class, hierarchical data dependent bound on the generalization error of classifiers deployed in large-scale taxonomies. This bound provides an explanation to several empirical results reported in the literature, related to the performance of flat and hierarchical classifiers. Based on this bound, we also propose a technique for modifying a given taxonomy through pruning, that leads to a lower value of the upper bound as compared to the original taxonomy. We then present another method for hierarchy pruning by studying approximation error of a family of classifiers, and derive from it features used in a meta-classifier to decide which nodes to prune. We finally illustrate the theoretical developments through several experiments conducted on two widely used taxonomies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1986256",
+                    "name": "Rohit Babbar"
+                },
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "2621453",
+                    "name": "C\u00e9cile Amblard"
+                }
+            ]
+        },
+        {
+            "paperId": "b5de5bbf7fa8ff0bf51ac5c9d60be49e52b3c51e",
+            "title": "Conference Report on 2015 IEEE International Conference on Data Science and Advanced Analytics (DSAA'2015) [Conference Reports]",
+            "abstract": "Presents information on the 2015 IEEE International Conference on Data Science and Advanced Analytics (DSAA'2015).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2148761004",
+                    "name": "Longbing Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "0e9f1d63530b673b30fe74c00003c5014cadaf22",
+            "title": "Language-independent Query Representation for IR Model Parameter Estimation on Unlabeled Collections",
+            "abstract": "We study here the problem of estimating the parameters of standard IR models (as BM25 or language models) on new collections without any relevance judgments, by using collections with already available relevance judgements. We propose different query representations that allow mapping queries (with and without relevance judgments, from different collections, potentially in different languages) into a common space. We then introduce a kernel regression approach to learn the parameters of standard IR models individually for each query in the new, unlabeled collection. Our experiments, conducted on standard English and Indian IR collections, show that our approach can be used to efficiently tune, query by query, standard IR models to new collections, potentially written in different languages. In particular, the versions of the standard IR models we obtain not only outperform the versions with default parameters, but can also outperform the versions in which the parameter values have been optimized globally over a set of queries with target relevance judgements.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1868168",
+                    "name": "Parantapa Goswami"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "124c6fa4e54514b3930f2c1bc79e4abd39d04d18",
+            "title": "Improved Local Search for Binary Matrix Factorization",
+            "abstract": "\n \n Rank K Binary Matrix Factorization (BMF) approximates a binary matrix by the product of two binary matrices of lower rank, K, using either L1 or L2 norm. In this paper, we first show that the BMF with L2 norm can be reformulated as an Unconstrained Binary Quadratic Programming (UBQP) problem. We then review several local search strategies that can be used to improve the BMF solutions obtained by previously proposed methods, before introducing a new local search dedicated to the BMF problem. We show in particular that the proposed solution is in general faster than the previously proposed ones. We then assess its behavior on several collections and methods and show that it significantly improves methods targeting the L2 norms on all the datasets considered; for the L1 norm, the improvement is also significant for real, structured datasets and for the BMF problem without the binary reconstruction constraint.\n \n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2701917",
+                    "name": "Seyed Hamid Mirisaee"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1693038",
+                    "name": "A. Termier"
+                }
+            ]
+        },
+        {
+            "paperId": "6502bf9cf05bd108c383ace947a3589afb203a37",
+            "title": "Learning query expansion from association rules between terms",
+            "abstract": "Query expansion technique offers an interesting solution for obtaining a complete answer to a user query while preserving the quality of retained documents. This mainly relies on an accurate choice of the added terms to an initial query. In this paper, we attempt to use data mining methods to extract dependencies between terms, namely a generic basis of association rules between terms. Face to the huge number of derived association rules and in order to select the optimal combination of query terms from the generic basis, we propose to model the problem as a classification problem and solve it using a supervised learning algorithm. For this purpose, we first generate a training set using a genetic algorithm based approach that explores the association rules space in order to find an optimal set of expansion terms, improving the MAP of the search results, we then build a model able to predict which association rules are to be used when expanding a query. The experiments were performed on SDA 95 collection, a data collection for information retrieval. The main observation is that the hybridization of textmining techniques and query expansion in an intelligent way allows us to incorporate the good features of all of them. As this is a preliminary attempt in this direction, there is a large scope for enhancing the proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35068661",
+                    "name": "Ahlem Bouziri"
+                },
+                {
+                    "authorId": "2324964",
+                    "name": "C. Latiri"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "3093810",
+                    "name": "Yassin Belhareth"
+                }
+            ]
+        },
+        {
+            "paperId": "9bc2a536e2cbfa60e8526b8f2e0122dab86a834a",
+            "title": "Study of Heuristic IR Constraints Under Function Discovery Framework",
+            "abstract": "In this paper we investigate the effect of the heuristic IR constraints on IR term-document scoring functions within the recently proposed function discovery framework. In the earlier study the constraints were empirically validated as a whole. Moreover, only the group of form constraints was utilized and the other prominent group, the adjustment constraints, was not considered. In this work we will investigate all the constraints individually and study them with two different term frequency normalization, namely normalization scheme used in DFR models and relative term count normalization used in language models.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1868168",
+                    "name": "Parantapa Goswami"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "9f40ec54a840c77b7c4dcaa830c77e737adf57da",
+            "title": "LSHTC: A Benchmark for Large-Scale Text Classification",
+            "abstract": "LSHTC is a series of challenges which aims to assess the performance of classification systems in large-scale classification in a a large number of classes (up to hundreds of thousands). This paper describes the dataset that have been released along the LSHTC series. The paper details the construction of the datsets and the design of the tracks as well as the evaluation measures that we implemented and a quick overview of the results. All of these datasets are available online and runs may still be submitted on the online server of the challenges.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "2195041",
+                    "name": "Aris Kosmopoulos"
+                },
+                {
+                    "authorId": "1800361",
+                    "name": "Nicolas Baskiotis"
+                },
+                {
+                    "authorId": "7364123",
+                    "name": "T. Arti\u00e8res"
+                },
+                {
+                    "authorId": "4738873",
+                    "name": "G. Paliouras"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1752430",
+                    "name": "Ion Androutsopoulos"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "1741426",
+                    "name": "P. Gallinari"
+                }
+            ]
+        },
+        {
+            "paperId": "accade9533a1d859eaa807dda16cbaf4fe690ca4",
+            "title": "\u00c0 la recherche des param\u00e8tres des mod\u00e8les de RI",
+            "abstract": "Nous abordons ici le probleme de l\u2019estimation des parametres des modeles standard de la recherche d\u2019information sur de nouvelles collections pour lesquelles aucun jugement de pertinence n\u2019est disponible. Pour cela, nous nous reposons sur des collections passees pour lesquelles des jugements de pertinence sont disponibles et introduisons une nouvelle represen- tation des requetes independante de la collection consideree. A partir de cette representation et des collections passees, nous apprenons une fonction de regression capable de fournir, pour une nouvelle requete, une valeur a chaque parametre des modeles standard de la recherche d\u2019information. Les experiences menees sur des collections standard montre le bien fonde de l\u2019approche suivie, qui fournit des resultats significativement meilleurs que ceux obtenus en uti- lisant les valeurs par defaut des parametres ou en utilisant des jugements de pertinence sur la nouvelle collection.",
+            "fieldsOfStudy": [
+                "Philosophy",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2060546409",
+                    "name": "Parantapa Goswami"
+                },
+                {
+                    "authorId": "144815693",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "adfb6661b02839c4063b0453c3a767e130b8909f",
+            "title": "Improving backfilling by using machine learning to predict running times",
+            "abstract": "The job management system is the HPC middleware responsible for distributing computing power to applications. While such systems generate an ever increasing amount of data, they are characterized by uncertainties on some parameters like the job running times. The question raised in this work is: To what extent is it possible/useful to take into account predictions on the job running times for improving the global scheduling? We present a comprehensive study for answering this question assuming the popular EASY backfilling policy. More precisely, we rely on some classical methods in machine learning and propose new cost functions well-adapted to the problem. Then, we assess our proposed solutions through intensive simulations using several production logs. Finally, we propose a new scheduling algorithm that outperforms the popular EASY backfilling algorithm by 28% considering the average bounded slowdown objective.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2247963",
+                    "name": "David Glesser"
+                },
+                {
+                    "authorId": "3077917",
+                    "name": "Valentin Reis"
+                },
+                {
+                    "authorId": "1733901",
+                    "name": "D. Trystram"
+                }
+            ]
+        },
+        {
+            "paperId": "bc3ba9eb70e135cf7d9f12aea9aba7cc48546298",
+            "title": "Building Representative Composite Items",
+            "abstract": "The problem of summarizing a large collection of homogeneous items has been addressed extensively in particular in the case of geo-tagged datasets (e.g. Flickr photos and tags). In our work, we study the problem of summarizing large collections of heterogeneous items. For example, a user planning to spend extended periods of time in a given city would be interested in seeing a map of that city with item summaries in different geographic areas, each containing a theater, a gym, a bakery, a few restaurants and a subway station. We propose to solve that problem by building representative Composite Items (CIs). To the best of our knowledge, this is the first work that addresses the problem of finding representative CIs for heterogeneous items. Our problem naturally arises when summarizing geo-tagged datasets but also in other datasets such as movie or music summarization. We formalize building representative CIs as an optimization problem and propose KFC, an extended fuzzy clustering algorithm to solve it. We show that KFC converges and run extensive experiments on a variety of real datasets that validate its effectiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2067225211",
+                    "name": "V. Leroy"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2701917",
+                    "name": "Seyed Hamid Mirisaee"
+                }
+            ]
+        },
+        {
+            "paperId": "dfe367be49ff288289053f439bfa3a13cc1ad386",
+            "title": "Progressive and Iterative Approaches for Time Series Averaging",
+            "abstract": "Averaging a set of time series is a major topic for many temporal data mining tasks as summarization, extracting prototype or clustering. Time series averaging should deal with the tricky multiple temporal alignment problem; a still challenging issue in various domains. This work compares the major progressive and iterative averaging time series methods under dynamic time warping (dtw).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1402154608",
+                    "name": "Saeid Soheily-Khah"
+                },
+                {
+                    "authorId": "1765141",
+                    "name": "A. Chouakria"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "07d998273ec74a0774b66620c27129a52a5c6e15",
+            "title": "Itemset approximation using Constrained Binary Matrix Factorization",
+            "abstract": "We address in this paper the problem of efficiently finding a few number of representative frequent itemsets in transaction matrices. To do so, we propose to rely on matrix decomposition techniques, and more precisely on Constrained Binary Matrix Factorization (CBMF) which decomposes a given binary matrix into the product of two lower dimensional binary matrices, called factors. We first show, under binary constraints, that one can interpret the first factor as a transaction matrix operating on packets of items, whereas the second factor indicates which item belongs to which packet. We then formally prove that one can directly mine the CBMF factors in order to find (approximate) itemsets of a given size and support in the original transaction matrix. Then through a detailed experimental study, we show that the frequent itemsets produced by our method represent a significant portion of the set of all frequent itemsets according to existing metrics, while being up to several orders of magnitude less numerous.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2701917",
+                    "name": "Seyed Hamid Mirisaee"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1693038",
+                    "name": "A. Termier"
+                }
+            ]
+        },
+        {
+            "paperId": "13eb012f930af89d83d8ce7083ab41bee38a5f4b",
+            "title": "Big data, le cas des syst\u00e8mes d'information",
+            "abstract": "Nous presentons dans cet article les principaux defis que pose le \u00ab big data \u00bb aux systemes d\u2019information, c\u2019est-a-dire aux systemes en charge du stockage et du traitement des donnees en vue de prises de decision. Apres avoir detaille deux applications majeures du big data que sont la recherche d\u2019information et l\u2019intelligence economique, nous nous interessons a la place des donnees ouvertes et du web dans le big data ainsi qu\u2019a celle que le web occupe dans les sciences et la societe. Nous abordons ensuite les methodes et technologies informatiques deployees pour traiter le big data en mettant l\u2019accent sur la facon dont les donnees sont stockees, traitees et analysees afin d\u2019en extraire des connaissances. Nous nous interessons enfin, aux defis que pose le big data aux entreprises et aux citoyens, notamment en termes de qualite des donnees et de preservation de la vie privee.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2027419668",
+                    "name": "J. Mothe"
+                },
+                {
+                    "authorId": "2067172582",
+                    "name": "Yoann Pitarch"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "1c6bc73fead1e4984cbfa8e6f1681b6044593666",
+            "title": "On power law distributions in large-scale taxonomies",
+            "abstract": "In many of the large-scale physical and social complex systems phenomena fat-tailed distributions occur, for which different generating mechanisms have been proposed. In this paper, we study models of generating power law distributions in the evolution of large-scale taxonomies such as Open Directory Project, which consist of websites assigned to one of tens of thousands of categories. The categories in such taxonomies are arranged in tree or DAG structured configurations having parent-child relations among them. We first quantitatively analyse the formation process of such taxonomies, which leads to power law distribution as the stationary distributions. In the context of designing classifiers for large-scale taxonomies, which automatically assign unseen documents to leaf-level categories, we highlight how the fat-tailed nature of these distributions can be leveraged to analytically study the space complexity of such classifiers. Empirical evaluation of the space complexity on publicly available datasets demonstrates the applicability of our approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1986256",
+                    "name": "Rohit Babbar"
+                },
+                {
+                    "authorId": "2472214",
+                    "name": "Cornelia Metzig"
+                },
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                }
+            ]
+        },
+        {
+            "paperId": "44989c71e7995334bdb0545451cbd4e09d354325",
+            "title": "Re-ranking approach to classification in large-scale power-law distributed category systems",
+            "abstract": "For large-scale category systems, such as Directory Mozilla, which consist of tens of thousand categories, it has been empirically verified in earlier studies that the distribution of documents among categories can be modeled as a power-law distribution. It implies that a significant fraction of categories, referred to as rare categories, have very few documents assigned to them. This characteristic of the data makes it harder for learning algorithms to learn effective decision boundaries which can correctly detect such categories in the test set. In this work, we exploit the distribution of documents among categories to (i) derive an upper bound on the accuracy of any classifier, and (ii) propose a ranking-based algorithm which aims to maximize this upper bound. The empirical evaluation on publicly available large-scale datasets demonstrate that the proposed method not only achieves higher accuracy but also much higher coverage of rare categories as compared to state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1986256",
+                    "name": "Rohit Babbar"
+                },
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                }
+            ]
+        },
+        {
+            "paperId": "63eb81a29d2354e9c6af2d834573e5f9b48fb18b",
+            "title": "Web-scale classification: web classification in the big data era",
+            "abstract": "This paper provides an overview of the workshop Web-Scale Classification: Web Classification in the Big Data Era which was held in New York City, on February 28th as a workshop of the seventh International Conference on Web Search and Data Mining. The goal of the workshop was to discuss and assess recent research focusing on classification and mining in Web-scale category systems. The workshop brought together members of several communities such web mining, machine learning, text classification and social media mining.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "1752430",
+                    "name": "Ion Androutsopoulos"
+                },
+                {
+                    "authorId": "7364123",
+                    "name": "T. Arti\u00e8res"
+                },
+                {
+                    "authorId": "1741426",
+                    "name": "P. Gallinari"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "4738873",
+                    "name": "G. Paliouras"
+                }
+            ]
+        },
+        {
+            "paperId": "8717700e717f00bb3608578950d07a7a159f49c1",
+            "title": "Behavior Informatics: A New Perspective",
+            "abstract": "This installment of Trends & Controversies provides an array of perspectives on the latest research in behavior informatics. Longbing Cao introduces the work in \"Behavior Informatics: A New Perspective.\" Then, in \"Behavior Computing,\" Longbing Cao and Thorsten Joachims provide a basic overview of the topic. Next is \"Coupled Behavior Representation, Modeling, Analysis, and Reasoning\" by Can Wang, Longbing Cao, Eric Gaussier, Jinjiu Li, Yuming Ou, and Dan Luo. The fourth article is \"Behavior Analysis in Social Media,\" by Reza Zafarani and Huan Liu. The fifth article is \"Group Recommendation and Behavior,\" by Guandong Xu and Zhiang Wu. Gabriella Pasi wrote the sixth article, \"Web Search and Behavior.\" The seventh article, \"Behaviors of IPTV Users,\" is by Ya Zhang, Xiaokang Yang, and Hongyuan Zha. Finally, \"Should Behavioral Models of Terror Groups Be Disclosed?\" is by Edoardo Serra and V.S. Subrahmanian.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2148761004",
+                    "name": "Longbing Cao"
+                },
+                {
+                    "authorId": "1680188",
+                    "name": "T. Joachims"
+                },
+                {
+                    "authorId": "2144350149",
+                    "name": "Can Wang"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2845288",
+                    "name": "Jinjiu Li"
+                },
+                {
+                    "authorId": "4349056",
+                    "name": "Yuming Ou"
+                },
+                {
+                    "authorId": "2061548520",
+                    "name": "D. Luo"
+                },
+                {
+                    "authorId": "2281410",
+                    "name": "R. Zafarani"
+                },
+                {
+                    "authorId": "38746648",
+                    "name": "Huan Liu"
+                },
+                {
+                    "authorId": "1747560",
+                    "name": "Guandong Xu"
+                },
+                {
+                    "authorId": "2737890",
+                    "name": "Zhiang Wu"
+                },
+                {
+                    "authorId": "145645971",
+                    "name": "G. Pasi"
+                },
+                {
+                    "authorId": "46868037",
+                    "name": "Ya Zhang"
+                },
+                {
+                    "authorId": "1795291",
+                    "name": "Xiaokang Yang"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                },
+                {
+                    "authorId": "1709838",
+                    "name": "Edoardo Serra"
+                },
+                {
+                    "authorId": "1728462",
+                    "name": "V. S. Subrahmanian"
+                }
+            ]
+        },
+        {
+            "paperId": "94ca6891a61b78ad3bf5963ff2046eaa7058117d",
+            "title": "Apprentissage d'ordonnancement et influence de l'ambigu\u00eft\u00e9 pour la pr\u00e9diction d'activit\u00e9 sur les r\u00e9seaux sociaux",
+            "abstract": "Forecasting keyword/topic activities in social networking sites has been the subject of many recent studies, as such activities represent, in many cases, a direct estimate of the spreadth of real-world phenomena, it eg. box-office revenues or flu epidemies. Most of these studies rely on pointwise, regression-like prediction algorithms and focus on few, usually unambiguous, keywords/topics. We study different strategies to rank keyword activities through a comparison of pointwise and pairwise learning to rank approaches, as well as the impact of keyword ambiguity, keyword activity and keyword set size on the prediction results. It is the first time, to our knowledge, that such dimensions are evaluated in this framework. Our experiments are conducted on a large dataset built by monitoring Twitter over a year and including 1497 keywords.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2636936",
+                    "name": "Fran\u00e7ois Kawala"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2078446241",
+                    "name": "Ahlame Douzal Chouakria"
+                },
+                {
+                    "authorId": "3008835",
+                    "name": "E. Diemert"
+                }
+            ]
+        },
+        {
+            "paperId": "1380714735457694bc889a7dffe3da68babc9135",
+            "title": "Estimation du param\u00e8tre de collection des mod\u00e8les d'information pour la RI",
+            "abstract": "In this paper we explore various methods to estimate the collection parameter of the information based models for ad hoc information retrieval. In previous studies, this parameter was set to the average number of documents where the word under consideration appears. We introduce here a fully formalized estimation method for both the log-logistic and the smoothed power law models that leads to improved versions of these models in IR. Furthermore, we show that the previous setting of the collection parameter of the log-logistic model is a special case of the estimated value proposed here.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2060546409",
+                    "name": "Parantapa Goswami"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "1a633226fbe68ca4fb4e097e8a39f64683436434",
+            "title": "Recherche d'Information - applications, mod\u00e8les et algorithmes",
+            "abstract": "Le premier ouvrage francophone sur les algorithmes qui sous-tendent les technologies de big data et les moteurs de recherche ! Depuis quelques annees, de nouveaux modeles et algorithmes sont mis au point pour traiter des donnees de plus en plus volumineuses et diverses. Cet ouvrage presente les fondements scientifiques des t\u00e2ches les plus repandues en recherche d'information (RI), t\u00e2ches egalement liees au data mining, au decisionnel et plus generalement a l'exploitation de big data. Il propose un expose coherent des algorithmes classiques developpes dans ce domaine, abordable a des lecteurs qui cherchent a connaitre le mecanisme des outils quotidiens d'Internet. Le lecteur approfondira les concepts d'indexation, de compression, de recherche sur le Web, de classification et de categorisation, et pourra prolonger cette etude avec les exercices corriges proposes en fin de chapitre. Ce livre s'adresse tant aux chercheurs et ingenieurs qui travaillent dans le domaine de l'acces a l'information et employes de PME qui utilisent en profondeur les outils du webmarketing, qu'aux etudiants de Licence, Master, doctorants ou en ecoles d'ingenieurs, qui souhaitent un ouvrage de reference sur la recherche d'information.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Sociology"
+            ],
+            "authors": [
+                {
+                    "authorId": "144815693",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "349ab37762d24837e7f95b49702e48bc8fa423ba",
+            "title": "Results of the First BioASQ Workshop",
+            "abstract": "The goal of the BioASQ project is to push the research frontier towards hybrid information systems. We aim to promote systems and approaches that are able to deal with the whole diversity of the Web, especially for, but not restricted to the context of bio-medicine. This goal is pursued by the organization of challenges. The first challenge consisted of two tasks: semantic indexing and question answering. 157 systems were registered by 12 different participants for the semantic indexing task, of which between 19 and 29 participated in each batch. The question answering task was tackled by 15 systems, which were developed by three different organizations. Between 2 and 5 of these systems addressed each batch. Overall, the best systems were able to outperform the strong baselines provided in the experiments in two out of three settings. This suggests that advances over the state of the art were achieved through the BioASQ challenge but also that the benchmark in itself is very challenging. In this paper, we present the data used during the challenge as well as the technologies which were at the core of the participants' frameworks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1712107",
+                    "name": "A. N. Ngomo"
+                }
+            ]
+        },
+        {
+            "paperId": "3f37c545a53f806e5df10998c01156c57bba5c28",
+            "title": "A Theoretical Analysis of Pseudo-Relevance Feedback Models",
+            "abstract": "Our goal in this study is to compare several widely used pseudo-relevance feedback (PRF) models and understand what explains their respective behavior. To do so, we first analyze how different PRF models behave through the characteristics of the terms they select and through their performance on two widely used test collections. This analysis reveals that several well-known models surprisingly tend to select very common terms, with low IDF (inverse document frequency). We then introduce several conditions PRF models should satisfy regarding both the terms they select and the way they weigh them, prior to study whether standard PRF models satisfy these conditions or not. This study reveals that most models are deficient with respect to at least one condition, and that this deficiency explains the results of our analysis of the behavior of the models, as well as some of the results reported on the respective performance of PRF models. Based on the PRF conditions, we finally propose possible corrections for the simple mixture model. The PRF models obtained after these corrections outperform their standard version and yield state-of-the-art PRF models which confirms the validity of our theoretical analysis.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2207074",
+                    "name": "S. Clinchant"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "95a1b8737f0bad5ee6b55f99b12089a40bb6d989",
+            "title": "Transferring knowledge with source selection to learn IR functions on unlabeled collections",
+            "abstract": "We investigate the problem of learning an IR function on a collection without relevance judgements (called target collection) by transferring knowledge from a selected source collection with relevance judgements. To do so, we first construct, for each query in the target collection, relative relevance judgment pairs using information from the source collection closest to the query (selection and transfer steps), and then learn an IR function from the obtained pairs in the target collection (self-learning step). For the transfer step, the relevance information in the source collection is summarized as a grid that provides, for each term frequency and document frequency values of a word in a document, an empirical estimate of the relevance of the document. The self-learning step iteratively assigns pairwise preferences to documents in the target collection using the scores of the former learned function. We show the effectiveness of our approach through a series of extensive experiments on CLEF and several collections from TREC used either as target or source datasets. Our experiments show the importance of selecting the source collection prior to transfer information to the target collection, and demonstrate that the proposed approach yields results consistently and significantly above state-of-the-art IR functions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1868168",
+                    "name": "Parantapa Goswami"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "a5f36ee00dd518dac08aca7d79c9f84225450f53",
+            "title": "Towards a Framework for Semantic Exploration of Frequent Patterns",
+            "abstract": "Mining frequent patterns is an essential task in discovering hidden correlations in datasets. Although frequent patterns unveil valuable information, there are some challenges which limits their usability. First, the number of possible patterns is often very large which hinders their eff ective exploration. Second, patterns with many items are hard to read and the analyst may be unable to understand their meaning. In addition, the only available information about patterns is their support, a very coarse piece of information. In this paper, we are particularly interested in mining datasets that reflect usage patterns of users moving in space and time and for whom demographics attributes are available (age, occupation, etc). Such characteristics are typical of data collected from smart phones, whose analysis has critical business applications nowadays. We propose pattern exploration primitives, abstraction and refinement, that use hand-crafted taxonomies on time, space and user demographics. We show on two real datasets, Nokia and MovieLens, how the use of such taxonomies reduces the size of the pattern space and how demographics enable their semantic exploration. This work opens new perspectives in the semantic exploration of frequent patterns that reflect the behavior of di fferent user communities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1403851743",
+                    "name": "Behrooz Omidvar-Tehrani"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "1693038",
+                    "name": "A. Termier"
+                },
+                {
+                    "authorId": "3228199",
+                    "name": "Aur\u00e9lie Bertaux"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144986814",
+                    "name": "M. Rousset"
+                }
+            ]
+        },
+        {
+            "paperId": "cc648c696b0a9eaf540cd2319a0c480870dde2ee",
+            "title": "Mod\u00e8les d'information pour la recherche multilingue",
+            "abstract": "We present in this paper well-founded cross-language extensions of the recently introduced models in the information-based family for information retrieval, namely the LL (loglogistic) and SPL (smoothed power law) models of (Clinchant et al., 2010). These extensions are based on (a) a generalization of the notion of information used in the information-based family, (b) a generalization of the random variables also used in this family, and (c) the direct expansion of query terms with their translations. We then review these extensions from a theoretical point-of-view, prior to assessing them experimentally. The results of the experimental comparisons between these extensions and existing CLIR systems, on three collections and three language pairs, reveal that the cross-language extension of the LL model provides a state-of-the-art CLIR system, yielding the best performance overall.",
+            "fieldsOfStudy": [
+                "Philosophy",
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2165245663",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "e85cb9c607635e8137b762e1d44ebee5dfa3f272",
+            "title": "On Flat versus Hierarchical Classification in Large-Scale Taxonomies",
+            "abstract": "We study in this paper flat and hierarchical classification strategies in the context of large-scale taxonomies. To this end, we first propose a multiclass, hierarchical data dependent bound on the generalization error of classifiers deployed in large-scale taxonomies. This bound provides an explanation to several empirical results reported in the literature, related to the performance of flat and hierarchical classifiers. We then introduce another type of bound targeting the approximation error of a family of classifiers, and derive from it features used in a meta-classifier to decide which nodes to prune (or flatten) in a large-scale taxonomy. We finally illustrate the theoretical developments through several experiments conducted on two widely used taxonomies.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1986256",
+                    "name": "Rohit Babbar"
+                },
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144444438",
+                    "name": "Massih-Reza Amini"
+                }
+            ]
+        },
+        {
+            "paperId": "322c56bd76f32afc6f03998da2200774a8d0b031",
+            "title": "On empirical tradeoffs in large scale hierarchical classification",
+            "abstract": "While multi-class categorization of documents has been of research interest for over a decade, relatively fewer approaches have been proposed for large scale taxonomies in which the number of classes range from hundreds of thousand as in Directory Mozilla to over a million in Wikipedia. As a result of ever increasing number of text documents and images from various sources, there is an immense need for automatic classification of documents in such large hierarchies. In this paper, we analyze the tradeoffs between the important characteristics of different classifiers employed in the top down fashion. The properties for relative comparison of these classifiers include, (i) accuracy on test instance, (ii) training time (iii) size of the model and (iv) test time required for prediction. Our analysis is motivated by the well known error bounds from learning theory, which is also further reinforced by the empirical observations on the publicly available data from the Large Scale Hierarchical Text Classification Challenge. We show that by exploiting the data heterogenity across the large scale hierarchies, one can build an overall classification system which is approximately 4 times faster for prediction, 3 times faster to train, while sacrificing only 1% point in accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1986256",
+                    "name": "Rohit Babbar"
+                },
+                {
+                    "authorId": "3071383",
+                    "name": "Ioannis Partalas"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2621453",
+                    "name": "C\u00e9cile Amblard"
+                }
+            ]
+        },
+        {
+            "paperId": "95c84c346c316afd54787b50a2c5831b1c5c28a3",
+            "title": "Toward a New Protocol to Evaluate Recommender Systems",
+            "abstract": "In this paper, we propose an approach to analyze the performance and the added value of automatic recommender systems in an industrial context. We show that recommender systems are multifaceted and can be organized around 4 structuring functions: help users to decide, help users to compare, help users to discover, help users to explore. A global off line protocol is then proposed to evaluate recommender systems. This protocol is based on the definition of appropriate evaluation measures for each aforementioned function. The evaluation protocol is discussed from the perspective of the usefulness and trust of the recommendation. A new measure called Average Measure of Impact is introduced. This measure evaluates the impact of the personalized recommendation. We experiment with two classical methods, K-Nearest Neighbors (KNN) and Matrix Factorization (MF), using the well known dataset: Netflix. A segmentation of both users and items is proposed to finely analyze where the algorithms perform well or badly. We show that the performance is strongly dependent on the segments and that there is no clear correlation between the RMSE and the quality of the recommendation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2056223006",
+                    "name": "Frank Meyer"
+                },
+                {
+                    "authorId": "31452701",
+                    "name": "F. Fessant"
+                },
+                {
+                    "authorId": "1783724",
+                    "name": "F. Cl\u00e9rot"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "c1841bbfe0a5302a014f36c0a7fe5107585c6afd",
+            "title": "Une analyse th\u00e9orique des mod\u00e8les de r\u00e9tro-pertinence",
+            "abstract": "Nous proposons dans ce papier une analyse theorique des modeles de Pseudo-Relevance Feedback (PRF), expliquant pourquoi certains modeles comme les modeles d\u2019information sont plus performants. Pour ce faire, nous proposons un ensemble de proprietes pour les fonctions de PRF, dont une portant sur la frequence documentaire (DF) qui est validee experimentalement. Cette etude theorique revele que plusieurs modeles de reference ne respectent pas la propriete sur l\u2019effet IDF ou sur l\u2019effet DF. Les modeles satisfaisant toutes les proprietes surpassent ces modeles en partie deficients.",
+            "fieldsOfStudy": [
+                "Philosophy",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066272103",
+                    "name": "St\u00e9phane Clinchant"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "113c390356fb53684dd827f5318316f642d7381d",
+            "title": "Mod\u00e9liser l'utilisateur pour la diffusion de l'information dans les r\u00e9seaux sociaux",
+            "abstract": "Predicting information diffusion in social networks is a hard task which can lead to interesting applications: recommending relevant information for users, choosing the best entry points in the network for the best diffusion of a given piece of information, etc. We present new models which take into account three main characteristics: the number of neighbors who have disclosed the information, the relevance of the information for each user and the willingness of users to diffuse information. After this presentation, we propose to estimate the parameters of our models and illustrate their behavior through a comparison with standard information dif- fusion models on a real dataset. We also propose a study of the influence maximization problem associated with these new models. RESUME. Predire la diffusion d'information dans les reseaux sociaux est une t\u00e2che difficile qui peut cependant permettre de repondre a des problemes interessants : recommandation d'infor- mation, choix des meilleurs points d'entree pour une diffusion, etc. Nous presentons de nou- veaux modeles de diffusion qui tiennent compte de trois caracteristiques : le nombre de voisins ayant deja diffuse l'information, l'interet que l'utilisateur peut porter a l'information et la ten- dance d'un utilisateur a diffuser. Apres cette presentation, nous proposons une methode pour estimer les parametres de nos modeles et illustrons leur comportement sur un jeu de donnees reel a travers une comparaison avec des modeles standards de diffusion de l'information. Nous proposons aussi une etude de la maximisation de l'influence associee a ces nouveaux modeles.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2081103512",
+                    "name": "C\u00e9dric Lagnier"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2636936",
+                    "name": "Fran\u00e7ois Kawala"
+                }
+            ]
+        },
+        {
+            "paperId": "54531e4e8021aee653824440424c9661ad4c181c",
+            "title": "Mod\u00e8les de RI fond\u00e9s sur l'information",
+            "abstract": "Nous presentons dans cet article une vue analytique des contraintes heuristiques recemment proposees pour les fonctions d\u2019ordonnancement (retrieval function). Ces caracterisations permettent ainsi de tester simplement si un modele de recherche d\u2019information (RI) respecte ces contraintes ou non. De plus, nous examinons un certain nombre de resultats empiriques sur les distributions de frequences de mots et le role central joue par le phenomene de rafale, pour lequel nous proposons une definition formelle. Nous introduisons ensuite une nouvelle famille de modeles probabilistes pour la RI, fondee sur la notion d\u2019information. Lorsque la loi de probabilite sous-jacente est capable de modeliser le phenomene de rafale, alors le modele devient naturellement valide au sens des contraintes heuristiques. Les distributions log-logistique et SPL sont presentees dans ce contexte et les experiences, menees sur trois collections differentes, illustrent le comportement adequat de ces modeles ; ils surpassent Okapi BM25 et les modeles de langues, avec lissage de Jelinek-Mercer ou de Dirichlet, a la fois pour la precision moyenne et la precision en tete de liste, et fournissent des resultats similaires aux modeles DFR (Divergence from Randomness) tout en les simplifiant.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics",
+                "Philosophy"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066272103",
+                    "name": "St\u00e9phane Clinchant"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "9e4d15586ec73e3addeaafa85539cc7b2af3bd95",
+            "title": "A Document Frequency Constraint for Pseudo-Relevance Feedback Models",
+            "abstract": "We study in this paper the behavior of several PRF models, and display their main characteristics. This will lead us to introduce a new heuristic constraint for PRF models, referred to as the Document Frequency (DF) constraint. We then analyze, from a theoretical point of view, state-of-the-art PRF models according to their relation with this constraint. This analysis reveals that the standard mixture model for PRF in the language modeling family does not satisfy the DF constraint. We then conduct a series of experiments in order to see whether the DF constraint is valid or not. To do so, we performed tests with an oracle and a simple family of tf-idf functions based on a prameter k controlling the convexity/concavity of the function. Both the oracle and the results obtained with this family of functions validate the DF constraint.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2207074",
+                    "name": "S. Clinchant"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "a59f61014d03e1907dbcc4978ea42cc2de90bdda",
+            "title": "Models of information diffusion in social networks",
+            "abstract": "Social networks now play a central role for sharing information and discussing different types of events. The way information spreads in such networks has often been compared to the way innovations spread in marketing or viruses spread in populations. As such, two of the more popular information diffusion models, the IC (Independent Cascade) and the LT (Linear Threshold) models, can be seen as instances of the standard SI (Susceptible-Infectious) family used in epidemiology. However, such models usually fail to account for important characteristics of the users sharing and diffusing information in social networks, namely the interest of the users in the information being disseminated and their willingness to diffuse a piece of information. After a presentation of the standard information diffusion models, we will introduce a new generation of models, referred to as \"user-centric\", which provide a more realistic modeling of how information spreads in social networks. We will furthermore explicit the differences between all these models along several dimensions (relation to percolation, influence maximization problem) and will illustrate the behavior of these models on both synthetic and real datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "c5741adc2ee74cca9e513050019ed14be9feea13",
+            "title": "Degr\u00e9 de comparabilit\u00e9, extraction lexicale bilingue et recherche d\u2019information interlingue (Degree of comparability, bilingual lexical extraction and cross-language information retrieval)",
+            "abstract": "Nous \u00e9tudions dans cet article le probl\u00e8me de la comparabilit\u00e9 des documents composant un corpus comparable afin d\u2019am\u00e9liorer la qualit\u00e9 des lexiques bilingues extraits et les performances des syst\u00e8mes de recherche d\u2019information interlingue. Nous proposons une nouvelle approche qui permet de garantir un certain degr\u00e9 de comparabilit\u00e9 et d\u2019homog\u00e9n\u00e9it\u00e9 du corpus tout en pr\u00e9servant une grande part du vocabulaire du corpus d\u2019origine. Nos exp\u00e9riences montrent que les lexiques bilingues que nous obtenons sont d\u2019une meilleure qualit\u00e9 que ceux obtenus avec les approches pr\u00e9c\u00e9dentes, et qu\u2019ils peuvent \u00eatre utilis\u00e9s pour am\u00e9liorer significativement les syst\u00e8mes de recherche d\u2019information interlingue.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Philosophy"
+            ],
+            "authors": [
+                {
+                    "authorId": "2052635579",
+                    "name": "Li Bo"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "145967807",
+                    "name": "E. Morin"
+                },
+                {
+                    "authorId": "2861278",
+                    "name": "Amir Hazem"
+                }
+            ]
+        },
+        {
+            "paperId": "cef644ebb4dbb015832061ec1fa8ca685188f298",
+            "title": "Do IR models satisfy the TDC retrieval constraint",
+            "abstract": "If it has been show in previous studies (as [5, 2]) that most IR models satisfy most IR constraints, the situation of the TDC constraint is unclear, and the goal of this short paper is to show that several state-of-the-art IR models indeed do not comply with the general TDC constraint, but do satisfy the speTDC one. We will review here the recently intro- duced log-logistic model [2], as well as the Jelinek-Mercer and Dirichlet language models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2207074",
+                    "name": "S. Clinchant"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "cff141d3eb1bed2ced050767d7dfd6ddee054df6",
+            "title": "Apport des donn\u00e9es th\u00e9matiques dans les syst\u00e8mes de recommandation : hybridation et d\u00e9marrage \u00e0 froid",
+            "abstract": "R\u00e9sum\u00e9. Des travaux r\u00e9cents (Pilaszy et al., 2009) sugg\u00e8rent que les m\u00e9tadonn\u00e9es sont quasiment inutiles pour les syst\u00e8mes de recommandation, y compris en situation de cold-start : les donn\u00e9es de logs de notation sont beaucoup plus informatives. Nous \u00e9tudions, sur une base de r\u00e9f\u00e9rence de logs d'usages pour la recommandation automatique de DVD (Netflix), les performances de syst\u00e8mes de recommandation bas\u00e9s sur des sources de donn\u00e9es collaboratives, th\u00e9matiques et hybrides en situation de d\u00e9marrage \u00e0 froid (cold-start). Nous exhibons des cas exp\u00e9rimentaux o\u00f9 les m\u00e9tadonn\u00e9es apportent plus que les donn\u00e9es de logs d\u2019usage (collaboratives) pour la performance pr\u00e9dictive. Pour g\u00e9rer le cold-start d'un syst\u00e8me de recommandation, nous montrons que des approches \"en cascade\", th\u00e9matiques puis hybrides, puis collaboratives, seraient plus appropri\u00e9es.",
+            "fieldsOfStudy": [
+                "Sociology",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48611789",
+                    "name": "F. Meyer"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2083461699",
+                    "name": "Fabrice Cl\u00e9rot"
+                },
+                {
+                    "authorId": "2102594094",
+                    "name": "Julien Schluth"
+                }
+            ]
+        },
+        {
+            "paperId": "e58ffe8a69c1512416f4879b60cc1dbf91d4cacb",
+            "title": "Clustering Comparable Corpora For Bilingual Lexicon Extraction",
+            "abstract": "We study in this paper the problem of enhancing the comparability of bilingual corpora in order to improve the quality of bilingual lexicons extracted from comparable corpora. We introduce a clustering-based approach for enhancing corpus comparability which exploits the homogeneity feature of the corpus, and finally preserves most of the vocabulary of the original corpus. Our experiments illustrate the well-foundedness of this method and show that the bilingual lexicons obtained from the homogeneous corpus are of better quality than the lexicons obtained with previous approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2151287788",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1705519",
+                    "name": "Akiko Aizawa"
+                }
+            ]
+        },
+        {
+            "paperId": "01dce8fd7aa015b09d0f0c14419927e661a6665d",
+            "title": "Similarity learning in nearest neighbor, positive semi-definitiveness and RELIEF algorithm",
+            "abstract": "In this paper, we develop a similarity learning version of RELIEF algorithm, called RBS-PSD (for RELIEF-Based Similarity learning) where the learned similarity matrix is projected onto the set of positive, semi-definite matrices. Unfortunately, this algorithm does not perform very well in practice since it does not try to optimize the leave-one-out error or the 0\u20131 loss. This motivated us to develop its stricter version, called sRBS-PSD, which aims at reducing a cost function closer to the 0\u20131 loss. In the case of sRBS-PSD also, the similarity matrix is projected onto the set of positive, semi-definite matrices. Experiments reveal that this projection improves the performance for all of these algorithms. Furthermore, it has been shown that sRBS-PSD outperforms its counterparts for majority of the data sets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "34722833",
+                    "name": "A. M. Qamar"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "1a143d5dd21523d290307f85ba323a528e3803b5",
+            "title": "Un Mod\u00e8le de Diffusion de l'Information dans les R\u00e9seaux Sociaux",
+            "abstract": "R\u00e9sum\u00e9. Les r\u00e9seaux sociaux sont un outil que les gens utilisent de plus en plus pour communiquer et partager de l\u2019information. Un certain nombre d\u2019\u00e9tudes ont \u00e9t\u00e9 effectu\u00e9es, sur les r\u00e9seaux sociaux, la propagation de l\u2019innovation et les maladies afin de comprendre et de mod\u00e9liser la diffusion dans des graphes d\u2019utilisateurs. Dans un premier temps, nous pr\u00e9sentons ici un mod\u00e8le de diffusion de l\u2019information dans les graphes de contenu alliant aussi bien l\u2019influence des voisins que celle de la proximit\u00e9 avec le contenu, avant d\u2019illustrer notre mod\u00e8le par des exemples de diffusion sur des r\u00e9seaux g\u00e9n\u00e9r\u00e9s manuellement et des r\u00e9seaux r\u00e9els. Puis, dans une seconde partie, nous introduisons une dynamique de groupe afin de consid\u00e9rer ensemble les utilisateurs similaires au sein du r\u00e9seau social.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "History"
+            ],
+            "authors": [
+                {
+                    "authorId": "2081103512",
+                    "name": "C\u00e9dric Lagnier"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "22d1e8ecaf4b42cd761aecbaf736190a6e680470",
+            "title": "Information-based models for ad hoc IR",
+            "abstract": "We introduce in this paper the family of information-based models for ad hoc information retrieval. These models draw their inspiration from a long-standing hypothesis in IR, namely the fact that the difference in the behaviors of a word at the document and collection levels brings information on the significance of the word for the document. This hypothesis has been exploited in the 2-Poisson mixture models, in the notion of eliteness in BM25, and more recently in DFR models. We show here that, combined with notions related to burstiness, it can lead to simpler and better models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2207074",
+                    "name": "S. Clinchant"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "23cfb33994a625f023d9d2fbfda533b82ddd3b52",
+            "title": "Similarity Learning in Nearest Neighbor and Relief Algorithm",
+            "abstract": "In this paper, we study the links between RELIEF, a well-known feature re-weighting algorithm and SiLA, a similarity learning algorithm. On one hand, SiLA is interested in directly reducing the leave-one-out error or 0-1 loss by reducing the number of mistakes on unseen examples. On the other hand, it has been shown that RELIEF could be seen as a distance learning algorithm in which a linear utility function with maximum margin was optimized. We first propose here a version of this algorithm for similarity learning, called RBS (for RELIEF-Based Similarity learning). As RELIEF, and unlike SiLA, RBS does not try to optimize the leave-one-out error or 0-1 loss, and does not perform very well in practice, as we illustrate on two UCI collections. We thus introduce a stricter version of RBS, called sRBS, aiming at relying on a cost function closer to the 0-1 loss. Experiments conducted on several datasets illustrate the different behaviors of these algorithms for learning similarities for kNN classification. The results indicate in particular that the 0-1 loss is a more appropriate cost function than the one implicitly used by RELIEF.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34722833",
+                    "name": "A. M. Qamar"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "b9aa158d74e3fa359bc5d06e64518097128ef7e0",
+            "title": "Improving Corpus Comparability for Bilingual Lexicon Extraction from Comparable Corpora",
+            "abstract": "Previous work on bilingual lexicon extraction from comparable corpora aimed at finding a good representation for the usage patterns of source and target words and at comparing these patterns efficiently. In this paper, we try to work it out in another way: improving the quality of the comparable corpus from which the bilingual lexicon has to be extracted. To do so, we propose a measure of comparability and a strategy to improve the quality of a given corpus through an iterative construction process. Our approach, being general, can be used with any existing bilingual lexicon extraction method. We show here that it leads to a significant improvement over standard bilingual lexicon extraction methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2151287788",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "e1557fb452b9ffa640740770cf351894bac73b01",
+            "title": "The ECIR 2010 large scale hierarchical classification workshop",
+            "abstract": "This paper reports on the Large Scale Hierarchical Classification workshop (http://kmi.open.ac.uk/events/ecir2010/workshops-tutorials), held in conjunction with the European Conference on Information Retrieval (ECIR) 2010. The workshop was associated with the PASCAL 2 Large-Scale Hierarchical Text Classification Challenge (http://lshtc.iit.demokritos.gr), which took place in 2009. We first provide information about the challenge, presenting the data used, the tasks and the evaluation measures and then we provide an overview of the approaches proposed by the participants of the workshop, together with a summary of the results of the challenge.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2195041",
+                    "name": "Aris Kosmopoulos"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "4738873",
+                    "name": "G. Paliouras"
+                },
+                {
+                    "authorId": "3310409",
+                    "name": "S. Aseervatham"
+                }
+            ]
+        },
+        {
+            "paperId": "b2e0241fd8ed7addfc3f2883220e3230091fe362",
+            "title": "Online and Batch Learning of Generalized Cosine Similarities",
+            "abstract": "In this paper, we define an online algorithm to learn the generalized cosine similarity measures for kNN classification and hence a similarity matrix A corresponding to a bilinear form. In contrary to the standard cosine measure, the normalization is itself dependent on the similarity matrix which makes it impossible to use directly the algorithms developed for learning Mahanalobis distances, based on positive, semi-definite (PSD) matrices. We follow the approach where we first find an appropriate matrix and then project it onto the cone of PSD matrices, which we have adapted to the particular form of generalized cosine similarities, and more particularly to the fact that such measures are normalized. The resulting online algorithm as well as its batch version is fast and has got better accuracy as compared with state-of-the-art methods on standard data sets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "34722833",
+                    "name": "A. M. Qamar"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "c98071ff36925cc529bb5bb3976ac44d878c3e38",
+            "title": "Mod\u00e8le de langue visuel pour la reconnaissance de sc\u00e8nes",
+            "abstract": "We describe here a method to use a graph language modeling approach fo image retrieval and image categorization. Since photographic images are 2D da ta, we first use im- age regions (mapped to automatically induced concepts) and then spatial r elationships between",
+            "fieldsOfStudy": [
+                "Geography",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2067958020",
+                    "name": "Trong-Ton Pham"
+                },
+                {
+                    "authorId": "2101603549",
+                    "name": "Lo\u00efc Maisonnasse"
+                },
+                {
+                    "authorId": "2065760625",
+                    "name": "Philippe Mulhem"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "531f9f13f519cd285de16b49076bd974c0285664",
+            "title": "Similarity Learning for Nearest Neighbor Classification",
+            "abstract": "In this paper, we propose an algorithm for learning a general class of similarity measures for kNN classification. This class encompasses, among others, the standard cosine measure, as well as the Dice and Jaccard coefficients. The algorithm we propose is an extension of the voted perceptron algorithm and allows one to learn different types of similarity functions (either based on diagonal, symmetric or asymmetric similarity matrices). The results we obtained show that learning similarity measures yields significant improvements on several collections, for two prediction rules: the standard kNN rule, which was our primary goal, and a symmetric version of it.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "34722833",
+                    "name": "A. M. Qamar"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1702093",
+                    "name": "J. Chevallet"
+                },
+                {
+                    "authorId": "6516914",
+                    "name": "Joo-Hwee Lim"
+                }
+            ]
+        },
+        {
+            "paperId": "573fcca4bef13e006a2b55e1d7139b3c474bc510",
+            "title": "Working Notes for the InFile Campaign : Online Document Filtering Using 1 Nearest Neighbor",
+            "abstract": "This paper has been written as a part of the InFile (IN- Formation, FILtering, Evaluation) campaign. This project is a cross- language adaptive filtering evaluation campaign, sponsored by the French national research agency, and it is a pilot track of the CLEF (Cross Lan- guage Evaluation Forum) 2008 campaigns. We propose in this paper an online algorithm to learn category specific thresholds in a multiclass en- vironment where a document can belong to more than one class. Our method uses 1 Nearest Neighbor (1NN) algorithm for classification. It uses simulated user feedback to fine tune the threshold and in turn the classification performance over time. The experiments were run on En- glish language corpus containing 100,000 documents. The best results have a precision of 0.366 and the recall is 0.260.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "34722833",
+                    "name": "A. M. Qamar"
+                },
+                {
+                    "authorId": "3096006",
+                    "name": "Vincent Bodinier"
+                }
+            ]
+        },
+        {
+            "paperId": "a63e9516f65264f627dd1b423d0541059671e2a8",
+            "title": "Mod\u00e9lisation de relations dans l'approche mod\u00e8le de langue en recherche d'information",
+            "abstract": "Nous abordons dans cet article le probleme de la prise en compte de relations (par exemple de nature syntaxique ou semantique) dans un modele de langues en recherche d'information. En particulier, nous proposons, sur la base du modele de langue, un cadre complet pour la prise en compte de relations, etiquetees ou non. Afin d'illustrer ce cadre, nous avons conduit une serie d'experiences fondees sur differentes indexations structurees (grammaire de dependances et graphes de relations entre concepts) dans le domaine medical. Nos resultats montrent que l'integration d'information sur les relations entre termes ameliore la qualite d'un systeme de recherche d'information sur la precision a 5 documents. Ils confirment aussi le bien-fonde du modele que nous proposons.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2101603549",
+                    "name": "Lo\u00efc Maisonnasse"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "67204442",
+                    "name": "J. Chevallet"
+                }
+            ]
+        },
+        {
+            "paperId": "aa8c4507d6fbdd9aead29be3cefb91db6341a7df",
+            "title": "Multi-Relation Modeling on Multi Concept Extraction LIG participation at ImageClefMed",
+            "abstract": "This paper presents the LIG contribution to the CLEF 2008 medical retrieval task (i.e. ImageCLEFmed). The main idea behind our contribution is to incorporate knowledge in the language modeling approach to information retrieval (IR). On ImageCLEFmed our model makes use of the textual part of the corpus and of the medical knowledge found in the Unified Medical Language System (UMLS) knowledge sources. Last year, we used UMLS to create a conceptual representation for each sentence in the corpus, and proposed a language modeling approach on these representations. The use of a conceptual representation allows the system to work at a more abstract semantic level, which solves some of the information retrieval problems, as the one of terminological variation. We also used different concept extraction methods, and tested how to combine these extraction methods on queries. This year, we have extended our previous method in two ways: first, we have used, in addition to relations derived from UMLS, co-occurrence relations; second, we have combined concept extraction methods not only on queries, but also on documents. In this paper, we first detail some IR approaches that use advanced",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2454024",
+                    "name": "Lo\u00efc Maisonnasse"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1702093",
+                    "name": "J. Chevallet"
+                }
+            ]
+        },
+        {
+            "paperId": "900cd111be69dbc2f34d3e395faf7f4117468d57",
+            "title": "Recherche d'information: fondements et mod\u00e8les",
+            "abstract": "A bearer, especially a longitudinal bearer of a motor vehicle frame, which is constructed as hollow profile and includes a deformable section dissipating impact energy; the walls of the longitudinal bearer have different strength characteristics as a result of a treatment of these areas changing the strength of the wall material compared to non-treated areas; a greater strength thereby exists in the treated wall areas than in the untreated areas.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Geology"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "992a21b54510e907854e9bf0ba9789145b9a4cb9",
+            "title": "Revisiting the dependence language model for information retrieval",
+            "abstract": "In this paper, we revisit the dependence language modelfor information retrieval proposed in [1], and show that thismodel is deficient from a theoretical point of view. We thenpropose a new model, well founded theoretically, for integratingdependencies between terms in the language model.This new model is simpler, yet more general, than the oneproposed in [1], and yields similar results in our experiments,on both syntactic and semantic dependencies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2454024",
+                    "name": "Lo\u00efc Maisonnasse"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1702093",
+                    "name": "J. Chevallet"
+                }
+            ]
+        },
+        {
+            "paperId": "00fe393225e72256fc1762e3818b264a3fc2be93",
+            "title": "Categorization in multiple category systems",
+            "abstract": "We explore the situation in which documents have to be categorized into more than one category system, a situation we refer to as multiple-view categorization. More particularly, we address the case where two different categorizers have already been built based on non-necessarily identical training sets, each one labeled using one category system. On the top of these categorizers considered as black-boxes, we propose some algorithms able to exploit a third training set containing a few examples annotated in both category systems. Such a situation arises for example in large companies where incoming mails have to be routed to several departments, each one relying on its own category system. We focus here on exploiting possible dependencies between category systems in order to refine the categorization decisions made by categorizers trained independently on different category systems. After a description of the multiple categorization problem, we present several possible solutions, based either on a categorization or reweighting approach, and compare them on real data. Lastly, we show how the multimedia categorization problem can be cast as a multiple categorization problem and assess our methods in this framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "3344185",
+                    "name": "F. Pacull"
+                },
+                {
+                    "authorId": "1808423",
+                    "name": "G. Csurka"
+                }
+            ]
+        },
+        {
+            "paperId": "81d7980b48255e787d12ce8ffe26aa94fa5ff4da",
+            "title": "Un mod\u00e8le de RI bas\u00e9 sur des crit\u00e8res d'obligation et de certitude",
+            "abstract": "Il existe un grand nombre de modeles de recherche d'information chacun ayant pour but de repondre au mieux aux attentes des utilisateurs. Le modele que nous proposons se base sur une formulation precise de la requete refletant le besoin de l'utilisateur : Chaque terme de la requete est augmente par deux criteres, l'un exprimant l'obligation ou non de l'apparition du terme dans les documents et l'autre exprimant la certitude de l'utilisateur quand au terme utilise. Des experimentations nous ont permis de verifier qu'une telle formulation permet de gagner en precision.",
+            "fieldsOfStudy": [
+                "Philosophy",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2465280",
+                    "name": "Le\u00efla Kefi"
+                },
+                {
+                    "authorId": "2064281685",
+                    "name": "Catherine Berrut"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "cdab59ef99940afd50eb90619fb24b8e9b1a57b6",
+            "title": "Multimedia Content Processing and Retrieval in the REVEAL THIS Setting",
+            "abstract": "The explosion of multimedia digital content and the development of technologies that go beyond traditional broadcast and TV have rendered access to such content important for all end-users of these technologies. REVEAL THIS develops content processing technology able to semantically index, categorise and cross-link multiplatform, multimedia and multilingual digital content, providing the system user with search, retrieval, summarisation and translation functionalities. HE development of methods and tools for content-based organization and filtering of the large amount of multimedia information that reaches the user is a key issue for its effective consumption. Despite recent technological progress in the new media and the Internet, the key issue remains \" how digital technology could add value to information channels and systems \" [1]. REVEAL THIS aims at answering this question by tackling the following scientific and technological challenges: \u2022 enrichment of multilingual multimedia content with semantic information like topics, speakers, actors, facts, categories \u2022 establishment of semantic links between pieces of information presented in different media and languages \u2022 development of cross-media categorization and summarization engines \u2022 deployment of cross-language information retrieval and machine translation to allow users to search for and retrieve information according to their language preferences. Web, TV and/or Radio content is fed into the REVEAL THIS prototype, it is analysed, indexed, categorized, summarized and stored in an archive. This content can be searched and/or pushed to a user according to his/her interests. Novice and advanced computer users are targeted; they can both access the system through the web and perform simple or advanced searches respectively. Furthermore, mobile phone access to the system is possible through GPRS or Wireless Lan connection to the system's mobile phone server. In this case, the system's role is more proactive, in that it pushes information to the user according to the user's profile. EU politics, news and travel data are handled by the system in English and Greek. II. T HE REVEAL THIS SYSTEM As depicted in Figure 1, the REVEAL THIS system comprises a number of single-media and multimedia technologies that can be grouped, for presentation purposes, in the following subsystems: (i) Content Analysis & Indexing (CAIS), (ii) Cross-media Categorisation (CCS), (iii) Cross-media Summarisation (CSS), (iv) Cross-lingual Translation (CLTS), and (v) Cross-media Content Access and Retrieval. A. Cross-media Content Analysis The CAIS subsystem consists of technologies and components for medium-specific analysis: \u2022 Speech processing (SPC) \u2013 involving speech recognition, speaker identification and speaker \u2026",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2954279",
+                    "name": "Stelios Piperidis"
+                },
+                {
+                    "authorId": "36050276",
+                    "name": "Haris Papageorgiou"
+                },
+                {
+                    "authorId": "50562057",
+                    "name": "Katerina Pastra"
+                },
+                {
+                    "authorId": "3209204",
+                    "name": "T. Netousek"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1704728",
+                    "name": "T. Tuytelaars"
+                },
+                {
+                    "authorId": "145876066",
+                    "name": "F. Crestani"
+                },
+                {
+                    "authorId": "2506245",
+                    "name": "Francis Bodson"
+                },
+                {
+                    "authorId": "2074587509",
+                    "name": "Chris Mellor"
+                }
+            ]
+        },
+        {
+            "paperId": "049ba736d79c7ae37bc7458e81c5d3926666996c",
+            "title": "Relation between PLSA and NMF and implications",
+            "abstract": "Non-negative Matrix Factorization (NMF, [5]) and Probabilistic Latent Semantic Analysis (PLSA, [4]) have been successfully applied to a number of text analysis tasks such as document clustering. Despite their different inspirations, both methods are instances of multinomial PCA [1]. We further explore this relationship and first show that PLSA solves the problem of NMF with KL divergence, and then explore the implications of this relationship.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                }
+            ]
+        },
+        {
+            "paperId": "5d4ff509583809d33d26bc531d341a73341986ec",
+            "title": "Translating with Non-contiguous Phrases",
+            "abstract": "This paper presents a phrase-based statistical machine translation method, based on non-contiguous phrases, i.e. phrases with gaps. A method for producing such phrases from a word-aligned corpora is proposed. A statistical translation model is also presented that deals such phrases, as well as a training method based on the maximization of translation accuracy, as measured with the NIST evaluation metric. Translations are produced by means of a beam-search decoder. Experimental results are presented, that demonstrate how the proposed method allows to better generalize from the training data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144866028",
+                    "name": "Michel Simard"
+                },
+                {
+                    "authorId": "1683776",
+                    "name": "Nicola Cancedda"
+                },
+                {
+                    "authorId": "2440912",
+                    "name": "Bruno Cavestro"
+                },
+                {
+                    "authorId": "2954698",
+                    "name": "Marc Dymetman"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2109821889",
+                    "name": "Kenji Yamada"
+                },
+                {
+                    "authorId": "1706916",
+                    "name": "P. Langlais"
+                },
+                {
+                    "authorId": "2660738",
+                    "name": "Arne Mauser"
+                }
+            ]
+        },
+        {
+            "paperId": "f12f2253eb96f797293c3d47dcd438927cdba444",
+            "title": "Corpus-Based vs. Model-Based Selection of Relevant Features",
+            "abstract": "RESUME. Le travail que nous presentons ici a pour but la comparaison de methodes de selection d\u2019attributs. Plus precisement, nous nous interessons a deux grandes approches, celles fondees uniquement sur les donnees, approche classique qui permet de ne se reposer, pour la construction de modeles de categorisation, que sur un ensemble restreint, mais pertinent, d\u2019attributs, et celles qui decoulent d\u2019un modele appris. Ces dernieres permettent d\u2019expliquer les decisions prises par un modele, et fournissent aux utilisateurs des moyens de voir ce qui se passe a l\u2019interieur de la \u201cboite noire\u201d qu\u2019est bien souvent un categoriseur. De plus, la comparaison de ces deux approches permet d\u2019evaluer dans quelle mesure les premieres sont suffisamment selectives comparees aux deuxiemes. Notre comparaison experimentale est realisee pour une large part sur une collection de resumes medicaux constituee par l\u2019Institut Suisse de Bioinformatique.",
+            "fieldsOfStudy": [
+                "Philosophy",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2054049",
+                    "name": "Pavel B. Dobrokhotov"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2070787",
+                    "name": "A. Veuthey"
+                }
+            ]
+        },
+        {
+            "paperId": "f30f6d3d82c83db21cb241ec76eccb76fd4cec81",
+            "title": "A Geometric View on Bilingual Lexicon Extraction from Comparable Corpora",
+            "abstract": "We present a geometric view on bilingual lexicon extraction from comparable corpora, which allows to re-interpret the methods proposed so far and identify unresolved problems. This motivates three new methods that aim at solving these problems. Empirical evaluation shows the strengths and weaknesses of these methods, as well as a significant gain in the accuracy of extracted lexicons.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                },
+                {
+                    "authorId": "2458509",
+                    "name": "Irina Matveeva"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2131960",
+                    "name": "Herv\u00e9 D\u00e9jean"
+                }
+            ]
+        },
+        {
+            "paperId": "fd2037fc87d711dd6391cf67bae4845a2edbf285",
+            "title": "Aligning words using matrix factorisation",
+            "abstract": "Aligning words from sentences which are mutual translations is an important problem in different settings, such as bilingual terminology extraction, Machine Translation, or projection of linguistic features. Here, we view word alignment as matrix factorisation. In order to produce proper alignments, we show that factors must satisfy a number of constraints such as orthogonality. We then propose an algorithm for orthogonal non-negative matrix factorisation, based on a probabilistic model of the alignment data, and apply it to word alignment. This is illustrated on a French-English alignment task from the Hansard.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2109821889",
+                    "name": "Kenji Yamada"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "859eb9243e363c008efb537424d52972c06fa47f",
+            "title": "Reducing Parameter Space for Word Alignment",
+            "abstract": "This paper presents the experimental results of our attemps to reduce the size of the parameter space in word alignment algorithm. We use IBM Model 4 as a baseline. In order to reduce the parameter space, we pre-processed the training corpus using a word lemmatizer and a bilingual term extraction algorithm. Using these additional components, we obtained an improvement in the alignment error rate.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131960",
+                    "name": "Herv\u00e9 D\u00e9jean"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2109821889",
+                    "name": "Kenji Yamada"
+                }
+            ]
+        },
+        {
+            "paperId": "9546003a5571c516eeaede14e9934ed412f2db4b",
+            "title": "Mod\u00e8le d'indexation de documents peu symboliques dans des documents structur\u00e9s: L'exemple du graphique dans un corpus de documents techniques",
+            "abstract": "Cet article s'interesse a l'indexation des donnees ayant une semantique pauvre dans des documents structures. Le but est d'exploiter le contenu des donnees symboliques avoisinantes afin d'en extraire les fragments adequats pour completer l'indexation de la donnee non symbolique. Cette approche a ete abordee dans le cadre concret d'une application dans un contexte professionnel : indexer les graphiques des documents techniques en exploitant le texte qui les accompagne. Cette indexation est articulee autour d'un modele de representation des graphiques tenant compte de la finalite de leur utilisation et du professionnalisme de leurs usagers, et d'un modele d'extraction des termes d'indexation a partir du texte du document technique.",
+            "fieldsOfStudy": [
+                "Political Science",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2465280",
+                    "name": "Le\u00efla Kefi"
+                },
+                {
+                    "authorId": "2064281685",
+                    "name": "Catherine Berrut"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "a9c086c216968ba7b453b03841c723a1f41671ed",
+            "title": "Word-Sequence Kernels",
+            "abstract": "We address the problem of categorising documents using kernel-based methods such as Support Vector Machines. Since the work of Joachims (1998), there is ample experimental evidence that SVM using the standard word frequencies as features yield state-of-the-art performance on a number of benchmark problems. Recently, Lodhi et al. (2002) proposed the use of string kernels, a novel way of computing document similarity based of matching non-consecutive subsequences of characters. In this article, we propose the use of this technique with sequences of words rather than characters. This approach has several advantages, in particular it is more efficient computationally and it ties in closely with standard linguistic pre-processing techniques. We present some extensions to sequence kernels dealing with symbol-dependent and match-dependent decay factors, and present empirical evaluations of these extensions on the Reuters-21578 datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1683776",
+                    "name": "Nicola Cancedda"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                }
+            ]
+        },
+        {
+            "paperId": "e96a60d4adc25af604a6db29e4a0b97f93839d49",
+            "title": "A Probabilistic Information Retrieval Approach to Medical Annotation in SWISS-PROT",
+            "abstract": "The goal of medical annotation of human proteins in Swiss-Prot is to add features specifically intended for researchers working on genetic diseases and polymorphisms. For this purpose, it is necessary to search through a vast number of publications containing relevant information. Promising results have been obtained by applying natural language processing and machine learning techniques to solve this problem. By using the Probabilistic Latent Categorizer on representative query sets, 69% recall and 59% precision was achieved for relevant documents. This classifier also rejected irrelevant abstracts with more than 96% precision. Better linguistic pre-processing of source documents can further improve such computer approach.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054049",
+                    "name": "Pavel B. Dobrokhotov"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2070787",
+                    "name": "A. Veuthey"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "f109e05d544ef561a64d27902affefd5877d642e",
+            "title": "Combining NLP and probabilistic categorisation for document and term selection for Swiss-Prot medical annotation",
+            "abstract": "MOTIVATION\nSearching relevant publications for manual database annotation is a tedious task. In this paper, we apply a combination of Natural Language Processing (NLP) and probabilistic classification to re-rank documents returned by PubMed according to their relevance to Swiss-Prot annotation, and to identify significant terms in the documents.\n\n\nRESULTS\nWith a Probabilistic Latent Categoriser (PLC) we obtained 69% recall and 59% precision for relevant documents in a representative query. As the PLC technique provides the relative contribution of each term to the final document score, we used the Kullback-Leibler symmetric divergence to determine the most discriminating words for Swiss-Prot medical annotation. This information should allow curators to understand classification results better. It also has great value for fine-tuning the linguistic pre-processing of documents, which in turn can improve the overall classifier performance.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054049",
+                    "name": "Pavel B. Dobrokhotov"
+                },
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2070787",
+                    "name": "A. Veuthey"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "2b313f9161ac112ca8df49c2e02c0a39da7e0af2",
+            "title": "XRCE Participation in CLEF 2002",
+            "abstract": "In this paper, we describe the methods we used for the Cross-Lingual Evaluation Forum CLEF 2002, and more specifically for the GIRT Task. The methods are based on (1) the extraction of two bilingual lexicons, one from parallel corpora and the other one from comparable corpora, (2) the optimal combination of these bilingual lexicons in Cross-Language Information Retrieval and (3) the combination with monolingual IR on parallel corpora. While our original submission to CLEF2002 was restricted to short queries (using only the title field), we present here the results extended to complete queries.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                },
+                {
+                    "authorId": "2131960",
+                    "name": "Herv\u00e9 D\u00e9jean"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "bd602960baa4a54bd03eb5b19d2b0b1612ab3f52",
+            "title": "An Approach Based on Multilingual Thesauri and Model Combination for Bilingual Lexicon Extraction",
+            "abstract": "This paper focuses on exploiting different models and methods in bilingual lexicon extraction, either from parallel or comparable corpora, in specialized domains. First, a special attention is given to the use of multilingual thesauri, and different search strategies based on such thesauri are investigated. Then, a method to combine the different models for bilingual lexicon extraction is presented. Our results show that the combination of the models significantly improves results, and that the use of the hierarchical information contained in our thesaurus, UMLS/MeSH, is of primary importance. Lastly, methods for bilingual terminology extraction and thesaurus enrichment are discussed.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131960",
+                    "name": "Herv\u00e9 D\u00e9jean"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2652214",
+                    "name": "F. Sadat"
+                }
+            ]
+        },
+        {
+            "paperId": "f59b055a7df1b6bf7cb8f92ca8020af0ad47bdec",
+            "title": "Combining Labelled and Unlabelled Data: A Case Study on Fisher Kernels and Transductive Inference for Biological Entity Recognition",
+            "abstract": "We address the problem of using partially labelled data, eg large collections were only little data is annotated, for extracting biological entities. Our approach relies on a combination of probabilistic models, which we use to model the generation of entities and their context, and kernel machines, which implement powerful categorisers based on a similarity measure and some labelled data. This combination takes the form of the so-called Fisher kernels which implement a similarity based on an underlying probabilistic model. Such kernels are compared with transductive inference, an alternative approach to combining labelled and unlabelled data, again coupled with Support Vector Machines. Experiments are performed on a database of abstracts extracted from Medline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2788842",
+                    "name": "Cyril Goutte"
+                },
+                {
+                    "authorId": "2131960",
+                    "name": "Herv\u00e9 D\u00e9jean"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1683776",
+                    "name": "Nicola Cancedda"
+                },
+                {
+                    "authorId": "2822140",
+                    "name": "J. Renders"
+                }
+            ]
+        },
+        {
+            "paperId": "a978f8c1c5bfee4ae9f8db24ffb373e1e4e6469b",
+            "title": "Probabilistic models for PP-attachment resolution and NP analysis",
+            "abstract": "We present a general model for PP attachment resolution and NP analysis in French. We make explicit the different assumptions our model relies on, and show how it generalizes previously proposed models. We then present a series of experiments conducted on a corpus of newspaper articles, and assess the various components of the model, as well as the different information sources used.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1683776",
+                    "name": "Nicola Cancedda"
+                }
+            ]
+        },
+        {
+            "paperId": "b12979c4baa8224d4c795b888b55834c785d1dcc",
+            "title": "Probabilistic models for terminology extraction and knowledge structuring from documents",
+            "abstract": "This paper outlines several problems inherent to knowledge extraction and structuring from textual data, and proposes different probabilistic models for solving them. These models are evaluated on different tasks, and several applications are envisaged.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1683776",
+                    "name": "Nicola Cancedda"
+                }
+            ]
+        },
+        {
+            "paperId": "c851fd06db37566388b33e11623c9d94b2963136",
+            "title": "Coreference Resolution Evaluation Based on Descriptive Specificity",
+            "abstract": "This paper introduces a new evaluation method for the coreference resolution task. Considering that coreference resolution is a matter of linking expressions to discourse referents, we set our evaluation criteron in terms of an evaluation of the denotations assigned to the expressions. This criterion requires that the coreference chains identified in one annotation stand in a one-to-one correspondence with the coreference chains in the other. To determine this correspondence and with a view to keep closer to what human interpretation of the coreference chains would be, we take into account the fact that, in a coreference chain, some expressions are more specific to their referent than others. With this observation in mind, we measure the similarity between the chains in one annotation and the chains in the other, and then compute the optimal similarity between the two annotations. Evaluation then consists in checking whether the denotations assigned to the expressions are correct or not. New measures to analyse errors are also introduced. A comparison with other methods is given at the end of the paper.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2076572021",
+                    "name": "Fran\u00e7ois Trouilleux"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "2071807064",
+                    "name": "Gabriel G. B\u00e8s"
+                },
+                {
+                    "authorId": "1809816",
+                    "name": "A. Zaenen"
+                }
+            ]
+        },
+        {
+            "paperId": "984044da939d640daa48a3658c184e26209b6929",
+            "title": "Flow Network Models for Word Alignment and Terminology Extraction from Bilingual Corpora",
+            "abstract": "This paper presents a new model for word alignments between parallel sentences, which allows one to accurately estimate different parameters, in a computationally efficient way. An application of this model to bilingual terminology extraction, where terms are identified in one language and gussed, through the alignment process, in the other one, is also described. An experiment conducted on a small English-French parallel corpus gave results with high precision, demonstrating the validity of the model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                }
+            ]
+        },
+        {
+            "paperId": "faa0418073a4b1b79d87a5c6f5c2a3f2bfc5626f",
+            "title": "Xerox TREC-6 Site Report: Cross Language Text Retrieval",
+            "abstract": "This track examines the problem of retrieving documents written in one language using queries written in another language. Our approach is to use a bilingual dictionary at query time to construct a target language version of the original query",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "1746017",
+                    "name": "G. Grefenstette"
+                },
+                {
+                    "authorId": "35211746",
+                    "name": "David A. Hull"
+                },
+                {
+                    "authorId": "144327932",
+                    "name": "B. M. Schulze"
+                }
+            ]
+        },
+        {
+            "paperId": "83b7c7fa9af127ef06a631259df5f11d73a1c7e8",
+            "title": "Xerox TREC-5 Site Report: Routing, Filtering, NLP, and Spanish Tracks",
+            "abstract": "Xerox participated in TREC-5 through experiments carried out separately and conjointly at the Ranx Xerox Research Centre in Grenoble and the Xerox Palo Alto Research Center. The remainder of this report is divided into three sections. The first section describes the work on routing and filtering, the second section covers the NLP track and the final section addresses the Spanish track",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35211746",
+                    "name": "David A. Hull"
+                },
+                {
+                    "authorId": "1746017",
+                    "name": "G. Grefenstette"
+                },
+                {
+                    "authorId": "144327932",
+                    "name": "B. M. Schulze"
+                },
+                {
+                    "authorId": "1732180",
+                    "name": "\u00c9ric Gaussier"
+                },
+                {
+                    "authorId": "144418438",
+                    "name": "Hinrich Sch\u00fctze"
+                },
+                {
+                    "authorId": "34165212",
+                    "name": "Jan O. Pedersen"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,329 @@
+{
+    "authorId": "1706595",
+    "papers": [
+        {
+            "paperId": "7fb98b6c5bb07c2b010966c05f29d9db7f783d27",
+            "title": "ChartReader: A Unified Framework for Chart Derendering and Comprehension without Heuristic Rules",
+            "abstract": "Charts are a powerful tool for visually conveying complex data, but their comprehension poses a challenge due to the diverse chart types and intricate components. Existing chart comprehension methods suffer from either heuristic rules or an over-reliance on OCR systems, resulting in suboptimal performance. To address these issues, we present ChartReader, a unified framework that seamlessly integrates chart derendering and comprehension tasks. Our approach includes a transformer-based chart component detection module and an extended pre-trained vision-language model for chart-to-X tasks. By learning the rules of charts automatically from annotated datasets, our approach eliminates the need for manual rule-making, reducing effort and enhancing accuracy. We also introduce a data variable replacement technique and extend the input and position embeddings of the pre-trained model for cross-task training. We evaluate ChartReader on Chart-to-Table, ChartQA, and Chart-to-Text tasks, demonstrating its superiority over existing methods. Our proposed framework can significantly reduce the manual effort involved in chart analysis, providing a step towards a universal chart understanding model. Moreover, our approach offers opportunities for plug-and-play integration with mainstream LLMs such as T5 and TaPas, extending their capability to chart comprehension tasks.1",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3493929",
+                    "name": "Zhi-Qi Cheng"
+                },
+                {
+                    "authorId": "2072900666",
+                    "name": "Qianwen Dai"
+                },
+                {
+                    "authorId": "2118154632",
+                    "name": "Siyao Li"
+                },
+                {
+                    "authorId": "2213832152",
+                    "name": "Jingdong Sun"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                },
+                {
+                    "authorId": "145788702",
+                    "name": "A. Hauptmann"
+                }
+            ]
+        },
+        {
+            "paperId": "ff77105b2c345f54e1a87f4fbb3a701201f0c1a8",
+            "title": "Hierarchical Event Grounding",
+            "abstract": "Event grounding aims at linking mention references in text corpora to events from a knowledge base (KB). Previous work on this task focused primarily on linking to a single KB event, thereby overlooking the hierarchical aspects of events. Events in documents are typically described at various levels of spatio-temporal granularity. These hierarchical relations are utilized in downstream tasks of narrative understanding and schema construction. In this work, we present an extension to the event grounding task that requires tackling hierarchical event structures from the KB. Our proposed task involves linking a mention reference to a set of event labels from a subevent hierarchy in the KB. We propose a retrieval methodology that leverages event hierarchy through an auxiliary hierarchical loss. On an automatically created multilingual dataset from Wikipedia and Wikidata, our experiments demonstrate the effectiveness of the hierarchical loss against retrieve and re-rank baselines. Furthermore, we demonstrate the systems' ability to aid hierarchical discovery among unseen events. Code is available at https://github.com/JefferyO/Hierarchical-Event-Grounding",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1657712151",
+                    "name": "Jiefu Ou"
+                },
+                {
+                    "authorId": "51132476",
+                    "name": "Adithya Pratapa"
+                },
+                {
+                    "authorId": "2162354140",
+                    "name": "Rishubh Gupta"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                }
+            ]
+        },
+        {
+            "paperId": "413bfdd01291d3bc013cdc9cb91066a3c8a1d0e0",
+            "title": "PRO-CS : An Instance-Based Prompt Composition Technique for Code-Switched Tasks",
+            "abstract": "Code-switched (CS) data is ubiquitous in today\u2019s globalized world, but the dearth of annotated datasets in code-switching poses a significant challenge for learning diverse tasks across different language pairs. Parameter-efficient prompt-tuning approaches conditioned on frozen language models have shown promise for transfer learning in limited-resource setups. In this paper, we propose a novel instance-based prompt composition technique, PRO-CS, for CS tasks that combine language and task knowledge. We compare our approach with prompt-tuning and fine-tuning for code-switched tasks on 10 datasets across 4 language pairs. Our model outperforms the prompt-tuning approach by significant margins across all datasets and outperforms or remains at par with fine-tuning by using just 0.18% of total parameters. We also achieve competitive results when compared with the fine-tuned model in the low-resource cross-lingual and cross-task setting, indicating the effectiveness of our approach to incorporate new code-switched tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "67152985",
+                    "name": "Srijan Bansal"
+                },
+                {
+                    "authorId": "51260651",
+                    "name": "Suraj Tripathi"
+                },
+                {
+                    "authorId": "2114357424",
+                    "name": "Sumit Agarwal"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                },
+                {
+                    "authorId": "144287919",
+                    "name": "Eric Nyberg"
+                }
+            ]
+        },
+        {
+            "paperId": "5797921b076b73b1932efc45191e911e2f7a764f",
+            "title": "GSRFormer: Grounded Situation Recognition Transformer with Alternate Semantic Attention Refinement",
+            "abstract": "Grounded Situation Recognition (GSR) aims to generate structured semantic summaries of images for \"human-like'' event understanding. Specifically, GSR task not only detects the salient activity verb (e.g. buying), but also predicts all corresponding semantic roles (e.g. agent and goods). Inspired by object detection and image captioning tasks, existing methods typically employ a two-stage framework: 1) detect the activity verb, and then 2) predict semantic roles based on the detected verb. Obviously, this illogical framework constitutes a huge obstacle to semantic understanding. First, pre-detecting verbs solely without semantic roles inevitably fails to distinguish many similar daily activities (e.g., offering and giving, buying and selling). Second, predicting semantic roles in a closed auto-regressive manner can hardly exploit the semantic relations among the verb and roles. To this end, in this paper we propose a novel two-stage framework that focuses on utilizing such bidirectional relations within verbs and roles. In the first stage, instead of pre-detecting the verb, we postpone the detection step and assume a pseudo label, where an intermediate representation for each corresponding semantic role is learned from images. In the second stage, we exploit transformer layers to unearth the potential semantic relations within both verbs and semantic roles. With the help of a set of support images, an alternate learning scheme is designed to simultaneously optimize the results: update the verb using nouns corresponding to the image, and update nouns using verbs from support images. Extensive experimental results on challenging SWiG benchmarks show that our renovated framework outperforms other state-of-the-art methods under various metrics.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3493929",
+                    "name": "Zhi-Qi Cheng"
+                },
+                {
+                    "authorId": "2072900666",
+                    "name": "Qianwen Dai"
+                },
+                {
+                    "authorId": "2118154632",
+                    "name": "Siyao Li"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                },
+                {
+                    "authorId": "145788702",
+                    "name": "A. Hauptmann"
+                }
+            ]
+        },
+        {
+            "paperId": "6716b7ec2e5ccb8efbcbc22c9a640a6ae523a860",
+            "title": "R3 : Refined Retriever-Reader pipeline for Multidoc2dial",
+            "abstract": "In this paper, we present our submission to the DialDoc shared task based on the MultiDoc2Dial dataset. MultiDoc2Dial is a conversational question answering dataset that grounds dialogues in multiple documents. The task involves grounding a user\u2019s query in a document followed by generating an appropriate response. We propose several improvements over the baseline\u2019s retriever-reader architecture to aid in modeling goal-oriented dialogues grounded in multiple documents. Our proposed approach employs sparse representations for passage retrieval, a passage re-ranker, the fusion-in-decoder architecture for generation, and a curriculum learning training paradigm. Our approach shows a 12 point improvement in BLEU score compared to the baseline RAG model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "67152985",
+                    "name": "Srijan Bansal"
+                },
+                {
+                    "authorId": "51260651",
+                    "name": "Suraj Tripathi"
+                },
+                {
+                    "authorId": "2114357424",
+                    "name": "Sumit Agarwal"
+                },
+                {
+                    "authorId": "2165225404",
+                    "name": "Sireesh Gururaja"
+                },
+                {
+                    "authorId": "2123019049",
+                    "name": "Aditya Srikanth Veerubhotla"
+                },
+                {
+                    "authorId": "36662010",
+                    "name": "Ritam Dutt"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                },
+                {
+                    "authorId": "144287919",
+                    "name": "Eric Nyberg"
+                }
+            ]
+        },
+        {
+            "paperId": "e20531a7084a6b2c2bfee7c8cf911752841e5910",
+            "title": "Multilingual Event Linking to Wikidata",
+            "abstract": "We present a task of multilingual linking of events to a knowledge base. We automatically compile a large-scale dataset for this task, comprising of 1.8M mentions across 44 languages referring to over 10.9K events from Wikidata. We propose two variants of the event linking task: 1) multilingual, where event descriptions are from the same language as the mention, and 2) crosslingual, where all event descriptions are in English. On the two proposed tasks, we compare multiple event linking systems including BM25+ (Lv and Zhai, 2011) and multilingual adaptations of the biencoder and crossencoder architectures from BLINK (Wu et al., 2020). In our experiments on the two task variants, we find both biencoder and crossencoder models significantly outperform the BM25+ baseline. Our results also indicate that the crosslingual task is in general more challenging than the multilingual task. To test the out-of-domain generalization of the proposed linking systems, we additionally create a Wikinews-based evaluation set. We present qualitative analysis highlighting various aspects captured by the proposed dataset, including the need for temporal reasoning over context and tackling diverse event descriptions across languages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51132476",
+                    "name": "Adithya Pratapa"
+                },
+                {
+                    "authorId": "2162354140",
+                    "name": "Rishubh Gupta"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                }
+            ]
+        },
+        {
+            "paperId": "019c9331fd581c8819808282b96ff41259bdce82",
+            "title": "Cross-document Event Identity via Dense Annotation",
+            "abstract": "In this paper, we study the identity of textual events from different documents. While the complex nature of event identity is previously studied (Hovy et al., 2013), the case of events across documents is unclear. Prior work on cross-document event coreference has two main drawbacks. First, they restrict the annotations to a limited set of event types. Second, they insufficiently tackle the concept of event identity. Such annotation setup reduces the pool of event mentions and prevents one from considering the possibility of quasi-identity relations. We propose a dense annotation approach for cross-document event coreference, comprising a rich source of event mentions and a dense annotation effort between related document pairs. To this end, we design a new annotation workflow with careful quality control and an easy-to-use annotation interface. In addition to the links, we further collect overlapping event contexts, including time, location, and participants, to shed some light on the relation between identity decisions and context. We present an open-access dataset for cross-document event coreference, CDEC-WN, collected from English Wikinews and open-source our annotation toolkit to encourage further research on cross-document tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51132476",
+                    "name": "Adithya Pratapa"
+                },
+                {
+                    "authorId": "100468503",
+                    "name": "Zhengzhong Liu"
+                },
+                {
+                    "authorId": "151073899",
+                    "name": "Kimihiro Hasegawa"
+                },
+                {
+                    "authorId": "2112192507",
+                    "name": "Linwei Li"
+                },
+                {
+                    "authorId": "6115355",
+                    "name": "Yukari Yamakawa"
+                },
+                {
+                    "authorId": "2145402824",
+                    "name": "Shikun Zhang"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                }
+            ]
+        },
+        {
+            "paperId": "299983121dec88d4cc8e4ea2aa06514787d8d878",
+            "title": "Retrieve, Caption, Generate: Visual Grounding for Enhancing Commonsense in Text Generation Models",
+            "abstract": "We investigate the use of multimodal information contained in images as an effective method for enhancing the commonsense of Transformer models for text generation. We perform experiments using BART and T5 on concept-to-text generation, specifically the task of generative commonsense reasoning, or CommonGen. We call our approach VisCTG: Visually Grounded Concept-to-Text Generation. VisCTG involves captioning images representing appropriate everyday scenarios, and using these captions to enrich and steer the generation process. Comprehensive evaluation and analysis demonstrate that VisCTG noticeably improves model performance while successfully addressing several issues of the baseline generations, including poor commonsense, fluency, and specificity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152913678",
+                    "name": "Steven Y. Feng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Kevin Lu"
+                },
+                {
+                    "authorId": "2150043693",
+                    "name": "Zhuofu Tao"
+                },
+                {
+                    "authorId": "2715920",
+                    "name": "Malihe Alikhani"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                },
+                {
+                    "authorId": "144547315",
+                    "name": "E. Hovy"
+                },
+                {
+                    "authorId": "2126048085",
+                    "name": "Varun Gangal"
+                }
+            ]
+        },
+        {
+            "paperId": "3a14e36108aca336e37b28d89a6f4c529f73954c",
+            "title": "NAREOR: The Narrative Reordering Problem",
+            "abstract": "Many implicit inferences exist in text depending on how it is structured that can critically impact the text's interpretation and meaning. One such structural aspect present in text with chronology is the order of its presentation. For narratives or stories, this is known as the narrative order. Reordering a narrative can impact the temporal, causal, event-based, and other inferences readers draw from it, which in turn can have strong effects both on its interpretation and interestingness. In this paper, we propose and investigate the task of Narrative Reordering (NAREOR) which involves rewriting a given story in a different narrative order while preserving its plot. We present a dataset, NAREORC, with human rewritings of stories within ROCStories in non-linear orders, and conduct a detailed analysis of it. Further, we propose novel task-specific training methods with suitable evaluation metrics. We perform experiments on NAREORC using state-of-the-art models such as BART and T5 and conduct extensive automatic and human evaluations. We demonstrate that although our models can perform decently, NAREOR is a challenging task with potential for further exploration. We also investigate two applications of NAREOR: generation of more interesting variations of stories and serving as adversarial sets for temporal/event-related tasks, besides discussing other prospective ones, such as for pedagogical setups related to language skills like essay writing and applications to medicine involving clinical narratives.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3375999",
+                    "name": "Varun Gangal"
+                },
+                {
+                    "authorId": "152913678",
+                    "name": "Steven Y. Feng"
+                },
+                {
+                    "authorId": "144547315",
+                    "name": "E. Hovy"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                }
+            ]
+        },
+        {
+            "paperId": "63d8426ba1f51a8525dd19fd8ec92934ec71aea5",
+            "title": "A Survey of Data Augmentation Approaches for NLP",
+            "abstract": "Data augmentation has recently seen increased interest in NLP due to more work in low-resource domains, new tasks, and the popularity of large-scale neural networks that require large amounts of training data. Despite this recent upsurge, this area is still relatively underexplored, perhaps due to the challenges posed by the discrete nature of language data. In this paper, we present a comprehensive and unifying survey of data augmentation for NLP by summarizing the literature in a structured manner. We first introduce and motivate data augmentation for NLP, and then discuss major methodologically representative approaches. Next, we highlight techniques that are used for popular NLP applications and tasks. We conclude by outlining current challenges and directions for future research. Overall, our paper aims to clarify the landscape of existing literature in data augmentation for NLP and motivate additional work in this area. We also present a GitHub repository with a paper list that will be continuously updated at https://github.com/styfeng/DataAug4NLP",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152913678",
+                    "name": "Steven Y. Feng"
+                },
+                {
+                    "authorId": "3375999",
+                    "name": "Varun Gangal"
+                },
+                {
+                    "authorId": "144026731",
+                    "name": "Jason Wei"
+                },
+                {
+                    "authorId": "123607932",
+                    "name": "Sarath Chandar"
+                },
+                {
+                    "authorId": "1918441",
+                    "name": "Soroush Vosoughi"
+                },
+                {
+                    "authorId": "1706595",
+                    "name": "T. Mitamura"
+                },
+                {
+                    "authorId": "144547315",
+                    "name": "E. Hovy"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,302 @@
+{
+    "authorId": "2397000",
+    "papers": [
+        {
+            "paperId": "689bce33b14f6e63b41e62782afc5d978abf95c8",
+            "title": "Characterizing Machine Learning-Based Runtime Prefetcher Selection",
+            "abstract": "Modern computer designs support composite prefetching, where multiple prefetcher components are used to target different memory access patterns. However, multiple prefetchers competing for resources can sometimes hurt performance, especially in many-core systems where cache and other resources are limited. Recent work has proposed mitigating this issue by selectively enabling and disabling prefetcher components at runtime. Formulating the problem with machine learning (ML) methods is promising, but efficient and effective solutions in terms of cost and performance are not well understood. This work studies fundamental characteristics of the composite prefetcher selection problem through the lens of ML to inform future prefetcher selection designs. We show that prefetcher decisions do not have significant temporal dependencies, that a phase-based rather than sample-based definition of ground truth yields patterns that are easier to learn, and that prefetcher selection can be formulated as a workload-agnostic problem requiring little to no training at runtime.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2120397293",
+                    "name": "Erika S. Alcorta"
+                },
+                {
+                    "authorId": "122550597",
+                    "name": "Mahesh Madhav"
+                },
+                {
+                    "authorId": "2303529200",
+                    "name": "Richard Afoakwa"
+                },
+                {
+                    "authorId": "3053038",
+                    "name": "Scott Tetrick"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "1741519",
+                    "name": "A. Gerstlauer"
+                }
+            ]
+        },
+        {
+            "paperId": "6ca8963ec3009ec8005640cfcec6b74b7756fb69",
+            "title": "Machine Perceptual Quality: Evaluating the Impact of Severe Lossy Compression on Audio and Image Models",
+            "abstract": "We evaluate various perception models\u2014\u2013including image classification, segmentation, speech recognition, and music source separation\u2014\u2013under severe lossy compression. Figure 1 summarizes the results underlining our insights. The datasets in the top row originally use near-lossless quality levels (ratios of about 5:1), while those in the bottom row are lossless. We apply additional compression to these six datasets using conventional, neural, and generative codecs, resulting in ratios between 20:1 and 1000:1. Our results indicate three key findings: (1) across nearly all tasks, generative compression methods like HiFiC and EnCodec provide the best performance despite having the lowest bitrates; (2) downstream performance correlates strongly with deep similarity metrics like LPIPS; and (3) Using lossy compressed datasets like ImageNet for pre-training can lead to counter-intuitive scenarios where severe lossy compression improves performance rather than degrading it. Our results provide a basis for integrating more potent compression into perception systems. Our code and experiments are available at: https://github.com/danjacobellis/MPQ .",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "104225770",
+                    "name": "Dan G. Jacobellis"
+                },
+                {
+                    "authorId": "2279540630",
+                    "name": "Daniel Cummings"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                }
+            ]
+        },
+        {
+            "paperId": "b582117a278f54acf1e0623ff51bf9a8e21afbc9",
+            "title": "Shabari: Delayed Decision-Making for Faster and Efficient Serverless Functions",
+            "abstract": "Serverless computing relieves developers from the burden of resource management, thus providing ease-of-use to the users and the opportunity to optimize resource utilization for the providers. However, today's serverless systems lack performance guarantees for function invocations, thus limiting support for performance-critical applications: we observed severe performance variability (up to 6x). Providers lack visibility into user functions and hence find it challenging to right-size them: we observed heavy resource underutilization (up to 80%). To understand the causes behind the performance variability and underutilization, we conducted a measurement study of commonly deployed serverless functions and learned that the function performance and resource utilization depend crucially on function semantics and inputs. Our key insight is to delay making resource allocation decisions until after the function inputs are available. We introduce Shabari, a resource management framework for serverless systems that makes decisions as late as possible to right-size each invocation to meet functions' performance objectives (SLOs) and improve resource utilization. Shabari uses an online learning agent to right-size each function invocation based on the features of the function input and makes cold-start-aware scheduling decisions. For a range of serverless functions and inputs, Shabari reduces SLO violations by 11-73% while not wasting any vCPUs and reducing wasted memory by 64-94% in the median case, compared to state-of-the-art systems, including Aquatope, Parrotfish, and Cypress.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279751412",
+                    "name": "Prasoon Sinha"
+                },
+                {
+                    "authorId": "80189516",
+                    "name": "Kostis Kaffes"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                }
+            ]
+        },
+        {
+            "paperId": "3bb593fcc5f1a6aba0fc33c6024026b6a6faf72e",
+            "title": "Sidecars on the Central Lane: Impact of Network Proxies on Microservices",
+            "abstract": "Cloud applications are moving away from monolithic model towards loosely-coupled microservices designs. Service meshes are widely used for implementing microservices applications mainly because they provide a modular architecture for modern applications by separating operational features from application business logic. Sidecar proxies in service meshes enable this modularity by applying security, networking, and monitoring policies on the traffic to and from services. To implement these policies, sidecars often execute complex chains of logic that vary across associated applications and end up unevenly impacting the performance of the overall application. Lack of understanding of how the sidecars impact the performance of microservice-based applications stands in the way of building performant and resource-efficient applications. To this end, we bring sidecar proxies in focus and argue that we need to deeply study their impact on the system performance and resource utilization. We identify and describe challenges in characterizing sidecars, namely the need for microarchitectural metrics and comprehensive methodologies, and discuss research directions where such characterization will help in building efficient service mesh infrastructure for microservice applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2052173230",
+                    "name": "Prateek Sahu"
+                },
+                {
+                    "authorId": "2115608890",
+                    "name": "Lu Zheng"
+                },
+                {
+                    "authorId": "2220752239",
+                    "name": "Marco Bueso"
+                },
+                {
+                    "authorId": "8221057",
+                    "name": "Shijia Wei"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "33825420",
+                    "name": "Mohit Tiwari"
+                }
+            ]
+        },
+        {
+            "paperId": "5aab15b637a7da94977393d2c14a53a5fa08d183",
+            "title": "NextGen-Malloc: Giving Memory Allocator Its Own Room in the House",
+            "abstract": "Memory allocation and management have a significant impact on performance and energy of modern applications. We observe that performance can vary by as much as 72% in some applications based on which memory allocator is used. Many current allocators are multi-threaded to support concurrent allocation requests from different threads. However, such multi-threading comes at the cost of maintaining complex metadata that is tightly coupled and intertwined with user data. When memory management functions and other user programs run on the same core, the metadata used by management functions may pollute the processor caches and other resources. In this paper, we make a case for offloading memory allocation (and other similar management functions) from main processing cores to other processing units to boost performance, reduce energy consumption, and customize services to specific applications or application domains. To offload these multi-threaded fine-granularity functions, we propose to decouple the metadata of these functions from the rest of application data to reduce the overhead of inter-thread metadata synchronization. We draw attention to the following key questions to realize this opportunity: (a) What are the tradeoffs and challenges in offloading memory allocation to a dedicated core? (b) Should we use general-purpose cores or special-purpose cores for executing critical system management functions? (c) Can this methodology apply to heterogeneous systems (e.g., with GPUs, accelerators) and other service functions as well?",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2150925850",
+                    "name": "Ruihao Li"
+                },
+                {
+                    "authorId": "46245288",
+                    "name": "Qinzhe Wu"
+                },
+                {
+                    "authorId": "1746468",
+                    "name": "K. Kavi"
+                },
+                {
+                    "authorId": "2071463",
+                    "name": "Gayatri Mehta"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "1703238",
+                    "name": "L. John"
+                }
+            ]
+        },
+        {
+            "paperId": "7a320a1c521be53de9df9f7ea1e1973f2897e5c9",
+            "title": "Performance Implications of Async Memcpy and UVM: A Tale of Two Data Transfer Modes",
+            "abstract": "Heterogeneous systems with CPU-GPUs have become dominant parallel architectures in recent years. To optimize memory management and data transfer between CPUs and GPUs, unified virtual memory and asynchronous memory copy were introduced in recent Nvidia GPUs. With such architectural support, the entire processing flow can now be pipelined into multiple stages, thereby efficiently overlapping data transfer with computation.In this paper, we provide a thorough performance analysis of GPU asynchronous memory copy (Async Memcpy) and unified virtual memory (UVM) on workloads covering multiple domains. We especially study the joint effect of these two architectural features, exploring which applications benefit from one or both of these features. On a suite of 14 real-world applications, we observe an average 21% performance gain when using unified virtual memory only, and 23% gain when using both of them. In irregular programs like kmeans and lud, asynchronous memory copy provides around 20% benefits over unified virtual memory. Furthermore, we dive deep into the GPU kernel using performance counters to reveal the root causes contributing to the performance variances. We make sensitivity studies on how the number of blocks and threads, and L1-cache/shared memory partition affect the performance. We discuss future research directions to further improve the data transfer pipeline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2150925850",
+                    "name": "Ruihao Li"
+                },
+                {
+                    "authorId": "2243399169",
+                    "name": "Sanjana Yadav"
+                },
+                {
+                    "authorId": "46245288",
+                    "name": "Qinzhe Wu"
+                },
+                {
+                    "authorId": "2243398902",
+                    "name": "Krishna Kavi"
+                },
+                {
+                    "authorId": "2071463",
+                    "name": "Gayatri Mehta"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "2260520865",
+                    "name": "L. K. John"
+                }
+            ]
+        },
+        {
+            "paperId": "b0c7bd210c8ae00bba5759de1d5dd0a09f8eba8d",
+            "title": "MOSEL: Inference Serving Using Dynamic Modality Selection",
+            "abstract": "Rapid advancements over the years have helped machine learning models reach previously hard-to-achieve goals, sometimes even exceeding human capabilities. However, to attain the desired accuracy, the model sizes and in turn their computational requirements have increased drastically. Thus, serving predictions from these models to meet any target latency and cost requirements of applications remains a key challenge, despite recent work in building inference-serving systems as well as algorithmic approaches that dynamically adapt models based on inputs. In this paper, we introduce a form of dynamism, modality selection, where we adaptively choose modalities from inference inputs while maintaining the model quality. We introduce MOSEL, an automated inference serving system for multi-modal ML models that carefully picks input modalities per request based on user-defined performance and accuracy requirements. MOSEL exploits modality configurations extensively, improving system throughput by 3.6$\\times$ with an accuracy guarantee and shortening job completion times by 11$\\times$.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2264069110",
+                    "name": "Bodun Hu"
+                },
+                {
+                    "authorId": "2262515049",
+                    "name": "Le Xu"
+                },
+                {
+                    "authorId": "2264249853",
+                    "name": "Jeongyoon Moon"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "2262444276",
+                    "name": "Aditya Akella"
+                }
+            ]
+        },
+        {
+            "paperId": "c44b23f6b060f3004b5b243c4afbf7c1cb778f52",
+            "title": "Dirigo: Self-scaling Stateful Actors For Serverless Real-time Data Processing",
+            "abstract": "We propose Dirigo, a distributed stream processing service built atop virtual actors. Dirigo achieves both a high level of resource efficiency and performance isolation driven by user intent (SLO). To improve resource efficiency, Dirigo adopts a serverless architecture that enables time-sharing of compute resources among streaming operators, both within and across applications. Meanwhile, Dirigo improves performance isolation by inheriting the property of function autoscaling from serverless architecture. Specifically, Dirigo proposes (i) dual-mode actor, an actor abstraction that dynamically provides orderliness guarantee for streaming operator during autoscaling and (ii) a data plane scheduling mechanism, along with its API, that allows scheduling and scaling at the message-level granularity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "153152418",
+                    "name": "Le Xu"
+                },
+                {
+                    "authorId": "2160556398",
+                    "name": "Divyanshu Saxena"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "152426179",
+                    "name": "Aditya Akella"
+                },
+                {
+                    "authorId": "143720373",
+                    "name": "Indranil Gupta"
+                }
+            ]
+        },
+        {
+            "paperId": "eab2bdbc061b5a68835464d9c06b55a7c443204d",
+            "title": "Lightweight ML-based Runtime Prefetcher Selection on Many-core Platforms",
+            "abstract": "Modern computer designs support composite prefetching, where multiple individual prefetcher components are used to target different memory access patterns. However, multiple prefetchers competing for resources can drastically hurt performance, especially in many-core systems where cache and other resources are shared and very limited. Prior work has proposed mitigating this issue by selectively enabling and disabling prefetcher components during runtime. Traditional approaches proposed heuristics that are hard to scale with increasing core and prefetcher component counts. More recently, deep reinforcement learning was proposed. However, it is too expensive to deploy in real-world many-core systems. In this work, we propose a new phase-based methodology for training a lightweight supervised learning model to manage composite prefetchers at runtime. Our approach improves the performance of a state-of-the-art many-core system by up to 25% and by 2.7% on average over its default prefetcher configuration.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2120397293",
+                    "name": "Erika S. Alcorta"
+                },
+                {
+                    "authorId": "122550597",
+                    "name": "Mahesh Madhav"
+                },
+                {
+                    "authorId": "3053038",
+                    "name": "Scott Tetrick"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "1741519",
+                    "name": "A. Gerstlauer"
+                }
+            ]
+        },
+        {
+            "paperId": "433ed1abf8bda413b0751c9514e0155598229784",
+            "title": "Hermod: principled and practical scheduling for serverless functions",
+            "abstract": "Serverless computing has seen rapid growth due to the ease-of-use and cost-efficiency it provides. However, function scheduling, a critical component of serverless systems, has been overlooked. In this paper, we take a fist-principles approach toward designing a scheduler that caters to the unique characteristics of serverless functions as seen in real-world deployments. We first create a taxonomy of scheduling policies along three dimensions. Next, we use simulation to explore the scheduling policy space and show that frequently used features such as late binding and random load balancing are sub-optimal for common execution time distributions and load ranges. We use these insights to design Hermod, a scheduler for serverless functions with two key characteristics. First, to avoid head-of-line blocking due to high function execution time variability, Hermod uses a combination of early binding and processor sharing for scheduling at individual worker machines. Second, Hermod is cost, load, and locality-aware. It improves consolidation at low load, it employs least-loaded balancing at high load to retain high performance, and it reduces the number of cold starts compared to pure load-based policies. We implement Hermod for Apache OpenWhisk and demonstrate that, for the case of the function patterns observed in real-world traces, it achieves up to 85% lower function slowdown and 60% higher throughput compared to existing production and state-of-the-art research schedulers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "80189516",
+                    "name": "Kostis Kaffes"
+                },
+                {
+                    "authorId": "2397000",
+                    "name": "N. Yadwadkar"
+                },
+                {
+                    "authorId": "117272782",
+                    "name": "Christos Kozyrakis"
+                }
+            ]
+        }
+    ]
+}

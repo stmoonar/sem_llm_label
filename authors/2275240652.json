@@ -1,0 +1,132 @@
+{
+    "authorId": "2275240652",
+    "papers": [
+        {
+            "paperId": "0bb0a502b8c6b6e65f704bfdafa0097236a779e7",
+            "title": "Faster Linear Systems and Matrix Norm Approximation via Multi-level Sketched Preconditioning",
+            "abstract": "We present a new class of preconditioned iterative methods for solving linear systems of the form $Ax = b$. Our methods are based on constructing a low-rank Nystr\\\"om approximation to $A$ using sparse random sketching. This approximation is used to construct a preconditioner, which itself is inverted quickly using additional levels of random sketching and preconditioning. We prove that the convergence of our methods depends on a natural average condition number of $A$, which improves as the rank of the Nystr\\\"om approximation increases. Concretely, this allows us to obtain faster runtimes for a number of fundamental linear algebraic problems: 1. We show how to solve any $n\\times n$ linear system that is well-conditioned except for $k$ outlying large singular values in $\\tilde{O}(n^{2.065} + k^\\omega)$ time, improving on a recent result of [Derezi\\'nski, Yang, STOC 2024] for all $k \\gtrsim n^{0.78}$. 2. We give the first $\\tilde{O}(n^2 + {d_\\lambda}^{\\omega}$) time algorithm for solving a regularized linear system $(A + \\lambda I)x = b$, where $A$ is positive semidefinite with effective dimension $d_\\lambda$. This problem arises in applications like Gaussian process regression. 3. We give faster algorithms for approximating Schatten $p$-norms and other matrix norms. For example, for the Schatten 1 (nuclear) norm, we give an algorithm that runs in $\\tilde{O}(n^{2.11})$ time, improving on an $\\tilde{O}(n^{2.18})$ method of [Musco et al., ITCS 2018]. Interestingly, previous state-of-the-art algorithms for most of the problems above relied on stochastic iterative methods, like stochastic coordinate and gradient descent. Our work takes a completely different approach, instead leveraging tools from matrix sketching.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2267239914",
+                    "name": "Michal Derezi'nski"
+                },
+                {
+                    "authorId": "2275240652",
+                    "name": "Christopher Musco"
+                },
+                {
+                    "authorId": "2274200166",
+                    "name": "Jiaming Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "8f89b99ae53b3e1d7175f4943c35efd7cce5e85e",
+            "title": "Coupling without Communication and Drafter-Invariant Speculative Decoding",
+            "abstract": "Suppose Alice has a distribution $P$ and Bob has a distribution $Q$. Alice wants to generate a sample $a\\sim P$ and Bob a sample $b \\sim Q$ such that $a = b$ with has as high of probability as possible. It is well-known that, by sampling from an optimal coupling between the distributions, Alice and Bob can achieve $Pr[a = b] = 1 - D_{TV}(P,Q)$, where $D_{TV}(P,Q)$ is the total variation distance. What if Alice and Bob must solve this same problem without communicating at all? Perhaps surprisingly, with access to public randomness, they can still achieve $Pr[a=b] \\geq \\frac{1-D_{TV}(P,Q)}{1+D_{TV}(P,Q)} \\geq 1-2D_{TV}(P,Q)$. In fact, this bound can be obtained using a simple protocol based on the Weighted MinHash algorithm. In this work, we explore the communication-free coupling problem in greater depth. First, we show that an equally simple protocol based on Gumbel sampling matches the worst-case guarantees of the Weighted MinHash approach, but tends to perform better in practice. Conversely, we prove that both approaches are actually sharp: no communication-free protocol can achieve $Pr[a=b]>\\frac{1-D_{TV}(P,Q)}{1+D_{TV}(P,Q)}$ in the worst-case. Finally, we prove that, for distributions over $n$ items, there exists a scheme that uses just $O(\\log(n/\\epsilon))$ bits of communication to achieve $Pr[a = b] = 1 - D_{TV}(P,Q) - \\epsilon$, i.e. to essentially match optimal coupling. Beyond our theoretical results, we demonstrate an application of communication-free coupling to speculative decoding, a recent method for accelerating autoregressive large language models [Leviathan, Kalman, Matias, ICML 2023]. We show that communication-free protocols yield a variant of speculative decoding that we call Drafter-Invariant Speculative Decoding, which has the desirable property that the output of the method is fixed given a fixed random seed, regardless of what drafter is used for speculation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2158375012",
+                    "name": "Majid Daliri"
+                },
+                {
+                    "authorId": "2275240652",
+                    "name": "Christopher Musco"
+                },
+                {
+                    "authorId": "9486035",
+                    "name": "A. Suresh"
+                }
+            ]
+        },
+        {
+            "paperId": "b44012fd5a87afe7ccd3f5b018ff8cbba229a572",
+            "title": "Faster Spectral Density Estimation and Sparsification in the Nuclear Norm (Extended Abstract)",
+            "abstract": "We consider the problem of estimating the spectral density of the normalized adjacency matrix of an $n$-node undirected graph. We provide a randomized algorithm that, with $O(n\\epsilon^{-2})$ queries to a degree and neighbor oracle and in $O(n\\epsilon^{-3})$ time, estimates the spectrum up to $\\epsilon$ accuracy in the Wasserstein-1 metric. This improves on previous state-of-the-art methods, including an $O(n\\epsilon^{-7})$ time algorithm from [Braverman et al., STOC 2022] and, for sufficiently small $\\epsilon$, a $2^{O(\\epsilon^{-1})}$ time method from [Cohen-Steiner et al., KDD 2018]. To achieve this result, we introduce a new notion of graph sparsification, which we call nuclear sparsification. We provide an $O(n\\epsilon^{-2})$-query and $O(n\\epsilon^{-2})$-time algorithm for computing $O(n\\epsilon^{-2})$-sparse nuclear sparsifiers. We show that this bound is optimal in both its sparsity and query complexity, and we separate our results from the related notion of additive spectral sparsification. Of independent interest, we show that our sparsification method also yields the first deterministic algorithm for spectral density estimation that scales linearly with $n$ (sublinear in the representation size of the graph).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110894927",
+                    "name": "Yujia Jin"
+                },
+                {
+                    "authorId": "151035348",
+                    "name": "Ishani Karmarkar"
+                },
+                {
+                    "authorId": "2275240652",
+                    "name": "Christopher Musco"
+                },
+                {
+                    "authorId": "2139680917",
+                    "name": "Aaron Sidford"
+                },
+                {
+                    "authorId": "2298863884",
+                    "name": "A. Singh"
+                }
+            ]
+        },
+        {
+            "paperId": "08c0353aa13f2ee410dad2accf671f02791b9e47",
+            "title": "A Simple and Practical Method for Reducing the Disparate Impact of Differential Privacy",
+            "abstract": "Differentially private (DP) mechanisms have been deployed in a variety of high-impact social settings (perhaps most notably by the U.S. Census). Since all DP mechanisms involve adding noise to results of statistical queries, they are expected to impact our ability to accurately analyze and learn from data, in effect trading off privacy with utility. Alarmingly, the impact of DP on utility can vary significantly among different sub-populations. A simple way to reduce this disparity is with stratification. First compute an independent private estimate for each group in the data set (which may be the intersection of several protected classes), then, to compute estimates of global statistics, appropriately recombine these group estimates. Our main observation is that naive stratification often yields high-accuracy estimates of population-level statistics, without the need for additional privacy budget. We support this observation theoretically and empirically. Our theoretical results center on the private mean estimation problem, while our empirical results center on extensive experiments on private data synthesis to demonstrate the effectiveness of stratification on a variety of private mechanisms. Overall, we argue that this straightforward approach provides a strong baseline against which future work on reducing utility disparities of DP mechanisms should be compared.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066297941",
+                    "name": "Lucas Rosenblatt"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2275240652",
+                    "name": "Christopher Musco"
+                }
+            ]
+        },
+        {
+            "paperId": "1e00abdb38c77e82a69e5bf2ebd34c8e94a7f56e",
+            "title": "Sampling Methods for Inner Product Sketching",
+            "abstract": "Recently, Bessa et al. (PODS 2023) showed that sketches based on coordinated weighted sampling theoretically and empirically outperform popular linear sketching methods like Johnson-Lindentrauss projection and CountSketch for the ubiquitous problem of inner product estimation. We further develop this finding by introducing and analyzing two alternative sampling-based methods. In contrast to the computationally expensive algorithm in Bessa et al., our methods run in linear time (to compute the sketch) and perform better in practice, significantly beating linear sketching on a variety of tasks. For example, they provide state-of-the-art results for estimating the correlation between columns in unjoined tables, a problem that we show how to reduce to inner product estimation in a black-box way. While based on known sampling techniques (threshold and priority sampling) we introduce significant new theoretical analysis to prove approximation guarantees for our methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2158375012",
+                    "name": "Majid Daliri"
+                },
+                {
+                    "authorId": "1781411",
+                    "name": "Juliana Freire"
+                },
+                {
+                    "authorId": "2275240652",
+                    "name": "Christopher Musco"
+                },
+                {
+                    "authorId": "2116832374",
+                    "name": "A\u00e9cio S. R. Santos"
+                },
+                {
+                    "authorId": "1682058",
+                    "name": "H. Zhang"
+                }
+            ]
+        }
+    ]
+}

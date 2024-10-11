@@ -1,0 +1,419 @@
+{
+    "authorId": "40076282",
+    "papers": [
+        {
+            "paperId": "c1217ee04487c45e946581b1af6208c6e6fb691c",
+            "title": "Optimizing Similar Item Recommendations in a Semi-structured Marketplace to Maximize Conversion",
+            "abstract": "This paper tackles the problem of recommendations in eBay's large semi-structured marketplace. eBay's variable inventory and lack of structured information about listings makes traditional collaborative filtering algorithms difficult to use. We discuss how to overcome these data limitations to produce high quality recommendations in real time with a combination of a customized scalable architecture as well as a widely applicable machine learned ranking model. A pointwise ranking approach is utilized to reduce the ranking problem to a binary classification problem optimized on past user purchase behavior. We present details of a sampling strategy and feature engineering that have been critical to achieve a lift in both purchase through rate (PTR) and revenue.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3454205",
+                    "name": "Y. Brovman"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "2065673337",
+                    "name": "N. Srinivasan"
+                },
+                {
+                    "authorId": "3454331",
+                    "name": "Stephen Neola"
+                },
+                {
+                    "authorId": "50720919",
+                    "name": "D. Galron"
+                },
+                {
+                    "authorId": "2070417058",
+                    "name": "Ryan Snyder"
+                },
+                {
+                    "authorId": "2108355965",
+                    "name": "Paul Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "abc870699b13414bce0487342874e2ad7214783b",
+            "title": "Analyzing Crowd Rankings",
+            "abstract": "Ranked data is ubiquitous in real-world applications, arising naturally when users express preferences about products and services, when voters cast ballots in elections, and when funding proposals are evaluated based on their merits or university departments based on their reputation. This paper focuses on crowdsourcing and novel analysis of ranked data. We describe the design of a data collection task in which Amazon MT workers were asked to rank movies. We present results of data analysis, correlating our ranked dataset with IMDb, where movies are rated on a discrete scale rather than ranked. We develop an intuitive measure of worker quality appropriate for this task, where no gold standard answer exists. We propose a model of local structure in ranked datasets, reflecting that subsets of the workers agree in their ranking over subsets of the items, develop a data mining algorithm that identifies such structure, and evaluate in on our dataset. Our dataset is publicly available at https://github.com/stoyanovich/CrowdRank.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "2107426",
+                    "name": "Xuemei Gong"
+                }
+            ]
+        },
+        {
+            "paperId": "189b2505b215c709b7698595fb9cdc1a478141a2",
+            "title": "A System for Management and Analysis of Preference Data",
+            "abstract": "Preference data arises in a wide variety of domains. Over the past decade, we have seen a sharp increase in the volume of preference data, in the diversity of applications that use it, and in the richness of preference data analysis methods. Examples of applications include rank aggregation in genomic data analysis, management of votes in elections, and recommendation systems in e-commerce. However, little attention has been paid to the challenges of building a system for preference-data management, which would help incorporate sophisticated analytics into larger applications, support computational abstractions for usability by data scientists, and enable scaling up to modern volumes. This vision paper proposes a management system for preference data that aims to address these challenges. We adopt the relational database model, and propose extensions that are specialized to handling preference data. Specifically, we introduce a special type of a relation that is designed for preference data, and describe composable operators on preference relations that can be embedded in SQL statements, for convenient reuse across applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "1679226",
+                    "name": "B. Kimelfeld"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                }
+            ]
+        },
+        {
+            "paperId": "7d62e3ee01ea384007f95c3e28db4f3e0dad8526",
+            "title": "Understanding Local Structure in Ranked Datasets",
+            "abstract": "Ranked data is ubiquitous in real-world applications. Rankings arise naturally when users express preferences about products and services, when voters cast ballots in elections, when funding pro- posals are evaluated based on their merits and university depart- ments based on their reputation, or when genes are ordered based on their expression levels under various experimental conditions. We observe that ranked data exhibits interesting local structure, representing agreement of subsets of rankers over subsets of items. Being able to model, identify and describe such structure is im- portant, because it enables novel kinds of analysis with the poten- tial of making ground-breaking impact, but is challenging to do effectively and efficiently. We argue for the use of fundamental data management principles such as declarativeness and incremen- tal evaluation, in combination with state-of-the-art machine learn- ing and data mining techniques, for addressing the effectiveness and efficiency challenges. We describe the key ingredients of a so- lution, and propose aroadmap towards aframework that will enable robust and efficient analysis of large ranked datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "49702692",
+                    "name": "S. Davidson"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "1702212",
+                    "name": "Tova Milo"
+                }
+            ]
+        },
+        {
+            "paperId": "f0194949e708ca0dffd124dc5707fd18e269e7c9",
+            "title": "Incremental mapping compilation in an object-to-relational mapping system",
+            "abstract": "In an object-to-relational mapping system (ORM), mapping expressions explain how to expose relational data as objects and how to store objects in tables. If mappings are sufficiently expressive, then it is possible to define lossy mappings. If a user updates an object, stores it in the database based on a lossy mapping, and then retrieves the object from the database, the user might get a different result than the updated state of the object; that is, the mapping might not \"roundtrip.\" To avoid this, the ORM should validate that user-defined mappings roundtrip the data. However, this problem is NP-hard, so mapping validation can be very slow for large or complex mappings.\n We circumvent this problem by developing an incremental compiler for OR mappings. Given a validated mapping, a modification to the object schema is compiled into incremental modifications of the mapping. We define the problem formally, present algorithms to solve it for Microsoft's Entity Framework, and report on an implementation. For some mappings, incremental compilation is over 100 times faster than a full mapping compilation, in one case dropping from 8 hours to 50 seconds.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1737944",
+                    "name": "P. Bernstein"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "144022533",
+                    "name": "Jorge P\u00e9rez"
+                },
+                {
+                    "authorId": "3235045",
+                    "name": "Guillem Rull"
+                },
+                {
+                    "authorId": "3055107",
+                    "name": "James F. Terwilliger"
+                }
+            ]
+        },
+        {
+            "paperId": "f8132f404db075266c84af43b71a7ea53b2912d2",
+            "title": "Sharing work in keyword search over databases",
+            "abstract": "An important means of allowing non-expert end-users to pose ad hoc queries whether over single databases or data integration systems is through keyword search. Given a set of keywords, the query processor finds matches across different tuples and tables. It computes and executes a set of relational sub-queries whose results are combined to produce the k highest ranking answers. Work on keyword search primarily focuses on single-database, single-query settings: each query is answered in isolation, despite possible overlap between queries posed by different users or at different times; and the number of relevant tables is assumed to be small, meaning that sub-queries can be processed without using cost-based methods to combine work. As we apply keyword search to support ad hoc data integration queries over scientific or other databases on the Web, we must reuse and combine computation. In this paper, we propose an architecture that continuously receives sets of ranked keyword queries, and seeks to reuse work across these queries. We extend multiple query optimization and continuous query techniques, and develop a new query plan scheduling module we call the ATC (based on its analogy to an air traffic controller). The ATC manages the flow of tuples among a multitude of pipelined operators, minimizing the work needed to return the top-k answers for all queries. We also develop techniques to manage the sharing and reuse of state as queries complete and input data streams are exhausted. We show the effectiveness of our techniques in handling queries over real and synthetic data sets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                }
+            ]
+        },
+        {
+            "paperId": "366f583a8cdb02127dedc5a5840fd2b24cd05782",
+            "title": "SmartCIS: integrating digital and physical environments",
+            "abstract": "With the increasing adoption of networked sensors, a new class of applications is emerging that combines data from the \"digital world\" with real-time sensor readings, in order to intelligently manage physical environments and systems (e.g., \"smart\" buildings, power grids, data centers). This leads to new challenges in providing programmability, performance, extensibility, and multi-purpose heterogeneous data acquisition. The ASPEN project addresses these challenges by extending data integrationtechniques to the distributed stream world, and adding new abstractions for physical phenomena. We describe the architecture and implementation of our ASPEN system and its showcase intelligent building application, SmartCIS, which was demonstrated at SIGMOD 2009. We summarize the new query processing algorithms we have developed for integrating highly distributed stream data sources, both in low-power sensor devices and traditional PCs and servers; describe query optimization techniques for federations of stream processors; and detail new capabilities such as incremental maintenance of recursive views. Our algorithms and techniques generalize across a wide range of data from RFID and light measurements to real-time machine usage monitoring, energy consumption and recursive query computation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152973280",
+                    "name": "Mengmeng Liu"
+                },
+                {
+                    "authorId": "2931350",
+                    "name": "Svilen R. Mihaylov"
+                },
+                {
+                    "authorId": "2285681790",
+                    "name": "Zhuowei Bao"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                },
+                {
+                    "authorId": "35206168",
+                    "name": "B. T. Loo"
+                },
+                {
+                    "authorId": "2285661298",
+                    "name": "Sudipto Guha"
+                }
+            ]
+        },
+        {
+            "paperId": "b6c57c43614d9fb94bab7f8b36e82273400ac2a7",
+            "title": "Dynamic join optimization in multi-hop wireless sensor networks",
+            "abstract": "To enable smart environments and self-tuning data centers, we are developing the Aspen system for integrating physical sensor data, as well as stream data coming from machine logical state, and database or Web data from the Internet. A key component of this system is a query processor optimized for limited-bandwidth, possibly battery-powered devices with multiple hop wireless radio communications. This query processor is given a portion of a data integration query, possibly including joins among sensors, to execute. Several recent papers have developed techniques for computing joins in sensors, but these techniques are static and are only appropriate for specific join selectivity ratios. We consider the problem of dynamic join optimization for sensor networks, developing solutions that employ cost modeling, as well as adaptive learning and self-tuning heuristics to choose the best algorithm under real and variable selectivity values. We focus on in-network join computation, but our architecture extends to other approaches (and we compare against these). We develop basic techniques assuming selectivities are uniform and known in advance, and optimization can be done on a pairwise basis; we then extend the work to handle joins between multiple pairs, when selectivities are not fully known. We experimentally validate our work at scale using standard datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2931350",
+                    "name": "Svilen R. Mihaylov"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                },
+                {
+                    "authorId": "144392463",
+                    "name": "S. Guha"
+                }
+            ]
+        },
+        {
+            "paperId": "70c563cb68b3bed22b1ed5e8696dfda9256cf8c4",
+            "title": "SmartCIS: integrating digital and physical environments",
+            "abstract": "With the increasing adoption of networked sensors, a new class of applications is emerging that combines data from the \"digital world\" with real-time sensor readings, in order to intelligently manage physical environments and systems (e.g., \"smart\" buildings, power grids, data centers). This leads to new challenges in providing programmability, performance, extensibility, and multi-purpose heterogeneous data acquisition. The ASPEN project addresses these challenges by extending data integrationtechniques to the distributed stream world, and adding new abstractions for physical phenomena. We describe the architecture and implementation of our ASPEN system and its showcase intelligent building application, SmartCIS, which was demonstrated at SIGMOD 2009. We summarize the new query processing algorithms we have developed for integrating highly distributed stream data sources, both in low-power sensor devices and traditional PCs and servers; describe query optimization techniques for federations of stream processors; and detail new capabilities such as incremental maintenance of recursive views. Our algorithms and techniques generalize across a wide range of data from RFID and light measurements to real-time machine usage monitoring, energy consumption and recursive query computation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152973280",
+                    "name": "Mengmeng Liu"
+                },
+                {
+                    "authorId": "2931350",
+                    "name": "Svilen R. Mihaylov"
+                },
+                {
+                    "authorId": "2685772",
+                    "name": "Zhuowei Bao"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                },
+                {
+                    "authorId": "35206168",
+                    "name": "B. T. Loo"
+                },
+                {
+                    "authorId": "144392463",
+                    "name": "S. Guha"
+                }
+            ]
+        },
+        {
+            "paperId": "746a5e1c39f88a2fcc01d5c13425f8e986af4a21",
+            "title": "Interactive Data Integration through Smart Copy & Paste",
+            "abstract": "In many scenarios, such as emergency response or ad hoc collaboration, it is critical to reduce the overhead in integrating data. Here, the goal is often to rapidly integrate \u201cenough\u201d data to answer a specific question. Ideally, one could perform the entire process interactively under one unified interface: defining extractors and wrappers for sources, creating a mediated schema, and adding schema mappings \u2014 while seeing how these impact the integrated view of the data, and refining the design accordingly. We propose a novel smart copy and paste (SCP) model and architecture for seamlessly combining the design-time and run-time aspects of data integration, and we describe an initial prototype, the CopyCat system. In CopyCat, the user does not need special tools for the different stages of integration: instead, the system watches as the user copies data from applications (including the Web browser) and pastes them into CopyCat\u2019s spreadsheet-like workspace. CopyCat generalizes these actions and presents proposed auto-completions, each with an explanation in the form of provenance. The user provides feedback on these suggestions \u2014 through either direct interactions or further copy-and-paste operations \u2014 and the system learns from this feedback. This paper provides an overview of our prototype system, and identifies key research challenges in achieving SCP in its full generality.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                },
+                {
+                    "authorId": "1745117",
+                    "name": "Craig A. Knoblock"
+                },
+                {
+                    "authorId": "145293454",
+                    "name": "Steven Minton"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "2408872",
+                    "name": "P. Talukdar"
+                },
+                {
+                    "authorId": "2479932",
+                    "name": "Rattapoom Tuchinda"
+                },
+                {
+                    "authorId": "2887330",
+                    "name": "J. Ambite"
+                },
+                {
+                    "authorId": "3247917",
+                    "name": "Maria Muslea"
+                },
+                {
+                    "authorId": "2076421",
+                    "name": "Cenk Gazen"
+                }
+            ]
+        },
+        {
+            "paperId": "0a76987ee6746c194269fc7d6d0594d33bf5343e",
+            "title": "The ORCHESTRA Collaborative Data Sharing System",
+            "abstract": "Sharing structured data today requires standardizing upon a single schema, then mapping and cleaning all of the data. This results in a single queriable mediated data instance. However, for settings in which structured data is being collaboratively authored by a large community, e.g., in the sciences, there is often a lack of consensus about how it should be represented, what is correct, and which sources are authoritative. Moreover, such data is seldom static: it is frequently updated, cleaned, and annotated. The ORCHESTRA collaborative data sharing system develops a new architecture and consistency model for such settings, based on the needs of data sharing in the life sciences. In this paper we describe the basic architecture and implementation of the ORCHESTRA system, and summarize some of the open challenges that arise in this setting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                },
+                {
+                    "authorId": "1379632307",
+                    "name": "Todd J. Green"
+                },
+                {
+                    "authorId": "2275240118",
+                    "name": "Gregory Karvounarakis"
+                },
+                {
+                    "authorId": "2055568847",
+                    "name": "Nicholas E. Taylor"
+                },
+                {
+                    "authorId": "144879888",
+                    "name": "V. Tannen"
+                },
+                {
+                    "authorId": "2408872",
+                    "name": "P. Talukdar"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "145366908",
+                    "name": "Fernando C Pereira"
+                }
+            ]
+        },
+        {
+            "paperId": "3fa34251a520679fdf3ea850941e9ccd21a12dd4",
+            "title": "Learning to create data-integrating queries",
+            "abstract": "The number of potentially-related data resources available for querying --- databases, data warehouses, virtual integrated schemas --- continues to grow rapidly. Perhaps no area has seen this problem as acutely as the life sciences, where hundreds of large, complex, interlinked data resources are available on fields like proteomics, genomics, disease studies, and pharmacology. The schemas of individual databases are often large on their own, but users also need to pose queries across multiple sources, exploiting foreign keys and schema mappings. Since the users are not experts, they typically rely on the existence of pre-defined Web forms and associated query templates, developed by programmers to meet the particular scientists' needs. Unfortunately, such forms are scarce commodities, often limited to a single database, and mismatched with biologists' information needs that are often context-sensitive and span multiple databases. \n \nWe present a system with which a non-expert user can author new query templates and Web forms, to be reused by anyone with related information needs. The user poses keyword queries that are matched against source relations and their attributes; the system uses sequences of associations (e.g., foreign keys, links, schema mappings, synonyms, and taxonomies) to create multiple ranked queries linking the matches to keywords; the set of queries is attached to a Web query form. Now the user and his or her associates may pose specific queries by filling in parameters in the form. Importantly, the answers to this query are ranked and annotated with data provenance, and the user provides feedback on the utility of the answers, from which the system ultimately learns to assign costs to sources and associations according to the user's specific information need, as a result changing the ranking of the queries used to generate results. We evaluate the effectiveness of our method against \"gold standard\" costs from domain experts and demonstrate the method's scalability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2408872",
+                    "name": "P. Talukdar"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "3110183",
+                    "name": "Muhammad Salman Mehmood"
+                },
+                {
+                    "authorId": "1693407",
+                    "name": "K. Crammer"
+                },
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                },
+                {
+                    "authorId": "145366908",
+                    "name": "Fernando C Pereira"
+                },
+                {
+                    "authorId": "144392463",
+                    "name": "S. Guha"
+                }
+            ]
+        },
+        {
+            "paperId": "f2683a5421d83b80cfbc435fda6a20ca2c17ce03",
+            "title": "A substrate for in-network sensor data integration",
+            "abstract": "With the ultimate goal of extending the data integration paradigm and query processing capabilities to ad hoc wireless networks, sensors, and stream systems, we consider how to support communication between sets of nodes performing distributed joins in sensor networks. We develop a communication model that enables in-network join at a variety of locations, and which facilitates coordination among nodes in order to make optimization decisions. While we defer a discussion of the optimizer to future work, we experimentally compare a variety of strategies, including at-base and in-network joins. Results show significant performance gains versus prior work, as well as opportunities for optimization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2931350",
+                    "name": "Svilen R. Mihaylov"
+                },
+                {
+                    "authorId": "40076282",
+                    "name": "Marie Jacob"
+                },
+                {
+                    "authorId": "1804315",
+                    "name": "Z. Ives"
+                },
+                {
+                    "authorId": "144392463",
+                    "name": "S. Guha"
+                }
+            ]
+        }
+    ]
+}

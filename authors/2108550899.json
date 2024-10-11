@@ -1,0 +1,316 @@
+{
+    "authorId": "2108550899",
+    "papers": [
+        {
+            "paperId": "2786f4d208e1fdafe33eae9e9db4bb7303538dae",
+            "title": "Spear and Shield: Adversarial Attacks and Defense Methods for Model-Based Link Prediction on Continuous-Time Dynamic Graphs",
+            "abstract": "Real-world graphs are dynamic, constantly evolving with new interactions, such as financial transactions in financial networks. \nTemporal Graph Neural Networks (TGNNs) have been developed to effectively capture the evolving patterns in dynamic graphs.\nWhile these models have demonstrated their superiority, being widely adopted in various important fields, their vulnerabilities against adversarial attacks remain largely unexplored.\nIn this paper, we propose T-SPEAR, a simple and effective adversarial attack method for link prediction on continuous-time dynamic graphs, focusing on investigating the vulnerabilities of TGNNs.\nSpecifically, before the training procedure of a victim model, which is a TGNN for link prediction, we inject edge perturbations to the data that are unnoticeable in terms of the four constraints we propose, and yet effective enough to cause malfunction of the victim model. \nMoreover, we propose a robust training approach T-SHIELD to mitigate the impact of adversarial attacks.\nBy using edge filtering and enforcing temporal smoothness to node embeddings, we enhance the robustness of the victim model.\nOur experimental study shows that T-SPEAR significantly degrades the victim model's performance on link prediction tasks, and even more, our attacks are transferable to other TGNNs, which differ from the victim model assumed by the attacker.\nMoreover, we demonstrate that T-SHIELD effectively filters out adversarial edges and exhibits robustness against adversarial attacks, surpassing the link prediction performance of the naive TGNN by up to 11.2% under T-SPEAR.\nThe code and datasets are available at https://github.com/wooner49/T-spear-shield",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109519939",
+                    "name": "Dongjin Lee"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                }
+            ]
+        },
+        {
+            "paperId": "cad4e35d451bc995fbbf73782fa260a9cc57d88d",
+            "title": "Self-Supervised Dataset Distillation for Transfer Learning",
+            "abstract": "Dataset distillation methods have achieved remarkable success in distilling a large dataset into a small set of representative samples. However, they are not designed to produce a distilled dataset that can be effectively used for facilitating self-supervised pre-training. To this end, we propose a novel problem of distilling an unlabeled dataset into a set of small synthetic samples for efficient self-supervised learning (SSL). We first prove that a gradient of synthetic samples with respect to a SSL objective in naive bilevel optimization is \\textit{biased} due to the randomness originating from data augmentations or masking. To address this issue, we propose to minimize the mean squared error (MSE) between a model's representations of the synthetic examples and their corresponding learnable target feature representations for the inner objective, which does not introduce any randomness. Our primary motivation is that the model obtained by the proposed inner optimization can mimic the \\textit{self-supervised target model}. To achieve this, we also introduce the MSE between representations of the inner model and the self-supervised target model on the original full dataset for outer optimization. Lastly, assuming that a feature extractor is fixed, we only optimize a linear head on top of the feature extractor, which allows us to reduce the computational cost and obtain a closed-form solution of the head with kernel ridge regression. We empirically validate the effectiveness of our method on various applications involving transfer learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115673552",
+                    "name": "Dong Bok Lee"
+                },
+                {
+                    "authorId": "1472875852",
+                    "name": "Seanie Lee"
+                },
+                {
+                    "authorId": "2256996513",
+                    "name": "Joonho Ko"
+                },
+                {
+                    "authorId": "2256995498",
+                    "name": "Kenji Kawaguchi"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "2254008573",
+                    "name": "Sung Ju Hwang"
+                }
+            ]
+        },
+        {
+            "paperId": "d0290fefeeee18c05357e8d32c5801c34a01ec77",
+            "title": "Over-parameterised Shallow Neural Networks with Asymmetrical Node Scaling: Global Convergence Guarantees and Feature Learning",
+            "abstract": "We consider the optimisation of large and shallow neural networks via gradient flow, where the output of each hidden node is scaled by some positive parameter. We focus on the case where the node scalings are non-identical, differing from the classical Neural Tangent Kernel (NTK) parameterisation. We prove that, for large neural networks, with high probability, gradient flow converges to a global minimum AND can learn features, unlike in the NTK regime. We also provide experiments on synthetic and real-world datasets illustrating our theoretical results and showing the benefit of such scaling in terms of pruning and transfer learning.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1774837",
+                    "name": "F. Caron"
+                },
+                {
+                    "authorId": "70486867",
+                    "name": "Fadhel Ayed"
+                },
+                {
+                    "authorId": "143816894",
+                    "name": "Paul Jung"
+                },
+                {
+                    "authorId": "24021870",
+                    "name": "Hoileong Lee"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "2159755820",
+                    "name": "Hongseok Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "3633dba6b595fe6338df5c0b07726b4b8f349150",
+            "title": "On Divergence Measures for Bayesian Pseudocoresets",
+            "abstract": "A Bayesian pseudocoreset is a small synthetic dataset for which the posterior over parameters approximates that of the original dataset. While promising, the scalability of Bayesian pseudocoresets is not yet validated in realistic problems such as image classification with deep neural networks. On the other hand, dataset distillation methods similarly construct a small dataset such that the optimization using the synthetic dataset converges to a solution with performance competitive with optimization using full data. Although dataset distillation has been empirically verified in large-scale settings, the framework is restricted to point estimates, and their adaptation to Bayesian inference has not been explored. This paper casts two representative dataset distillation algorithms as approximations to methods for constructing pseudocoresets by minimizing specific divergence measures: reverse KL divergence and Wasserstein distance. Furthermore, we provide a unifying view of such divergence measures in Bayesian pseudocoreset construction. Finally, we propose a novel Bayesian pseudocoreset algorithm based on minimizing forward KL divergence. Our empirical results demonstrate that the pseudocoresets constructed from these methods reflect the true posterior even in high-dimensional Bayesian inference problems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187664267",
+                    "name": "Balhae Kim"
+                },
+                {
+                    "authorId": "2174961601",
+                    "name": "J. Choi"
+                },
+                {
+                    "authorId": "1472875852",
+                    "name": "Seanie Lee"
+                },
+                {
+                    "authorId": "2110392124",
+                    "name": "Yoonho Lee"
+                },
+                {
+                    "authorId": "2112436632",
+                    "name": "Jung-Woo Ha"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                }
+            ]
+        },
+        {
+            "paperId": "3856c2a662027b43c0a9a0e7c849fe920a9bd2c5",
+            "title": "Universal Mini-Batch Consistency for Set Encoding Functions",
+            "abstract": "Previous works have established solid foundations for neural set functions, as well as effective architectures which preserve the necessary properties for operating on sets, such as being invariant to permutations of the set elements. Subsequently, Mini-Batch Consistency (MBC), the ability to sequentially process any permutation of any random set partition scheme while maintaining consistency guarantees on the output, has been established but with limited options for network architectures. We further study the MBC property in neural set encoding functions, establishing a method for converting arbitrary non-MBC models to satisfy MBC. In doing so, we provide a framework for a universally-MBC (UMBC) class of set functions. Additionally, we explore an interesting dropout strategy made possible by our framework, and investigate its effects on probabilistic calibration under test-time distributional shifts. We validate UMBC with proofs backed by unit tests, also providing qualitative/quantitative experiments on toy data, clean and corrupted point cloud classi\ufb01cation, and amortized clustering on ImageNet. The results demonstrate the utility of UMBC, and we further discover that our dropout strategy improves uncertainty calibration.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2051330801",
+                    "name": "Jeffrey Willette"
+                },
+                {
+                    "authorId": "2183082317",
+                    "name": "Andreis Bruno"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "35788904",
+                    "name": "Sung Ju Hwang"
+                }
+            ]
+        },
+        {
+            "paperId": "3b34df9e3b9b41930f46adfd22331d62a830cdd7",
+            "title": "Self-Distillation for Further Pre-training of Transformers",
+            "abstract": "Pre-training a large transformer model on a massive amount of unlabeled data and fine-tuning it on labeled datasets for diverse downstream tasks has proven to be a successful strategy, for a variety of vision and natural language processing tasks. However, direct fine-tuning of the pre-trained model may be suboptimal if there exist large discrepancies across data domains for pre-training and fine-tuning. To tackle this issue, several previous studies have proposed further pre-training strategies, where we continue to pre-train the model on the target unlabeled dataset before fine-tuning. However, all of them solely focus on language models and we empirically find that a Vision Transformer is vulnerable to overfitting as we continue to pretrain the model on target unlabeled data. In order to tackle this limitation, we propose self-distillation as a regularization for a further pre-training stage. Specifically, we first further pre-train the initial pre-trained model on the target unlabeled data and then consider it as a teacher for self-distillation. Then we take the same initial pre-trained model as a student and enforce its hidden representations to be close to those of the teacher while optimizing the student with a masked auto-encoding objective. We empirically validate the efficacy of self-distillation on a variety of benchmark datasets for image and text classification tasks. Experimentally, we show that our proposed method outperforms all the relevant baselines. Theoretically, we analyze the proposed method with a simplified model to understand how self-distillation for further pre-training can potentially help improve the performance of the downstream tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1472875852",
+                    "name": "Seanie Lee"
+                },
+                {
+                    "authorId": "120434407",
+                    "name": "Minki Kang"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "35788904",
+                    "name": "Sung Ju Hwang"
+                },
+                {
+                    "authorId": "1392876047",
+                    "name": "Kenji Kawaguchi"
+                }
+            ]
+        },
+        {
+            "paperId": "429e68167c418d7aea7379083599834d5e36606f",
+            "title": "Exploring The Role of Mean Teachers in Self-supervised Masked Auto-Encoders",
+            "abstract": "Masked image modeling (MIM) has become a popular strategy for self-supervised learning~(SSL) of visual representations with Vision Transformers. A representative MIM model, the masked auto-encoder (MAE), randomly masks a subset of image patches and reconstructs the masked patches given the unmasked patches. Concurrently, many recent works in self-supervised learning utilize the student/teacher paradigm which provides the student with an additional target based on the output of a teacher composed of an exponential moving average (EMA) of previous students. Although common, relatively little is known about the dynamics of the interaction between the student and teacher. Through analysis on a simple linear model, we find that the teacher conditionally removes previous gradient directions based on feature similarities which effectively acts as a conditional momentum regularizer. From this analysis, we present a simple SSL method, the Reconstruction-Consistent Masked Auto-Encoder (RC-MAE) by adding an EMA teacher to MAE. We find that RC-MAE converges faster and requires less memory usage than state-of-the-art self-distillation methods during pre-training, which may provide a way to enhance the practicality of prohibitively expensive self-supervised learning of Vision Transformer models. Additionally, we show that RC-MAE achieves more robustness and better performance compared to MAE on downstream tasks such as ImageNet-1K classification, object detection, and instance segmentation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3445691",
+                    "name": "Youngwan Lee"
+                },
+                {
+                    "authorId": "2051330801",
+                    "name": "Jeffrey Willette"
+                },
+                {
+                    "authorId": "1804971",
+                    "name": "Jonghee Kim"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "35788904",
+                    "name": "Sung Ju Hwang"
+                }
+            ]
+        },
+        {
+            "paperId": "4d8703b14971e911dbf90e6c60ea8d4e1f217f0d",
+            "title": "Deep neural networks with dependent weights: Gaussian Process mixture limit, heavy tails, sparsity and compressibility",
+            "abstract": "This article studies the infinite-width limit of deep feedforward neural networks whose weights are dependent, and modelled via a mixture of Gaussian distributions. Each hidden node of the network is assigned a nonnegative random variable that controls the variance of the outgoing weights of that node. We make minimal assumptions on these per-node random variables: they are iid and their sum, in each layer, converges to some finite random variable in the infinite-width limit. Under this model, we show that each layer of the infinite-width neural network can be characterised by two simple quantities: a non-negative scalar parameter and a L\\'evy measure on the positive reals. If the scalar parameters are strictly positive and the L\\'evy measures are trivial at all hidden layers, then one recovers the classical Gaussian process (GP) limit, obtained with iid Gaussian weights. More interestingly, if the L\\'evy measure of at least one layer is non-trivial, we obtain a mixture of Gaussian processes (MoGP) in the large-width limit. The behaviour of the neural network in this regime is very different from the GP regime. One obtains correlated outputs, with non-Gaussian distributions, possibly with heavy tails. Additionally, we show that, in this regime, the weights are compressible, and some nodes have asymptotically non-negligible contributions, therefore representing important hidden features. Many sparsity-promoting neural network models can be recast as special cases of our approach, and we discuss their infinite-width limits; we also present an asymptotic analysis of the pruning error. We illustrate some of the benefits of the MoGP regime over the GP regime in terms of representation learning and compressibility on simulated, MNIST and Fashion MNIST datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "24021870",
+                    "name": "Hoileong Lee"
+                },
+                {
+                    "authorId": "70486867",
+                    "name": "Fadhel Ayed"
+                },
+                {
+                    "authorId": "143816894",
+                    "name": "Paul Jung"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "2159755820",
+                    "name": "Hongseok Yang"
+                },
+                {
+                    "authorId": "87605179",
+                    "name": "F. Caron"
+                }
+            ]
+        },
+        {
+            "paperId": "61f458fb4d8b3be5cbd26d2fbb11002b5757d9c5",
+            "title": "Scalable Set Encoding with Universal Mini-Batch Consistency and Unbiased Full Set Gradient Approximation",
+            "abstract": "Recent work on mini-batch consistency (MBC) for set functions has brought attention to the need for sequentially processing and aggregating chunks of a partitioned set while guaranteeing the same output for all partitions. However, existing constraints on MBC architectures lead to models with limited expressive power. Additionally, prior work has not addressed how to deal with large sets during training when the full set gradient is required. To address these issues, we propose a Universally MBC (UMBC) class of set functions which can be used in conjunction with arbitrary non-MBC components while still satisfying MBC, enabling a wider range of function classes to be used in MBC settings. Furthermore, we propose an efficient MBC training algorithm which gives an unbiased approximation of the full set gradient and has a constant memory overhead for any set size for both train- and test-time. We conduct extensive experiments including image completion, text classification, unsupervised clustering, and cancer detection on high-resolution images to verify the efficiency and efficacy of our scalable set encoding framework. Our code is available at github.com/jeffwillette/umbc",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2051330801",
+                    "name": "Jeffrey Willette"
+                },
+                {
+                    "authorId": "1472875852",
+                    "name": "Seanie Lee"
+                },
+                {
+                    "authorId": "1768147915",
+                    "name": "Bruno Andreis"
+                },
+                {
+                    "authorId": "1392876047",
+                    "name": "Kenji Kawaguchi"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "2110796623",
+                    "name": "S. Hwang"
+                }
+            ]
+        },
+        {
+            "paperId": "8013150e6e57c14cc3c4bc72eb2ecf46d9b4e309",
+            "title": "A Large-Scale Ensemble Learning Framework for Demand Forecasting",
+            "abstract": "Demand forecasting is a crucial component of supply chain management for revenue optimization and inventory planning. Traditional time series forecasting methods, however, have resulted in small models with limited expressive power because they have difficulty in scaling their model size up while maintaining high accuracy. In this paper, we propose Forecasting orchestra (Forchestra), a simple but powerful ensemble framework capable of accurately predicting future demand for a diverse range of items. Forchestra consists of two parts: 1) base predictors and 2) a neural conductor. For a given time series, each base predictor outputs its respective forecast based on historical observations. On top of the base predictors, the neural conductor adaptively assigns the importance weight for each predictor by looking at the representation vector provided by a representation module. Finally, Forchestra aggregates the predictions by the weights and constructs a final prediction. In contrast to previous ensemble approaches, the neural conductor and all base predictors of Forchestra are trained in an end-to-end manner; this allows each base predictor to modify its reaction to different inputs, while supporting other predictors and constructing a final prediction jointly. We empirically show that the model size is scalable to up to 0.8 billion parameters ($\\approx$400-layer LSTM). The proposed method is evaluated on our proprietary E-Commerce (100K) and the public M5(30K) datasets, and it outperforms existing forecasting models with a significant margin. In addition, we observe that our framework generalizes well to unseen data points when evaluated in a zeroshot fashion on downstream datasets. Last but not least, we present extensive qualitative and quantitative studies to analyze how the proposed model outperforms baseline models and differs from conventional ensemble approaches. The code is available at https://github.com/young-j-parld22-ICDM-Forchestra.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115210131",
+                    "name": "Young-Jin Park"
+                },
+                {
+                    "authorId": "2145183608",
+                    "name": "Donghyun Kim"
+                },
+                {
+                    "authorId": "2203816721",
+                    "name": "Fr\u00e9d\u00e9ric Odermatt"
+                },
+                {
+                    "authorId": "2108550899",
+                    "name": "Juho Lee"
+                },
+                {
+                    "authorId": "2109351321",
+                    "name": "KyungHyun Kim"
+                }
+            ]
+        }
+    ]
+}

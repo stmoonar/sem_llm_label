@@ -1,0 +1,425 @@
+{
+    "authorId": "143820870",
+    "papers": [
+        {
+            "paperId": "028d75496e51943f52c7b2177344a3c089c18058",
+            "title": "Fine-grained Hallucination Detection and Editing for Language Models",
+            "abstract": "Large language models (LMs) are prone to generate factual errors, which are often called hallucinations. In this paper, we introduce a comprehensive taxonomy of hallucinations and argue that hallucinations manifest in diverse forms, each requiring varying degrees of careful assessments to verify factuality. We propose a novel task of automatic fine-grained hallucination detection and construct a new evaluation benchmark, FavaBench, that includes about one thousand fine-grained human judgments on three LM outputs across various domains. Our analysis reveals that ChatGPT and Llama2-Chat (70B, 7B) exhibit diverse types of hallucinations in the majority of their outputs in information-seeking scenarios. We train FAVA, a retrieval-augmented LM by carefully creating synthetic data to detect and correct fine-grained hallucinations. On our benchmark, our automatic and human evaluations show that FAVA significantly outperforms ChatGPT and GPT-4 on fine-grained hallucination detection, and edits suggested by FAVA improve the factuality of LM-generated text.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279677197",
+                    "name": "Abhika Mishra"
+                },
+                {
+                    "authorId": "35584853",
+                    "name": "Akari Asai"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "1705260",
+                    "name": "Yizhong Wang"
+                },
+                {
+                    "authorId": "1700325",
+                    "name": "Graham Neubig"
+                },
+                {
+                    "authorId": "2257032956",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2548384",
+                    "name": "Hannaneh Hajishirzi"
+                }
+            ]
+        },
+        {
+            "paperId": "25cee84e3a1541697a7c97443d7526574127c344",
+            "title": "Don't Hallucinate, Abstain: Identifying LLM Knowledge Gaps via Multi-LLM Collaboration",
+            "abstract": "Despite efforts to expand the knowledge of large language models (LLMs), knowledge gaps -- missing or outdated information in LLMs -- might always persist given the evolving nature of knowledge. In this work, we study approaches to identify LLM knowledge gaps and abstain from answering questions when knowledge gaps are present. We first adapt existing approaches to model calibration or adaptation through fine-tuning/prompting and analyze their ability to abstain from generating low-confidence outputs. Motivated by their failures in self-reflection and over-reliance on held-out sets, we propose two novel approaches that are based on model collaboration, i.e., LLMs probing other LLMs for knowledge gaps, either cooperatively or competitively. Extensive experiments with three LLMs on four QA tasks featuring diverse knowledge domains demonstrate that both cooperative and competitive approaches to unveiling LLM knowledge gaps achieve up to 19.3% improvements on abstain accuracy against the strongest baseline. Further analysis reveals that our proposed mechanisms could help identify failure cases in retrieval augmentation and pinpoint knowledge gaps in multi-hop reasoning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114887261",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2254168375",
+                    "name": "Weijia Shi"
+                },
+                {
+                    "authorId": "2108853330",
+                    "name": "Yike Wang"
+                },
+                {
+                    "authorId": "2282214127",
+                    "name": "Wenxuan Ding"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "5c7752de11cb2cb9671a6f32edb046b1e0c9b7fc",
+            "title": "MEDIQ: Question-Asking LLMs for Adaptive and Reliable Clinical Reasoning",
+            "abstract": "In high-stakes domains like clinical reasoning, AI assistants powered by large language models (LLMs) are yet to be reliable and safe. We identify a key obstacle towards reliability: existing LLMs are trained to answer any question, even with incomplete context in the prompt or insufficient parametric knowledge. We propose to change this paradigm to develop more careful LLMs that ask follow-up questions to gather necessary and sufficient information and respond reliably. We introduce MEDIQ, a framework to simulate realistic clinical interactions, which incorporates a Patient System and an adaptive Expert System. The Patient may provide incomplete information in the beginning; the Expert refrains from making diagnostic decisions when unconfident, and instead elicits missing details from the Patient via follow-up questions. To evaluate MEDIQ, we convert MEDQA and CRAFT-MD -- medical benchmarks for diagnostic question answering -- into an interactive setup. We develop a reliable Patient system and prototype several Expert systems, first showing that directly prompting state-of-the-art LLMs to ask questions degrades the quality of clinical reasoning, indicating that adapting LLMs to interactive information-seeking settings is nontrivial. We then augment the Expert with a novel abstention module to better estimate model confidence and decide whether to ask more questions, thereby improving diagnostic accuracy by 20.3%; however, performance still lags compared to an (unrealistic in practice) upper bound when full information is given upfront. Further analyses reveal that interactive performance can be improved by filtering irrelevant contexts and reformatting conversations. Overall, our paper introduces a novel problem towards LLM reliability, a novel MEDIQ framework, and highlights important future directions to extend the information-seeking abilities of LLM assistants in critical domains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2295954288",
+                    "name": "Shuyue Stella Li"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2304468718",
+                    "name": "Jonathan Ilgen"
+                },
+                {
+                    "authorId": "2276202987",
+                    "name": "Emma Pierson"
+                },
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "9b9e44d43eb6bc0be7a07a92b2100dd6a7f3b158",
+            "title": "Learning Syntax Without Planting Trees: Understanding When and Why Transformers Generalize Hierarchically",
+            "abstract": "Transformers trained on natural language data have been shown to learn its hierarchical structure and generalize to sentences with unseen syntactic structures without explicitly encoding any structural bias. In this work, we investigate sources of inductive bias in transformer models and their training that could cause such generalization behavior to emerge. We extensively experiment with transformer models trained on multiple synthetic datasets and with different training objectives and show that while other objectives e.g. sequence-to-sequence modeling, prefix language modeling, often failed to lead to hierarchical generalization, models trained with the language modeling objective consistently learned to generalize hierarchically. We then conduct pruning experiments to study how transformers trained with the language modeling objective encode hierarchical structure. When pruned, we find joint existence of subnetworks within the model with different generalization behaviors (subnetworks corresponding to hierarchical structure and linear order). Finally, we take a Bayesian perspective to further uncover transformers' preference for hierarchical generalization: We establish a correlation between whether transformers generalize hierarchically on a dataset and whether the simplest explanation of that dataset is provided by a hierarchical grammar compared to regular grammars exhibiting linear generalization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "52154863",
+                    "name": "Kabir Ahuja"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2030973547",
+                    "name": "Madhur Panwar"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                },
+                {
+                    "authorId": "2298441996",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2286065792",
+                    "name": "Navin Goyal"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "a1fa960fdfcc08510d348f7c66028f3d91b497f8",
+            "title": "The Art of Saying No: Contextual Noncompliance in Language Models",
+            "abstract": "Chat-based language models are designed to be helpful, yet they should not comply with every user request. While most existing work primarily focuses on refusal of\"unsafe\"queries, we posit that the scope of noncompliance should be broadened. We introduce a comprehensive taxonomy of contextual noncompliance describing when and how models should not comply with user requests. Our taxonomy spans a wide range of categories including incomplete, unsupported, indeterminate, and humanizing requests (in addition to unsafe requests). To test noncompliance capabilities of language models, we use this taxonomy to develop a new evaluation suite of 1000 noncompliance prompts. We find that most existing models show significantly high compliance rates in certain previously understudied categories with models like GPT-4 incorrectly complying with as many as 30% of requests. To address these gaps, we explore different training strategies using a synthetically-generated training set of requests and expected noncompliant responses. Our experiments demonstrate that while direct finetuning of instruction-tuned models can lead to both over-refusal and a decline in general capabilities, using parameter efficient methods like low rank adapters helps to strike a good balance between appropriate noncompliance and other capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2223951216",
+                    "name": "Faeze Brahman"
+                },
+                {
+                    "authorId": "2308339428",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2697425",
+                    "name": "Pradeep Dasigi"
+                },
+                {
+                    "authorId": "22330666",
+                    "name": "Valentina Pyatkin"
+                },
+                {
+                    "authorId": "3023068",
+                    "name": "Abhilasha Ravichander"
+                },
+                {
+                    "authorId": "2279337376",
+                    "name": "Sarah Wiegreffe"
+                },
+                {
+                    "authorId": "46217681",
+                    "name": "Nouha Dziri"
+                },
+                {
+                    "authorId": "2302810573",
+                    "name": "K. Chandu"
+                },
+                {
+                    "authorId": "2689239",
+                    "name": "Jack Hessel"
+                },
+                {
+                    "authorId": "2258958466",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2292425227",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2259707400",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2264251662",
+                    "name": "Hanna Hajishirzi"
+                }
+            ]
+        },
+        {
+            "paperId": "be7122f7b2db3bce3137519b1f81e79fa57c9eaa",
+            "title": "Eureka: Evaluating and Understanding Large Foundation Models",
+            "abstract": "Rigorous and reproducible evaluation is critical for assessing the state of the art and for guiding scientific advances in Artificial Intelligence. Evaluation is challenging in practice due to several reasons, including benchmark saturation, lack of transparency in methods used for measurement, development challenges in extracting measurements for generative tasks, and, more generally, the extensive number of capabilities required for a well-rounded comparison across models. We make three contributions to alleviate the above challenges. First, we present Eureka, an open-source framework for standardizing evaluations of large foundation models beyond single-score reporting and rankings. Second, we introduce Eureka-Bench as an extensible collection of benchmarks testing capabilities that (i) are still challenging for state-of-the-art models and (ii) represent fundamental but overlooked language and multimodal capabilities. The inherent space for improvement in non-saturated benchmarks enables us to discover meaningful differences between models at a capability level. Third, using Eureka, we conduct an analysis of 12 state-of-the-art models, providing in-depth insights into failure understanding and model comparison, which can be leveraged to plan targeted improvements. In contrast to recent trends in reports and leaderboards showing absolute rankings and claims for one model or another to be the best, our analysis shows that there is no such best model. Different models have different strengths, but there are models that appear more often than others as best performers for some capabilities. Despite the recent improvements, current models still struggle with several fundamental capabilities including detailed image understanding, benefiting from multimodal input when available rather than fully relying on language, factuality and grounding for information retrieval, and over refusals.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2321484904",
+                    "name": "Jingya Chen"
+                },
+                {
+                    "authorId": "2250480908",
+                    "name": "Neel Joshi"
+                },
+                {
+                    "authorId": "2571049",
+                    "name": "Besmira Nushi"
+                },
+                {
+                    "authorId": "2247662718",
+                    "name": "Hamid Palangi"
+                },
+                {
+                    "authorId": "2321455461",
+                    "name": "Eduardo Salinas"
+                },
+                {
+                    "authorId": "143729959",
+                    "name": "Vibhav Vineet"
+                },
+                {
+                    "authorId": "2321455359",
+                    "name": "James Woffinden-Luey"
+                },
+                {
+                    "authorId": "2670023",
+                    "name": "Safoora Yousefi"
+                }
+            ]
+        },
+        {
+            "paperId": "e03648463405a77515c6af6cae4947a029b465ae",
+            "title": "Teaching LLMs to Abstain across Languages via Multilingual Feedback",
+            "abstract": "Multilingual LLMs often have knowledge disparities across languages, with larger gaps in under-resourced languages. Teaching LLMs to abstain in the face of knowledge gaps is thus a promising strategy to mitigate hallucinations in multilingual settings. However, previous studies on LLM abstention primarily focus on English; we find that directly applying existing solutions beyond English results in up to 20.5% performance gaps between high and low-resource languages, potentially due to LLMs' drop in calibration and reasoning beyond a few resource-rich languages. To this end, we propose strategies to enhance LLM abstention by learning from multilingual feedback, where LLMs self-reflect on proposed answers in one language by generating multiple feedback items in related languages: we show that this helps identifying the knowledge gaps across diverse languages, cultures, and communities. Extensive experiments demonstrate that our multilingual feedback approach outperforms various strong baselines, achieving up to 9.2% improvement for low-resource languages across three black-box and open models on three datasets, featuring open-book, closed-book, and commonsense QA. Further analysis reveals that multilingual feedback is both an effective and a more equitable abstain strategy to serve diverse language speakers, and cultural factors have great impact on language selection and LLM abstention behavior, highlighting future directions for multilingual and multi-cultural reliable language modeling.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2254168375",
+                    "name": "Weijia Shi"
+                },
+                {
+                    "authorId": "2108853330",
+                    "name": "Yike Wang"
+                },
+                {
+                    "authorId": "2282214127",
+                    "name": "Wenxuan Ding"
+                },
+                {
+                    "authorId": "1452686038",
+                    "name": "Orevaoghene Ahia"
+                },
+                {
+                    "authorId": "2295954288",
+                    "name": "Shuyue Stella Li"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2256989615",
+                    "name": "Sunayana Sitaram"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "33d944de189d6edf3a510ea195803a381c5a3bab",
+            "title": "Knowledge Crosswords: Geometric Reasoning over Structured Knowledge with Large Language Models",
+            "abstract": "Large language models (LLMs) are widely adopted in knowledge-intensive tasks and have achieved impressive performance thanks to their knowledge abilities. While LLMs have demonstrated outstanding performance on atomic or linear (multi-hop) QA tasks, whether they can reason in knowledge-rich scenarios with interweaving constraints remains an underexplored problem. In this work, we propose geometric reasoning over structured knowledge, where pieces of knowledge are connected in a graph structure and models need to fill in the missing information of this graph. Such geometric knowledge reasoning would require the ability to handle structured knowledge, reason with uncertainty, verify facts, and backtrack when an error occurs. We specifically propose KNOWLEDGE CROSSWORDS, a multi-blank QA dataset where each problem consists of a natural language question representing the geometric constraints of an incomplete entity network, where LLMs are tasked with working out the missing entities while meeting all factual constraints. KNOWLEDGE CROSSWORDS contains 2,101 individual problems, covering a wide array of knowledge domains and further divided into three difficulty levels. We conduct extensive experiments to evaluate existing LLM prompting approaches on the KNOWLEDGE CROSSWORDS benchmark. We additionally propose two new approaches, STAGED PROMPTING and VERIFY-ALL, to augment LLMs\u2019 ability to backtrack and verify structured constraints. Our results demonstrate that while baseline approaches perform well on easier problems but struggle with questions on the hard side, our proposed VERIFY-ALL outperforms other methods by a large margin and is more robust with hard problems. Further analysis reveals that LLMs\u2019 ability of geometric reasoning over structured knowledge is still far from robust or perfect, susceptible to confounders such as the order of options, certain structural patterns, assumption of existence of correct answer, and more. Code and data are publicly available at https://github.com/Wenwen-D/KnowledgeCrosswords.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037491",
+                    "name": "Wenxuan Ding"
+                },
+                {
+                    "authorId": "2114887261",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2169159066",
+                    "name": "Yuhan Liu"
+                },
+                {
+                    "authorId": "2093186816",
+                    "name": "Zhaoxuan Tan"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "3f4ccf64ffe23b5dc095ae0401eecf9445deb024",
+            "title": "Resolving Knowledge Conflicts in Large Language Models",
+            "abstract": "Large language models (LLMs) often encounter knowledge conflicts, scenarios where discrepancy arises between the internal parametric knowledge of LLMs and non-parametric information provided in the prompt context. In this work we ask what are the desiderata for LLMs when a knowledge conflict arises and whether existing LLMs fulfill them. We posit that LLMs should 1) identify knowledge conflicts, 2) pinpoint conflicting information segments, and 3) provide distinct answers or viewpoints in conflicting scenarios. To this end, we introduce KNOWLEDGE CONFLICT, an evaluation framework for simulating contextual knowledge conflicts and quantitatively evaluating to what extent LLMs achieve these goals. KNOWLEDGE CONFLICT includes diverse and complex situations of knowledge conflict, knowledge from diverse entities and domains, two synthetic conflict creation methods, and settings with progressively increasing difficulty to reflect realistic knowledge conflicts. Extensive experiments with the KNOWLEDGE CONFLICT framework reveal that while LLMs perform well in identifying the existence of knowledge conflicts, they struggle to determine the specific conflicting knowledge and produce a response with distinct answers amidst conflicting information. To address these challenges, we propose new instruction-based approaches that augment LLMs to better achieve the three goals. Further analysis shows that abilities to tackle knowledge conflicts are greatly impacted by factors such as knowledge domain and prompt text, while generating robust responses to knowledge conflict scenarios remains an open research question.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108853330",
+                    "name": "Yike Wang"
+                },
+                {
+                    "authorId": "2114887261",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2256778370",
+                    "name": "Heng Wang"
+                },
+                {
+                    "authorId": "2254168375",
+                    "name": "Weijia Shi"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "46add102869a54d9360c21f3721778b29d24e210",
+            "title": "P^3Sum: Preserving Author\u2019s Perspective in News Summarization with Diffusion Language Models",
+            "abstract": "In this work, we take a first step towards designing summarization systems that are faithful to the author\u2019s intent, not only the semantic content of the article. Focusing on a case study of preserving political perspectives in news summarization, we find that existing approaches alter the political opinions and stances of news articles in more than 50% of summaries, misrepresenting the intent and perspectives of the news authors. We thus propose P^3Sum, a diffusion model-based summarization approach controlled by political perspective classifiers. In P^3Sum, the political leaning of a generated summary is iteratively evaluated at each decoding step, and any drift from the article\u2019s original stance incurs a loss back-propagated to the embedding layers, steering the political stance of the summary at inference time. Extensive experiments on three news summarization datasets demonstrate that P^3Sum outperforms state-of-the-art summarization systems and large language models by up to 13.7% in terms of the success rate of stance preservation, with competitive performance on standard metrics of summarization quality. Our findings present a first analysis of preservation of pragmatic features in summarization, highlight the lacunae in existing summarization models\u2014that even state-of-the-art models often struggle to preserve author\u2019s intents\u2014and develop new summarization systems that are more faithful to author\u2019s perspectives.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2169159066",
+                    "name": "Yuhan Liu"
+                },
+                {
+                    "authorId": "2114887261",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "50487261",
+                    "name": "Chan Young Park"
+                },
+                {
+                    "authorId": "51467955",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "2073587169",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        }
+    ]
+}

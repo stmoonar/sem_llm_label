@@ -1,0 +1,333 @@
+{
+    "authorId": "48387349",
+    "papers": [
+        {
+            "paperId": "0bd8e6e489d021dc4c243ac88b8bf1ce460091cd",
+            "title": "FTCM: Frequency-Temporal Collaborative Module for Efficient 3D Human Pose Estimation in Video",
+            "abstract": "Capturing cross-pose correlation from a sequence of frame-level 2D poses is essential for 3D human pose estimation (3D-HPE) in the video. Recent studies have shown the promising potential of modeling the pose relation with feature-mixing operations on the temporal domain. However, they seldom consider the interaction across poses in the frequency domain. This paper studies a Frequency-Temporal Collaborative Module (FTCM) to explore the feasibility of encoding the cross-pose correlations in both frequency and temporal domains. FTCM aims to jointly capture the global and local cross-pose correlations with a more lightweight network model. Specifically, FTCM splits the pose features into two groups along the channel dimension and separately models the frequency and temporal interactions across poses with different feature-mixing operations in parallel. To achieve this goal, we purposely design two pose-mixing units, i.e., the frequency pose-mixing (FPM) and the temporal pose-mixing (TPM). Particularly, FPM is designed to reap the global correlations among different pose frequencies with the representation obtained by converting the original pose signals with Fast Fourier transform (FFT). Unlike the pose-mixing used by previous methods like Transformers that influences an individual pose with all other poses, TPM locally calibrates the pose with dynamics aggregated within several adjacent poses in the temporal domain, explicitly weighting neighboring poses more with respect to the far-away ones so as to enforce a strict locality constraint. Besides, the group strategy significantly reduces the model complexity. To verify the effectiveness of FTCM, we conduct extensive experiments on two benchmarks (i.e., Human3.6M and MPI-INF-3DHP). Experimental results not only exhibit favorable accuracy/complexity trade-offs of our FTCM but also show superior or comparable performance to state-of-the-art methods on both datasets. The code and model are publicly available at: https://github.com/zhenhuat/FTCM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50369266",
+                    "name": "Z. Tang"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "2118373557",
+                    "name": "Jia Li"
+                },
+                {
+                    "authorId": "2075339632",
+                    "name": "Richang Hong"
+                }
+            ]
+        },
+        {
+            "paperId": "32ffb5e528b54f03a8a359e4573e0f3926a1202b",
+            "title": "CgT-GAN: CLIP-guided Text GAN for Image Captioning",
+            "abstract": "The large-scale visual-language pre-trained model, Contrastive Language-Image Pre-training (CLIP), has significantly improved image captioning for scenarios without human-annotated image-caption pairs. Recent advanced CLIP-based image captioning without human annotations follows a text-only training paradigm, i.e., reconstructing text from shared embedding space. Nevertheless, these approaches are limited by the training/inference gap or huge storage requirements for text embeddings. Given that it is trivial to obtain images in the real world, we propose CLIP-guided text GAN (CgT-GAN), which incorporates images into the training process to enable the model to \"see\" real visual modality. Particularly, we use adversarial training to teach CgT-GAN to mimic the phrases of an external text corpus and CLIP-based reward to provide semantic guidance. The caption generator is jointly rewarded based on the caption naturalness to human language calculated from the GAN's discriminator and the semantic guidance reward computed by the CLIP-based reward module. In addition to the cosine similarity as the semantic guidance reward (i.e., CLIP-cos), we further introduce a novel semantic guidance reward called CLIP-agg, which aligns the generated caption with a weighted text embedding by attentively aggregating the entire corpus. Experimental results on three subtasks (ZS-IC, In-UIC and Cross-UIC) show that CgT-GAN outperforms state-of-the-art methods significantly across all metrics. Code is available at https://github.com/Lihr747/CgtGAN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7177756",
+                    "name": "Jiarui Yu"
+                },
+                {
+                    "authorId": "2145539796",
+                    "name": "Haoran Li"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "2148822529",
+                    "name": "Tong Xu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "3c6039ad98de9a640c96ccfe3b3d66bb0580db63",
+            "title": "Bi-Directional Distribution Alignment for Transductive Zero-Shot Learning",
+            "abstract": "Zero-shot learning (ZSL) suffers intensely from the domain shift issue, i.e., the mismatch (or misalignment) between the true and learned data distributions for classes without training data (unseen classes). By learning additionally from unlabelled data collected for the unseen classes, transductive ZSL (TZSL) could reduce the shift but only to a certain extent. To improve TZSL, we propose a novel approach Bi-VAEGAN which strengthens the distribution alignment between the visual space and an auxiliary space. As a result, it can reduce largely the domain shift. The proposed key designs include (1) a bi-directional distribution alignment, (2) a simple but effective L2-norm based feature normalization approach, and (3) a more sophisticated unseen class prior estimation. Evaluated by four benchmark datasets, Bi-VAEGAN11Code is available at https://github.com/Zhicaiwww/Bi-VAEGAN achieves the new state of the art under both the standard and generalized TZSL settings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2177238211",
+                    "name": "Zhicai Wang"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "47279171",
+                    "name": "Tingting Mu"
+                },
+                {
+                    "authorId": "2211602955",
+                    "name": "Ouxiang Li"
+                },
+                {
+                    "authorId": "2117011312",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "842e74e2edde2b6f01e6173df20dd1426fd437e0",
+            "title": "MLP-JCG: Multi-Layer Perceptron With Joint-Coordinate Gating for Efficient 3D Human Pose Estimation",
+            "abstract": "Various structural relations/dependencies exist among human body joints, which makes it possible to estimate 3D poses from 2D sources. The current research on 3D human pose estimation (3D-HPE for short) mainly focuses on structural information from a specific perspective. However, this information cannot facilitate 2D-to-3D pose lifting. This paper presents a novel and efficient multi-layer perceptron with a joint-coordinate gating (MLP-JCG) model, exploring and utilizing both the local and global structural information to perform 3D pose estimations. Specifically, MLP-JCG contains two independent MLP blocks, i.e., joint-mixing MLP and coordinate-mixing MLP, which solely act on the joint and coordinate axes in modelling their local structural information. For the global structural information, we first explore two kinds of global statistics from the pose matrix embeddings, which are referred to as the dynamics aggregated along the joint/coordinate axis. Then, we propose two kinds of gating units to elementwisely contextualize the features learned from MLP blocks. All the model components are designed based on MLP, making the MLP-JCG easy to implement and train. We conduct experiments on three 3D-HPE benchmarks, and the results demonstrate the superior effectiveness and efficiency of the proposed approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50369266",
+                    "name": "Z. Tang"
+                },
+                {
+                    "authorId": "9073063",
+                    "name": "Jia Li"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "2075339632",
+                    "name": "Richang Hong"
+                }
+            ]
+        },
+        {
+            "paperId": "8931ae9eef5df0ea6fcbde018f73452b9a8f29d6",
+            "title": "TKN: Transformer-based Keypoint Prediction Network For Real-time Video Prediction",
+            "abstract": "Video prediction is a complex time-series forecasting task with great potential in many use cases. However, conventional methods overemphasize accuracy while ignoring the slow prediction speed caused by complicated model structures that learn too much redundant information with excessive GPU memory consumption. Furthermore, conventional methods mostly predict frames sequentially (frame-by-frame) and thus are hard to accelerate. Consequently, valuable use cases such as real-time danger prediction and warning cannot achieve fast enough inference speed to be applicable in reality. Therefore, we propose a transformer-based keypoint prediction neural network (TKN), an unsupervised learning method that boost the prediction process via constrained information extraction and parallel prediction scheme. TKN is the first real-time video prediction solution to our best knowledge, while significantly reducing computation costs and maintaining other performance. Extensive experiments on KTH and Human3.6 datasets demonstrate that TKN predicts 11 times faster than existing methods while reducing memory consumption by 17.4% and achieving state-of-the-art prediction performance on average.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145539796",
+                    "name": "Haoran Li"
+                },
+                {
+                    "authorId": "72050450",
+                    "name": "Pengyuan Zhou"
+                },
+                {
+                    "authorId": "46393904",
+                    "name": "Yi-Wen Lin"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "145071284",
+                    "name": "Haiyong Xie"
+                },
+                {
+                    "authorId": "2114120921",
+                    "name": "Yong Liao"
+                }
+            ]
+        },
+        {
+            "paperId": "8de53b261b0617aa8ca8c28134f0d4264ef0a5f1",
+            "title": "Masked Collaborative Contrast for Weakly Supervised Semantic Segmentation",
+            "abstract": "This study introduces an efficacious approach, Masked Collaborative Contrast (MCC), to highlight semantic regions in weakly supervised semantic segmentation. MCC adroitly draws inspiration from masked image modeling and contrastive learning to devise a novel framework that induces keys to contract toward semantic regions. Unlike prevalent techniques that directly eradicate patch regions in the input image when generating masks, we scrutinize the neighborhood relations of patch tokens by exploring masks considering keys on the affinity matrix. Moreover, we generate positive and negative samples in contrastive learning by utilizing the masked local output and contrasting it with the global output. Elaborate experiments on commonly employed datasets evidences that the proposed MCC mechanism effectively aligns global and local perspectives within the image, attaining impressive performance. The source code is available at https://github.com/fwu11/MCC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2217939866",
+                    "name": "Fangwen Wu"
+                },
+                {
+                    "authorId": "8516542",
+                    "name": "Jingxuan He"
+                },
+                {
+                    "authorId": "26953623",
+                    "name": "Lechao Cheng"
+                },
+                {
+                    "authorId": "2109472920",
+                    "name": "Yufei Yin"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "144513600",
+                    "name": "Gang Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "92d61a05d76cc859c073e57eedbd82186aecdaff",
+            "title": "3D Human Pose Estimation with Spatio-Temporal Criss-Cross Attention",
+            "abstract": "Recent transformer-based solutions have shown great success in 3D human pose estimation. Nevertheless, to calculate the joint-to-joint affinity matrix, the computational cost has a quadratic growth with the increasing number of joints. Such drawback becomes even worse especially for pose estimation in a video sequence, which necessitates spatio-temporal correlation spanning over the entire video. In this paper, we facilitate the issue by decomposing correlation learning into space and time, and present a novel Spatio-Temporal Criss-cross attention (STC) block. Technically, STC first slices its input feature into two partitions evenly along the channel dimension, followed by performing spatial and temporal attention respectively on each partition. STC then models the interactions between joints in an identical frame and joints in an identical trajectory simultaneously by concatenating the outputs from attention layers. On this basis, we devise STCFormer by stacking multiple STC blocks and further integrate a new Structure-enhanced Positional Embedding (SPE) into STCFormer to take the structure of human body into consideration. The embedding function consists of two components: spatio-temporal convolution around neighboring joints to capture local structure, and part-aware embedding to indicate which part each joint belongs to. Extensive experiments are conducted on Human3.6M and MPI-INF-3DHP benchmarks, and superior results are reported when comparing to the state-of-the-art approaches. More remarkably, STCFormer achieves to-date the best published performance: 40.5mm P1 error on the challenging Human3.6M dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50369266",
+                    "name": "Z. Tang"
+                },
+                {
+                    "authorId": "3430743",
+                    "name": "Zhaofan Qiu"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "48043335",
+                    "name": "Richang Hong"
+                },
+                {
+                    "authorId": "145690248",
+                    "name": "Ting Yao"
+                }
+            ]
+        },
+        {
+            "paperId": "a46a95c2fcee57acb24764701a57386e6ffcbd0c",
+            "title": "Semantic-based Selection, Synthesis, and Supervision for Few-shot Learning",
+            "abstract": "Few-shot learning (FSL) is designed to explore the distribution of novel categories from a few samples. It is a challenging task since the classifier is usually susceptible to over-fitting when learning from limited training samples. To alleviate this phenomenon, a common solution is to achieve more training samples using a generic generation strategy in visual space. However, there are some limitations to this solution. It is because a feature extractor trained on base samples (known knowledge) tends to focus on the textures and structures of the objects it learns, which is inadequate for describing novel samples. To solve these issues, we introduce semantics and propose a Semantic-based Selection, Synthesis, and S upervision (4S) method, where semantics provide more diverse and informative supervision for recognizing novel objects. Specifically, we first utilize semantic knowledge to explore the correlation of categories in the textual space and select base categories related to the given novel category. This process can improve the efficiency of subsequent operations (synthesis and supervision). Then, we analyze the semantic knowledge to hallucinate the training samples by selectively synthesizing the contents from base and support samples. This operation not only increases the number of training samples but also takes advantage of the contents of the base categories to enhance the description of support samples. Finally, we also employ semantic knowledge as both soft and hard supervision to enrich the supervision for the fine-tuning procedure. Empirical studies on four FSL benchmarks demonstrate the effectiveness of 4S.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261779922",
+                    "name": "Jinda Lu"
+                },
+                {
+                    "authorId": "2117011312",
+                    "name": "Shuo Wang"
+                },
+                {
+                    "authorId": "2261900881",
+                    "name": "Xinyu Zhang"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "2243911026",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "ad8d95fec46cd229154bc7440b45b1bf0150e92f",
+            "title": "Selective Volume Mixup for Video Action Recognition",
+            "abstract": "The recent advances in Convolutional Neural Networks (CNNs) and Vision Transformers have convincingly demonstrated high learning capability for video action recognition on large datasets. Nevertheless, deep models often suffer from the overfitting effect on small-scale datasets with a limited number of training videos. A common solution is to exploit the existing image augmentation strategies for each frame individually including Mixup, Cutmix, and RandAugment, which are not particularly optimized for video data. In this paper, we propose a novel video augmentation strategy named Selective Volume Mixup (SV-Mix) to improve the generalization ability of deep models with limited training videos. SV-Mix devises a learnable selective module to choose the most informative volumes from two videos and mixes the volumes up to achieve a new training video. Technically, we propose two new modules, i.e., a spatial selective module to select the local patches for each spatial position, and a temporal selective module to mix the entire frames for each timestamp and maintain the spatial pattern. At each time, we randomly choose one of the two modules to expand the diversity of training samples. The selective modules are jointly optimized with the video action recognition framework to find the optimal augmentation strategy. We empirically demonstrate the merits of the SV-Mix augmentation on a wide range of video action recognition benchmarks and consistently boot the performances of both CNN-based and transformer-based models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187450163",
+                    "name": "Yi Tan"
+                },
+                {
+                    "authorId": "3430743",
+                    "name": "Zhaofan Qiu"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "145690248",
+                    "name": "Ting Yao"
+                },
+                {
+                    "authorId": "2243911026",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2070183551",
+                    "name": "Tao Mei"
+                }
+            ]
+        },
+        {
+            "paperId": "2da4666811d0095ab0a71e01e238277a1d908c02",
+            "title": "Unified QA-aware Knowledge Graph Generation Based on Multi-modal Modeling",
+            "abstract": "Understanding the long duration videos' storyline is often considered a major challenge in the field of video understanding. To promote research on understanding longer videos in the community, the deep video understanding (DVU) task is suggested for recognizing interactions at the scene level and relationships at the movie level, as well as answering questions at these two levels. In this work, we propose a unified QA-aware knowledge graph generation approach, which consists of the relation-centric graph and interaction-centric graph and demonstrates the powerful performance of multimodal pre-training models in solving such problems. Extensive validations on the HLVU dataset demonstrate the effectiveness of our proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047997844",
+                    "name": "Penggang Qin"
+                },
+                {
+                    "authorId": "7177756",
+                    "name": "Jiarui Yu"
+                },
+                {
+                    "authorId": "2145971294",
+                    "name": "Yan Gao"
+                },
+                {
+                    "authorId": "2187417059",
+                    "name": "Derong Xu"
+                },
+                {
+                    "authorId": "2155905435",
+                    "name": "Yunkai Chen"
+                },
+                {
+                    "authorId": "2142349315",
+                    "name": "Shiwei Wu"
+                },
+                {
+                    "authorId": "50383766",
+                    "name": "Tong Xu"
+                },
+                {
+                    "authorId": "2173129111",
+                    "name": "Enhong Chen"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                }
+            ]
+        }
+    ]
+}

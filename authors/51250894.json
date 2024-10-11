@@ -1,0 +1,309 @@
+{
+    "authorId": "51250894",
+    "papers": [
+        {
+            "paperId": "24ab6356b355b29a3770db56dd1f2200cdd987fa",
+            "title": "Salient Span Masking for Temporal Understanding",
+            "abstract": "Salient Span Masking (SSM) has shown itself to be an effective strategy to improve closed-book question answering performance. SSM extends general masked language model pretraining by creating additional unsupervised training sentences that mask a single entity or date span, thus oversampling factual information.Despite the success of this paradigm, the span types and sampling strategies are relatively arbitrary and not widely studied for other tasks. Thus, we investigate SSM from the perspective of temporal tasks, where learning a good representation of various temporal expressions is important. To that end, we introduce Temporal Span Masking (TSM) intermediate training.First, we find that SSM alone improves the downstream performance on three temporal tasks by an avg. +5.8 points. Further, we are able to achieve additional improvements (avg. +0.29 points) by adding the TSM task. These comprise the new best reported results on the targeted tasks. Our analysis suggests that the effectiveness of SSM stems from the sentences chosen in the training data rather than the mask choice: sentences with entities frequently also contain temporal expressions. Nonetheless, the additional targeted spans of TSM can still improve performance, especially in a zero-shot context.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "30859623",
+                    "name": "Jeremy R. Cole"
+                },
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "2060730422",
+                    "name": "Bhuwan Dhingra"
+                },
+                {
+                    "authorId": "2408872",
+                    "name": "P. Talukdar"
+                }
+            ]
+        },
+        {
+            "paperId": "a7061972df06bf98d9f706e40940dde31d5cd10d",
+            "title": "Exploring the Viability of Synthetic Query Generation for Relevance Prediction",
+            "abstract": "Query-document relevance prediction is a critical problem in Information Retrieval systems. This problem has increasingly been tackled using (pretrained) transformer-based models which are finetuned using large collections of labeled data. However, in specialized domains such as e-commerce and healthcare, the viability of this approach is limited by the dearth of large in-domain data. To address this paucity, recent methods leverage these powerful models to generate high-quality task and domain-specific synthetic data. Prior work has largely explored synthetic data generation or query generation (QGen) for Question-Answering (QA) and binary (yes/no) relevance prediction, where for instance, the QGen models are given a document, and trained to generate a query relevant to that document. However in many problems, we have a more fine-grained notion of relevance than a simple yes/no label. Thus, in this work, we conduct a detailed study into how QGen approaches can be leveraged for nuanced relevance prediction. We demonstrate that -- contrary to claims from prior works -- current QGen approaches fall short of the more conventional cross-domain transfer-learning approaches. Via empirical studies spanning 3 public e-commerce benchmarks, we identify new shortcomings of existing QGen approaches -- including their inability to distinguish between different grades of relevance. To address this, we introduce label-conditioned QGen models which incorporates knowledge about the different relevance. While our experiments demonstrate that these modifications help improve performance of QGen techniques, we also find that QGen approaches struggle to capture the full nuance of the relevance label space and as a result the generated queries are not faithful to the desired relevance label.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "2062947723",
+                    "name": "K. Raman"
+                },
+                {
+                    "authorId": "1391084712",
+                    "name": "Krishna Srinivasan"
+                },
+                {
+                    "authorId": "20851195",
+                    "name": "Kazuma Hashimoto"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                },
+                {
+                    "authorId": "1398342639",
+                    "name": "Marc Najork"
+                }
+            ]
+        },
+        {
+            "paperId": "c04cad3c37697a23682019e78975ed1b4eacac2d",
+            "title": "Ambiguity-Aware In-Context Learning with Large Language Models",
+            "abstract": "In-context learning (ICL) i.e. showing LLMs only a few task-specific demonstrations has led to downstream gains with no task-specific fine-tuning required. However, LLMs are sensitive to the choice of prompts, and therefore a crucial research question is how to select good demonstrations for ICL. One effective strategy is leveraging semantic similarity between the ICL demonstrations and test inputs by using a text retriever, which however is sub-optimal as that does not consider the LLM's existing knowledge about that task. From prior work (Lyu et al., 2023), we already know that labels paired with the demonstrations bias the model predictions. This leads us to our hypothesis whether considering LLM's existing knowledge about the task, especially with respect to the output label space can help in a better demonstration selection strategy. Through extensive experimentation on three text classification tasks, we find that it is beneficial to not only choose semantically similar ICL demonstrations but also to choose those demonstrations that help resolve the inherent label ambiguity surrounding the test example. Interestingly, we find that including demonstrations that the LLM previously mis-classified and also fall on the test example's decision boundary, brings the most performance gain.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "13382973",
+                    "name": "Lingyu Gao"
+                },
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "1391084712",
+                    "name": "Krishna Srinivasan"
+                },
+                {
+                    "authorId": "2240536041",
+                    "name": "Kazuma Hashimoto"
+                },
+                {
+                    "authorId": "2062947723",
+                    "name": "K. Raman"
+                },
+                {
+                    "authorId": "2240516450",
+                    "name": "Michael Bendersky"
+                }
+            ]
+        },
+        {
+            "paperId": "46b1616ff969c9e9c0b768ee37720156dfe4aa37",
+            "title": "Teacher Perception of Automatically Extracted Grammar Concepts for L2 Language Learning",
+            "abstract": "One of the challenges in language teaching is how best to organize rules regarding syntax, semantics, or phonology in a meaningful manner. This not only requires content creators to have pedagogical skills, but also have that language's deep understanding. While comprehensive materials to develop such curricula are available in English and some broadly spoken languages, for many other languages, teachers need to manually create them in response to their students' needs. This is challenging because i) it requires that such experts be accessible and have the necessary resources, and ii) describing all the intricacies of a language is time-consuming and prone to omission. In this work, we aim to facilitate this process by automatically discovering and visualizing grammar descriptions. We extract descriptions from a natural text corpus that answer questions about morphosyntax (learning of word order, agreement, case marking, or word formation) and semantics (learning of vocabulary). We apply this method for teaching two Indian languages, Kannada and Marathi, which, unlike English, do not have well-developed resources for second language learning. To assess the perceived utility of the extracted material, we enlist the help of language educators from schools in North America to perform a manual evaluation, who find the materials have potential to be used for their lesson preparation and learner evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "2169938055",
+                    "name": "Arun Sampath"
+                },
+                {
+                    "authorId": "2322095469",
+                    "name": "Ashwin Sheshadri"
+                },
+                {
+                    "authorId": "49513989",
+                    "name": "Antonios Anastasopoulos"
+                },
+                {
+                    "authorId": "1700325",
+                    "name": "Graham Neubig"
+                }
+            ]
+        },
+        {
+            "paperId": "9b534639bcadc9ad232b338e760c523a4d74c8de",
+            "title": "AUTOLEX: An Automatic Framework for Linguistic Exploration",
+            "abstract": "Each language has its own complex systems of word, phrase, and sentence construction, the guiding principles of which are often summarized in grammar descriptions for the consumption of linguists or language learners. However, manual creation of such descriptions is a fraught process, as creating descriptions which describe the language in\"its own terms\"without bias or error requires both a deep understanding of the language at hand and linguistics as a whole. We propose an automatic framework AutoLEX that aims to ease linguists' discovery and extraction of concise descriptions of linguistic phenomena. Specifically, we apply this framework to extract descriptions for three phenomena: morphological agreement, case marking, and word order, across several languages. We evaluate the descriptions with the help of language experts and propose a method for automated evaluation when human evaluation is infeasible.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "38599655",
+                    "name": "Zaid A. W. Sheikh"
+                },
+                {
+                    "authorId": "3407646",
+                    "name": "David R. Mortensen"
+                },
+                {
+                    "authorId": "49513989",
+                    "name": "Antonios Anastasopoulos"
+                },
+                {
+                    "authorId": "1700325",
+                    "name": "Graham Neubig"
+                }
+            ]
+        },
+        {
+            "paperId": "72d89aa7cd77c3f22a667f2b0707758eb8d52a7a",
+            "title": "Do Context-Aware Translation Models Pay the Right Attention?",
+            "abstract": "Context-aware machine translation models are designed to leverage contextual information, but often fail to do so. As a result, they inaccurately disambiguate pronouns and polysemous words that require context for resolution. In this paper, we ask several questions: What contexts do human translators use to resolve ambiguous words? Are models paying large amounts of attention to the same context? What if we explicitly train them to do so? To answer these questions, we introduce SCAT (Supporting Context for Ambiguous Translations), a new English-French dataset comprising supporting context words for 14K translations that professional translators found useful for pronoun disambiguation. Using SCAT, we perform an in-depth analysis of the context used to disambiguate, examining positional and lexical characteristics of the supporting words. Furthermore, we measure the degree of alignment between the model\u2019s attention scores and the supporting context from SCAT, and apply a guided attention strategy to encourage agreement between the two.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1602993448",
+                    "name": "Kayo Yin"
+                },
+                {
+                    "authorId": "2058640028",
+                    "name": "Patrick Fernandes"
+                },
+                {
+                    "authorId": "2064506371",
+                    "name": "Danish Pruthi"
+                },
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "145644643",
+                    "name": "Andr\u00e9 F. T. Martins"
+                },
+                {
+                    "authorId": "1700325",
+                    "name": "Graham Neubig"
+                }
+            ]
+        },
+        {
+            "paperId": "8b20173b98914f36302389e4c761c334fe867dcd",
+            "title": "Evaluating the Morphosyntactic Well-formedness of Generated Texts",
+            "abstract": "Text generation systems are ubiquitous in natural language processing applications. However, evaluation of these systems remains a challenge, especially in multilingual settings. In this paper, we propose L\u2019AMBRE \u2013 a metric to evaluate the morphosyntactic well-formedness of text using its dependency parse and morphosyntactic rules of the language. We present a way to automatically extract various rules governing morphosyntax directly from dependency treebanks. To tackle the noisy outputs from text generation systems, we propose a simple methodology to train robust parsers. We show the effectiveness of our metric on the task of machine translation through a diachronic study of systems translating into morphologically-rich languages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51132476",
+                    "name": "Adithya Pratapa"
+                },
+                {
+                    "authorId": "49513989",
+                    "name": "Antonios Anastasopoulos"
+                },
+                {
+                    "authorId": "7391530",
+                    "name": "Shruti Rijhwani"
+                },
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "3407646",
+                    "name": "David R. Mortensen"
+                },
+                {
+                    "authorId": "1700325",
+                    "name": "Graham Neubig"
+                },
+                {
+                    "authorId": "145317727",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "d06493373421c86ba33dbb8834ccb725105a665f",
+            "title": "When is Wall a Pared and when a Muro?: Extracting Rules Governing Lexical Selection",
+            "abstract": "Learning fine-grained distinctions between vocabulary items is a key challenge in learning a new language. For example, the noun \u201cwall\u201d has different lexical manifestations in Spanish \u2013 \u201cpared\u201d refers to an indoor wall while \u201cmuro\u201d refers to an outside wall. However, this variety of lexical distinction may not be obvious to non-native learners unless the distinction is explained in such a way. In this work, we present a method for automatically identifying fine-grained lexical distinctions, and extracting rules explaining these distinctions in a human- and machine-readable format. We confirm the quality of these extracted rules in a language learning setup for two languages, Spanish and Greek, where we use the rules to teach non-native speakers when to translate a given ambiguous word into its different possible translations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "1602993448",
+                    "name": "Kayo Yin"
+                },
+                {
+                    "authorId": "49513989",
+                    "name": "Antonios Anastasopoulos"
+                },
+                {
+                    "authorId": "1700325",
+                    "name": "Graham Neubig"
+                }
+            ]
+        },
+        {
+            "paperId": "10efdde1ae3a9d359ac1aae0bd5ef7bfd68810dd",
+            "title": "DICT-MLM: Improved Multilingual Pre-Training using Bilingual Dictionaries",
+            "abstract": "Pre-trained multilingual language models such as mBERT have shown immense gains for several natural language processing (NLP) tasks, especially in the zero-shot cross-lingual setting. Most, if not all, of these pre-trained models rely on the masked-language modeling (MLM) objective as the key language learning objective. The principle behind these approaches is that predicting the masked words with the help of the surrounding text helps learn potent contextualized representations. Despite the strong representation learning capability enabled by MLM, we demonstrate an inherent limitation of MLM for multilingual representation learning. In particular, by requiring the model to predict the language-specific token, the MLM objective disincentivizes learning a language-agnostic representation -- which is a key goal of multilingual pre-training. Therefore to encourage better cross-lingual representation learning we propose the DICT-MLM method. DICT-MLM works by incentivizing the model to be able to predict not just the original masked word, but potentially any of its cross-lingual synonyms as well. Our empirical analysis on multiple downstream tasks spanning 30+ languages, demonstrates the efficacy of the proposed approach and its ability to learn better multilingual representations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                },
+                {
+                    "authorId": "2062947723",
+                    "name": "K. Raman"
+                },
+                {
+                    "authorId": "1391084712",
+                    "name": "Krishna Srinivasan"
+                },
+                {
+                    "authorId": "2809410",
+                    "name": "Jiecao Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "1263e36598dd95cc4becf0e18398f832bb5cf337",
+            "title": "Exploring Neural Architectures And Techniques For Typologically Diverse Morphological Inflection",
+            "abstract": "Morphological inflection in low resource languages is critical to augment existing corpora in Low Resource Languages, which can help develop several applications in these languages with very good social impact. We describe our attention-based encoder-decoder approach that we implement using LSTMs and Transformers as the base units. We also describe the ancillary techniques that we experimented with, such as hallucination, language vector injection, sparsemax loss and adversarial language network alongside our approach to select the related language(s) for training. We present the results we generated on the constrained as well as unconstrained SIGMORPHON 2020 dataset (CITATION). One of the primary goals of our paper was to study the contribution varied components described above towards the performance of our system and perform an analysis on the same.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "52165322",
+                    "name": "P. Jayarao"
+                },
+                {
+                    "authorId": "2059298670",
+                    "name": "Siddhanth Pillay"
+                },
+                {
+                    "authorId": "87208176",
+                    "name": "P. Thombre"
+                },
+                {
+                    "authorId": "51250894",
+                    "name": "Aditi Chaudhary"
+                }
+            ]
+        }
+    ]
+}

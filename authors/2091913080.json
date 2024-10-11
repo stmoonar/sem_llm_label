@@ -1,0 +1,662 @@
+{
+    "authorId": "2091913080",
+    "papers": [
+        {
+            "paperId": "14fc27f151a12e141e8cc84da050e64b8d90eb56",
+            "title": "CoDeC: Communication-Efficient Decentralized Continual Learning",
+            "abstract": "Training at the edge utilizes continuously evolving data generated at different locations. Privacy concerns prohibit the co-location of this spatially as well as temporally distributed data, deeming it crucial to design training algorithms that enable efficient continual learning over decentralized private data. Decentralized learning allows serverless training with spatially distributed data. A fundamental barrier in such distributed learning is the high bandwidth cost of communicating model updates between agents. Moreover, existing works under this training paradigm are not inherently suitable for learning a temporal sequence of tasks while retaining the previously acquired knowledge. In this work, we propose CoDeC, a novel communication-efficient decentralized continual learning algorithm which addresses these challenges. We mitigate catastrophic forgetting while learning a task sequence in a decentralized learning setup by combining orthogonal gradient projection with gossip averaging across decentralized agents. Further, CoDeC includes a novel lossless communication compression scheme based on the gradient subspaces. We express layer-wise gradients as a linear combination of the basis vectors of these gradient subspaces and communicate the associated coefficients. We theoretically analyze the convergence rate for our algorithm and demonstrate through an extensive set of experiments that CoDeC successfully learns distributed continual tasks with minimal forgetting. The proposed compression scheme results in up to 4.8x reduction in communication costs with iso-performance as the full communication baseline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2212559688",
+                    "name": "Sakshi Choudhary"
+                },
+                {
+                    "authorId": "40879516",
+                    "name": "Sai Aparna Aketi"
+                },
+                {
+                    "authorId": "145638130",
+                    "name": "Gobinda Saha"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "1f49e67f06efe21aa524f02048dac706d7678b34",
+            "title": "L3DMC: Lifelong Learning using Distillation via Mixed-Curvature Space",
+            "abstract": "The performance of a lifelong learning (L3) model degrades when it is trained on a series of tasks, as the geometrical formation of the embedding space changes while learning novel concepts sequentially. The majority of existing L3 approaches operate on a fixed-curvature (e.g., zero-curvature Euclidean) space that is not necessarily suitable for modeling the complex geometric structure of data. Furthermore, the distillation strategies apply constraints directly on low-dimensional embeddings, discouraging the L3 model from learning new concepts by making the model highly stable. To address the problem, we propose a distillation strategy named L3DMC that operates on mixed-curvature spaces to preserve the already-learned knowledge by modeling and maintaining complex geometrical structures. We propose to embed the projected low dimensional embedding of fixed-curvature spaces (Euclidean and hyperbolic) to higher-dimensional Reproducing Kernel Hilbert Space (RKHS) using a positive-definite kernel function to attain rich representation. Afterward, we optimize the L3 model by minimizing the discrepancies between the new sample representation and the subspace constructed using the old representation in RKHS. L3DMC is capable of adapting new knowledge better without forgetting old knowledge as it combines the representation power of multiple fixed-curvature spaces and is performed on higher-dimensional RKHS. Thorough experiments on three benchmarks demonstrate the effectiveness of our proposed distillation strategy for medical image classification in L3 settings. Our code implementation is publicly available at https://github.com/csiro-robotics/L3DMC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                }
+            ]
+        },
+        {
+            "paperId": "360e4cbd79690f75756900dcb4818cf177071995",
+            "title": "Knowledge Graph Guided Semantic Evaluation of Language Models For User Trust",
+            "abstract": "A fundamental question in natural language processing is - what kind of language structure and semantics is the language model capturing? Graph formats such as knowledge graphs are easy to evaluate as they explicitly express language semantics and structure. This study evaluates the semantics encoded in the self-attention transformers by leveraging explicit knowledge graph structures. We propose novel metrics to measure the reconstruction error when providing graph path sequences from a knowledge graph and trying to reproduce/reconstruct the same from the outputs of the self-attention transformer models. The opacity of language models has an immense bearing on societal issues of trust and explainable decision outcomes. Our findings suggest that language models are models of stochastic control processes for plausible language pattern generation. However, they do not ascribe object and concept-level meaning and semantics to the learned stochastic patterns such as those described in knowledge graphs. This has significant application-level user trust implications as stochastic patterns without a strong sense of meaning cannot be trusted in high-stakes applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "2066796687",
+                    "name": "Tarun Garg"
+                },
+                {
+                    "authorId": "2216605916",
+                    "name": "Vedant Palit"
+                },
+                {
+                    "authorId": "2187301061",
+                    "name": "Yuxin Zi"
+                },
+                {
+                    "authorId": "2068096390",
+                    "name": "Vignesh Narayanan"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                }
+            ]
+        },
+        {
+            "paperId": "42f3552410e51045c14f9a1834d97880a53bbb58",
+            "title": "Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes",
+            "abstract": "As people become more aware of their food choices, food computation models have become increasingly popular in assisting people in maintaining healthy eating habits. For example, food recommendation systems analyze recipe instructions to assess nutritional contents and provide recipe recommendations. The recent and remarkable successes of generative AI methods, such as auto-regressive Large Language Models, can enable robust methods for a more comprehensive understanding of recipes for healthy food recommendations beyond surface-level nutrition content assessments. In this study, we investigate the use of generative AI methods to extend current food computation models, primarily involving the analysis of nutrition and ingredients, to also incorporate cooking actions (e.g., add salt, fry the meat, boil the vegetables, etc.), Cooking actions are notoriously hard to model using statistical learning methods due to irregular data patterns - significantly varying natural language descriptions for the same action (e.g., marinate the meat vs. marinate the meat and leave overnight) and infrequently occurring patterns (e.g., add salt occurs far more frequently than marinating the meat). The prototypical approach to handling irregular data patterns is to increase the volume of data that the model ingests by orders of magnitude. Unfortunately, in the cooking domain, these problems are further compounded with larger data volumes presenting a unique challenge that is not easily handled by simply scaling up. In this work, we propose novel aggregation-based generative AI methods, Cook-Gen, that reliably generate cooking actions from recipes, despite difficulties with irregular data patterns, while also outperforming Large Language Models and other strong baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51180669",
+                    "name": "R. Venkataramanan"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "2214695852",
+                    "name": "Kanak Raj"
+                },
+                {
+                    "authorId": "35029095",
+                    "name": "Renjith Prasad"
+                },
+                {
+                    "authorId": "2187301061",
+                    "name": "Yuxin Zi"
+                },
+                {
+                    "authorId": "2068096390",
+                    "name": "Vignesh Narayanan"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                }
+            ]
+        },
+        {
+            "paperId": "43c05d2046d74a9536971a6f86b55420d214576e",
+            "title": "L3 Ensembles: Lifelong Learning Approach for Ensemble of Foundational Language Models\u2731",
+            "abstract": "Fine-tuning pre-trained foundational language models (FLM) for specific tasks is often impractical, especially for resource-constrained devices. This necessitates the development of a Lifelong Learning (L3) framework that continuously adapts to a stream of Natural Language Processing (NLP) tasks efficiently. We propose an approach that focuses on extracting meaningful representations from unseen data, constructing a structured knowledge base, and improving task performance incrementally. We conducted experiments on various NLP tasks to validate its effectiveness, including benchmarks like GLUE and SuperGLUE. We measured good performance across the accuracy, training efficiency, and knowledge transfer metrics. Initial experimental results show that the proposed L3 ensemble method increases the model accuracy 4% \u223c 36% compared to the fine-tuned FLM. Furthermore, L3 model outperforms naive fine-tuning approaches while maintaining competitive or superior performance (up to 15.4% increase in accuracy) compared to the state-of-the-art language model (T5) for the given task, STS benchmark.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151484341",
+                    "name": "Aidin Shiri"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                },
+                {
+                    "authorId": "1491238594",
+                    "name": "Manas Gaur"
+                }
+            ]
+        },
+        {
+            "paperId": "52251970e022c47f3cdea57d5a1d1aef4bce4366",
+            "title": "FEDORA: Flying Event Dataset fOr Reactive behAvior",
+            "abstract": "The ability of resource-constrained biological systems such as fruitflies to perform complex and high-speed maneuvers in cluttered environments has been one of the prime sources of inspiration for developing vision-based autonomous systems. To emulate this capability, the perception pipeline of such systems must integrate information cues from tasks including optical flow and depth estimation, object detection and tracking, and segmentation, among others. However, the conventional approach of employing slow, synchronous inputs from standard frame-based cameras constrains these perception capabilities, particularly during high-speed maneuvers. Recently, event-based sensors have emerged as low latency and low energy alternatives to standard frame-based cameras for capturing high-speed motion, effectively speeding up perception and hence navigation. For coherence, all the perception tasks must be trained on the same input data. However, present-day datasets are curated mainly for a single or a handful of tasks and are limited in the rate of the provided ground truths. To address these limitations, we present Flying Event Dataset fOr Reactive behAviour (FEDORA) - a fully synthetic dataset for perception tasks, with raw data from frame-based cameras, event-based cameras, and Inertial Measurement Units (IMU), along with ground truths for depth, pose, and optical flow at a rate much higher than existing datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Amogh Joshi"
+                },
+                {
+                    "authorId": "34892704",
+                    "name": "A. Kosta"
+                },
+                {
+                    "authorId": "10715322",
+                    "name": "Wachirawit Ponghiran"
+                },
+                {
+                    "authorId": "153839324",
+                    "name": "M. Nagaraj"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "5f2ffecd734106f061dec51f6600dcec5b9a404f",
+            "title": "Fairness in Visual Clustering: A Novel Transformer Clustering Approach",
+            "abstract": "Promoting fairness for deep clustering models in unsupervised clustering settings to reduce demographic bias is a challenging goal. This is because of the limitation of large-scale balanced data with well-annotated labels for sensitive or protected attributes. In this paper, we first evaluate demographic bias in deep clustering models from the perspective of cluster purity, which is measured by the ratio of positive samples within a cluster to their correlation degree. This measurement is adopted as an indication of demographic bias. Then, a novel loss function is introduced to encourage a purity consistency for all clusters to maintain the fairness aspect of the learned clustering model. Moreover, we present a novel attention mechanism, Cross-attention, to measure correlations between multiple clusters, strengthening faraway positive samples and improving the purity of clusters during the learning process. Experimental results on a large-scale dataset with numerous attribute settings have demonstrated the effectiveness of the proposed approach on both clustering accuracy and fairness enhancement on several sensitive attributes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1959025244",
+                    "name": "Xuan-Bac Nguyen"
+                },
+                {
+                    "authorId": "1876581",
+                    "name": "C. Duong"
+                },
+                {
+                    "authorId": "1794486",
+                    "name": "M. Savvides"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "1769788",
+                    "name": "Khoa Luu"
+                }
+            ]
+        },
+        {
+            "paperId": "6b0cb6f3f6a644087353e577d17057fadb62e836",
+            "title": "Demo Alleviate: Demonstrating Artificial Intelligence Enabled Virtual Assistance for Telehealth: The Mental Health Case",
+            "abstract": "After the pandemic, artificial intelligence (AI) powered support for mental health care has become increasingly important. The breadth and complexity of significant challenges required to provide adequate care involve:\n(a) Personalized patient understanding, (b) Safety-constrained and medically validated chatbot patient interactions, and (c) Support for continued feedback-based refinements in design using chatbot-patient interactions. \nWe propose Alleviate, a chatbot designed to assist patients suffering from mental health challenges with personalized care and assist clinicians with understanding their patients better. Alleviate draws from an array of publicly available clinically valid mental-health texts and databases, allowing Alleviate to make medically sound and informed decisions. In addition, Alleviate's modular design and explainable decision-making lends itself to robust and continued feedback-based refinements to its design. In this paper, we explain the different modules of Alleviate and submit a short video demonstrating Alleviate's capabilities to help patients and clinicians understand each other better to facilitate optimal care strategies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "50840713",
+                    "name": "Vedant Khandelwal"
+                },
+                {
+                    "authorId": "46178306",
+                    "name": "Raxit Goswami"
+                },
+                {
+                    "authorId": "2092591535",
+                    "name": "Nathan Dolbir"
+                },
+                {
+                    "authorId": "2213301515",
+                    "name": "Jinendra Malekar"
+                },
+                {
+                    "authorId": "144463965",
+                    "name": "A. Sheth"
+                }
+            ]
+        },
+        {
+            "paperId": "6d18dcd4b562ea15f3270551b71596b2a1980b07",
+            "title": "Tutorials at The Web Conference 2023",
+            "abstract": "This paper summarizes the content of the 28 tutorials that have been given at The Web Conference 2023.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1705291",
+                    "name": "Valeria Fionda"
+                },
+                {
+                    "authorId": "2215622430",
+                    "name": "Olaf Hartig"
+                },
+                {
+                    "authorId": "1805958417",
+                    "name": "Reyhaneh Abdolazimi"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "2215690996",
+                    "name": "Hongzhi Chen"
+                },
+                {
+                    "authorId": "2117027107",
+                    "name": "Xiao Chen"
+                },
+                {
+                    "authorId": "2052469774",
+                    "name": "P. Cui"
+                },
+                {
+                    "authorId": "145269114",
+                    "name": "Jeffrey Dalton"
+                },
+                {
+                    "authorId": "2215596266",
+                    "name": "Xin Luna Dong"
+                },
+                {
+                    "authorId": "2957808",
+                    "name": "Lisette Espin Noboa"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2132398392",
+                    "name": "Manuela Fritz"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "2215622544",
+                    "name": "Torsten Hahmann"
+                },
+                {
+                    "authorId": "145325584",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2046142",
+                    "name": "S. Han"
+                },
+                {
+                    "authorId": "1842532",
+                    "name": "Estevam Hruschka"
+                },
+                {
+                    "authorId": "2118850040",
+                    "name": "Liang Hu"
+                },
+                {
+                    "authorId": "2139299903",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "47247243",
+                    "name": "Utkarshani Jaimini"
+                },
+                {
+                    "authorId": "2299944027",
+                    "name": "Olivier Jeunen"
+                },
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "51118506",
+                    "name": "F. Karimi"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "1769861",
+                    "name": "K. Kenthapadi"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                },
+                {
+                    "authorId": "3309003",
+                    "name": "Hady W. Lauw"
+                },
+                {
+                    "authorId": "145535348",
+                    "name": "Thai Le"
+                },
+                {
+                    "authorId": "1808423005",
+                    "name": "Trung-Hoang Le"
+                },
+                {
+                    "authorId": "2158951945",
+                    "name": "Dongwon Lee"
+                },
+                {
+                    "authorId": "2110855835",
+                    "name": "Geon Lee"
+                },
+                {
+                    "authorId": "19326298",
+                    "name": "Liat Levontin"
+                },
+                {
+                    "authorId": "2144231489",
+                    "name": "Cheng-Te Li"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2110471246",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2030126978",
+                    "name": "Jay Chiehen Liao"
+                },
+                {
+                    "authorId": "2157067900",
+                    "name": "Qidong Liu"
+                },
+                {
+                    "authorId": "46189109",
+                    "name": "Usha Lokala"
+                },
+                {
+                    "authorId": "2085850",
+                    "name": "Ben London"
+                },
+                {
+                    "authorId": "32545338",
+                    "name": "Siqu Long"
+                },
+                {
+                    "authorId": "153612944",
+                    "name": "H. Mcginty"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "29072828",
+                    "name": "Seungwhan Moon"
+                },
+                {
+                    "authorId": "1394609613",
+                    "name": "Usman Naseem"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "1403851743",
+                    "name": "Behrooz Omidvar-Tehrani"
+                },
+                {
+                    "authorId": "2069543964",
+                    "name": "Zijie Pan"
+                },
+                {
+                    "authorId": "48331451",
+                    "name": "Devesh Parekh"
+                },
+                {
+                    "authorId": "2188744953",
+                    "name": "Jian Pei"
+                },
+                {
+                    "authorId": "2101664",
+                    "name": "Tiago P. Peixoto"
+                },
+                {
+                    "authorId": "144615425",
+                    "name": "S. Pemberton"
+                },
+                {
+                    "authorId": "144179461",
+                    "name": "Josiah Poon"
+                },
+                {
+                    "authorId": "2065812052",
+                    "name": "Filip Radlinski"
+                },
+                {
+                    "authorId": "48890086",
+                    "name": "Federico Rossetto"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "2911888",
+                    "name": "Aghiles Salah"
+                },
+                {
+                    "authorId": "2128305",
+                    "name": "M. Sameki"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                },
+                {
+                    "authorId": "28908689",
+                    "name": "C. Shimizu"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                },
+                {
+                    "authorId": "2451800",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2064266862",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2528063",
+                    "name": "Johanne R. Trippas"
+                },
+                {
+                    "authorId": "39603708",
+                    "name": "Quoc-Tuan Truong"
+                },
+                {
+                    "authorId": "1896151979",
+                    "name": "Yu-Che Tsai"
+                },
+                {
+                    "authorId": "150035131",
+                    "name": "Adaku Uchendu"
+                },
+                {
+                    "authorId": "2215624802",
+                    "name": "Bram Van Den Akker"
+                },
+                {
+                    "authorId": "3265905",
+                    "name": "Linshan Wang"
+                },
+                {
+                    "authorId": "2144295736",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2116951322",
+                    "name": "Shoujin Wang"
+                },
+                {
+                    "authorId": "2153691630",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1684687",
+                    "name": "Ingmar Weber"
+                },
+                {
+                    "authorId": "69047048",
+                    "name": "H. Weld"
+                },
+                {
+                    "authorId": "2116666963",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2181385841",
+                    "name": "D. Xu"
+                },
+                {
+                    "authorId": "2138609128",
+                    "name": "E. Xu"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2156653838",
+                    "name": "Bo Yang"
+                },
+                {
+                    "authorId": "2125559318",
+                    "name": "Keyue Yang"
+                },
+                {
+                    "authorId": "1388775854",
+                    "name": "E. Yom-Tov"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "2281410",
+                    "name": "R. Zafarani"
+                },
+                {
+                    "authorId": "2499986",
+                    "name": "Hamed Zamani"
+                },
+                {
+                    "authorId": "41154657",
+                    "name": "Meike Zehlike"
+                },
+                {
+                    "authorId": "2145906426",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "1739818",
+                    "name": "Yongfeng Zhang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2148904413",
+                    "name": "Zhengqi Zhang"
+                },
+                {
+                    "authorId": "144010790",
+                    "name": "Liang Zhao"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "72ac66485c80cd640c02756b15a5c2ab75716242",
+            "title": "K-PERM: Personalized Response Generation Using Dynamic Knowledge Retrieval and Persona-Adaptive Queries",
+            "abstract": "Personalizing conversational agents can enhance the quality of conversations and increase user engagement. However, they often lack external knowledge to appropriately tend to a user\u2019s persona. This is crucial for practical applications like mental health support, nutrition planning, culturally sensitive conversations, or reducing toxic behavior in conversational agents. To enhance the relevance and comprehensiveness of personalized responses, we propose using a two-step approach that involves (1) selectively integrating user personas and (2) contextualizing the response by supplementing information from a background knowledge source. We develop K-PERM (Knowledge-guided PErsonalization with Reward Modulation), a dynamic conversational agent that combines these elements. K-PERM achieves state-of-the- art performance on the popular FoCus dataset, containing real-world personalized conversations concerning global landmarks.We show that using responses from K-PERM can improve performance in state-of-the-art LLMs (GPT 3.5) by 10.5%, highlighting the impact of K-PERM for personalizing chatbots.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214695852",
+                    "name": "Kanak Raj"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "1491238594",
+                    "name": "Manas Gaur"
+                }
+            ]
+        }
+    ]
+}

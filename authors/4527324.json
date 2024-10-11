@@ -1,0 +1,473 @@
+{
+    "authorId": "4527324",
+    "papers": [
+        {
+            "paperId": "031de9248af3f729f36385f5a929ad1238c867ac",
+            "title": "An Analysis on Quantizing Diffusion Transformers",
+            "abstract": "Diffusion Models (DMs) utilize an iterative denoising process to transform random noise into synthetic data. Initally proposed with a UNet structure, DMs excel at producing images that are virtually indistinguishable with or without conditioned text prompts. Later transformer-only structure is composed with DMs to achieve better performance. Though Latent Diffusion Models (LDMs) reduce the computational requirement by denoising in a latent space, it is extremely expensive to inference images for any operating devices due to the shear volume of parameters and feature sizes. Post Training Quantization (PTQ) offers an immediate remedy for a smaller storage size and more memory-efficient computation during inferencing. Prior works address PTQ of DMs on UNet structures have addressed the challenges in calibrating parameters for both activations and weights via moderate optimization. In this work, we pioneer an efficient PTQ on transformer-only structure without any optimization. By analysing challenges in quantizing activations and weights for diffusion transformers, we propose a single-step sampling calibration on activations and adapt group-wise quantization on weights for low-bit quantization. We demonstrate the efficiency and effectiveness of proposed methods with preliminary experiments on conditional image generation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2273530402",
+                    "name": "Yuewei Yang"
+                },
+                {
+                    "authorId": "2247901055",
+                    "name": "Jialiang Wang"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "2273559769",
+                    "name": "Hongbo Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "0de381c3236258faaaed72a69bbe408dfcabc979",
+            "title": "Auto-CARD: Efficient and Robust Codec Avatar Driving for Real-time Mobile Telepresence",
+            "abstract": "Real-time and robust photorealistic avatars for telepresence in AR/VR have been highly desired for enabling im-mersive photorealistic telepresence. However, there still exists one key bottleneck: the considerable computational expense needed to accurately infer facial expressions captured from headset-mounted cameras with a quality level that can match the realism of the avatar's human appearance. To this end, we propose a framework called Auto-CARD, which for the first time enables realtime and robust driving of Codec Avatars when exclusively using merely on-device computing resources. This is achieved by minimizing two sources of redundancy. First, we develop a dedicated neural architecture search technique called AVE-NAS for avatar encoding in AR/VR, which explicitly boosts both the searched architectures' robustness in the presence of extreme facial ex-pressions and hardware friendliness on fast evolving AR/VR headsets. Second, we leverage the temporal redundancy in consecutively captured images during continuous rendering and develop a mechanism dubbed LATEX to skip the computation of redundant frames. Specifically, we first identify an opportunity from the linearity of the latent space derived by the avatar decoder and then propose to perform adaptive latent extrapolation for redundant frames. For evaluation, we demonstrate the efficacy of our Auto-CARD framework in realtime Codec Avatar driving settings, where we achieve a $5.05\\times$ speedup on Meta Quest 2 while maintaining a compa-rable or even better animation quality than state-of-the-art avatar encoder designs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "108145103",
+                    "name": "Y. Fu"
+                },
+                {
+                    "authorId": "2144462446",
+                    "name": "Yuecheng Li"
+                },
+                {
+                    "authorId": "1962403710",
+                    "name": "Chenghui Li"
+                },
+                {
+                    "authorId": "2398245",
+                    "name": "Jason M. Saragih"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "3138925",
+                    "name": "Yingyan Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "1d36e7ba19be5db9694ed256ea21dae5f753ede3",
+            "title": "Trainable Projected Gradient Method for Robust Fine-Tuning",
+            "abstract": "Recent studies on transfer learning have shown that selectively fine-tuning a subset of layers or customizing different learning rates for each layer can greatly improve robustness to out-of-distribution (OOD) data and retain generalization capability in the pre-trained models. However, most of these methods employ manually crafted heuristics or expensive hyper-parameter searches, which prevent them from scaling up to large datasets and neural networks. To solve this problem, we propose Trainable Projected Gradient Method (TPGM) to automatically learn the constraint imposed for each layer for a fine-grained fine-tuning regularization. This is motivated by formulating fine-tuning as a bi-level constrained optimization problem. Specifically, TPGM maintains a set of projection radii, i.e., distance constraints between the fine-tuned model and the pretrained model, for each layer, and enforces them through weight projections. To learn the constraints, we propose a bi-level optimization to automatically learn the best set of projection radii in an end-to-end manner. Theoretically, we show that the bi-level optimization formulation is the key to learning different constraints for each layer. Empirically, with little hyper-parameter search cost, TPGM outperforms existing fine-tuning methods in OOD performance while matching the best in-distribution (ID) performance. For example, when fine-tuned on DomainNet-Real and ImageNet, compared to vanilla fine-tuning, TPGM shows 22% and 10% relative OOD improvement respectively on their sketch counterparts. Code is available at https://github.com/PotatoTian/TPGM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "11007025",
+                    "name": "Junjiao Tian"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2112464124",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "21145493",
+                    "name": "Zecheng He"
+                },
+                {
+                    "authorId": "2108334170",
+                    "name": "Yen-Cheng Liu"
+                },
+                {
+                    "authorId": "145276578",
+                    "name": "Z. Kira"
+                }
+            ]
+        },
+        {
+            "paperId": "4ddfdf3747c70ae9267cb78a7ff7772ef3148803",
+            "title": "Efficient Quantization Strategies for Latent Diffusion Models",
+            "abstract": "Latent Diffusion Models (LDMs) capture the dynamic evolution of latent variables over time, blending patterns and multimodality in a generative system. Despite the proficiency of LDM in various applications, such as text-to-image generation, facilitated by robust text encoders and a variational autoencoder, the critical need to deploy large generative models on edge devices compels a search for more compact yet effective alternatives. Post Training Quantization (PTQ), a method to compress the operational size of deep learning models, encounters challenges when applied to LDM due to temporal and structural complexities. This study proposes a quantization strategy that efficiently quantize LDMs, leveraging Signal-to-Quantization-Noise Ratio (SQNR) as a pivotal metric for evaluation. By treating the quantization discrepancy as relative noise and identifying sensitive part(s) of a model, we propose an efficient quantization approach encompassing both global and local strategies. The global quantization process mitigates relative quantization noise by initiating higher-precision quantization on sensitive blocks, while local treatments address specific challenges in quantization-sensitive and time-sensitive modules. The outcomes of our experiments reveal that the implementation of both global and local treatments yields a highly efficient and effective Post Training Quantization (PTQ) of LDMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2273530402",
+                    "name": "Yuewei Yang"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2247901055",
+                    "name": "Jialiang Wang"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "2273559769",
+                    "name": "Hongbo Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "4f4991f93ed86b777c8b0f192dac034a3144b165",
+            "title": "Pruning Compact ConvNets for Efficient Inference",
+            "abstract": "Neural network pruning is frequently used to compress over-parameterized networks by large amounts, while incurring only marginal drops in generalization performance. However, the impact of pruning on networks that have been highly optimized for efficient inference has not received the same level of attention. In this paper, we analyze the effect of pruning for computer vision, and study state-of-the-art ConvNets, such as the FBNetV3 family of models. We show that model pruning approaches can be used to further optimize networks trained through NAS (Neural Architecture Search). The resulting family of pruned models can consistently obtain better performance than existing FBNetV3 models at the same level of computation, and thus provide state-of-the-art results when trading off between computational complexity and generalization performance on the ImageNet benchmark. In addition to better generalization performance, we also demonstrate that when limited computation resources are available, pruning FBNetV3 models incur only a fraction of GPU-hours involved in running a full-scale NAS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143032877",
+                    "name": "Sayan Ghosh"
+                },
+                {
+                    "authorId": "2107060033",
+                    "name": "Karthik Prasad"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                }
+            ]
+        },
+        {
+            "paperId": "9b00f31be5f5c7e00318ba4ddda01a73560fa476",
+            "title": "Mask3D: Pretraining 2D Vision Transformers by Learning Masked 3D Priors",
+            "abstract": "Current popular backbones in computer vision, such as Vision Transformers (ViT) and ResNets are trained to per-ceive the world from 2D images. However, to more effectively understand 3D structural priors in 2D backbones, we propose Mask3D to leverage existing large-scale RGB-D data in a self-supervised pretraining to embed these 3D priors into 2D learned feature representations. In contrast to traditional 3D contrastive learning paradigms requiring 3D reconstructions or multi-view correspondences, our approach is simple: we formulate a pre-text reconstruction task by masking RGB and depth patches in individual RGB-D frames. We demonstrate the Mask3D is particularly effective in embedding 3D priors into the powerful 2D ViT backbone, enabling improved representation learning for various scene understanding tasks, such as semantic segmentation, instance segmentation and object detection. Experiments show that Mask3D notably outperforms existing self-supervised 3D pretraining approaches on ScanNet, NYUv2, and Cityscapes image understanding tasks, with an improvement of +6.5% mIoU against the state-of-the-art Pri3D on ScanNet image semantic segmentation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144129263",
+                    "name": "Ji Hou"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2558787",
+                    "name": "Zijian He"
+                },
+                {
+                    "authorId": "2208531",
+                    "name": "Angela Dai"
+                },
+                {
+                    "authorId": "2209612",
+                    "name": "M. Nie\u00dfner"
+                }
+            ]
+        },
+        {
+            "paperId": "d62daf809266e02a3e3be4bec160579ff3839cc9",
+            "title": "An Investigation on Hardware-Aware Vision Transformer Scaling",
+            "abstract": "Vision Transformer (ViT) has demonstrated promising performance in various computer vision tasks, and recently attracted a lot of research attention. Many recent works have focused on proposing new architectures to improve ViT and deploying it into real-world applications. However, little effort has been made to analyze and understand ViT\u2019s architecture design space and its implication for hardware costs on different devices. In this work, by simply scaling ViT\u2019s depth, width, input size, and other basic configurations, we show that a scaled vanilla ViT model without bells and whistles can achieve comparable or superior accuracy-efficiency trade-off than most of the latest ViT variants. Specifically, compared with DeiT-Tiny, our scaled model achieves a \u2191 1.9% higher ImageNet top-1 accuracy under the same FLOPs and a \u2191 3.7% better ImageNet top-1 accuracy under the same latency on an NVIDIA Edge GPU TX2. Motivated by this, we further investigate the extracted scaling strategies from the following two aspects: (1) can these scaling strategies be transferred across different real hardware devices? and (2) can these scaling strategies be transferred to different ViT variants and tasks?. For (1), our exploration, based on various devices with different resource budgets, indicates that the transferability effectiveness depends on the underlying device together with its corresponding deployment tool. For (2), we validate the effective transferability of the aforementioned scaling strategies obtained from a vanilla ViT model on top of an image classification task to the PiT model, a strong ViT variant targeting efficiency as well as object detection and video classification tasks. In particular, when transferred to PiT, our scaling strategies lead to a boosted ImageNet top-1 accuracy of from 74.6% to 76.7% (\u2191 2.1%) under the same 0.7G FLOPs. When transferred to the COCO object detection task, the average precision is boosted by \u2191 0.7% under a similar throughput on a V100 GPU.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "28987646",
+                    "name": "Chaojian Li"
+                },
+                {
+                    "authorId": "2110017910",
+                    "name": "Kyungmin Kim"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "2232778335",
+                    "name": "Hang Zhang"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "2198041939",
+                    "name": "Yingyan Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "e04da3c945aae8e2211222d373e7bf771d6412a7",
+            "title": "Emu: Enhancing Image Generation Models Using Photogenic Needles in a Haystack",
+            "abstract": "Training text-to-image models with web scale image-text pairs enables the generation of a wide range of visual concepts from text. However, these pre-trained models often face challenges when it comes to generating highly aesthetic images. This creates the need for aesthetic alignment post pre-training. In this paper, we propose quality-tuning to effectively guide a pre-trained model to exclusively generate highly visually appealing images, while maintaining generality across visual concepts. Our key insight is that supervised fine-tuning with a set of surprisingly small but extremely visually appealing images can significantly improve the generation quality. We pre-train a latent diffusion model on $1.1$ billion image-text pairs and fine-tune it with only a few thousand carefully selected high-quality images. The resulting model, Emu, achieves a win rate of $82.9\\%$ compared with its pre-trained only counterpart. Compared to the state-of-the-art SDXLv1.0, Emu is preferred $68.4\\%$ and $71.3\\%$ of the time on visual appeal on the standard PartiPrompts and our Open User Input benchmark based on the real-world usage of text-to-image models. In addition, we show that quality-tuning is a generic approach that is also effective for other architectures, including pixel diffusion and masked generative transformer models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2249723114",
+                    "name": "Ji Hou"
+                },
+                {
+                    "authorId": "2250489747",
+                    "name": "Chih-Yao Ma"
+                },
+                {
+                    "authorId": "2225238191",
+                    "name": "Sam S. Tsai"
+                },
+                {
+                    "authorId": "2247901055",
+                    "name": "Jialiang Wang"
+                },
+                {
+                    "authorId": "2248766592",
+                    "name": "Rui Wang"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "83754395",
+                    "name": "Simon Vandenhende"
+                },
+                {
+                    "authorId": "2248423317",
+                    "name": "Xiaofang Wang"
+                },
+                {
+                    "authorId": "2479521",
+                    "name": "Abhimanyu Dubey"
+                },
+                {
+                    "authorId": "2110144262",
+                    "name": "Matthew Yu"
+                },
+                {
+                    "authorId": "89942851",
+                    "name": "Abhishek Kadian"
+                },
+                {
+                    "authorId": "2708577",
+                    "name": "Filip Radenovic"
+                },
+                {
+                    "authorId": "144542135",
+                    "name": "D. Mahajan"
+                },
+                {
+                    "authorId": "2256701243",
+                    "name": "Kunpeng Li"
+                },
+                {
+                    "authorId": "2248075665",
+                    "name": "Yue Zhao"
+                },
+                {
+                    "authorId": "2162195471",
+                    "name": "Vladan Petrovic"
+                },
+                {
+                    "authorId": "2247874378",
+                    "name": "Mitesh Kumar Singh"
+                },
+                {
+                    "authorId": "121255235",
+                    "name": "Simran Motwani"
+                },
+                {
+                    "authorId": "148416622",
+                    "name": "Yiqian Wen"
+                },
+                {
+                    "authorId": "1705408",
+                    "name": "Yi-Zhe Song"
+                },
+                {
+                    "authorId": "1722889",
+                    "name": "Roshan Sumbaly"
+                },
+                {
+                    "authorId": "34066479",
+                    "name": "Vignesh Ramanathan"
+                },
+                {
+                    "authorId": "2558787",
+                    "name": "Zijian He"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "2248278031",
+                    "name": "Devi Parikh"
+                }
+            ]
+        },
+        {
+            "paperId": "feb49aec3ed748bb15c5375363b21f01baef8b24",
+            "title": "Cache Me if You Can: Accelerating Diffusion Models through Block Caching",
+            "abstract": "Diffusion models have recently revolutionized the field of image synthesis due to their ability to generate photorealistic images. However, one of the major drawbacks of diffusion models is that the image generation process is costly. A large image-to-image network has to be applied many times to iteratively refine an image from random noise. While many recent works propose techniques to reduce the number of required steps, they generally treat the underlying denoising network as a black box. In this work, we investigate the behavior of the layers within the network and find that 1) the layers' output changes smoothly over time, 2) the layers show distinct patterns of change, and 3) the change from step to step is often very small. We hypothesize that many layer computations in the denoising network are redundant. Leveraging this, we introduce block caching, in which we reuse outputs from layer blocks of previous steps to speed up inference. Furthermore, we propose a technique to automatically determine caching schedules based on each block's changes over timesteps. In our experiments, we show through FID, human evaluation and qualitative analysis that Block Caching allows to generate images with higher visual quality at the same computational cost. We demonstrate this for different state-of-the-art models (LDM and EMU) and solvers (DDIM and DPM). Project page: fwmb.github.io/blockcaching",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2028358105",
+                    "name": "Felix Wimbauer"
+                },
+                {
+                    "authorId": "2271890529",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "2270673864",
+                    "name": "Edgar Schoenfeld"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2249723114",
+                    "name": "Ji Hou"
+                },
+                {
+                    "authorId": "2558787",
+                    "name": "Zijian He"
+                },
+                {
+                    "authorId": "3451249",
+                    "name": "A. Sanakoyeu"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "2225238191",
+                    "name": "Sam S. Tsai"
+                },
+                {
+                    "authorId": "2275352009",
+                    "name": "Jonas Kohler"
+                },
+                {
+                    "authorId": "2257034597",
+                    "name": "Christian Rupprecht"
+                },
+                {
+                    "authorId": "2269841264",
+                    "name": "Daniel Cremers"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "2247901055",
+                    "name": "Jialiang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "17e059974ed3200c4ad77adaf2beeb224fb8497a",
+            "title": "3D-Aware Encoding for Style-based Neural Radiance Fields",
+            "abstract": "We tackle the task of NeRF inversion for style-based neural radiance fields, (e.g., StyleNeRF). In the task, we aim to learn an inversion function to project an input image to the latent space of a NeRF generator and then synthesize novel views of the original image based on the latent code. Compared with GAN inversion for 2D generative models, NeRF inversion not only needs to 1) preserve the identity of the input image, but also 2) ensure 3D consistency in generated novel views. This requires the latent code obtained from the single-view image to be invariant across multiple views. To address this new challenge, we propose a two-stage encoder for style-based NeRF inversion. In the first stage, we introduce a base encoder that converts the input image to a latent code. To ensure the latent code is view-invariant and is able to synthesize 3D consistent novel view images, we utilize identity contrastive learning to train the base encoder. Second, to better preserve the identity of the input image, we introduce a refining encoder to refine the latent code and add finer details to the output image. Importantly note that the novelty of this model lies in the design of its first-stage encoder which produces the closest latent code lying on the latent manifold and thus the refinement in the second stage would be close to the NeRF manifold. Through extensive experiments, we demonstrate that our proposed two-stage encoder qualitatively and quantitatively exhibits superiority over the existing encoders for inversion in both image reconstruction and novel-view rendering.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3312576",
+                    "name": "Yu-Jhe Li"
+                },
+                {
+                    "authorId": "2118716788",
+                    "name": "Tao Xu"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "2065869523",
+                    "name": "N. Zheng"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "49107901",
+                    "name": "Albert Pumarola"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "144040368",
+                    "name": "Kris Kitani"
+                }
+            ]
+        }
+    ]
+}

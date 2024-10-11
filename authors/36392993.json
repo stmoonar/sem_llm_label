@@ -1,0 +1,337 @@
+{
+    "authorId": "36392993",
+    "papers": [
+        {
+            "paperId": "08d13b956a1acd53854d362a993ff4886ad42621",
+            "title": "Memory Latency Distribution-Driven Regulation for Temporal Isolation in MPSoCs",
+            "abstract": "Temporal isolation is one of the most significant challenges that must be addressed before Multi-Processor Systems-on-Chip (MPSoCs) can be widely adopted in mixed-criticality systems with both time-sensitive real-time (RT) applications and performance-oriented non-real-time (NRT) applications. Specifically, the main memory subsystem is one of the most prevalent causes of interference, performance degradation and loss of isolation. Existing memory bandwidth regulation mechanisms use static, dynamic, or predictive DRAM bandwidth management techniques to restore the execution time of an application under contention as close as possible to the execution time in isolation. In this paper, we propose a novel distribution-driven regulation whose goal is to achieve a timeliness objective formulated as a constraint on the probability of meeting a certain target execution time for the RT applications. Using existing interconnect-level Performance Monitoring Units (PMU), we can observe the Cumulative Distribution Function (CDF) of the per-request memory latency. Regulation is then triggered to enforce first-order stochastical dominance with respect to a desired reference. Consequently, it is possible to enforce that the overall observed execution time random variable is dominated by the reference execution time. The mechanism requires no prior information of the contending application and treats the DRAM subsystem as a black box. We provide a full-stack implementation of our mechanism on a Commercial Off-The-Shelf (COTS) platform (Xilinx Ultrascale+ MPSoC), evaluate it using real and synthetic benchmarks, experimentally validate that the timeliness objectives are met for the RT applications, and demonstrate that it is able to provide 2.2x more overall throughput for NRT applications compared to DRAM bandwidth management-based regulation approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50020214",
+                    "name": "Ahsan Saeed"
+                },
+                {
+                    "authorId": "2115964190",
+                    "name": "Denis Hoornaert"
+                },
+                {
+                    "authorId": "2944166",
+                    "name": "Dakshina Dasari"
+                },
+                {
+                    "authorId": "2747686",
+                    "name": "D. Ziegenbein"
+                },
+                {
+                    "authorId": "1397424763",
+                    "name": "Daniel Mueller-Gritschneder"
+                },
+                {
+                    "authorId": "1732787",
+                    "name": "Ulf Schlichtmann"
+                },
+                {
+                    "authorId": "1741519",
+                    "name": "A. Gerstlauer"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                }
+            ]
+        },
+        {
+            "paperId": "5f6c23234d8c1d4a2f5412536c66ab59ce22e354",
+            "title": "Lazy Load Scheduling for Mixed-criticality Applications in Heterogeneous MPSoCs",
+            "abstract": "Newly emerging multiprocessor system-on-a-chip (MPSoC) platforms provide hard processing cores with programmable logic (PL) for high-performance computing applications. In this article, we take a deep look into these commercially available heterogeneous platforms and show how to design mixed-criticality applications such that different processing components can be isolated to avoid contention on the shared resources such as last-level cache and main memory. Our approach involves software/hardware co-design to achieve isolation between the different criticality domains. At the hardware level, we use a scratchpad memory (SPM) with dedicated interfaces inside the PL to avoid conflicts in the main memory. At the software level, we employ a hypervisor to support cache-coloring such that conflicts at the shared L2 cache can be avoided. In order to move the tasks in/out of the SPM memory, we rely on a DMA engine and propose a new CPU-DMA co-scheduling policy, called Lazy Load, for which we also derive the response time analysis. The results of a case study on image processing demonstrate that the contention on the shared memory subsystem can be avoided when running with our proposed architecture. Moreover, comprehensive schedulability evaluations show that the newly proposed Lazy Load policy outperforms the existing CPU-DMA scheduling approaches and is effective in mitigating the main memory interference in our proposed architecture.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062908",
+                    "name": "Tomasz Kloda"
+                },
+                {
+                    "authorId": "2797831",
+                    "name": "G. Gracioli"
+                },
+                {
+                    "authorId": "1969563",
+                    "name": "Rohan Tabish"
+                },
+                {
+                    "authorId": "65888589",
+                    "name": "Reza Mirosanlou"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                },
+                {
+                    "authorId": "1697806",
+                    "name": "R. Pellizzoni"
+                },
+                {
+                    "authorId": "1749138",
+                    "name": "M. Caccamo"
+                }
+            ]
+        },
+        {
+            "paperId": "6732c962e22094430170cb15ef655c6e42bd37c2",
+            "title": "Low-Overhead Online Assessment of Timely Progress as a System Commodity",
+            "abstract": "The correctness of safety-critical systems depends on both their logical and temporal behavior. Control-flow integrity (CFI) is a well-established and understood technique to safeguard the logical flow of safety-critical applications. But unfortunately, no established methodologies exist for the complementary problem of detecting violations of control flow timeliness. Worse yet, the latter dimension, which we term Timely Progress Integrity (TPI), is increasingly more jeopardized as the complexity of our embedded systems continues to soar. As key resources of the memory hierarchy become shared by several CPUs and accelerators, they become hard-to-analyze performance bottlenecks. And the precise interplay between software and hardware components becomes hard to predict and reason about. How to restore control over timely progress integrity? We postulate that the first stepping stone toward TPI is to develop methodologies for Timely Progress Assessment (TPA). TPA refers to the ability of a system to live-monitor the positive/negative slack \u2013 with respect to a known reference \u2013 at key milestones throughout an application\u2019s lifespan. In this paper, we propose one such methodology that goes under the name of Milestone-Based Timely Progress Assessment or MB-TPA, for short. Among the key design principles of MB-TPA is the ability to operate on black-box binary executables with near-zero time overhead and implementable on commercial platforms. To prove its feasibility and effectiveness, we propose and evaluate a full-stack implementation called Timely Progress Assessment with 0 Overhead (TPAw0v). We demonstrate its capability in providing live TPA for complex vision applications while introducing less than 0.6% time overhead for applications under test. Finally, we demonstrate one use case where TPA information is used to restore TPI in the presence of temporal interference over shared memory resources.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2216602378",
+                    "name": "Weifan Chen"
+                },
+                {
+                    "authorId": "2221015679",
+                    "name": "Ivan Izhbirdeev"
+                },
+                {
+                    "authorId": "2115964190",
+                    "name": "Denis Hoornaert"
+                },
+                {
+                    "authorId": "3380115",
+                    "name": "Shahin Roozkhosh"
+                },
+                {
+                    "authorId": "2221019083",
+                    "name": "Patrick Carpanedo"
+                },
+                {
+                    "authorId": "144416506",
+                    "name": "Sanskriti Sharma"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                }
+            ]
+        },
+        {
+            "paperId": "a695c652ee40cc5632d649bc50b42538d42aed91",
+            "title": "Software-Shaped Platforms",
+            "abstract": "This paper outlines the vision for a new type of software-shaped platforms, or SOSH platforms for short, that can be implemented in commercial CPU+FPGA platforms. At the core of the SOSH paradigm is the idea of exposing direct control over the flow of data exchanged between hardware components in embedded System-on-Chips (SoC). Data flow manipulation primitives are synthesized in reprogrammable hardware and interposed between central processors, memory modules, and I/O devices. A new layer of system software is then introduced to leverage such primitives and to achieve fine-grained control and introspection over the interaction of SoC resources. By turning memory and I/O data flows into manageable entities, a new degree of internal awareness can be achieved in complex systems. We first review recent works that are well aligned with the concept of data flow manipulation primitives that can be deployed in SOSH platforms. Next, we outline future research avenues concerning the use of the SOSH paradigm for workload profiling and prediction, to implement advanced memory models, and to perform security threat identification and mitigation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                },
+                {
+                    "authorId": "3380115",
+                    "name": "Shahin Roozkhosh"
+                },
+                {
+                    "authorId": "2115964190",
+                    "name": "Denis Hoornaert"
+                },
+                {
+                    "authorId": "3009412",
+                    "name": "J. Mun"
+                },
+                {
+                    "authorId": "107990014",
+                    "name": "Tarikul Islam Papon"
+                },
+                {
+                    "authorId": "1840402",
+                    "name": "Manos Athanassoulis"
+                }
+            ]
+        },
+        {
+            "paperId": "d0247e07042fd418ed4eaf08ffb68ef3a7d86f4c",
+            "title": "Investigating and Mitigating Contention on Low-End Multi-Core Microcontrollers",
+            "abstract": "In this paper, we investigate the problem of contention and loss of predictability in modern microcontrollers (MCU). To address this issue, we first present a framework to empirically analyze and observe the impact of interference on low-end MCUs. With carefully crafted evaluation scenarios, we conduct experiments on an Arm\u2019s Musca-A1 platform and provide sufficient evidence that even with common application setups, interference can slowdown applications by several orders of magnitude. Furthermore, we propose an architecture for a novel mitigation system that enables applications to monitor their timing progress slackness and mitigate temporal interference over shared resources. This is achieved by suspending less critical cores and reconfiguring their priority on the bus when intolerable contention delays are present. Our findings emphasize the critical importance of considering the impact of shared resources, such as interconnects and memory access patterns, on low-end multi-core MCUs. It is, therefore, crucial to design mechanisms that can allow MCU-based applications to regain control of their timeliness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066664787",
+                    "name": "Daniel Oliveira"
+                },
+                {
+                    "authorId": "2216602378",
+                    "name": "Weifan Chen"
+                },
+                {
+                    "authorId": "145210361",
+                    "name": "Sandro Pinto"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                }
+            ]
+        },
+        {
+            "paperId": "e6126678a7ee54786421d619dfd909c2eeafbbf5",
+            "title": "Relational Fabric: Transparent Data Transformation",
+            "abstract": "A key design decision for data systems is whether they follow the row-store or the column-store paradigm. The former supports transactional workloads, while the latter is better for analytical queries. This decision has a significant impact on the entire data system architecture. The multiple-decade-long journey of these two designs has led to a new family of hybrid transactional/analytical processing (HTAP) architectures. Several efforts have been proposed to reap the benefits of both worlds by proposing systems that maintain multiple copies of data (in different physical layouts) and convert them into the desired layout as required. Due to data duplication, the additional necessary bookkeeping, and the cost of converting data between different layouts, these systems compromise between efficient analytics and data freshness. We depart from existing designs by proposing a radically new approach. We ask the question:\"What if we could access any layout and ship only the relevant data through the memory hierarchy by transparently converting rows to (arbitrary groups of) columns?\".To achieve this functionality, we capitalize on the reinvigorated trend of hardware specialization (that has been accelerated due to the tapering of Moore's law) to propose Relational Fabric, a near-data vertical partitioner that allows memory or storage components to perform on-the-fly transparent data transformation. By exposing an intuitive API, Relational Fabric pushes vertical partitioning to the hardware, which profoundly impacts the process of designing and building data systems. (A) There is no need for data duplication and layout conversion, making HTAP systems viable using a single layout. (B) It simplifies the memory and storage manager that needs to maintain and update a single data layout. (C) It reduces unnecessary data movement through the memory hierarchy allowing for better hardware utilization and, ultimately, better performance. In this paper, we present Relational Fabric for both memory and storage. We present our initial results on Relational Fabric for in-memory systems and discuss the challenges of building this hardware and the opportunities it brings for simplicity and innovation in the data system software stack, including physical design, query optimization, query evaluation, and concurrency control.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "107990014",
+                    "name": "Tarikul Islam Papon"
+                },
+                {
+                    "authorId": "3009412",
+                    "name": "J. Mun"
+                },
+                {
+                    "authorId": "3380115",
+                    "name": "Shahin Roozkhosh"
+                },
+                {
+                    "authorId": "2115964190",
+                    "name": "Denis Hoornaert"
+                },
+                {
+                    "authorId": "3084464",
+                    "name": "A. Sanaullah"
+                },
+                {
+                    "authorId": "3096124",
+                    "name": "Ulrich Drepper"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                },
+                {
+                    "authorId": "1840402",
+                    "name": "Manos Athanassoulis"
+                }
+            ]
+        },
+        {
+            "paperId": "eba7621af02cf34b81cc4684403c052c370dcf16",
+            "title": "The SwaNNFlight System: On-the-Fly Sim-to-Real Adaptation via Anchored Learning",
+            "abstract": "\u2014Reinforcement Learning (RL) agents trained in simulated environments and then deployed in the real world are often sensitive to the di\ufb00erences in dynamics presented, com- monly termed the sim-to-real gap. With the goal of minimizing this gap on resource-constrained embedded systems, we train and live-adapt agents on quadrotors built from o\ufb00-the-shelf hardware. In achieving this we developed three novel contri- butions. (i) SwaNNFlight, an open-source \ufb01rmware enabling wireless data capture and transfer of agents\u2019 observations. Fine-tuning agents with new data, and receiving and swapping onboard NN controllers \u2013 all while in \ufb02ight. We also design SwaNNFlight System (SwaNNFS) allowing new research in training and live-adapting learning agents on similar systems. (ii) Multiplicative value composition, a technique for preserving the importance of each policy optimization criterion, improving training performance and variability in learnt behavior. And (iii) anchor critics to help stabilize the \ufb01ne-tuning of agents dur- ing sim-to-real transfer, online learning from real data while re-taining behavior optimized in simulation. We train consistently \ufb02ight-worthy control policies in simulation and deploy them on real quadrotors. We then achieve \u2018live\u2019 controller adaptation via over-the-air updates of the onboard control policy from a ground station. Our results indicate that live adaptation unlocks a near-50% reduction in power consumption, attributed to the sim-to-real gap. Finally, we tackle the issues of catastrophic forgetting and controller instability, showing the e\ufb00ectiveness of our novel methods. Project Website: https://github.com/ BU-Cyber-Physical-Systems-Lab/SwaNNFS",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2037373180",
+                    "name": "B. Mabsout"
+                },
+                {
+                    "authorId": "3380115",
+                    "name": "Shahin Roozkhosh"
+                },
+                {
+                    "authorId": "39251685",
+                    "name": "Siddharth Mysore"
+                },
+                {
+                    "authorId": "2142735650",
+                    "name": "Kate Saenko"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                }
+            ]
+        },
+        {
+            "paperId": "f8f3eec538439947151e022e79e0711fa39fa912",
+            "title": "MemPol: Policing Core Memory Bandwidth from Outside of the Cores",
+            "abstract": "In today\u2019s multiprocessor systems-on-a-chip (MP- SoC), the shared memory subsystem is a known source of temporal interference. The problem causes logically independent cores to affect each other\u2019s performance, leading to pessimistic worstcase execution time (WCET) analysis. One of the most practical techniques to mitigate interference is memory regulation via throttling. Traditional regulation schemes rely on a combination of timer and performance counter interrupts to be delivered and processed on the same cores running real-time workload. Unfortunately, to prevent excessive overhead, regulation can only be enforced at a millisecond-scale granularity. In this work, we present a novel regulation mechanism from outside the cores that monitors performance counters for the application core\u2019s activity in main memory at a microsecond scale. The approach is fully transparent to the applications on the cores, and can be implemented using widely available onchip debug facilities. The presented mechanism also allows more complex composition of metrics to enact load-aware regulation. For instance, it allows redistributing unused bandwidth between cores while keeping the overall memory bandwidth of all cores below a given threshold. We implement our approach on a host of embedded platforms and carry out an in-depth evaluation on the Xilinx Zynq UltraScale+ZCUl02 platform using the SD-VBS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110183",
+                    "name": "Alexander Zuepke"
+                },
+                {
+                    "authorId": "2432277",
+                    "name": "Andrea Bastoni"
+                },
+                {
+                    "authorId": "2216602378",
+                    "name": "Weifan Chen"
+                },
+                {
+                    "authorId": "1749138",
+                    "name": "M. Caccamo"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                }
+            ]
+        },
+        {
+            "paperId": "4ba3679794efaeaf95432aabaf7eea75d05211e1",
+            "title": "CAESAR: Coherence-Aided Elective and Seamless Alternative Routing via on-chip FPGA",
+            "abstract": "Prompted by the ever-growing demand for high-performance System-on-Chip (SoC) and the plateauing of CPU frequencies, the SoC design landscape is shifting. In a quest to offer programmable specialization, the adoption of tightly-coupled FPGAs co-located with traditional compute clusters has been embraced by major vendors. This $\\mathbf{CPU}+\\mathbf{FPGA}$ architectural paradigm opens the door to novel hardware/software co-design opportunities. The key principle is that CPU-originated memory traffic can be re-routed through the FPGA for analysis and management purposes. Albeit promising, the side-effect of this approach is that time-critical operations\u2014such as cache-line refills\u2014are fulfilled by moving data over slower interconnects meant for I/O traffic. In this article, we introduce a novel principle named Cache Coherence Backstabbing to precisely tackle these shortcomings. The technique leverages the ability to include the FGPA in the same coherence domain as the core processing elements. Importantly, this enables Coherence-Aided Elective and Seamless Alternative Routing (CAESAR), i.e., seamless inspection and routing of memory transactions, especially cache-line refills, through the FPGA. CAESAR allows the definition of new memory programming paradigms. We discuss the intrinsic potentials of the approach and evaluate it with a full-stack prototype implementation on a commercial platform. Our experiments show an improvement of up to 29% in read bandwidth, 23% in latency, and 13% in pragmatic workloads over the state of the art. Furthermore, we showcase the first in-coherence-domain run-time profiler design as a use-case of the CAESAR approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3380115",
+                    "name": "Shahin Roozkhosh"
+                },
+                {
+                    "authorId": "2115964190",
+                    "name": "Denis Hoornaert"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                }
+            ]
+        },
+        {
+            "paperId": "6203a164e247c7a8b5cbb1d1356fa0063c0301fa",
+            "title": "A Closer Look at Intel Resource Director Technology (RDT)",
+            "abstract": "Unarbitrated contention over shared resources at different levels of the memory hierarchy represents a major source of temporal interference. Hardware manufacturers are increasingly more receptive to issues with temporal interference and are starting to propose concrete solutions to mitigate the problem. Intel Resource Director Technology (RDT) represents one such attempt. Given the wide adoption of Intel platforms, RDT features can be an invaluable asset for the consolidation of real-time systems on complex multi- and many-core machines. Unfortunately, to date, a systematic analysis of the capabilities introduced by the RDT framework has not yet been conducted. Moreover, no clear understanding has been matured about the implementation-specific behavior of RDT primitives across processor generations. And ultimately, the ability of RDT to provide real-time guarantees is yet to be established. In our work, we aim at conducting a systematic investigation of the RDT mechanisms from a real-time perspective. We experimentally evaluate the functionality and interpretability of RDT-aided allocation and monitoring controls across the two most recent processor generations. Our evaluations show that while some features like Cache Allocation Technology (CAT) yield promising results, the implementation of other primitives such as Memory Bandwidth Allocation (MBA) has much room for improvement. Moreover, in some cases, the presented interfaces range from blurry to incomplete, as is the case for MBA and Memory Bandwidth Monitoring (MBM).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "118584490",
+                    "name": "Parul Sohal"
+                },
+                {
+                    "authorId": "32069102",
+                    "name": "M. Bechtel"
+                },
+                {
+                    "authorId": "36392993",
+                    "name": "R. Mancuso"
+                },
+                {
+                    "authorId": "1963388",
+                    "name": "H. Yun"
+                },
+                {
+                    "authorId": "48664379",
+                    "name": "Orran Krieger"
+                }
+            ]
+        }
+    ]
+}

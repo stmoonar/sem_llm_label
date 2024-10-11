@@ -1,0 +1,577 @@
+{
+    "authorId": "150961077",
+    "papers": [
+        {
+            "paperId": "6258f562e4c12864516f9d65698632f6741c354a",
+            "title": "LLM-PBE: Assessing Data Privacy in Large Language Models",
+            "abstract": "Large Language Models (LLMs) have become integral to numerous domains, significantly advancing applications in data management, mining, and analysis. Their profound capabilities in processing and interpreting complex language data, however, bring to light pressing concerns regarding data privacy, especially the risk of unintentional training data leakage. Despite the critical nature of this issue, there has been no existing literature to offer a comprehensive assessment of data privacy risks in LLMs. Addressing this gap, our paper introduces LLM-PBE, a toolkit crafted specifically for the systematic evaluation of data privacy risks in LLMs. LLM-PBE is designed to analyze privacy across the entire lifecycle of LLMs, incorporating diverse attack and defense strategies, and handling various data types and metrics. Through detailed experimentation with multiple LLMs, LLM-PBE facilitates an in-depth exploration of data privacy concerns, shedding light on influential factors such as model size, data characteristics, and evolving temporal dimensions. This study not only enriches the understanding of privacy issues in LLMs but also serves as a vital resource for future research in the field. Aimed at enhancing the breadth of knowledge in this area, the findings, resources, and our full technical report are made available at https://llm-pbe.github.io/, providing an open platform for academic and practical advancements in LLM privacy assessment.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108107022",
+                    "name": "Qinbin Li"
+                },
+                {
+                    "authorId": "2284689881",
+                    "name": "Junyuan Hong"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2319391995",
+                    "name": "Jeffrey Tan"
+                },
+                {
+                    "authorId": "2316859257",
+                    "name": "Rachel Xin"
+                },
+                {
+                    "authorId": "9336772",
+                    "name": "Junyi Hou"
+                },
+                {
+                    "authorId": "2316896176",
+                    "name": "Xavier Yin"
+                },
+                {
+                    "authorId": "2316920439",
+                    "name": "Zhun Wang"
+                },
+                {
+                    "authorId": "3422872",
+                    "name": "Dan Hendrycks"
+                },
+                {
+                    "authorId": "2237946662",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2272134552",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "2260639410",
+                    "name": "Bingsheng He"
+                },
+                {
+                    "authorId": "2293597685",
+                    "name": "Dawn Song"
+                }
+            ]
+        },
+        {
+            "paperId": "9398f1586a7a4bd03abe991d3026b5bfff6f048d",
+            "title": "TablePuppet: A Generic Framework for Relational Federated Learning",
+            "abstract": "Current federated learning (FL) approaches view decentralized training data as a single table, divided among participants either horizontally (by rows) or vertically (by columns). However, these approaches are inadequate for handling distributed relational tables across databases. This scenario requires intricate SQL operations like joins and unions to obtain the training data, which is either costly or restricted by privacy concerns. This raises the question: can we directly run FL on distributed relational tables? In this paper, we formalize this problem as relational federated learning (RFL). We propose TablePuppet, a generic framework for RFL that decomposes the learning process into two steps: (1) learning over join (LoJ) followed by (2) learning over union (LoU). In a nutshell, LoJ pushes learning down onto the vertical tables being joined, and LoU further pushes learning down onto the horizontal partitions of each vertical table. TablePuppet incorporates computation/communication optimizations to deal with the duplicate tuples introduced by joins, as well as differential privacy (DP) to protect against both feature and label leakages. We demonstrate the efficiency of TablePuppet in combination with two widely-used ML training algorithms, stochastic gradient descent (SGD) and alternating direction method of multipliers (ADMM), and compare their computation/communication complexity. We evaluate the SGD/ADMM algorithms developed atop TablePuppet by training diverse ML models. Our experimental results show that TablePuppet achieves model accuracy comparable to the centralized baselines running directly atop the SQL results. Moreover, ADMM takes less communication time than SGD to converge to similar model accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2170223453",
+                    "name": "Lijie Xu"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2254260910",
+                    "name": "Yiran Guo"
+                },
+                {
+                    "authorId": "2244429447",
+                    "name": "Gustavo Alonso"
+                },
+                {
+                    "authorId": "2260216284",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "2293495938",
+                    "name": "Guoliang Li"
+                },
+                {
+                    "authorId": "2281459470",
+                    "name": "Wei Wang"
+                },
+                {
+                    "authorId": "5072734",
+                    "name": "Wentao Wu"
+                },
+                {
+                    "authorId": "2256942116",
+                    "name": "Ce Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "a27d2f743dab4ae009beec52f2d61e0be885a7bd",
+            "title": "Differentially Private Synthetic Data via Foundation Model APIs 2: Text",
+            "abstract": "Text data has become extremely valuable due to the emergence of machine learning algorithms that learn from it. A lot of high-quality text data generated in the real world is private and therefore cannot be shared or used freely due to privacy concerns. Generating synthetic replicas of private text data with a formal privacy guarantee, i.e., differential privacy (DP), offers a promising and scalable solution. However, existing methods necessitate DP finetuning of large language models (LLMs) on private data to generate DP synthetic data. This approach is not viable for proprietary LLMs (e.g., GPT-3.5) and also demands considerable computational resources for open-source LLMs. Lin et al. (2024) recently introduced the Private Evolution (PE) algorithm to generate DP synthetic images with only API access to diffusion models. In this work, we propose an augmented PE algorithm, named Aug-PE, that applies to the complex setting of text. We use API access to an LLM and generate DP synthetic text without any model training. We conduct comprehensive experiments on three benchmark datasets. Our results demonstrate that Aug-PE produces DP synthetic text that yields competitive utility with the SOTA DP finetuning baselines. This underscores the feasibility of relying solely on API access of LLMs to produce high-quality DP synthetic texts, thereby facilitating more accessible routes to privacy-preserving LLM applications. Our code and data are available at https://github.com/AI-secure/aug-pe.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2243368744",
+                    "name": "Zinan Lin"
+                },
+                {
+                    "authorId": "2064251",
+                    "name": "A. Backurs"
+                },
+                {
+                    "authorId": "40528805",
+                    "name": "Sivakanth Gopi"
+                },
+                {
+                    "authorId": "2290010050",
+                    "name": "Da Yu"
+                },
+                {
+                    "authorId": "3058104",
+                    "name": "Huseyin A. Inan"
+                },
+                {
+                    "authorId": "2268494857",
+                    "name": "Harsha Nori"
+                },
+                {
+                    "authorId": "2290240717",
+                    "name": "Haotian Jiang"
+                },
+                {
+                    "authorId": "2290022949",
+                    "name": "Huishuai Zhang"
+                },
+                {
+                    "authorId": "2290017167",
+                    "name": "Yin Tat Lee"
+                },
+                {
+                    "authorId": "2290141407",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "2262709844",
+                    "name": "Sergey Yekhanin"
+                }
+            ]
+        },
+        {
+            "paperId": "a30bd328bc36a3f75aa18f653919611b1a8ea23d",
+            "title": "Graph Chain-of-Thought: Augmenting Large Language Models by Reasoning on Graphs",
+            "abstract": "Large language models (LLMs), while exhibiting exceptional performance, suffer from hallucinations, especially on knowledge-intensive tasks. Existing works propose to augment LLMs with individual text units retrieved from external knowledge corpora to alleviate the issue. However, in many domains, texts are interconnected (e.g., academic papers in a bibliographic graph are linked by citations and co-authorships) which form a (text-attributed) graph. The knowledge in such graphs is encoded not only in single texts/nodes but also in their associated connections. To facilitate the research of augmenting LLMs with graphs, we manually construct a Graph Reasoning Benchmark dataset called GRBench, containing 1,740 questions that can be answered with the knowledge from 10 domain graphs. Then, we propose a simple and effective framework called Graph Chain-of-thought (Graph-CoT) to augment LLMs with graphs by encouraging LLMs to reason on the graph iteratively. Each Graph-CoT iteration consists of three sub-steps: LLM reasoning, LLM-graph interaction, and graph execution. We conduct systematic experiments with three LLM backbones on GRBench, where Graph-CoT outperforms the baselines consistently. The code is available at https://github.com/PeterGriffinJin/Graph-CoT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057050247",
+                    "name": "Bowen Jin"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2295927976",
+                    "name": "Jiawei Zhang"
+                },
+                {
+                    "authorId": "2061977359",
+                    "name": "Kashob Kumar Roy"
+                },
+                {
+                    "authorId": "2293820617",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2286977473",
+                    "name": "Suhang Wang"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "2257136881",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "b0a890c4726b98139e51669f39dafbad568c352f",
+            "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+            "abstract": "Compressing high-capability Large Language Models (LLMs) has emerged as a favored strategy for resource-efficient inferences. While state-of-the-art (SoTA) compression methods boast impressive advancements in preserving benign task performance, the potential risks of compression in terms of safety and trustworthiness have been largely neglected. This study conducts the first, thorough evaluation of three (3) leading LLMs using five (5) SoTA compression techniques across eight (8) trustworthiness dimensions. Our experiments highlight the intricate interplay between compression and trustworthiness, revealing some interesting patterns. We find that quantization is currently a more effective approach than pruning in achieving efficiency and trustworthiness simultaneously. For instance, a 4-bit quantized model retains the trustworthiness of its original counterpart, but model pruning significantly degrades trustworthiness, even at 50% sparsity. Moreover, employing quantization within a moderate bit range could unexpectedly improve certain trustworthiness dimensions such as ethics and fairness. Conversely, extreme quantization to very low bit levels (3 bits) tends to reduce trustworthiness significantly. This increased risk cannot be uncovered by looking at benign performance alone, in turn, mandating comprehensive trustworthiness evaluation in practice. These findings culminate in practical recommendations for simultaneously achieving high utility, efficiency, and trustworthiness in LLMs. Code and models are available at https://decoding-comp-trust.github.io.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284689881",
+                    "name": "Junyuan Hong"
+                },
+                {
+                    "authorId": "2004228925",
+                    "name": "Jinhao Duan"
+                },
+                {
+                    "authorId": "2271352866",
+                    "name": "Chenhui Zhang"
+                },
+                {
+                    "authorId": "2145304800",
+                    "name": "Zhangheng Li"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2223592525",
+                    "name": "Kelsey Lieberman"
+                },
+                {
+                    "authorId": "7753616",
+                    "name": "James Diffenderfer"
+                },
+                {
+                    "authorId": "41053241",
+                    "name": "Brian Bartoldson"
+                },
+                {
+                    "authorId": "2253397454",
+                    "name": "A. Jaiswal"
+                },
+                {
+                    "authorId": "2240897954",
+                    "name": "Kaidi Xu"
+                },
+                {
+                    "authorId": "1749353",
+                    "name": "B. Kailkhura"
+                },
+                {
+                    "authorId": "3422872",
+                    "name": "Dan Hendrycks"
+                },
+                {
+                    "authorId": "2293597685",
+                    "name": "Dawn Song"
+                },
+                {
+                    "authorId": "2237946662",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2272134552",
+                    "name": "Bo Li"
+                }
+            ]
+        },
+        {
+            "paperId": "bf050bcc3cc137b8057b30915b8183d4da99fdb7",
+            "title": "GuardAgent: Safeguard LLM Agents by a Guard Agent via Knowledge-Enabled Reasoning",
+            "abstract": "The rapid advancement of large language models (LLMs) has catalyzed the deployment of LLM-powered agents across numerous applications, raising new concerns regarding their safety and trustworthiness. Existing methods for enhancing the safety of LLMs are not directly transferable to LLM-powered agents due to their diverse objectives and output modalities. In this paper, we propose GuardAgent, the first LLM agent as a guardrail to other LLM agents. Specifically, GuardAgent oversees a target LLM agent by checking whether its inputs/outputs satisfy a set of given guard requests defined by the users. GuardAgent comprises two steps: 1) creating a task plan by analyzing the provided guard requests, and 2) generating guardrail code based on the task plan and executing the code by calling APIs or using external engines. In both steps, an LLM is utilized as the core reasoning component, supplemented by in-context demonstrations retrieved from a memory module. Such knowledge-enabled reasoning allows GuardAgent to understand various textual guard requests and accurately\"translate\"them into executable code that provides reliable guardrails. Furthermore, GuardAgent is equipped with an extendable toolbox containing functions and APIs and requires no additional LLM training, which underscores its generalization capabilities and low operational overhead. Additionally, we propose two novel benchmarks: an EICU-AC benchmark for assessing privacy-related access control for healthcare agents and a Mind2Web-SC benchmark for safety evaluation for web agents. We show the effectiveness of GuardAgent on these two benchmarks with 98.7% and 90.0% accuracy in moderating invalid inputs and outputs for the two types of agents, respectively. We also show that GuardAgent is able to define novel functions in adaption to emergent LLM agents and guard requests, which underscores its strong generalization capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261738344",
+                    "name": "Zhen Xiang"
+                },
+                {
+                    "authorId": "2306335663",
+                    "name": "Linzhi Zheng"
+                },
+                {
+                    "authorId": "2306072975",
+                    "name": "Yanjie Li"
+                },
+                {
+                    "authorId": "2284689881",
+                    "name": "Junyuan Hong"
+                },
+                {
+                    "authorId": "2108107022",
+                    "name": "Qinbin Li"
+                },
+                {
+                    "authorId": "2307738654",
+                    "name": "Han Xie"
+                },
+                {
+                    "authorId": "2280198133",
+                    "name": "Jiawei Zhang"
+                },
+                {
+                    "authorId": "2155965725",
+                    "name": "Zidi Xiong"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2306089622",
+                    "name": "Carl Yang"
+                },
+                {
+                    "authorId": "2293597685",
+                    "name": "Dawn Song"
+                },
+                {
+                    "authorId": "2295053351",
+                    "name": "Bo Li"
+                }
+            ]
+        },
+        {
+            "paperId": "04983bbf48ab9649e3e6dcb7f4fadd7d04c89bbd",
+            "title": "Ring-A-Bell! How Reliable are Concept Removal Methods for Diffusion Models?",
+            "abstract": "Diffusion models for text-to-image (T2I) synthesis, such as Stable Diffusion (SD), have recently demonstrated exceptional capabilities for generating high-quality content. However, this progress has raised several concerns of potential misuse, particularly in creating copyrighted, prohibited, and restricted content, or NSFW (not safe for work) images. While efforts have been made to mitigate such problems, either by implementing a safety filter at the evaluation stage or by fine-tuning models to eliminate undesirable concepts or styles, the effectiveness of these safety measures in dealing with a wide range of prompts remains largely unexplored. In this work, we aim to investigate these safety mechanisms by proposing one novel concept retrieval algorithm for evaluation. We introduce Ring-A-Bell, a model-agnostic red-teaming tool for T2I diffusion models, where the whole evaluation can be prepared in advance without prior knowledge of the target model. Specifically, Ring-A-Bell first performs concept extraction to obtain holistic representations for sensitive and inappropriate concepts. Subsequently, by leveraging the extracted concept, Ring-A-Bell automatically identifies problematic prompts for diffusion models with the corresponding generation of inappropriate content, allowing the user to assess the reliability of deployed safety mechanisms. Finally, we empirically validate our method by testing online services such as Midjourney and various methods of concept removal. Our results show that Ring-A-Bell, by manipulating safe prompting benchmarks, can transform prompts that were originally regarded as safe to evade existing safety mechanisms, thus revealing the defects of the so-called safety mechanisms which could practically lead to the generation of harmful contents. Our codes are available at https://github.com/chiayi-hsu/Ring-A-Bell.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1853815578",
+                    "name": "Yu-Lin Tsai"
+                },
+                {
+                    "authorId": "2110551558",
+                    "name": "Chia-Yi Hsu"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2258797673",
+                    "name": "Chih-Hsun Lin"
+                },
+                {
+                    "authorId": "2258749437",
+                    "name": "Jia-You Chen"
+                },
+                {
+                    "authorId": "2290141407",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "2239530969",
+                    "name": "Pin-Yu Chen"
+                },
+                {
+                    "authorId": "2148261509",
+                    "name": "Chia-Mu Yu"
+                },
+                {
+                    "authorId": "2118827734",
+                    "name": "Chun-ying Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "759b29538842f46c947c451a228210cc054074b5",
+            "title": "Effective and Efficient Federated Tree Learning on Hybrid Data",
+            "abstract": "Federated learning has emerged as a promising distributed learning paradigm that facilitates collaborative learning among multiple parties without transferring raw data. However, most existing federated learning studies focus on either horizontal or vertical data settings, where the data of different parties are assumed to be from the same feature or sample space. In practice, a common scenario is the hybrid data setting, where data from different parties may differ both in the features and samples. To address this, we propose HybridTree, a novel federated learning approach that enables federated tree learning on hybrid data. We observe the existence of consistent split rules in trees. With the help of these split rules, we theoretically show that the knowledge of parties can be incorporated into the lower layers of a tree. Based on our theoretical analysis, we propose a layer-level solution that does not need frequent communication traffic to train a tree. Our experiments demonstrate that HybridTree can achieve comparable accuracy to the centralized setting with low computational and communication overhead. HybridTree can achieve up to 8 times speedup compared with the other baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108107022",
+                    "name": "Qinbin Li"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2108880352",
+                    "name": "Xiaojun Xu"
+                },
+                {
+                    "authorId": "2118894900",
+                    "name": "Xiaoyuan Liu"
+                },
+                {
+                    "authorId": "2256942116",
+                    "name": "Ce Zhang"
+                },
+                {
+                    "authorId": "2260216284",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "2260639410",
+                    "name": "Bingsheng He"
+                },
+                {
+                    "authorId": "2242706269",
+                    "name": "D. Song"
+                }
+            ]
+        },
+        {
+            "paperId": "a6d3794c23626060781da0f1ff2bcdf7457b6c43",
+            "title": "DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models",
+            "abstract": "Generative Pre-trained Transformer (GPT) models have exhibited exciting progress in their capabilities, capturing the interest of practitioners and the public alike. Yet, while the literature on the trustworthiness of GPT models remains limited, practitioners have proposed employing capable GPT models for sensitive applications such as healthcare and finance -- where mistakes can be costly. To this end, this work proposes a comprehensive trustworthiness evaluation for large language models with a focus on GPT-4 and GPT-3.5, considering diverse perspectives -- including toxicity, stereotype bias, adversarial robustness, out-of-distribution robustness, robustness on adversarial demonstrations, privacy, machine ethics, and fairness. Based on our evaluations, we discover previously unpublished vulnerabilities to trustworthiness threats. For instance, we find that GPT models can be easily misled to generate toxic and biased outputs and leak private information in both training data and conversation history. We also find that although GPT-4 is usually more trustworthy than GPT-3.5 on standard benchmarks, GPT-4 is more vulnerable given jailbreaking system or user prompts, potentially because GPT-4 follows (misleading) instructions more precisely. Our work illustrates a comprehensive trustworthiness evaluation of GPT models and sheds light on the trustworthiness gaps. Our benchmark is publicly available at https://decodingtrust.github.io/ ; our dataset can be previewed at https://huggingface.co/datasets/AI-Secure/DecodingTrust ; a concise version of this work is at https://openreview.net/pdf?id=kaHpo8OZw2 .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51454501",
+                    "name": "Boxin Wang"
+                },
+                {
+                    "authorId": "2108947078",
+                    "name": "Weixin Chen"
+                },
+                {
+                    "authorId": "146922081",
+                    "name": "Hengzhi Pei"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2153110066",
+                    "name": "Mintong Kang"
+                },
+                {
+                    "authorId": "2146063748",
+                    "name": "Chenhui Zhang"
+                },
+                {
+                    "authorId": "2153079868",
+                    "name": "Chejian Xu"
+                },
+                {
+                    "authorId": "2155965725",
+                    "name": "Zidi Xiong"
+                },
+                {
+                    "authorId": "151183175",
+                    "name": "Ritik Dutta"
+                },
+                {
+                    "authorId": "1749176844",
+                    "name": "Rylan Schaeffer"
+                },
+                {
+                    "authorId": "2127191901",
+                    "name": "Sang Truong"
+                },
+                {
+                    "authorId": "2285788571",
+                    "name": "Simran Arora"
+                },
+                {
+                    "authorId": "16787428",
+                    "name": "Mantas Mazeika"
+                },
+                {
+                    "authorId": "3422872",
+                    "name": "Dan Hendrycks"
+                },
+                {
+                    "authorId": "2695029",
+                    "name": "Zi-Han Lin"
+                },
+                {
+                    "authorId": "98742322",
+                    "name": "Yuk-Kit Cheng"
+                },
+                {
+                    "authorId": "123593472",
+                    "name": "Sanmi Koyejo"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                },
+                {
+                    "authorId": "2165245120",
+                    "name": "Bo Li"
+                }
+            ]
+        },
+        {
+            "paperId": "f999d04824df9e6b2f125c02039884aa4ccf4702",
+            "title": "FedMLSecurity: A Benchmark for Attacks and Defenses in Federated Learning and LLMs",
+            "abstract": "This paper introduces FedMLSecurity , a benchmark that simulates adversarial attacks and corresponding defense mechanisms in Federated Learning (FL). As an integral module of the open-sourced library FedML [22] that facilitates FL algo-rithm development and performance comparison, FedMLSecurity enhances the security assessment capacity of FedML. FedMLSecurity comprises two principal components: FedMLAttacker , which simulates attacks injected into FL training, and FedMLDefender , which emulates defensive strategies designed to mitigate the impacts of the attacks. FedMLSecurity is open-sourced 1 and is customizable to a wide range of machine learning models ( e . g ., Logistic Regression, ResNet [23], GAN [19], etc.) and federated optimizers ( e . g ., FedAVG [32], FedOPT [37], FedNOVA [46], etc.). Experimental evaluations in this paper also demonstrate the ease of application of FedMLSecurity to Large Language Models (LLMs), further reinforcing its versatility and practical utility in various scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2159214992",
+                    "name": "Shanshan Han"
+                },
+                {
+                    "authorId": "51884695",
+                    "name": "Baturalp Buyukates"
+                },
+                {
+                    "authorId": "2111189645",
+                    "name": "Zijian Hu"
+                },
+                {
+                    "authorId": "2219774222",
+                    "name": "Han Jin"
+                },
+                {
+                    "authorId": "97242910",
+                    "name": "Weizhao Jin"
+                },
+                {
+                    "authorId": "49755259",
+                    "name": "Lichao Sun"
+                },
+                {
+                    "authorId": "2216249996",
+                    "name": "Xiaoya Wang"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": null,
+                    "name": "Kai Zhang"
+                },
+                {
+                    "authorId": "2219708195",
+                    "name": "Qifan Zhang"
+                },
+                {
+                    "authorId": "2189361403",
+                    "name": "Yuhui Zhang"
+                },
+                {
+                    "authorId": "31927890",
+                    "name": "Chaoyang He"
+                },
+                {
+                    "authorId": "121011351",
+                    "name": "S. Avestimehr"
+                }
+            ]
+        }
+    ]
+}

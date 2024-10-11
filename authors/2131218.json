@@ -1,0 +1,410 @@
+{
+    "authorId": "2131218",
+    "papers": [
+        {
+            "paperId": "806ac4b81a46fa97c4272124c2511608280a5019",
+            "title": "Attention Weighted Mixture of Experts with Contrastive Learning for Personalized Ranking in E-commerce",
+            "abstract": "Ranking model plays an essential role in e-commerce search and recommendation. An effective ranking model should give a personalized ranking list for each user according to the user preference. Existing algorithms usually extract a user representation vector from the user behavior sequence, then feed the vector into a feed-forward network (FFN) together with other features for feature interactions, and finally produce a personalized ranking score. Despite tremendous progress in the past, there is still room for improvement. Firstly, the personalized patterns of feature interactions for different users are not explicitly modeled. Secondly, most of existing algorithms have poor personalized ranking results for long-tail users with few historical behaviors due to the data sparsity.To overcome the two challenges, we propose Attention Weighted Mixture of Experts (AW-MoE) with contrastive learning for personalized ranking. Firstly, AW-MoE leverages the MoE framework to capture personalized feature interactions for different users. To model the user preference, the user behavior sequence is simultaneously fed into expert networks and the gate network. Within the gate network, one gate unit and one activation unit are designed to adaptively learn the fine-grained activation vector for experts using an attention mechanism. Secondly, a random masking strategy is applied to the user behavior sequence to simulate long-tail users, and an auxiliary contrastive loss is imposed to the output of the gate network to improve the model generalization for these users. This is validated by a higher performance gain on the long-tail user test set.Experiment results on a JD real production dataset and a public dataset demonstrate the effectiveness of AW-MoE, which significantly outperforms state-of-art methods. Notably, AW-MoE has been successfully deployed in the JD e-commerce search engine, serving the real traffic of hundreds of millions of active users.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112953487",
+                    "name": "Juan Gong"
+                },
+                {
+                    "authorId": "2117037227",
+                    "name": "Zhe Chen"
+                },
+                {
+                    "authorId": "2112663524",
+                    "name": "Chao Ma"
+                },
+                {
+                    "authorId": "50479706",
+                    "name": "Zhuojian Xiao"
+                },
+                {
+                    "authorId": "49528487",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "3252269",
+                    "name": "Guoyu Tang"
+                },
+                {
+                    "authorId": "2146017790",
+                    "name": "Lin Liu"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": "143947042",
+                    "name": "Bo Long"
+                },
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "89ae0d436bff3411e23d6f849c434aaa2dd641ba",
+            "title": "Differentiable Retrieval Augmentation via Generative Language Modeling for E-commerce Query Intent Classification",
+            "abstract": "Retrieval augmentation, which enhances downstream models by a knowledge retriever and an external corpus instead of by merely increasing the number of model parameters, has been successfully applied to many natural language processing(NLP) tasks such as text classification, question answering and so on. However, existing methods that separately or asynchronously train the retriever and downstream model mainly due to the non-differentiability between the two parts, usually lead to degraded performance compared to end-to-end joint training. In this paper, we propose Differentiable Retrieval Augmentation via Generative lANguage modeling(Dragan), to address this problem by a novel differentiable reformulation. We demonstrate the effectiveness of our proposed method on a challenging NLP task in e-commerce search, namely query intent classification. Both the experimental results and ablation study show that the proposed method significantly and reasonably improves the state-of-the-art baselines on both offline evaluation and online A/B test.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115458862",
+                    "name": "Chenyu Zhao"
+                },
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": "2114967623",
+                    "name": "Yiming Qiu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Han Zhang"
+                },
+                {
+                    "authorId": "49230310",
+                    "name": "Wen-Yun Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "48e3b328bc8ba8ce78f2a0dc3be2adddf05b76fb",
+            "title": "Givens Coordinate Descent Methods for Rotation Matrix Learning in Trainable Embedding Indexes",
+            "abstract": "Product quantization (PQ) coupled with a space rotation, is widely used in modern approximate nearest neighbor (ANN) search systems to significantly compress the disk storage for embeddings and speed up the inner product computation. Existing rotation learning methods, however, minimize quantization distortion for fixed embeddings, which are not applicable to an end-to-end training scenario where embeddings are updated constantly. In this paper, based on geometric intuitions from Lie group theory, in particular the special orthogonal group $SO(n)$, we propose a family of block Givens coordinate descent algorithms to learn rotation matrix that are provably convergent on any convex objectives. Compared to the state-of-the-art SVD method, the Givens algorithms are much more parallelizable, reducing runtime by orders of magnitude on modern GPUs, and converge more stably according to experimental studies. They further improve upon vanilla product quantization significantly in an end-to-end training scenario.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Han Zhang"
+                },
+                {
+                    "authorId": "2114967623",
+                    "name": "Yiming Qiu"
+                },
+                {
+                    "authorId": "2122427161",
+                    "name": "Yun Xiao"
+                },
+                {
+                    "authorId": "2052143728",
+                    "name": "Bo Long"
+                },
+                {
+                    "authorId": "49230310",
+                    "name": "Wen-Yun Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "0f6297a1bd9311bacbe57fdde945d0e1d46f59be",
+            "title": "DSGPT: Domain-Specific Generative Pre-Training of Transformers for Text Generation in E-commerce Title and Review Summarization",
+            "abstract": "We propose a novel domain-specific generative pre-training (DSGPT) method for text generation and apply it to the product title and review summarization problems on E-commerce mobile display. First, we adopt a decoder-only transformer architecture, which fits well for fine-tuning tasks by combining input and output all together. Second, we demonstrate utilizing only small amount of pre-training data in related domains is powerful. Pre-training a language model from a general corpus such as Wikipedia or the Common Crawl requires tremendous time and resource commitment, and can be wasteful if the downstream tasks are limited in variety. Our DSGPT is pre-trained on a limited dataset, the Chinese short text summarization dataset (LCSTS). Third, our model does not require product-related human-labeled data. For title summarization task, the state of art explicitly uses additional background knowledge in training and predicting stages. In contrast, our model implicitly captures this knowledge and achieves significant improvement over other methods, after fine-tuning on the public Taobao.com dataset. For review summarization task, we utilize JD.com in-house dataset, and observe similar improvement over standard machine translation methods which lack the flexibility of fine-tuning. Our proposed work can be simply extended to other domains for a wide range of text generation tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118889880",
+                    "name": "Xueying Zhang"
+                },
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": "2053234459",
+                    "name": "Yue Shang"
+                },
+                {
+                    "authorId": "2113279258",
+                    "name": "Zhaomeng Cheng"
+                },
+                {
+                    "authorId": "2145179631",
+                    "name": "Chi Zhang"
+                },
+                {
+                    "authorId": "49537566",
+                    "name": "Xiaochuan Fan"
+                },
+                {
+                    "authorId": "2122427161",
+                    "name": "Yun Xiao"
+                },
+                {
+                    "authorId": "2052143728",
+                    "name": "Bo Long"
+                }
+            ]
+        },
+        {
+            "paperId": "28336cbf2ee3e8fca6b173c91c5ca9628ba1fa4a",
+            "title": "Joint Learning of Deep Retrieval Model and Product Quantization based Embedding Index",
+            "abstract": "Embedding index that enables fast approximate nearest neighbor(ANN) search, serves as an indispensable component for state-of-the-art deep retrieval systems. Traditional approaches, often separating the two steps of embedding learning and index building, incur additional indexing time and decayed retrieval accuracy. In this paper, we propose a novel method called Poeem, which stands for product quantization based embedding index jointly trained with deep retrieval model, to unify the two separate steps within an end-to-end training, by utilizing a few techniques including the gradient straight-through estimator, warm start strategy, optimal space decomposition and Givens rotation. Extensive experimental results show that the proposed method not only improves retrieval accuracy significantly but also reduces the indexing time to almost none. We have open sourced our approach for the sake of comparison and reproducibility.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2119078075",
+                    "name": "Han Zhang"
+                },
+                {
+                    "authorId": "48340247",
+                    "name": "Hongwei Shen"
+                },
+                {
+                    "authorId": "2114967623",
+                    "name": "Yiming Qiu"
+                },
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": "31093111",
+                    "name": "Songlin Wang"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": "2122427161",
+                    "name": "Yun Xiao"
+                },
+                {
+                    "authorId": "2052143728",
+                    "name": "Bo Long"
+                },
+                {
+                    "authorId": "49230310",
+                    "name": "Wen-Yun Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "6c88f39d65d56fd362cc7ea19be9b320ef678796",
+            "title": "Heterogeneous Network Embedding for Deep Semantic Relevance Match in E-commerce Search",
+            "abstract": "Result relevance prediction is an essential task of e-commerce search engines to boost the utility of search engines and ensure smooth user experience. The last few years eyewitnessed a flurry of research on the use of Transformer-style models and deep text-match models to improve relevance. However, these two types of models ignored the inherent bipartite network structures that are ubiquitous in e-commerce search logs, making these models ineffective. We propose in this paper a novel Second-order Relevance, which is fundamentally different from the previous First-order Relevance, to improve result relevance prediction. We design, for the first time, an end-to-end First-and-Second-order Relevance prediction model for e-commerce item relevance. The model is augmented by the neighborhood structures of bipartite networks that are built using the information of user behavioral feedback, including clicks and purchases. To ensure that edges accurately encode relevance information, we introduce external knowledge generated from BERT to refine the network of user behaviors. This allows the new model to integrate information from neighboring items and queries, which are highly relevant to the focus query-item pair under consideration. Results of offline experiments showed that the new model significantly improved the prediction accuracy in terms of human relevance judgment. An ablation study showed that the First-and-Second-order model gained a 4.3% average gain over the First-order model. Results of an online A/B test revealed that the new model derived more commercial benefits compared to the base model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "39789747",
+                    "name": "Ziyang Liu"
+                },
+                {
+                    "authorId": "2113279258",
+                    "name": "Zhaomeng Cheng"
+                },
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": "2053234459",
+                    "name": "Yue Shang"
+                },
+                {
+                    "authorId": "2055448780",
+                    "name": "Wei Xiong"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": "2052143728",
+                    "name": "Bo Long"
+                },
+                {
+                    "authorId": "2068347799",
+                    "name": "Di Jin"
+                }
+            ]
+        },
+        {
+            "paperId": "776efc0505da7676801e334ddaaad0fa1e4c3703",
+            "title": "Sequential Search with Off-Policy Reinforcement Learning",
+            "abstract": "Recent years have seen a significant amount of interests in Sequential Recommendation (SR), which aims to understand and model the sequential user behaviors and the interactions between users and items over time. Surprisingly, despite the huge success Sequential Recommendation has achieved, there is little study on Sequential Search (SS), a twin learning task that takes into account a user's current and past search queries, in addition to behavior on historical query sessions. The SS learning task is even more important than the counterpart SR task for most of E-commence companies due to its much larger online serving demands as well as traffic volume. To this end, we propose a highly scalable hybrid learning model that consists of an RNN learning framework leveraging all features in short-term user-item interactions, and an attention model utilizing selected item-only features from long-term interactions. As a novel optimization step, we fit multiple short user sequences in a single RNN pass within a training batch, by solving a greedy knap-sack problem on the fly. Moreover, we explore the use of off-policy reinforcement learning in multi-session personalized search ranking. Specifically, we design a pairwise Deep Deterministic Policy Gradient model that efficiently captures users' long term reward in terms of pairwise classification error. Extensive ablation experiments demonstrate significant improvement each component brings to its state-of-the-art baseline, on a variety of offline and online metrics.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2135829889",
+                    "name": "Dadong Miao"
+                },
+                {
+                    "authorId": "2120502473",
+                    "name": "Yanan Wang"
+                },
+                {
+                    "authorId": "3252269",
+                    "name": "Guoyu Tang"
+                },
+                {
+                    "authorId": "2146017790",
+                    "name": "Lin Liu"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": "2052143728",
+                    "name": "Bo Long"
+                },
+                {
+                    "authorId": "2122427161",
+                    "name": "Yun Xiao"
+                },
+                {
+                    "authorId": "3008832",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "0513ae9354cc7aac2d64dbf52491fe124f174c9c",
+            "title": "Adversarial Mixture Of Experts with Category Hierarchy Soft Constraint",
+            "abstract": "Product search is the most common way for people to satisfy their shopping needs on e-commerce websites. Products are typically annotated with one of several broad categorical tags, such as \"Clothing\" or \"Electronics\", as well as finer-grained categories like \"Refrigerator\" or \"TV\", both under \"Electronics\". These tags are used to construct a hierarchy of query categories. Distributions of features such as price and brand popularity vary wildly across query categories. In addition, feature importance for the purpose of CTR/CVR predictions differs from one category to another. In this work, we leverage the Mixture of Expert (MoE) framework to learn a ranking model that specializes for each query category. In particular, our gate network relies solely on the category ids extracted from the user query.While classical MoE\u2019s pick expert towers spontaneously for each input example, we explore two techniques to establish more explicit and transparent connections between the experts and query categories. To help differentiate experts on their domain specialties, we introduce a form of adversarial regularization among the expert outputs, forcing them to disagree with one another. As a result, they tend to approach each prediction problem from different angles, rather than copying one another. This is validated by a much stronger clustering effect of the gate output vectors under different categories. In addition, soft gating constraints based on the categorical hierarchy are imposed to help similar products choose similar gate values. and make them more likely to share similar experts. This allows aggregation of training data among smaller sibling categories to overcome data scarcity.Experiments on a learning-to-rank dataset collected from the JD e-commerce search log demonstrate that MoE with these improvements consistently outperforms competing models, in terms of offline metrics and online AB tests.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "50479706",
+                    "name": "Zhuojian Xiao"
+                },
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": "3252269",
+                    "name": "Guoyu Tang"
+                },
+                {
+                    "authorId": "2146017790",
+                    "name": "Lin Liu"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": "2122427161",
+                    "name": "Yun Xiao"
+                },
+                {
+                    "authorId": "46704879",
+                    "name": "Weipeng P. Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "76e130aae31c0c4e1740986b858f1dde9fbdb846",
+            "title": "BERT2DNN: BERT Distillation with Massive Unlabeled Data for Online E-Commerce Search",
+            "abstract": "Relevance has significant impact on user experience and business profit for e-commerce search platform. In this work, we propose a data-driven framework for search relevance prediction, by distilling knowledge from BERT and related multi-layer Transformer teacher models into simple feed-forward networks with large amount of unlabeled data. The distillation process produces a student model that recovers more than 97% test accuracy of teacher models on new queries, at a serving cost that's several magnitude lower (latency 150x lower than BERT-Base and 15x lower than the most efficient BERT variant, TinyBERT). The applications of temperature rescaling and teacher model stacking further boost model accuracy, without increasing the student model complexity. We present experimental results on both in-house e-commerce search relevance data as well as a public data set on sentiment analysis from the GLUE benchmark. The latter takes advantage of another related public data set of much larger scale, while disregarding its potentially noisy labels. Embedding analysis and case study on the in-house data further highlight the strength of the resulting model. By making the data processing and model training source code public, we hope the techniques presented here can help reduce energy consumption of the state of the art Transformer models and also level the playing field for small organizations lacking access to cutting edge machine learning hardwares.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": "2053234459",
+                    "name": "Yue Shang"
+                },
+                {
+                    "authorId": "39789747",
+                    "name": "Ziyang Liu"
+                },
+                {
+                    "authorId": "48340247",
+                    "name": "Hongwei Shen"
+                },
+                {
+                    "authorId": "2122427161",
+                    "name": "Yun Xiao"
+                },
+                {
+                    "authorId": "2055448780",
+                    "name": "Wei Xiong"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": "46704879",
+                    "name": "Weipeng P. Yan"
+                },
+                {
+                    "authorId": "2068347799",
+                    "name": "Di Jin"
+                }
+            ]
+        },
+        {
+            "paperId": "d1e748f9521a22411bddca50a3d939f31b4a1ac2",
+            "title": "Fine-tune BERT for E-commerce Non-Default Search Ranking",
+            "abstract": "The quality of non-default ranking on e-commerce platforms, such as based on ascending item price or descending historical sales volume, often suffers from acute relevance problems, since the irrelevant items are much easier to be exposed at the top of the ranking results. In this work, we propose a two-stage ranking scheme, which first recalls wide range of candidate items through refined query/title keyword matching, and then classifies the recalled items using BERT-Large fine-tuned on human label data. We also implemented parallel prediction on multiple GPU hosts and a C++ tokenization custom op of Tensorflow. In this data challenge, our model won the 1st place in the supervised phase (based on overall F1 score) and 2nd place in the final phase (based on average per query F1 score).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2131218",
+                    "name": "Yunjiang Jiang"
+                },
+                {
+                    "authorId": "2053234459",
+                    "name": "Yue Shang"
+                },
+                {
+                    "authorId": "48340247",
+                    "name": "Hongwei Shen"
+                },
+                {
+                    "authorId": "49230310",
+                    "name": "Wen-Yun Yang"
+                },
+                {
+                    "authorId": "2122427161",
+                    "name": "Yun Xiao"
+                }
+            ]
+        }
+    ]
+}

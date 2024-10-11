@@ -1,0 +1,293 @@
+{
+    "authorId": "1403756222",
+    "papers": [
+        {
+            "paperId": "cae882660cfdd05464ec2a74f93ed433026c4768",
+            "title": "Fast and Secure Decentralized Optimistic Rollups Using Setchain",
+            "abstract": "Modern blockchains face a scalability challenge due to the intrinsic throughput limitations of consensus protocols. Layer 2 optimistic rollups (L2) are a faster alternative that offer the same interface in terms of smart contract development and user interaction. Optimistic rollups perform most computations offchain and make light use of an underlying blockchain (L1) to guarantee correct behavior, implementing a cheaper blockchain on a blockchain solution. With optimistic rollups, a sequencer calculates offchain batches of L2 transactions and commits batches (compressed or hashed) to the L1 blockchain. The use of hashes requires a data service to translate hashes into their corresponding batches. Current L2 implementations consist of a centralized sequencer (central authority) and an optional data availability committee (DAC). In this paper, we propose a decentralized L2 optimistic rollup based on Setchain, a decentralized Byzantine-tolerant implementation of sets. The main contribution is a fully decentralized\"arranger\"where arrangers are a formal definition combining sequencers and DACs. We prove our implementation correct and show empirical evidence that our solution scales. A final contribution is a system of incentives (payments) for servers that implement the sequencer and data availability committee protocols correctly, and a fraud-proof mechanism to detect violations of the protocol.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1490766211",
+                    "name": "Margarita Capretto"
+                },
+                {
+                    "authorId": "34419875",
+                    "name": "Mart\u00edn Ceresa"
+                },
+                {
+                    "authorId": "2310562786",
+                    "name": "Antonio Fern\u00e1ndez"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "2305154330",
+                    "name": "C\u00e9sar S\u00e1nchez"
+                }
+            ]
+        },
+        {
+            "paperId": "01a3cd607756194f42586f11b1b90364c0beba26",
+            "title": "Scalable Off-Chain Auctions",
+            "abstract": ",",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3107488",
+                    "name": "Mohsen Minaei"
+                },
+                {
+                    "authorId": "41031262",
+                    "name": "D. Le"
+                },
+                {
+                    "authorId": "1820669",
+                    "name": "R. Kumaresan"
+                },
+                {
+                    "authorId": "2249376889",
+                    "name": "Andrew Beams"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "2249466198",
+                    "name": "Yibin Yang"
+                },
+                {
+                    "authorId": "1773627",
+                    "name": "Srinivasan Raghuraman"
+                },
+                {
+                    "authorId": "113687861",
+                    "name": "Panagiotis Chatzigiannis"
+                },
+                {
+                    "authorId": "2249299182",
+                    "name": "Mahdi Zamani"
+                }
+            ]
+        },
+        {
+            "paperId": "40561cb5c9134f675fb9024afe26cf2020d5e9fe",
+            "title": "LedgerLocks: A Security Framework for Blockchain Protocols Based on Adaptor Signatures",
+            "abstract": "The scalability and interoperability challenges in current cryptocurrencies have motivated the design of cryptographic protocols that enable efficient applications on top and across widely used cryptocurrencies such as Bitcoin or Ethereum. Examples of such protocols include (virtual) payment channels, atomic swaps, oracle-based contracts, deterministic wallets, and coin mixing services. Many of these protocols are built upon minimal core functionalities supported by a wide range of cryptocurrencies. Most prominently, adaptor signatures (AS) have emerged as a powerful tool for constructing blockchain protocols that are (mostly) agnostic to the specific logic of the underlying cryptocurrency. Even though AS-based protocols are built upon the same cryptographic principles, there exists no modular and faithful way for reasoning about their security. Instead, all the works analyzing such protocols focus on reproving how adaptor signatures are used to cryptographically link transactions while considering highly simplified blockchain models that do not capture security-relevant aspects of transaction execution in blockchain-based consensus. To help this, we present LedgerLocks, a framework for the secure design of AS-based blockchain applications in the presence of a realistic blockchain. LedgerLocks defines the concept of AS-locked transactions, transactions whose publication is bound to the knowledge of a cryptographic secret. We argue that AS-locked transactions are the common building block of AS-based blockchain protocols and we define GLedgerLocks a realistic ledger model in the Universal Composability framework with built-in support for AS-locked transactions. As LedgerLocks abstracts from the cryptographic realization of AS-locked transactions, it allows protocol designers to focus on the blockchain-specific security considerations instead.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1418521163",
+                    "name": "Erkan Tairi"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "35880565",
+                    "name": "Clara Schneidewind"
+                }
+            ]
+        },
+        {
+            "paperId": "77bea3b38d2e1e62a8ea95fb157a8bd9f91ede73",
+            "title": "Breaking and Fixing Virtual Channels: Domino Attack and Donner",
+            "abstract": "\u2014Payment channel networks (PCNs) mitigate the scalability issues of current decentralized cryptocurrencies. They allow for arbitrarily many payments between users connected through a path of intermediate payment channels, while requiring interacting with the blockchain only to open and close the chan- nels. Unfortunately, PCNs are (i) tailored to payments, excluding more complex smart contract functionalities, such as the oracle- enabling Discreet Log Contracts and (ii) their need for active participation from intermediaries may make payments unreliable, slower, expensive, and privacy-invasive. Virtual channels are among the most promising techniques to mitigate these issues, allowing two endpoints of a path to create a direct channel over the intermediaries without any interaction with the blockchain. After such a virtual channel is constructed, (i) the endpoints can use this direct channel for applications other than payments and (ii) the intermediaries are no longer involved in updates. In this work, we first introduce the Domino attack, a new DoS/griefing style attack that leverages virtual channels to destruct the PCN itself and is inherent to the design adopted by the existing Bitcoin-compatible virtual channels. We then demonstrate its severity by a quantitative analysis on a snapshot of the Lightning Network (LN), the most widely deployed PCN at present. We finally discuss other serious drawbacks of existing virtual channel designs, such as the support for only a single intermediary, a latency and blockchain overhead linear in the path length, or a non-constant storage overhead per user. We then present Donner, the first virtual channel construction that overcomes the shortcomings above, by relying on a novel design paradigm. We formally define and prove security and privacy properties in the Universal Composability framework. Our evaluation shows that Donner is efficient, reduces the on- chain number of transactions for disputes from linear in the path length to a single one, which is the key to prevent Domino attacks, and reduces the storage overhead from logarithmic in the path length to constant. Donner is Bitcoin-compatible and can be easily integrated in the LN",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "143854459",
+                    "name": "Aniket Kate"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "97a7c60f3c38f640d69f2bbe39c4275429ba00eb",
+            "title": "Cryptographic Oracle-based Conditional Payments",
+            "abstract": "the",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720773909",
+                    "name": "Varun Madathil"
+                },
+                {
+                    "authorId": "51054562",
+                    "name": "Sri Aravinda Krishnan Thyagarajan"
+                },
+                {
+                    "authorId": "2066490247",
+                    "name": "Dimitrios Vasilopoulos"
+                },
+                {
+                    "authorId": "1647368269",
+                    "name": "Lloyd Fournier"
+                },
+                {
+                    "authorId": "2103014",
+                    "name": "Giulio Malavolta"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                }
+            ]
+        },
+        {
+            "paperId": "361420b6bf73b32a2061b0d3ddde4af3229556e8",
+            "title": "Watch Your Back: Identifying Cybercrime Financial Relationships in Bitcoin through Back-and-Forth Exploration",
+            "abstract": "Cybercriminals often leverage Bitcoin for their illicit activities. In this work, we propose back-and-forth exploration, a novel automated Bitcoin transaction tracing technique to identify cybercrime financial relationships. Given seed addresses belonging to a cybercrime campaign, it outputs a transaction graph, and identifies paths corresponding to relationships between the campaign under study and external services and other cybercrime campaigns. Back-and-forth exploration provides two key contributions. First, it explores both forward and backwards, instead of only forward as done by prior work, enabling the discovery of relationships that cannot be found by only exploring forward (e.g., deposits from clients of a mixer). Second, it prevents graph explosion by combining a tagging database with a machine learning classifier for identifying addresses belonging to exchanges. We evaluate back-and-forth exploration on 30 malware families. We build oracles for 4 families using Bitcoin for C&C and use them to demonstrate that back-and-forth exploration identifies 13 C&C signaling addresses missed by prior work, 8 of which are fundamentally missed by forward-only explorations. Our approach uncovers a wealth of services used by the malware including 44 exchanges, 11 gambling sites, 5 payment service providers, 4 underground markets, 4 mining pools, and 2 mixers. In 4 families, the relations include new attribution points missed by forward-only explorations. It also identifies relationships between the malware families and other cybercrime campaigns, highlighting how some malware operators participate in a variety of cybercriminal activities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167318393",
+                    "name": "Gibran G\u00f3mez"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "144274911",
+                    "name": "Juan Caballero"
+                }
+            ]
+        },
+        {
+            "paperId": "71a1614275ae50f310a3baf45194c9f6baa9994e",
+            "title": "Sleepy Channels: Bi-directional Payment Channels without Watchtowers",
+            "abstract": "Payment channels (PC) are a promising solution to the scalability issue of cryptocurrencies, allowing users to perform the bulk of the transactions off-chain without needing to post everything on the blockchain. Many PC proposals however, suffer from a severe limitation: Both parties need to constantly monitor the blockchain to ensure that the other party did not post an outdated transaction. If this event happens, the honest party needs to react promptly and engage in a punishment procedure. This means that prolonged absence periods (e.g., a power outage) may be exploited by malicious users. As a mitigation, the community has introduced watchtowers, a third-party monitoring the blockchain on behalf of off-line users. Unfortunately, watchtowers are either trusted, which is critical from a security perspective, or they have to lock a certain amount of coins, called collateral, for each monitored PC in order to be held accountable, which is financially infeasible for a large network. We present Sleepy Channels, the first bi-directional PC protocol without watchtowers (or any other third party) that supports an unbounded number of payments and does not require parties to be persistently online. The key idea is to confine the period in which PC updates can be validated on-chain to a short, pre-determined time window, which is when the PC parties have to be online. This behavior is incentivized by letting the parties lock a collateral in the PC, which can be adjusted depending on their mutual trust and which they get back much sooner if they are online during this time window. Our protocol is compatible with any blockchain that is capable of verifying digital signatures (e.g., Bitcoin), as shown by our proof of concept. Moreover, our experimental results show that Sleepy Channels impose a communication and computation overhead similar to state-of-the-art PC protocols while removing watchtower's collateral and fees for the monitoring service.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1720773531",
+                    "name": "Lukas Aumayr"
+                },
+                {
+                    "authorId": "51054562",
+                    "name": "Sri Aravinda Krishnan Thyagarajan"
+                },
+                {
+                    "authorId": "2103014",
+                    "name": "Giulio Malavolta"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                }
+            ]
+        },
+        {
+            "paperId": "80e6400f4ed21a2cbf87c41cdcb660fcd1fd7ebc",
+            "title": "Foundations of Coin Mixing Services",
+            "abstract": "Coin mixing services allow users to mix their cryptocurrency coins and thus enable unlinkable payments in a way that prevents tracking of honest users' coins by both the service provider and the users themselves. The easy bootstrapping of new users and backwards compatibility with cryptocurrencies (such as Bitcoin) with limited support for scripts are attractive features of this architecture, which has recently gained considerable attention in both academia and industry. A recent work of Tairi et al. [IEEE S&P 2021] formalizes the notion of a coin mixing service and proposes A2L, a new cryptographic protocol that simultaneously achieves high efficiency and interoperability. In this work, we identify a gap in their formal model and substantiate the issue by showing two concrete counterexamples: we show how to construct two encryption schemes that satisfy their definitions but lead to a completely insecure system. To amend this situation, we investigate secure constructions of coin mixing services. First, we develop the notion of blind conditional signatures (BCS), which acts as the cryptographic core for coin mixing services. We propose game-based security definitions for BCS and propose A2L+, a modified version of the protocol by Tairi et al. that satisfies our security definitions. Our analysis is in an idealized model (akin to the algebraic group model) and assumes the hardness of the one-more discrete logarithm problem. Finally, we propose A2L-UC, another construction of BCS that achieves the stronger notion of UC-security (in the standard model), albeit with a significant increase in computation cost. This suggests that constructing a coin mixing service protocol secure under composition requires more complex cryptographic machinery than initially thought.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9032985",
+                    "name": "Noemi Glaeser"
+                },
+                {
+                    "authorId": "4436634",
+                    "name": "Matteo Maffei"
+                },
+                {
+                    "authorId": "2103014",
+                    "name": "Giulio Malavolta"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "1418521163",
+                    "name": "Erkan Tairi"
+                },
+                {
+                    "authorId": "51054562",
+                    "name": "Sri Aravinda Krishnan Thyagarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "b361a12c714b2d5cf8a6239ed37d01a332878952",
+            "title": "Universal Atomic Swaps: Secure Exchange of Coins Across All Blockchains",
+            "abstract": "Trading goods lies at the backbone of the modern economy and the recent advent of cryptocurrencies has opened the door for trading decentralized (digital) assets: A large fraction of the value of cryptocurrencies comes from the inter-currency exchange and trading, which has been arguably the most successful application of decentralized money. The security issues observed with centralized, custodial cryptocurrency exchanges have motivated the design of atomic swaps, a protocol for coin exchanges between any two users. Yet, somewhat surprisingly, no atomic swap protocol exists that simultaneously satisfies the following simple but desired properties: (i) non-custodial, departing from a third party trusted holding the coins from users during the exchange; (ii) universal that is, compatible with all (current and future) cryptocurrencies; (iii) multi-asset, supporting the exchange of multiple coins in a single atomic swap.From a theoretical standpoint, in this work we show a generic protocol to securely swap n coins from any (possible multiple) currencies for $\\tilde{n}$ coins of any other currencies, for any n and $\\tilde{n}$. We do not require any custom scripting language supported by the corresponding blockchains, besides the bare minimum ability to verify signatures on transactions. For the special case when the blockchains use ECDSA or Schnorr signatures, we design a practically efficient protocol based on adaptor signatures and time-lock puzzles. As a byproduct of our approach, atomic swaps transactions no longer include custom scripts and are identical to standard one-to-one transactions. We also show that our protocol naturally generalizes to any cycle of users, i.e., atomic swaps with more than two participants. To demonstrate the practicality of our approach, we have evaluated a prototypical implementation of our protocol for Schnorr/ECDSA signatures and observed that an atomic swap requires below one second on commodity machines. Even on blockchains with expressive smart contract support (e.g., Ethereum), our approach reduces the on-chain cost both in terms of transaction size and gas cost.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51054562",
+                    "name": "Sri Aravinda Krishnan Thyagarajan"
+                },
+                {
+                    "authorId": "2103014",
+                    "name": "Giulio Malavolta"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                }
+            ]
+        },
+        {
+            "paperId": "ec5d70e616cd8ffc7d9e367c9f015d9304ac90a6",
+            "title": "Detecting Cybercriminal Bitcoin Relationships through Backwards Exploration",
+            "abstract": "Cybercriminals often leverage Bitcoin for their illicit activities. In this work, we propose back-and-forth exploration, a novel automated Bitcoin transaction tracing technique to identify cybercrime financial relationships. Given seed addresses belonging to a cybercrime campaign, it outputs a transaction graph, and identifies paths corresponding to relationships between the campaign under study and external services and other cybercrime campaigns. Back-and-forth exploration provides two key contributions. First, it explores both forward and backwards, instead of only forward as done by prior work, enabling the discovery of relationships that cannot be found by only exploring forward (e.g., deposits from clients of a mixer). Second, it prevents graph explosion by combining a tagging data-base with a machine learning classifier for identifying addresses belonging to exchanges. We evaluate back-and-forth exploration on 30 malware families. We build oracles for 4 families using Bitcoin for C&C and use them to demonstrate that back-and-forth exploration identifies 13 C&C signaling addresses missed by prior work, 8 of which are fundamentally missed by forward-only explorations. Our approach uncovers a wealth of services used by the malware including 44 exchanges, 11 gambling sites, 5 payment service providers, 4 underground markets, 4 mining pools, and 2 mixers. In 4 families, the relations include new attribution points missed by forward-only explorations. It also identifies relationships between the malware families and other cybercrime campaigns, highlighting how some malware operators participate in a variety of cybercriminal activities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167318393",
+                    "name": "Gibran G\u00f3mez"
+                },
+                {
+                    "authorId": "1403756222",
+                    "name": "Pedro A. Moreno-S\u00e1nchez"
+                },
+                {
+                    "authorId": "144274911",
+                    "name": "Juan Caballero"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,360 @@
+{
+    "authorId": "2163679367",
+    "papers": [
+        {
+            "paperId": "13df472c3fe81bf1b615238fbd7884c8b45d8d1c",
+            "title": "Large Language Models for Time Series: A Survey",
+            "abstract": "Large Language Models (LLMs) have seen significant use in domains such as natural language processing and computer vision. Going beyond text, image and graphics, LLMs present a significant potential for analysis of time series data, benefiting domains such as climate, IoT, healthcare, traffic, audio and finance. This survey paper provides an in-depth exploration and a detailed taxonomy of the various methodologies employed to harness the power of LLMs for time series analysis. We address the inherent challenge of bridging the gap between LLMs' original text data training and the numerical nature of time series data, and explore strategies for transferring and distilling knowledge from LLMs to numerical time series analysis. We detail various methodologies, including (1) direct prompting of LLMs, (2) time series quantization, (3) aligning techniques, (4) utilization of the vision modality as a bridging mechanism, and (5) the combination of LLMs with tools. Additionally, this survey offers a comprehensive overview of the existing multimodal time series and text datasets in diverse domains, and discusses the challenges and future opportunities of this emerging field.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108217022",
+                    "name": "Xiyuan Zhang"
+                },
+                {
+                    "authorId": "134629191",
+                    "name": "Ranak Roy Chowdhury"
+                },
+                {
+                    "authorId": "2110343779",
+                    "name": "Rajesh K. Gupta"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "5931539cb2c6c2865e6776688d3e0a42bca5ebd3",
+            "title": "How Few Davids Improve One Goliath: Federated Learning in Resource-Skewed Edge Computing Environments",
+            "abstract": "Real-world deployment of federated learning requires orchestrating clients with widely varied compute resources, from strong enterprise-grade devices in data centers to weak mobile and Web-of-Things devices. Prior works have attempted to downscale large models for weak devices and aggregate shared parts among heterogeneous models. A typical architectural assumption is that there are equally many strong and weak devices. In reality, however, we often encounter resource skew where a few (1 or 2) strong devices hold substantial data resources, alongside many weak devices. This poses challenges-the unshared portion of the large model rarely receives updates or gains benefits from weak collaborators. We aim to facilitate reciprocal benefits between strong and weak devices in resource-skewed environments. We propose RecipFL, a novel framework featuring a server-side graph hypernetwork. This hypernetwork is trained to produce parameters for personalized client models adapted to device capacity and unique data distribution. It effectively generalizes knowledge about parameters across different model architectures by encoding computational graphs. Notably, RecipFL is agnostic to model scaling strategies and supports collaboration among arbitrary neural networks. We establish the generalization bound of RecipFL through theoretical analysis and conduct extensive experiments with various model architectures. Results show that RecipFL improves accuracy by 4.5% and 7.4% for strong and weak devices respectively, incentivizing both devices to actively engage in federated learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266421485",
+                    "name": "Jiayun Zhang"
+                },
+                {
+                    "authorId": "2254819301",
+                    "name": "Shuheng Li"
+                },
+                {
+                    "authorId": "2300831536",
+                    "name": "Haiyu Huang"
+                },
+                {
+                    "authorId": "2255392604",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2265354336",
+                    "name": "Xiaohan Fu"
+                },
+                {
+                    "authorId": "2266398035",
+                    "name": "Dezhi Hong"
+                },
+                {
+                    "authorId": "2265359074",
+                    "name": "Rajesh K. Gupta"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "3adbca134ac20e69d7215537c703db9faf483b35",
+            "title": "Towards Diverse and Coherent Augmentation for Time-Series Forecasting",
+            "abstract": "Time-series data augmentation mitigates the issue of insufficient training data for deep learning models. Yet, existing augmentation methods are mainly designed for classification, where class labels can be preserved even if augmentation alters the temporal dynamics. We note that augmentation designed for forecasting requires diversity as well as coherence with the original temporal dynamics. As time-series data generated by real-life physical processes exhibit characteristics in both the time and frequency domains, we propose to combine Spectral and Time Augmentation (STAug) for generating more diverse and coherent samples. Specifically, in the frequency domain, we use the Empirical Mode Decomposition to decompose a time series and reassemble the subcomponents with random weights. This way, we generate diverse samples while being coherent with the original temporal relationships as they contain the same set of base components. In the time domain, we adapt a mix-up strategy that generates diverse as well as linearly in-between coherent samples. Experiments on five real-world time-series datasets demonstrate that STAug outperforms the base models without data augmentation as well as state-of-the-art augmentation methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108217022",
+                    "name": "Xiyuan Zhang"
+                },
+                {
+                    "authorId": "134629191",
+                    "name": "Ranak Roy Chowdhury"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                },
+                {
+                    "authorId": "2110343779",
+                    "name": "Rajesh K. Gupta"
+                },
+                {
+                    "authorId": "2505157",
+                    "name": "Dezhi Hong"
+                }
+            ]
+        },
+        {
+            "paperId": "681f05c1952ce3e1dc48a4ceb230a6033092be68",
+            "title": "Unleashing the Power of Shared Label Structures for Human Activity Recognition",
+            "abstract": "Current human activity recognition (HAR) techniques regard activity labels as integer class IDs without explicitly modeling the semantics of class labels. We observe that different activity names often have shared structures. For example, \"open door\" and \"open fridge\" both have \"open\" as the action; \"kicking soccer ball\" and \"playing tennis ball\" both have \"ball\" as the object. Such shared structures in label names can be translated to the similarity in sensory data and modeling common structures would help uncover knowledge across different activities, especially for activities with limited samples. In this paper, we propose SHARE, a HAR framework that takes into account shared structures of label names for different activities. To exploit the shared structures, SHARE comprises an encoder for extracting features from input sensory time series and a decoder for generating label names as a token sequence. We also propose three label augmentation techniques to help the model more effectively capture semantic structures across activities, including a basic token-level augmentation, and two enhanced embedding-level and sequence-level augmentations utilizing the capabilities of pre-trained models. SHARE outperforms state-of-the-art HAR models in extensive experiments on seven HAR benchmark datasets. We also evaluate in few-shot learning and label imbalance settings and observe even more significant performance gap.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108217022",
+                    "name": "Xiyuan Zhang"
+                },
+                {
+                    "authorId": "134629191",
+                    "name": "Ranak Roy Chowdhury"
+                },
+                {
+                    "authorId": "2266421485",
+                    "name": "Jiayun Zhang"
+                },
+                {
+                    "authorId": "2505157",
+                    "name": "Dezhi Hong"
+                },
+                {
+                    "authorId": "2110343779",
+                    "name": "Rajesh K. Gupta"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "70e5e9bd353d1b1e54b4eebd3a67b58026a13dff",
+            "title": "PrimeNet: Pre-training for Irregular Multivariate Time Series",
+            "abstract": "Real-world applications often involve irregular time series, for which the time intervals between successive observations are non-uniform. Irregularity across multiple features in a multi-variate time series further results in a different subset of features at any given time (i.e., asynchronicity). Existing pre-training schemes for time-series, however, often assume regularity of time series and make no special treatment of irregularity. We argue that such irregularity offers insight about domain property of the data\u2014for example, frequency of hospital visits may signal patient health condition\u2014that can guide representation learning. In this work, we propose PrimeNet to learn a self-supervised representation for irregular multivariate time-series. Specifically, we design a time sensitive contrastive learning and data reconstruction task to pre-train a model. Irregular time-series exhibits considerable variations in sampling density over time. Hence, our triplet generation strategy follows the density of the original data points, preserving its native irregularity. Moreover, the sampling density variation over time makes data reconstruction difficult for different regions. Therefore, we design a data masking technique that always masks a constant time duration to accommodate reconstruction for regions of different sampling density. We learn with these tasks using unlabeled data to build a pre-trained model and fine-tune on a downstream task with limited labeled data, in contrast with existing fully supervised approach for irregular time-series, requiring large amounts of labeled data. Experiment results show that PrimeNet significantly outperforms state-of-the-art methods on naturally irregular and asynchronous data from Healthcare and IoT applications for several downstream tasks, including classification, interpolation, and regression.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "134629191",
+                    "name": "Ranak Roy Chowdhury"
+                },
+                {
+                    "authorId": "97483167",
+                    "name": "Jiacheng Li"
+                },
+                {
+                    "authorId": "2108217022",
+                    "name": "Xiyuan Zhang"
+                },
+                {
+                    "authorId": "2505157",
+                    "name": "Dezhi Hong"
+                },
+                {
+                    "authorId": "2110343779",
+                    "name": "Rajesh K. Gupta"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "9bf1a897c6d6f959b0160c0cc1675f528b974b28",
+            "title": "Minimally Supervised Contextual Inference from Human Mobility: An Iterative Collaborative Distillation Framework",
+            "abstract": "The context about trips and users from mobility data is valuable for mobile service providers to understand their customers and improve their services. Existing inference methods require a large number of labels for training, which is hard to meet in practice. In this paper, we study a more practical yet challenging setting\u2014contextual inference using mobility data with minimal supervision (i.e., a few labels per class and massive unlabeled data). A typical solution is to apply semi-supervised methods that follow a self-training framework to bootstrap a model based on all features. However, using a limited labeled set brings high risk of overfitting to self-training, leading to unsatisfactory performance. We propose a novel collaborative distillation framework STCOLAB. It sequentially trains spatial and temporal modules at each iteration following the supervision of ground-truth labels. In addition, it distills knowledge to the module being trained using the logits produced by the latest trained module of the other modality, thereby mutually calibrating the two modules and combining the knowledge from both modalities. Extensive experiments on two real-world datasets show STCOLAB achieves significantly more accurate contextual inference than various baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266421485",
+                    "name": "Jiayun Zhang"
+                },
+                {
+                    "authorId": "2108262811",
+                    "name": "Xinyang Zhang"
+                },
+                {
+                    "authorId": "2505157",
+                    "name": "Dezhi Hong"
+                },
+                {
+                    "authorId": "2110343779",
+                    "name": "Rajesh K. Gupta"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "9d697c46e6fa79f4c3a283c7539cb58f8cd5e2e8",
+            "title": "Federated Learning with Client-Exclusive Classes",
+            "abstract": "Existing federated classification algorithms typically assume the local annotations at every client cover the same set of classes. In this paper, we aim to lift such an assumption and focus on a more general yet practical non-IID setting where every client can work on non-identical and even disjoint sets of classes (i.e., client-exclusive classes ), and the clients have a common goal which is to build a global classification model to identify the union of these classes. Such heterogeneity in client class sets poses a new challenge: how to ensure different clients are operating in the same latent space so as to avoid the drift after aggregation? We observe that the classes can be described in natural languages (i.e., class names) and these names are typically safe to share with all parties. Thus, we formulate the classification problem as a matching process between data representations and class representations and break the classification model into a data encoder and a label encoder. We leverage the natural-language class names as the common ground to anchor the class representations in the label encoder. In each iteration, the label encoder updates the class representations and regulates the data representations through matching. We further use the updated class representations at each round to annotate data samples for locally-unaware classes according to similarity and distill knowledge to local models. Extensive experiments on four real-world datasets show that the proposed method can outperform various classical and state-of-the-art federated learning methods designed for learning with non-IID data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108130022",
+                    "name": "Jiayun Zhang"
+                },
+                {
+                    "authorId": "2108217022",
+                    "name": "Xiyuan Zhang"
+                },
+                {
+                    "authorId": "2108262811",
+                    "name": "Xinyang Zhang"
+                },
+                {
+                    "authorId": "2505157",
+                    "name": "Dezhi Hong"
+                },
+                {
+                    "authorId": "2110343779",
+                    "name": "Rajesh K. Gupta"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "c26c4bbac1170f7e7fb7c4298c384c859098f71f",
+            "title": "Physics-Informed Data Denoising for Real-Life Sensing Systems",
+            "abstract": "Sensors measuring real-life physical processes are ubiquitous in today's interconnected world. These sensors inherently bear noise that often adversely affects the performance and reliability of the systems they support. Classic filtering approaches introduce strong assumption on the time or frequency characteristics of sensory measurements, while learning-based denoising approaches typically rely on using ground truth clean data to train a denoising model, which is often challenging or prohibitive to obtain for many real-world applications. We observe that in many scenarios, the relationships between different sensor measurements (e.g., location and acceleration) are analytically described by laws of physics (e.g., second-order differential equation). By incorporating such physics constraints, we can guide the denoising process to improve performance even in the absence of ground truth data. In light of this, we design a physics-informed denoising model that leverages the inherent algebraic relationships between different measurements governed by the underlying physics. By obviating the need for ground truth clean data, our method offers a practical denoising solution for real-world applications. We conducted experiments in various domains, including inertial navigation, CO2 monitoring, and HVAC control, and achieved state-of-the-art performance compared with existing denoising methods. Our method can denoise data in real time (4ms for a sequence of 1s) for low-cost noisy sensors and produces results that closely align with those from high-precision, high-cost alternatives, leading to an efficient, cost-effective approach for more accurate sensor-based systems.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108217022",
+                    "name": "Xiyuan Zhang"
+                },
+                {
+                    "authorId": "2265354336",
+                    "name": "Xiaohan Fu"
+                },
+                {
+                    "authorId": "2266398673",
+                    "name": "Diyan Teng"
+                },
+                {
+                    "authorId": "2113540861",
+                    "name": "Chengyu Dong"
+                },
+                {
+                    "authorId": "2266420695",
+                    "name": "Keerthivasan Vijayakumar"
+                },
+                {
+                    "authorId": "2266421485",
+                    "name": "Jiayun Zhang"
+                },
+                {
+                    "authorId": "134629191",
+                    "name": "Ranak Roy Chowdhury"
+                },
+                {
+                    "authorId": "2266424978",
+                    "name": "Junsheng Han"
+                },
+                {
+                    "authorId": "2266398035",
+                    "name": "Dezhi Hong"
+                },
+                {
+                    "authorId": "2266398313",
+                    "name": "Rashmi Kulkarni"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                },
+                {
+                    "authorId": "2110343779",
+                    "name": "Rajesh K. Gupta"
+                }
+            ]
+        },
+        {
+            "paperId": "37b6db2f3d4725477fb5e02d913a29d162a83e95",
+            "title": "WavSpA: Wavelet Space Attention for Boosting Transformers' Long Sequence Learning Ability",
+            "abstract": "Transformer and its variants are fundamental neural architectures in deep learning. Recent works show that learning attention in the Fourier space can improve the long sequence learning capability of Transformers. We argue that wavelet transform shall be a better choice because it captures both position and frequency information with linear time complexity. Therefore, in this paper, we systematically study the synergy between wavelet transform and Transformers. We propose Wavelet Space Attention (WavSpA) that facilitates attention learning in a learnable wavelet coefficient space which replaces the attention in Transformers by (1) applying forward wavelet transform to project the input sequences to multi-resolution bases, (2) conducting attention learning in the wavelet coefficient space, and (3) reconstructing the representation in input space via backward wavelet transform. Extensive experiments on the Long Range Arena demonstrate that learning attention in the wavelet space using either fixed or adaptive wavelets can consistently improve Transformer's performance and also significantly outperform learning in Fourier space. We further show our method can enhance Transformer's reasoning extrapolation capability over distance on the LEGO chain-of-reasoning task.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1505801820",
+                    "name": "Yufan Zhuang"
+                },
+                {
+                    "authorId": "2240689",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "3180064",
+                    "name": "Fangbo Tao"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                }
+            ]
+        },
+        {
+            "paperId": "5395fc01a38040aa5f50f3feb01e0709bd5bbb4a",
+            "title": "DeepViFi: detecting oncoviral infections in cancer genomes using transformers",
+            "abstract": "We consider the problem of identifying viral reads in human host genome data. We pose the problem as open-set classification as reads can originate from unknown sources such as bacterial and fungal genomes. Sequence-matching methods have low sensitivity in recognizing viral reads when the viral family is highly diverged. Hidden Markov models have higher sensitivity but require domain-specific training and are difficult to repurpose for identifying different viral families. Supervised learning methods can be trained with little domain-specific knowledge but have reduced sensitivity in open-set scenarios. We present DeepViFi, a transformer-based pipeline, to detect viral reads in short-read whole genome sequence data. At 90% precision, DeepViFi achieves 90% recall compared to 15% for other deep learning methods. DeepViFi provides a semi-supervised framework to learn representations of viral families without domain-specific knowledge, and rapidly and accurately identify target sequences in open-set settings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1404305671",
+                    "name": "Utkrisht Rajkumar"
+                },
+                {
+                    "authorId": "2163679236",
+                    "name": "Sara Javadzadeh"
+                },
+                {
+                    "authorId": "2179449453",
+                    "name": "Mihir Bafna"
+                },
+                {
+                    "authorId": "2151076702",
+                    "name": "D. Wu"
+                },
+                {
+                    "authorId": "2151886670",
+                    "name": "Rose Yu"
+                },
+                {
+                    "authorId": "2163679367",
+                    "name": "Jingbo Shang"
+                },
+                {
+                    "authorId": "7553330",
+                    "name": "V. Bafna"
+                }
+            ]
+        }
+    ]
+}

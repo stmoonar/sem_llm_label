@@ -1,0 +1,2192 @@
+{
+    "authorId": "1713664",
+    "papers": [
+        {
+            "paperId": "31fdbbd5b9e6a468e1c89f3defea27e716bdbfe0",
+            "title": "Connecting the Dots -- Density-Connectivity Distance unifies DBSCAN, k-Center and Spectral Clustering",
+            "abstract": "Despite the popularity of density-based clustering, its procedural definition makes it difficult to analyze compared to clustering methods that minimize a loss function. In this paper, we reformulate DBSCAN through a clean objective function by introducing the density-connectivity distance (dc-dist), which captures the essence of density-based clusters by endowing the minimax distance with the concept of density. This novel ultrametric allows us to show that DBSCAN, k-center, and spectral clustering are equivalent in the space given by the dc-dist, despite these algorithms being perceived as fundamentally different in their respective literatures. We also verify that finding the pairwise dc-dists gives DBSCAN clusterings across all epsilon-values, simplifying the problem of parameterizing density-based clustering. We conclude by thoroughly analyzing density-connectivity and its properties -- a task that has been elusive thus far in the literature due to the lack of formal tools. Our code recreates every experiment below: https://github.com/Andrew-Draganov/dc_dist",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2051282531",
+                    "name": "A. Beer"
+                },
+                {
+                    "authorId": "1491125637",
+                    "name": "Andrew Draganov"
+                },
+                {
+                    "authorId": "2166865450",
+                    "name": "Ellen Hohma"
+                },
+                {
+                    "authorId": "2073936109",
+                    "name": "Philipp Jahn"
+                },
+                {
+                    "authorId": "2184490299",
+                    "name": "Christian M. M. Frey"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "4716db44fadc658a789a2ce0f8c1f46845ac07a3",
+            "title": "ActUp: Analyzing and Consolidating tSNE and UMAP",
+            "abstract": "TSNE and UMAP are popular dimensionality reduction algorithms due to their speed and interpretable low-dimensional embeddings. Despite their popularity, however, little work has been done to study their full span of differences. We theoretically and experimentally evaluate the space of parameters in the TSNE and UMAP algorithms and observe that a single one -- the normalization -- is responsible for switching between them. This, in turn, implies that a majority of the algorithmic differences can be toggled without affecting the embeddings. We discuss the implications this has on several theoretic claims behind UMAP, as well as how to reconcile them with existing TSNE interpretations.\n\n\n\nBased on our analysis, we provide a method (GDR) that combines previously incompatible techniques from TSNE and UMAP and can replicate the results of either algorithm. This allows our method to incorporate further improvements, such as an acceleration that obtains either method's outputs faster than UMAP. We release improved versions of TSNE, UMAP, and GDR that are fully plug-and-play with the traditional libraries.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1491125637",
+                    "name": "Andrew Draganov"
+                },
+                {
+                    "authorId": "1974121841",
+                    "name": "Jakob R\u00f8dsgaard J\u00f8rgensen"
+                },
+                {
+                    "authorId": "2171649127",
+                    "name": "Katrine Scheel Nellemann"
+                },
+                {
+                    "authorId": "3094226",
+                    "name": "D. Mottin"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "14016183",
+                    "name": "Tyrus Berry"
+                },
+                {
+                    "authorId": "3222408",
+                    "name": "\u00c7igdem Aslay"
+                }
+            ]
+        },
+        {
+            "paperId": "6f81acc05dd51920a383dc3e2f0297501f22d9c3",
+            "title": "GLEAN: Generalized-Deduplication-Enabled Approximate Edge Analytics",
+            "abstract": "The Internet of Things (IoT) has brought about exponential growth in sensor data. This has led to increasing demands for efficient and novel data transmission, storage, and analytics solutions for sustainable IoT ecosystems. It has been shown that the generalized deduplication (GD) compression algorithm offers not only competitive compression ratio and throughput but also random access properties that enable direct analytics of compressed data. In this article, we thoroughly stress test existing methods for direct analytics of GD compressed data with a diverse collection of 103 data sets, identify the need to optimize GD for analytics, and develop a new version of GD to this end. We also propose the generalized deduplication-enabled approximate edge analytics (GLEAN) framework. This framework applies the aforementioned analytics techniques at the Edge server to deliver end-to-end lossless data compression and high-quality Edge analytics in the IoT, thereby addressing challenges related to data transmission, storage, and analytics. Impressive analytics performance was achieved using this framework, with a median increase in <inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula>-means clustering error of just 2% relative to analytics performed on uncompressed data, while running <inline-formula> <tex-math notation=\"LaTeX\">$7.5\\times $ </tex-math></inline-formula> faster and requiring <inline-formula> <tex-math notation=\"LaTeX\">$3.9\\times $ </tex-math></inline-formula> less storage at the Edge server compared to universal compressors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144764649",
+                    "name": "Aaron Hurst"
+                },
+                {
+                    "authorId": "9296846",
+                    "name": "D. Lucani"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": null,
+                    "name": "Qi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "894a3d416568f329af3d5eb1dbbfd0e4566606b6",
+            "title": "EGG-SynC: Exact GPU-parallelized Grid-based Clustering by Synchronization",
+            "abstract": "Clustering by synchronization (SynC) is a clustering method that is motivated by the natural phenomena of synchronization and is based on the Kuramoto model. The idea is to iteratively drag similar objects closer to each other until they have synchronized. SynC has been adapted to solve several well-known data mining tasks such as subspace clustering, hierarchical clustering, and streaming clustering. This shows that the SynC model is very versatile. Sadly, SynC has an \ud835\udc42 ( \ud835\udc47 \u00d7 \ud835\udc5b 2 \u00d7 \ud835\udc51 ) complexity, which makes it impractical for larger datasets. E.g., Chen et al. [8] show runtimes of more than 10 hours for just \ud835\udc5b = 70 , 000 data points, but improve this to just above one hour by using R-Trees in their method FSynC. Both are still impractical in real-life scenarios. Furthermore, SynC uses a termination criterion that brings no guarantees that the points have synchronized but instead just stops when most points are close to synchronizing. In this paper, our contributions are manifold. We propose a new termination criterion that guarantees that all points have synchronized. To achieve a much-needed reduction in runtime, we propose a strategy to summarize partitions of the data into a grid structure, a GPU-friendly grid structure to support this and neighborhood queries, and a GPU-parallelized algorithm for clustering by synchronization (EGG-SynC) that utilize these ideas. Furthermore, we provide an extensive evaluation against state-of-the-art showing 2 to 3 orders of magnitude speedup compared to SynC and FSynC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1974121841",
+                    "name": "Jakob R\u00f8dsgaard J\u00f8rgensen"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "1847e440117a87df3086db8914448b12baac199d",
+            "title": "GPU-FAST-PROCLUS: A Fast GPU-parallelized Approach to Projected Clustering",
+            "abstract": "Projected and subspace clustering aim to find groups of similar objects within a subspace of the full-dimensional space. Where subspace clustering tries to identify clusters in all possible sub-spaces, projected clustering assigns each point to a single cluster within one projected subspace, resulting in a much smaller result set. PROCLUS is an adaptation of the k-medoids clustering algo-rithm, CLARANS, to projected clustering. Even though PROCLUS is the first projected clustering algorithm, it is still competitive in comparative empirical studies. PROCLUS is, however, still too slow for large-scale data or real-time interaction when used in information retrieval processes. Therefore, we propose novel algorithmic strategies to reduce computations and exploit the massive parallelism offered by modern graphical processing units (GPUs). To take advantage of their high degree of parallelism, standard sequential algorithms need to be significantly restructured. We therefore also propose a novel GPU-parallelized algorithm, GPU-FAST-PROCLUS, that takes advantage of the computational power of modern GPUs. We provide experimental studies that demonstrate the benefit of our proposed strategies and GPU-parallelizations. In this experimental evaluation, we obtain 3 orders of magnitude speedup compared to PROCLUS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1974121841",
+                    "name": "Jakob R\u00f8dsgaard J\u00f8rgensen"
+                },
+                {
+                    "authorId": "2055402434",
+                    "name": "Katrine Scheel"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "2064051303",
+                    "name": "Ajeet Ram Pathak"
+                },
+                {
+                    "authorId": "2582138",
+                    "name": "A. Elster"
+                }
+            ]
+        },
+        {
+            "paperId": "1d23e28dbef4c34efba5b48ae70303933479578e",
+            "title": "AVID: GPU-enabled Visual Analytics with GPU-FAST-PROCLUS",
+            "abstract": "GPU-FAST-PROCLUS is a GPU-parallelized algorithm for projected clustering based on the \ud835\udc58 -medoids approach. It speeds up clustering to allow for real-time interaction \u2013 even for datasets of millions of items. Interactivity allows users to quickly determine sensible clustering parameters such as the number of clusters \ud835\udc58 , provided a suitable visualization is available. Yet, as clustering and visualization are usually decoupled, cluster results are fun-neled from the GPU back to the CPU, only to be mapped onto appropriate graphics, which are then rendered on the GPU again. This introduces a bottleneck that hinders fluid interaction with clustering. Asasolution to this, we propose AVID (Analysis and Visualization In Device). Following the principle \u201cWhat happens on the GPU, stays on the GPU\u201d, AVID removes the round trip to the CPU and keeps clustering results on the GPU to render them on the GPU directly. By doing so, users can interactively tune projected clustering parameters and observe the effects without noticeable delay. In our demo system, we showcase the efficiency of our data management strategies for projected clustering as well as the efficacy of data visualization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1974121841",
+                    "name": "Jakob R\u00f8dsgaard J\u00f8rgensen"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "37120614",
+                    "name": "Hans-J\u00f6rg Schulz"
+                }
+            ]
+        },
+        {
+            "paperId": "2b7b7eb96fc30089d53e92ad97ac2db0035dc3cb",
+            "title": "Generalized Classification of Satellite Image Time Series with Thermal Positional Encoding",
+            "abstract": "Large-scale crop type classification is a task at the core of remote sensing efforts with applications of both economic and ecological importance. Current state-of-the-art deep learning methods are based on self-attention and use satellite image time series (SITS) to discriminate crop types based on their unique growth patterns. However, existing methods generalize poorly to regions not seen during training mainly due to not being robust to temporal shifts of the growing season caused by variations in climate. To this end, we propose Thermal Positional Encoding (TPE) for attention-based crop classifiers. Unlike previous positional encoding based on calendar time (e.g. day-of-year), TPE is based on thermal time, which is obtained by accumulating daily average temperatures over the growing season. Since crop growth is directly related to thermal time, but not calendar time, TPE addresses the temporal shifts between different regions to improve generalization. We propose multiple TPE strategies, including learnable methods, to further improve results compared to the common fixed positional encodings. We demonstrate our approach on a crop classification task across four different European regions, where we obtain state-of-the-art generalization results. Our source code is available at https://github.com/jnyborg/tpe.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2122273256",
+                    "name": "Joachim Nyborg"
+                },
+                {
+                    "authorId": "46354194",
+                    "name": "Charlotte Pelletier"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "85a072df58e149349056818fdc4450ff99519c61",
+            "title": "GiDR-DUN; Gradient Dimensionality Reduction - Differences and Unification",
+            "abstract": "TSNE and UMAP are two of the most popular dimensionality reduction algorithms due to their speed and interpretable low-dimensional embeddings. However, while attempts have been made toimproveonTSNE\u2019scomputationalcomplexity,noexistingmethodcanobtainTSNEembeddingsatthespeedofUMAP.Inthiswork,weshowthatthisisindeedpossiblebycombiningthetwoap-proachesintoasinglemethod.WetheoreticallyandexperimentallyevaluatethefullspaceofparametersintheTSNEandUMAPalgo-rithmsandobservethatasingleparameter\u2013thenormalization\u2013isresponsibleforswitchingbetweenthem.This,inturn,impliesthatamajorityofthealgorithmicdifferencescanbetoggledwithoutaffectingtheembeddings.WediscusstheimplicationsthishasonseveraltheoreticclaimsunderpinningtheUMAPframework,aswellashowtoreconcilethemwithexistingTSNEinterpretations.Basedonouranalysis,weproposeanewdimensionalityre-ductionalgorithm,GDR,thatcombinespreviouslyincompatibletechniquesfromTSNEandUMAPandcanreplicatetheresultsofeitheralgorithmbychangingthenormalization.Asafurtheradvantage,GDRperformstheoptimizationfasterthanavailableUMAPmethodsandthusanorderofmagnitudefasterthanavail-ableTSNEmethods.Ourimplementationisplug-and-playwiththetraditionalUMAPandTSNElibrariesandcanbefoundathttps://github.com/Andrew-Draganov/GiDR-DUN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1491125637",
+                    "name": "Andrew Draganov"
+                },
+                {
+                    "authorId": "14016183",
+                    "name": "Tyrus Berry"
+                },
+                {
+                    "authorId": "1974121841",
+                    "name": "Jakob R\u00f8dsgaard J\u00f8rgensen"
+                },
+                {
+                    "authorId": "2171649127",
+                    "name": "Katrine Scheel Nellemann"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "3094226",
+                    "name": "D. Mottin"
+                }
+            ]
+        },
+        {
+            "paperId": "5fa3bf768a3a7e95095431cd2ea7c4ebad0b1519",
+            "title": "ECINN: Efficient Counterfactuals from Invertible Neural Networks",
+            "abstract": "Counterfactual examples identify how inputs can be altered to change the predicted class of a classifier, thus opening up the black-box nature of, e.g., deep neural networks. We propose a method, ECINN, that utilizes the generative capacities of invertible neural networks for image classification to generate counterfactual examples efficiently. In contrast to competing methods that sometimes need a thousand evaluations or more of the classifier, ECINN has a closed-form expression and generates a counterfactual in the time of only two evaluations. Arguably, the main challenge of generating counterfactual examples is to alter only input features that affect the predicted outcome, i.e., class-dependent features. Our experiments demonstrate how ECINN alters class-dependent image regions to change the perceptual and predicted class of the counterfactuals. Additionally, we extend ECINN to also produce heatmaps (ECINNh) for easy inspection of, e.g., pairwise class-dependent changes in the generated counterfactual examples. Experimentally, we find that ECINNh outperforms established methods that generate heatmap-based explanations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1942962079",
+                    "name": "Frederik Hvilshoj"
+                },
+                {
+                    "authorId": "3074923",
+                    "name": "Alexandros Iosifidis"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "66a3ee116d1ce24ec0d96a4cf4539065e5a90da7",
+            "title": "Weakly-Supervised Cloud Detection with Fixed-Point GANs",
+            "abstract": "The detection of clouds in satellite images is an essential preprocessing task for big data in remote sensing. Convolutional neural networks (CNNs) have greatly advanced the state-of-the-art in the detection of clouds in satellite images, but existing CNN-based methods are costly as they require large amounts of training images with expensive pixel-level cloud labels. To alleviate this cost, we propose Fixed-Point GAN for Cloud Detection (FCD), a weakly-supervised approach. Training with only image-level labels, we learn fixed-point translation between clear and cloudy images, so only clouds are affected during translation. Doing so enables our approach to predict pixel-level cloud labels by translating satellite images to clear ones and setting a threshold to the difference between the two images. Moreover, we propose FCD+, where we exploit the label-noise robustness of CNNs to refine the prediction of FCD, leading to further improvements. We demonstrate the effectiveness of our approach on the Landsat-8 Biome cloud detection dataset, where we obtain performance close to existing fully-supervised methods that train with expensive pixel-level labels. By fine-tuning our FCD+ with just 1% of the available pixel-level labels, we match the performance of fully-supervised methods. Our source code is publicly available at https://github.com/jnyborg/fcd.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2122273256",
+                    "name": "Joachim Nyborg"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "70ae152b27ce97f621c3ef4ac55a71c60f33a768",
+            "title": "A reproduction of Apple\u2019s bi-directional LSTM models for language identification in short strings",
+            "abstract": "Language Identification is the task of identifying a document\u2019s language. For applications like automatic spell checker selection, language identification must use very short strings such as text message fragments. In this work, we reproduce a language identification architecture that Apple briefly sketched in a blog post. We confirm the bi-LSTM model\u2019s performance and find that it outperforms current open-source language identifiers. We further find that its language identification mistakes are due to confusion between related languages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2049406706",
+                    "name": "M. Toftrup"
+                },
+                {
+                    "authorId": "2049406119",
+                    "name": "S. Sorensen"
+                },
+                {
+                    "authorId": "3451493",
+                    "name": "Manuel R. Ciosici"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "7a63b2d7c1c58e38d3858326145b8da6c05e3e42",
+            "title": "GPU-INSCY: A GPU-Parallel Algorithm and Tree Structure for Efficient Density-based Subspace Clustering",
+            "abstract": "Subspace clustering is the task of grouping objects based on mutual similarity in subspaces of the full-dimensional space. The INSCY algorithm extends the well-known density-based clustering algorithm DBSCAN. It finds dimensionality-unbiased non-redundant subspace clusters using a tree structure to speed up the processing of subspaces. Still, finding density-based clusters in all subspaces implies an exponential search space in the number of dimensions. Thus, the running time of INSCY is still measured in hours on even small datasets of 2000 points. For larger datasets, it becomes prohibitively expensive. To benefit from INSCY for real-world sized datasets, we pro-pose a novel GPU-parallel approach that runs on standard graphics cards. To utilize the many cores of the GPU, we need new algorithmic strategies that fit the computational model of the GPU. While the GPU provides a large number of threads, traditional algorithms incur diverging threads and poor memory alignment, both of which lead to idle time and poor runtime performance. In INSCY, extracting subspace regions from the SCY-tree structure and the density-based clustering of regions itself are thus unfit for the GPU. Our novel GPU-friendly algorithm GPU-INSCY computes the same subspace clustering as INSCY at dramatically reduced run-times. To achieve this, we devise a restructured SCY-tree index-structure and associated operations for the GPU, as well as a GPU-parallel density-based subspace clustering. We experimentally show that GPU-INSCY scales well with the size of the dataset and",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1974121841",
+                    "name": "Jakob R\u00f8dsgaard J\u00f8rgensen"
+                },
+                {
+                    "authorId": "2055402434",
+                    "name": "Katrine Scheel"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "bde1501bc22af3f9b4e0a1b80b03442fc06adaa9",
+            "title": "Learning by Design: Structuring and Documenting the Human Choices in Machine Learning Development",
+            "abstract": "The influence of machine learning (ML) is quickly spreading, and a number of recent technological innovations have applied ML as a central technology. However, ML development still requires a substantial amount of human expertise to be successful. The deliberation and expert judgment applied during ML development cannot be revisited or scrutinized if not properly documented, and this hinders the further adoption of ML technologies--especially in safety critical situations. In this paper, we present a method consisting of eight design questions, that outline the deliberation and normative choices going into creating a ML model. Our method affords several benefits, such as supporting critical assessment through methodological transparency, aiding in model debugging, and anchoring model explanations by committing to a pre hoc expectation of the model's behavior. We believe that our method can help ML practitioners structure and justify their choices and assumptions when developing ML models, and that it can help bridge a gap between those inside and outside the ML field in understanding how and why ML models are designed and developed the way they are.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66754807",
+                    "name": "Simon Enni"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "da4a00d4148fbb9ae70002b4cdd9634068047493",
+            "title": "On Quantitative Evaluations of Counterfactuals",
+            "abstract": "As counterfactual examples become increasingly popular for explaining decisions of deep learning models, it is essential to understand what properties quantitative evaluation metrics do capture and equally important what they do not capture. Currently, such understanding is lacking, potentially slowing down scientific progress. In this paper, we consolidate the work on evaluating visual counterfactual examples through an analysis and experiments. We find that while most metrics behave as intended for sufficiently simple datasets, some fail to tell the difference between good and bad counterfactuals when the complexity increases. We observe experimentally that metrics give good scores to tiny adversarial-like changes, wrongly identifying such changes as superior counterfactual examples. To mitigate this issue, we propose two new metrics, the Label Variation Score and the Oracle score, which are both less vulnerable to such tiny changes. We conclude that a proper quantitative evaluation of visual counterfactual examples should combine metrics to ensure that all aspects of good counterfactuals are quantified.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1942962079",
+                    "name": "Frederik Hvilshoj"
+                },
+                {
+                    "authorId": "3074923",
+                    "name": "Alexandros Iosifidis"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "107aae7ead3b706555ee832e5145ef046b869082",
+            "title": "A Real-World Data Resource of Complex Sensitive Sentences Based on Documents from the Monsanto Trial",
+            "abstract": "In this work we present a corpus for the evaluation of sensitive information detection approaches that addresses the need for real world sensitive information for empirical studies. Our sentence corpus contains different notions of complex sensitive information that correspond to different aspects of concern in a current trial of the Monsanto company. This paper describes the annotations process, where we both employ human annotators and furthermore create automatically inferred labels regarding technical, legal and informal communication within and with employees of Monsanto, drawing on a classification of documents by lawyers involved in the Monsanto court case. We release corpus of high quality sentences and parse trees with these two types of labels on sentence level. We characterize the sensitive information via several representative sensitive information detection models, in particular both keyword-based (n-gram) approaches and recent deep learning models, namely, recurrent neural networks (LSTM) and recursive neural networks (RecNN). Data and code are made publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2607936",
+                    "name": "Jan Neerbek"
+                },
+                {
+                    "authorId": "39524923",
+                    "name": "M. Eskildsen"
+                },
+                {
+                    "authorId": "1805892",
+                    "name": "Peter Dolog"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "1be51d323ce7c52587053c6aaffca9f92673e713",
+            "title": "Incremental Density-Based Clustering on Multicore Processors",
+            "abstract": "The density-based clustering algorithm is a fundamental data clustering technique with many real-world applications. However, when the database is frequently changed, how to effectively update clustering results rather than reclustering from scratch remains a challenging task. In this work, we introduce IncAnyDBC, a unique parallel incremental data clustering approach to deal with this problem. First, IncAnyDBC can process changes in bulks rather than batches like state-of-the-art methods for reducing update overheads. Second, it keeps an underlying cluster structure called the object node graph during the clustering process and uses it as a basis for incrementally updating clusters wrt. inserted or deleted objects in the database by propagating changes around affected nodes only. In additional, IncAnyDBC actively and iteratively examines the graph and chooses only a small set of most meaningful objects to produce exact clustering results of DBSCAN or to approximate results under arbitrary time constraints. This makes it more efficient than other existing methods. Third, by processing objects in blocks, IncAnyDBC can be efficiently parallelized on multicore CPUs, thus creating a work-efficient method. It runs much faster than existing techniques using one thread while still scaling well with multiple threads. Experiments are conducted on various large real datasets for demonstrating the performance of IncAnyDBC.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2925880",
+                    "name": "S. T. Mai"
+                },
+                {
+                    "authorId": "144891660",
+                    "name": "Jon Jacobsen"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "39657876",
+                    "name": "I. Spence"
+                },
+                {
+                    "authorId": "1500614044",
+                    "name": "N. Tran"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                }
+            ]
+        },
+        {
+            "paperId": "56ae511ca5bf35fcbe03fe5d7592b7d028e4ffca",
+            "title": "One of these words is not like the other: a reproduction of outlier identification using non-contextual word representations",
+            "abstract": "Word embeddings are an active topic in the NLP research community. State-of-the-art neural models achieve high performance on downstream tasks, albeit at the cost of computationally expensive training. Cost aware solutions require cheaper models that still achieve good performance. We present several reproduction studies of intrinsic evaluation tasks that evaluate non-contextual word representations in multiple languages. Furthermore, we present 50-8-8, a new data set for the outlier identification task, which avoids limitations of the original data set, such as ambiguous words, infrequent words, and multi-word tokens, while increasing the number of test cases. The data set is expanded to contain semantic and syntactic tests and is multilingual (English, German, and Italian). We provide an in-depth analysis of word embedding models with a range of hyper-parameters. Our analysis shows the suitability of different models and hyper-parameters for different tasks and the greater difficulty of representing German and Italian languages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2008215490",
+                    "name": "Jesper Brink Andersen"
+                },
+                {
+                    "authorId": "2008216241",
+                    "name": "Mikkel Bak Bertelsen"
+                },
+                {
+                    "authorId": "2008214319",
+                    "name": "Mikkel H\u00f8rby Schou"
+                },
+                {
+                    "authorId": "3451493",
+                    "name": "Manuel R. Ciosici"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "739a52f5023983cf72d605f91c32d111bcdfa108",
+            "title": "Accelerated High-Quality Mutual-Information Based Word Clustering",
+            "abstract": "Word clustering groups words that exhibit similar properties. One popular method for this is Brown clustering, which uses short-range distributional information to construct clusters. Specifically, this is a hard hierarchical clustering with a fixed-width beam that employs bi-grams and greedily minimizes global mutual information loss. The result is word clusters that tend to outperform or complement other word representations, especially when constrained by small datasets. However, Brown clustering has high computational complexity and does not lend itself to parallel computation. This, together with the lack of efficient implementations, limits their applicability in NLP. We present efficient implementations of Brown clustering and the alternative Exchange clustering as well as a number of methods to accelerate the computation of both hierarchical and flat clusters. We show empirically that clusters obtained with the accelerated method match the performance of clusters computed using the original methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3451493",
+                    "name": "Manuel R. Ciosici"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "113320522",
+                    "name": "Leon Derczynski"
+                }
+            ]
+        },
+        {
+            "paperId": "40586ffd4e2bc700943e85d68245e216992abbde",
+            "title": "Quantifying the morphosyntactic content of Brown Clusters",
+            "abstract": "Brown and Exchange word clusters have long been successfully used as word representations in Natural Language Processing (NLP) systems. Their success has been attributed to their seeming ability to represent both semantic and syntactic information. Using corpora representing several language families, we test the hypothesis that Brown and Exchange word clusters are highly effective at encoding morphosyntactic information. Our experiments show that word clusters are highly capable at distinguishing Parts of Speech. We show that increases in Average Mutual Information, the clustering algorithms\u2019 optimization goal, are highly correlated with improvements in encoding of morphosyntactic information. Our results provide empirical evidence that downstream NLP systems addressing tasks dependent on morphosyntactic information can benefit from word cluster features.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3451493",
+                    "name": "Manuel R. Ciosici"
+                },
+                {
+                    "authorId": "113320522",
+                    "name": "Leon Derczynski"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "4e53ed3a42854d5c977c57cb4c53a946f6d4596e",
+            "title": "Abbreviation Explorer - an interactive system for pre-evaluation of Unsupervised Abbreviation Disambiguation",
+            "abstract": "We present Abbreviation Explorer, a system that supports interactive exploration of abbreviations that are challenging for Unsupervised Abbreviation Disambiguation (UAD). Abbreviation Explorer helps to identify long-forms that are easily confused, and to pinpoint likely causes such as limitations of normalization, language switching, or inconsistent typing. It can also support determining which long-forms would benefit from additional input text for unsupervised abbreviation disambiguation. The system provides options for creating corrective rules that merge redundant long-forms with identical meaning. The identified rules can be easily applied to the already existing vector spaces used by UAD to improve disambiguation performance, while also avoiding the cost of retraining.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3451493",
+                    "name": "Manuel R. Ciosici"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "6f4624ecd64e14179c918ccb004c9130d0fd78ed",
+            "title": "Processing Satellite Imagery for Decision-Making in Precision Agriculture",
+            "abstract": "Empowered by geo-locating and sensor-based technologies, precision agriculture brings a data-intensive paradigm into farming. In this spirit, we investigate the role of outlier detection and visualization in decision-making for precision agriculture. We discuss two analysis tasks for visually monitoring fields that exhibit problematic crop growth compared to their neighbors, and for visualizing problematic areas inside a field. As a proof of concept, we analyze satellite imagery to case-study our tasks in the context of the Future Cropping project.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2850971",
+                    "name": "Panagiotis Bouros"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "26570105",
+                    "name": "J. Jeppesen"
+                },
+                {
+                    "authorId": "2558569",
+                    "name": "T. Toftegaard"
+                }
+            ]
+        },
+        {
+            "paperId": "b47e918216335a1a700964f1fd586bf5af5200a6",
+            "title": "Active Learning of SVDD Hyperparameter Values",
+            "abstract": "Support Vector Data Description (SVDD) is a popular one-class classifier, and well-suited for outlier detection. However, the effectiveness of SVDD depends on selecting good hyperparameter values \u2013 a difficult problem that has received significant attention in the literature. Since SVDD is an unsupervised classifier, tuning of hyperparameter values is difficult. This has motivated several methods to estimate hyperparameter values based on data characteristics. But existing methods are purely heuristic, and the conditions under which they work well are largely unclear. This has created a situation where instead of selecting hyperparameter values, one has to choose among several, equally plausible heuristics.In this article, we make some strides towards a principled approach to estimate SVDD hyperparameter values. We propose LAMA (Local Active Min-Max Alignment), the first method to select SVDD hyperparameter values by active learning. The core idea is based on kernel alignment, which we adapt to active learning with small sample sizes. LAMA provides estimates for both of the SVDD hyperparameters. These estimates are evidence-based, i.e., rely on actual class labels, and come with a quality score. This eliminates the need for manual validation, an issue with current heuristics. LAMA outperforms state-of-theart competitors in extensive experiments on real-world data. In several cases, LAMA even yields results close to the empirical upper bound.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "46220261",
+                    "name": "Holger Trittenbach"
+                },
+                {
+                    "authorId": "145635095",
+                    "name": "Klemens B\u00f6hm"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "cae92b53ed9e20de77692387e299733f38b54437",
+            "title": "Unsupervised Abbreviation Disambiguation Contextual disambiguation using word embeddings",
+            "abstract": "Abbreviations often have several distinct meanings, often making their use in text ambiguous. Expanding them to their intended meaning in context is important for Machine Reading tasks such as document search, recommendation and question answering. Existing approaches mostly rely on manually labeled examples of abbreviations and their correct long-forms. Such data sets are costly to create and result in trained models with limited applicability and flexibility. Importantly, most current methods must be subjected to a full empirical evaluation in order to understand their limitations, which is cumbersome in practice. \nIn this paper, we present an entirely unsupervised abbreviation disambiguation method (called UAD) that picks up abbreviation definitions from unstructured text. Creating distinct tokens per meaning, we learn context representations as word vectors. We demonstrate how to further boost abbreviation disambiguation performance by obtaining better context representations using additional unstructured text. Our method is the first abbreviation disambiguation approach with a transparent model that allows performance analysis without requiring full-scale evaluation, making it highly relevant for real-world deployments. \nIn our thorough empirical evaluation, UAD achieves high performance on large real-world data sets from different domains and outperforms both baseline and state-of-the-art methods. UAD scales well and supports thousands of abbreviations with multiple different meanings within a single model. \nIn order to spur more research into abbreviation disambiguation, we publish a new data set, that we also use in our experiments.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3451493",
+                    "name": "Manuel R. Ciosici"
+                },
+                {
+                    "authorId": "1746788",
+                    "name": "T. Sommer"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "d953bc72887d3bfbdfce6ec2c01b29c707071812",
+            "title": "Scalable Interactive Dynamic Graph Clustering on Multicore CPUs",
+            "abstract": "The structural graph clustering algorithm SCAN is a fundamental technique for managing and analyzing graph data. However, its high runtime remains a computational bottleneck, which limits its applicability. In this paper, we propose a novel interactive approach for tackling this problem on multicore CPUs. Our algorithm, called anySCAN, iteratively processes vertices in blocks. The acquired results are merged into an underlying cluster structure consisting of the so-called super-nodes for building clusters. During its runtime, anySCAN can be suspended for examining intermediate results and resumed for finding better results at arbitrary time points, making it an anytime algorithm which is capable of handling very large graphs in an interactive way and under arbitrary time constraints. Moreover, its block processing scheme allows the design of a scalable parallel algorithm on shared memory architectures such as multicore CPUs for speeding up the algorithm further at each iteration. Consequently, anySCAN uniquely is a both interactive and work-efficient parallel algorithm. We further introduce danySCAN an efficient bulk update scheme for anySCAN on dynamic graphs in which the clusters are updated in bulks and in a parallel interactive scheme. Experiments are conducted on very large real graph datasets for demonstrating the performance of anySCAN. They show its ability to acquire very good approximate results early, leading to orders of magnitude speedup compared to SCAN and its variants. Moreover, it scales very well with the number of threads when dealing with both static and dynamic graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2925880",
+                    "name": "S. T. Mai"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "31468535",
+                    "name": "Mathias Skovgaard Birk"
+                },
+                {
+                    "authorId": "40899464",
+                    "name": "Martin Storgaard Dieu"
+                },
+                {
+                    "authorId": "144891660",
+                    "name": "Jon Jacobsen"
+                },
+                {
+                    "authorId": "2065384360",
+                    "name": "Jesper Kristensen"
+                }
+            ]
+        },
+        {
+            "paperId": "274763dcc74da716a5f282d88b268309ed642f90",
+            "title": "Using Balancing Terms to Avoid Discrimination in Classification",
+            "abstract": "From personalized ad delivery and healthcare to criminal sentencing, more decisions are made with help from methods developed in the fields of data mining and machine learning than ever before. However, their widespread use has raised concerns about the discriminatory impact which the methods may have on people subject to these decisions. Recently, imbalance in the misclassification rates between groups has been identified as a source of discrimination. Such discrimination is not handled by most existing work in discrimination-aware data mining, and it can persist even if other types of discrimination are alleviated. In this article, we present the Balancing Terms (BT) method to address this problem. BT balances the error rates of any classifier with a differentiable prediction function, and unlike existing work, it can incorporate a preference for the trade-off between fairness and accuracy. We empirically evaluate BT on real-world data, demonstrating that our method produces tradeoffs between error rate balance and total classification error that are superior and in only few cases comparable to the state-of-the-art.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "66754807",
+                    "name": "Simon Enni"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "dcbc6d398ed21b5321ad22f734e95f0fe86de760",
+            "title": "Abbreviation Expander - a Web-based System for Easy Reading of Technical Documents",
+            "abstract": "Abbreviations and acronyms are a part of textual communication in most domains. However, abbreviations are not necessarily defined in documents that employ them. Understanding all abbreviations used in a given document often requires extensive knowledge of the target domain and the ability to disambiguate based on context. This creates considerable entry barriers to newcomers and difficulties in automated document processing. Existing abbreviation expansion systems or tools require substantial technical knowledge for set up or make strong assumptions which limit their use in practice. Here, we present Abbreviation Expander, a system that builds on state of the art methods for identification of abbreviations, acronyms and their definitions and a novel disambiguator for abbreviation expansion in an easily accessible web-based solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3451493",
+                    "name": "Manuel R. Ciosici"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "3e62841f8c1d49efe3ad1005b07fc4a869a901c7",
+            "title": "TABOO: Detecting Unstructured Sensitive Information Using Recursive Neural Networks",
+            "abstract": "Abstract-Leak of sensitive information from unstructured text documents is a costly problem both for government and for industrial institutions. Traditional approaches for data leak prevention are commonly based on the hypothesis that sensitive information is reflected in the presence of distinct sensitive words. However, for complex sensitive information, this hypothesis may not hold.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2607936",
+                    "name": "Jan Neerbek"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1805892",
+                    "name": "Peter Dolog"
+                }
+            ]
+        },
+        {
+            "paperId": "4fdab84b9806555936d46c9f536672391c4ce854",
+            "title": "Scalable and Interactive Graph Clustering Algorithm on Multicore CPUs",
+            "abstract": "The structural graph clustering algorithm SCAN is a fundamental technique for managing and analyzing graph data. However, its high runtime remains a computational bottleneck, which limits its applicability. In this paper, we propose a novel interactive approach for tackling this problem on multicore CPUs. Our algorithm, called anySCAN, iteratively processes vertices in blocks. The acquired results are merged into an underlying cluster structures consisting of the so-called supernodes for building clusters. During its runtime, anySCAN can be suppressed for examining intermediate results and resumed for finding better result at arbitrary time points, making it an anytime algorithm which is capable to deal with very large graphs in an interactive way and under arbitrary time constraints. Moreover, its block processing scheme allows the design of a scalable parallel algorithm on shared memory architectures such as multicore CPUs for further speeding up the algorithm at each iteration. Consequently, anySCAN uniquely is an interactive and parallel algorithm at the same time. Experiments are conducted on very large real graph datasets for demonstrating the performance of anySCAN. It acquires very good approximate results early, leading to orders of magnitude speedup factor compared to SCAN and its variants. Using 16 threads, the acquired speed up factors are up to 13.5 times over its sequential version.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2925880",
+                    "name": "S. T. Mai"
+                },
+                {
+                    "authorId": "40899464",
+                    "name": "Martin Storgaard Dieu"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "144891660",
+                    "name": "Jon Jacobsen"
+                },
+                {
+                    "authorId": "2065384360",
+                    "name": "Jesper Kristensen"
+                },
+                {
+                    "authorId": "31468535",
+                    "name": "Mathias Skovgaard Birk"
+                }
+            ]
+        },
+        {
+            "paperId": "a78214bc1c36c1822337d48e62ba060cf9a8d034",
+            "title": "Template Skycube Algorithms for Heterogeneous Parallelism on Multicore and GPU Architectures",
+            "abstract": "Multicore CPUs and cheap co-processors such as GPUs create opportunities for vastly accelerating database queries. However, given the differences in their threading models, expected granularities of parallelism, and memory subsystems, effectively utilising all cores with all co-processors for an intensive query is very difficult. This paper introduces a novel templating methodology to create portable, yet architecture-aware, algorithms. We apply this methodology on the very compute-intensive task of calculating the *skycube*, a materialisation of exponentially many skyline query results, which finds applications in data exploration and multi-criteria decision making. We define three parallel templates, two that leverage insights from previous skycube research and a third that exploits a novel point-based paradigm to expose more data parallelism. An experimental study shows that, relative to the state-of-the-art that does not parallelise well due to its memory and cache requirements, our algorithms provide an order of magnitude improvement on either architecture and proportionately improve as more GPUs are added.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1396534847",
+                    "name": "Kenneth S. B\u00f8gh"
+                },
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "3132288",
+                    "name": "Darius Sidlauskas"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "13c47ed140cc36191678a48b3115939cd0aa8314",
+            "title": "AnyDBC: An Efficient Anytime Density-based Clustering Algorithm for Very Large Complex Datasets",
+            "abstract": "The density-based clustering algorithm DBSCAN is a state-of-the-art data clustering technique with numerous applications in many fields. However, its O(n2) time complexity still remains a severe weakness. In this paper, we propose a novel anytime approach to cope with this problem by reducing both the range query and the label propagation time of DBSCAN. Our algorithm, called AnyDBC, compresses the data into smaller density-connected subsets called primitive clusters and labels objects based on connected components of these primitive clusters for reducing the label propagation time. Moreover, instead of passively performing the range query for all objects like existing techniques, AnyDBC iteratively and actively learns the current cluster structure of the data and selects a few most promising objects for refining clusters at each iteration. Thus, in the end, it performs substantially fewer range queries compared to DBSCAN while still guaranteeing the exact final result of DBSCAN. Experiments show speedup factors of orders of magnitude compared to DBSCAN and its fastest variants on very large real and synthetic complex datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2925880",
+                    "name": "S. T. Mai"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "31894642",
+                    "name": "Martin Storgaard"
+                }
+            ]
+        },
+        {
+            "paperId": "256b13932e5c3121ca0ff565f585c3c4bc000355",
+            "title": "Maximum Coverage Representative Skyline",
+            "abstract": "Skyline queries represent a dataset by the points on its pareto frontier, but can become very large. To alleviate this problem, representative skylines select exactly k skyline points. However, existing approaches are not scaleinvariant, not stable, or must materialise the entire skyline. We introduce the maximum coverage representative skyline, which returns the k points collectively dominating the largest area of the data space. It satisfies the above properties and reflects a critical property of the skyline itself.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1414130631",
+                    "name": "M. S\u00f8holm"
+                },
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "a9ec945f6544e803c79161f6950b22e42677d9f3",
+            "title": "MultiClust 2013: Multiple Clusterings, Multiview Data, and Multisource Knowledgedriven Clustering: [Workshop Report]",
+            "abstract": "In this workshop report, we give a summary of the Multi-Clust workshop held in Chicago in conjunction with KDD 2013. We provide an overview on the history of this workshop series and the general topics covered. Furthermore, we provide summaries of the invited talks and of the contributed papers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1741392",
+                    "name": "C. Domeniconi"
+                },
+                {
+                    "authorId": "1794262",
+                    "name": "Francesco Gullo"
+                },
+                {
+                    "authorId": "1688359",
+                    "name": "Andrea Tagarelli"
+                },
+                {
+                    "authorId": "3310376",
+                    "name": "Arthur Zimek"
+                }
+            ]
+        },
+        {
+            "paperId": "a838770a777fd09552f710c00480765f018030ec",
+            "title": "Scalable parallelization of skyline computation for multi-core processors",
+            "abstract": "The skyline is an important query operator for multi-criteria decision making. It reduces a dataset to only those points that offer optimal trade-offs of dimensions. In general, it is very expensive to compute. Recently, multicore CPU algorithms have been proposed to accelerate the computation of the skyline. However, they do not sufficiently minimize dominance tests and so are not competitive with state-of-the-art sequential algorithms. In this paper, we introduce a novel multicore skyline algorithm, Hybrid, which processes points in blocks. It maintains a shared, global skyline among all threads, which is used to minimize dominance tests while maintaining high throughput. The algorithm uses an efficiently-updatable data structure over the shared, global skyline, based on point-based partitioning. Also, we release a large benchmark of optimized skyline algorithms, with which we demonstrate on challenging workloads a 100-fold speedup over state-of-the-art multicore algorithms and a 10-fold speedup with 16 cores over state-of-the-art sequential algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "3132288",
+                    "name": "Darius Sidlauskas"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1396534847",
+                    "name": "Kenneth S. B\u00f8gh"
+                }
+            ]
+        },
+        {
+            "paperId": "ad00cd2946dd745609161745dad4ac29e58e9f5c",
+            "title": "Work-Efficient Parallel Skyline Computation for the GPU",
+            "abstract": "The skyline operator returns records in a dataset that provide optimal trade-offs of multiple dimensions. State-of-the-art skyline computation involves complex tree traversals, data-ordering, and conditional branching to minimize the number of point-to-point comparisons. Meanwhile, GPGPU computing offers the potential for parallelizing skyline computation across thousands of cores. However, attempts to port skyline algorithms to the GPU have prioritized throughput and failed to outperform sequential algorithms. \n \nIn this paper, we introduce a new skyline algorithm, designed for the GPU, that uses a global, static partitioning scheme. With the partitioning, we can permit controlled branching to exploit transitive relationships and avoid most point-to-point comparisons. The result is a non-traditional GPU algorithm, SkyAlign, that prioritizes work-efficiency and respectable throughput, rather than maximal throughput, to achieve orders of magnitude faster performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1396534847",
+                    "name": "Kenneth S. B\u00f8gh"
+                },
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "b4d9d434df754a3e427bd3cfd144a8969036fc2b",
+            "title": "Explanations for Skyline Query Results",
+            "abstract": "Skyline queries are a well-studied problem for multidimensional data, wherein points are returned to the user i\u21b5 no other point is preferable across all attributes. This leaves only the points most likely to appeal to an arbitrary user. However, some dominated points may still be interesting, and the skyline o\u21b5ers little support for helping the user understand why some interesting points are omitted from the results. In this paper, we introduce the Sky-not query .G iven a query point p, a dataset S, and constraints with bounding corners qL and qU, the Sky-not query returns the alternative constraints q 0 closest to qL for which p is in the skyline. This equips the user with an understanding of not just that a point was dominated, but also how severely. He can then assess himself whether the point is competitive. We first propose theoretical results that show how to drastically reduce the input processed by a Sky-not query, independent of any algorithm. We then o\u21b5er a skyline-like and an ecient recursive algorithm for solving Sky-not queries, which we evaluate in an extensive experimental evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "d74048fa823f97583ebb2206cdb0ecb79c40122b",
+            "title": "Efficient caching for constrained skyline queries",
+            "abstract": "Constrained skyline queries retrieve all points that optimize some user\u2019s preferences subject to orthogonal range constraints, but at significant computational cost. This paper is the first to propose caching to improve constrained skyline query response time. Because arbitrary range constraints are unlikely to match a cached query exactly, our proposed method identifies and exploits similar cached queries to reduce the computational overhead of subsequent ones. We consider interactive users posing a string of similar queries and show how these can be classified into four cases based on how they overlap cached queries. For each we present a specialized solution. For the general case of independent users, we introduce the Missing Points Region (MPR), that minimizes disk reads, and an approximation of the MPR. An extensive experimental evaluation reveals that the querying for an (approximate) MPR drastically reduces both fetch times and skyline computation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "27397824",
+                    "name": "Michael L. Mortensen"
+                },
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "35588042",
+                    "name": "Matteo Magnani"
+                }
+            ]
+        },
+        {
+            "paperId": "e048b717b751aa7aedf01734557328b6c1f8b171",
+            "title": "Learning Representations for Outlier Detection on a Budget",
+            "abstract": "The problem of detecting a small number of outliers in a large dataset is an important task in many fields from fraud detection to high-energy physics. Two approaches have emerged to tackle this problem: unsupervised and supervised. Supervised approaches require a sufficient amount of labeled data and are challenged by novel types of outliers and inherent class imbalance, whereas unsupervised methods do not take advantage of available labeled training examples and often exhibit poorer predictive performance. We propose BORE (a Bagged Outlier Representation Ensemble) which uses unsupervised outlier scoring functions (OSFs) as features in a supervised learning framework. BORE is able to adapt to arbitrary OSF feature representations, to the imbalance in labeled data as well as to prediction-time constraints on computational cost. We demonstrate the good performance of BORE compared to a variety of competing methods in the non-budgeted and the budgeted outlier detection problem on 12 real-world datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2397054",
+                    "name": "Barbora Micenkov\u00e1"
+                },
+                {
+                    "authorId": "2953855",
+                    "name": "B. McWilliams"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "2678205304462618580359e27bb2fad34cbf88c2",
+            "title": "On the Suitability of Skyline Queries for Data Exploration",
+            "abstract": "The skyline operator has been studied in database research for multi-criteria decision making. Until now the focus has been on the eciency or accuracy of single queries. In practice, however, users are increasingly confronted with unknown data collections, where precise query formulation proves dicult. Instead, users explore the data in a sequence of incrementally changing queries to the data to match their understanding of the data and task. In this work, we study the skyline operator as a tool in such exploratory querying both analytically and empirically. We show how its results evolve as users modify their queries, and suggest using our findings to guide users in formulating reasonable queries.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "27397824",
+                    "name": "Michael L. Mortensen"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "42ae24e5c7561f3b38084743377d5b5d6b8a8b61",
+            "title": "Discriminative features for identifying and interpreting outliers",
+            "abstract": "We consider the problem of outlier detection and interpretation. While most existing studies focus on the first problem, we simultaneously address the equally important challenge of outlier interpretation. We propose an algorithm that uncovers outliers in subspaces of reduced dimensionality in which they are well discriminated from regular objects while at the same time retaining the natural local structure of the original data to ensure the quality of outlier explanation. Our algorithm takes a mathematically appealing approach from the spectral graph embedding theory and we show that it achieves the globally optimal solution for the objective of subspace learning. By using a number of real-world datasets, we demonstrate its appealing performance not only w.r.t. the outlier detection rate but also w.r.t. the discriminative human-interpretable features. This is the first approach to exploit discriminative features for both outlier detection and interpretation, leading to better understanding of how and why the hidden outliers are exceptional.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "6418098",
+                    "name": "Xuan-Hong Dang"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1736021",
+                    "name": "R. Ng"
+                },
+                {
+                    "authorId": "3310376",
+                    "name": "Arthur Zimek"
+                },
+                {
+                    "authorId": "26011531",
+                    "name": "Erich Schubert"
+                }
+            ]
+        },
+        {
+            "paperId": "6d59fd2b815de3c5836b362cd177cda0b115ac71",
+            "title": "Hashcube: A Data Structure for Space- and Query-Efficient Skycube Compression",
+            "abstract": "The skyline operator returns records in a dataset that provide optimal trade-offs of multiple dimensions. It is an expensive operator whose query performance can greatly benefit from materialization. However, a skyline can be executed over any subspace of dimensions, and the materialization of all subspace skylines, called the skycube, dramatically multiplies data size. Existing methods for skycube compression sacrifice too much query performance; so, we present a novel hashing- and bitstring-based compressed data structure that supports orders of magnitude faster query performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1396534847",
+                    "name": "Kenneth S. B\u00f8gh"
+                },
+                {
+                    "authorId": "145343341",
+                    "name": "S. Chester"
+                },
+                {
+                    "authorId": "3132288",
+                    "name": "Darius Sidlauskas"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "a517bc0a071be0982150c38c8ac3c52093995106",
+            "title": "Learning Outlier Ensembles: The Best of Both Worlds - Supervised and Unsupervised",
+            "abstract": "Years of research in unsupervised outlier detection have produced numerous algorithms to score data according to their exceptionality. However, the nature of outliers heavily depends on the application context and different algorithms are sensitive to outliers of different nature. This makes it very difficult to assess suitability of a particular algorithm without a priori knowledge. On the other hand, in many applications, some examples of outliers exist or can be obtained in addition to the vast amount of unlabeled data. Unfortunately, this extra knowledge cannot be simply incorporated into the existing unsupervised algorithms. In this paper, we show how to use powerful machine learning approaches to combine labeled examples together with arbitrary unsupervised outlier scoring algorithms. We aim to get the best out of the two worlds\u2014supervised and unsupervised. Our approach is also a viable solution to the recent problem of outlier ensemble selection.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2397054",
+                    "name": "Barbora Micenkov\u00e1"
+                },
+                {
+                    "authorId": "2953855",
+                    "name": "B. McWilliams"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "08c9e7ec816f06f7585029edccfab69ba7f1a54a",
+            "title": "From stars to galaxies: skyline queries on aggregate data",
+            "abstract": "The skyline operator extracts relevant records from multidimensional databases according to multiple criteria. This operator has received a lot of attention because of its ability to identify the best records in a database without requiring to specify complex parameters like the relative importance of each criterion. However, it has only been defined with respect to single records, while one fundamental functionality of database query languages is aggregation, enabling operations over sets of records. In this paper we introduce aggregate skylines, where the skyline works as a filtering predicate on sets of records. This operator can be used to express queries in the form: return the best groups depending on the features of their elements, and thus provides a powerful combination of grouping and skyline functionality. We define a semantics for aggregate skylines based on a sound theoretical framework and study its computational complexity. We propose efficient algorithms to implement this operator and test them on real and synthetic data, showing that they outperform a direct SQL implementation of up to two orders of magnitude.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35588042",
+                    "name": "Matteo Magnani"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "1890325e3de61ce1f597ed13a02eb5efb4d905be",
+            "title": "SkyView: a user evaluation of the skyline operator",
+            "abstract": "The skyline operator has recently emerged as an alternative to ranking queries. It retrieves a number of potential best options for arbitrary monotone preference functions. The success of this operator in the database community is based on the belief that users benefit from the limited effort required to specify skyline queries compared to, for instance, ranking. While application examples of the skyline operator exist, there is no principled analysis of its benefits and limitations in data retrieval tasks. Our study investigates the degree to which users understand skyline queries, how they specify query parameters and how they interact with skyline results made available in listings or map-based interfaces.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35588042",
+                    "name": "Matteo Magnani"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1679367",
+                    "name": "Kasper Hornb\u00e6k"
+                },
+                {
+                    "authorId": "143882687",
+                    "name": "M. R. Jakobsen"
+                },
+                {
+                    "authorId": "1944739",
+                    "name": "K. Larsen"
+                }
+            ]
+        },
+        {
+            "paperId": "3ece2061c7c94e406c2ca28845f76e050ba81877",
+            "title": "Efficient GPU-based skyline computation",
+            "abstract": "The skyline operator for multi-criteria search returns the most interesting points of a data set with respect to any monotone preference function. Existing work has almost exclusively focused on efficiently computing skylines on one or more CPUs, ignoring the high parallelism possible in GPUs. In this paper we investigate the challenges for efficient skyline algorithms that exploit the computational power of the GPU. We present a novel strategy for managing data transfer and memory for skylines using CPU and GPU. Our new sorting based data-parallel skyline algorithm is introduced and its properties are discussed. We demonstrate in a thorough experimental evaluation that this algorithm is faster than state-of-the-art sequential sorting based skyline algorithms and that it shows superior scalability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1396534847",
+                    "name": "Kenneth S. B\u00f8gh"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "35588042",
+                    "name": "Matteo Magnani"
+                }
+            ]
+        },
+        {
+            "paperId": "69115684eb15614b1219366ef93ddc23682b1cac",
+            "title": "Explaining Outliers by Subspace Separability",
+            "abstract": "Outliers are extraordinary objects in a data collection. Depending on the domain, they may represent errors, fraudulent activities or rare events that are subject of our interest. Existing approaches focus on detection of outliers or degrees of outlierness (ranking), but do not provide a possible explanation of how these objects deviate from the rest of the data. Such explanations would help user to interpret or validate the detected outliers. The problem addressed in this paper is as follows: given an outlier detected by an existing algorithm, we propose a method that determines possible explanations for the outlier. These explanations are expressed in the form of subspaces in which the given outlier shows separability from the inliers. In this manner, our proposed method complements existing outlier detection algorithms by providing additional information about the outliers. Our method is designed to work with any existing outlier detection algorithm and it also includes a heuristic that gives a substantial speedup over the baseline strategy.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2397054",
+                    "name": "Barbora Micenkov\u00e1"
+                },
+                {
+                    "authorId": "1736021",
+                    "name": "R. Ng"
+                },
+                {
+                    "authorId": "6418098",
+                    "name": "Xuan-Hong Dang"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "c60689e2c98a399ef71e8a6dcc0e384a23681308",
+            "title": "Outlier Detection with Space Transformation and Spectral Analysis",
+            "abstract": "Detecting a small number of outliers from a set of data observations is always challenging. In this paper, we present an approach that exploits space transformation and uses spectral analysis in the newly transformed space for outlier detection. Unlike most existing techniques in the literature which rely on notions of distances or densities, this approach introduces a novel concept based on local quadratic entropy for evaluating the similarity of a data object with its neighbors. This information theoretic quantity is used to regularize the closeness amongst data instances and subsequently benefits the process of mapping data into a usually lower dimensional space. Outliers are then identified by spectral analysis of the eigenspace spanned by the set of leading eigenvectors derived from the mapping procedure. The proposed technique is purely data-driven and imposes no assumptions regarding the data distribution, making it particularly suitable for identification of outliers from irregular, non-convex shaped distributions and from data with diverse, varying densities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "6418098",
+                    "name": "Xuan-Hong Dang"
+                },
+                {
+                    "authorId": "2397054",
+                    "name": "Barbora Micenkov\u00e1"
+                },
+                {
+                    "authorId": "1736021",
+                    "name": "R. Ng"
+                }
+            ]
+        },
+        {
+            "paperId": "e7d372a3d3678b8d9b0221c7cdb142606363e3a1",
+            "title": "Proceedings of the 4th MultiClust Workshop on Multiple Clusterings, Multi-view Data, and Multi-source Knowledge-driven Clustering",
+            "abstract": "Cluster detection is a very traditional data analysis task with several decades of research. However, it also includes a large variety of different subtopics investigated by different communities such as data mining, machine learning, statistics, and database systems. \"Multiple Clusterings, Multi-view Data, and Multi-source Knowledge-driven Clustering\" names several challenges around clustering: making sense or even making use of many, possibly redundant clustering results, of different representations and properties of data, of different sources of knowledge. Approaches such as ensemble clustering, semi-supervised clustering, subspace clustering meet around these problems. Yet they tackle these problems with different backgrounds, focus on different details, and include ideas from different research communities. This diversity is a major potential for this emerging field and should be highlighted by this workshop. A core motivation for this workshop series is our believe that these approaches are not just tackling different parts of the problem but that they should benefit from each other and, ultimately, combine the different perspectives and techniques to tackle the clustering problem more effectively. In paper presentations and discussions, we therefore would like to encourage the workshop participants to look at their own research problems from multiple perspectives.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1741392",
+                    "name": "C. Domeniconi"
+                },
+                {
+                    "authorId": "1794262",
+                    "name": "Francesco Gullo"
+                },
+                {
+                    "authorId": "1688359",
+                    "name": "Andrea Tagarelli"
+                },
+                {
+                    "authorId": "3310376",
+                    "name": "Arthur Zimek"
+                }
+            ]
+        },
+        {
+            "paperId": "13c16f3d0268f5c98edd5b873b845c32f8621e6f",
+            "title": "Multiple Clustering Views via Constrained Projections",
+            "abstract": "It is well known that off-the-shelf clustering methods may discover different patterns in a given set of data. This is because each clustering algorithm has its own bias resulting from the optimization of different criteria. Furthermore, there is no ground truth against which the clustering result can be validated. Thus, no crossvalidation technique can be carried out to tune input parameters involved in the process. As a consequence, the user has no guidelines for choosing the proper clustering method for a given data set. The use of clustering ensembles has emerged as a technique for overcoming these problems. A clustering ensemble consists of different clusterings obtained from multiple applications of any single algorithm with different initializations, or from various bootstrap samples of the available data, or from the application of different algorithms to the same data set. Clustering ensembles offer a solution to challenges inherent to clustering arising from its ill-posed nature: they can provide more robust and stable solutions by making use of the consensus across multiple clustering results, while averaging out emergent spurious structures that arise due to the various biases to which each participating algorithm is tuned, or to the variance induced by different data samples. Another issue related to clustering is the so-called curse of dimensionality. Data with thousands of dimensions abound in fields and applications as diverse as bioinformatics, security and intrusion detection, and information and image retrieval. Clustering algorithms can handle data with low dimensionality, but as the dimensionality of the data increases, these algorithms tend to break down. This is because in high dimensional spaces data become extremely sparse and are far apart from each other. A common scenario with high-dimensional data is that several clusters may exist in different subspaces comprised of different combinations of features. In many real-world problems, points in a given region of the input space may cluster along a given set of dimensions, while points located in another region may \u2217Department of Computer Science, George Mason University, carlotta@cs.gmu.edu form a tight group with respect to different dimensions. Each dimension could be relevant to at least one of the clusters. Common global dimensionality reduction techniques are unable to capture such local structure of the data. Thus, a proper feature selection procedure should operate locally in the input space. Local feature selection allows one to estimate to which degree features participate in the discovery of clusters. As a result, many different subspace clustering methods have been proposed. Traditionally, clustering ensembles and subspace clustering have been developed independently of one another. Clustering ensembles address the ill-posed nature of clustering, but don\u2019t address in general the curse of dimensionality problem. Subspace clustering avoids the curse of dimensionality in high-dimensional spaces, but typically requires the setting of critical input parameters whose values are unknown. To overcome these limitations we have introduced a unified framework that is capable of handling both issues: the ill-posed nature of clustering and the curse of dimensionality. Addressing these two issues is nontrivial as it involves solving a new problem altogether: the subspace clustering ensemble problem. Our approach takes two different perspectives: in the one case we model the problem as a multiand single-objective optimization one [3, 2, 1]; in the other we take a generative view, and assume that the base clusterings are generated from a hidden consensus clustering of the data [5, 4]. Both directions are promising and lead to interesting challenges. The first can yield general and efficient solutions, but requires as input the number of clusters in the consensus clustering. The second has higher complexity, but provides a principled solution to the \u201cHow many clusters?\u201d question. In this talk, I focus on the first approach. I introduce the formal definition of the problem of subspace clustering ensembles, and heuristics to solve it. The objective is to define methods to exploit the information provided by an ensemble of subspace clustering solutions to compute a robust consensus subspace clustering. The problem is formulated as a multiand single-objective optimization problem where the objective functions embed both sides of the ensemble components: the data clusterings and the assignments of features to clusters.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "6418098",
+                    "name": "Xuan-Hong Dang"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "145148600",
+                    "name": "J. Bailey"
+                }
+            ]
+        },
+        {
+            "paperId": "7db6ca5268e5dcb44eda06a42dbd8289d40a0198",
+            "title": "Clustering high dimensional data",
+            "abstract": "High\u2010dimensional data, i.e., data described by a large number of attributes, pose specific challenges to clustering. The so\u2010called \u2018curse of dimensionality\u2019, coined originally to describe the general increase in complexity of various computational problems as dimensionality increases, is known to render traditional clustering algorithms ineffective. The curse of dimensionality, among other effects, means that with increasing number of dimensions, a loss of meaningful differentiation between similar and dissimilar objects is observed. As high\u2010dimensional objects appear almost alike, new approaches for clustering are required. Consequently, recent research has focused on developing techniques and clustering algorithms specifically for high\u2010dimensional data. Still, open research issues remain. Clustering is a data mining task devoted to the automatic grouping of data based on mutual similarity. Each cluster groups objects that are similar to one another, whereas dissimilar objects are assigned to different clusters, possibly separating out noise. In this manner, clusters describe the data structure in an unsupervised manner, i.e., without the need for class labels. A number of clustering paradigms exist that provide different cluster models and different algorithmic approaches for cluster detection. Common to all approaches is the fact that they require some underlying assessment of similarity between data objects. In this article, we provide an overview of the effects of high\u2010dimensional spaces, and their implications for different clustering paradigms. We review models and algorithms that address clustering in high dimensions, with pointers to the literature, and sketch open research issues. We conclude with a summary of the state of the art. \u00a9 2012 Wiley Periodicals, Inc.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "99ca397de7385e3987836de7928cb0ebe64e1897",
+            "title": "Outlier Ranking via Subspace Analysis in Multiple Views of the Data",
+            "abstract": "Outlier mining is an important task for finding anomalous objects. In practice, however, there is not always a clear distinction between outliers and regular objects as objects have different roles w.r.t. different attribute sets. An object may deviate in one subspace, i.e. a subset of attributes. And the same object might appear perfectly regular in other subspaces. One can think of subspaces as multiple views on one database. Traditional methods consider only one view (the full attribute space). Thus, they miss complex outliers that are hidden in multiple subspaces. In this work, we propose Outrank, a novel outlier ranking concept. Outrank exploits subspace analysis to determine the degree of outlierness. It considers different subsets of the attributes as individual outlier properties. It compares clustered regions in arbitrary subspaces and derives an outlierness score for each object. Its principled integration of multiple views into an outlierness measure uncovers outliers that are not detectable in the full attribute space. Our experimental evaluation demonstrates that Outrank successfully determines a high quality outlier ranking, and outperforms state-of-the-art outlierness measures.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "2067468504",
+                    "name": "Patricia Iglesias S\u00e1nchez"
+                },
+                {
+                    "authorId": "2325426",
+                    "name": "Y. M\u00fclle"
+                },
+                {
+                    "authorId": "145635095",
+                    "name": "Klemens B\u00f6hm"
+                }
+            ]
+        },
+        {
+            "paperId": "83308b2f79a4e9de1e5696f2dd1b016cab5ecccd",
+            "title": "Effective Privacy-Preserving Online Route Planning",
+            "abstract": "An online Route Planning Service (RPS) computes a route from one location to another. Current RPSs such as Google Maps require the use of precise locations. However, some users may not want to disclose their source and destination locations due to privacy concerns. An approach that supplies fake locations to an existing service incurs a substantial loss of quality of service, and the service may well return a result that may be not helpful to the user. We propose a solution that is able to return accurate route planning results when source and destination regions are used in order to achieve privacy. The solution re-uses a standard online RPS rather than replicate this functionality, and it needs no trusted third party. The solution is able to compute the exact results without leaking of the exact locations to the RPS or un-trusted parties. In addition, we provide heuristics that reduce the number of times that the RPS needs to be queried, and we also describe how the accuracy and privacy requirements can be relaxed to achieve better performance. An empirical study offers insight into key properties of the approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "46811302",
+                    "name": "C. Vicente"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "145917501",
+                    "name": "Christian S. Jensen"
+                }
+            ]
+        },
+        {
+            "paperId": "9a16a45eadf4184e450630e9be267bf35b948cde",
+            "title": "Scalable density-based subspace clustering",
+            "abstract": "For knowledge discovery in high dimensional databases, subspace clustering detects clusters in arbitrary subspace projections. Scalability is a crucial issue, as the number of possible projections is exponential in the number of dimensions. We propose a scalable density-based subspace clustering method that steers mining to few selected subspace clusters. Our novel steering technique reduces subspace processing by identifying and clustering promising subspaces and their combinations directly. Thereby, it narrows down the search space while maintaining accuracy. Thorough experiments on real and synthetic databases show that steering is efficient and scalable, with high quality results. For future work, our steering paradigm for density-based subspace clustering opens research potential for speeding up other subspace clustering approaches as well.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "c8f5d0b19f69ed0b8dba1fa984cae9756c0d7c6b",
+            "title": "A Framework for Evaluation and Exploration of Clustering Algorithms in Subspaces of High Dimensional Databases",
+            "abstract": "In high dimensional databases, traditional full space clustering methods are known to fail due to the curse of dimensionality. Thus, in recent years, subspace clustering and projected clustering approaches were proposed for clustering in high dimensional spaces. As the area is rather young, few comparative studies on the advantages and disadvantages of the different algorithms exist. Part of the underlying problem is the lack of available open source implementations that could be used by researchers to understand, compare, and extend subspace and projected clustering algorithms. In this work, we discuss the requirements for open source evaluation software and propose the OpenSubspace framework that meets these requirements. OpenSubspace integrates state-of-the-art performance measures and visualization techniques to foster clustering research in high dimensional databases.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "2319164",
+                    "name": "Patrick Gerwert"
+                },
+                {
+                    "authorId": "39324340",
+                    "name": "Matthias Hannen"
+                },
+                {
+                    "authorId": "35206199",
+                    "name": "Timm Jansen"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "de0b3265a565d74b54ac837afbac9ad713409135",
+            "title": "Efficient algorithms for collaborative decision making for large scale settings",
+            "abstract": "Collaborative decision making is a successful approach in settings where data analysis and querying can be done interactively. In large scale systems with huge data volumes or many users, collaboration is often hindered by impractical runtimes.\n Existing work on improving collaboration focuses on avoiding redundancy for users working on the same task. While this improves the effectiveness of the user work process, the underlying query processing engine is typically considered a \"black box\" and left unchanged. Research in multiple query processing, on the other hand, ignores the application, and focuses on improving runtimes regardless of where the queries are issued from.\n In this work, we claim that progress can be made by taking a novel, more holistic view of the problem. We discuss a new approach that combines the two strands of research on the user experience and query engine parts in order to bring about more effective and more efficient retrieval systems that support the users' decision making process.\n We sketch promising research directions for more efficient algorithms for collaborative decision making, especially for large scale systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "f6c738dc9aef1d44a61f3bfc6e565aa1b274978d",
+            "title": "External evaluation measures for subspace clustering",
+            "abstract": "Knowledge discovery in databases requires not only development of novel mining techniques but also fair and comparable quality assessment based on objective evaluation measures. Especially in young research areas where no common measures are available, researchers are unable to provide a fair evaluation. Typically, publications glorify the high quality of one approach only justified by an arbitrary evaluation measure. However, such conclusions can only be drawn if the evaluation measures themselves are fully understood. In this paper, we provide the basis for systematic evaluation in the emerging research area of subspace clustering. We formalize general quality criteria for subspace clustering measures not yet addressed in the literature. We compare the existing external evaluation methods based on these criteria and pinpoint limitations. We propose a novel external evaluation measure which meets the requirements in form of quality properties. In thorough experiments we empirically show characteristic properties of evaluation measures. Overall, we provide a set of evaluation measures that fulfill the general quality criteria as recommendation for future evaluations. All measures and datasets are provided on our website and are integrated in our evaluation framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "47798244",
+                    "name": "Ines F\u00e4rber"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "157f2e0ffccface9d268989bd866f5fb9aa76b18",
+            "title": "Detecting outliers on arbitrary data streams using anytime approaches",
+            "abstract": "Data streams are gaining importance in many sensoring and monitoring environments. Frequent mining tasks on data streams include classification, modeling and outlier detection. Since often the data arrival rates vary, anytime algorithms have been proposed for stream clustering and classification, which can deliver a fast first result and improve their result if more time is available.\n In this work, we propose the novel concept of anytime outlier detection and introduce an algorithm for anytime outlier detection based on a hierarchical cluster representation. We show promising results in preliminary experiments and discuss future research for anytime outlier detection.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1731285",
+                    "name": "P. Kranen"
+                },
+                {
+                    "authorId": "15187261",
+                    "name": "C. Baldauf"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "1d40ce4f42e94ea0f7fd42456ced8154be1cc4eb",
+            "title": "Effiziente \u00c4hnlichkeitssuche und Data Mining in gro\u00dfen MultimediadatenbankenEfficient Adaptive Retrieval and Mining in Large Multimedia Databases",
+            "abstract": "Zusammenfassung Adaptive inhaltsbasierte \u00c4hnlichkeitsmodelle erlauben effektiven Zugriff auf Multimediadatenbanken. Mit zunehmendem Datenvolumen und steigender Anzahl an Attributen in vielen Anwendungen f\u00fchrt ihre hohe Berechnungskomplexit\u00e4t zu schlechtem Laufzeitverhalten. Wir schlagen effiziente Algorithmen und Indexstrukturen f\u00fcr effektive inhaltsbasierte Zugriffsmethoden vor. Wir stellen L\u00f6sungen sowohl f\u00fcr \u00c4hnlichkeitssuchanfragen als auch f\u00fcr Data Mining Aufgaben vor. Diese Techniken erf\u00fcllen unsere ICES Kriterien, und garantieren daher die Richtigkeit der Ergebnisse und gute Performanz. Experimentelle Untersuchungen auf synthetischen und Realdaten zeigen deutliche Geschwindigkeitsgewinne. Adaptive inhaltsbasierte \u00c4hnlichkeitsmodelle erlauben effektiven Zugriff auf Multimediadatenbanken. Mit zunehmendem Datenvolumen und steigender Anzahl an Attributen in vielen Anwendungen f\u00fchrt ihre hohe Berechnungskomplexit\u00e4t zu schlechtem Laufzeitverhalten. Wir schlagen effiziente Algorithmen und Indexstrukturen f\u00fcr effektive inhaltsbasierte Zugriffsmethoden vor. Wir stellen L\u00f6sungen sowohl f\u00fcr \u00c4hnlichkeitssuchanfragen als auch f\u00fcr Data Mining Aufgaben vor. Diese Techniken erf\u00fcllen unsere ICES Kriterien, und garantieren daher die Richtigkeit der Ergebnisse und gute Performanz. Experimentelle Untersuchungen auf synthetischen und Realdaten zeigen deutliche Geschwindigkeitsgewinne.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "3978149a4fdc0c30dd506d4e5b20d70cce415ec6",
+            "title": "Pattern detector: fast detection of suspicious stream patterns for immediate reaction",
+            "abstract": "Detecting emerging problems in information and manufacturing systems is the goal of monitoring tools. Good and timely detection of problematic conditions from measured indicators requires efficient and effective detection of critical patterns in a stream of incoming observations.\n We present Pattern Detector, an interactive system which is capable of immediate detection and signaling of such patterns. Using user-defined query patterns which indicate e.g. low rate denial-of-service attacks in network traffic, this system signals problems fast and transparently.\n The underlying detection algorithm is based on matching patterns using the Dynamic Time Warping (DTW). Fast query processing is achieved by reliably filtering out candidates via a highly efficient multistep filter-and-refine framework, anticipatory DTW (ADTW). This framework is capable of processing continuous streams such that appropriate action can be taken as soon as suspicious patterns occur.\n While our pattern detector system is developed specifically for network traffic by incorporating recent patterns from computer networking, it easily generalizes to many online stream monitoring tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "37273354",
+                    "name": "Hardy Kremer"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "9edddbb68838761a58a83f08abf4c8d47e516a64",
+            "title": "Less is More: Non-Redundant Subspace Clustering",
+            "abstract": "Clustering is an important data mining task for grouping similar objects. In high dimensional data, however, effects attributed to the \u201ccurse of dimensionality\u201d, render clustering in high dimensional data meaningless. Due to this, recent years have seen research on subspace clustering which searches for clusters in relevant subspace projections of high dimensional data. As the number of possible subspace projections is exponential in the number of dimensions, the number of possible subspace clusters can be overwhelming. In this position paper, we present our work on identifying non-redundant, relevant subspace clusters which reduce the result set to a manageable size. We discuss techniques for evaluating, visualizing and exploring subspace clusterings, and propose some directions for future work.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "f5f01b8b9e0d66917054a598b8ea86ad310cabe0",
+            "title": "Mining and representing recommendations in actively evolving recommender systems",
+            "abstract": "Recommender systems provide an automatic means of filtering out interesting items, usually based on past similarity of user ratings. In previous work, we have suggested a model that allows users to actively build a recommender network. Users express trust, obtain transparency, and grow (anonymous) recommender connections. In this work, we propose mining such active systems to generate easily understandable representations of the recommender network. Users may review these representations to provide active feedback. This approach further enhances the quality of recommendations, especially as topics of interest change over time. Most notably, it extends the amount of control users have over the model that the recommender network builds of their interests.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "16deaf3986d996a7bf5f6188d39607c2e406a1f8",
+            "title": "Self-Adaptive Anytime Stream Clustering",
+            "abstract": "Clustering streaming data requires algorithms which are capable of updating clustering results for the incoming data. As data is constantly arriving, time for processing is limited. Clustering has to be performed in a single pass over the incoming data and within the possibly varying inter-arrival times of the stream. Likewise, memory is limited, making it impossible to store all data. For clustering, we are faced with the challenge of maintaining a current result that can be presented to the user at any given time. In this work, we propose a parameter free algorithm that automatically adapts to the speed of the data stream. It makes best use of the time available under the current constraints to provide a clustering of the objects seen up to that point. Our approach incorporates the age of the objects to reflect the greater importance of more recent data. Moreover, we are capable of detecting concept drift, novelty and outliers in the stream. For efficient and effective handling, we introduce the ClusTree, a compact and self-adaptive index structure for maintaining stream summaries. Our experiments show that our approach is capable of handling a multitude of different stream characteristics for accurate and scalable anytime stream clustering.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1731285",
+                    "name": "P. Kranen"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "15187261",
+                    "name": "C. Baldauf"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "3a801eac65cdde60669f0b22b9628c2dd5b66720",
+            "title": "Actively Building Private Recommender Networks for Evolving Reliable Relationships",
+            "abstract": "Recommender systems have been successfully using information from social networks to improve the quality of results for the targeted users. In this work, we propose a novel model that allows users to actively cultivate their recommender network. Building on existing recommender systems, we suggest providing users with transparent information on users who might be able to suggest relevant items to their taste. Ensuring that users may keep their desired privacy level, this framework allows users to make anonymous contacts. In this way, the recommender system not only learns user taste, but makes these learned preferences transparent and editable. As more and more relevant recommendations by anonymous contacts are made, the recommender network evolves and builds trust between reliable contacts that share common interests.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "98913f9a3fc2350167b79b8717531c154a86602b",
+            "title": "Evaluating Clustering in Subspace Projections of High Dimensional Data",
+            "abstract": "Clustering high dimensional data is an emerging research field. Subspace clustering or projected clustering group similar objects in subspaces, i.e. projections, of the full space. In the past decade, several clustering paradigms have been developed in parallel, without thorough evaluation and comparison between these paradigms on a common basis. \n \nConclusive evaluation and comparison is challenged by three major issues. First, there is no ground truth that describes the \"true\" clusters in real world data. Second, a large variety of evaluation measures have been used that reflect different aspects of the clustering result. Finally, in typical publications authors have limited their analysis to their favored paradigm only, while paying other paradigms little or no attention. \n \nIn this paper, we take a systematic approach to evaluate the major paradigms in a common framework. We study representative clustering algorithms to characterize the different aspects of each paradigm and give a detailed comparison of their properties. We provide a benchmark set of results on a large variety of real world and synthetic data sets. Using different evaluation measures, we broaden the scope of the experimental analysis and create a common baseline for future developments and comparable evaluations in the field. For repeatability, all implementations, data sets and evaluation measures are available on our website.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "a24a04574a5284e112df0b7cd2a3b33113ec2ccf",
+            "title": "DensEst: Density Estimation for Data Mining in High Dimensional Spaces",
+            "abstract": "Subspace clustering and frequent itemset mining via \u201cstepby-step\u201d algorithms that search the subspace/pattern lattice in a top-down or bottom-up fashion do not scale to large high dimensional data bases. Recent \u201cjump\u201d algorithms directly choose candidate subspace regions or patterns. Their scalability and quality depend heavily on the rating of these candidates as mislead jumps incur poor results and costly candidate refinements. Existing techniques rely on simple statistics with low estimation quality or on inefficient",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "aa73556339e0e09b94c852a220d76f5ddece19ca",
+            "title": "Indexing density models for incremental learning and anytime classification on data streams",
+            "abstract": "Classification of streaming data faces three basic challenges: it has to deal with huge amounts of data, the varying time between two stream data items must be used best possible (anytime classification) and additional training data must be incrementally learned (anytime learning) for applying the classifier consistently to fast data streams. In this work, we propose a novel index-based technique that can handle all three of the above challenges using the established Bayes classifier on effective kernel density estimators. Our novel Bayes tree automatically generates (adapted efficiently to the individual object to be classified) a hierarchy of mixture densities that represent kernel density estimators at successively coarser levels. Our probability density queries together with novel classification improvement strategies provide the necessary information for very effective classification at any point of interruption. Moreover, we propose a novel evaluation method for anytime classification using Poisson streams and demonstrate the anytime learning performance of the Bayes tree.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1731285",
+                    "name": "P. Kranen"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "2053312921",
+                    "name": "Jennifer Herrmann"
+                }
+            ]
+        },
+        {
+            "paperId": "e5c37459cc9a529c24e5eb0c238bf7cc2805d177",
+            "title": "Anticipatory DTW for Efficient Similarity Search in Time Series Databases",
+            "abstract": "Time series arise in many different applications in the form of sensor data, stocks data, videos, and other time-related information. Analysis of this data typically requires searching for similar time series in a database. Dynamic Time Warping (DTW) is a widely used high-quality distance measure for time series. As DTW is computationally expensive, efficient algorithms for fast computation are crucial. \n \nIn this paper, we propose a novel filter-and-refine DTW algorithm called Anticipatory DTW. Existing algorithms aim at efficiently finding similar time series by filtering the database and computing the DTW in the refinement step. Unlike these algorithms, our approach exploits previously unused information from the filter step during the refinement, allowing for faster rejection of false candidates. We characterize a class of applicable filters for our approach, which comprises state-of-the-art lower bounds of the DTW. \n \nOur novel anticipatory pruning incurs hardly any over-head and no false dismissals. We demonstrate substantial efficiency improvements in thorough experiments on synthetic and real world time series databases and show that our technique is highly scalable to multivariate, long time series and wide DTW bands.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1735782",
+                    "name": "Marc Wichterich"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "37273354",
+                    "name": "Hardy Kremer"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "e916e7a39657491d3bf4118e0c17b00b65712a69",
+            "title": "Relevant Subspace Clustering: Mining the Most Interesting Non-redundant Concepts in High Dimensional Data",
+            "abstract": "Subspace clustering aims at detecting clusters in any subspace projection of a high dimensional space. As the number of possible subspace projections is exponential in the number of dimensions, the result is often tremendously large. Recent approaches fail to reduce results to relevant subspace clusters. Their results are typically highly redundant, i.e. many clusters are detected multiple times in several projections. In this work, we propose a novel model for relevant subspace clustering (RESCU). We present a global optimization which detects the most interesting non-redundant subspace clusters. We prove that computation of this model is NP-hard. For RESCU, we propose an approximative solution that shows high accuracy with respect to our relevance model. Thorough experiments on synthetic and real world data show that RESCU successfully reduces the result to manageable sizes. It reliably achieves top clustering quality while competing approaches show greatly varying performance.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "f1467080cd703b1f8c61e1a0492a37bb7fe2a5fe",
+            "title": "High-Dimensional Indexing for Multimedia Features",
+            "abstract": "A magnetic disc recording and reproducing device having a rotatable magnetic disc, a magnetic head for reading/writing information on the magnetic disc, a magnetic head displacing mechanism for displacing the magnetic head in the direction of a radius of the magnetic disc, an electric motor for driving the magnetic head displacing mechanism, a damper connected to a shaft of the motor and having a housing which is rotatable with the shaft of the motor, and a lock mechanism for permitting the rotation of the housing of the damper only when the magnetic head displacing mechanism is actuated.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "3075189",
+                    "name": "Stephan G\u00fcnnemann"
+                },
+                {
+                    "authorId": "37273354",
+                    "name": "Hardy Kremer"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "fbb4400f3a766859b33aef99aefa8a7a6ed2e107",
+            "title": "Efficient Adaptive Retrieval and Mining in Large Multimedia Databases",
+            "abstract": "To lighten an open-space interior, use is made, as a light source, of a catadioptric reflective surface onto which one or more light beams are suitably directed to impinge.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        },
+        {
+            "paperId": "3ec5a55ca6357838b94030ac5346c6f621ef5347",
+            "title": "Efficient EMD-based similarity search in multimedia databases via flexible dimensionality reduction",
+            "abstract": "The Earth Mover's Distance (EMD) was developed in computer vision as a flexible similarity model that utilizes similarities in feature space to define a high quality similarity measure in feature representation space. It has been successfully adopted in a multitude of applications with low to medium dimensionality. However, multimedia applications commonly exhibit high-dimensional feature representations for which the computational complexity of the EMD hinders its adoption. An efficient query processing approach that mitigates and overcomes this effect is crucial. We propose novel dimensionality reduction techniques for the EMD in a filter-and-refine architecture for efficient lossless retrieval. Thorough experimental evaluation on real world data sets demonstrates a substantial reduction of the number of expensive high-dimensional EMD computations and thus remarkably faster response times. Our techniques are fully flexible in the number of reduced dimensions, which is a novel feature in approximation techniques for the EMD.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1735782",
+                    "name": "Marc Wichterich"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1731285",
+                    "name": "P. Kranen"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "441c7ffdbba1b87e9f903bd8f46076f4b6247e5e",
+            "title": "Morpheus: interactive exploration of subspace clustering",
+            "abstract": "Data mining techniques extract interesting patterns out of large data resources. Meaningful visualization and interactive exploration of patterns are crucial for knowledge discovery. Visualization techniques exist for traditional clustering in low dimensional spaces. In high dimensional data, clusters typically only exist in subspace projections. This subspace clustering, however, lacks interactive visualization tools. Challenges arise from typically large result sets in different subspace projections that hinder comparability, visualization and understandability.\n In this work, we describe Morpheus, a tool that supports the knowledge discovery process through visualization and interactive exploration of subspace clusterings. Users may browse an overview of the entire subspace clustering, analyze subspace cluster characteristics in-depth and zoom into object groupings. Bracketing of different parameter settings enables users to immediately see the effects of parameters and to provide feedback to further improve the subspace clustering. Furthermore, Morpheus may serve as a teaching and exploration tool for the data mining community to visually assess different subspace clustering paradigms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "35206199",
+                    "name": "Timm Jansen"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "55648ccbbd49942d7acc09cc6ae3210121fb278f",
+            "title": "INSCY: Indexing Subspace Clusters with In-Process-Removal of Redundancy",
+            "abstract": "Subspace clustering aims at detecting clusters in any subspace projection of a high dimensional space. As the number of projections is exponential in the number of dimensions, efficiency is crucial. Moreover, the resulting subspace clusters are often highly redundant, i.e. many clusters are detected multiply in several projections. We propose a novel index for efficient subspace clustering in a novel depth-first processing with in-process-removal of redundant clusters for better pruning. Thorough experiments on real and synthetic data show that INSCY yields substantial efficiency and quality improvements.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "6d89a03926fce54eac2a86e9dae49dbaf0b72c5b",
+            "title": "Outlier detection and ranking based on subspace clustering",
+            "abstract": "Detecting outliers is an important task for many applications \nincluding fraud detection or consistency validation in real world \ndata. Particularly in the presence of uncertain data or imprecise data, \nsimilar objects regularly deviate in their attribute values. The notion \nof outliers has thus to be defined carefully. When considering outlier \ndetection as a task which is complementary to clustering, binary decisions \nwhether an object is regarded to be an outlier or not seem to be \nnear at hand. For high-dimensional data, however, objects may belong \nto different clusters in different subspaces. More fine-grained concepts to \ndefine outliers are therefore demanded. By our new OutRank approach, \nwe address outlier detection in heterogeneous high dimensional data and \npropose a novel scoring function that provides a consistent model for \nranking outliers in the presence of different attribute types. Preliminary \nexperiments demonstrate the potential for successful detection and reasonable ranking of outliers in high dimensional data sets.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "3073943",
+                    "name": "U. Steinhausen"
+                }
+            ]
+        },
+        {
+            "paperId": "72e5e8d22b6e278673f0d9c912c06f666ac01d28",
+            "title": "The TS-tree: efficient time series search and retrieval",
+            "abstract": "Continuous growth in sensor data and other temporal data increases the importance of retrieval and similarity search in time series data. Efficient time series query processing is crucial for interactive applications. Existing multidimensional indexes like the R-tree provide efficient querying for only relatively few dimensions. Time series are typically long which corresponds to extremely high dimensional data in multidimensional indexes. Due to massive overlap of index descriptors, multidimensional indexes degenerate for high dimensions and access the entire data by random I/O. Consequently, the efficiency benefits of indexing are lost.\n In this paper, we propose the TS-tree (time series tree), an index structure for efficient time series retrieval and similarity search. Exploiting inherent properties of time series quantization and dimensionality reduction, the TS-tree indexes high-dimensional data in an overlap-free manner. During query processing, powerful pruning via quantized separator and meta data information greatly reduces the number of pages which have to be accessed, resulting in substantial speed-up. In thorough experiments on synthetic and real world time series data we demonstrate that our TS-tree outperforms existing approaches like the R*-tree or the quantized A-tree.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "2554431",
+                    "name": "Farzad Afschari"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "c9a7eabaa27b7279299d3cf87f63abae8dfef8e8",
+            "title": "OutRank: ranking outliers in high dimensional data",
+            "abstract": "Outlier detection is an important data mining task for consistency checks, fraud detection, etc. Binary decision making on whether or not an object is an outlier is not appropriate in many applications and moreover hard to parametrize. Thus, recently, methods for outlier ranking have been proposed. Determining the degree of deviation, they do not require setting a decision boundary between outliers and the remaining data. High dimensional and heterogeneous (continuous and categorical attributes) data, however, pose a problem for most outlier ranking algorithms. In this work, we propose our OutRank approach for ranking outliers in heterogeneous high dimensional data. We introduce a consistent model for different attribute types. Our novel scoring functions transform the analyzed structure of the data to a meaningful ranking. Promising results in preliminary experiments show the potential for successful outlier ranking in high dimensional data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "3073943",
+                    "name": "U. Steinhausen"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "dd2d30cad9dfc666e993017dd1b98ed2cd3d59d4",
+            "title": "Efficient similarity search using the Earth Mover's Distance for large multimedia databases",
+            "abstract": "Multimedia similarity search in large databases requires efficient query processing. The Earth mover's distance, introduced in computer vision, is successfully used as a similarity model in a number of small-scale applications. Its computational complexity hindered its adoption in large multimedia databases. We enable directly indexing the Earth mover's distance in structures such as the R-tree and the VA-file by providing the accurate 'MinDist' function to any bounding rectangle in the index. We exploit the computational structure of the new MinDist to derive a new lower bound for the EMD MinDist which is assembled from quantized partial solutions yielding very fast query processing times. We prove completeness of our approach in a multistep scheme. Extensive experiments on real world data demonstrate the high efficiency.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1735782",
+                    "name": "Marc Wichterich"
+                },
+                {
+                    "authorId": "2661383",
+                    "name": "Tobias Meisen"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "f24176886835807894d5a069a2d5a39ff2b312ba",
+            "title": "EDSC: efficient density-based subspace clustering",
+            "abstract": "Subspace clustering mines clusters hidden in subspaces of high-dimensional data sets. Density-based approaches have been shown to successfully mine clusters of arbitrary shape even in the presence of noise in full space clustering. Exhaustive search of all density-based subspace clusters, however, results in infeasible runtimes for large high-dimensional data sets. This is due to the exponential number of possible subspace projections in addition to the high computational cost of density-based clustering.\n In this paper, we propose lossless efficient detection of density-based subspace clusters. In our EDSC (efficient density-based subspace clustering) algorithm we reduce the high computational cost of density-based subspace clustering by a complete multistep filter-and-refine algorithm. Our first hypercube filter step avoids exhaustive search of all regions in all subspaces by enclosing potentially density-based clusters in hypercubes. Our second filter step provides additional pruning based on a density monotonicity property. In the final refinement step, the exact unbiased density-based subspace clustering result is detected. As we prove that pruning is lossless in both filter steps, we guarantee completeness of the result.\n In thorough experiments on synthetic and real world data sets, we demonstrate substantial efficiency gains. Our lossless EDSC approach outperforms existing density-based subspace clustering algorithms by orders of magnitude.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "53e325421e1f430b3c0e50b54d335e1a32a17bf9",
+            "title": "DUSC: Dimensionality Unbiased Subspace Clustering",
+            "abstract": "To gain insight into today's large data resources, data mining provides automatic aggregation techniques. Clustering aims at grouping data such that objects within groups are similar while objects in different groups are dissimilar. In scenarios with many attributes or with noise, clusters are often hidden in subspaces of the data and do not show up in the full dimensional space. For these applications, subspace clustering methods aim at detecting clusters in any sub- space. Existing subspace clustering approaches fall prey to an effect we call dimensionality bias. As dimensionality of subspaces varies, approaches which do not take this effect into account fail to separate clusters from noise. We give a formal definition of dimensionality bias and analyze consequences for subspace clustering. A dimensionality unbiased subspace clustering (DUSC) definition based on statistical foundations is proposed. In thorough experiments on synthetic and real world data, we show that our approach outperforms existing subspace clustering algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "60b5fcf1861c6dfa1d2f9189dddc133da03960b5",
+            "title": "AttentionAttractor: efficient video stream similarity query processing in real time",
+            "abstract": "In a project, customers are attracted by a video streaming application. A video camera records people passing by, and a monitor shows an alienated version of the setting accordingly. The idea is to replace the image on the video screen by a mosaic of similar images to draw their attention to the location. For successful implementation, several aspects are of key importance: the images chosen in the mosaic should be similar enough for easy recognition, and the result of the alienation should be computed fast enough for display on the screen in real time.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "b0191c16ab37369aa39d6e4b88fdd579e6eaa9a8",
+            "title": "VISA: visual subspace clustering analysis",
+            "abstract": "To gain insight into today's large data resources, data mining extracts interesting patterns. To generate knowledge from patterns and benefit from human cognitive abilities, meaningful visualization of patterns are crucial. Clustering is a data mining technique that aims at grouping data to patterns based on mutual (dis)similarity. For high dimensional data, subspace clustering searches patterns in any subspace of the attributes as patterns are typically obscured by many irrelevant attributes in the full space. For visual analysis of subspace clusters, their comparability has to be ensured. Existing subspace clustering approaches, however, lack interactive visualization and show bias with respect to the dimensionality of subspaces.\n In this work, dimensionality unbiased subspace clustering and a novel distance function for subspace clusters are proposed. We suggest two visualization techniques that allow users to browse the entire subspace clustering, to zoom into individual objects, and to analyze subspace cluster characteristics in-depth. Bracketing of different parameter settings enable users to immediately see the effect of parameters on their data and hence to choose the best clustering result for further analysis. Usage of user analysis for feedback to the subspace clustering algorithm directly improves the subspace clustering. We demonstrate our visualization techniques on real world data and confirm results through additional accuracy measurements and comparison with existing subspace clustering algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "d46eafa61693ce82fb3705617086ae80e341a3e4",
+            "title": "Subspace outlier mining in large multimedia databases",
+            "abstract": "Increasingly large multimedia databases in life sciences, e- commerce, or monitoring applications cannot be browsed manually, but require automatic knowledge discovery in databases (KDD) techniques to detect novel and interesting patterns. Clustering, aims at grouping similar objects into clusters, separating dissimilar objects. Density-based clustering has been shown to detect arbitrarily shaped clusters even in noisy data bases. In high-dimensional data bases, meaningful clusters can no longer be detected due to the curse of dimensionality. Consequently, subspace clustering searches for clusters hidden in any subset of the set of dimensions. Clustering information is very useful for applications like fraud detection where outliers, i.e. objects which dier from all clusters, are searched. We propose a density-based subspace clustering model for outlier detection. We dene outliers with respect to maximal and non- redundant subspace clusters. We demonstrate the quality of our subspace clustering results in experiments on real world databases and discuss our outlier model as well as future work.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1746743",
+                    "name": "Emmanuel M\u00fcller"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "f850117225ddb6547f07a3490dde67378c9b2bba",
+            "title": "An upper bound for transforming self-verifying automata into deterministic ones",
+            "abstract": "This paper describes a modification of the power set construction for the transformation of self-verifying nondeterministic finite automata to deterministic ones. Using a set counting argument, the upper bound for this transformation can be lowered from 2 n to O(2 \u221an).",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1696910",
+                    "name": "Sebastian Seibert"
+                }
+            ]
+        },
+        {
+            "paperId": "773f2aedb30231fae6cf83be30aa9be1936ea039",
+            "title": "Spatial Multidimensional Sequence Clustering",
+            "abstract": "Measurements at different time points and positions in large temporal or spatial databases requires effective and efficient data mining techniques. For several parallel measurements, finding clusters of arbitrary length and number of attributes, poses additional challenges. We present a novel algorithm capable of finding parallel clusters in different structural quality parameter values for river sequences used by hydrologists to develop measures for river quality improvements",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "7022519",
+                    "name": "Ralph Krieger"
+                },
+                {
+                    "authorId": "1798930",
+                    "name": "Boris Glavic"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "d534b2cbb2aeb28b80d3aae573239faa34c68260",
+            "title": "Approximation Techniques for Indexing the Earth Mover&#146;s Distance in Multimedia Databases",
+            "abstract": "Todays abundance of storage coupled with digital technologies in virtually any scientific or commercial application such as medical and biological imaging or music archives deal with tremendous quantities of images, videos or audio files stored in large multimedia databases. For content-based data mining and retrieval purposes suitable similarity models are crucial. The Earth Mover\u2019s Distance was introduced in Computer Vision to better approach human perceptual similarities. Its computation, however, is too complex for usage in interactive multimedia database scenarios. In order to enable efficient query processing in large databases, we propose an index-supported multistep algorithm. We therefore develop new lower bounding approximation techniques for the Earth Mover\u2019s Distance which satisfy high quality criteria including completeness (no false drops), index-suitability and fast computation. We demonstrate the efficiency of our approach in extensive experiments on large image databases",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "21152795",
+                    "name": "Andrea Wenning"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "dc9867eb88841a2e7c18292d612a6b562d42e7e0",
+            "title": "Efficient multi-step query processing for EMD-based similarity",
+            "abstract": "Similarity search in large multimedia databases requires ef- \nficient query processing based on suitable similarity models. Similarity \nmodels consist of a feature extraction step as well as a distance defined \nfor these features, and they demand an efficient algorithm for retrieving \nsimilar objects under this model. In this work, we focus on the Earth \nMovers Distance (EMD), a recently introduced similarity model which \nhas been successfully employed in numerous applications and has been reported as well reflecting human perceptual similarity. As its computation \nis complex, the direct application of the EMD to large, high-dimensional \ndatabases is not feasible. To remedy this and allow users to benefit from \nthe high quality of the model even in larger settings, we developed various \nlower bounds for the EMD to be used in index-supported multistep \nquery processing algorithms. We prove that our algorithms are complete, \nthus producing no false drops. We also show that it is highly efficient as \nexperiments on large image databases with high-dimensional features \ndemonstrate.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "f21f56c7b1e14f4941a31adad1be6268b76a7c02",
+            "title": "Adaptable Distance Functions for Similarity-based Multimedia Retrieval",
+            "abstract": "Today\u2019s abundance of storage coupled with digital technologies in virtually all scientific or commercial applications such as medical and biological imaging or music archives deal with tremendous quantities of images, videos or audio files stored in large multimedia databases. For content-based data mining and multimedia retrieval purposes, suitable similarity models are crucial. Adaptable distance functions are particularly well-suited to match the human perception of similarity. Quadratic Forms (QF) were introduced to capture the notion of inter-feature similarity which sets them apart from the more traditional feature-by-feature measures from e.g. the Euclidean or Manhattan dissimilarity functions. The Earth Mover\u2019s Distance (EMD) was adopted in Computer Vision to better approach human perceptual similarities by allowing feature transformation under a number of restrictions. After recapping the concepts of distancebased similarity search in databases, we familiarize the reader with the flexible building stones behind Quadratic Forms and the EMD. These enable their application to a large variety of multimedia retrieval problems. Unfortunately, the flexibility comes at a cost. Their computation is relatively time-consuming, which severely limits its adoption in interactive multimedia database scenarios. Therefore, we research methods to speed up the retrieval process and show some encouraging recent results to achieve just that via an index-supported multistep algorithm based on new lower bounding approximation techniques.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1735782",
+                    "name": "Marc Wichterich"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "d5a262ea96934168e09039dc9fddbdd892d4b9fd",
+            "title": "CLICKS: an effective algorithm for mining subspace clusters in categorical datasets",
+            "abstract": "We present a novel algorithm called CLICKS, that finds clusters in categorical datasets based on a search for k-partite maximal cliques. Unlike previous methods, CLICKS mines subspace clusters. It uses a selective vertical method to guarantee complete search. CLICKS outperforms previous approaches by over an order of magnitude and scales better than any of the existing method for high-dimensional datasets. These results are demonstrated in a comprehensive performance study on real and synthetic datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1693515",
+                    "name": "Mohammed J. Zaki"
+                },
+                {
+                    "authorId": "37828975",
+                    "name": "M. Peters"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                }
+            ]
+        },
+        {
+            "paperId": "a968e49640a927ce02c7d7d92d7e968cdd8e40b9",
+            "title": "Image clustering and retrieval combining fixed/adaptive-binned histograms and various distance functions",
+            "abstract": "In the context of content-based image retrieval, we compare two types of histograms, fixed and adaptive, both frequently used for modeling the image features. We demonstrate that a choice of a histogram type, combined with the choice of a distance function, can have a huge impact onto the clustering structure of the dataset. Such a hierarchical clustering structure visualization of database objects helps often the user to find similar objects and discover unknown patterns. In our experiments we use real data sets with large number of semantic categories, and evaluate both the reachability plots and the clustering accuracy, to show the effects of appropriate choice of fixed and/or adaptive binning in combination with various distance functions. Results show that significant clusters, along with their representatives, can be automatically extracted, which is a basis for visual data mining but even more important for nonvisual data mining.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3341129",
+                    "name": "M. Jovic"
+                },
+                {
+                    "authorId": "2102968",
+                    "name": "Z. Stejic"
+                },
+                {
+                    "authorId": "1732690",
+                    "name": "T. Seidl"
+                },
+                {
+                    "authorId": "1713664",
+                    "name": "I. Assent"
+                }
+            ]
+        }
+    ]
+}

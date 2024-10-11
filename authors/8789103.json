@@ -1,0 +1,382 @@
+{
+    "authorId": "8789103",
+    "papers": [
+        {
+            "paperId": "d28d5f0928ede8b15e79ae92e58ea2f78a4be9eb",
+            "title": "Revisiting SMoE Language Models by Evaluating Inefficiencies with Task Specific Expert Pruning",
+            "abstract": "Sparse Mixture of Expert (SMoE) models have emerged as a scalable alternative to dense models in language modeling. These models use conditionally activated feedforward subnetworks in transformer blocks, allowing for a separation between total model parameters and per-example computation. However, large token-routed SMoE models face a significant challenge: during inference, the entire model must be used for a sequence or a batch, resulting in high latencies in a distributed setting that offsets the advantages of per-token sparse activation. Our research explores task-specific model pruning to inform decisions about designing SMoE architectures, mainly modulating the choice of expert counts in pretraining. We investigate whether such pruned models offer advantages over smaller SMoE models trained from scratch, when evaluating and comparing them individually on tasks. To that end, we introduce an adaptive task-aware pruning technique UNCURL to reduce the number of experts per MoE layer in an offline manner post-training. Our findings reveal a threshold pruning factor for the reduction that depends on the number of experts used in pretraining, above which, the reduction starts to degrade model performance. These insights contribute to our understanding of model design choices when pretraining with SMoE architectures, particularly useful when considering task-specific inference optimization for later stages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3081847",
+                    "name": "Soumajyoti Sarkar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "1678641",
+                    "name": "V. Cevher"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "2319409769",
+                    "name": "Thomas Brox"
+                },
+                {
+                    "authorId": "2064547804",
+                    "name": "George Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "0ff029e91b8185739646a4ac6ab0713909d31d16",
+            "title": "Large Language Models of Code Fail at Completing Code with Potential Bugs",
+            "abstract": "Large language models of code (Code-LLMs) have recently brought tremendous advances to code completion, a fundamental feature of programming assistance and code intelligence. However, most existing works ignore the possible presence of bugs in the code context for generation, which are inevitable in software development. Therefore, we introduce and study the buggy-code completion problem, inspired by the realistic scenario of real-time code suggestion where the code context contains potential bugs -- anti-patterns that can become bugs in the completed program. To systematically study the task, we introduce two datasets: one with synthetic bugs derived from semantics-altering operator changes (buggy-HumanEval) and one with realistic bugs derived from user submissions to coding problems (buggy-FixEval). We find that the presence of potential bugs significantly degrades the generation performance of the high-performing Code-LLMs. For instance, the passing rates of CODEGEN-2B-MONO on test cases of buggy-HumanEval drop more than 50% given a single potential bug in the context. Finally, we investigate several post-hoc methods for mitigating the adverse effect of potential bugs and find that there remains a significant gap in post-mitigation performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Tuan Dinh"
+                },
+                {
+                    "authorId": "26128283",
+                    "name": "Jinman Zhao"
+                },
+                {
+                    "authorId": "145814654",
+                    "name": "Samson Tan"
+                },
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "65f86451e96ad61ffca50eed6a007a19bc03093d",
+            "title": "Better Context Makes Better Code Language Models: A Case Study on Function Call Argument Completion",
+            "abstract": "Pretrained code language models have enabled great progress towards program synthesis. However, common approaches only consider in-file local context and thus miss information and constraints imposed by other parts of the codebase and its external dependencies. Existing code completion benchmarks also lack such context. To resolve these restrictions we curate a new dataset of permissively licensed Python packages that includes full projects and their dependencies and provide tools to extract non-local information with the help of program analyzers. We then focus on the task of function call argument completion which requires predicting the arguments to function calls. We show that existing code completion models do not yield good results on our completion task. To better solve this task, we query a program analyzer for information relevant to a given function call, and consider ways to provide the analyzer results to different code completion models during inference and training. Our experiments show that providing access to the function implementation and function usages greatly improves the argument completion performance. Our ablation study provides further insights on how different types of information available from the program analyzer and different ways of incorporating the information affect the model performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "146922081",
+                    "name": "Hengzhi Pei"
+                },
+                {
+                    "authorId": "26128283",
+                    "name": "Jinman Zhao"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "7f9f9bce3b92471cec2ef427ca96d8bb358beb6f",
+            "title": "Testing the Limits of Unified Sequence to Sequence LLM Pretraining on Diverse Table Data Tasks",
+            "abstract": "Tables stored in databases and tables which are present in web pages and articles account for a large part of semi-structured data that is available on the internet. It then becomes pertinent to develop a modeling approach with large language models (LLMs) that can be used to solve diverse table tasks such as semantic parsing, question answering as well as classification problems. Traditionally, there existed separate models specialized for each task individually. It raises the question of how far can we go to build a unified model that works well on some table tasks without significant degradation on others. To that end, we attempt at creating a shared modeling approach in the pretraining stage with encoder-decoder style LLMs that can cater to diverse tasks. We evaluate our approach that continually pretrains and finetunes different model families of T5 with data from tables and surrounding context, on these downstream tasks at different model scales. Through multiple ablation studies, we observe that our pretraining with self-supervised objectives can significantly boost the performance of the models on these tasks. As an example of one improvement, we observe that the instruction finetuned public models which come specialized on text question answering (QA) and have been trained on table data still have room for improvement when it comes to table specific QA. Our work is the first attempt at studying the advantages of a unified approach to table specific pretraining when scaled from 770M to 11B sequence to sequence models while also comparing the instruction finetuned variants of the models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3081847",
+                    "name": "Soumajyoti Sarkar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                }
+            ]
+        },
+        {
+            "paperId": "a7e58dc03d029100fd437e229f7ee80e976fc842",
+            "title": "HYTREL: Hypergraph-enhanced Tabular Data Representation Learning",
+            "abstract": "Language models pretrained on large collections of tabular data have demonstrated their effectiveness in several downstream tasks. However, many of these models do not take into account the row/column permutation invariances, hierarchical structure, etc. that exist in tabular data. To alleviate these limitations, we propose HYTREL, a tabular language model, that captures the permutation invariances and three more structural properties of tabular data by using hypergraphs - where the table cells make up the nodes and the cells occurring jointly together in each row, column, and the entire table are used to form three different types of hyperedges. We show that HYTREL is maximally invariant under certain conditions for tabular data, i.e., two tables obtain the same representations via HYTREL iff the two tables are identical up to permutations. Our empirical results demonstrate that HYTREL consistently outperforms other competitive baselines on four downstream tasks with minimal pretraining, illustrating the advantages of incorporating the inductive biases associated with tabular data into the representations. Finally, our qualitative analyses showcase that HYTREL can assimilate the table structures to generate robust representations for the cells, rows, columns, and the entire table.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2901524",
+                    "name": "Pei Chen"
+                },
+                {
+                    "authorId": "3081847",
+                    "name": "Soumajyoti Sarkar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "40372969",
+                    "name": "Ruihong Huang"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "3d4eaaa47ae3054036449675b407a7e2b5f9219e",
+            "title": "Exploring the Role of Task Transferability in Large-Scale Multi-Task Learning",
+            "abstract": "Recent work has found that multi-task training with a large number of diverse tasks can uniformly improve downstream performance on unseen target tasks. In contrast, literature on task transferability has established that the choice of intermediate tasks can heavily affect downstream task performance. In this work, we aim to disentangle the effect of scale and relatedness of tasks in multi-task representation learning. We find that, on average, increasing the scale of multi-task learning, in terms of the number of tasks, indeed results in better learned representations than smaller multi-task setups. However, if the target tasks are known ahead of time, then training on a smaller set of related tasks is competitive to the large-scale multi-task training at a reduced computational cost.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2044959912",
+                    "name": "Vishakh Padmakumar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "143668305",
+                    "name": "Miguel Ballesteros"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "144533687",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "833b4c6d86d6aedb528d8639205619e950c2e75a",
+            "title": "Parameter and Data Efficient Continual Pre-training for Robustness to Dialectal Variance in Arabic",
+            "abstract": "The use of multilingual language models for tasks in low and high-resource languages has been a success story in deep learning. In recent times, Arabic has been receiving widespread attention on account of its dialectal variance. While prior research studies have tried to adapt these multilingual models for dialectal variants of Arabic, it still remains a challenging problem owing to the lack of sufficient monolingual dialectal data and parallel translation data of such dialectal variants. It remains an open problem on whether the limited dialectical data can be used to improve the models trained in Arabic on its dialectal variants. First, we show that multilingual-BERT (mBERT) incrementally pretrained on Arabic monolingual data takes less training time and yields comparable accuracy when compared to our custom monolingual Arabic model and beat existing models (by an avg metric of +$6.41$). We then explore two continual pre-training methods-- (1) using small amounts of dialectical data for continual finetuning and (2) parallel Arabic to English data and a Translation Language Modeling loss function. We show that both approaches help improve performance on dialectal classification tasks ($+4.64$ avg. gain) when used on monolingual models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3081847",
+                    "name": "Soumajyoti Sarkar"
+                },
+                {
+                    "authorId": "3002019",
+                    "name": "Kaixiang Lin"
+                },
+                {
+                    "authorId": "40552391",
+                    "name": "Sailik Sengupta"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "39674628",
+                    "name": "Saab Mansour"
+                }
+            ]
+        },
+        {
+            "paperId": "2733574d40ce8e861d7d658bfc33ab36f529864d",
+            "title": "GluonCV and GluonNLP: Deep Learning in Computer Vision and Natural Language Processing",
+            "abstract": "We present GluonCV and GluonNLP, the deep learning toolkits for computer vision and natural language processing based on Apache MXNet (incubating). These toolkits provide state-of-the-art pre-trained models, training scripts, and training logs, to facilitate rapid prototyping and promote reproducible research. We also provide modular APIs with flexible building blocks to enable efficient customization. Leveraging the MXNet ecosystem, the deep learning models in GluonCV and GluonNLP can be deployed onto a variety of platforms with different programming languages. The Apache 2.0 license has been adopted by GluonCV and GluonNLP to allow for software distribution, modification, and usage.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2148900809",
+                    "name": "Jian Guo"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "2118328320",
+                    "name": "Tong He"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "2112143809",
+                    "name": "Mu Li"
+                },
+                {
+                    "authorId": "49955730",
+                    "name": "Haibin Lin"
+                },
+                {
+                    "authorId": "3008587",
+                    "name": "Xingjian Shi"
+                },
+                {
+                    "authorId": "2108755854",
+                    "name": "Chenguang Wang"
+                },
+                {
+                    "authorId": "2369548",
+                    "name": "Junyuan Xie"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "2085709",
+                    "name": "Aston Zhang"
+                },
+                {
+                    "authorId": "2119077209",
+                    "name": "Hang Zhang"
+                },
+                {
+                    "authorId": "2117991985",
+                    "name": "Zhi Zhang"
+                },
+                {
+                    "authorId": "48806269",
+                    "name": "Zhongyue Zhang"
+                },
+                {
+                    "authorId": "37748242",
+                    "name": "Shuai Zheng"
+                },
+                {
+                    "authorId": "46759150",
+                    "name": "Yi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "6a15575f9117967303924922e8cf26fbbb649d80",
+            "title": "Dive into Deep Learning for Natural Language Processing",
+            "abstract": "Deep learning has become the dominant approach to NLP problems, especially when applied on large scale corpora. Recent progress on unsupervised pre-training techniques such as BERT, ELMo, GPT-2, and language modeling in general, when applied on large corpora, is shown to be effective in improving a wide variety of downstream tasks. These techniques push the limits of available hardware, requiring specialized frameworks optimized for GPU, ASIC, and distributed cloud-based training.A few complexities pose challenges to scale these models and algorithms effectively. Compared to other areas where deep learning is applied, these NLP models contain a variety of moving parts: text normalization and tokenization, word representation at subword-level and word-level, variable-length models such as RNN and attention, and sequential decoder based on beam search, among others.In this hands-on tutorial, we take a closer look at the challenges from these complexities and see how with proper tooling with Apache MXNet and GluonNLP, we can overcome these challenges and achieve state-of-the-art results for real-world problems. GluonNLP is a powerful new toolkit that combines MXNet\u2019s speed, the flexibility of Gluon, and an extensive new library automating the most laborious aspects of deep learning for NLP.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49955730",
+                    "name": "Haibin Lin"
+                },
+                {
+                    "authorId": "3008587",
+                    "name": "Xingjian Shi"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "2085709",
+                    "name": "Aston Zhang"
+                },
+                {
+                    "authorId": "144533687",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "46234526",
+                    "name": "Alex Smola"
+                }
+            ]
+        },
+        {
+            "paperId": "051bc84485f0d9be02003e27e0ca67e9a06f2e4d",
+            "title": "Deep Learning for Precipitation Nowcasting: A Benchmark and A New Model",
+            "abstract": "With the goal of making high-resolution forecasts of regional rainfall, precipitation nowcasting has become an important and fundamental technology underlying various public services ranging from rainstorm warnings to flight safety. Recently, the Convolutional LSTM (ConvLSTM) model has been shown to outperform traditional optical flow based methods for precipitation nowcasting, suggesting that deep learning models have a huge potential for solving the problem. However, the convolutional recurrence structure in ConvLSTM-based models is location-invariant while natural motion and transformation (e.g., rotation) are location-variant in general. Furthermore, since deep-learning-based precipitation nowcasting is a newly emerging area, clear evaluation protocols have not yet been established. To address these problems, we propose both a new model and a benchmark for precipitation nowcasting. Specifically, we go beyond ConvLSTM and propose the Trajectory GRU (TrajGRU) model that can actively learn the location-variant structure for recurrent connections. Besides, we provide a benchmark that includes a real-world large-scale dataset from the Hong Kong Observatory, a new training loss, and a comprehensive evaluation protocol to facilitate future research and gauge the state of the art.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3008587",
+                    "name": "Xingjian Shi"
+                },
+                {
+                    "authorId": "35982380",
+                    "name": "Zhihan Gao"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "49528584",
+                    "name": "Hao Wang"
+                },
+                {
+                    "authorId": "1739816",
+                    "name": "D. Yeung"
+                },
+                {
+                    "authorId": "145771919",
+                    "name": "W. Wong"
+                },
+                {
+                    "authorId": "2183294",
+                    "name": "W. Woo"
+                }
+            ]
+        }
+    ]
+}

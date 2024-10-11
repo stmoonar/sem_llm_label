@@ -1,0 +1,361 @@
+{
+    "authorId": "51161322",
+    "papers": [
+        {
+            "paperId": "bc78ffe2e9fcf89f7aae2e8b5c0960ae419e919f",
+            "title": "Target Detection Adapting to Spectral Variability in Multi-Temporal Hyperspectral Images Using Implicit Contrastive Learning",
+            "abstract": "Hyperspectral target detection (HTD) is a crucial aspect of remote sensing applications, aiming to identify targets in hyperspectral images (HSIs) based on their known prior spectral signatures. However, the spectral variability resulting from various imaging conditions in multi-temporal hyperspectral images poses a challenge to both classical and deep learning (DL) methods. To overcome the limitations imposed by spectral variability, an implicit contrastive learning-based target detector (ICLTD) is proposed to exploit in-scene spectra in an unsupervised way. First, only prior spectra are utilized for explicit supervision, while an implicit contrastive learning module (ICLM) is designed to normalize the feature distributions of prior and in-scene spectra. This paper theoretically demonstrates that the ICLM can transfer the gradients from prior spectral features to those of in-scene spectra based on their feature similarities and differences. Because of transferred gradient signals, the ICLTD is regularized to extract similar representations for the prior and in-scene target spectra, while augmenting feature differences between the target and background spectra. Additionally, a local spectral similarity constraint (LSSC) is proposed to enhance the capability of scene adaptation by leveraging the spectral similarities among in-scene targets. To validate the performance of the ICLTD under spectral variability, multi-temporal HSIs captured under various imaging conditions are collected to generate prior spectra and in-scene spectra. Comparative evaluations against several DL detectors and classical methods reveal the superior performance of the ICLTD in achieving a balance between target detectability and background suppressibility under spectral variability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2256840110",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "2110276903",
+                    "name": "Junwei Wang"
+                },
+                {
+                    "authorId": "2260820793",
+                    "name": "Pengyu Wang"
+                },
+                {
+                    "authorId": "2256946083",
+                    "name": "Zibo Hu"
+                },
+                {
+                    "authorId": "2120292868",
+                    "name": "Zhijia Yang"
+                },
+                {
+                    "authorId": "2051261924",
+                    "name": "Xiaobin Zhao"
+                },
+                {
+                    "authorId": "2260839254",
+                    "name": "Wei Li"
+                }
+            ]
+        },
+        {
+            "paperId": "d6d11b5967e4b812806891d391adcd7cd6e3c01e",
+            "title": "Unsupervised Blind Hyperspectral Super-Resolution for Unregistered Images",
+            "abstract": "Hyperspectral images super-resolution (HSI-SR) aims to fuse low-resolution HSI (LR-HSIs) and high-resolution multispectral images (HR-MSIs) for high-resolution HSIs (HR-HSIs). Most existing methods require registered image pairs and prior knowledge of spectral response functions (SRFs), which requires effort to realize in practical applications. To overcome this limitation, this paper proposes an unsupervised blind HSI-SR method (UBHSI-SR) for unregistered HSIs and MSIs. UBHSI-SR consists of two unmixing branches, each having its own encoder while sharing the decoder. First, the HSI unmixing branch learns to predict abundance maps and learns precise endmember spectra. Then, the learnable SRF transfers LR-HSIs to the registered LR-MSIs. The abundance similarity constraint between LR-HSIs and LR-MSIs guides the learning of the MSI encoder. With the abundance maps of HR-MSI, the shared decoder predicts the HR-HSIs as final results. Experiments on three remote sensing datasets validate the superior performance of UBHSI-SR to existing fusion methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2320191389",
+                    "name": "Baiyang Hu"
+                },
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2319917506",
+                    "name": "Kun Gao"
+                }
+            ]
+        },
+        {
+            "paperId": "df1ef5c3f3efcc10eb7587e488598b6469338af3",
+            "title": "SSFDD: Spectral-Spatial Feature Decoupled Detector for Box-Level Object Detection in Hyperspectral Images",
+            "abstract": "Spectral feature differences between various materials in hyperspectral images (HSIs) allow detection of targets. In recent years, box-level hyperspectral object detection (HOD) has gained attention owing to improved spatial resolutions of HSIs. However, existing HOD methods mainly rely on spatial features and lack dedicated optimization for spectral feature extraction. Additionally, the limited high-spatial-resolution HSIs restrict their generalization capability. This paper proposes a spectral-spatial feature decoupled detector (SSFDD) to solve the above problems. First, a pixel-level detection module is proposed to decouple spectral features optimized with the dedicated loss. Meanwhile, HSIs are spectral-down-sampled to multispectral images (MSIs) for decoupled spatial features. Then, a Siamese fusion network (SFN) is designed to extract and fuse the decoupled spectral-spatial features for object detection. SBN is initialized with pre-trained models on RGB-image datasets to enhance generalization capability. Experimental results on a high-resolution HSI dataset validate the superior performance of the SSFDD.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2260820793",
+                    "name": "Pengyu Wang"
+                },
+                {
+                    "authorId": "2319937722",
+                    "name": "He Zhang"
+                },
+                {
+                    "authorId": "2320191389",
+                    "name": "Baiyang Hu"
+                }
+            ]
+        },
+        {
+            "paperId": "04f87c405cf8814dcd9185e6ef9751086a4b916c",
+            "title": "EMO2-DETR: Efficient-Matching Oriented Object Detection With Transformers",
+            "abstract": "Object detection in remote sensing is a challenging task due to the arbitrary orientations of objects and the vast variation in the number of objects within a single image. For instance, one image may contain hundreds of small vehicles, while another may only have a single football field. Recently, DEtection TRansformer (DETR) and its variants have achieved great success in object detection by setting a fixed number of object queries and using bipartite graph matching for one-to-one label assignment. However, we have observed that bipartite graph matching can result in relative redundancy of object queries when the number of objects changes dramatically in an image. This relative redundancy can cause two problems: slower convergence during training and redundant bounding boxes during inference. To analyze the aforementioned problems, we proposed a metric, redundancy of object query (ROQ), to quantitatively analyze the redundancy. Through experiments, we discovered that the reason for the two issues is the difficulty in distinguishing between high-quality negative samples and positive samples. In this article, we proposed efficient-matching oriented object detection with transformers (EMO2-DETR) consisting of three dedicated components to address the aforementioned issues. Specifically, reassign bipartite graph matching (RBGM) is proposed to extract high-quality negative samples from the negative samples. And ignored sample predicted head (ISPH) is proposed to predict high-quality negative samples. Then, reassigned Hungarian loss is used to better involve high-quality negative samples in the update of model parameters. Extensive experiments on DOTAv1 and DOTAv1.5 datasets demonstrated that our proposed method achieves the competitive results.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "15368955",
+                    "name": "Zibo Hu"
+                },
+                {
+                    "authorId": "46812189",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2110276903",
+                    "name": "Junwei Wang"
+                },
+                {
+                    "authorId": "2144273636",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "2120292868",
+                    "name": "Zhijia Yang"
+                },
+                {
+                    "authorId": "2320516419",
+                    "name": "Chenrui Li"
+                },
+                {
+                    "authorId": "122009001",
+                    "name": "Wei Li"
+                }
+            ]
+        },
+        {
+            "paperId": "bb7d86f4315e85b68ba509c47e76daf954174e98",
+            "title": "Transformer and CNN Hybrid Network for Super-Resolution Semantic Segmentation of Remote Sensing Imagery",
+            "abstract": "Super-resolution semantic segmentation (SRSS) based on Convolutional neural network (CNN) cannot establish long-range dependencies due to limited receptive field, which limits the SRSS to obtain accurate high-resolution (HR) segmentation results from the low-resolution (LR) input images. In this paper, we design a Transformer and CNN hybrid SRSS network that consists of two branches: Transformer and CNN hybrid SRSS branch and super-resolution guided branch. In the Transformer and CNN hybrid SRSS branch, Transformer extracts global context information from the feature map of the CNN, while skip connection is used to retain the local context information extracted from the CNN and combines both features to further improve the segmentation performance. In addition, the super-resolution guided branch is designed to supplement rich structure information and guide the semantic segmentation (SS). We test the proposed method on the ISPRS Vaihingen benchmark data set, and our network is superior to other state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130182524",
+                    "name": "Yutong Liu"
+                },
+                {
+                    "authorId": "2256840110",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "2144273636",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "2110276903",
+                    "name": "Junwei Wang"
+                },
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2260820793",
+                    "name": "Pengyu Wang"
+                },
+                {
+                    "authorId": "2154742573",
+                    "name": "Shuzhong Li"
+                }
+            ]
+        },
+        {
+            "paperId": "d7f29f1d6a7ad4a612c17282ac17645085f81d20",
+            "title": "Pixel- And Patch-Wise Context-Aware Learning with CNN and GCN Collaboration for Hyperspectral Image Classification",
+            "abstract": "Graph convolutional network (GCN) gains increasing attention in the hyperspectral image (HSI) classification by the ability to flexibly capture arbitrarily irregular objects. However, due to expensive computation, the graph construction is usually based on superpixel-wise nodes, which ignore the subtle pixel-wise features. In contrast, the convolution neural network (CNN) can mine pixel-wise spectral-spatial features but is limited to capturing local features in small square windows. In this paper, we design a new CNN and GCN collaborative network to simultaneously introduce pixel- and patch-wise contextual information. Concretely, we use the depthwise separable convolution to perform pixel-wise local feature extraction. To further mine the long-range contextual information between land covers, we concatenate a GCN. Finally, we further fuse the complementary features and decode them to obtain the classification map. Extensive experiments reveal that our method achieves competitive performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144273636",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "2256840110",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2110276903",
+                    "name": "Junwei Wang"
+                },
+                {
+                    "authorId": "2256946083",
+                    "name": "Zibo Hu"
+                },
+                {
+                    "authorId": "2120292868",
+                    "name": "Zhijia Yang"
+                },
+                {
+                    "authorId": "1574346529",
+                    "name": "Yuxuan Mao"
+                },
+                {
+                    "authorId": "2130182524",
+                    "name": "Yutong Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "ed8a7d0bd4525de885d789a23e46f1423e1ecb8c",
+            "title": "Successive Clustering-Based Outlier Resistant Band Selection Method for Hyperspectral Images With Spatial Information Difference Metrics",
+            "abstract": "In hyperspectral classification applications, band selection (BS) is an effective preprocessing method that reduces image redundancy without changing the original data. The property whereby different objects can be spatially separated is used for image classification, but BS methods based on quantitation of this property have not gotten enough attention. A cluster-based BS method that uses the dilation distances (DDs) with respect to the metric of spatial distances has been proposed, but the DD is strongly affected by outliers and calculating DD is time-consuming. Moreover, there is a mismatch between DD and the method of clustering and selecting representative band. In this letter, we propose a BS method based on pixel sorting-feature-based DD (SFDD) to accurately determine spatial information differences (SIDs) metric and design a method of successive clustering as well as a method of representative BS to match the features of this metric. We optimize the method to calculate the SFDD to reduce the time needed for it. In contrast to most BS methods, the bands selected by our method have a large SID among them such that objects at different positions are clearly differentiated in the spectral dimension after dimension reduction. The results of experiments showed that the proposed approach provides results that are competitive with those of several state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152251406",
+                    "name": "Zhiyong Tian"
+                },
+                {
+                    "authorId": "46812189",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2110276903",
+                    "name": "Junwei Wang"
+                },
+                {
+                    "authorId": "46749248",
+                    "name": "Yunpeng Feng"
+                }
+            ]
+        },
+        {
+            "paperId": "f74ebbd4860ee84e1e7257994194828cf1308eb6",
+            "title": "PM2.5 Estimation in Day/Night-Time from Himawari-8 Infrared Bands via a Deep Learning Neural Network",
+            "abstract": "Satellite-based PM2.5 estimation is an effective means to achieve large-scale and long-term PM2.5 monitoring and investigation. Currently, most of methods retrieve PM2.5 from satellite-derived aerosol optical depth (AOD) or top-of-atmosphere reflectance (TOAR) during daytime. A few algorithms are also developed to retrieve nighttime PM2.5 from the satellite day\u2013night band and the accuracy is greatly limited by moonlight and artificial light sources. In this study, we utilize the properties of absorption pollutants in infrared spectrum to estimate PM2.5 concentrations from satellite infrared data, thus achieve the PM2.5 estimation in both day and night. Himawari-8 infrared bands data are used for PM2.5 estimation by a specifically designed neural network and loss function. Quantitative results show the satellite derived PM2.5 concentrations correlates with ground-based data well with R2 of 0.79 and RMSE of 15.43 \u03bcg \u00b7 m\u22123 for hourly PM2.5 estimation. Spatiotemporal distributions of model-estimated PM2.5 over China are also analyzed, and exhibit a highly consistent with ground-based measurements. Dust storms, heavy air pollution and fire smoke events are examined to further demonstrate the efficacy of our model. Our method not only circumvents the intermediate retrievals of AOD, but also enables consistent estimation of PM2.5 concentrations during daytime and nighttime in real-time monitoring.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110276903",
+                    "name": "Junwei Wang"
+                },
+                {
+                    "authorId": "2256840110",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "2256306487",
+                    "name": "Xiuqing Hu"
+                },
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "2144273636",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "2256946083",
+                    "name": "Zibo Hu"
+                },
+                {
+                    "authorId": "2120292868",
+                    "name": "Zhijia Yang"
+                },
+                {
+                    "authorId": "2249665454",
+                    "name": "Peng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "2d19ea2b8099ca0c104ad05e38a169b500f1295a",
+            "title": "Focal Cosine Metric and Adaptive Attention Module for Remote Sensing Scene Classification With Siamese Convolutional Neural Networks",
+            "abstract": "Convolutional neural networks (CNNs) have been widely used in remote sensing (RS) scene classification tasks due to their remarkable feature representation and inference capability. The complexity of RS images not only brings the challenges of high inter-class similarity and large intra-class diversity, but also introduces the problem that category-relevant regions are insufficiently prominent in feature extraction. Siamese CNNs with feature similarity measurement are chosen in some applications to overcome the former issue, but most ignore the randomness of input sample pairs. This makes the Siamese CNNs not focus enough on challenging samples, which limits the training efficiency. We propose the focal cosine metric (FCM) block that combines the cosine similarity metric and the threshold control to achieve sample selection, thereby completing network learning more efficiently. FCM only permits the misclassified focal samples to participate in similarity measurement based on Siamese CNN. It flexibly mitigates the misclassification caused by the high inter-class similarity and large intra-class diversity. Moreover, the adaptive attention (AA) module is designed to stress the pivotal target regions and assist in the similarity measurement of Siamese CNN. This is realized by adaptively assigning high weights to key targets with learnable guided vectors. It enables the model to focus on the details of intra-class similarities or inter-class differences in sample pairs, and thus reduces the difficulty of model optimization. Encouraging experimental results on three public data sets demonstrate the effectiveness of the novel Siamese CNN-based method with FCM and AA and show its superiority compared to other state-of-the-art scene classification methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2006501898",
+                    "name": "Lei Min"
+                },
+                {
+                    "authorId": "46812189",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "49528487",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "2130182524",
+                    "name": "Yutong Liu"
+                },
+                {
+                    "authorId": "2109262818",
+                    "name": "Zhenzhou Zhang"
+                },
+                {
+                    "authorId": "15368955",
+                    "name": "Zibo Hu"
+                },
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "58815d046026f2996e38a23b1cd47b7c1e75195e",
+            "title": "Siamese Network Ensembles for Hyperspectral Target Detection with Pseudo Data Generation",
+            "abstract": "Target detection in hyperspectral images (HSIs) aims to distinguish target pixels from the background using knowledge gleaned from prior spectra. Most traditional methods are based on certain assumptions and utilize handcrafted classifiers. These simple models and assumptions\u2019 failure restrict the detection performance under complicated background interference. Recently, based on the convolutional networks, many supervised deep learning detectors have outperformed the traditional methods. However, these methods suffer from unstable detection, heavy computation burden, and optimization difficulty. This paper proposes a Siamese fully connected based target detector (SFCTD) that comprises nonlinear feature extraction modules (NFEMs) and cosine distance classifiers. Two NFEMs, which extract discriminative spectral features of input spectra-pairs, are based on fully connected layers for efficient computing and share the parameters to ease the optimization. To solve the few samples problem, we propose a pseudo data generation method based on the linear mixed model and the assumption that background pixels are dominant in HSIs. For mitigating the impact of stochastic suboptimal initialization, we parallelly optimize several Siamese detectors with small computation burdens and aggregate them as ensembles in the inference time. The network ensembles outperform every detector in terms of stability and achieve an outstanding balance between background suppression and detection rate. Experiments on multiple data sets demonstrate that the proposed detector is superior to the state-of-the-art detectors.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51161322",
+                    "name": "Xiaodian Zhang"
+                },
+                {
+                    "authorId": "46812189",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "2110276903",
+                    "name": "Junwei Wang"
+                },
+                {
+                    "authorId": "15368955",
+                    "name": "Zibo Hu"
+                },
+                {
+                    "authorId": "2144273636",
+                    "name": "Hong Wang"
+                },
+                {
+                    "authorId": "2260820793",
+                    "name": "Pengyu Wang"
+                }
+            ]
+        }
+    ]
+}

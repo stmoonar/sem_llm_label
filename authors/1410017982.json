@@ -1,0 +1,387 @@
+{
+    "authorId": "1410017982",
+    "papers": [
+        {
+            "paperId": "40fcf66738208cd142e5a4af2eb3c0a37dedc83e",
+            "title": "Still More Shades of Null: A Benchmark for Responsible Missing Value Imputation",
+            "abstract": "We present Shades-of-NULL, a benchmark for responsible missing value imputation. Our benchmark includes state-of-the-art imputation techniques, and embeds them into the machine learning development lifecycle. We model realistic missingness scenarios that go beyond Rubin's classic Missing Completely at Random (MCAR), Missing At Random (MAR) and Missing Not At Random (MNAR), to include multi-mechanism missingness (when different missingness patterns co-exist in the data) and missingness shift (when the missingness mechanism changes between training and test). Another key novelty of our work is that we evaluate imputers holistically, based on the predictive performance, fairness and stability of the models that are trained and tested on the data they produce. We use Shades-of-NULL to conduct a large-scale empirical study involving 20,952 experimental pipelines, and find that, while there is no single best-performing imputation approach for all missingness types, interesting performance patterns do emerge when comparing imputer performance in simpler vs. more complex missingness scenarios. Further, while predictive performance, fairness and stability can be seen as orthogonal, we identify trade-offs among them that arise due to the combination of missingness scenario, the choice of an imputer, and the architecture of the model trained on the data post-imputation. We make Shades-of-NULL publicly available, and hope to enable researchers to comprehensively and rigorously evaluate new missing value imputation methods on a wide range of evaluation metrics, in plausible and socially meaningful missingness scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "2204971965",
+                    "name": "Denys Herasymuk"
+                },
+                {
+                    "authorId": "2320805933",
+                    "name": "Nazar Protsiv"
+                },
+                {
+                    "authorId": "2281825322",
+                    "name": "Julia Stoyanovich"
+                }
+            ]
+        },
+        {
+            "paperId": "0385d39a5f32175b9007bd8034d25f9207f87857",
+            "title": "Subset Modelling: A Domain Partitioning Strategy for Data-efficient Machine-Learning",
+            "abstract": "The success of machine learning (ML) systems depends on data availability, volume, quality, and efficient computing resources. A challenge in this context is to reduce computational costs while maintaining adequate accuracy of the models. This paper presents a framework to address this challenge. The idea is to identify \u201csubdomains\u201d within the input space, train local models that produce better predictions for samples from that specific subdomain, instead of training a single global model on the full dataset. We experimentally evaluate our approach on two real-world datasets. Our results indicate that subset modelling (i) improves the predictive performance compared to a single global model and (ii) allows data-efficient training.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2255558225",
+                    "name": "Vitor Ribeiro"
+                },
+                {
+                    "authorId": "2255545324",
+                    "name": "Eduardo H. M. Pena"
+                },
+                {
+                    "authorId": "2255436137",
+                    "name": "Raphael Saldanha"
+                },
+                {
+                    "authorId": "1709023",
+                    "name": "Reza Akbarinia"
+                },
+                {
+                    "authorId": "144255847",
+                    "name": "P. Valduriez"
+                },
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2255565502",
+                    "name": "F\u00e1bio Porto"
+                }
+            ]
+        },
+        {
+            "paperId": "333d6631e0f0ad2e96903e8f28fd43d28f189735",
+            "title": "Automated Data Cleaning Can Hurt Fairness in Machine Learning-based Decision Making",
+            "abstract": "In this paper, we interrogate whether data quality issues track demographic characteristics such as sex, race and age, and whether automated data cleaning \u2014 of the kind commonly used in production ML systems \u2014 impacts the fairness of predictions made by these systems. To the best of our knowledge, the impact of data cleaning on fairness in downstream tasks has not been investigated in the literature.We first analyze the tuples flagged by common error detection strategies in five research datasets. We find that, while specific data quality issues, such as higher rates of missing values, are associated with membership in historically disadvantaged groups, poor data quality does not generally track demographic group membership. As a follow-up, we conduct a large-scale empirical study on the impact of automated data cleaning on fairness, involving more than 26,000 model evaluations on five datasets. We observe that, while automated data cleaning has an insignificant impact on both accuracy and fairness in the majority of cases, it is more likely to worsen fairness than to improve it, especially when the cleaning techniques are not carefully chosen. This finding is both significant and worrying, given that it potentially implicates many production ML systems. We make our code and experimental results publicly available.The analysis we conducted in this paper is difficult, primarily because it requires that we think holistically about disparities in data quality, disparities in the effectiveness of data cleaning methods, and impacts of such disparities on ML model performance for different demographic groups. Such holistic analysis can and should be supported with the help of data engineering research. Towards this goal, we envision the development of fairness-aware data cleaning methods, and their integration into complex pipelines for ML-based decision making.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        },
+        {
+            "paperId": "87be357393a2dc30630842084ba48ae261b9f5ac",
+            "title": "The Unbearable Weight of Massive Privilege: Revisiting Bias-Variance Trade-Offs in the Context of Fair Prediction",
+            "abstract": "In this paper we revisit the bias-variance decomposition of model error from the perspective of designing a fair classifier: we are motivated by the widely held socio-technical belief that noise variance in large datasets in social domains tracks demographic characteristics such as gender, race, disability, etc. We propose a conditional-iid (ciid) model built from group-specific classifiers that seeks to improve on the trade-offs made by a single model (iid setting). We theoretically analyze the bias-variance decomposition of different models in the Gaussian Mixture Model, and then empirically test our setup on the COMPAS and folktables datasets. We instantiate the ciid model with two procedures that improve\"fairness\"by conditioning out undesirable effects: first, by conditioning directly on sensitive attributes, and second, by clustering samples into groups and conditioning on cluster membership (blind to protected group membership). Our analysis suggests that there might be principled procedures and concrete real-world use cases under which conditional models are preferred, and our striking empirical results strongly indicate that non-iid settings, such as the ciid setting proposed here, might be more suitable for big data applications in social contexts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                }
+            ]
+        },
+        {
+            "paperId": "ff23300253841e6058acfff819fd21ebbacfdcac",
+            "title": "On Fairness and Stability: Is Estimator Variance a Friend or a Foe?",
+            "abstract": "The error of an estimator can be decomposed into a (statistical) bias term, a variance term, and an irreducible noise term. When we do bias analysis, formally we are asking the question:\"how good are the predictions?\"The role of bias in the error decomposition is clear: if we trust the labels/targets, then we would want the estimator to have as low bias as possible, in order to minimize error. Fair machine learning is concerned with the question:\"Are the predictions equally good for different demographic/social groups?\"This has naturally led to a variety of fairness metrics that compare some measure of statistical bias on subsets corresponding to socially privileged and socially disadvantaged groups. In this paper we propose a new family of performance measures based on group-wise parity in variance. We demonstrate when group-wise statistical bias analysis gives an incomplete picture, and what group-wise variance analysis can tell us in settings that differ in the magnitude of statistical bias. We develop and release an open-source library that reconciles uncertainty quantification techniques with fairness analysis, and use it to conduct an extensive empirical analysis of our variance-based fairness measures on standard benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "2204971965",
+                    "name": "Denys Herasymuk"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                }
+            ]
+        },
+        {
+            "paperId": "087ae574a1713686318644eade32ecd1d33644a2",
+            "title": "Towards Substantive Conceptions of Algorithmic Fairness: Normative Guidance from Equal Opportunity Doctrines",
+            "abstract": "In this work we use Equal Opportunity (EO) doctrines from political philosophy to make explicit the normative judgements embedded in different conceptions of algorithmic fairness. We contrast formal EO approaches that narrowly focus on fair contests at discrete decision points, with substantive EO doctrines that look at people\u2019s fair life chances more holistically over the course of a lifetime. We use this taxonomy to provide a moral interpretation of the impossibility results as the incompatibility between different conceptions of a fair contest \u2014 foward-facing versus backward-facing \u2014 when people do not have fair life chances. We use this result to motivate substantive conceptions of algorithmic fairness and outline two plausible fair decision procedures based on the luck egalitarian doctrine of EO, and Rawls\u2019s principle of fair equality of opportunity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "119219282",
+                    "name": "Eleni Manis"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                }
+            ]
+        },
+        {
+            "paperId": "21acdf4ac98173c6cc583ff146e1da7b3c2d7830",
+            "title": "It's funny because it's true: confronting scientific catechisms through comic books!",
+            "abstract": "What do a foul green ogre and a well-constructed narrative have in common? They're both like onions - they have layers! Keeping with the theme of diversity and inclusion, I'll focus on three main 'layers' of the scientific landscape: the research --- our perception and framing of important research questions and methodologies; publication practices --- how we communicate results and disseminate our research; and lastly the broader discourse around data-driven technology --- public sentiment and literacy, and media reporting. The landscape is rife with problems, including incentive structures and gold-rush mentality in scholarship, celebrity culture and media hype, unhealthy extremes of techno-bashing and techno-optimism and the false dichotomy between \"social problems\" and \"engineering problems\". Nuance and critical thinking are the most valuable, yet scarce commodities! A possible first step at self-correction could be for us - as practitioners and designers of these systems - to stop taking ourselves so seriously and challenge the catechisms of our scientific landscape. In this talk, I'll share one way that we might be able to go about doing this --- using the marvelous world of comics! Drawing from my own work in creating educational and satirical comic books about AI and data-driven technologies, I'll pick apart the onion, layer by layer, and highlight some of the most pressing problems and prescribe possible solutions to make our landscape more inclusive. At the very least, I'll present some fun and light-hearted cartoons that will make this confrontation more enjoyable!",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                }
+            ]
+        },
+        {
+            "paperId": "d16511f56543bd3bcd60d540aec8241d6ee0f912",
+            "title": "The State of AI Ethics Report (January 2021)",
+            "abstract": "The 3rd edition of the Montreal AI Ethics Institute's The State of AI Ethics captures the most relevant developments in AI Ethics since October 2020. It aims to help anyone, from machine learning experts to human rights activists and policymakers, quickly digest and understand the field's ever-changing developments. Through research and article summaries, as well as expert commentary, this report distills the research and reporting surrounding various domains related to the ethics of AI, including: algorithmic injustice, discrimination, ethical AI, labor impacts, misinformation, privacy, risk and security, social media, and more. In addition, The State of AI Ethics includes exclusive content written by world-class AI Ethics experts from universities, research institutes, consulting firms, and governments. Unique to this report is\"The Abuse and Misogynoir Playbook,\"written by Dr. Katlyn Tuner (Research Scientist, Space Enabled Research Group, MIT), Dr. Danielle Wood (Assistant Professor, Program in Media Arts and Sciences; Assistant Professor, Aeronautics and Astronautics; Lead, Space Enabled Research Group, MIT) and Dr. Catherine D'Ignazio (Assistant Professor, Urban Science and Planning; Director, Data + Feminism Lab, MIT). The piece (and accompanying infographic), is a deep-dive into the historical and systematic silencing, erasure, and revision of Black women's contributions to knowledge and scholarship in the United Stations, and globally. Exposing and countering this Playbook has become increasingly important following the firing of AI Ethics expert Dr. Timnit Gebru (and several of her supporters) at Google. This report should be used not only as a point of reference and insight on the latest thinking in the field of AI Ethics, but should also be used as a tool for introspection as we aim to foster a more nuanced conversation regarding the impacts of AI on the world.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2129458064",
+                    "name": "Abhishek Gupta"
+                },
+                {
+                    "authorId": "1991056895",
+                    "name": "Alexandrine Royer"
+                },
+                {
+                    "authorId": "2065129004",
+                    "name": "Connor Wright"
+                },
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "2076167708",
+                    "name": "V. Heath"
+                },
+                {
+                    "authorId": "1768833708",
+                    "name": "Erick Galinkin"
+                },
+                {
+                    "authorId": "2007669525",
+                    "name": "Ryan Khurana"
+                },
+                {
+                    "authorId": "115543382",
+                    "name": "M. B. Ganapini"
+                },
+                {
+                    "authorId": "122508287",
+                    "name": "Muriam Fancy"
+                },
+                {
+                    "authorId": "2007670955",
+                    "name": "Masa Sweidan"
+                },
+                {
+                    "authorId": "1768834846",
+                    "name": "Mo Akif"
+                },
+                {
+                    "authorId": "1785367236",
+                    "name": "Renjie Butalid"
+                }
+            ]
+        },
+        {
+            "paperId": "e5001b85af276c3cee4babd93747c5c2a0630d14",
+            "title": "Fairness as Equality of Opportunity: Normative Guidance from Political Philosophy",
+            "abstract": "Recent interest in codifying fairness in Automated Decision Systems (ADS) has resulted in a wide range of formulations of what it means for an algorithmic system to be fair. Most of these propositions are inspired by, but inadequately grounded in, political philosophy scholarship. This paper aims to correct that deficit. We introduce a taxonomy of fairness ideals using doctrines of Equality of Opportunity (EOP) from political philosophy, clarifying their conceptions in philosophy and the proposed codification in fair machine learning. We arrange these fairness ideals onto an EOP spectrum, which serves as a useful frame to guide the design of a fair ADS in a given context. \nWe use our fairness-as-EOP framework to re-interpret the impossibility results from a philosophical perspective, as the in-compatibility between different value systems, and demonstrate the utility of the framework with several real-world and hypothetical examples. Through our EOP-framework we hope to answer what it means for an ADS to be fair from a moral and political philosophy standpoint, and to pave the way for similar scholarship from ethics and legal experts.",
+            "fieldsOfStudy": [
+                "Sociology",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "119219282",
+                    "name": "Eleni Manis"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                }
+            ]
+        },
+        {
+            "paperId": "703a3e3fd7a1ac0933c8047fc9001a26371c8b0b",
+            "title": "The State of AI Ethics Report (October 2020)",
+            "abstract": "The 2nd edition of the Montreal AI Ethics Institute's The State of AI Ethics captures the most relevant developments in the field of AI Ethics since July 2020. This report aims to help anyone, from machine learning experts to human rights activists and policymakers, quickly digest and understand the ever-changing developments in the field. Through research and article summaries, as well as expert commentary, this report distills the research and reporting surrounding various domains related to the ethics of AI, including: AI and society, bias and algorithmic justice, disinformation, humans and AI, labor impacts, privacy, risk, and future of AI ethics. \nIn addition, The State of AI Ethics includes exclusive content written by world-class AI Ethics experts from universities, research institutes, consulting firms, and governments. These experts include: Danit Gal (Tech Advisor, United Nations), Amba Kak (Director of Global Policy and Programs, NYU's AI Now Institute), Rumman Chowdhury (Global Lead for Responsible AI, Accenture), Brent Barron (Director of Strategic Projects and Knowledge Management, CIFAR), Adam Murray (U.S. Diplomat working on tech policy, Chair of the OECD Network on AI), Thomas Kochan (Professor, MIT Sloan School of Management), and Katya Klinova (AI and Economy Program Lead, Partnership on AI). \nThis report should be used not only as a point of reference and insight on the latest thinking in the field of AI Ethics, but should also be used as a tool for introspection as we aim to foster a more nuanced conversation regarding the impacts of AI on the world.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Political Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144150274",
+                    "name": "Abhishek Gupta"
+                },
+                {
+                    "authorId": "1991056895",
+                    "name": "Alexandrine Royer"
+                },
+                {
+                    "authorId": "2076167708",
+                    "name": "V. Heath"
+                },
+                {
+                    "authorId": "2065129004",
+                    "name": "Connor Wright"
+                },
+                {
+                    "authorId": "1742273201",
+                    "name": "Camylle Lanteigne"
+                },
+                {
+                    "authorId": "7009484",
+                    "name": "Allison Cohen"
+                },
+                {
+                    "authorId": "115543382",
+                    "name": "M. B. Ganapini"
+                },
+                {
+                    "authorId": "122508287",
+                    "name": "Muriam Fancy"
+                },
+                {
+                    "authorId": "1768833708",
+                    "name": "Erick Galinkin"
+                },
+                {
+                    "authorId": "2007669525",
+                    "name": "Ryan Khurana"
+                },
+                {
+                    "authorId": "1768834846",
+                    "name": "Mo Akif"
+                },
+                {
+                    "authorId": "1785367236",
+                    "name": "Renjie Butalid"
+                },
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "2007670955",
+                    "name": "Masa Sweidan"
+                },
+                {
+                    "authorId": "2007670011",
+                    "name": "Audrey Balogh Montreal AI Ethics Institute"
+                },
+                {
+                    "authorId": "51981031",
+                    "name": "Microsoft"
+                },
+                {
+                    "authorId": "27598021",
+                    "name": "U. Cambridge"
+                },
+                {
+                    "authorId": "67161152",
+                    "name": "Creative Commons"
+                },
+                {
+                    "authorId": "102235323",
+                    "name": "U. Exeter"
+                },
+                {
+                    "authorId": "103126588",
+                    "name": "C. University"
+                },
+                {
+                    "authorId": "1943874794",
+                    "name": "A. Lab"
+                },
+                {
+                    "authorId": "2007672884",
+                    "name": "AI Global"
+                },
+                {
+                    "authorId": "2097899149",
+                    "name": "Mila"
+                },
+                {
+                    "authorId": "2007672737",
+                    "name": "Union College"
+                },
+                {
+                    "authorId": "94732128",
+                    "name": "U. Toronto"
+                },
+                {
+                    "authorId": "102347555",
+                    "name": "U. Ottawa"
+                },
+                {
+                    "authorId": "2007672735",
+                    "name": "Rapid7"
+                },
+                {
+                    "authorId": "2007672733",
+                    "name": "AI NYUCenterforResponsible"
+                },
+                {
+                    "authorId": "2007672727",
+                    "name": "Iiit Hyderabad"
+                },
+                {
+                    "authorId": "102970034",
+                    "name": "M. University"
+                }
+            ]
+        }
+    ]
+}

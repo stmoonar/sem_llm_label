@@ -1,0 +1,153 @@
+{
+    "authorId": "2128184431",
+    "papers": [
+        {
+            "paperId": "3d51b9cf8d23fd038dac0ae7ade4fe27f1c03e9d",
+            "title": "InstructRAG: Instructing Retrieval-Augmented Generation with Explicit Denoising",
+            "abstract": "Retrieval-augmented generation (RAG) has shown promising potential to enhance the accuracy and factuality of language models (LMs). However, imperfect retrievers or noisy corpora can introduce misleading or even erroneous information to the retrieved contents, posing a significant challenge to the generation quality. Existing RAG methods typically address this challenge by directly predicting final answers despite potentially noisy inputs, resulting in an implicit denoising process that is difficult to interpret and verify. On the other hand, the acquisition of explicit denoising supervision is often costly, involving significant human efforts. In this work, we propose I NSTRUCT RAG, where LMs explicitly learn the denoising process through self-synthesized rationales \u2014 First, we instruct the LM to explain how the ground-truth answer is derived from retrieved documents. Then, these rationales can be used either as demonstrations for in-context learning of explicit denoising or as supervised fine-tuning data to train the model. Compared to standard RAG approaches, I NSTRUCT RAG requires no additional supervision, allows for easier verification of the predicted answers, and effectively improves generation accuracy. Experiments show I NSTRUCT RAG consistently outperforms existing RAG meth-ods in both training-free and trainable scenarios, achieving a relative improvement of 8.3% over the best baseline method on average across five knowledge-intensive benchmarks. Extensive analysis indicates that I NSTRUCT RAG scales well with increased numbers of retrieved documents and consistently exhibits robust denoising ability even in out-of-domain datasets, demonstrating strong generalizability. 1",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2307564846",
+                    "name": "Zhepei Wei"
+                },
+                {
+                    "authorId": "2128184431",
+                    "name": "Wei-Lin Chen"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                }
+            ]
+        },
+        {
+            "paperId": "4a5af57b2056c4cc0a768d830d5427f0d1bdae33",
+            "title": "Large Language Models Perform Diagnostic Reasoning",
+            "abstract": "We explore the extension of chain-of-thought (CoT) prompting to medical reasoning for the task of automatic diagnosis. Motivated by doctors' underlying reasoning process, we present Diagnostic-Reasoning CoT (DR-CoT). Empirical results demonstrate that by simply prompting large language models trained only on general text corpus with two DR-CoT exemplars, the diagnostic accuracy improves by 15% comparing to standard prompting. Moreover, the gap reaches a pronounced 18% in out-domain settings. Our findings suggest expert-knowledge reasoning in large language models can be elicited through proper promptings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2217944277",
+                    "name": "Cheng-Kuang Wu"
+                },
+                {
+                    "authorId": "2128184431",
+                    "name": "Wei-Lin Chen"
+                },
+                {
+                    "authorId": "2145279517",
+                    "name": "Hsin-Hsi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "7df3595bdb4003589e8ca1757cc39ec03a39a2ff",
+            "title": "ZARA: Improving Few-Shot Self-Rationalization for Small Language Models",
+            "abstract": "Language models (LMs) that jointly generate end-task answers as well as free-text rationales are known as self-rationalization models. Recent works demonstrate great performance gain for self-rationalization by few-shot prompting LMs with rationale-augmented exemplars. However, the ability to benefit from explanations only emerges with large-scale LMs, which have poor accessibility. In this work, we explore the less-studied setting of leveraging explanations for small LMs to improve few-shot self-rationalization. We first revisit the relationship between rationales and answers. Inspired by the implicit mental process of how human beings assess explanations, we present a novel approach, Zero-shot Augmentation of Rationale-Answer pairs (ZARA), to automatically construct pseudo-parallel data for self-training by reducing the problem of plausibility judgement to natural language inference. Experimental results show ZARA achieves SOTA performance on the FEB benchmark, for both the task accuracy and the explanation metric. In addition, we conduct human and quantitative evaluation validating ZARA's ability to automatically identify plausible and accurate rationale-answer pairs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2128184431",
+                    "name": "Wei-Lin Chen"
+                },
+                {
+                    "authorId": "26958446",
+                    "name": "An-Zi Yen"
+                },
+                {
+                    "authorId": "152354730",
+                    "name": "Hen-Hsen Huang"
+                },
+                {
+                    "authorId": "2217944277",
+                    "name": "Cheng-Kuang Wu"
+                },
+                {
+                    "authorId": "153924342",
+                    "name": "Hsin-Hsi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "fe425e341cf646689e42adead17f14eeac5d03e6",
+            "title": "Self-ICL: Zero-Shot In-Context Learning with Self-Generated Demonstrations",
+            "abstract": "Large language models (LLMs) have exhibited striking in-context learning (ICL) ability to adapt to target tasks with a few input-output demonstrations. For better ICL, different methods are proposed to select representative demonstrations from existing training corpora. However, such settings are not aligned with real-world practices, as end-users usually query LMs without access to demonstration pools. In this work, we introduce Self-ICL -- a simple framework which bootstraps LMs' intrinsic capabilities to perform zero-shot ICL. Given a test input, Self-ICL first prompts the model to generate pseudo-inputs. Next, the model predicts pseudo-labels for the pseudo-inputs via zero-shot prompting. Finally, we perform ICL for the test input with the pseudo-input-label pairs as demonstrations. Evaluation on 23 BIG-Bench Hard tasks shows Self-ICL outperforms zero-shot baselines on both average accuracy and head-to-head comparison. Moreover, with zero-shot chain-of-thought, Self-ICL achieves results comparable to using real demonstrations. Additionally, we conduct a range of analyses to validate Self-ICL's effectiveness and provide insights for its behaviors under different settings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2128184431",
+                    "name": "Wei-Lin Chen"
+                },
+                {
+                    "authorId": "2217944277",
+                    "name": "Cheng-Kuang Wu"
+                },
+                {
+                    "authorId": "2145279517",
+                    "name": "Hsin-Hsi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "ff5695b5a452629f67094e8004db410c26731fb1",
+            "title": "Fidelity-Enriched Contrastive Search: Reconciling the Faithfulness-Diversity Trade-Off in Text Generation",
+            "abstract": "In this paper, we address the hallucination problem commonly found in natural language generation tasks. Language models often generate fluent and convincing content but can lack consistency with the provided source, resulting in potential inaccuracies. We propose a new decoding method called Fidelity-Enriched Contrastive Search (FECS), which augments the contrastive search framework with context-aware regularization terms. FECS promotes tokens that are semantically similar to the provided source while penalizing repetitiveness in the generated text. We demonstrate its effectiveness across two tasks prone to hallucination: abstractive summarization and dialogue generation. Results show that FECS consistently enhances faithfulness across various language model sizes while maintaining output diversity comparable to well-performing decoding algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2128184431",
+                    "name": "Wei-Lin Chen"
+                },
+                {
+                    "authorId": "2217944277",
+                    "name": "Cheng-Kuang Wu"
+                },
+                {
+                    "authorId": "2237850759",
+                    "name": "Hsin-Hsi Chen"
+                },
+                {
+                    "authorId": "2109523457",
+                    "name": "Chung-Chi Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "ce322ad419882d13a27f86b1afca672d724ee5c2",
+            "title": "Learning to Generate Explanation from e-Hospital Services for Medical Suggestion",
+            "abstract": "Explaining the reasoning of neural models has attracted attention in recent years. Providing highly-accessible and comprehensible explanations in natural language is useful for humans to understand model\u2019s prediction results. In this work, we present a pilot study to investigate explanation generation with a narrative and causal structure for the scenario of health consulting. Our model generates a medical suggestion regarding the patient\u2019s concern and provides an explanation as the outline of the reasoning. To align the generated explanation with the suggestion, we propose a novel discourse-aware mechanism with multi-task learning. Experimental results show that our model achieves promising performances in both quantitative and human evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2128184431",
+                    "name": "Wei-Lin Chen"
+                },
+                {
+                    "authorId": "26958446",
+                    "name": "An-Zi Yen"
+                },
+                {
+                    "authorId": "152354730",
+                    "name": "Hen-Hsen Huang"
+                },
+                {
+                    "authorId": "153924342",
+                    "name": "Hsin-Hsi Chen"
+                }
+            ]
+        }
+    ]
+}

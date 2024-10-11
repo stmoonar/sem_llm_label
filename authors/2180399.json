@@ -1,0 +1,277 @@
+{
+    "authorId": "2180399",
+    "papers": [
+        {
+            "paperId": "11e038ddaada51486d69b3c5b012a159820a31b4",
+            "title": "Towards Interactively Improving ML Data Preparation Code via \"Shadow Pipelines\"",
+            "abstract": "Data scientists develop ML pipelines in an iterative manner: they repeatedly screen a pipeline for potential issues, debug it, and then revise and improve its code according to their findings. However, this manual process is tedious and error-prone. Therefore, we propose to support data scientists during this development cycle with automatically derived interactive suggestions for pipeline improvements. We discuss our vision to generate these suggestions with so-called shadow pipelines, hidden variants of the original pipeline that modify it to auto-detect potential issues, try out modifications for improvements, and suggest and explain these modifications to the user. We envision to apply incremental view maintenance-based optimisations to ensure low-latency computation and maintenance of the shadow pipelines. We conduct preliminary experiments to showcase the feasibility of our envisioned approach and the potential benefits of our proposed optimisations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                },
+                {
+                    "authorId": "2274886295",
+                    "name": "Paul Groth"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        },
+        {
+            "paperId": "260548318e19ff02bdf4f762a497a57a90acbac8",
+            "title": "Messy Code Makes Managing ML Pipelines Difficult? Just Let LLMs Rewrite the Code!",
+            "abstract": "Machine learning (ML) applications that learn from data are increasingly used to automate impactful decisions. Unfortunately, these applications often fall short of adequately managing critical data and complying with upcoming regulations. A technical reason for the persistence of these issues is that the data pipelines in common ML libraries and cloud services lack fundamental declarative, data-centric abstractions. Recent research has shown how such abstractions enable techniques like provenance tracking and automatic inspection to help manage ML pipelines. Unfortunately, these approaches lack adoption in the real world because they require clean ML pipeline code written with declarative APIs, instead of the messy imperative Python code that data scientists typically write for data preparation. We argue that it is unrealistic to expect data scientists to change their established development practices. Instead, we propose to circumvent this\"code abstraction gap\"by leveraging the code generation capabilities of large language models (LLMs). Our idea is to rewrite messy data science code to a custom-tailored declarative pipeline abstraction, which we implement as a proof-of-concept in our prototype Lester. We detail its application for a challenging compliance management example involving\"incremental view maintenance\"of deployed ML pipelines. The code rewrites for our running example show the potential of LLMs to make messy data science code declarative, e.g., by identifying hand-coded joins in Python and turning them into joins on dataframes, or by generating declarative feature encoders from NumPy code.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                }
+            ]
+        },
+        {
+            "paperId": "26b13238e4f1b385699d53f27dc5e42e427ac863",
+            "title": "Etude - Evaluating the Inference Latency of Session-Based Recommendation Models at Scale",
+            "abstract": "Session-based recommendation (SBR) targets a core scenario in e-Commerce: Given a sequence of interactions of a visitor with a selection of items, we want to recommend the next item(s) of interest to interact with. Unfortunately, SBR models are difficult to deploy in practice, as ($i$) session-based recommendations cannot be precomputed offline, but must be inferred online for ongoing user sessions with low latency, and (ii) there is a huge variety of SBR models available, typically designed by academic researchers, whose inference performance and deployment cost is unclear. As a result, data scientists must typically prototype and evaluate different deployment options in collaboration with devops teams - a tedious and costly process, which does not scale to multiple use cases. To alleviate this, we present Etude, an end-to-end bench-marking framework, which enables data scientists to automati-cally evaluate the inference performance of SBR models under different deployment options. With Etude, data scientists can declaratively specify workload statistics, hardware options, as well as latency and throughput constraints. Based on these, Etude automatically deploys and runs an inference benchmark in Kubernetes with a synthetically generated click workload. Sub-sequently, Etude provides the data scientists with measurements on the achieved throughput and latency, as a basis for deciding on feasible and cost-efficient deployment options. We detail the design of Etude and present an experimental study for ten different SBR models in challenging settings resembling real-world workloads encountered at the large Euro-pean e-Commerce platform bol.com. We determine performant and cost-efficient deployment options in terms of models and cloud instance types for a variety of online shopping use cases (ranging from grocery shopping to large e-Commerce platforms). Moreover, we identify severe performance bottlenecks in the open source TorchServe inference server from the PyTorch ecosystem and in the implementation of four SBR models from the open source RecBole library. We make the source code of our framework and experimental results publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114852494",
+                    "name": "Barrie Kersbergen"
+                },
+                {
+                    "authorId": "2333066",
+                    "name": "O. Sprangers"
+                },
+                {
+                    "authorId": "2292333676",
+                    "name": "Frank Kootte"
+                },
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "2265490493",
+                    "name": "M. D. Rijke"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        },
+        {
+            "paperId": "373b642a2a3e91178b09c2d07587addcad7f8a22",
+            "title": "Data Debugging with Shapley Importance over Machine Learning Pipelines",
+            "abstract": "When a machine learning (ML) model exhibits poor quality (e.g., poor accuracy or fairness), the problem can often be traced back to errors in the training data. Being able to discover the data examples that are the most likely culprits is a fundamental concern that has received a lot of attention recently. One prominent way to measure \"data importance\" with respect to model quality is the Shapley value. Unfortunately, existing methods only focus on the ML model in isolation, without considering the broader ML pipeline for data preparation and feature extraction, which appears in the majority of real-world ML code. This presents a major limitation to applying existing methods in practical settings. In this paper, we propose Datascope, a method for efficiently computing Shapley-based data importance over ML pipelines. We introduce several approximations that lead to dramatic improvements in terms of computational speed. Finally, our experimental evaluation demonstrates that our methods are capable of data error discovery that is as effective as existing Monte Carlo baselines, and in some cases even outperform them. We release our code as an open-source data debugging library available at github.com/easeml/datascope.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3451527",
+                    "name": "Bojan Karlas"
+                },
+                {
+                    "authorId": "2299959959",
+                    "name": "David Dao"
+                },
+                {
+                    "authorId": "2299965578",
+                    "name": "Matteo Interlandi"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "2300108428",
+                    "name": "Wentao Wu"
+                },
+                {
+                    "authorId": "2295952842",
+                    "name": "Ce Zhang"
+                },
+                {
+                    "authorId": "2299961668",
+                    "name": "StandardScaler"
+                }
+            ]
+        },
+        {
+            "paperId": "5f7e322b845f7d65c7a97b75c2bbe108d58de9ca",
+            "title": "Domain Generalization in Time Series Forecasting",
+            "abstract": "Domain generalization aims to design models that can effectively generalize to unseen target domains by learning from observed source domains. Domain generalization poses a significant challenge for time series data, due to varying data distributions and temporal dependencies. Existing approaches to domain generalization are not designed for time series data, which often results in suboptimal or unstable performance when confronted with diverse temporal patterns and complex data characteristics. We propose a novel approach to tackle the problem of domain generalization in time series forecasting. We focus on a scenario where time series domains share certain common attributes and exhibit no abrupt distribution shifts. Our method revolves around the incorporation of a key regularization term into an existing time series forecasting model: domain discrepancy regularization. In this way, we aim to enforce consistent performance across different domains that exhibit distinct patterns. We calibrate the regularization term by investigating the performance within individual domains and propose the domain discrepancy regularization with domain difficulty awareness. We demonstrate the effectiveness of our method on multiple datasets, including synthetic and real-world time series datasets from diverse domains such as retail, transportation, and finance. Our method is compared against traditional methods, deep learning models, and domain generalization approaches to provide comprehensive insights into its performance. In these experiments, our method showcases superior performance, surpassing both the base model and competing domain generalization models across all datasets. Furthermore, our method is highly general and can be applied to various time series models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37202548",
+                    "name": "Songgaojun Deng"
+                },
+                {
+                    "authorId": "2333066",
+                    "name": "O. Sprangers"
+                },
+                {
+                    "authorId": "2150654536",
+                    "name": "Ming Li"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "121213569",
+                    "name": "M. de Rijke"
+                }
+            ]
+        },
+        {
+            "paperId": "85769d32cc5c7e50ee5041a00f515036de0134cc",
+            "title": "Snapcase - Regain Control over Your Predictions with Low-Latency Machine Unlearning",
+            "abstract": "The \u201cright-to-be-forgotten\u201d requires the removal of personal data from trained machine learning (ML) models with machine unlearning. Conducting such unlearning with low latency is crucial for responsible data management. Low-latency unlearning is challenging, but possible for certain classes of ML models when treating them as \u201cmaterialised views\u201d over training data, with carefully chosen operations and data structures for computing updates. We present Snapcase, a recommender system that can unlearn user interactions with sub-second latency on a large grocery shopping dataset with 33 million purchases and 200 thousand users. Its implementation is based on incremental view maintenance with Differential Dataflow and a custom algorithm and data structure for maintaining a top-\ud835\udc58 aggregation over the result of a sparse matrix-matrix multiplication. We demonstrate how interactive low-latency unlearning empowers users in critical scenarios to get rid of sensitive items in their recommendations and to drastically reduce their data\u2019s negative influence on other users\u2019 predictions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                },
+                {
+                    "authorId": "2265490493",
+                    "name": "M. D. Rijke"
+                }
+            ]
+        },
+        {
+            "paperId": "cf8aa34e244451ac43cdff0dcea5e802118052b2",
+            "title": "Red Onions, Soft Cheese and Data: From Food Safety to Data Traceability for Responsible AI",
+            "abstract": "Software systems that learn from data with AI and machine learning (ML) are becoming ubiquitous and are increasingly used to automate impactful decisions. The risks arising from this widespread use of AI/ML are garnering attention from policy makers, scientists, and the media, and lead to the question what data management research can contribute to reduce such risks. These dangers of AI/ML applications are relatively new and recent, however our societies have had to deal with the dangers of complex and distributed technical processes for a long time already. Based on this insight, we detail how the U.S. Food and Drug Administration (FDA) combats the outbreaks of foodborne illnesses",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1393463989",
+                    "name": "Stefan Grafberger"
+                },
+                {
+                    "authorId": "2296030063",
+                    "name": "Zeyu Zhang"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "2295952842",
+                    "name": "Ce Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "281c89530f633c3b3db191fb747646b60683743a",
+            "title": "A Personalized Neighborhood-based Model for Within-basket Recommendation in Grocery Shopping",
+            "abstract": "Users of online shopping platforms typically purchase multiple items at a time in the form of a shopping basket. Personalized within-basket recommendation is the task of recommending items to complete an incomplete basket during a shopping session. In contrast to the related task of session-based recommendation, where the goal is to complete an ongoing anonymous session, we have access to the shopping history of the user in within-basket recommendation. Previous studies have shown the superiority of neighborhood-based models for session-based recommendation and the importance of personal history in the grocery shopping domain. But their applicability in within-basket recommendation remains unexplored. We propose PerNIR, a neighborhood-based model that explicitly models the personal history of users for within-basket recommendation in grocery shopping. The main novelty of PerNIR is in modeling the short-term interests of users, which are represented by the current basket, as well as their long-term interest, which is reflected in their purchasing history. In addition to the personal history, user neighbors are used to capture the collaborative purchase behavior. We evaluate PerNIR on two public and proprietary datasets. The experimental results show that it outperforms 10 state-of-the-art competitors with a significant margin, i.e., with gains of more than 12% in terms of hit rate over the second best performing approach. Additionally, we showcase an optimized implementation of our method, which computes recommendations fast enough for real-world production scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3429661",
+                    "name": "Mozhdeh Ariannezhad"
+                },
+                {
+                    "authorId": "2150654536",
+                    "name": "Ming Li"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "121213569",
+                    "name": "M. de Rijke"
+                }
+            ]
+        },
+        {
+            "paperId": "2d4a9648d10ef0239210b9381c0b0337d2059cd0",
+            "title": "On the Impact of Outlier Bias on User Clicks",
+            "abstract": "User interaction data is an important source of supervision in counterfactual learning to rank (CLTR). Such data suffers from presentation bias. Much work in unbiased learning to rank (ULTR) focuses on position bias, i.e., items at higher ranks are more likely to be examined and clicked. Inter-item dependencies also influence examination probabilities, with outlier items in a ranking as an important example. They are defined as items that observably deviate from the rest and therefore stand out in the ranking. In this paper, we identify and introduce the bias brought about by outlier items: users tend to click more on outlier items and their close neighbors. To this end, we first conduct a controlled experiment to study the effect of outliers on user clicks. Next, to examine whether the findings of our study generalize to naturalistic situations, we explore real-world click logs from an e-commerce platform. We show that, in both scenarios, users tend to click significantly more on outlier items compared to non-outlier items in the same rankings. We show that this tendency holds for all positions, i.e., for any specific position, an item receives more interactions when presented as an outlier as opposed to a non-outlier item. We conclude from our analysis that the outliers' effect on clicks is a type of bias that should be addressed in ULTR. We therefore propose an outlier-aware click model that accounts for both outlier and position bias, called outlier-aware position-based model (OPBM). We estimate click propensities based on OPBM; through extensive experiments performed on both real-world e-commerce data and semi-synthetic data, we verify the effectiveness of our outlier-aware click model. Our results show the superiority of OPBM against baselines in terms of ranking performance when outlier bias is severe.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49554487",
+                    "name": "F. Sarvi"
+                },
+                {
+                    "authorId": "3096714",
+                    "name": "Ali Vardasbi"
+                },
+                {
+                    "authorId": "2277448551",
+                    "name": "Mohammad Aliannejadi"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                },
+                {
+                    "authorId": "1696030",
+                    "name": "M. de Rijke"
+                }
+            ]
+        },
+        {
+            "paperId": "333d6631e0f0ad2e96903e8f28fd43d28f189735",
+            "title": "Automated Data Cleaning Can Hurt Fairness in Machine Learning-based Decision Making",
+            "abstract": "In this paper, we interrogate whether data quality issues track demographic characteristics such as sex, race and age, and whether automated data cleaning \u2014 of the kind commonly used in production ML systems \u2014 impacts the fairness of predictions made by these systems. To the best of our knowledge, the impact of data cleaning on fairness in downstream tasks has not been investigated in the literature.We first analyze the tuples flagged by common error detection strategies in five research datasets. We find that, while specific data quality issues, such as higher rates of missing values, are associated with membership in historically disadvantaged groups, poor data quality does not generally track demographic group membership. As a follow-up, we conduct a large-scale empirical study on the impact of automated data cleaning on fairness, involving more than 26,000 model evaluations on five datasets. We observe that, while automated data cleaning has an insignificant impact on both accuracy and fairness in the majority of cases, it is more likely to worsen fairness than to improve it, especially when the cleaning techniques are not carefully chosen. This finding is both significant and worrying, given that it potentially implicates many production ML systems. We make our code and experimental results publicly available.The analysis we conducted in this paper is difficult, primarily because it requires that we think holistically about disparities in data quality, disparities in the effectiveness of data cleaning methods, and impacts of such disparities on ML model performance for different demographic groups. Such holistic analysis can and should be supported with the help of data engineering research. Towards this goal, we envision the development of fairness-aware data cleaning methods, and their integration into complex pipelines for ML-based decision making.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3375291",
+                    "name": "Shubha Guha"
+                },
+                {
+                    "authorId": "1410017982",
+                    "name": "Falaah Arif Khan"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2180399",
+                    "name": "Sebastian Schelter"
+                }
+            ]
+        }
+    ]
+}

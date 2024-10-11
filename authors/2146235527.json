@@ -1,0 +1,281 @@
+{
+    "authorId": "2146235527",
+    "papers": [
+        {
+            "paperId": "227802226f7148d7fc3712e6b22efc6c1c99ba2b",
+            "title": "Explainable Legal Case Matching via Graph Optimal Transport",
+            "abstract": "Providing human-understandable explanations for the matching predictions is still challenging for current legal case matching methods. One difficulty is that legal cases are semi-structured text documents with complicated case-case and case-law article correlations. To tackle the issue, we propose a novel graph optimal transport (GOT)-based legal case matching model that is able to provide not only the matching predictions but also plausible and faithful explanations for the prediction. The model, called GEIOT-Match, first constructs a heterogeneous graph to explicitly represent the semi-structured nature of legal cases and their associations with the law articles. Therefore, matching two legal cases amounts to identifying the rationales from the paired legal case sub-graphs in the heterogeneous graph and then aligning between them. An inverse optimal transport (IOT) model on graphs is learned to extract rationales from paired legal cases. The extracted rationales and the heterogeneous graph demonstrate the key legal characteristics of legal cases, which can be further used to conduct matching and generate explanations for the matching. Experimental results showed that GEIOT-Match outperformed state-of-the-art baselines in terms of matching prediction, rationale extraction, and natural language explanation generation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109820280",
+                    "name": "ZhongXiang Sun"
+                },
+                {
+                    "authorId": "2118684861",
+                    "name": "Weijie Yu"
+                },
+                {
+                    "authorId": "2153850397",
+                    "name": "Zihua Si"
+                },
+                {
+                    "authorId": "2150636233",
+                    "name": "Jun Xu"
+                },
+                {
+                    "authorId": "3065080",
+                    "name": "Zhenhua Dong"
+                },
+                {
+                    "authorId": "2258445639",
+                    "name": "Xu Chen"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                },
+                {
+                    "authorId": "2113341834",
+                    "name": "Jirong Wen"
+                }
+            ]
+        },
+        {
+            "paperId": "47a932e0fcd309abea30c43fdff524c9d093474e",
+            "title": "Generalizable Face Landmarking Guided by Conditional Face Warping",
+            "abstract": "As a significant step for human face modeling, editing, and generation, face landmarking aims at extracting facial keypoints from images. A generalizable face landmarker is required in practice because real-world facial images, e.g., the avatars in animations and games, are often stylized in various ways. However, achieving generalizable face land-marking is challenging due to the diversity of facial styles and the scarcity of labeled stylized faces. In this study, we propose a simple but effective paradigm to learn a generalizable face landmarker based on labeled real human faces and unlabeled stylized faces. Our method learns the face landmarker as the key module of a conditional face warper. Given a pair of real and stylized facial images, the conditional face warper predicts a warping field from the real face to the stylized one, in which the face landmarker predicts the ending points of the warping field and provides us with high-quality pseudo landmarks for the corresponding stylized facial images. Applying an alternating optimization strategy, we learn the face landmarker to minimize i) the discrepancy between the stylized faces and the warped real ones and ii) the prediction errors of both real and pseudo landmarks. Experiments on various datasets show that our method outperforms existing state-of-the-art domain adaptation methods in face landmarking tasks, leading to a face landmarker with better generalizability. Code is available at https://plustwo0.github.io/project-face-landmarker.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2297218864",
+                    "name": "Jiayi Liang"
+                },
+                {
+                    "authorId": "2297436929",
+                    "name": "Haotian Liu"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                },
+                {
+                    "authorId": "38463326",
+                    "name": "Dixin Luo"
+                }
+            ]
+        },
+        {
+            "paperId": "c1357f16a25bcc980469583e7ba1460dd15e68e1",
+            "title": "A Plug-and-Play Quaternion Message-Passing Module for Molecular Conformation Representation",
+            "abstract": "Graph neural networks have been widely used to represent 3D molecules, which capture molecular attributes and geometric information through various message-passing mechanisms.\nThis study proposes a novel quaternion message-passing (QMP) module that can be plugged into many existing 3D molecular representation models and enhance their power for distinguishing molecular conformations.\nIn particular, our QMP module represents the 3D rotations between one chemical bond and its neighbor bonds as a quaternion sequence. \nThen, it aggregates the rotations by the chained Hamilton product of the quaternions. \nThe real part of the output quaternion is invariant to the global 3D rotations of molecules but sensitive to the local torsions caused by twisting bonds, providing discriminative information for training molecular conformation representation models. \nIn theory, we prove that considering these features enables invariant GNNs to distinguish the conformations caused by bond torsions. \nWe encapsulate the QMP module with acceleration, so combining existing models with the QMP requires merely one-line code and little computational cost. \nExperiments on various molecular datasets show that plugging our QMP module into existing invariant GNNs leads to consistent and significant improvements in molecular conformation representation and downstream tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187311854",
+                    "name": "Angxiao Yue"
+                },
+                {
+                    "authorId": "38463326",
+                    "name": "Dixin Luo"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "fb2d98bb2b6527be065d7135babf4a2000e9c05f",
+            "title": "An Inverse Partial Optimal Transport Framework for Music-guided Movie Trailer Generation",
+            "abstract": "Trailer generation is a challenging video clipping task that aims to select highlighting shots from long videos like movies and re-organize them in an attractive way. In this study, we propose an inverse partial optimal transport (IPOT) framework to achieve music-guided movie trailer generation. In particular, we formulate the trailer generation task as selecting and sorting key movie shots based on audio shots, which involves matching the latent representations across visual and acoustic modalities. We learn a multi-modal latent representation model in the proposed IPOT framework to achieve this aim. In this framework, a two-tower encoder derives the latent representations of movie and music shots, respectively, and an attention-assisted Sinkhorn matching network parameterizes the grounding distance between the shots' latent representations and the distribution of the movie shots. Taking the correspondence between the movie shots and its trailer music shots as the observed optimal transport plan defined on the grounding distances, we learn the model by solving an inverse partial optimal transport problem, leading to a bi-level optimization strategy. We collect real-world movies and their trailers to construct a dataset with abundant label information called CMTD and, accordingly, train and evaluate various automatic trailer generators. Compared with state-of-the-art methods, our IPOT method consistently shows superiority in subjective visual effects and objective quantitative measurements.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2253841901",
+                    "name": "Yutong Wang"
+                },
+                {
+                    "authorId": "2313691722",
+                    "name": "Sidan Zhu"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                },
+                {
+                    "authorId": "38463326",
+                    "name": "Dixin Luo"
+                }
+            ]
+        },
+        {
+            "paperId": "0fd80b088f5955e4e5db9b3be1c0a70204724ae7",
+            "title": "HOTNAS: Hierarchical Optimal Transport for Neural Architecture Search",
+            "abstract": "Instead of searching the entire network directly, current NAS approaches increasingly search for multiple relatively small cells to reduce search costs. A major challenge is to jointly measure the similarity of cell micro-architectures and the difference in macro-architectures between different cell-based networks. Recently, optimal transport (OT) has been successfully applied to NAS as it can capture the operational and structural similarity across various networks. However, existing OT-based NAS methods either ignore the cell similarity or focus solely on searching for a single cell architecture. To address these issues, we propose a hierarchical optimal transport metric called HOTNN for measuring the similarity of different networks. In HOTNN, the cell-level similarity computes the OT distance between cells in various networks by considering the similarity of each node and the differences in the information flow costs between node pairs within each cell in terms of operational and structural information. The network-level similarity calculates OT distance between networks by considering both the cell-level similarity and the variation in the global position of each cell within their respective networks. We then explore HOTNN in a Bayesian optimization framework called HOTNAS, and demonstrate its efficacy in diverse tasks. Extensive experiments demonstrate that H OT-NAS can discover network architectures with better performance in multiple modular cell-based search spaces.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146103853",
+                    "name": "Jiechao Yang"
+                },
+                {
+                    "authorId": "2156610887",
+                    "name": "Yong Liu"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "11f42721f56f36a64638677ccde7784040829656",
+            "title": "Uni-Mol: A Universal 3D Molecular Representation Learning Framework",
+            "abstract": "Molecular representation learning (MRL) has gained tremendous attention due to its critical role in learning from limited supervised data for applications like drug design. In most MRL methods, molecules are treated as 1D sequential tokens or 2D topology graphs, limiting their ability to incorporate 3D information for downstream tasks and, in particular, making it almost impossible for 3D geometry prediction or generation. Herein, we propose Uni-Mol, a universal MRL framework that significantly enlarges the representation ability and application scope of MRL schemes. Uni-Mol is composed of two models with the same SE(3)-equivariant transformer architecture: a molecular pretraining model trained by 209M molecular conformations; a pocket pretraining model trained by 3M candidate protein pocket data. The two models are used independently for separate tasks, and are combined when used in protein-ligand binding tasks. By properly incorporating 3D information, Uni-Mol outperforms SOTA in 14/15 molecular property prediction tasks. Moreover, Uni-Mol achieves superior performance in 3D spatial tasks, including protein-ligand binding pose prediction, molecular conformation generation, etc. Finally, we show that Uni-Mol can be successfully applied to the tasks with few-shot data like pocket druggability prediction. The code, model, and data are made publicly available at https://github.com/dptech-corp/Uni-Mol .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2107531769",
+                    "name": "G. Zhou"
+                },
+                {
+                    "authorId": "2205712751",
+                    "name": "Zhifeng Gao"
+                },
+                {
+                    "authorId": "2220891376",
+                    "name": "Qiankun Ding"
+                },
+                {
+                    "authorId": "2205719576",
+                    "name": "Hang Zheng"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                },
+                {
+                    "authorId": "12457830",
+                    "name": "Zhewei Wei"
+                },
+                {
+                    "authorId": "2181109681",
+                    "name": "Linfeng Zhang"
+                },
+                {
+                    "authorId": "35286545",
+                    "name": "Guolin Ke"
+                }
+            ]
+        },
+        {
+            "paperId": "153e6e21e26eac6560b8c65061ccc78c8e74560f",
+            "title": "MPerformer: An SE(3) Transformer-based Molecular Perceptron",
+            "abstract": "Molecular perception aims to construct 3D molecules from 3D atom clouds (i.e., atom types and corresponding 3D coordinates), determining bond connections, bond orders, and other molecular attributes within molecules. It is essential for realizing many applications in cheminformatics and bioinformatics, such as modeling quantum chemistry-derived molecular structures in protein-ligand complexes. Additionally, many molecular generation methods can only generate molecular 3D atom clouds, requiring molecular perception as a necessary post-processing. However, existing molecular perception methods mainly rely on predefined chemical rules and fail to leverage 3D geometric information, whose performance is sub-optimal fully. In this study, we propose MPerformer, an SE(3) Transformer-based molecular perceptron exhibiting SE(3)-invariance, to construct 3D molecules from 3D atom clouds efficiently. Besides, we propose a multi-task pretraining-and-finetuning paradigm to learn this model. In the pretraining phase, we jointly minimize an attribute prediction loss and an atom cloud reconstruction loss, mitigating the data imbalance issue of molecular attributes and enhancing the robustness and generalizability of the model. Experiments show that MPerformer significantly outperforms state-of-the-art molecular perception methods in precision and robustness, benefiting various molecular generation scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2260975528",
+                    "name": "Fanmeng Wang"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                },
+                {
+                    "authorId": "2261080540",
+                    "name": "Xi Chen"
+                },
+                {
+                    "authorId": "2261094124",
+                    "name": "Shuqi Lu"
+                },
+                {
+                    "authorId": "2260709738",
+                    "name": "Yuqing Deng"
+                },
+                {
+                    "authorId": "2261071700",
+                    "name": "Wenbing Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "1ab125cb9d19fa1ebcac7b10cf3e7cef36ca7ba4",
+            "title": "A Quasi-Wasserstein Loss for Learning Graph Neural Networks",
+            "abstract": "When learning graph neural networks (GNNs) in node-level prediction tasks, most existing loss functions are applied for each node independently, even if node embeddings and their labels are non-i.i.d. because of their graph structures. To eliminate such inconsistency, in this study we propose a novel Quasi-Wasserstein (QW) loss with the help of the optimal transport defined on graphs, leading to new learning and prediction paradigms of GNNs. In particular, we design a \"Quasi-Wasserstein'' distance between the observed multi-dimensional node labels and their estimations, optimizing the label transport defined on graph edges. The estimations are parameterized by a GNN in which the optimal label transport may determine the graph edge weights optionally. By reformulating the strict constraint of the label transport to a Bregman divergence-based regularizer, we obtain the proposed Quasi-Wasserstein loss associated with two efficient solvers learning the GNN together with optimal label transport. When predicting node labels, our model combines the output of the GNN with the residual component provided by the optimal label transport, leading to a new transductive prediction paradigm. Experiments show that the proposed QW loss applies to various GNNs and helps to improve their performance in node-level classification and regression tasks. The code of this work can be found at https://github.com/SDS-Lab/QW_Loss.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1992796874",
+                    "name": "Minjie Cheng"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "7918cfcee1fdca473d2b3e5bb47ead4ab3d10b00",
+            "title": "Privacy-Preserved Evolutionary Graph Modeling via Gromov-Wasserstein Autoregression",
+            "abstract": "Real-world graphs like social networks are often evolutionary over time, whose observations at different timestamps lead to graph sequences. Modeling such evolutionary graphs is important for many applications, but solving this problem often requires the correspondence between the graphs at different timestamps, which may leak private node information, e.g., the temporal behavior patterns of the nodes. We proposed a Gromov-Wasserstein Autoregressive (GWAR) model to capture the generative mechanisms of evolutionary graphs, which does not require the correspondence information and thus preserves the privacy of the graphs' nodes. This model consists of two autoregressions, predicting the number of nodes and the probabilities of nodes and edges, respectively. The model takes observed graphs as its input and predicts future graphs via solving a joint graph alignment and merging task. This task leads to a fused Gromov-Wasserstein (FGW) barycenter problem, in which we approximate the alignment of the graphs based on a novel inductive fused Gromov-Wasserstein (IFGW) distance. The IFGW distance is parameterized by neural networks and can be learned under mild assumptions, thus, we can infer the FGW barycenters without iterative optimization and predict future graphs efficiently. Experiments show that our GWAR achieves encouraging performance in modeling evolutionary graphs in privacy-preserving scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2209987086",
+                    "name": "Yue Xiang"
+                },
+                {
+                    "authorId": "38463326",
+                    "name": "Dixin Luo"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "80720862ff8de9e0c71f7d85000f036e4c033763",
+            "title": "Robust Graph Matching Using An Unbalanced Hierarchical Optimal Transport Framework",
+            "abstract": "Graph matching is one of the most significant graph analytic tasks, which aims to find the node correspondence across different graphs. Most existing graph matching approaches mainly rely on topological information, whose performances are often sub-optimal and sensitive to data noise because of not fully leveraging the multi-modal information hidden in graphs, such as node attributes, subgraph structures, etc. In this study, we propose a novel and robust graph matching method based on an unbalanced hierarchical optimal transport (UHOT) framework, which, to our knowledge, makes the first attempt to exploit cross-modal alignment in graph matching. In principle, applying multi-layer message passing, we represent each graph as layer-wise node embeddings corresponding to different modalities. Given two graphs, we align their node embeddings within the same modality and across different modalities, respectively. Then, we infer the node correspondence by the weighted average of all the alignment results. This method is implemented as computing the UHOT distance between the two graphs -- each alignment is achieved by a node-level optimal transport plan between two sets of node embeddings, and the weights of all alignment results correspond to an unbalanced modality-level optimal transport plan. Experiments on various graph matching tasks demonstrate the superiority and robustness of our method compared to state-of-the-art approaches. Our implementation is available at https://github.com/Dixin-Lab/UHOT-GM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2259918427",
+                    "name": "Haoran Cheng"
+                },
+                {
+                    "authorId": "38463326",
+                    "name": "Dixin Luo"
+                },
+                {
+                    "authorId": "2146235527",
+                    "name": "Hongteng Xu"
+                }
+            ]
+        }
+    ]
+}

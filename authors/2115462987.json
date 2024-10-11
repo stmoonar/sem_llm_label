@@ -1,0 +1,364 @@
+{
+    "authorId": "2115462987",
+    "papers": [
+        {
+            "paperId": "10b59b888f3a9dd53b5ae393b5fd8bd9f82b215a",
+            "title": "One-Stage Object Referring with Gaze Estimation",
+            "abstract": "The classic object referring task aims at localizing the referred object in the image and requires a reference image and a natural language description as inputs. Given the facts that gaze signal can be easily obtained by a modern human-computer interaction system with a camera and that human tends to look at the object when referring to it, we propose a novel gaze-assisted object referring framework. The formulation not only simplifies the state-of-the-art gaze-assisted object referring system requiring many input signals besides gaze, but also incorporates the one-stage object detection idea to improve the inference efficiency. More importantly, it implicitly considers all object candidates and thus resolves the main pain point of existing two-stage object referring solutions for proposing an appropriate number of candidates \u2013 it cannot be too large, otherwise the computational cost can be prohibitive; it cannot be too small, otherwise the chance of missing a referred object can be significant. To utilize the gaze information, we propose to build a gaze heatmap by using the anchor position encoding map and the gaze prediction result. The gaze heatmap and the language feature are then merged into the feature pyramid in the object detection as the final one-stage referring system. In the CityScapes-OR dataset, the proposed method outperforms the state-of-the-art by 7.8% for Acc@1.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "30482318",
+                    "name": "Jianhang Chen"
+                },
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "2109035901",
+                    "name": "Yue Wu"
+                },
+                {
+                    "authorId": "2134759582",
+                    "name": "Shalini Ghosh"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "2122374530",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "1741931",
+                    "name": "J. Allebach"
+                }
+            ]
+        },
+        {
+            "paperId": "7168266cd8a4bc171e61a0c881857f1676d85807",
+            "title": "Few-Shot Gaze Estimation with Model Offset Predictors",
+            "abstract": "Due to the variance of optical properties across different people, the performance of a person-agnostic gaze estimation model may not generalize well on a specific person. Though one may achieve better performance by training a person-specific model, it typically requires a large number of samples which is not available in real-life scenarios. Hence, few-shot gaze estimation method is preferred for the small number of samples from a target person. However, the key question is how to close the performance gap between a \"few-shot\" model and the \"many-shot\" model. In this paper, we propose to learn a person-specific offset predictor which outputs the difference between the person-agnostic model and the many-shot person-specific model with as few as one training sample. We adapt the knowledge to a new person by using the average of meta-learned offset predictors parameters as the initialization of the new offset predictor. Experiments show that the proposed few-shot person-specific model is not only closer to the corresponding many-shot person-specific model but also has better accuracy than the SOTA few-shot gaze estimation methods in multiple gaze datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152320135",
+                    "name": "Jiawei Ma"
+                },
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "2109035901",
+                    "name": "Yue Wu"
+                },
+                {
+                    "authorId": "3236027",
+                    "name": "Varsha Hedau"
+                },
+                {
+                    "authorId": "2122374530",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "31fea6ae3321a8457e9ec42a19fb94b156a9c39f",
+            "title": "Augmentation Invariant and Instance Spreading Feature for Softmax Embedding",
+            "abstract": "Deep embedding learning plays a key role in learning discriminative feature representations, where the visually similar samples are pulled closer and dissimilar samples are pushed away in the low-dimensional embedding space. This paper studies the unsupervised embedding learning problem by learning such a representation without using any category labels. This task faces two primary challenges: mining reliable positive supervision from highly similar fine-grained classes, and generalizing to unseen testing categories. To approximate the positive concentration and negative separation properties in category-wise supervised learning, we introduce a data augmentation invariant and instance spreading feature using the instance-wise supervision. We also design two novel domain-agnostic augmentation strategies to further extend the supervision in feature space, which simulates the large batch training using a small batch size and the augmented features. To learn such a representation, we propose a novel instance-wise softmax embedding, which directly perform the optimization over the augmented instance features with the binary discrmination softmax encoding. It significantly accelerates the learning speed with much higher accuracy than existing methods, under both seen and unseen testing categories. The unsupervised embedding performs well even without pre-trained network over samples from fine-grained categories. We also develop a variant using category-wise supervision, namely category-wise softmax embedding, which achieves competitive performance over the state-of-of-the-arts, without using any auxiliary information or restrict sample mining.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2676247",
+                    "name": "Mang Ye"
+                },
+                {
+                    "authorId": "145953515",
+                    "name": "Jianbing Shen"
+                },
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "1768574",
+                    "name": "P. Yuen"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "3b388853badae3ff5ec7dd75a608514864f210ab",
+            "title": "Unifying Specialist Image Embedding into Universal Image Embedding",
+            "abstract": "Deep image embedding provides a way to measure the semantic similarity of two images. It plays a central role in many applications such as image search, face verification, and zero-shot learning. It is desirable to have a universal deep embedding model applicable to various domains of images. However, existing methods mainly rely on training specialist embedding models each of which is applicable to images from a single domain. In this paper, we study an important but unexplored task: how to train a single universal image embedding model to match the performance of several specialists on each specialist's domain. Simply fusing the training data from multiple domains cannot solve this problem because some domains become overfitted sooner when trained together using existing methods. Therefore, we propose to distill the knowledge in multiple specialists into a universal embedding to solve this problem. In contrast to existing embedding distillation methods that distill the absolute distances between images, we transform the absolute distances between images into a probabilistic distribution and minimize the KL-divergence between the distributions of the specialists and the universal embedding. Using several public datasets, we validate that our proposed method accomplishes the goal of universal image embedding.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115387758",
+                    "name": "Yang Feng"
+                },
+                {
+                    "authorId": "73777526",
+                    "name": "Futang Peng"
+                },
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "2152348673",
+                    "name": "Wei Zhu"
+                },
+                {
+                    "authorId": "2116578033",
+                    "name": "Shanfeng Zhang"
+                },
+                {
+                    "authorId": "2401836",
+                    "name": "Howard Zhou"
+                },
+                {
+                    "authorId": "2110121852",
+                    "name": "Zhen Li"
+                },
+                {
+                    "authorId": "2066508193",
+                    "name": "Tom Duerig"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "33642939",
+                    "name": "Jiebo Luo"
+                }
+            ]
+        },
+        {
+            "paperId": "9a1d89992bfca541d2d7fb0b00fb81e3f218fa36",
+            "title": "Discovering Image Manipulation History by Pairwise Relation and Forensics Tools",
+            "abstract": "Given a potentially manipulated probe image, provenance analysis aims to find all images derived from the probe (offsprings) and all images from which the probe is derived (ancestors) in a large dataset (provenance filtering), and reconstruct the manipulation history with the retrieved images (provenance graph building). In this paper, we address two major challenges in provenance analysis, retrieving the source image of the small regions that are spliced into the probe image, and, detecting source images within the search results. For the former challenge, we propose to detect spliced regions by pairwise image comparison and only use local features extracted from the spliced region to perform an additional search. This removes the influence of the background and greatly improves the recall. For the latter, we propose to learn a pairwise ancestor-offspring detector and use it jointly with a holistic image manipulation detector to identify the source image. The proposed provenance analysis system has performed remarkably in evaluations using comprehensive provenance datasets. It's the winning solution for NIST Media Forensics Challenge (MFC) in 2018, 2019 and 2020. In MFC 2019, our provenance results achieved a 12% improvement in filtering and a 20% gain in oracle provenance graphs building over the alternative methods. In the real-world Reddit dataset, the edge overlap between our reconstructed provenance graphs and the ground-truth graphs is 5 times better than the state-of-the-art system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "2583602",
+                    "name": "Zhaohui H. Sun"
+                },
+                {
+                    "authorId": "35862299",
+                    "name": "Svebor Karaman"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "ab58108059ab6bb2b2f201077c38eb5e101da1c4",
+            "title": "Deep Learning Guided Building Reconstruction from Satellite Imagery-derived Point Clouds",
+            "abstract": "3D urban reconstruction of buildings from remotely sensed imagery has drawn significant attention during the past two decades. While aerial imagery and LiDAR provide higher resolution, satellite imagery is cheaper and more efficient to acquire for large scale need. However, the high, orbital altitude of satellite observation brings intrinsic challenges, like unpredictable atmospheric effect, multi view angles, significant radiometric differences due to the necessary multiple views, diverse land covers and urban structures in a scene, small base-height ratio or narrow field of view, all of which may degrade 3D reconstruction quality. To address these major challenges, we present a reliable and effective approach for building model reconstruction from the point clouds generated from multi-view satellite images. We utilize multiple types of primitive shapes to fit the input point cloud. Specifically, a deep-learning approach is adopted to distinguish the shape of building roofs in complex and yet noisy scenes. For points that belong to the same roof shape, a multi-cue, hierarchical RANSAC approach is proposed for efficient and reliable segmenting and reconstructing the building point cloud. Experimental results over four selected urban areas (0.34 to 2.04 sq km in size) demonstrate the proposed method can generate detailed roof structures under noisy data environments. The average successful rate for building shape recognition is 83.0%, while the overall completeness and correctness are over 70% with reference to ground truth created from airborne lidar. As the first effort to address the public need of large scale city model generation, the development is deployed as open source software.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109511797",
+                    "name": "Bo Xu"
+                },
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "2109691168",
+                    "name": "Zhixin Li"
+                },
+                {
+                    "authorId": "1960847",
+                    "name": "Matthew J. Leotta"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "144906115",
+                    "name": "J. Shan"
+                }
+            ]
+        },
+        {
+            "paperId": "1da3ffde612cbdfa861e9b530c3b795504682335",
+            "title": "Detecting and Simulating Artifacts in GAN Fake Images",
+            "abstract": "To detect GAN generated images, conventional supervised machine learning algorithms require collecting a large number of real images as well as fake images generated by the targeted GAN model. However, the specific model used by the attacker is often unavailable. To address this, we propose a GAN simulator, AutoGAN, which can simulate the artifacts produced by the common pipeline shared by several popular GAN models. Additionally, we identify a unique artifact caused by the up-sampling component included in the common GAN pipelines. We show theoretically such artifacts are manifested as replications of spectra in the frequency domain and thus propose a classifier model based on the spectrum input, rather than the pixel input. By using the simulated images to train a spectrum based classifier, even without seeing the fake images produced by the targeted GAN model during training, our approach achieves state-of-the-art performances on detecting fake images generated by popular GAN models such as CycleGAN.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "35862299",
+                    "name": "Svebor Karaman"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "79df05e9702ea5e3ddd66ca9d64f8ac2f212a132",
+            "title": "One-Shot Learning for Function-Specific Region Segmentation in Mouse Brain",
+            "abstract": "A brain contains a large number of structured regions responsible for diverse functions. Detailed region annotations upon stereotaxic coordinates are highly rare, prompting the need of using one or very few available annotated results of a specific brain section to label images of broadly accessible brain section samples. Here we develop a one-shot learning approach to segment regions of mouse brains. Using the highly ordered geometry of brains, we introduce a reference mask to incorporate both the anatomical structure (visual information) and the brain atlas into brain segmentation. Using the UNet model with this reference mask, we are able to predict the region of hippocampus with high accuracy. We further implement it to segment brain images into 95 detailed regions augmented from the annotation on only one image from Allen Brain Atlas. Together, our one-shot learning method provides neuroscientists an efficient way for brain segmentation and facilitates future region-specific functional studies of brains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "2118394123",
+                    "name": "Zhuowei Li"
+                },
+                {
+                    "authorId": "150267003",
+                    "name": "Pei-Jie Wang"
+                },
+                {
+                    "authorId": "150174816",
+                    "name": "Katelyn Y. Liao"
+                },
+                {
+                    "authorId": "39978001",
+                    "name": "S. Chou"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "3420847",
+                    "name": "J. Liao"
+                }
+            ]
+        },
+        {
+            "paperId": "d0b8c5c4ded3345613b27c0a24eae0eaed173c07",
+            "title": "Urban Semantic 3D Reconstruction From Multiview Satellite Imagery",
+            "abstract": "Methods for automated 3D urban modeling typically result in very dense point clouds or surface meshes derived from either overhead lidar or imagery (multiview stereo). Such models are very large and have no semantic separation of individual structures (i.e. buildings, bridges) from the terrain. Furthermore, such dense models often appear \"melted\" and do not capture sharp edges. This paper demonstrates an end-to-end system for segmenting buildings and bridges from terrain and estimating simple, low polygon, textured mesh models of these structures. The approach uses multiview-stereo satellite imagery as a starting point, but this work focuses on segmentation methods and regularized 3D surface extraction. Our work is evaluated on the IARPA CORE3D public data set using the associated ground truth and metrics. A web-based application deployed on AWS runs the algorithms and provides visualization of the results. Both the algorithms and web application are provided as open source software as a resource for further research or product development.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1960847",
+                    "name": "Matthew J. Leotta"
+                },
+                {
+                    "authorId": "48015811",
+                    "name": "Chengjiang Long"
+                },
+                {
+                    "authorId": "2217217",
+                    "name": "Bastien Jacquet"
+                },
+                {
+                    "authorId": "101753028",
+                    "name": "Matthieu Zins"
+                },
+                {
+                    "authorId": "3012712",
+                    "name": "Dan R. Lipsa"
+                },
+                {
+                    "authorId": "144906115",
+                    "name": "J. Shan"
+                },
+                {
+                    "authorId": "2109511797",
+                    "name": "Bo Xu"
+                },
+                {
+                    "authorId": "2109691168",
+                    "name": "Zhixin Li"
+                },
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "94314731",
+                    "name": "Matthew Purri"
+                },
+                {
+                    "authorId": "1896138",
+                    "name": "Jia Xue"
+                },
+                {
+                    "authorId": "1710772",
+                    "name": "Kristin J. Dana"
+                }
+            ]
+        },
+        {
+            "paperId": "e4bde6fe33b6c2cf9d1647ac0b041f7d1ba29c5b",
+            "title": "Unsupervised Embedding Learning via Invariant and Spreading Instance Feature",
+            "abstract": "This paper studies the unsupervised embedding learning problem, which requires an effective similarity measurement between samples in low-dimensional embedding space. Motivated by the positive concentrated and negative separated properties observed from category-wise supervised learning, we propose to utilize the instance-wise supervision to approximate these properties, which aims at learning data augmentation invariant and instance spread-out features. To achieve this goal, we propose a novel instance based softmax embedding method, which directly optimizes the `real' instance features on top of the softmax function. It achieves significantly faster learning speed and higher accuracy than all existing methods. The proposed method performs well for both seen and unseen testing categories with cosine similarity. It also achieves competitive performance even without pre-trained network over samples from fine-grained categories.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2676247",
+                    "name": "Mang Ye"
+                },
+                {
+                    "authorId": "2115462987",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "83069217",
+                    "name": "PongChi Yuen"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                }
+            ]
+        }
+    ]
+}

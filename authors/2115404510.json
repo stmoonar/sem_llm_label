@@ -1,0 +1,405 @@
+{
+    "authorId": "2115404510",
+    "papers": [
+        {
+            "paperId": "0fe861147ea756d271d33121ac48519ea3a11811",
+            "title": "Leveraging Watch-time Feedback for Short-Video Recommendations: A Causal Labeling Framework",
+            "abstract": "With the proliferation of short video applications, the significance of short video recommendations has vastly increased. Unlike other recommendation scenarios, short video recommendation systems heavily rely on feedback from watch time. Existing approaches simply treat watch time as a direct label, failing to effectively harness its extensive semantics and introduce bias, thereby limiting the potential for modeling user interests based on watch time. To overcome this challenge, we propose a framework named Debiased Multiple-semantics-extracting Labeling (DML). DML constructs labels that encompass various semantics by utilizing quantiles derived from the distribution of watch time, prioritizing relative order rather than absolute label values. This approach facilitates easier model learning while aligning with the ranking objective of recommendations. Furthermore, we introduce a method inspired by causal adjustment to refine label definitions, thereby directly mitigating bias at the label level. We substantiate the effectiveness of our DML framework through both online and offline experiments. Extensive results demonstrate that our DML could effectively leverage watch time to discover users' real interests, enhancing their engagement in our application.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "1456009564",
+                    "name": "Yimeng Bai"
+                },
+                {
+                    "authorId": "2630544",
+                    "name": "Jianxin Chang"
+                },
+                {
+                    "authorId": "2055666765",
+                    "name": "Xiaoxue Zang"
+                },
+                {
+                    "authorId": "2220987794",
+                    "name": "Song Lu"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2056580600",
+                    "name": "Yanan Niu"
+                },
+                {
+                    "authorId": "2157996254",
+                    "name": "Yang Song"
+                }
+            ]
+        },
+        {
+            "paperId": "d12dbe90e767b299de644de41ae47a5733634e58",
+            "title": "TWIN: TWo-stage Interest Network for Lifelong User Behavior Modeling in CTR Prediction at Kuaishou",
+            "abstract": "Life-long user behavior modeling, i.e., extracting a user's hidden interests from rich historical behaviors in months or even years, plays a central role in modern CTR prediction systems. Conventional algorithms mostly follow two cascading stages: a simple General Search Unit (GSU) for fast and coarse search over tens of thousands of long-term behaviors and an Exact Search Unit (ESU) for effective Target Attention (TA) over the small number of finalists from GSU. Although efficient, existing algorithms mostly suffer from a crucial limitation: the inconsistent target-behavior relevance metrics between GSU and ESU. As a result, their GSU usually misses highly relevant behaviors but retrieves ones considered irrelevant by ESU. In such case, the TA in ESU, no matter how attention is allocated, mostly deviates from the real user interests and thus degrades the overall CTR prediction accuracy. To address such inconsistency, we propose TWo-stage Interest Network (TWIN), where our Consistency-Preserved GSU (CP-GSU) adopts the identical target-behavior relevance metric as the TA in ESU, making the two stages twins. Specifically, to break TA's computational bottleneck and extend it from ESU to GSU, or namely from behavior length 102 to length 104 - 105, we build a novel attention mechanism by behavior feature splitting. For the video inherent features of a behavior, we calculate their linear projection by efficient pre-computing & caching strategies. And for the user-item cross features, we compress each into a one-dimentional bias term in the attention score calculation to save the computational cost. The consistency between two stages, together with the effective TA-based relevance metric in CP-GSU, contributes to significant performance gain in CTR prediction. Offline experiments on a 46 billion scale real production dataset from Kuaishou and an Online A/B test show that TWIN outperforms all compared SOTA algorithms. With optimized online infrastructure, we reduce the computational bottleneck by 99.3%, which contributes to the successful deployment of TWIN on Kuaishou, serving the main traffic of hundreds of millions of active users everyday.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2630544",
+                    "name": "Jianxin Chang"
+                },
+                {
+                    "authorId": "2125752970",
+                    "name": "Chenbin Zhang"
+                },
+                {
+                    "authorId": "2068057294",
+                    "name": "Zhiyi Fu"
+                },
+                {
+                    "authorId": "2055666765",
+                    "name": "Xiaoxue Zang"
+                },
+                {
+                    "authorId": "2203437528",
+                    "name": "Lin Guan"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "2115330531",
+                    "name": "Yiqun Hui"
+                },
+                {
+                    "authorId": "2203912362",
+                    "name": "Dewei Leng"
+                },
+                {
+                    "authorId": "2056580600",
+                    "name": "Yanan Niu"
+                },
+                {
+                    "authorId": "2157996254",
+                    "name": "Yang Song"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                }
+            ]
+        },
+        {
+            "paperId": "15405b7bd8597db4ecd2365ace1226bed5ce4a2b",
+            "title": "Implicit User Awareness Modeling via Candidate Items for CTR Prediction in Search Ads",
+            "abstract": "Click-through rate (CTR) prediction plays a crucial role in sponsored search advertising (search ads). User click behavior usually showcases strong comparison patterns among relevant/competing items within the user awareness. Explicit user awareness could be characterized by user behavior sequence modeling, which however suffers from issues such as cold start, behavior noise and hidden channels. Instead, in this paper, we study the problem of modeling implicit user awareness about relevant/competing items. We notice that candidate items of the CTR prediction model could play as surrogates for relevant/competing items within the user awareness. Motivated by this finding, we propose a novel framework, named CIM (Candidate Item Modeling), to characterize users\u2019 awareness on candidate items. CIM introduces an additional module to encode candidate items into a context vector and therefore is plug-and-play for existing neural network-based CTR prediction models. Offline experiments on a ten-billion-scale production dataset collected from the real traffic of a search advertising system, together with the corresponding online A/B testing, demonstrate CIM\u2019s superior performance. Notably, CIM has been deployed in production at JD.com, serving the main traffic of hundreds of millions of users, which shows great application value. Our code and dataset are available at https://github.com/kaifuzheng/cim.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2163400393",
+                    "name": "Kaifu Zheng"
+                },
+                {
+                    "authorId": "2153517650",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "2163439626",
+                    "name": "Yu Li"
+                },
+                {
+                    "authorId": "77712706",
+                    "name": "Xusong Chen"
+                },
+                {
+                    "authorId": "2154764323",
+                    "name": "Hu Liu"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "3086256",
+                    "name": "Xiwei Zhao"
+                },
+                {
+                    "authorId": "1949218014",
+                    "name": "Changping Peng"
+                },
+                {
+                    "authorId": "2146396439",
+                    "name": "Zhangang Lin"
+                },
+                {
+                    "authorId": "2118926502",
+                    "name": "Jingping Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "4ea930b256641c5c754e706fcab382e7aa412e02",
+            "title": "PFAN++: Bi-Directional Image-Text Retrieval With Position Focused Attention Network",
+            "abstract": "Bi-directional image-text retrieval and matching attract much attention recently. This cross-domain task demands a fine understanding of both modalities for learning a measure of different modality data. In this paper, we propose a novel position focused attention network to investigate the relation between the visual and the textual views. This work integrates the prior object position to enhance the visual-text joint-embedding learning. The image is first split into blocks, which are treated as the basic position cells, and the position of an image region is inferred. Then, we propose a position attention to model the relations between the image region and position cells. Finally, we generate a valuable position feature to further enhance the region expression and model a more reliable relationship between the visual image and the textual sentence. Experiments on the popular datasets Flickr30K and MS-COCO show the effectiveness of the proposed method. Besides the public datasets, we also conduct experiments on our collected practical large-scale news dataset (Tencent-News) to validate the practical application value of the proposed method. As far as we know, this is the first attempt to test the performance on the practical application. Our method achieves the competitive performance on all of these three datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2107916834",
+                    "name": "Yaxiong Wang"
+                },
+                {
+                    "authorId": "102320235",
+                    "name": "Hao Yang"
+                },
+                {
+                    "authorId": "2821480",
+                    "name": "Xiuxiu Bai"
+                },
+                {
+                    "authorId": "6468417",
+                    "name": "Xueming Qian"
+                },
+                {
+                    "authorId": "145698310",
+                    "name": "Lin Ma"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "2116273145",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2117800727",
+                    "name": "Xin Fan"
+                }
+            ]
+        },
+        {
+            "paperId": "5fc26ebb6540debc5539ad30e46d24fdb50a0f72",
+            "title": "Multi-Context-Aware Location Recommendation Using Tensor Decomposition",
+            "abstract": "With the rapid growth of information generated by online social network platforms and the increased usage of Location-Based Social Networks, location recommendation research has attracted more attention both in academic and industry. However, the problem of data sparsity still posses a severe challenge to the existing location recommendation methods. Moreover, extracting and modeling multiple contextual information, which is one of the key factors that influences user check-in preferences, is another big challenge faced by the existing methods. Many of the existing location recommendation methods have low accuracy because they utilize limited contextual information when modeling user check-in behaviors. In this paper, we propose a Multi-Context-aware Location Recommendation using Tensor Decomposition (MCLR-TD) approach that incorporates multiple context information at different granularity scales in modeling user check-in behavior. We use a four mode tensor to model the relationship among the four dimensions: users, locations, time and weather. In order to reduce the data sparsity problem, we further construct four feature matrices that are collaboratively decomposed with the tensor. We carry out extensive experiments on two real-world datasets collected from Foursquare and Yelp and the results demonstrate the effectiveness of our approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "1629467067",
+                    "name": "Martin A. Indeche"
+                }
+            ]
+        },
+        {
+            "paperId": "6a69359b1d13341cad010017c5906f66eaecbd52",
+            "title": "Kalman Filtering Attention for User Behavior Modeling in CTR Prediction",
+            "abstract": "Click-through rate (CTR) prediction is one of the fundamental tasks for e-commerce search engines. As search becomes more personalized, it is necessary to capture the user interest from rich behavior data. Existing user behavior modeling algorithms develop different attention mechanisms to emphasize query-relevant behaviors and suppress irrelevant ones. Despite being extensively studied, these attentions still suffer from two limitations. First, conventional attentions mostly limit the attention field only to a single user's behaviors, which is not suitable in e-commerce where users often hunt for new demands that are irrelevant to any historical behaviors. Second, these attentions are usually biased towards frequent behaviors, which is unreasonable since high frequency does not necessarily indicate great importance. To tackle the two limitations, we propose a novel attention mechanism, termed Kalman Filtering Attention (KFAtt), that considers the weighted pooling in attention as a maximum a posteriori (MAP) estimation. By incorporating a priori, KFAtt resorts to global statistics when few user behaviors are relevant. Moreover, a frequency capping mechanism is incorporated to correct the bias towards frequent behaviors. Offline experiments on both benchmark and a 10 billion scale real production dataset, together with an Online A/B test, show that KFAtt outperforms all compared state-of-the-arts. KFAtt has been deployed in the ranking system of a leading e commerce website, serving the main traffic of hundreds of millions of active users everyday.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154764323",
+                    "name": "Hu Liu"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "3086256",
+                    "name": "Xiwei Zhao"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Hao Peng"
+                },
+                {
+                    "authorId": "2130182524",
+                    "name": "Yutong Liu"
+                },
+                {
+                    "authorId": "47295036",
+                    "name": "Zehua Zhang"
+                },
+                {
+                    "authorId": "71003878",
+                    "name": "Jian Li"
+                },
+                {
+                    "authorId": "2110828707",
+                    "name": "Junsheng Jin"
+                },
+                {
+                    "authorId": "1830443292",
+                    "name": "Yongjun Bao"
+                },
+                {
+                    "authorId": "46704879",
+                    "name": "Weipeng P. Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "ce79fad68cf31ec9a5688fbaa4199fb0c94545ad",
+            "title": "Category-Specific CNN for Visual-aware CTR Prediction at JD.com",
+            "abstract": "As one of the largest B2C e-commerce platforms in China, JD.com also powers a leading advertising system, serving millions of advertisers with fingertip connection to hundreds of millions of customers. In our system, as well as most e-commerce scenarios, ads are displayed with images. This makes visual-aware Click Through Rate (CTR) prediction of crucial importance to both business effectiveness and user experience. Existing algorithms usually extract visual features using off-the-shelf Convolutional Neural Networks (CNNs) and late fuse the visual and non-visual features for the finally predicted CTR. Despite being extensively studied, this field still face two key challenges. First, although encouraging progress has been made in offline studies, applying CNNs in real systems remains non-trivial, due to the strict requirements for efficient end-to-end training and low-latency online serving. Second, the off-the-shelf CNNs and late fusion architectures are suboptimal. Specifically, off-the-shelf CNNs were designed for classification thus never take categories as input features. While in e-commerce, categories are precisely labeled and contain abundant visual priors that will help the visual modeling. Unaware of the ad category, these CNNs may extract some unnecessary category-unrelated features, wasting CNN's limited expression ability. To overcome the two challenges, we propose Category-specific CNN (CSCNN) specially for CTR prediction. CSCNN early incorporates the category knowledge with a light-weighted attention-module on each convolutional layer. This enables CSCNN to extract expressive category-specific visual patterns that benefit the CTR prediction. Offline experiments on benchmark and a 10 billion scale real production dataset from JD, together with an Online A/B test show that CSCNN outperforms all compared state-of-the-art algorithms. We also build a highly efficient infrastructure to accomplish end-to-end training with CNN on the 10 billion scale real production dataset within 24 hours, and meet the low latency requirements of online system (20ms on CPU). CSCNN is now deployed in the search advertising system of JD, serving the main traffic of hundreds of millions of active users.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154764323",
+                    "name": "Hu Liu"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "2115537469",
+                    "name": "Hao Yang"
+                },
+                {
+                    "authorId": "3086256",
+                    "name": "Xiwei Zhao"
+                },
+                {
+                    "authorId": "1752741172",
+                    "name": "Sulong Xu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Hao Peng"
+                },
+                {
+                    "authorId": "50316135",
+                    "name": "Zehua Zhang"
+                },
+                {
+                    "authorId": "15604411",
+                    "name": "Wenjie Niu"
+                },
+                {
+                    "authorId": "2312894191",
+                    "name": "Xiaokun Zhu"
+                },
+                {
+                    "authorId": "1830443292",
+                    "name": "Yongjun Bao"
+                },
+                {
+                    "authorId": "46704879",
+                    "name": "Weipeng P. Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "48a7873681c6aa88b9e0e22a25c2a8245eaeb45f",
+            "title": "Position Focused Attention Network for Image-Text Matching",
+            "abstract": "Image-text matching tasks\nhave recently attracted a lot of attention in the computer vision field. The\nkey point of this cross-domain problem is how to accurately measure the\nsimilarity between the visual and the textual contents, which demands a fine\nunderstanding of both modalities. In this paper, we propose a novel position\nfocused attention network (PFAN) to investigate the relation between the visual\nand the textual views. In this work, we integrate the object position clue to\nenhance the visual-text joint-embedding learning. We first split the images into blocks, by which we\ninfer the relative position of region in the image. Then, an attention\nmechanism is proposed to model the relations between the image region and\nblocks and generate the valuable position feature, which will be further\nutilized to enhance the region expression and model a more reliable\nrelationship between the visual image and the textual sentence. Experiments\non the popular datasets Flickr30K and MS-COCO show the effectiveness of the\nproposed method. Besides the public datasets, we also conduct experiments on\nour collected practical news dataset (Tencent-News) to validate the practical\napplication value of proposed method. As far as we know, this is the first\nattempt to test the performance on the practical application. Our method can achieve\nthe state-of-art performance on all of these three datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2107916834",
+                    "name": "Yaxiong Wang"
+                },
+                {
+                    "authorId": "1742334658",
+                    "name": "Hao Yang"
+                },
+                {
+                    "authorId": "6468417",
+                    "name": "Xueming Qian"
+                },
+                {
+                    "authorId": "145698310",
+                    "name": "Lin Ma"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "2116273145",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2117800727",
+                    "name": "Xin Fan"
+                }
+            ]
+        },
+        {
+            "paperId": "1c9bb99a125b890f66824df2ef314f2a50d16a8e",
+            "title": "Fine-Grained Deep Knowledge-Aware Network for News Recommendation with Self-Attention",
+            "abstract": "On-line news reading has become the most popular way for user to obtain real-time information. With the millions of news, it is a key challenge to help user find the articles that are interesting to read. Although great achievements have been made, there is little work to focus on combing news language with external knowledge graphs and expanding news text from a word-level. Taking this issue into consideration, we introduce a novel self-attention based mechanism in news recommendation. The key component of our model is multiple self-attention modules: the word-level attention, which takes tags of news, entities in external knowledge graph and entities' contexts as the input to calculate the semantic-level and knowledge-level representation of the news; the item-level attention module, which used to fuse the two-level representation into the same low-dimension and get a overall embedding of user history behavior sequence. Specially, in order to deal with the diversity of user preferences, we use another self-attention module dynamically aggregate user click history and select candidate news. And finally, a multi-head attention module is used to connect history and candidate news and then calculate the click-through-rate(CTR) via a fully connected layer. Through amount of experiments on a real-world online news website, we demonstrate that our model outperforms better results than previous start-of-art recommendation models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110620513",
+                    "name": "Jie Gao"
+                },
+                {
+                    "authorId": "36528303",
+                    "name": "Xin Xin"
+                },
+                {
+                    "authorId": "35466452",
+                    "name": "Junshuai Liu"
+                },
+                {
+                    "authorId": "145258523",
+                    "name": "Rui Wang"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "2116273145",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2117800727",
+                    "name": "Xin Fan"
+                },
+                {
+                    "authorId": "145322511",
+                    "name": "Ping Guo"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,274 @@
+{
+    "authorId": "2256999352",
+    "papers": [
+        {
+            "paperId": "093f9b0cd66a2356f18ecac15cf4209edae1ca4c",
+            "title": "Language Models can Exploit Cross-Task In-context Learning for Data-Scarce Novel Tasks",
+            "abstract": "Large Language Models (LLMs) have transformed NLP with their remarkable In-context Learning (ICL) capabilities. Automated assistants based on LLMs are gaining popularity; however, adapting them to novel tasks is still challenging. While colossal models excel in zero-shot performance, their computational demands limit widespread use, and smaller language models struggle without context. This paper investigates whether LLMs can generalize from labeled examples of predefined tasks to novel tasks. Drawing inspiration from biological neurons and the mechanistic interpretation of the Transformer architecture, we explore the potential for information sharing across tasks. We design a cross-task prompting setup with three LLMs and show that LLMs achieve significant performance improvements despite no examples from the target task in the context. Cross-task prompting leads to a remarkable performance boost of 107% for LLaMA-2 7B, 18.6% for LLaMA-2 13B, and 3.2% for GPT 3.5 on average over zero-shot prompting, and performs comparable to standard in-context learning. The effectiveness of generating pseudo-labels for in-task examples is demonstrated, and our analyses reveal a strong correlation between the effect of cross-task examples and model activation similarities in source and target input tokens. This paper offers a first-of-its-kind exploration of LLMs' ability to solve novel tasks based on contextual signals from different task examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2302155945",
+                    "name": "Anwoy Chatterjee"
+                },
+                {
+                    "authorId": "2210797473",
+                    "name": "Eshaan Tanwar"
+                },
+                {
+                    "authorId": "50757931",
+                    "name": "Subhabrata Dutta"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "387e17b11a65c38de105ae33b67531e0221db990",
+            "title": "Multilingual Needle in a Haystack: Investigating Long-Context Behavior of Multilingual Large Language Models",
+            "abstract": "While recent large language models (LLMs) demonstrate remarkable abilities in responding to queries in diverse languages, their ability to handle long multilingual contexts is unexplored. As such, a systematic evaluation of the long-context capabilities of LLMs in multilingual settings is crucial, specifically in the context of information retrieval. To address this gap, we introduce the MultiLingual Needle-in-a-Haystack (MLNeedle) test, designed to assess a model's ability to retrieve relevant information (the needle) from a collection of multilingual distractor texts (the haystack). This test serves as an extension of the multilingual question-answering task, encompassing both monolingual and cross-lingual retrieval. We evaluate four state-of-the-art LLMs on MLNeedle. Our findings reveal that model performance can vary significantly with language and needle position. Specifically, we observe that model performance is the lowest when the needle is (i) in a language outside the English language family and (ii) located in the middle of the input context. Furthermore, although some models claim a context size of $8k$ tokens or greater, none demonstrate satisfactory cross-lingual retrieval performance as the context length increases. Our analysis provides key insights into the long-context behavior of LLMs in multilingual settings to guide future evaluation protocols. To our knowledge, this is the first study to investigate the multilingual long-context behavior of LLMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1992907559",
+                    "name": "Amey Hengle"
+                },
+                {
+                    "authorId": "2316430178",
+                    "name": "Prasoon Bajpai"
+                },
+                {
+                    "authorId": "2292199652",
+                    "name": "Soham Dan"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "3b23659111ac4e2f7c54874b74a1a3df8eea5a2a",
+            "title": "MemeMQA: Multimodal Question Answering for Memes via Rationale-Based Inferencing",
+            "abstract": "Memes have evolved as a prevalent medium for diverse communication, ranging from humour to propaganda. With the rising popularity of image-focused content, there is a growing need to explore its potential harm from different aspects. Previous studies have analyzed memes in closed settings - detecting harm, applying semantic labels, and offering natural language explanations. To extend this research, we introduce MemeMQA, a multimodal question-answering framework aiming to solicit accurate responses to structured questions while providing coherent explanations. We curate MemeMQACorpus, a new dataset featuring 1,880 questions related to 1,122 memes with corresponding answer-explanation pairs. We further propose ARSENAL, a novel two-stage multimodal framework that leverages the reasoning capabilities of LLMs to address MemeMQA. We benchmark MemeMQA using competitive baselines and demonstrate its superiority - ~18% enhanced answer prediction accuracy and distinct text generation lead across various metrics measuring lexical and semantic alignment over the best baseline. We analyze ARSENAL's robustness through diversification of question-set, confounder-based evaluation regarding MemeMQA's generalizability, and modality-specific assessment, enhancing our understanding of meme interpretation in the multimodal communication landscape.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2256986135",
+                    "name": "Siddhant Agarwal"
+                },
+                {
+                    "authorId": "1491627343",
+                    "name": "Shivam Sharma"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "448c54a59b18b6eada98be058d42378891e211e6",
+            "title": "LM2: A Simple Society of Language Models Solves Complex Reasoning",
+            "abstract": "Despite demonstrating emergent reasoning abilities, Large Language Models (LLMS) often lose track of complex, multi-step reasoning. Existing studies show that providing guidance via decomposing the original question into multiple subproblems elicits more robustness in LLM reasoning -- a decomposer generates the subproblems, and a solver solves each of these subproblems. However, these techniques fail to accommodate coordination between the decomposer and the solver modules (either in a single model or different specialized ones) -- the decomposer does not keep track of the ability of the solver to follow the decomposed reasoning. In this paper, we propose LM2 to address these challenges. LM2 modularizes the decomposition, solution, and verification into three different language models. The decomposer module identifies the key concepts necessary to solve the problem and generates step-by-step subquestions according to the reasoning requirement. The solver model generates the solution to the subproblems that are then checked by the verifier module; depending upon the feedback from the verifier, the reasoning context is constructed using the subproblems and the solutions. These models are trained to coordinate using policy learning. Exhaustive experimentation suggests the superiority of LM2 over existing methods on in- and out-domain reasoning problems, outperforming the best baselines by $8.1\\%$ on MATH, $7.71\\%$ on JEEBench, and $9.7\\%$ on MedQA problems (code available at https://github.com/LCS2-IIITD/Language_Model_Multiplex).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2262445336",
+                    "name": "Gurusha Juneja"
+                },
+                {
+                    "authorId": "50757931",
+                    "name": "Subhabrata Dutta"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "83b95829433b68e1d1cc2afb3b05343ebd0e6ebb",
+            "title": "Recent Advances in Hate Speech Moderation: Multimodality and the Role of Large Models",
+            "abstract": "In the evolving landscape of online communication, moderating hate speech (HS) presents an intricate challenge, compounded by the multimodal nature of digital content. This comprehensive survey delves into the recent strides in HS moderation, spotlighting the burgeoning role of large language models (LLMs) and large multimodal models (LMMs). Our exploration begins with a thorough analysis of current literature, revealing the nuanced interplay between textual, visual, and auditory elements in propagating HS. We uncover a notable trend towards integrating these modalities, primarily due to the complexity and subtlety with which HS is disseminated. A significant emphasis is placed on the advances facilitated by LLMs and LMMs, which have begun to redefine the boundaries of detection and moderation capabilities. We identify existing gaps in research, particularly in the context of underrepresented languages and cultures, and the need for solutions to handle low-resource settings. The survey concludes with a forward-looking perspective, outlining potential avenues for future research, including the exploration of novel AI methodologies, the ethical governance of AI in moderation, and the development of more nuanced, context-aware systems. This comprehensive overview aims to catalyze further research and foster a collaborative effort towards more sophisticated, responsible, and human-centric approaches to HS moderation in the digital era. WARNING: This paper contains offensive examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "72043108",
+                    "name": "Ming Shan Hee"
+                },
+                {
+                    "authorId": "1491627343",
+                    "name": "Shivam Sharma"
+                },
+                {
+                    "authorId": "2261821068",
+                    "name": "Rui Cao"
+                },
+                {
+                    "authorId": "2281824700",
+                    "name": "Palash Nandi"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                },
+                {
+                    "authorId": "2282413929",
+                    "name": "Roy Ka-Wei Lee"
+                }
+            ]
+        },
+        {
+            "paperId": "84b6cf04d81952af8ef2c72a6807bca31f188f21",
+            "title": "Self-similarity of temporal interaction networks arises from hyperbolic geometry with time-varying curvature",
+            "abstract": "The self-similarity of complex systems has been studied intensely across different domains due to its potential applications in system modeling, complexity analysis, etc., as well as for deep theoretical interest. Existing studies rely on scale transformations conceptualized over either a definite geometric structure of the system (very often realized as length-scale transformations) or purely temporal scale transformations. However, many physical and social systems are observed as temporal interactions among agents without any definitive geometry. Yet, one can imagine the existence of an underlying notion of distance as the interactions are mostly localized. Analysing only the time-scale transformations over such systems would uncover only a limited aspect of the complexity. In this work, we propose a novel technique of scale transformation that dissects temporal interaction networks under spatio-temporal scales, namely, flow scales. Upon experimenting with multiple social and biological interaction networks, we find that many of them possess a finite fractal dimension under flow-scale transformation. Finally, we relate the emergence of flow-scale self-similarity to the latent geometry of such networks. We observe strong evidence that justifies the assumption of an underlying, variable-curvature hyperbolic geometry that induces self-similarity of temporal interaction networks. Our work bears implications for modeling temporal interaction networks at different scales and uncovering their latent geometric structures.",
+            "fieldsOfStudy": [
+                "Physics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50757931",
+                    "name": "Subhabrata Dutta"
+                },
+                {
+                    "authorId": "2320821489",
+                    "name": "Dipankar Das"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "8f683cd264b42b838be5c91ab2108df75d13692d",
+            "title": "Mechanistic Behavior Editing of Language Models",
+            "abstract": "Large Language Models trained on web-scale text acquire language generation abilities that can solve a wide range of tasks, particularly when task knowledge is refined into the generative prior using in-context examples. However, spurious features learned from noisy data hinder their generalizability. Supervised finetuning can introduce task specificity, but introduce data inefficiency. Prior studies indicate that (i) noisy neural circuitries coexist with generalizable ones within LLMs, and (ii) finetuning typically enhances (or suppresses) existing abilities without introducing newer ones. Building upon these, we propose TaRot, a novel method for task adaptation. TaRot intervenes in the neural circuitries using learnable rotation matrices that are optimized using Bayesian Optimization, on labelled samples in the order of standard few-shot prompting examples. Experiments on multiple classification and generation tasks using LLMs of varying sizes reveal the efficacy of TaRot, improving upon both zero- as well as few-shot performance, with average improvements (across models and tasks) of 23.81% and 11.15%, respectively. The source code is available at https://github.com/joykirat18/TaRot",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2273709978",
+                    "name": "Joykirat Singh"
+                },
+                {
+                    "authorId": "50757931",
+                    "name": "Subhabrata Dutta"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "97994e4526ef7eeea59190aa466fbab05fad9187",
+            "title": "How to think step-by-step: A mechanistic understanding of chain-of-thought reasoning",
+            "abstract": "Despite superior reasoning prowess demonstrated by Large Language Models (LLMs) with Chain-of-Thought (CoT) prompting, a lack of understanding prevails around the internal mechanisms of the models that facilitate CoT generation. This work investigates the neural sub-structures within LLMs that manifest CoT reasoning from a mechanistic point of view. From an analysis of Llama-2 7B applied to multistep reasoning over fictional ontologies, we demonstrate that LLMs deploy multiple parallel pathways of answer generation for step-by-step reasoning. These parallel pathways provide sequential answers from the input question context as well as the generated CoT. We observe a functional rift in the middle layers of the LLM. Token representations in the initial half remain strongly biased towards the pretraining prior, with the in-context prior taking over in the later half. This internal phase shift manifests in different functional components: attention heads that write the answer token appear in the later half, attention heads that move information along ontological relationships appear in the initial half, and so on. To the best of our knowledge, this is the first attempt towards mechanistic investigation of CoT reasoning in LLMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50757931",
+                    "name": "Subhabrata Dutta"
+                },
+                {
+                    "authorId": "2273709978",
+                    "name": "Joykirat Singh"
+                },
+                {
+                    "authorId": "2197703",
+                    "name": "Soumen Chakrabarti"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "dc499f1df26d388428297c96c49a390a9264de30",
+            "title": "Can LLMs replace Neil deGrasse Tyson? Evaluating the Reliability of LLMs as Science Communicators",
+            "abstract": "Large Language Models (LLMs) and AI assistants driven by these models are experiencing exponential growth in usage among both expert and amateur users. In this work, we focus on evaluating the reliability of current LLMs as science communicators. Unlike existing benchmarks, our approach emphasizes assessing these models on scientific questionanswering tasks that require a nuanced understanding and awareness of answerability. We introduce a novel dataset, SCiPS-QA, comprising 742 Yes/No queries embedded in complex scientific concepts, along with a benchmarking suite that evaluates LLMs for correctness and consistency across various criteria. We benchmark three proprietary LLMs from the OpenAI GPT family and 13 open-access LLMs from the Meta Llama-2, Llama-3, and Mistral families. While most open-access models significantly underperform compared to GPT-4 Turbo, our experiments identify Llama-3-70B as a strong competitor, often surpassing GPT-4 Turbo in various evaluation aspects. We also find that even the GPT models exhibit a general incompetence in reliably verifying LLM responses. Moreover, we observe an alarming trend where human evaluators are deceived by incorrect responses from GPT-4 Turbo.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2316430178",
+                    "name": "Prasoon Bajpai"
+                },
+                {
+                    "authorId": "2322438036",
+                    "name": "Niladri Chatterjee"
+                },
+                {
+                    "authorId": "50757931",
+                    "name": "Subhabrata Dutta"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        },
+        {
+            "paperId": "76588eabeb1d712c6170fb9cbfe13b92d0809b69",
+            "title": "Frugal LMs Trained to Invoke Symbolic Solvers Achieve Parameter-Efficient Arithmetic Reasoning",
+            "abstract": "Large Language Models (LLM) exhibit zero-shot mathematical reasoning capacity as a behavior emergent with scale, commonly manifesting as chain-of-thoughts (CoT) reasoning. However, multiple empirical findings suggest that this prowess is exclusive to LLMs that have exorbitant sizes (beyond 50 billion parameters). Meanwhile, educational neuroscientists suggest that symbolic algebraic manipulation be introduced around the same time as arithmetic word problems so as to modularize language-to-formulation, symbolic manipulation of the formulation, and endgame arithmetic.\nIn this paper, we start with the hypothesis that much smaller LMs, which are weak at multi-step reasoning, can achieve reasonable arithmetic reasoning if arithmetic word problems are posed as a formalize-then-solve task.\nIn our architecture, which we call SyReLM, the LM serves the role of a translator to map natural language arithmetic questions into a formal language (FL) description. A symbolic solver then evaluates the FL expression to obtain the answer.\nA small frozen LM, equipped with an efficient low-rank adapter, is capable of generating FL expressions that incorporate natural language descriptions of the arithmetic problem (e.g., variable names and their purposes, formal expressions combining variables, etc.).\nWe adopt policy-gradient reinforcement learning to train the adapted LM, informed by the non-differentiable symbolic solver. This marks a sharp departure from the recent development in tool-augmented LLMs, in which the external tools (e.g., calculator, Web search, etc.) are essentially detached from the learning phase of the LM. SyReLM shows massive improvements (e.g., +30.65 absolute point improvement in accuracy on the SVAMP dataset using GPT-J 6B model) over base LMs, while keeping our testbed easy to diagnose and interpret, and within the reach of most researchers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50757931",
+                    "name": "Subhabrata Dutta"
+                },
+                {
+                    "authorId": "2273709978",
+                    "name": "Joykirat Singh"
+                },
+                {
+                    "authorId": "2273566542",
+                    "name": "Ishan Pandey"
+                },
+                {
+                    "authorId": "2262445089",
+                    "name": "Sunny Manchanda"
+                },
+                {
+                    "authorId": "2197703",
+                    "name": "Soumen Chakrabarti"
+                },
+                {
+                    "authorId": "2256999352",
+                    "name": "Tanmoy Chakraborty"
+                }
+            ]
+        }
+    ]
+}

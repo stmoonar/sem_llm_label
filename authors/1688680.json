@@ -1,0 +1,340 @@
+{
+    "authorId": "1688680",
+    "papers": [
+        {
+            "paperId": "3b630a749cc3ac5ffd993e5605733fa74320d493",
+            "title": "Personalizing Digital Health Behavior Change Interventions using Machine Learning and Domain Knowledge",
+            "abstract": ". We are developing a virtual coaching system that helps patients adhere to behavior change interventions (BCI). Our proposed system predicts whether a patient will perform the targeted behavior and uses counterfactual examples with feature control to guide personalizsa-tion of BCI. We evaluated our prediction model using simulated patient data with varying levels of receptivity to intervention.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2196853",
+                    "name": "Aneta Lisowska"
+                },
+                {
+                    "authorId": "3185240",
+                    "name": "S. Wilk"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                }
+            ]
+        },
+        {
+            "paperId": "188a0eae7212c0bd48fd8a8d3925d3fc80e8340f",
+            "title": "MobiGuide",
+            "abstract": "I M A G E B Y A N D R I J B O R Y S A S S O C I A T E S , U S I N G S H U T T E R S T O C K THE TREND FOR an aging population, which is typical for Europe and for other high-income regions, brings with it a sharp increase in the number of chronic patients and a shortage of clinicians and hospital beds. Evidence-based clinical decision-support systems are one of the promising solutions for this problem.15 In the 1990s, different research groups started to develop computer-interpretable clinical guidelines (CIGs)7 as a form of evidence-based decision-support systems (DSS). Narrative evidence-based clinical guidelines, focused on a single disease, and containing recommendations for the disease diagnosis and management, were manually represented in CIG formalisms, such as Asbru,11 GLIF,1 or PROforma.3 The CIGs formed a network of clinical decisions and actions and served as a knowledge base. The DSS would enact the CIG over a patient\u2019s data, entered manually or taken directly from the electronic health record (EHR). The patient-specific recommendations would be delivered to the clinician during patient encounters. The European MobiGuide project8 asked the following question: What do chronic patients want? Patients want to live normally. They want to focus on their lives and not on their disease. They do not want to go into the hospitals for long monitoring sessions but remain in their natural environments and lead their normal lives safely. Hence, we were motivated to develop a generic architecture that could support chronic patients and their clinicians. The MobiGuide architecture is shown in Figure 1. Patients received a body-area network of mobile sensors (for example, a glucometer, a blood pressure sensor, an ECG belt) communicating via Bluetooth with a smartphone. The sensors\u2019 biosignals were semantically integrated with hospital EHR data, patient reported outcomes and symptoms, and patient-specific DSS recommendations into a secure Patient Health Record (PHR) that followed the HL7 Virtual Medical Record standard. The DSS in MobiGuide was distributed between a full-fledged backend DSS and a local mobile DSS (mDSS). The Backend DSS had access to the full PHR and to the full CIG knowledge-base, represented in the Asbru11 CIG language, and enacted through the PICARD engine.13 Based on the patient\u2019s context, the Backend DSS projects, when necessary, components of the CIG knowledge to the mDSS. MobiGuide: Guiding Clinicians and Chronic Patients Anytime, Anywhere DOI:10.1145/3511596",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                },
+                {
+                    "authorId": "48739778",
+                    "name": "Yuval Shahar"
+                },
+                {
+                    "authorId": "87298909",
+                    "name": "S. Quaglini"
+                }
+            ]
+        },
+        {
+            "paperId": "eeb531e3e2ab892d5f3afb22b0384db3150c0557",
+            "title": "Supervised Machine Learning Algorithm for Detecting Consistency between Reported Findings and the Conclusions of Mammography Reports",
+            "abstract": "Objective. Mammography reports document the diagnosis of patients' conditions. However, many reports contain non-standard terms (non-BI-RADS descriptors) and incomplete statements, which can lead to conclusions that are not well-supported by the reported findings. Our aim was to develop a tool to detect such discrepancies by comparing the reported conclusions to those that would be expected based on the reported radiology findings. Materials and Methods. A deidentified data set from an academic hospital containing 258 mammography reports supplemented by 120 reports found on the web was used for training and evaluation. Spell checking and term normalization was used to unambiguously determine the reported BI-RADS descriptors. The resulting data were input into seven classifiers that classify mammography reports, based on their Findings sections, into seven BI-RADS final assessment categories. Finally, the semantic similarity score of a report to each BI-RADS category is reported. Results. Our term normalization algorithm correctly identified 97% of the BI-RADS descriptors in mammography reports. Our system provided 76% precision and 83% recall in correctly classifying the reports according to BI-RADS final assessment category. Discussion. The strength of our approach relies on providing high importance to BI-RADS terms in the summarization phase, on the semantic similarity that considers the complex data representation, and on the classification into all seven BI-RADs categories. Conclusion. BI-RADS descriptors and expected final assessment categories could be automatically detected by our approach with fairly good accuracy, which could be used to make users aware that their reported findings do not match well with their conclusion. BACKGROUND AND SIGNIFICANCE The purpose of an imaging report is to document a specialist interpretation of images and relate the findings to the patient\u2019s current clinical symptoms and signs in order to diagnose or contribute to the understanding of their medical condition [1]. The reports are often structured [2] into paragraphs describing the type of radiology done, clinical history, comparison (i.e., previous radiograms available for comparison), findings, and impression of the radiologist who composed the report, which provides a conclusion and advice on appropriate further investigation or management. Referring physicians are expecting that the radiology reports would be accurate, clear, complete, and timely [3-4]. However, many reports contain unclear statements and sometimes reports are incomplete. Lack of clarity is often the result of using non-standard terms. Incompleteness may result in a conclusion which is inconsistent with the reported findings, questioning the accuracy of the report. Non-clarity and incompleteness may lead to incorrect conclusion by other doctors, and even to the administration of inappropriate procedures to the patient [5-9]. One way to improve mammography reporting is to adopt standardized terminology for reporting these imaging studies. The American College of Radiology (ACR) developed a controlled terminology and coding system called Breast Imaging Reporting and Data System (BI-RADS) [10]. The BI-RADS lexicon specifies standardized terms (\u201cBI-RADS descriptors\u201d) to describe the imaging features of abnormalities observed on mammograms. The BI-RADS lexicon also provides \u201cBI-RADS final assessment categories\u201d which define the degree of suspicion of malignancy based on the radiology findings. The BI-RADS descriptors, sanctioned by the ACR, are also known as sanctioned terms; all other terms, including synonyms, are referred to as unsanctioned terms. The conclusion of a radiology report includes a BI-RADS final assessment category (hereafter called \u201cBI-RADS category\u201d), which is a number between 0 and 6 that represents a categorized description of the likelihood of malignancy. In order to facilitate entry of standard terms, such as BI-RADS descriptors, into electronic health records, structured reporting templates and macros [11-13] that offer users enumerated lists of standardized terms have been developed. However, such tools are not well-accepted by radiologists who feel burdened with long lists of standard terms on the one hand, and restricted in the ways in which they can express themselves, on the other hand. At present, despite the availability of BI-RADS, most radiology reporting systems do not enforce the use of BI-RADS sanctioned terms other than providing a means of specifying a BI-RADS category in the impression of reports.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "92098815",
+                    "name": "A. Berdichevsky"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                },
+                {
+                    "authorId": "143648587",
+                    "name": "D. Rubin"
+                }
+            ]
+        },
+        {
+            "paperId": "407565dfbe01e7e445beeec3e70bf25083f86b80",
+            "title": "Towards a framework for comparing functionalities of multimorbidity clinical decision support: A literature-based feature set and benchmark cases",
+            "abstract": "Multimorbidity, the coexistence of two or more health conditions, has become more prevalent as mortality rates in many countries have declined and their populations have aged. Multimorbidity presents significant difficulties for Clinical Decision Support Systems (CDSS), particularly in cases where recommendations from relevant clinical guidelines offer conflicting advice. A number of research groups are developing computer-interpretable guideline (CIG) modeling formalisms that integrate recommendations from multiple Clinical Practice Guidelines (CPGs) for knowledge-based multimorbidity decision support. In this paper we describe work towards the development of a framework for comparing the different approaches to multimorbidity CIG-based clinical decision support (MGCDS). We present (1) a set of features for MGCDS, which were derived using a literature review and evaluated by physicians using a survey, and (2) a set of benchmarking case studies, which illustrate the clinical application of these features. This work represents the first necessary step in a broader research program aimed at the development of a benchmark framework that allows for standardized and comparable MGCDS evaluations, which will facilitate the assessment of functionalities of MGCDS, as well as highlight important gaps in the state-of-the-art. We also outline our future work on developing the framework, specifically, (3) a standard for reporting MGCDS solutions for the benchmark case studies, and (4) criteria for evaluating these MGCDS solutions. We plan to conduct a large-scale comparison study of existing MGCDS based on the comparative framework.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "7368602",
+                    "name": "D. O\u2019Sullivan"
+                },
+                {
+                    "authorId": "9049067",
+                    "name": "W. V. Woensel"
+                },
+                {
+                    "authorId": "3185240",
+                    "name": "S. Wilk"
+                },
+                {
+                    "authorId": "1702645",
+                    "name": "S. Tu"
+                },
+                {
+                    "authorId": "1751258",
+                    "name": "W. Michalowski"
+                },
+                {
+                    "authorId": "34025870",
+                    "name": "S. Abidi"
+                },
+                {
+                    "authorId": "2356186",
+                    "name": "M. Carrier"
+                },
+                {
+                    "authorId": "6546503",
+                    "name": "R. Edry"
+                },
+                {
+                    "authorId": "1967968",
+                    "name": "I. Hochberg"
+                },
+                {
+                    "authorId": "4944943",
+                    "name": "S. Kingwell"
+                },
+                {
+                    "authorId": "143634190",
+                    "name": "Alexandra Kogan"
+                },
+                {
+                    "authorId": "1753015",
+                    "name": "Martin Michalowski"
+                },
+                {
+                    "authorId": "1404857740",
+                    "name": "Hugh O\u05f3Sullivan"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                }
+            ]
+        },
+        {
+            "paperId": "4e0eb872012a14dad67f1a9a4f8a247c857610fd",
+            "title": "Enhancing the IDEAS Framework with Ontology: Designing Digital Interventions for Improving Cancer Patients' Wellbeing",
+            "abstract": "Developing effective digital interventions to help patients form healthy habits is a challenging goal. IDEAS is a step-by-step framework that allows developers to draw ideas from intended users and behavioral theories, and ideate implementation strategies for them, followed by rapid prototype development. Based on our long experience with developing generic knowledge-based clinical decision support systems (CDSS) and integrating them with electronic health records (EHR) to deliver patient-specific advice, we observed a challenge that IDEAS is not addressing: the semantic detailing of the clinical knowledge behind the digital intervention and relevant patient data that could be used to personalize the digital intervention. To close the gap, we augmented two steps of IDEAS with an ontology that structures the target behavior as classes, derived from HL7 Fast Healthcare Interoperability Resources standard. We exemplify the augmented IDEAS with a case study taken from the Horizon 2020 CAPABLE project, that uses Fogg's Tiny Habits behavioral model to improve the sleep of cancer patients via Tai Chi.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110204341",
+                    "name": "Nicole Veggiotti"
+                },
+                {
+                    "authorId": "1800686",
+                    "name": "L. Sacchi"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                }
+            ]
+        },
+        {
+            "paperId": "6d43e2dfac4c51f72d7957d2c4442e513d8ced32",
+            "title": "Personality and Habit Formation: Is There a Link?",
+            "abstract": ". We aim to develop a virtual coaching (VC) system which facilitates cancer patients with the formation of positive health habits. The VC should adjust content and delivery of recommendations based on user\u2019s preferences. We conducted a survey that elicited potential VC users\u2019 perceptions about the appropriate context for noti\ufb01cation, aspects driving their motivation, and their ability to perform a selected activity in di\ufb00erent circumstances. We analyze 173 survey responses, identify di\ufb00erent types of users and suggest how to adjust application content and noti\ufb01cation timing to increase their susceptibility to non-medication health interventions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2196853",
+                    "name": "Aneta Lisowska"
+                },
+                {
+                    "authorId": "48325321",
+                    "name": "S. Lavy"
+                },
+                {
+                    "authorId": "3185240",
+                    "name": "S. Wilk"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                }
+            ]
+        },
+        {
+            "paperId": "6e22424ee24da2ff1eec8cb562ee70ca538f79a8",
+            "title": "Is it a good time to survey you? Cognitive load classification from blood volume pulse",
+            "abstract": "The CAPABLE project aims to improve the wellbeing of cancer patients managed at home via a mobile Coaching System recommending physical and mental health interventions. Patient reported outcomes are important for evaluation of the efficacy of these interventions. Nevertheless a large number of surveys might be overwhelming to patients. To understand the cognitive demand caused by the surveys and to find the adequate time to prompt patients to complete them we carried out a feasibility study. In this study we developed a machine learning cognitive load detector from blood volume pulse (BVP) captured by a photoplethysmography (PPG) signal. PPG sensors are available on consumer-grade smartwatches, which we will use in our Coaching System. We found that personalised 1D convolutional neural networks trained on raw BVP signal performed better in binary high vs low cognitive load classification than the personalised Support Vector Machines trained with heart rate variability and BVP features. We investigated if the further improvements can be obtained by teacher-student semi-supervised model training, nevertheless the performance gains were not notable. In the future we will include additional context information that might aid cognitive load estimation and drive both survey design as well as the timing of the prompts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2196853",
+                    "name": "Aneta Lisowska"
+                },
+                {
+                    "authorId": "3185240",
+                    "name": "S. Wilk"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                }
+            ]
+        },
+        {
+            "paperId": "85b461267e57ff0663cac5d3f548194b09566875",
+            "title": "From Personalized Timely Notification to Healthy Habit Formation: a Feasibility Study of Reinforcement Learning Approaches on Synthetic Data",
+            "abstract": "Cancer patients may struggle with mental wellbeing issues such as distress and depression. As a part of the CAPABLE project, we aim to develop a digital behaviour-change intervention that helps them build positive health habits and improve their wellbeing. The main challenge to the evaluation of the system is the lack of access to real data prior to intervention start. Therefore, first, we created a simulator that mimics patient responses to activity suggestions based on Fogg\u2019s behaviour model. Later we used supervised and reinforcement learning methods to learn the best time of sending the patient prompts. We found that the reinforcement learning methods learn quickly not to over-notify patients and find prompt policies that are more effective in facilitating users in performing target activity than a random notification strategy, but are less effective than adaptive supervised learning method trained to predict patient responsiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2196853",
+                    "name": "Aneta Lisowska"
+                },
+                {
+                    "authorId": "3185240",
+                    "name": "S. Wilk"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                }
+            ]
+        },
+        {
+            "paperId": "b080222a403ae7b54c4ad1bdc1dc3b6d630edad7",
+            "title": "COVID-19 Datathon Based on Deidentified Governmental Data as an Approach for Solving Policy Challenges, Increasing Trust, and Building a Community: Case Study",
+            "abstract": "Triggered by the COVID-19 crisis, Israel's Ministry of Health (MoH) held a virtual Datathon based on deidentified governmental data. Organized by a multidisciplinary committee, Israel's research community was invited to offer insights to COVID-19 policy challenges. The Datathon was designed to (1) develop operationalizable data-driven models to address COVID-19 health-policy challenges and (2) build a community of researchers from academia, industry, and government and rebuild their trust in the government. Three specific challenges were defined based on their relevance (significance, data availability, and potential to anonymize the data): immunization policies, special needs of the young population, and populations whose rate of compliance with COVID-19 testing is low. The MoH team extracted diverse, reliable, up-to-date, and deidentified governmental datasets for each challenge. Secure remote-access research environments with relevant data science tools were set on Amazon Web. The MoH screened the applicants and accepted around 80 participants, teaming them to balance areas of expertise as well as represent all sectors of the community. One week following the event, anonymous surveys for participants and mentors were distributed to assess overall usefulness and points for improvement. The 48-hour Datathon and pre-event sessions included 18 multidisciplinary teams, mentored by 20 data scientists, 6 epidemiologists, 5 presentation mentors, and 12 judges. The insights developed by the 3 winning teams are currently considered by the MoH as potential data science methods relevant for national policies. The most positive results were increased trust in the MoH and greater readiness to work with the government on these or future projects. Detailed feedback offered concrete lessons for improving the structure and organization of future government-led datathons.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                },
+                {
+                    "authorId": "46230312",
+                    "name": "Amnon Reichman"
+                },
+                {
+                    "authorId": "117286318",
+                    "name": "S. Shachar"
+                },
+                {
+                    "authorId": "2124978181",
+                    "name": "Tamir Gadot"
+                },
+                {
+                    "authorId": "5986308",
+                    "name": "M. Tsadok"
+                },
+                {
+                    "authorId": "2124978284",
+                    "name": "Maya Azaria"
+                },
+                {
+                    "authorId": "1683875",
+                    "name": "O. Dunkelman"
+                },
+                {
+                    "authorId": "36178993",
+                    "name": "S. Hassid"
+                },
+                {
+                    "authorId": "2124981544",
+                    "name": "Daniella Partem"
+                },
+                {
+                    "authorId": "103401419",
+                    "name": "Maya M. Shmailov"
+                },
+                {
+                    "authorId": "1388775854",
+                    "name": "E. Yom-Tov"
+                },
+                {
+                    "authorId": "2147210259",
+                    "name": "R. Cohen"
+                }
+            ]
+        },
+        {
+            "paperId": "9a238dcff5c16ce4a26929c84a3c0655d5ef81eb",
+            "title": "A Review of Data Science Methods and Systems Used for Monitoring and Coaching Cancer Patients",
+            "abstract": "Introduction - Thanks to improvement of care, cancer has become a chronic condition. But due to the toxicity of treatment, the importance of supporting the quality of life (QoL) of cancer patients increases. Monitoring and managing QoL relies on data collected by the patient in his/her home environment, its integration, and its analysis, which supports personalization of cancer management recommendations. We review the state-of-the-art of computerized systems that employ Data Science methods to monitor the health status and provide support to cancer patients managed at home. Objective - Our main objective is to analyze the literature to identify open research challenges that a novel decision support system for cancer patients and clinicians will need to address, point to potential solutions, and provide a list of established best-practices to adopt. Methods - We designed a review study, in compliance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, analyzing studies retrieved from PubMed related to monitoring cancer patients in their home environments via sensors and self-reporting: what data is collected, what are the techniques used to collect data, semantically integrate it, infer the patient state from it and deliver coaching/behavior change interventions. Results - Starting from an initial corpus of 819 unique articles, a total of 180 papers were considered in the full-text analysis and 110 were finally included in the review. Our findings are organized and presented in four main sub-topics consisting of data collection, data integration, predictive modeling and patient coaching. Conclusion - Development of modern decision support system for cancer needs to utilize best practices like the use of validated electronic questionnaires for quality of life assessment, adoption of appropriate information modeling standards supplemented by terminologies/ontologies, adherence to FAIR data principles, external validation, stratification of patients in subgroups for better predictive modeling, and adoption of formal behavior change theories. Open research challenges include supporting emotional and social dimensions of well-being, including PROs in predictive modeling, and providing better customization of behavioral interventions for the specific population of cancer patients.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2053236",
+                    "name": "Enea Parimbelli"
+                },
+                {
+                    "authorId": "145570351",
+                    "name": "S. Wilk"
+                },
+                {
+                    "authorId": "3018242",
+                    "name": "R. Cornet"
+                },
+                {
+                    "authorId": "2446154",
+                    "name": "P. Sniatala"
+                },
+                {
+                    "authorId": "1414967780",
+                    "name": "K. Sniatala"
+                },
+                {
+                    "authorId": "2112422350",
+                    "name": "S. Glaser"
+                },
+                {
+                    "authorId": "1876923640",
+                    "name": "I. Fraterman"
+                },
+                {
+                    "authorId": "15194085",
+                    "name": "A. Boekhout"
+                },
+                {
+                    "authorId": "46420126",
+                    "name": "M. Ottaviano"
+                },
+                {
+                    "authorId": "1688680",
+                    "name": "M. Peleg"
+                }
+            ]
+        }
+    ]
+}

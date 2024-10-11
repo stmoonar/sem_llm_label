@@ -1,0 +1,257 @@
+{
+    "authorId": "2172444921",
+    "papers": [
+        {
+            "paperId": "b56c124877ae4bb4cf4ad054434d199365612ad4",
+            "title": "MetaLog: Generalizable Cross-System Anomaly Detection from Logs with Meta-Learning",
+            "abstract": "Log-based anomaly detection plays a crucial role in ensuring the stability of software. However, current approaches for log-based anomaly detection heavily depend on a vast amount of labeled his-torical data, which is often unavailable in many real-world systems. To mitigate this problem, we leverage the features of the abundant historical labeled logs of mature systems to help construct anomaly detection models of new systems with very few labels, that is, to generalize the model ability trained from labeled logs of mature systems to achieve anomaly detection on new systems with insufficient data labels. Specifically, we propose MetaLog, a generalizable cross-system anomaly detection approach. MetaLog first incorporates a globally consistent semantic embedding module to obtain log event semantic embedding vectors in a shared global space. Then it leverages the meta-learning paradigm to improve the model's generalization ability. We evaluate MetaLog's performance on four public log datasets (HDFS, BGL, OpenStack, and Thunderbird) from four different systems. Results show that MetaLog reaches over 80% F1-score when using only 1% labeled logs of the target system, showing similar performance with state-of-the-art supervised anomaly detection models trained with 100% labeled data. Besides, it outperforms state-of-art transfer-learning-based cross-system anomaly detection models by 20% in the same settings of 1% labeled training logs of the target system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2296497181",
+                    "name": "Chenyangguang Zhang"
+                },
+                {
+                    "authorId": "2242950960",
+                    "name": "Tong Jia"
+                },
+                {
+                    "authorId": "2296485634",
+                    "name": "Guopeng Shen"
+                },
+                {
+                    "authorId": "2296516315",
+                    "name": "Pinyan Zhu"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                }
+            ]
+        },
+        {
+            "paperId": "e2434c03d6ef4951b132f0d91eae88a5f322e6e9",
+            "title": "Commit Message Generation via ChatGPT: How Far are We?",
+            "abstract": "Commit messages concisely describe code changes in natural language and are important for software maintenance. Various automatic commit message generation approaches have been proposed, such as retrieval-based, learning-based, and hybrid approaches. Recently, large language models have shown impressive performance in many natural language processing tasks. Among them, ChatGPT is the most popular one and has attracted wide attention from the software engineering community. ChatGPT demonstrates the ability of in-context learning (ICL), which allows ChatGPT to perform downstream tasks by learning from just a few demonstrations without explicit model tuning. However, it remains unclear how well ChatGPT performs in the commit message generation task via ICL. Therefore, in this paper, we conduct a preliminary evaluation of ChatGPT with ICL on commit message generation. Specifically, we first explore the impact of two key settings on the performance of ICL on commit message generation. Then, based on the best settings, we compare ChatGPT with several state-of-the-art approaches. The results show that a carefully-designed demonstration can lead to substantial improvements for ChatGPT on commit message generation. Furthermore, ChatGPT outperforms all the retrieval-based and learning-based approaches in terms of BLEU, METEOR, ROUGE-L, and Cider, and is comparable to hybrid approaches. Based on our findings, we outline several open challenges and opportunities for ChatGPT-based commit message generation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268794712",
+                    "name": "Yifan Wu"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2155808164",
+                    "name": "Siyu Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "e7a41e457ceba6aa64f7ecb86e3cee97df1101ac",
+            "title": "Log Parsing with Self-Generated In-Context Learning and Self-Correction",
+            "abstract": "Log parsing transforms log messages into structured formats, serving as a crucial step for log analysis. Despite a variety of log parsing methods that have been proposed, their performance on evolving log data remains unsatisfactory due to reliance on human-crafted rules or learning-based models with limited training data. The recent emergence of large language models (LLMs) has demonstrated strong abilities in understanding natural language and code, making it promising to apply LLMs for log parsing. Consequently, several studies have proposed LLM-based log parsers. However, LLMs may produce inaccurate templates, and existing LLM-based log parsers directly use the template generated by the LLM as the parsing result, hindering the accuracy of log parsing. Furthermore, these log parsers depend heavily on historical log data as demonstrations, which poses challenges in maintaining accuracy when dealing with scarce historical log data or evolving log data. To address these challenges, we propose AdaParser, an effective and adaptive log parsing framework using LLMs with self-generated in-context learning (SG-ICL) and self-correction. To facilitate accurate log parsing, AdaParser incorporates a novel component, a template corrector, which utilizes the LLM to correct potential parsing errors in the templates it generates. In addition, AdaParser maintains a dynamic candidate set composed of previously generated templates as demonstrations to adapt evolving log data. Extensive experiments on public large-scale datasets show that AdaParser outperforms state-of-the-art methods across all metrics, even in zero-shot scenarios. Moreover, when integrated with different LLMs, AdaParser consistently enhances the performance of the utilized LLMs by a large margin.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268794712",
+                    "name": "Yifan Wu"
+                },
+                {
+                    "authorId": "2155808164",
+                    "name": "Siyu Yu"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                }
+            ]
+        },
+        {
+            "paperId": "0d694d196f8a50d015a3509e4d3d683c66c1ff37",
+            "title": "UDA-DP: Unsupervised Domain Adaptation for Software Defect Prediction",
+            "abstract": "Software defect prediction can automatically locate defective code modules to focus testing resources better. Traditional defect prediction methods mainly focus on manually designing features, which are input into machine learning classifiers to identify defective code. However, there are mainly two problems in prior works. First manually designing features is time consuming and unable to capture the semantic information of programs, which is an important capability for accurate defect prediction. Second the labeled data is limited along with severe class imbalance, affecting the performance of defect prediction.In response to the above problems, we first propose a new unsupervised domain adaptation method using pseudo labels for defect prediction(UDA-DP). Compared to manually designed features, it can automatically extract defective features from source programs to save time and contain more semantic information of programs. Moreover, unsupervised domain adaptation using pseudo labels is a kind of transfer learning, which is effective in leveraging rich information of limited data, alleviating the problem of insufficient data.Experiments with 10 open source projects from the PROMISE data set show that our proposed UDA-DP method outperforms the state-of-the-art methods for both within-project and cross-project defect predictions. Our code and data are available at https://github.com/xsarvin/UDA-DP.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2217880766",
+                    "name": "Xiaosong Huang"
+                },
+                {
+                    "authorId": "2156705217",
+                    "name": "Yifan Wu"
+                },
+                {
+                    "authorId": "151503698",
+                    "name": "Hongyi Liu"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2110752255",
+                    "name": "Hao Yu"
+                },
+                {
+                    "authorId": "2213872863",
+                    "name": "Dadi Guo"
+                },
+                {
+                    "authorId": "2109716565",
+                    "name": "Zhonghai Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "6ab8aca8f631f42760a86cc614dfd7208b3fe58e",
+            "title": "Learning-based Widget Matching for Migrating GUI Test Cases",
+            "abstract": "GUI test case migration is to migrate GUI test cases from a source app to a target app. The key of test case migration is widget matching. Recently, researchers have proposed various approaches by formulating widget matching as a matching task. However, since these matching approaches depend on static word embeddings without using contextual information to represent widgets and manually formulated matching functions, there are main limitations of these matching approaches when handling complex matching relations in apps. To address the limitations, we propose the first learning-based widget matching approach named TEMdroid ( TEst Migration) for test case migration. Unlike the existing approaches, TEMdroid uses BERT to capture contextual information and learns a matching model to match widgets. Additionally, to balance the significant imbalance between positive and negative samples in apps, we design a two-stage training strategy where we first train a hard-negative sample miner to mine hard-negative samples, and further train a matching model using positive samples and mined hard-negative samples. Our evaluation on 34 apps shows that TEM-droid is effective in event matching (i.e., widget matching and target event synthesis) and test case migration. For event matching, TEM-droid's Top1 accuracy is 76%, improving over 17% compared to baselines. For test case migration, TEMdroid's F1 score is 89%, also 7% improvement compared to the baseline approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110752255",
+                    "name": "Hao Yu"
+                },
+                {
+                    "authorId": "2089966950",
+                    "name": "Bo Shen"
+                },
+                {
+                    "authorId": "2038503437",
+                    "name": "Dezhi Ran"
+                },
+                {
+                    "authorId": null,
+                    "name": "Jiaxin Zhang"
+                },
+                {
+                    "authorId": "2145906426",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "2304523047",
+                    "name": "Yuchi Ma"
+                },
+                {
+                    "authorId": "2084524",
+                    "name": "Guangtai Liang"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2057038049",
+                    "name": "Tao Xie"
+                },
+                {
+                    "authorId": "7417844",
+                    "name": "Qianxiang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "cc9a0028179854be5be4a65c667a5a2c3ad5ccc5",
+            "title": "Capturing Request Execution Path for Understanding Service Behavior and Detecting Anomalies Without Code Instrumentation",
+            "abstract": "With the increasing scale and complexity of cloud platforms and big-data analytics platforms, it is becoming more and more challenging to understand and diagnose the processing of a service request across multi-layer software stacks of such platforms. One way that helps to deal with this problem is to accurately capture the complete end-to-end execution path of service requests among all involved components. This paper presents REPTrace, a generic methodology for capturing such execution paths in a transparent fashion. Moreover, this paper demonstrates the effectiveness of REPTrace by presenting how REPTrace can be leveraged for knowledge extraction and anomaly detection on the platforms\u2019 request processing. Our experimental results show that, REPTrace enables capturing a holistic view of the request processing across multiple layers of the platforms (which is missing in official documentation) and discovering important undocumented features of the platforms. Fault injection experiments show execution anomalies are detected with 93% precision and 96% recall with aid of REPTrace.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146265248",
+                    "name": "Yong Yang"
+                },
+                {
+                    "authorId": "2213937128",
+                    "name": "Long Wang"
+                },
+                {
+                    "authorId": "2087081784",
+                    "name": "Jing Gu"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                }
+            ]
+        },
+        {
+            "paperId": "11bb6c700d6c22801701794647514456e040fd35",
+            "title": "Semorph: A Morphology Semantic Enhanced Pre-trained Model for Chinese Spam Text Detection",
+            "abstract": "Chinese spam text detection is essential for social media since these texts affect the user experience of Chinese speakers and pollute the community. The underlying text classification method is employed to explore the unique combinations of characters that represent clues of spam information from annotated or further augmented data. However, based on the diversity of Chinese characters in glyphs, the spammers frequently wrap the spam content in another visually close text to fool the model but make sure people understand. This paper proposes to adopt the essence of human cognition of these adversarial texts into spam text detection models, by designing a pre-trained model to learn the morphology semantics of Chinese characters and represent their contextual meanings from scratch. The model pre-trains on self-supervised Chinese corpus and fine-tunes on spam-annotated community texts. Besides, cooperating with the pre-trained model that can capture the morphological features of Chinese, a new data perturbation method is introduced to guide the optimization towards the direction of recognizing the actual meaning of a text after spammers tamper with partial characters by visually close ones. The experimental results have shown that our proposed methodology can notably improve the performance of spam text detection as well as maintain robustness against adversarial samples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187889618",
+                    "name": "Kaiting Lai"
+                },
+                {
+                    "authorId": "7165718",
+                    "name": "Yinong Long"
+                },
+                {
+                    "authorId": "46792092",
+                    "name": "Bowen Wu"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2806178",
+                    "name": "Baoxun Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "bca9f9ef0b2fba6a42d865116577cf17fe2b3fa1",
+            "title": "Assessing and Improving an Evaluation Dataset for Detecting Semantic Code Clones via Deep Learning",
+            "abstract": "In recent years, applying deep learning to detect semantic code clones has received substantial attention from the research community. Accordingly, various evaluation benchmark datasets, with the most popular one as BigCloneBench, are constructed and selected as benchmarks to assess and compare different deep learning models for detecting semantic clones. However, there is no study to investigate whether an evaluation benchmark dataset such as BigCloneBench is properly used to evaluate models for detecting semantic code clones. In this article, we present an experimental study to show that BigCloneBench typically includes semantic clone pairs that use the same identifier names, which however are not used in non-semantic-clone pairs. Subsequently, we propose an undesirable-by-design Linear-Model that considers only which identifiers appear in a code fragment; this model can achieve high effectiveness for detecting semantic clones when evaluated on BigCloneBench, even comparable to state-of-the-art deep learning models recently proposed for detecting semantic clones. To alleviate these issues, we abstract a subset of the identifier names (including type, variable, and method names) in BigCloneBench to result in AbsBigCloneBench and use AbsBigCloneBench to better assess the effectiveness of deep learning models on the task of detecting semantic clones.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110752255",
+                    "name": "Hao Yu"
+                },
+                {
+                    "authorId": "2110049191",
+                    "name": "Xing Hu"
+                },
+                {
+                    "authorId": "2154591375",
+                    "name": "Ge Li"
+                },
+                {
+                    "authorId": "2172444921",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "7417844",
+                    "name": "Qianxiang Wang"
+                },
+                {
+                    "authorId": "2057038192",
+                    "name": "Tao Xie"
+                }
+            ]
+        }
+    ]
+}

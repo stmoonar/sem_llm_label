@@ -1,0 +1,346 @@
+{
+    "authorId": "7792071",
+    "papers": [
+        {
+            "paperId": "001c35feef59c01394707b29fd95e4c7374b284d",
+            "title": "Recommendation Unlearning via Influence Function",
+            "abstract": "Recommendation unlearning is an emerging task to serve users for erasing unusable data (e.g., some historical behaviors) from a well-trained recommender model. Existing methods process unlearning requests by fully or partially retraining the model after removing the unusable data. However, these methods are impractical due to the high computation cost of full retraining and the highly possible performance damage of partial training. In this light, a desired recommendation unlearning method should obtain a similar model as full retraining in a more efficient manner, i.e., achieving complete, efficient and harmless unlearning. In this work, we propose a new Influence Function-based Recommendation Unlearning (IFRU) framework, which efficiently updates the model without retraining by estimating the influence of the unusable data on the model via the influence function. In the light that recent recommender models use historical data for both the constructions of the optimization loss and the computational graph (e.g., neighborhood aggregation), IFRU jointly estimates the direct influence of unusable data on optimization loss and the spillover influence on the computational graph to pursue complete unlearning. Furthermore, we propose an importance-based pruning algorithm to reduce the cost of the influence function. IFRU is harmless and applicable to mainstream differentiable models. Extensive experiments demonstrate that IFRU achieves more than 250 times acceleration compared to retraining-based methods with recommendation performance comparable to full retraining. Codes are avaiable at https://github.com/baiyimeng/IFRU.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2111297664",
+                    "name": "ZhiYu Hu"
+                },
+                {
+                    "authorId": "1456009564",
+                    "name": "Yimeng Bai"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "1491035012",
+                    "name": "Jiancan Wu"
+                },
+                {
+                    "authorId": "145196279",
+                    "name": "Qifan Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "06d1497141b8f3fc6eeff0c22fa6885a963d04d3",
+            "title": "Alleviating Structural Distribution Shift in Graph Anomaly Detection",
+            "abstract": "Graph anomaly detection (GAD) is a challenging binary classification problem due to its different structural distribution between anomalies and normal nodes --- abnormal nodes are a minority, therefore holding high heterophily and low homophily compared to normal nodes. Furthermore, due to various time factors and the annotation preferences of human experts, the heterophily and homophily can change across training and testing data, which is called structural distribution shift (SDS) in this paper. The mainstream methods are built on graph neural networks (GNNs), benefiting the classification of normals from aggregating homophilous neighbors, yet ignoring the SDS issue for anomalies and suffering from poor generalization. This work solves the problem from a feature view. We observe that the degree of SDS varies between anomalies and normal nodes. Hence to address the issue, the key lies in resisting high heterophily for anomalies meanwhile benefiting the learning of normals from homophily. Since different labels correspond to the difference of critical anomaly features which make great contributions to the GAD, we tease out the anomaly features on which we constrain to mitigate the effect of heterophilous neighbors and make them invariant. However, the prior distribution of anomaly features is dynamic and hard to estimate, we thus devise a prototype vector to infer and update this distribution during training. For normal nodes, we constrain the remaining features to preserve the connectivity of nodes and reinforce the influence of the homophilous neighborhood. We term our proposed framework asGraph Decomposition Network (GDN). Extensive experiments are conducted on two benchmark datasets, and the proposed framework achieves a remarkable performance boost in GAD, especially in an SDS environment where anomalies have largely different structural distribution across training and testing environments. Codes are open-sourced in https://github.com/blacksingular/wsdm_GDN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143792907",
+                    "name": "Yuan Gao"
+                },
+                {
+                    "authorId": "2144796537",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2145312301",
+                    "name": "Zhenguang Liu"
+                },
+                {
+                    "authorId": "1986484",
+                    "name": "Huamin Feng"
+                },
+                {
+                    "authorId": "2164724337",
+                    "name": "Yongdong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "14cbf1cfd5dd4b451bfd6ef89e2bc277799df9bd",
+            "title": "Alleviating Matthew Effect of Offline Reinforcement Learning in Interactive Recommendation",
+            "abstract": "Offline reinforcement learning (RL), a technology that offline learns a policy from logged data without the need to interact with online environments, has become a favorable choice in decision-making processes like interactive recommendation. Offline RL faces the value overestimation problem. To address it, existing methods employ conservatism, e.g., by constraining the learned policy to be close to behavior policies or punishing the rarely visited state-action pairs. However, when applying such offline RL to recommendation, it will cause a severe Matthew effect, i.e., the rich get richer and the poor get poorer, by promoting popular items or categories while suppressing the less popular ones. It is a notorious issue that needs to be addressed in practical recommender systems. In this paper, we aim to alleviate the Matthew effect in offline RL-based recommendation. Through theoretical analyses, we find that the conservatism of existing methods fails in pursuing users' long-term satisfaction. It inspires us to add a penalty term to relax the pessimism on states with high entropy of the logging policy and indirectly penalizes actions leading to less diverse states. This leads to the main technical contribution of the work: Debiased model-based Offline RL (DORL) method. Experiments show that DORL not only captures user interests well but also alleviates the Matthew effect. The implementation is available via https://github.com/chongminggao/DORL-codes",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31446099",
+                    "name": "Chongming Gao"
+                },
+                {
+                    "authorId": "2112441120",
+                    "name": "Kexin Huang"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "49889831",
+                    "name": "Yuan Zhang"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                },
+                {
+                    "authorId": "2108622235",
+                    "name": "Shiqin Wang"
+                },
+                {
+                    "authorId": "2221728472",
+                    "name": "Zhong Zhang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "22630ecb5491cb60c924f36a61a001674f7d3583",
+            "title": "Graph-Augmented Co-Attention Model for Socio-Sequential Recommendation",
+            "abstract": "A sequential recommendation has become a hot research topic, which seeks to predict the next interesting item for each user based on his action sequence. While previous methods have made many efforts to capture the dynamics of sequential patterns, we contend that they still suffer from two inherent limitations: 1) they fail to model item transition patterns in an efficient and time-sensitive manner and 2) they are unaware of the importance of dynamically capturing social influence, resulting in suboptimal performance. We introduce a new concept dubbed socio-sequential recommendation, where the challenge mainly lies in dynamically modeling social influences and capturing item-to-item transition patterns in a time-sensitive manner. In light of this, we contribute a novel solution named GCARec (short for graph-augmented co-attention model), which takes into account the joint effect of dynamic sequential patterns and dynamic social influences. GCARec decomposes socio-sequential recommendation workflow into two steps. First, we adopt a light graph embedding module to model long-term user preference. Then, we propose a time-sensitive attention mechanism and a social-aware attention mechanism to capture dynamic patterns at sequential-level and social-level, respectively. Extensive experiments have been conducted on eight real-world datasets from different scenarios, demonstrating the superiority of GCARec against several state-of-the-art methods. The codes and datasets have been released at: https://github.com/wubinzzu/GCARec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152566004",
+                    "name": "Bin Wu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2688093",
+                    "name": "Le Wu"
+                },
+                {
+                    "authorId": "2117978064",
+                    "name": "Xue Zhang"
+                },
+                {
+                    "authorId": "2382085",
+                    "name": "Yangdong Ye"
+                }
+            ]
+        },
+        {
+            "paperId": "28fa51f1b70869c1c8f610b25ddb841c83a8de2b",
+            "title": "Discriminative-Invariant Representation Learning for Unbiased Recommendation",
+            "abstract": "Selection bias hinders recommendation models from learning unbiased user preference. Recent works empirically reveal that pursuing invariant user and item representation across biased and unbiased data is crucial for counteracting selection bias. However, our theoretical analysis reveals that simply optimizing representation invariance is insufficient for addressing the selection bias \u2014 recommendation performance is bounded by both representation invariance and discriminability. Worse still, current invariant representation learning methods in recommendation neglect even hurt the representation discriminability due to data sparsity and label shift. In this light, we propose a new Discriminative-Invariant Representation Learning framework for unbiased recommendation, which incorporates label-conditional clustering and prior-guided contrasting into conventional invariant representation learning to mitigate the impact of data sparsity and label shift, respectively. We conduct extensive experiments on three real-world datasets, validating the rationality and effectiveness of the proposed framework. Code and supplementary materials are available at: https://github.com/HungPaan/DIRL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2153422494",
+                    "name": "Wentao Shi"
+                },
+                {
+                    "authorId": "8612672",
+                    "name": "Junkang Wu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "2e3cdedd8c2ce304fdfe861f3c2f4c68e85c9aed",
+            "title": "Knowledge Graph Embedding by Normalizing Flows",
+            "abstract": "A key to knowledge graph embedding (KGE) is to choose a proper representation space, e.g., point-wise Euclidean space and complex vector space. In this paper, we propose a unified perspective of embedding and introduce uncertainty into KGE from the view of group theory. Our model can incorporate existing models (i.e., generality), ensure the computation is tractable (i.e., efficiency) and enjoy the expressive power of complex random variables (i.e., expressiveness). The core idea is that we embed entities/relations as elements of a symmetric group, i.e., permutations of a set. Permutations of different sets can reflect different properties of embedding. And the group operation of symmetric groups is easy to compute. In specific, we show that the embedding of many existing models, point vectors, can be seen as elements of a symmetric group. To reflect uncertainty, we first embed entities/relations as permutations of a set of random variables. A permutation can transform a simple random variable into a complex random variable for greater expressiveness, called a normalizing flow. We then define scoring functions by measuring the similarity of two normalizing flows, namely NFE. We construct several instantiating models and prove that they are able to learn logical rules. Experimental results demonstrate the effectiveness of introducing uncertainty and our model. The code is available at https://github.com/changyi7231/NFE.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2075319354",
+                    "name": "Changyi Xiao"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2112867078",
+                    "name": "Yixin Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "2e92b3699668f920a8d692535622ebeaa53315e2",
+            "title": "Is ChatGPT Fair for Recommendation? Evaluating Fairness in Large Language Model Recommendation",
+            "abstract": "The remarkable achievements of Large Language Models (LLMs) have led to the emergence of a novel recommendation paradigm \u2014 Recommendation via LLM (RecLLM). Nevertheless, it is important to note that LLMs may contain social prejudices, and therefore, the fairness of recommendations made by RecLLM requires further investigation. To avoid the potential risks of RecLLM, it is imperative to evaluate the fairness of RecLLM with respect to various sensitive attributes on the user side. Due to the differences between the RecLLM paradigm and the traditional recommendation paradigm, it is problematic to directly use the fairness benchmark of traditional recommendation. To address the dilemma, we propose a novel benchmark called Fairness of Recommendation via LLM (FaiRLLM). This benchmark comprises carefully crafted metrics and a dataset that accounts for eight sensitive attributes1 in two recommendation scenarios: music and movies. By utilizing our FaiRLLM benchmark, we conducted an evaluation of ChatGPT and discovered that it still exhibits unfairness to some sensitive attributes when generating recommendations. Our code and dataset can be found at https://github.com/jizhi-zhang/FaiRLLM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "2188063534",
+                    "name": "Keqin Bao"
+                },
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "32ffb5e528b54f03a8a359e4573e0f3926a1202b",
+            "title": "CgT-GAN: CLIP-guided Text GAN for Image Captioning",
+            "abstract": "The large-scale visual-language pre-trained model, Contrastive Language-Image Pre-training (CLIP), has significantly improved image captioning for scenarios without human-annotated image-caption pairs. Recent advanced CLIP-based image captioning without human annotations follows a text-only training paradigm, i.e., reconstructing text from shared embedding space. Nevertheless, these approaches are limited by the training/inference gap or huge storage requirements for text embeddings. Given that it is trivial to obtain images in the real world, we propose CLIP-guided text GAN (CgT-GAN), which incorporates images into the training process to enable the model to \"see\" real visual modality. Particularly, we use adversarial training to teach CgT-GAN to mimic the phrases of an external text corpus and CLIP-based reward to provide semantic guidance. The caption generator is jointly rewarded based on the caption naturalness to human language calculated from the GAN's discriminator and the semantic guidance reward computed by the CLIP-based reward module. In addition to the cosine similarity as the semantic guidance reward (i.e., CLIP-cos), we further introduce a novel semantic guidance reward called CLIP-agg, which aligns the generated caption with a weighted text embedding by attentively aggregating the entire corpus. Experimental results on three subtasks (ZS-IC, In-UIC and Cross-UIC) show that CgT-GAN outperforms state-of-the-art methods significantly across all metrics. Code is available at https://github.com/Lihr747/CgtGAN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7177756",
+                    "name": "Jiarui Yu"
+                },
+                {
+                    "authorId": "2145539796",
+                    "name": "Haoran Li"
+                },
+                {
+                    "authorId": "48387349",
+                    "name": "Y. Hao"
+                },
+                {
+                    "authorId": "2106718459",
+                    "name": "B. Zhu"
+                },
+                {
+                    "authorId": "2148822529",
+                    "name": "Tong Xu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "3487c12512fa41d3a4d64f00cb842525a8590ad3",
+            "title": "TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation",
+            "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance across diverse domains, thereby prompting researchers to explore their potential for use in recommendation systems. Initial attempts have leveraged the exceptional capabilities of LLMs, such as rich knowledge and strong generalization through In-context Learning, which involves phrasing the recommendation task as prompts. Nevertheless, the performance of LLMs in recommendation tasks remains suboptimal due to a substantial disparity between the training tasks for LLMs and recommendation tasks, as well as inadequate recommendation data during pre-training. To bridge the gap, we consider building a Large Recommendation Language Model by tunning LLMs with recommendation data. To this end, we propose an efficient and effective Tuning framework for Aligning LLMs with Recommendations, namely TALLRec. We have demonstrated that the proposed TALLRec framework can significantly enhance the recommendation capabilities of LLMs in the movie and book domains, even with a limited dataset of fewer than 100 samples. Additionally, the proposed framework is highly efficient and can be executed on a single RTX 3090 with LLaMA-7B. Furthermore, the fine-tuned LLM exhibits robust cross-domain generalization. Our code and data are available at https://github.com/SAI990323/TALLRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2188063534",
+                    "name": "Keqin Bao"
+                },
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "34f7ed9673b8e49e44c2e68dc641395947bc7b3e",
+            "title": "Learning to Double-Check Model Prediction From a Causal Perspective",
+            "abstract": "The present machine learning schema typically uses a one-pass model inference (e.g., forward propagation) to make predictions in the testing phase. It is inherently different from human students who double-check the answer during examinations especially when the confidence is low. To bridge this gap, we propose a learning to double-check (L2D) framework, which formulates double check as a learnable procedure with two core operations: recognizing unreliable predictions and revising predictions. To judge the correctness of a prediction, we resort to counterfactual faithfulness in causal theory and design a contrastive faithfulness measure. In particular, L2D generates counterfactual features by imagining: \u201cwhat would the sample features be if its label was the predicted class\u201d and judges the prediction by the faithfulness of the counterfactual features. Furthermore, we design a simple and effective revision module to revise the original model prediction according to the faithfulness. We apply the L2D framework to three classification models and conduct experiments on two public datasets for image classification, validating the effectiveness of L2D in prediction correctness judgment and revision.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214550033",
+                    "name": "Xun Deng"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        }
+    ]
+}

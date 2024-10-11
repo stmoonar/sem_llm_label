@@ -1,0 +1,401 @@
+{
+    "authorId": "143752702",
+    "papers": [
+        {
+            "paperId": "b390cd0230e9bcfe3eb13b32505f34bc4b99656e",
+            "title": "Fast and Slow Thinking: A Two-Step Schema-Aware Approach for Instance Completion in Knowledge Graphs",
+            "abstract": "Modern Knowledge Graphs (KG) often suffer from an incompleteness issue (i.e., missing facts). By representing a fact as a triplet <inline-formula><tex-math notation=\"LaTeX\">$(h,r,t)$</tex-math><alternatives><mml:math><mml:mrow><mml:mo>(</mml:mo><mml:mi>h</mml:mi><mml:mo>,</mml:mo><mml:mi>r</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"yang-ieq1-3304137.gif\"/></alternatives></inline-formula> linking two entities <inline-formula><tex-math notation=\"LaTeX\">$h$</tex-math><alternatives><mml:math><mml:mi>h</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq2-3304137.gif\"/></alternatives></inline-formula> and <inline-formula><tex-math notation=\"LaTeX\">$t$</tex-math><alternatives><mml:math><mml:mi>t</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq3-3304137.gif\"/></alternatives></inline-formula> via a relation <inline-formula><tex-math notation=\"LaTeX\">$r$</tex-math><alternatives><mml:math><mml:mi>r</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq4-3304137.gif\"/></alternatives></inline-formula>, existing KG completion approaches mostly consider a link prediction task to solve this problem, i.e., given two elements of a triplet predicting the missing one, such as <inline-formula><tex-math notation=\"LaTeX\">$(h,r,?)$</tex-math><alternatives><mml:math><mml:mrow><mml:mo>(</mml:mo><mml:mi>h</mml:mi><mml:mo>,</mml:mo><mml:mi>r</mml:mi><mml:mo>,</mml:mo><mml:mo>?</mml:mo><mml:mo>)</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"yang-ieq5-3304137.gif\"/></alternatives></inline-formula>. However, this task implicitly has a strong yet impractical assumption on the two given elements in a triplet, which have to be correlated, resulting otherwise in meaningless predictions, such as (<italic>Marie Curie</italic>, <italic>headquarters location</italic>, ?). Against this background, this paper studies an instance completion task suggesting <inline-formula><tex-math notation=\"LaTeX\">$r$</tex-math><alternatives><mml:math><mml:mi>r</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq6-3304137.gif\"/></alternatives></inline-formula>-<inline-formula><tex-math notation=\"LaTeX\">$t$</tex-math><alternatives><mml:math><mml:mi>t</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq7-3304137.gif\"/></alternatives></inline-formula> pairs for a given <inline-formula><tex-math notation=\"LaTeX\">$h$</tex-math><alternatives><mml:math><mml:mi>h</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq8-3304137.gif\"/></alternatives></inline-formula>, i.e., <inline-formula><tex-math notation=\"LaTeX\">$(h,?,?)$</tex-math><alternatives><mml:math><mml:mrow><mml:mo>(</mml:mo><mml:mi>h</mml:mi><mml:mo>,</mml:mo><mml:mo>?</mml:mo><mml:mo>,</mml:mo><mml:mo>?</mml:mo><mml:mo>)</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"yang-ieq9-3304137.gif\"/></alternatives></inline-formula>. Inspired by the human psychological principle \u201cfast-and-slow thinking\u201d, we propose a two-step schema-aware approach RETA++ to efficiently solve our instance completion problem. It consists of two components: a <italic>fast</italic> RETA-Filter efficiently filtering candidate <inline-formula><tex-math notation=\"LaTeX\">$r$</tex-math><alternatives><mml:math><mml:mi>r</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq10-3304137.gif\"/></alternatives></inline-formula>-<inline-formula><tex-math notation=\"LaTeX\">$t$</tex-math><alternatives><mml:math><mml:mi>t</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq11-3304137.gif\"/></alternatives></inline-formula> pairs schematically matching the given <inline-formula><tex-math notation=\"LaTeX\">$h$</tex-math><alternatives><mml:math><mml:mi>h</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq12-3304137.gif\"/></alternatives></inline-formula>, and a <italic>deliberate</italic> RETA-Grader leveraging a KG embedding model scoring each candidate <inline-formula><tex-math notation=\"LaTeX\">$r$</tex-math><alternatives><mml:math><mml:mi>r</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq13-3304137.gif\"/></alternatives></inline-formula>-<inline-formula><tex-math notation=\"LaTeX\">$t$</tex-math><alternatives><mml:math><mml:mi>t</mml:mi></mml:math><inline-graphic xlink:href=\"yang-ieq14-3304137.gif\"/></alternatives></inline-formula> pair considering the plausibility of both the input triplet and its corresponding schema. RETA++ systematically integrates them by training RETA-Grader on the reduced solution space output by RETA-Filter via a customized negative sampling process, so as to fully benefit from the efficiency of RETA-Filter in solution space reduction and the deliberation of RETA-Grader in scoring candidate triplets. We evaluate our approach against a sizable collection of state-of-the-art techniques on three real-world KG datasets. Results show that RETA-Filter can efficiently reduce the solution space for the instance completion task, outperforming best baseline techniques by 10.61%\u201384.75% on the reduced solution space size, while also being 1.7\u00d7\u201329.6x faster than these techniques. Moreover, RETA-Grader trained on the reduced solution space also significantly outperforms the best state-of-the-art techniques on the instance completion task by 31.90%\u2013105.02%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "33829042",
+                    "name": "Dingqi Yang"
+                },
+                {
+                    "authorId": "37539937",
+                    "name": "Bingqing Qu"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                },
+                {
+                    "authorId": "1410039219",
+                    "name": "Philippe Cudr\u00e9-Mauroux"
+                }
+            ]
+        },
+        {
+            "paperId": "06f6b5b0bae16df32ea54017e4bd02ca4c361f40",
+            "title": "Revisiting Embedding Based Graph Analyses: Hyperparameters Matter!",
+            "abstract": "Graph embeddings have been widely used for many graph analysis tasks. Mainstream factorization-based and graph-sampling-based embedding learning schemes both involve many hyperparameters and design choices. However, existing techniques often adopt some heuristics for these hyperparameters and design choices with little investigation into their impact, making it unclear what is the exact performance gains of these techniques on graph analysis tasks. Against this background, this paper presents a systematic study on the impact of an extensive list of hyperparameters for both factorization-based and graph-sampling-based graph embedding techniques for homogeneous graphs. We design generalized factorization-based and graph-sampling-based techniques involving these hyperparameters, and conduct a comprehensive set of experiments with over 3,000 embedding models trained and evaluated per dataset. We reveal that much of the performance gains are indeed due to optimal hyperparameter settings/design choices rather than the sophistication of embedding models; appropriate hyperparameter settings for typical embedding techniques can outperform a sizeable collection of 18 state-of-the-art graph embedding techniques by 0.30-35.41% across different tasks. Moreover, we find that there is no one-size-fits-all hyperparameter setting across tasks, but we can indeed provide a list of task-specific practical recommendations for these hyperparameter settings/design choices, which we believe can serve as important guidelines for future research on embedding based graph analyses.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "33829042",
+                    "name": "Dingqi Yang"
+                },
+                {
+                    "authorId": "37539937",
+                    "name": "Bingqing Qu"
+                },
+                {
+                    "authorId": "2032278105",
+                    "name": "R. Hussein"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                },
+                {
+                    "authorId": "1393644275",
+                    "name": "P. Cudr\u00e9-Mauroux"
+                },
+                {
+                    "authorId": null,
+                    "name": "Jie Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "2ca885bf70d56061bb3343840454f426355dcce2",
+            "title": "MIND at SemEval-2023 Task 11: From Uncertain Predictions to Subjective Disagreement",
+            "abstract": "This paper describes the participation of the research laboratory MIND, at the University of Milano-Bicocca, in the SemEval 2023 task related to Learning With Disagreements (Le-Wi-Di). The main goal is to identify the level of agreement/disagreement from a collection of textual datasets with different characteristics in terms of style, language and task.The proposed approach is grounded on the hypothesis that the disagreement between annotators could be grasped by the uncertainty that a model, based on several linguistic characteristics, could have on the prediction of a given gold label.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "104163189",
+                    "name": "Giuliano Rizzi"
+                },
+                {
+                    "authorId": "1828761861",
+                    "name": "Alessandro Astorino"
+                },
+                {
+                    "authorId": "2221318599",
+                    "name": "Daniel Scalena"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                },
+                {
+                    "authorId": "1847803",
+                    "name": "E. Fersini"
+                }
+            ]
+        },
+        {
+            "paperId": "5e34f0ab2724e626e2e7cbad4aacb15a5bcdf27d",
+            "title": "Report on the Dagstuhl Seminar on Frontiers of Information Access Experimentation for Research and Education",
+            "abstract": "This report documents the program and the outcomes of Dagstuhl Seminar 23031 \"Frontiers of Information Access Experimentation for Research and Education\", which brought together 38 participants from 12 countries. The seminar addressed technology-enhanced information access (information retrieval, recommender systems, natural language processing) and specifically focused on developing more responsible experimental practices leading to more valid results, both for research as well as for scientific education. The seminar featured a series of long and short talks delivered by participants, who helped in setting a common ground and in letting emerge topics of interest to be explored as the main output of the seminar. This led to the definition of five groups which investigated challenges, opportunities, and next steps in the following areas: reality check, i.e. conducting real-world studies, human-machine-collaborative relevance judgment frameworks, overcoming methodological challenges in information retrieval and recommender systems through awareness and education, results-blind reviewing, and guidance for authors. Date: 15--20 January 2023. Website: https://www.dagstuhl.de/23031.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2052765096",
+                    "name": "Christine Bauer"
+                },
+                {
+                    "authorId": "1750995",
+                    "name": "Ben Carterette"
+                },
+                {
+                    "authorId": "2137867216",
+                    "name": "Joeran Beel"
+                },
+                {
+                    "authorId": "1491609376",
+                    "name": "Timo Breuer"
+                },
+                {
+                    "authorId": "1751287",
+                    "name": "C. Clarke"
+                },
+                {
+                    "authorId": "2815511",
+                    "name": "Anita Crescenzi"
+                },
+                {
+                    "authorId": "1694274",
+                    "name": "Gianluca Demartini"
+                },
+                {
+                    "authorId": "2051747173",
+                    "name": "G. Nunzio"
+                },
+                {
+                    "authorId": "145798497",
+                    "name": "Laura Dietz"
+                },
+                {
+                    "authorId": "80808662",
+                    "name": "G. Faggioli"
+                },
+                {
+                    "authorId": "3001795",
+                    "name": "B. Ferwerda"
+                },
+                {
+                    "authorId": "1490763899",
+                    "name": "Maik Fr\u00f6be"
+                },
+                {
+                    "authorId": "145072133",
+                    "name": "Matthias Hagen"
+                },
+                {
+                    "authorId": "1699657",
+                    "name": "A. Hanbury"
+                },
+                {
+                    "authorId": "2731925",
+                    "name": "C. Hauff"
+                },
+                {
+                    "authorId": "1705282",
+                    "name": "D. Jannach"
+                },
+                {
+                    "authorId": "2167781708",
+                    "name": "Noriko Kando"
+                },
+                {
+                    "authorId": "1713134",
+                    "name": "E. Kanoulas"
+                },
+                {
+                    "authorId": "2477993",
+                    "name": "Bart P. Knijnenburg"
+                },
+                {
+                    "authorId": "2993548",
+                    "name": "Udo Kruschwitz"
+                },
+                {
+                    "authorId": "1954475",
+                    "name": "Maria Maistro"
+                },
+                {
+                    "authorId": "119665711",
+                    "name": "L. Michiels"
+                },
+                {
+                    "authorId": "73425445",
+                    "name": "A. Papenmeier"
+                },
+                {
+                    "authorId": "3046200",
+                    "name": "Martin Potthast"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                },
+                {
+                    "authorId": "40404161",
+                    "name": "A. Said"
+                },
+                {
+                    "authorId": "34588911",
+                    "name": "Philipp Schaer"
+                },
+                {
+                    "authorId": "145566115",
+                    "name": "C. Seifert"
+                },
+                {
+                    "authorId": "1630446247",
+                    "name": "Damiano Spina"
+                },
+                {
+                    "authorId": "1405867539",
+                    "name": "Benno Stein"
+                },
+                {
+                    "authorId": "1803171",
+                    "name": "N. Tintarev"
+                },
+                {
+                    "authorId": "2060623050",
+                    "name": "J. Urbano"
+                },
+                {
+                    "authorId": "2626599",
+                    "name": "Henning Wachsmuth"
+                },
+                {
+                    "authorId": "1918235",
+                    "name": "M. Willemsen"
+                },
+                {
+                    "authorId": "151068958",
+                    "name": "Justin W. Zobel"
+                }
+            ]
+        },
+        {
+            "paperId": "8a195e1b38241934a9b445c77494fb11a9eacd6f",
+            "title": "Transformers and Ensemble methods: A solution for Hate Speech Detection in Arabic languages",
+            "abstract": "This paper describes our participation in the shared task of hate speech detection, which is one of the subtasks of the CERIST NLP Challenge 2022. Our experiments evaluate the performance of six transformer models and their combination using 2 ensemble approaches. The best results on the training set, in a five-fold cross validation scenario, were obtained by using the ensemble approach based on the majority vote. The evaluation of this approach on the test set resulted in an F1-score of 0.60 and an Accuracy of 0.86.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1657652841",
+                    "name": "Angel Felipe Magnoss\u00e3o de Paula"
+                },
+                {
+                    "authorId": "3118956",
+                    "name": "Imene Bensalem"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                },
+                {
+                    "authorId": "2034351",
+                    "name": "W. Zaghouani"
+                }
+            ]
+        },
+        {
+            "paperId": "8d71ca7eaf262a71fd4cdbe7a0314d57ffa430d3",
+            "title": "It's Just a Matter of Time: Detecting Depression with Time-Enriched Multimodal Transformers",
+            "abstract": "Depression detection from user-generated content on the internet has been a long-lasting topic of interest in the research community, providing valuable screening tools for psychologists. The ubiquitous use of social media platforms lays out the perfect avenue for exploring mental health manifestations in posts and interactions with other users. Current methods for depression detection from social media mainly focus on text processing, and only a few also utilize images posted by users. In this work, we propose a flexible time-enriched multimodal transformer architecture for detecting depression from social media posts, using pretrained models for extracting image and text embeddings. Our model operates directly at the user-level, and we enrich it with the relative time between posts by using time2vec positional embeddings. Moreover, we propose another model variant, which can operate on randomly sampled and unordered sets of posts to be more robust to dataset noise. We show that our method, using EmoBERTa and CLIP embeddings, surpasses other methods on two multimodal datasets, obtaining state-of-the-art results of 0.931 F1 score on a popular multimodal Twitter dataset, and 0.902 F1 score on the only multimodal Reddit dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2007651543",
+                    "name": "Ana-Maria Bucur"
+                },
+                {
+                    "authorId": "66618729",
+                    "name": "Adrian Cosma"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                },
+                {
+                    "authorId": "2467676",
+                    "name": "Liviu P. Dinu"
+                }
+            ]
+        },
+        {
+            "paperId": "a56cc09fd52b40203c5f38b01b20592f21a48548",
+            "title": "Multilingual Detection of Check-Worthy Claims using World Languages and Adapter Fusion",
+            "abstract": "Check-worthiness detection is the task of identifying claims, worthy to be investigated by fact-checkers. Resource scarcity for non-world languages and model learning costs remain major challenges for the creation of models supporting multilingual check-worthiness detection. This paper proposes cross-training adapters on a subset of world languages, combined by adapter fusion, to detect claims emerging globally in multiple languages. (1) With a vast number of annotators available for world languages and the storage-efficient adapter models, this approach is more cost efficient. Models can be updated more frequently and thus stay up-to-date. (2) Adapter fusion provides insights and allows for interpretation regarding the influence of each adapter model on a particular language. The proposed solution often outperformed the top multilingual approaches in our benchmark tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "32775036",
+                    "name": "Ipek Baris Schlicht"
+                },
+                {
+                    "authorId": "2125481734",
+                    "name": "Lucie Flek"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                }
+            ]
+        },
+        {
+            "paperId": "c3b09dde03c65f53e046f8cce5201de6a6f17dbe",
+            "title": "Overview of AuTexTification at IberLEF 2023: Detection and Attribution of Machine-Generated Text in Multiple Domains",
+            "abstract": "This paper presents the overview of the AuTexTification shared task as part of the IberLEF 2023 Workshop in Iberian Languages Evaluation Forum, within the framework of the SEPLN 2023 conference. AuTexTification consists of two subtasks: for Subtask 1, participants had to determine whether a text is human-authored or has been generated by a large language model. For Subtask 2, participants had to attribute a machine-generated text to one of six different text generation models. Our AuTexTification 2023 dataset contains more than 160.000 texts across two languages (English and Spanish) and five domains (tweets, reviews, news, legal, and how-to articles). A total of 114 teams signed up to participate, of which 36 sent 175 runs, and 20 of them sent their working notes. In this overview, we present the AuTexTification dataset and task, the submitted participating systems, and the results.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2241540449",
+                    "name": "A. Sarvazyan"
+                },
+                {
+                    "authorId": "2242065237",
+                    "name": "Jos\u00e9 \u00c1ngel Gonz\u00e1lez"
+                },
+                {
+                    "authorId": "1403862010",
+                    "name": "Marc Franco-Salvador"
+                },
+                {
+                    "authorId": "133975199",
+                    "name": "Francisco Rangel"
+                },
+                {
+                    "authorId": "4696191",
+                    "name": "Berta Chulvi"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                }
+            ]
+        },
+        {
+            "paperId": "ca4e9843118a2c23183fc0b076086f850ee9e472",
+            "title": "Mitigating Negative Transfer with Task Awareness for Sexism, Hate Speech, and Toxic Language Detection",
+            "abstract": "This paper proposes a novelty approach to mitigate the negative transfer problem. In the field of machine learning, the common strategy is to apply the Single-Task Learning approach in order to train a supervised model to solve a specific task. Training a robust model requires a lot of data and a significant amount of computational resources, making this solution unfeasible in cases where data are unavailable or expensive to gather. Therefore another solution, based on the sharing of information between tasks, has been developed: Multi-task Learning (MTL). Despite the recent developments regarding MTL, the problem of negative transfer has still to be solved. Negative transfer is a phenomenon that occurs when noisy information is shared between tasks, resulting in a drop in performance. This paper proposes a new approach to mitigate the negative transfer problem based on the task awareness concept. The proposed approach results in diminishing the negative transfer together with an improvement of performance over classic MTL solution. Moreover, the proposed approach has been implemented in two unified architectures to detect Sexism, Hate Speech, and Toxic Language in text comments. The proposed architectures set a new state-of-the-art both in EXIST-2021 and HatEval-2019 benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1657652841",
+                    "name": "Angel Felipe Magnoss\u00e3o de Paula"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                },
+                {
+                    "authorId": "1630446247",
+                    "name": "Damiano Spina"
+                }
+            ]
+        },
+        {
+            "paperId": "0d943b36e5f2b14316039a8fc3c15529e48a8336",
+            "title": "An End-to-End Set Transformer for User-Level Classification of Depression and Gambling Disorder",
+            "abstract": "This work proposes a transformer architecture for user-level classification of gambling addiction and depression that is trainable end-to-end. As opposed to other methods that operate at the post level, we process a set of social media posts from a particular individual, to make use of the interactions between posts and eliminate label noise at the post level. We exploit the fact that, by not injecting positional encodings, multi-head attention is permutation invariant and we process randomly sampled sets of texts from a user after being encoded with a modern pretrained sentence encoder (RoBERTa / MiniLM). Moreover, our architecture is interpretable with modern feature attribution methods and allows for automatic dataset creation by identifying discriminating posts in a user's text-set. We perform ablation studies on hyper-parameters and evaluate our method for the eRisk 2022 Lab on early detection of signs of pathological gambling and early risk detection of depression. The method proposed by our team BLUE obtained the best ERDE5 score of 0.015, and the second-best ERDE50 score of 0.009 for pathological gambling detection. For the early detection of depression, we obtained the second-best ERDE50 of 0.027.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2007651543",
+                    "name": "Ana-Maria Bucur"
+                },
+                {
+                    "authorId": "66618729",
+                    "name": "Adrian Cosma"
+                },
+                {
+                    "authorId": "2467676",
+                    "name": "Liviu P. Dinu"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                }
+            ]
+        }
+    ]
+}

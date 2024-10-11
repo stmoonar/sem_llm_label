@@ -1,0 +1,377 @@
+{
+    "authorId": "144724978",
+    "papers": [
+        {
+            "paperId": "9bcf93eba739fdd4dde2eb60fd4960c039729292",
+            "title": "Robustness of Updatable Learning-based Index Advisors against Poisoning Attack",
+            "abstract": "Despite the promising performance of recent learning-based Index Advisors (IAs), they exhibited the robustness issue when poisoning attacks polluted training data. This paper presents the first attempt to study the robustness of updatable learning-based IAs against poisoning attack, i.e., whether the IAs can maintain robust performance if their training/updating is disturbed by injecting an extraneous toxic workload. The goal is to provide an opaque-box stress test that is generally effective in evaluating the robustness of different learning-based IAs without using the users' private data. There are three challenges, i.e., how to probe \"index preference\" from opaque-box IAs, how to design effective injecting strategies even if the IAs can be fine-tuned, and how to generate queries to meet the specific constraints for IA probing and injecting. The presented stress-test framework PIPA consists of a probing stage, an injecting stage, and a query generator. To address the first challenge, the probing stage estimates the IA's indexing preference by observing its responses to the probing workload. To address the second challenge, the injecting stage injects workloads that spoof the IA to demote the top-ranked indexes in the estimated indexing preference and promote mid-ranked indexes. The stress test is effective because the IA is trapped in a local optimum even after fine-tuning. To address the third challenge, PIPA utilizes IABART (Index Aware BART) to generate queries that can be optimized by building indexes on a given set of indexes. Extensive experiments on different benchmarks against various learning-based IAs demonstrate the effectiveness of PIPA and that existing learning-based IAs are non-robust when faced with even a subtle amount of injected extraneous toxic workloads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2293977090",
+                    "name": "Yihang Zheng"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "2293964540",
+                    "name": "Xian Lyu"
+                },
+                {
+                    "authorId": "50177381",
+                    "name": "Xuanhe Zhou"
+                },
+                {
+                    "authorId": "2242412700",
+                    "name": "Guoliang Li"
+                },
+                {
+                    "authorId": "2155412720",
+                    "name": "Tianqing Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "04f5164f9edfbb15e5b479b31341bd28f02f882b",
+            "title": "Demonstration of ViTA: Visualizing, Testing and Analyzing Index Advisors",
+            "abstract": "Index advisors have become an essential tool to optimize index selection and accelerate query processing. Various index advisors have been developed in recent years, and comprehensively assessing their performance from multiple aspects is necessary. In this demonstration, we introduce VITA, a user-friendly and informative tool for interactively Visualizing, Testing, and Analyzing index advisors. For a user-given workload, VITA can visualize the main steps of the index selection procedure in ten existing index advisors to facilitate the management of index advisors. Moreover, VITA can assess the index advisor's robustness w.r.t. workload drift by generating testing workloads, i.e., potentially future workloads that may damage the index advisor's performance. Finally, VITA provides a comparative analysis across index advisors on four aspects, including the index advisor's utility (i.e., the ratio of the reduced workload cost), robustness (i.e., the performance under dynamic workload), overhead (i.e., the time to acquire the final configuration), and scalability (i.e., the volume of the enumerated index candidates). Therefore, VITA can thoroughly compare existing index advisors to help users determine the most suitable index advisor that meets their requirements. VITA is now being integrated into the openGauss platform as a plug-in.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261136259",
+                    "name": "Wei Zhou"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "50177381",
+                    "name": "Xuanhe Zhou"
+                },
+                {
+                    "authorId": "2242412700",
+                    "name": "Guoliang Li"
+                },
+                {
+                    "authorId": "2155412720",
+                    "name": "Tianqing Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "1344dacfd129339f139a38d3209cd6533db59353",
+            "title": "Resolving Power Equipment Data Inconsistency via Heterogeneous Network Alignment",
+            "abstract": "This paper studies the problem of resolving data inconsistency from multiple sources in managing data related to power equipment for China\u2019s state grid corporation. This paper proposes HENGE, a HEtetrogeneous Network GEneration model, to automatically align inconsistent devices from multiple sources, i.e., the same devices with multiple entries with different values in each source. HENGE builds multiple data sources into a heterogeneous graph, and captures complex physical and semantic relationships among devices. HENGE combines feature and relational information and improves alignment accuracy by feature-enhanced residual graph encoder and disentangled representation learning. HENGE can learn from a small amount of labeled data through a uniformity autoencoder trained on an unsupervised generation task. Experiments on two real-world datasets demonstrate the capability of HENGE in resolving inconsistent device entries in multiple sources.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3383734",
+                    "name": "Yuxiang Cai"
+                },
+                {
+                    "authorId": "2110312006",
+                    "name": "Xin Jiang"
+                },
+                {
+                    "authorId": "2267781153",
+                    "name": "Yang Li"
+                },
+                {
+                    "authorId": "2181428954",
+                    "name": "Xiangyu He"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "135a060ecb1eaf398d9e4e9b42d4b55977b3f3ce",
+            "title": "TCCM: Time and Content-Aware Causal Model for Unbiased News Recommendation",
+            "abstract": "Popularity bias significantly impacts news recommendation systems, as popular news articles receive more exposure and are often delivered to irrelevant users, resulting in unsatisfactory performance. Existing methods have not adequately addressed the issue of popularity bias in news recommendations, largely due to the neglect of the time factor and the impact of news content on popularity. In this paper, we propose a novel approach called Time and Content-aware Causal Model, namely TCCM. It models the effects of three factors on user interaction behavior, i.e., the time factor, the news popularity, and the matching between news content and user interest. TCCM also estimates news popularity more accurately by incorporating the news content, i.e., the popularity of entity and words. Causal intervention techniques are applied to obtain debiased recommendations. Extensive experiments on well-known benchmark datasets demonstrate that the proposed approach outperforms a range of state-of-the-art techniques.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2260947350",
+                    "name": "Yewang Chen"
+                },
+                {
+                    "authorId": "2175279852",
+                    "name": "Weiyao Ye"
+                },
+                {
+                    "authorId": "2118935955",
+                    "name": "Guipeng Xv"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "2116840502",
+                    "name": "Xiao-Wan Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "a02c1c5c8eba96a1554b9e375223da3a88736add",
+            "title": "BOMGraph: Boosting Multi-scenario E-commerce Search with a Unified Graph Neural Network",
+            "abstract": "Mobile Taobao Application delivers search services on multiple scenarios that take textual, visual, or product queries. This paper aims to propose a unified graph neural network for these search scenarios to leverage data from multiple scenarios and jointly optimize search performances with less training and maintenance costs. Towards this end, this paper proposes BOMGraph, BOosting Multi-scenario E-commerce Search with a unified Graph neural network. BOMGraph is embodied with several components to address challenges in multi-scenario search. It captures heterogeneous information flow across scenarios by inter-scenario and intra-scenario metapaths. It learns robust item representations by disentangling specific characteristics for different scenarios and encoding common knowledge across scenarios. It alleviates label scarcity and long-tail problems in scenarios with low traffic by contrastive learning with cross-scenario augmentation. BOMGraph has been deployed in production by Alibaba's E-commerce search advertising platform. Both offline evaluations and online A/B tests demonstrate the effectiveness of BOMGraph.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2260858877",
+                    "name": "Shuai Fan"
+                },
+                {
+                    "authorId": "2227547003",
+                    "name": "Jinping Gou"
+                },
+                {
+                    "authorId": "2261319219",
+                    "name": "Yang Li"
+                },
+                {
+                    "authorId": "2260773808",
+                    "name": "Jiaxing Bai"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "150337311",
+                    "name": "Wanxian Guan"
+                },
+                {
+                    "authorId": "2108184787",
+                    "name": "Xubin Li"
+                },
+                {
+                    "authorId": "2244445407",
+                    "name": "Hongbo Deng"
+                },
+                {
+                    "authorId": "2117049789",
+                    "name": "Jian Xu"
+                },
+                {
+                    "authorId": "2260655364",
+                    "name": "Bo Zheng"
+                }
+            ]
+        },
+        {
+            "paperId": "ae095ea9bb5cd4e9523403fe0428a5b14684de57",
+            "title": "D$^{2}$PSG: Multi-Party Dialogue Discourse Parsing as Sequence Generation",
+            "abstract": "Conversational discourse analysis aims to extract the interactions between dialogue turns, which is crucial for modeling complex multi-party dialogues. As the benchmarks are still limited in size and human annotations are costly, the current standard approaches apply pretrained language models, but they still require randomly initialized classifiers to make predictions. These classifiers usually require massive data to work smoothly with the pretrained encoder, causing severe data hunger issue. We propose two convenient strategies to formulate this task as a sequence generation problem, where classifier decisions are carefully converted into sequence of tokens. We then adopt a pretrained T5 [C. Raffel et al., 2020] model to solve this task so that no parameters are randomly initialized. We also leverage the descriptions of the discourse relations to help model understand their meanings. Experiments on two popular benchmarks show that our approach outperforms previous state-of-the-art models by a large margin, and it is also more robust in zero-shot and few-shot settings.1",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1754106063",
+                    "name": "Ante Wang"
+                },
+                {
+                    "authorId": "1748796",
+                    "name": "Linfeng Song"
+                },
+                {
+                    "authorId": "2936180",
+                    "name": "Lifeng Jin"
+                },
+                {
+                    "authorId": "2109803227",
+                    "name": "Junfeng Yao"
+                },
+                {
+                    "authorId": "2238955130",
+                    "name": "Haitao Mi"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "34739384",
+                    "name": "Jinsong Su"
+                },
+                {
+                    "authorId": "2239076081",
+                    "name": "Dong Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "bcb8fbb1c184f5ed6502e174615447d026301c33",
+            "title": "E-commerce Search via Content Collaborative Graph Neural Network",
+            "abstract": "Recently, many E-commerce search models are based on Graph Neural Networks (GNNs). Despite their promising performances, they are (1) lacking proper semantic representation of product contents; (2) less efficient for industry-scale graphs; and (3) less accurate on long-tail queries and cold-start products. To address these problems simultaneously, this paper proposes CC-GNN, a novel Content Collaborative Graph Neural Network. Firstly, CC-GNN enables content phrases to participate explicitly in graph propagation to capture the proper meaning of phrases and semantic drifts. Secondly, CC-GNN presents several efforts towards a more scalable graph learning framework, including efficient graph construction, MetaPath-guided Message Passing, and Difficulty-aware Representation Perturbation for graph contrastive learning. Furthermore, CC-GNN adopts Counterfactual Data Supplement at both supervised and contrastive learning to resolve the long-tail/cold-start problems. Extensive experiments on a real E-commerce dataset of 100-million-scale nodes show that CC-GNN produces significant improvements over existing methods (i.e., more than 10% improvements in terms of several key evaluation metrics for overall, long-tail queries and cold-start products) while reducing computational complexity. The proposed components of CC-GNN can be applied to other models for search and recommendation tasks. Experiments on a public dataset show that applying the proposed components can improve the performance of different recommendation models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118935955",
+                    "name": "Guipeng Xv"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "150337311",
+                    "name": "Wanxian Guan"
+                },
+                {
+                    "authorId": "2227547003",
+                    "name": "Jinping Gou"
+                },
+                {
+                    "authorId": "2108184787",
+                    "name": "Xubin Li"
+                },
+                {
+                    "authorId": "2642895",
+                    "name": "Hongbo Deng"
+                },
+                {
+                    "authorId": "2117049789",
+                    "name": "Jian Xu"
+                },
+                {
+                    "authorId": "2093245720",
+                    "name": "Bo Zheng"
+                }
+            ]
+        },
+        {
+            "paperId": "0e8f12da99f13db16bcf3e7435958b887f5959b9",
+            "title": "Spiral of Silence and Its Application in Recommender Systems",
+            "abstract": "It is crucial to model missing ratings in recommender systems since user preferences learnt from only observed ratings are biased. One possible explanation for missing ratings is motivated by the spiral of silence theory. When the majority opinion is formed, a spiral process is triggered where users are more and more likely to show their ratings if they perceive that they are supported by the opinion climate. In this paper we first verify the existence of the spiral process in recommender systems by using a variety of different real-life datasets. We then study the characteristics of two key factors in the spiral process: opinion climate and the hardcore users who will give ratings even when they are minority opinion holders. Based on our empirical findings, we develop four variants to model missing ratings. They mimic different components of the spiral of silence based on the spiral process with global opinion climate, local opinion climate, hardcore users, relationships between hardcore users and items, respectively. We experimentally show that, the presented variants all outperform state-of-the-art recommendation models with missing rating components.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "66953961",
+                    "name": "Dugang Liu"
+                },
+                {
+                    "authorId": "8163721",
+                    "name": "Hanghang Tong"
+                },
+                {
+                    "authorId": "3011950",
+                    "name": "Yanghua Xiao"
+                }
+            ]
+        },
+        {
+            "paperId": "55c261280e97dc28ec1045c311d927904039689b",
+            "title": "Efficiently Answering k-hop Reachability Queries in Large Dynamic Graphs for Fraud Feature Extraction",
+            "abstract": "Instant messaging client (IMC) is now an essential tool for mobile users. In the representative IMC We Chat, cybercriminals deceive frauds, causing financial loss to normal users. Through statistical analysis, we find that certain fraud interactions commonly occur among WeChat users who are not k-hop neighbors. Therefore, efficiently answering whether the distance between two vertices is not longer than k at a certain time point (i.e., k-hop reachability queries) over the dynamic social graph of WeChat becomes a crucial task for fraud feature extraction in the detection system: it can help human experts quickly identify suspicious user interactions and the query results can be further used as the input feature to the downstream machine learning based detection methods. In this paper, we illustrate Bidirectional k-hop Reachability Query Processing over a Dynamic Graph (BREAD) that is used in WeChat for extracting the k-hop reachability feature for fraud detection. BREAD adopts the idea of estimating Personalized PageRank value. It first conducts the backward search from the destination vertex to construct an intermediate vertex set. Then, it performs a certain amount of random walks from the start vertex to see whether they can hit the intermediate vertex set, and the results are returned to answer k-hop reachability queries. We further propose $\\text{BREAD}++$ that leverages the massive parallel processing power of GPU to achieve a considerable performance gain. Experiments on several large-scale dynamic graph benchmarks and the social graph of WeChat have demonstrated that $\\text{BREAD}/\\text{BREAD}++$ is superior than existing index-free competitors: our methods provide not only fast but also accurate responses and they are of practical value to k-hop reachability feature extraction in the fraud detection system of WeChat. Our implementation is available at https://github.com/XMUDM/BREAD.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180918261",
+                    "name": "Zequan Xu"
+                },
+                {
+                    "authorId": "3270262",
+                    "name": "Siqiang Luo"
+                },
+                {
+                    "authorId": "35774994",
+                    "name": "Jieming Shi"
+                },
+                {
+                    "authorId": "2155493018",
+                    "name": "Hui Li"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "2181643687",
+                    "name": "Qihang Sun"
+                },
+                {
+                    "authorId": "2122827219",
+                    "name": "Shaofeng Hu"
+                }
+            ]
+        },
+        {
+            "paperId": "8814d6ad47f7d37c27c61a7c6a958643153d9ff5",
+            "title": "Pretraining Representations of Multi-modal Multi-query E-commerce Search",
+            "abstract": "The importance of modeling contextual information within a search session has been widely acknowledged. However, learning representations of multi-query multi-modal (MM) search, in which Mobile Taobao users repeatedly submit textual and visual queries, remains unexplored in literature. Previous work which learns task-specific representations of textual query sessions fails to capture diverse query types and correlations in MM search sessions. This paper presents to represent MM search sessions by heterogeneous graph neural network (HGN). A multi-view contrastive learning framework is proposed to pretrain the HGN, with two views to model different intra-query, inter-query, and inter-modality information diffusion in MM search. Extensive experiments demonstrate that, the pretrained session representation can benefit state-of-the-art baselines on various downstream tasks, such as personalized click prediction, query suggestion, and intent classification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110787722",
+                    "name": "Xinyi Liu"
+                },
+                {
+                    "authorId": "150337311",
+                    "name": "Wanxian Guan"
+                },
+                {
+                    "authorId": "2145729825",
+                    "name": "Lianyun Li"
+                },
+                {
+                    "authorId": "2155493018",
+                    "name": "Hui Li"
+                },
+                {
+                    "authorId": "144724978",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "2108184787",
+                    "name": "Xubin Li"
+                },
+                {
+                    "authorId": "2111635681",
+                    "name": "Si Chen"
+                },
+                {
+                    "authorId": "2117049789",
+                    "name": "Jian Xu"
+                },
+                {
+                    "authorId": "2642895",
+                    "name": "Hongbo Deng"
+                },
+                {
+                    "authorId": "2093245720",
+                    "name": "Bo Zheng"
+                }
+            ]
+        }
+    ]
+}

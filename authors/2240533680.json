@@ -1,0 +1,261 @@
+{
+    "authorId": "2240533680",
+    "papers": [
+        {
+            "paperId": "038b7559dc5f93e54ff5d66753f48897e80a7298",
+            "title": "Efficient Sparse Attention needs Adaptive Token Release",
+            "abstract": "In recent years, Large Language Models (LLMs) have demonstrated remarkable capabilities across a wide array of text-centric tasks. However, their `large' scale introduces significant computational and storage challenges, particularly in managing the key-value states of the transformer, which limits their wider applicability. Therefore, we propose to adaptively release resources from caches and rebuild the necessary key-value states. Particularly, we accomplish this by a lightweight controller module to approximate an ideal top-$K$ sparse attention. This module retains the tokens with the highest top-$K$ attention weights and simultaneously rebuilds the discarded but necessary tokens, which may become essential for future decoding. Comprehensive experiments in natural language generation and modeling reveal that our method is not only competitive with full attention in terms of performance but also achieves a significant throughput improvement of up to 221.8%. The code for replication is available on the https://github.com/WHUIR/ADORE.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2309254505",
+                    "name": "Chaoran Zhang"
+                },
+                {
+                    "authorId": "2240533680",
+                    "name": "Lixin Zou"
+                },
+                {
+                    "authorId": "2309250231",
+                    "name": "Dan Luo"
+                },
+                {
+                    "authorId": "2310562538",
+                    "name": "Min Tang"
+                },
+                {
+                    "authorId": "2278431090",
+                    "name": "Xiangyang Luo"
+                },
+                {
+                    "authorId": "2278236933",
+                    "name": "Zihao Li"
+                },
+                {
+                    "authorId": "2309292411",
+                    "name": "Chenliang Li"
+                }
+            ]
+        },
+        {
+            "paperId": "53db22a9d4ae77dd8218ba867184898adc84d1d1",
+            "title": "Sample Efficient Offline-to-Online Reinforcement Learning",
+            "abstract": "Offline reinforcement learning (RL) makes it possible to train the agents entirely from a previously collected dataset. However, constrained by the quality of the offline dataset, offline RL agents typically have limited performance and cannot be directly deployed. Thus, it is desirable to further finetune the pretrained offline RL agents via online interactions with the environment. Existing offline-to-online RL algorithms suffer from the low sample efficiency issue, due to two inherent challenges, i.e., exploration limitation and distribution shift. To this end, we propose a sample-efficient offline-to-online RL algorithm via Optimistic Exploration and Meta Adaptation (OEMA). Specifically, we first propose an optimistic exploration strategy according to the principle of optimism in the face of uncertainty. This allows agents to sufficiently explore the environment in a stable manner. Moreover, we propose a meta learning based adaptation method, which can reduce the distribution shift and accelerate the offline-to-online adaptation process. We empirically demonstrate that OEMA improves the sample efficiency on D4RL benchmark. Besides, we provide in-depth analyses to verify the effectiveness of both optimistic exploration and meta adaptation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110835903",
+                    "name": "Siyuan Guo"
+                },
+                {
+                    "authorId": "2240533680",
+                    "name": "Lixin Zou"
+                },
+                {
+                    "authorId": "2280102292",
+                    "name": "Hechang Chen"
+                },
+                {
+                    "authorId": "150046347",
+                    "name": "B. Qu"
+                },
+                {
+                    "authorId": "2283151209",
+                    "name": "Haotian Chi"
+                },
+                {
+                    "authorId": "2280992553",
+                    "name": "Philip S. Yu"
+                },
+                {
+                    "authorId": "2140493148",
+                    "name": "Yi Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "9714889a34318775ea020c3ff6d6ee93eb59c613",
+            "title": "LT2R: Learning to Online Learning to Rank for Web Search",
+            "abstract": "Online learning to rank (OLTR), which directly optimizes the ranker with interactive user feedback, has gained considerable attention in both academia and industry. However, most current approaches suffer from the inefficiency of heuristic exploration strategies, which can seriously hurt users' experience. Furthermore, the existing OLTR solutions fail to learn from the cost-effective logged data, blocking their usage in the real industrial system. To handle the above issues, we in this paper introduce a new OLTR framework LT2R, namely Learning To online Learning to Rank. LT2R aims to study an efficient parameterized exploration strategy, by which a ranker could converge to the optimal ranking with as few exploration steps as possible. Specifically, we formulate the OLTR task as a typical Markov Decision Process and introduce an online reinforcement learning algorithm with a multi-round cumulative reward to guarantee fast convergence. Moreover, we contribute an offline learning algorithm for LT2R to exploit the knowledge from the historical searching logs, which can provide a fair warm-up model for its industrial deployment. Extensive experiments on both benchmark datasets and Baidu search engine have demonstrated its superiority over state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "90368708",
+                    "name": "Xiaokai Chu"
+                },
+                {
+                    "authorId": "2263773227",
+                    "name": "Changying Hao"
+                },
+                {
+                    "authorId": "2237948548",
+                    "name": "Shuaiqiang Wang"
+                },
+                {
+                    "authorId": "2310819265",
+                    "name": "Dawei Yin"
+                },
+                {
+                    "authorId": "2278576704",
+                    "name": "Jiashu Zhao"
+                },
+                {
+                    "authorId": "2240533680",
+                    "name": "Lixin Zou"
+                },
+                {
+                    "authorId": "2309292411",
+                    "name": "Chenliang Li"
+                }
+            ]
+        },
+        {
+            "paperId": "ce1354d956930c25aa5103f30edce3f9c7e6651d",
+            "title": "Unified Visual Preference Learning for User Intent Understanding",
+            "abstract": "In the world of E-Commerce, the core task is to understand the personalized preference from various kinds of heterogeneous information, such as textual reviews, item images and historical behaviors. In current systems, these heterogeneous information are mainly exploited to generate better item or user representations. For example, in scenario of visual search, the importance of modeling query image has been widely acknowledged. But, these existing solutions focus on improving the representation quality of the query image, overlooking the personalized visual preference of the user. Note that the visual features affect the user's decision significantly, e.g., the user could be more likely to click the items with her preferred design. Hence, it is fruitful to exploit the visual preference to deliver better capacity for personalization. To this end, we propose a simple yet effective target-aware visual preference learning framework (named Tavern) for both item recommendation and search. The proposed Tavern works as an individual and generic model that can be smoothly plugged into different downstream systems. Specifically, for visual preference learning, we utilize the image of the target item to derive the visual preference signals for each historical clicked item. This procedure is modeled as a form of representation disentanglement, where the visual preference signals are extracted by taking off the noisy information irrelevant to visual preference from the shared visual information between the target and historical items. During this process, a novel selective orthogonality disentanglement is proposed to avoid the significant information loss. Then, a GRU network is utilized to aggregate these signals to form the final visual preference representation. Extensive experiments over three large-scale real-world datasets covering visual search, product search and recommendation well demonstrate the superiority of our proposed Tavern against existing technical alternatives. Further ablation study also confirms the validity of each design choice.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2290853579",
+                    "name": "Yihua Wen"
+                },
+                {
+                    "authorId": "2290704326",
+                    "name": "Si Chen"
+                },
+                {
+                    "authorId": "2290668842",
+                    "name": "Yu Tian"
+                },
+                {
+                    "authorId": "150337311",
+                    "name": "Wanxian Guan"
+                },
+                {
+                    "authorId": "2145012431",
+                    "name": "Pengjie Wang"
+                },
+                {
+                    "authorId": "2244445407",
+                    "name": "Hongbo Deng"
+                },
+                {
+                    "authorId": "2244589086",
+                    "name": "Jian Xu"
+                },
+                {
+                    "authorId": "2260655364",
+                    "name": "Bo Zheng"
+                },
+                {
+                    "authorId": "2278236933",
+                    "name": "Zihao Li"
+                },
+                {
+                    "authorId": "2240533680",
+                    "name": "Lixin Zou"
+                },
+                {
+                    "authorId": "2136338739",
+                    "name": "Chenliang Li"
+                }
+            ]
+        },
+        {
+            "paperId": "5a682cd13109def6d70e618d93183ce3afcc9d69",
+            "title": "STRec: Sparse Transformer for Sequential Recommendations",
+            "abstract": "With the rapid evolution of transformer architectures, researchers are exploring their application in sequential recommender systems (SRSs) and presenting promising performance on SRS tasks compared with former SRS models. However, most existing transformer-based SRS frameworks retain the vanilla attention mechanism, which calculates the attention scores between all item-item pairs. With this setting, redundant item interactions can harm the model performance and consume much computation time and memory. In this paper, we identify the sparse attention phenomenon in transformer-based SRS models and propose Sparse Transformer for sequential Recommendation tasks (STRec) to achieve the efficient computation and improved performance. Specifically, we replace self-attention with cross-attention, making the model concentrate on the most relevant item interactions. To determine these necessary interactions, we design a novel sampling strategy to detect relevant items based on temporal information. Extensive experimental results validate the effectiveness of STRec, which achieves the state-of-the-art accuracy while reducing 54% inference time and 70% memory cost. We also provide massive extended experiments to further investigate the property of our framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2240717663",
+                    "name": "Chengxi Li"
+                },
+                {
+                    "authorId": "2162455919",
+                    "name": "Yejing Wang"
+                },
+                {
+                    "authorId": "2240559309",
+                    "name": "Qidong Liu"
+                },
+                {
+                    "authorId": "2116711669",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2211473272",
+                    "name": "Wanyu Wang"
+                },
+                {
+                    "authorId": "2108941389",
+                    "name": "Yiqi Wang"
+                },
+                {
+                    "authorId": "2240533680",
+                    "name": "Lixin Zou"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2117896344",
+                    "name": "Qing Li"
+                }
+            ]
+        },
+        {
+            "paperId": "bfbdbe364b6cf20467d7f0cd20f8a0e80f8b66b1",
+            "title": "Tutorial: Data Denoising Metrics in Recommender Systems",
+            "abstract": "Recommender systems play a pivotal role in navigating users through vast reservoirs of information. However, data sparseness can compromise recommendation accuracy, making it challenging to improve recommendation performance. To address this issue, researchers have explored incorporating multiple data types. Yet, this approach can introduce noise that impairs the recommendations' accuracy. Therefore, it is crucial to denoise the data to enhance recommendation quality. This tutorial highlights the importance of data denoising metrics for improving the accuracy and quality of recommendations. Four groups of data denoising metrics are introduced: feature, item, pattern, and modality level. For each group, various denoising methods are presented. The tutorial emphasizes the significance of selecting the right data denoising methods to enhance recommendation quality. It provides valuable guidance for practitioners and researchers implementing reliable data denoising metrics in recommender systems. Finally, the tutorial proposes open research questions for future studies, making it a valuable resource for the research community.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2260820786",
+                    "name": "Pengfei Wang"
+                },
+                {
+                    "authorId": "2136338739",
+                    "name": "Chenliang Li"
+                },
+                {
+                    "authorId": "2240533680",
+                    "name": "Lixin Zou"
+                },
+                {
+                    "authorId": "2113907739",
+                    "name": "Zhichao Feng"
+                },
+                {
+                    "authorId": "2158260214",
+                    "name": "Kaiyuan Li"
+                },
+                {
+                    "authorId": "2260820558",
+                    "name": "Xiaochen Li"
+                },
+                {
+                    "authorId": "2163569041",
+                    "name": "Xialong Liu"
+                },
+                {
+                    "authorId": "2238074161",
+                    "name": "Shangguang Wang"
+                }
+            ]
+        }
+    ]
+}

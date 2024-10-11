@@ -1,0 +1,439 @@
+{
+    "authorId": "144004707",
+    "papers": [
+        {
+            "paperId": "9d2ebb2131e36b22c2205aeef72af528b1fdd979",
+            "title": "Multi-Agent Best Arm Identification with Private Communications",
+            "abstract": "We address multi-agent best arm identification with privacy guarantees. In this setting, agents collaborate by communicating to find the optimal arm. To avoid leaking sensitive data through messages, we consider two notions of privacy withholding different kinds of information: differential privacy and ( \u03f5, \u03b7 ) -privacy. For each privacy definition, we propose an algorithm based on a two-level successive elimination scheme. We provide theoretical guarantees for the privacy level, accuracy and sample complexity of our algorithms. Experiments on various settings support our theoretical findings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "153421497",
+                    "name": "Alexandre Rio"
+                },
+                {
+                    "authorId": "3450836",
+                    "name": "M. Barlier"
+                },
+                {
+                    "authorId": "35175926",
+                    "name": "Igor Colin"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                }
+            ]
+        },
+        {
+            "paperId": "f8b975d39d7434c6582413757341adb45385a3ff",
+            "title": "Secure Protocols for Best Arm Identification in Federated Stochastic Multi-Armed Bandits",
+            "abstract": "The stochastic multi-armed bandit is a classical reinforcement learning model, where a learning agent sequentially chooses an action (pull a bandit arm) and the environment responds with a stochastic reward drawn from an unknown distribution associated with the chosen action. A popular objective for the agent is to identify the arm having the maximum expected reward, also known as the best arm identification problem. We address the security concerns that occur in a cross-silo federated learning setting, where multiple data owners collaborate under the orchestration of a server to execute a best arm identification algorithm. We propose three secure protocols, which guarantee desirable security properties for the: input data (i.e., reward values), intermediate data (i.e., sums of rewards), and output data (i.e., ranking of arms and in particular the identified best arm). More precisely: (1) no data owner can learn the identified best arm; moreover, no data owner can learn local data pertaining to another data owner; (2) the orchestration participants cannot learn the identified best arm, any reward value, or any sum of rewards; (3) by analyzing the messages exchanged over the network, an external observer cannot learn the identified best arm, or any reward value, or any sum of rewards. Each protocol has a different architecture, uses different techniques, and proposes a different trade-off with respect to several criteria that we thoroughly analyze: number of participants, generality of the supported reward functions, cryptographic overhead, and communication cost. To build our protocols, we rely on secure multi-party computation, AES-CBC, and the additive homomorphic property of Paillier.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "2003478279",
+                    "name": "Anatole Delabrouille"
+                },
+                {
+                    "authorId": "3438430",
+                    "name": "P. Lafourcade"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                }
+            ]
+        },
+        {
+            "paperId": "0f0dbf15b04d43b8ca657db62f3ec8a1fe441fb3",
+            "title": "Implementing Linear Bandits in Off-the-Shelf SQLite",
+            "abstract": "The linear multi-armed bandit is a reinforcement learning model that is largely used for sequential decision making in applications such as online advertising and recommender systems. We show that LinUCB, a well-known cumulative reward maximization algorithm for linear bandits, can be implemented in off-the-shelf SQLite. Additionally, our empirical study shows that, when dealing with small bandit data, our SQLite implementation is faster than an implementation in off-the-shelf Python. We believe that our findings open the door for many promising research directions on the topic of in-DBMS federated learning because (i) in the federated learning paradigm, many data owners contribute to the same learning task while locally storing their small data, and (ii) SQLite is a DBMS embedded in billions of devices, hence being able to implement federated learning on top of SQLite is of great practical interest.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                }
+            ]
+        },
+        {
+            "paperId": "4376afd3aaab169e10c263f7de2ebb3dea0969b7",
+            "title": "FeReD: Federated Reinforcement Learning in the DBMS",
+            "abstract": "Federated learning enables clients to enrich their locally trained models via updates performed by a coordination server based on aggregates of local models. There are multiple advances in methods and applications of federated learning, in particular in cross-device federation, where clients having limited data and computational resources collaborate in a joint learning problem. Given the constraint of limited resources in cross-device federation, we study the potential benefits of embedded in-DBMS learning, illustrated in a federated reinforcement learning problem. We demonstrate FeReD, a system that contrasts the performance of cross-device federation using Q-learning, a popular reinforcement learning algorithm. FeReD offers step-by-step guidance for in-DBMS SQLite implementation challenges for both horizontal and vertical data partitioning. FeReD also allows to contrast the Q-learning implementations in SQLite vs a standard Python implementation, by highlighting their learning performance, computational efficiency, succinctness and expressiveness. A video of FeReD is available at https://www.youtube.com/watch?v=2kRIu_C5RZA and its open source code at https://github.com/sotostzam/FeReD.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114808871",
+                    "name": "Sotirios Tzamaras"
+                },
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                }
+            ]
+        },
+        {
+            "paperId": "6be58b3dd64a454e0d7cae9a7cdb119261e1e993",
+            "title": "Samba: A System for Secure Federated Multi-Armed Bandits",
+            "abstract": "The federated learning paradigm allows several data owners to contribute to a machine learning task without exposing their potentially sensitive data. We focus on cumulative reward maximization in Multi-Armed Bandits (MAB), a classical reinforcement learning model for decision making under uncertainty. We demonstrate Samba, a generic framework for Secure federAted Multi-armed BAndits. The demonstration platform is a Web interface that simulates the distributed components of Samba, and which helps the data scientist to configure the end-to-end workflow of deploying a federated MAB algorithm. The user-friendly interface of Samba, allows the users to examine the interaction between three key dimensions of federated MAB: cumulative reward, computation time, and security guarantees. We demonstrate Samba with two real-world datasets: Google Local Reviews and Steam Video Game.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2156288551",
+                    "name": "Gael Marcadet"
+                },
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "3438430",
+                    "name": "P. Lafourcade"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                }
+            ]
+        },
+        {
+            "paperId": "c1d4d650321968f754c878787a9f9759829d1f4b",
+            "title": "Secure protocols for cumulative reward maximization in stochastic multi-armed bandits",
+            "abstract": "We consider the problem of cumulative reward maximization in multi-armed bandits. We address the security concerns that occur when data and computations are outsourced to an honest-but-curious cloud i.e., that executes tasks dutifully, but tries to gain as much information as possible. We consider situations where data used in bandit algorithms is sensitive and has to be protected e.g., commercial or personal data. We rely on cryptographic schemes and propose UCB - MS, a secure multi-party protocol based on the UCB algorithm. We prove that UCB - MS computes the same cumulative reward as UCB while satisfying desirable security properties. In particular, cloud nodes cannot learn the cumulative reward or the sum of rewards for more than one arm. Moreover, by analyzing messages exchanged among cloud nodes, an external observer cannot learn the cumulative reward or the sum of rewards produced by some arm. We show that the overhead due to cryptographic primitives is linear in the size of the input. Our implementation confirms the linear-time behavior and the practical feasibility of our protocol, on both synthetic and real-world data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "3438430",
+                    "name": "P. Lafourcade"
+                },
+                {
+                    "authorId": "1412406528",
+                    "name": "Marius Lombard-Platet"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                }
+            ]
+        },
+        {
+            "paperId": "c559c1ceffe7ba9a17851620cd310b8b9e563a3c",
+            "title": "SAMBA: A Generic Framework for Secure Federated Multi-Armed Bandits",
+            "abstract": "The multi-armed bandit is a reinforcement learning model where a learning agent repeatedly chooses an action (pull a bandit arm) and the environment responds with a stochastic outcome (reward) coming from an unknown distribution associated with the chosen arm. Bandits have a wide-range of application such as Web recommendation systems. We address the cumulative reward maximization problem in a secure federated learning setting, where multiple data owners keep their data stored locally and collaborate under the coordination of a central orchestration server. We rely on cryptographic schemes and propose Samba, a generic framework for Secure federAted Multi-armed BAndits. Each data owner has data associated to a bandit arm and the bandit algorithm has to sequentially select which data owner is solicited at each time step. We instantiate Samba for five bandit algorithms. We show that Samba returns the same cumulative reward as the nonsecure versions of bandit algorithms, while satisfying formally proven security properties. We also show that the overhead due to cryptographic primitives is linear in the size of the input, which is confirmed by our proof-of-concept implementation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "3438430",
+                    "name": "P. Lafourcade"
+                },
+                {
+                    "authorId": "2156288551",
+                    "name": "Gael Marcadet"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                }
+            ]
+        },
+        {
+            "paperId": "5480019f7a5f9cabad878f76e06dced41b5b7ad7",
+            "title": "DashBot: An ML-Guided Dashboard Generation System",
+            "abstract": "Data summarization provides a bird's eye view of data and groupby queries have been the method of choice for data summarization. Such queries provide the ability to group by some attributes and aggregate by others, and their results can be coupled with a visualization to convey insights. The number of possible groupbys that can be computed over a dataset is quite large which naturally calls for developing approaches to aid users in choosing which groupbys best summarize data. We demonstrate DashBot, a system that leverages Machine Learning to guide users in generating data-driven and customized dashboards. A dashboard contains a set of panels, each of which is a groupby query. DashBot iteratively recommends the most relevant panel while ensuring coverage. Relevance is computed based on intrinsic measures of the dataset and coverage aims to provide comprehensive summaries. DashBot relies on a Multi-Armed Bandits (MABs) approach to balance exploitation of relevance and exploration of different regions of the data to achieve coverage. Users can provide feedback and explanations to customize recommended panels. We demonstrate the utility and features of DashBot on different datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "102397366",
+                    "name": "S. D. Col"
+                },
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "2135814451",
+                    "name": "Nassim Bouarour"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                }
+            ]
+        },
+        {
+            "paperId": "0cc466ab156c2ed3da95da84040d472e1403d3c4",
+            "title": "Secure Outsourcing of Multi-Armed Bandits",
+            "abstract": "We consider the problem of cumulative reward maximization in multi-armed bandits. We address the security concerns that occur when data and computations are outsourced to an honest-but-curious cloud i.e., that executes tasks dutifully, but tries to gain as much information as possible. We consider situations where data used in bandit algorithms is sensitive and has to be protected e.g., commercial or personal data. We rely on cryptographic schemes and propose UCB-DS, a distributed and secure protocol based on the UCB algorithm. We prove that UCB-DS computes the same cumulative reward as UCB while satisfying desirable security properties. In particular, cloud nodes cannot learn the cumulative reward or the sum of rewards for more than one arm. Moreover, by analyzing messages exchanged among cloud nodes, an external observer cannot learn the cumulative reward or the sum of rewards produced by some arm. We show that the overhead due to cryptographic primitives is linear in the size of the input. Our implementation confirms the linear-time behavior and the practical feasibility of our protocol, on both synthetic and real-world data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1850588",
+                    "name": "Radu Ciucanu"
+                },
+                {
+                    "authorId": "3438430",
+                    "name": "P. Lafourcade"
+                },
+                {
+                    "authorId": "1412406528",
+                    "name": "Marius Lombard-Platet"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                }
+            ]
+        },
+        {
+            "paperId": "74b06f4bdd08420b8562adb7f41c81dcf0c88eda",
+            "title": "Probabilistic Expert Knowledge Elicitation of Feature Relevances in Sparse Linear Regression",
+            "abstract": "Powered by TCPDF (www.tcpdf.org) This material is protected by copyright and other intellectual property rights, and duplication or sale of all or part of any of the repository collections is not permitted, except that material may be duplicated by you for your research use or educational purposes in electronic or print form. You must obtain permission for any other use. Electronic or print copies may not be offered, whether for sale or otherwise to anyone who is not an authorised user. Daee, Pedram; Peltola, Tomi; Soare, Marta; Kaski, Samuel",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3369027",
+                    "name": "Pedram Daee"
+                },
+                {
+                    "authorId": "5116984",
+                    "name": "Tomi Peltola"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "1711144",
+                    "name": "Samuel Kaski"
+                }
+            ]
+        },
+        {
+            "paperId": "f86cc95c960f5234d372bd6e5730facfaf286168",
+            "title": "Improving genomics-based predictions for precision medicine through active elicitation of expert knowledge",
+            "abstract": "Motivation Precision medicine requires the ability to predict the efficacies of different treatments for a given individual using high\u2010dimensional genomic measurements. However, identifying predictive features remains a challenge when the sample size is small. Incorporating expert knowledge offers a promising approach to improve predictions, but collecting such knowledge is laborious if the number of candidate features is very large. Results We introduce a probabilistic framework to incorporate expert feedback about the impact of genomic measurements on the outcome of interest and present a novel approach to collect the feedback efficiently, based on Bayesian experimental design. The new approach outperformed other recent alternatives in two medical applications: prediction of metabolic traits and prediction of sensitivity of cancer cells to different drugs, both using genomic features as predictors. Furthermore, the intelligent approach to collect feedback reduced the workload of the expert to approximately 11%, compared to a baseline approach. Availability and implementation Source code implementing the introduced computational methods is freely available at https://github.com/AaltoPML/knowledge\u2010elicitation\u2010for\u2010precision\u2010medicine.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "8185218",
+                    "name": "Iiris Sundin"
+                },
+                {
+                    "authorId": "5116984",
+                    "name": "Tomi Peltola"
+                },
+                {
+                    "authorId": "1771451",
+                    "name": "L. Micallef"
+                },
+                {
+                    "authorId": "2775405",
+                    "name": "Homayun Afrabandpey"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "36378841",
+                    "name": "M. M. Majumder"
+                },
+                {
+                    "authorId": "3369027",
+                    "name": "Pedram Daee"
+                },
+                {
+                    "authorId": "2115068199",
+                    "name": "Chen He"
+                },
+                {
+                    "authorId": "2124567",
+                    "name": "Baris Serim"
+                },
+                {
+                    "authorId": "2509309",
+                    "name": "A. Havulinna"
+                },
+                {
+                    "authorId": "15721458",
+                    "name": "C. Heckman"
+                },
+                {
+                    "authorId": "8920122",
+                    "name": "Giulio Jacucci"
+                },
+                {
+                    "authorId": "2848857",
+                    "name": "P. Marttinen"
+                },
+                {
+                    "authorId": "1711144",
+                    "name": "Samuel Kaski"
+                }
+            ]
+        },
+        {
+            "paperId": "443c6c8c2491ed636ec698ae2eb29d29322809a2",
+            "title": "Regression with n\u21921 by Expert Knowledge Elicitation",
+            "abstract": "We consider regression under the \"extremely small n large p\" condition, where the number of samples n is so small compared to the dimensionality p that predictors cannot be estimated without prior knowledge. This setup occurs in personalized medicine, for instance, when predicting treatment outcomes for an individual patient based on noisy high-dimensional genomics data. A remaining source of information is expert knowledge, which has received relatively little attention in recent years. We formulate the inference problem of asking expert feedback on features on a budget, propose an elicitation strategy for a simple \"small n\" setting, and derive conditions under which the elicitation strategy is optimal. Experiments on simulated experts, both on synthetic and genomics data, demonstrate that the proposed strategy can drastically improve prediction accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "1401402845",
+                    "name": "Muhammad Ammad-ud-din"
+                },
+                {
+                    "authorId": "1711144",
+                    "name": "Samuel Kaski"
+                }
+            ]
+        },
+        {
+            "paperId": "da41f46bb61bc2087503555f71c72595a7cd3f7e",
+            "title": "Interactive Elicitation of Knowledge on Feature Relevance Improves Predictions in Small Data Sets",
+            "abstract": "Providing accurate predictions is challenging for machine learning algorithms when the number of features is larger than the number of samples in the data. Prior knowledge can improve machine learning models by indicating relevant variables and parameter values. Yet, this prior knowledge is often tacit and only available from domain experts. We present a novel approach that uses interactive visualization to elicit the tacit prior knowledge and uses it to improve the accuracy of prediction models. The main component of our approach is a user model that models the domain expert's knowledge of the relevance of different features for a prediction task. In particular, based on the expert's earlier input, the user model guides the selection of the features on which to elicit user's knowledge next. The results of a controlled user study show that the user model significantly improves prior knowledge elicitation and prediction accuracy, when predicting the relative citation counts of scientific documents in a specific domain.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1771451",
+                    "name": "L. Micallef"
+                },
+                {
+                    "authorId": "8185218",
+                    "name": "Iiris Sundin"
+                },
+                {
+                    "authorId": "2848857",
+                    "name": "P. Marttinen"
+                },
+                {
+                    "authorId": "1401402845",
+                    "name": "Muhammad Ammad-ud-din"
+                },
+                {
+                    "authorId": "5116984",
+                    "name": "Tomi Peltola"
+                },
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "8920122",
+                    "name": "Giulio Jacucci"
+                },
+                {
+                    "authorId": "1711144",
+                    "name": "Samuel Kaski"
+                }
+            ]
+        },
+        {
+            "paperId": "596a0f6e141d60f088800056fb3cd282ebc1b3be",
+            "title": "Sequential Resource Allocation in Linear Stochastic Bandits",
+            "abstract": "This thesis is dedicated to the study of resource allocation problems in uncertain environments, where an agent can sequentially select which action to take. After each step, the environment returns a noisy observation of the value of the selected action. These observations guide the agent in adapting his resource allocation strategy towards reaching a given objective. In the most typical setting of this kind, the stochastic multi-armed bandit (MAB), it is assumed that each observation is drawn from an unknown probability distribution associated with the selected action and gives no information on the expected value of the other actions. The MAB setting has been widely studied and optimal allocation strategies were proposed to solve various objectives under the MAB assumptions. Here, we consider a variant of the MAB setting where there exists a global linear structure in the environment and by selecting an action, the agent also gathers information on the value of the other actions. Therefore, the agent needs to adapt his resource allocation strategy to exploit the structure in the environment. In particular, we study the design of sequences of actions that the agent should take to reach objectives such as: (i) identifying the best value with a fixed confidence and using a minimum number of pulls, or (ii) minimizing the prediction error on the value of each action. In addition, we investigate how the knowledge gathered by a bandit algorithm in a given environment can be transferred to improve the performance in other similar environments.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                }
+            ]
+        },
+        {
+            "paperId": "c769c26570ee125bf8e439ede182deeb2a1d690c",
+            "title": "Best-Arm Identification in Linear Bandits",
+            "abstract": "We study the best-arm identification problem in linear bandit, where the rewards of the arms depend linearly on an unknown parameter \u03b8* and the objective is to return the arm with the largest reward. We characterize the complexity of the problem and introduce sample allocation strategies that pull arms to identify the best arm with a fixed confidence, while minimizing the sample budget. In particular, we show the importance of exploiting the global linear structure to improve the estimate of the reward of near-optimal arms. We analyze the proposed strategies and compare their empirical performance. Finally, as a by-product of our analysis, we point out the connection to the G-optimality criterion used in optimal experimental design.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "144004707",
+                    "name": "Marta Soare"
+                },
+                {
+                    "authorId": "3254390",
+                    "name": "A. Lazaric"
+                },
+                {
+                    "authorId": "1708654",
+                    "name": "R. Munos"
+                }
+            ]
+        }
+    ]
+}

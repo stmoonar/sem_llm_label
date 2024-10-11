@@ -1,0 +1,483 @@
+{
+    "authorId": "3035428",
+    "papers": [
+        {
+            "paperId": "92d39ad930f4941f1292d16f25864948be143bbb",
+            "title": "A Constant-Factor Approximation Algorithm for Reconciliation k-Median",
+            "abstract": "In the reconciliation k -median problem we ask to cluster a set of data points by picking k cluster centers so as to minimize the sum of distances of the data points to their cluster centers plus the sum of pairwise distances between the centers. The problem, which is a variant of classic k -median, aims to \ufb01nd a set of cluster centers that are not too far from each other, and it has applications, for example, when selecting a committee to de-liberate on a controversial topic. This problem was introduced recently (Ordozgoiti and Gionis, 2019), and it was shown that a local-search-based algorithm is always within a factor O ( k ) of an optimum solution and performs well in practice. In this paper, we demonstrate a close connection of reconciliation k -median to a variant of the k - facility location problem , in which each potential cluster center has an individual opening cost and we aim at minimizing the sum of client-center distances and the opening costs. This connection enables us to provide a new algorithm for reconciliation k -median that yields a constant-factor approximation (independent of k ). We also provide a sparsi\ufb01cation scheme that reduces the number of potential cluster centers to O ( k ) in order to substantially speed up approximation algorithms. We empirically compare our new algorithms with the previous local-search approach, showing improved performance and stability. In addition, we show how our sparsi\ufb01cation approach helps to reduce computation time without signi\ufb01cantly",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "104876753",
+                    "name": "B. Riegel"
+                },
+                {
+                    "authorId": "35332118",
+                    "name": "Bruno Ordozgoiti"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "b40665f40e80e287b6c9778e4ad2b2681e20570d",
+            "title": "Parameterized Approximation Schemes for Clustering with General Norm Objectives",
+            "abstract": "This paper considers the well-studied algorithmic regime of designing a $(1+\\epsilon)$-approximation algorithm for a k-clustering problem that runs in time $f(k,\\epsilon)poly(n)$ (sometimes called an efficient parameterized approximation scheme or EPAS for short1). Notable results of this kind include EPASes in the high-dimensional Euclidean setting for k-center [Bad\u014fiu, Har-Peled, Indyk; STOC\u201902] as well as k-median, and k-means [Kumar, Sabharwal, Sen; J. ACM 2010]. Our main contribution is a clean and simple EPAS that settles more than ten clustering problems (across multiple well-studied objectives as well as metric spaces) and unifies well-known EPASes. More specifically, our algorithm gives EPASes in the following settings:\u2022Clustering objectives: k-means, k-center, k-median, priority k-center, $\\ell$-centrum, ordered k-median, socially fair k-median (aka robust k-median), or any other objective that can be formulated as minimizing a monotone (not necessarily symmetric!) norm of the distances of the points from the solution (generalizing the symmetric formulation introduced by Chakrabarty and Swamy [STOC\u201919]).\u2022Metric spaces: Continuous high-dimensional Euclidean spaces, metrics of bounded doubling dimension, bounded treewidth metrics, and planar metrics. Prior to our results, EPASes were only known for vanilla clustering objectives (k-means, k-median, and k-center) and each such algorithm is tailored to work for the specific input metric and clustering objective (e.g., EPASes for k means and k-center in $\\mathbb{R}^{d}$ are conceptually very different). In contrast, our algorithmic framework is applicable to a wide range of well-studied objective functions in a uniform way, and is (almost) entirely oblivious to any specific metric structures and yet is able to effectively exploit those unknown structures. In particular, our algorithm is not based on the (metric- and objective-specific) technique of coresets. Key to our analysis is a new concept that we call bounded $\\epsilon$-scatter dimension\u2014an intrinsic complexity measure of a metric space that is a relaxation of the standard notion of bounded doubling dimension(often used as a source of algorithmic tractability for geometric problems). Our main technical result shows that two conditions are essentially sufficient for our algorithm to yield an EPAS on the input metric M for any clustering objective:(i)The objective is described by a monotone norm, and(ii)the $\\epsilon$-scatter dimension of M is upper bounded by a function of $\\epsilon$.1Quick remarks: (i) An EPAS is not comparable to polynomial time approximation schemes (PTAS), (ii) before the term EPAS was invented some researchers call this type of approximation schemes a PTAS or simply an approximation scheme (in clustering, it is often assumed that k is small) [1], [2], and (iii) both EPAS and PTAS are implied by the existence of efficient polynomial time approximation schemes (EPTAS).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2059605410",
+                    "name": "F. Abbasi"
+                },
+                {
+                    "authorId": "2110879013",
+                    "name": "Sandip Banerjee"
+                },
+                {
+                    "authorId": "1800005",
+                    "name": "J. Byrka"
+                },
+                {
+                    "authorId": "3154315",
+                    "name": "Parinya Chalermsook"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "145722890",
+                    "name": "D. Marx"
+                },
+                {
+                    "authorId": "2199730582",
+                    "name": "Roohani Sharma"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "b6474d152f6401c30e34d707613d79a30445cdc0",
+            "title": "Independent set in k-Claw-Free Graphs: Conditional \u03c7-boundedness and the Power of LP/SDP Relaxations",
+            "abstract": "This paper studies $k$-claw-free graphs, exploring the connection between an extremal combinatorics question and the power of a convex program in approximating the maximum-weight independent set in this graph class. For the extremal question, we consider the notion, that we call \\textit{conditional $\\chi$-boundedness} of a graph: Given a graph $G$ that is assumed to contain an independent set of a certain (constant) size, we are interested in upper bounding the chromatic number in terms of the clique number of $G$. This question, besides being interesting on its own, has algorithmic implications (which have been relatively neglected in the literature) on the performance of SDP relaxations in estimating the value of maximum-weight independent set. For $k=3$, Chudnovsky and Seymour (JCTB 2010) prove that any $3$-claw-free graph $G$ with an independent set of size three must satisfy $\\chi(G) \\leq 2 \\omega(G)$. Their result implies a factor $2$-estimation algorithm for the maximum weight independent set via an SDP relaxation (providing the first non-trivial result for maximum-weight independent set in such graphs via a convex relaxation). An obvious open question is whether a similar conditional $\\chi$-boundedness phenomenon holds for any $k$-claw-free graph. Our main result answers this question negatively. We further present some evidence that our construction could be useful in studying more broadly the power of convex relaxations in the context of approximating maximum weight independent set in $k$-claw free graphs. In particular, we prove a lower bound on families of convex programs that are stronger than known convex relaxations used algorithmically in this context.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3154315",
+                    "name": "Parinya Chalermsook"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "ee947976d91486aac367b5d15ca4826541ee6ce9",
+            "title": "Parameterized Approximation for Robust Clustering in Discrete Geometric Spaces",
+            "abstract": "We consider the well-studied Robust $(k, z)$-Clustering problem, which generalizes the classic $k$-Median, $k$-Means, and $k$-Center problems. Given a constant $z\\ge 1$, the input to Robust $(k, z)$-Clustering is a set $P$ of $n$ weighted points in a metric space $(M,\\delta)$ and a positive integer $k$. Further, each point belongs to one (or more) of the $m$ many different groups $S_1,S_2,\\ldots,S_m$. Our goal is to find a set $X$ of $k$ centers such that $\\max_{i \\in [m]} \\sum_{p \\in S_i} w(p) \\delta(p,X)^z$ is minimized. This problem arises in the domains of robust optimization [Anthony, Goyal, Gupta, Nagarajan, Math. Oper. Res. 2010] and in algorithmic fairness. For polynomial time computation, an approximation factor of $O(\\log m/\\log\\log m)$ is known [Makarychev, Vakilian, COLT $2021$], which is tight under a plausible complexity assumption even in the line metrics. For FPT time, there is a $(3^z+\\epsilon)$-approximation algorithm, which is tight under GAP-ETH [Goyal, Jaiswal, Inf. Proc. Letters, 2023]. Motivated by the tight lower bounds for general discrete metrics, we focus on \\emph{geometric} spaces such as the (discrete) high-dimensional Euclidean setting and metrics of low doubling dimension, which play an important role in data analysis applications. First, for a universal constant $\\eta_0>0.0006$, we devise a $3^z(1-\\eta_{0})$-factor FPT approximation algorithm for discrete high-dimensional Euclidean spaces thereby bypassing the lower bound for general metrics. We complement this result by showing that even the special case of $k$-Center in dimension $\\Theta(\\log n)$ is $(\\sqrt{3/2}- o(1))$-hard to approximate for FPT algorithms. Finally, we complete the FPT approximation landscape by designing an FPT $(1+\\epsilon)$-approximation scheme (EPAS) for the metric of sub-logarithmic doubling dimension.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2059605410",
+                    "name": "F. Abbasi"
+                },
+                {
+                    "authorId": "2110879013",
+                    "name": "Sandip Banerjee"
+                },
+                {
+                    "authorId": "1800005",
+                    "name": "J. Byrka"
+                },
+                {
+                    "authorId": "3154315",
+                    "name": "Parinya Chalermsook"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "145722890",
+                    "name": "D. Marx"
+                },
+                {
+                    "authorId": "2199730582",
+                    "name": "Roohani Sharma"
+                },
+                {
+                    "authorId": "2089098",
+                    "name": "J. Spoerhase"
+                }
+            ]
+        },
+        {
+            "paperId": "0c8fdd2bd3ad5e6eedc793dd662b086009b3ae0b",
+            "title": "Approximation Algorithms for Demand Strip Packing",
+            "abstract": "In the Demand Strip Packing problem (DSP), we are given a time interval and a collection of tasks, each characterized by a processing time and a demand for a given resource (such as electricity, computational power, etc.). A feasible solution consists of a schedule of the tasks within the mentioned time interval. Our goal is to minimize the peak resource consumption, i.e. the maximum total demand of tasks executed at any point in time. It is known that DSP is NP-hard to approximate below a factor 3/2, and standard techniques for related problems imply a (polynomial-time) 2-approximation. Our main result is a (5/3+eps)-approximation algorithm for any constant eps>0. We also achieve best-possible approximation factors for some relevant special cases.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2093916484",
+                    "name": "Waldo G'alvez"
+                },
+                {
+                    "authorId": "145717044",
+                    "name": "F. Grandoni"
+                },
+                {
+                    "authorId": "101185174",
+                    "name": "Afrouz Jabal Ameli"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                }
+            ]
+        },
+        {
+            "paperId": "b4f31d8ff707a4f798d4a1172e778c6f89a23e6e",
+            "title": "Exact Algorithms and Lower Bounds for Stable Instances of Euclidean k-Means",
+            "abstract": "We investigate the complexity of solving stable or perturbation-resilient instances of k-Means and k-Median clustering in fixed dimension Euclidean metrics (or more generally doubling metrics). The notion of stable or perturbation resilient instances was introduced by Bilu and Linial [2010] and Awasthi et al. [2012]. In our context we say a k-Means instance is \\alpha-stable if there is a unique OPT solution which remains unchanged if distances are (non-uniformly) stretched by a factor of at most \\alpha. Stable clustering instances have been studied to explain why heuristics such as Lloyd's algorithm perform well in practice. In this work we show that for any fixed \\epsilon>0, (1+\\epsilon)-stable instances of k-Means in doubling metrics can be solved in polynomial time. More precisely we show a natural multiswap local search algorithm in fact finds the OPT solution for (1+\\epsilon)-stable instances of k-Means and k-Median in a polynomial number of iterations. We complement this result by showing that under a plausible PCP hypothesis this is essentially tight: that when the dimension d is part of the input, there is a fixed \\epsilon_0>0 s.t. there is not even a PTAS for (1+\\epsilon_0)-stable k-Means in R^d unless NP=RP. To do this, we consider a robust property of CSPs; call an instance stable if there is a unique optimum solution x^* and for any other solution x', the number of unsatisfied clauses is proportional to the Hamming distance between x^* and x'. Dinur et al. have already shown stable QSAT is hard to approximate for some constant Q, our hypothesis is simply that stable QSAT with bounded variable occurrence is also hard. Given this hypothesis, we consider \"stability-preserving\" reductions to prove our hardness for stable k-Means. Such reductions seem to be more fragile than standard L-reductions and may be of further use to demonstrate other stable optimization problems are hard.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2548771",
+                    "name": "Zachary Friggstad"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "1702997",
+                    "name": "M. Salavatipour"
+                }
+            ]
+        },
+        {
+            "paperId": "b68f65dce888dc17f400549e3b35cfe810af813d",
+            "title": "Proceedings of the 30th Canadian Conference on Computational Geometry, CCCG 2018, August 8-10, 2018, University of Manitoba, Winnipeg, Manitoba, Canada",
+            "abstract": "Ply number is a recently developed graph drawing metric inspired by studying road networks. Informally, for each vertex v, which is associated with a point in the plane, a disk is drawn centered on v with a radius that is \u03b1 times the length of the longest edge incident to v, for some constant \u03b1 \u2208 (0, 0.5]. The ply number is the maximum number of disks that overlap at a single point. We show that any tree with maximum degree \u2206 has a 1-ply drawing when \u03b1 = O(1/\u2206). We also show that trees can be drawn with logarithmic ply number (for \u03b1 = 0.5), with an area that is polynomial for boundeddegree trees. Lastly, we show that this logarithmic upper bound does not apply to 2-trees, by giving a lower bound of \u03a9( \u221a n/ log n) ply.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2079686643",
+                    "name": "August"
+                },
+                {
+                    "authorId": "34399700",
+                    "name": "Shahin Kamali"
+                },
+                {
+                    "authorId": "1742196",
+                    "name": "Stephane Durocher"
+                },
+                {
+                    "authorId": "31650437",
+                    "name": "M. J. Katz"
+                },
+                {
+                    "authorId": "1796774",
+                    "name": "M. V. Kreveld"
+                },
+                {
+                    "authorId": "1711445",
+                    "name": "C. Wenk"
+                },
+                {
+                    "authorId": "145186737",
+                    "name": "David Bremner"
+                },
+                {
+                    "authorId": "1785625",
+                    "name": "T. Mchedlidze"
+                },
+                {
+                    "authorId": "3268682",
+                    "name": "Mohammad Ali Abam"
+                },
+                {
+                    "authorId": "1661064623",
+                    "name": "Ahmed Abdelkader"
+                },
+                {
+                    "authorId": "2191274",
+                    "name": "A. Ahadi"
+                },
+                {
+                    "authorId": "1389851080",
+                    "name": "Carlos Alegr\u00eda-Galicia"
+                },
+                {
+                    "authorId": "38081385",
+                    "name": "Aritra Banik"
+                },
+                {
+                    "authorId": "2066569551",
+                    "name": "J. Bowers"
+                },
+                {
+                    "authorId": "2053628235",
+                    "name": "Guido Brueckner"
+                },
+                {
+                    "authorId": "48141880",
+                    "name": "L. Caraballo"
+                },
+                {
+                    "authorId": "3361302",
+                    "name": "F. Chanchary"
+                },
+                {
+                    "authorId": "145541533",
+                    "name": "M. Davoodi"
+                },
+                {
+                    "authorId": "34111330",
+                    "name": "F. Duque"
+                },
+                {
+                    "authorId": "144139694",
+                    "name": "M. Farshi"
+                },
+                {
+                    "authorId": "40146794",
+                    "name": "K. Fox"
+                },
+                {
+                    "authorId": "32119748",
+                    "name": "Kirk P. Gardner"
+                },
+                {
+                    "authorId": "2640058",
+                    "name": "Noah Giansiracusa"
+                },
+                {
+                    "authorId": "2080241894",
+                    "name": "Barbara Guti\u00e9rrez"
+                },
+                {
+                    "authorId": "2258723298",
+                    "name": "Aldo Guzm\u00e1n-S\u00e1enz"
+                },
+                {
+                    "authorId": "1404979149",
+                    "name": "C. Hidalgo-Toscano"
+                },
+                {
+                    "authorId": "11952565",
+                    "name": "I. Hoog"
+                },
+                {
+                    "authorId": "1871173",
+                    "name": "Mahmoodreza Jahanseir"
+                },
+                {
+                    "authorId": "2052437967",
+                    "name": "Mohammad Reza Kazemi"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "51507327",
+                    "name": "B. Kilgus"
+                },
+                {
+                    "authorId": "1787251",
+                    "name": "Chih-Hung Liu"
+                },
+                {
+                    "authorId": "2452609",
+                    "name": "Benjamin Niedermann"
+                },
+                {
+                    "authorId": "2880304",
+                    "name": "Tim Ophelders"
+                },
+                {
+                    "authorId": "47657325",
+                    "name": "Jeff Phillips"
+                },
+                {
+                    "authorId": "2021757",
+                    "name": "Marcel Roeloffzen"
+                },
+                {
+                    "authorId": "80949406",
+                    "name": "\u00c9rika Rold\u00e1n"
+                },
+                {
+                    "authorId": "9535455",
+                    "name": "Rasoul Shahsavarifar"
+                },
+                {
+                    "authorId": "1562997955",
+                    "name": "Naghmeh Shahverdi Zade Shargh"
+                },
+                {
+                    "authorId": "1948384",
+                    "name": "Willem Sonke"
+                },
+                {
+                    "authorId": "2040759",
+                    "name": "F. Staals"
+                },
+                {
+                    "authorId": "144960933",
+                    "name": "Katharine Turner"
+                },
+                {
+                    "authorId": "2687468",
+                    "name": "J\u00e9r\u00f4me Urhausen"
+                },
+                {
+                    "authorId": "51425112",
+                    "name": "M. V. D. Kerkhof"
+                },
+                {
+                    "authorId": "1796774",
+                    "name": "M. V. Kreveld"
+                },
+                {
+                    "authorId": "1711983",
+                    "name": "E. J. V. Leeuwen"
+                },
+                {
+                    "authorId": "143759769",
+                    "name": "J. Vermeulen"
+                }
+            ]
+        },
+        {
+            "paperId": "06e26e8d7999af9aca0b342c4e8e553b4979cdbb",
+            "title": "Approximation Schemes for Clustering with Outliers",
+            "abstract": "Clustering problems are well studied in a variety of fields, such as data science, operations research, and computer science. Such problems include variants of center location problems, k-median and k-means to name a few. In some cases, not all data points need to be clustered; some may be discarded for various reasons. For instance, some points may arise from noise in a dataset or one might be willing to discard a certain fraction of the points to avoid incurring unnecessary overhead in the cost of a clustering solution. We study clustering problems with outliers. More specifically, we look at uncapacitated facility location (UFL), k-median, and k-means. In these problems, we are given a set X of data points in a metric space \u03b4(., .), a set C of possible centers (each maybe with an opening cost), maybe an integer parameter k, plus an additional parameter z as the number of outliers. In uncapacitated facility location with outliers, we have to open some centers, discard up to z points of X, and assign every other point to the nearest open center, minimizing the total assignment cost plus center opening costs. In k-median and k-means, we have to open up to k centers, but there are no opening costs. In k-means, the cost of assigning j to i is \u03b42(j, i). We present several results. Our main focus is on cases where \u03b4 is a doubling metric (this includes fixed dimensional Euclidean metrics as a special case) or is the shortest path metrics of graphs from a minor-closed family of graphs. For uniform-cost UFL with outliers on such metrics, we show that a multiswap simple local search heuristic yields a PTAS. With a bit more work, we extend this to bicriteria approximations for the k-median and k-means problems in the same metrics where, for any constant \u03b5 > 0, we can find a solution using (1 + \u03b5)k centers whose cost is at most a (1 + \u03b5)-factor of the optimum and uses at most z outliers. Our algorithms are all based on natural multiswap local search heuristics. We also show that natural local search heuristics that do not violate the number of clusters and outliers for k-median (or k-means) will have unbounded gap even in Euclidean metrics. Furthermore, we show how our analysis can be extended to general metrics for k-means with outliers to obtain a (25 + \u03b5, 1 + \u03b5)-approximation: an algorithm that uses at most (1 + \u03b5)k clusters and whose cost is at most 25 + \u03b5 of optimum and uses no more than z outliers.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2548771",
+                    "name": "Zachary Friggstad"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "35214799",
+                    "name": "M. Rezapour"
+                },
+                {
+                    "authorId": "1702997",
+                    "name": "M. Salavatipour"
+                }
+            ]
+        },
+        {
+            "paperId": "107386ec05da9249b212d0dc15871b40224b539a",
+            "title": "Scheduling Problems over Network of Machines",
+            "abstract": "We consider scheduling problems in which jobs need to be processed through a (shared) network of machines. The network is given in the form of a graph the edges of which represent the machines. We are also given a set of jobs, each specified by its processing time and a path in the graph. Every job needs to be processed in the order of edges specified by its path. We assume that jobs can wait between machines and preemption is not allowed; that is, once a job is started being processed on a machine, it must be completed without interruption. Every machine can only process one job at a time. \n \nThe makespan of a schedule is the earliest time by which all the jobs have finished processing. The flow time (a.k.a. the completion time) of a job in a schedule is the difference in time between when it finishes processing on its last machine and when the it begins processing on its first machine. The total flow time (or the sum of completion times) is the sum of flow times (or completion times) of all jobs. Our focus is on finding schedules with the minimum sum of completion times or minimum makespan. \n \nIn this paper, we develop several algorithms (both approximate and exact) for the problem both on general graphs and when the underlying graph of machines is a tree. Even in the very special case when the underlying network is a simple star, the problem is very interesting as it models a biprocessor scheduling with applications to data migration.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2548771",
+                    "name": "Zachary Friggstad"
+                },
+                {
+                    "authorId": "3437741",
+                    "name": "Arnoosh Golestanian"
+                },
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                },
+                {
+                    "authorId": "2115338176",
+                    "name": "Christopher S. Martin"
+                },
+                {
+                    "authorId": "46630667",
+                    "name": "Mirmahdi Rahgoshay"
+                },
+                {
+                    "authorId": "35214799",
+                    "name": "M. Rezapour"
+                },
+                {
+                    "authorId": "1702997",
+                    "name": "M. Salavatipour"
+                },
+                {
+                    "authorId": "2108464775",
+                    "name": "Yifeng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "4d6b79e91f4a4de9c7bb8639f6270bee626e92c1",
+            "title": "Algorithms for Scheduling and Routing Problems",
+            "abstract": "Optimization has been a central topic in most scientific disciplines for centuries. Continuous optimization has long benefited from well-established techniques of calculus. Discrete optimization, on the other hand, has risen to prominence quite recently. Advances in combinatorial optimization and integer programming in the past few decades, together with the improvement of computer hardware have enabled computer scientists to approach the problems in this area both theoretically and computationally. However, obtaining the exact solution for many discrete optimization problems remains is still a challenging task, mainly because most of these problems are NP-hard. Under the widespread assumption that P 6= NP, these problems are intractable from a computational complexity standpoint. Therefore, we should settle for near-optimal solutions. In this thesis, we develop techniques to obtain solutions that are provably close to the optimal for different indivisible resource allocation problems. Indivisible resource allocation encompasses a large class of problems in discrete optimization which can appear in disguise in various theoretical or applied settings. Specifically, we consider two indivisible resource allocation problems. The first one is a variant of the vehicle routing problem known as Skill Vehicle Routing problem, in which the aim is to obtain optimal tours for a fleet of vehicles that provides service to a set of customers. Each of the vehicles possesses a particular set of skills suitable for a subset of the tasks. Each customer, based on the type of service he requires, can only be served by a subset of vehicles. We study this problem computationally and find either the optimal solution or a relatively tight bound on the optimal solution on fairly large problem instances. The second problem involves approximation algorithms for two versions of the classic scheduling problem, the restricted R | |Cmax and the restricted Santa Claus problem. The objective is to design a polynomial time approximation scheme (PTAS) for ordered instances of the two problems. Finally, we consider the class of precedence hierarchies in which the neighborhoods of the processors form Laminar families. We show similar results for a generalization of this model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3035428",
+                    "name": "K. Khodamoradi"
+                }
+            ]
+        }
+    ]
+}

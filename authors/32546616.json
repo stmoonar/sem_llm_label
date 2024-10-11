@@ -1,0 +1,341 @@
+{
+    "authorId": "32546616",
+    "papers": [
+        {
+            "paperId": "4f662c42b2bd52422b70d8f44175f33cec4f8969",
+            "title": "High-Throughput Vector Similarity Search in Knowledge Graphs",
+            "abstract": "There is an increasing adoption of machine learning for encoding data into vectors to serve online recommendation and search use cases. As a result, recent data management systems propose augmenting query processing with online vector similarity search. In this work, we explore vector similarity search in the context of Knowledge Graphs (KGs). Motivated by the tasks of finding related KG queries and entities for past KG query workloads, we focus on hybrid vector similarity search (hybrid queries for short) where part of the query corresponds to vector similarity search and part of the query corresponds to predicates over relational attributes associated with the underlying data vectors. For example, given past KG queries for a song entity, we want to construct new queries for new song entities whose vector representations are close to the vector representation of the entity in the past KG query. But entities in a KG also have non-vector attributes such as a song associated with an artist, a genre, and a release date. Therefore, suggested entities must also satisfy query predicates over non-vector attributes beyond a vector-based similarity predicate. While these tasks are central to KGs, our contributions are generally applicable to hybrid queries. In contrast to prior works that optimize online queries, we focus on enabling efficient batch processing of past hybrid query workloads. We present our system, HQI, for high-throughput batch processing of hybrid queries. We introduce a workload-aware vector data partitioning scheme to tailor the vector index layout to the given workload and describe a multi-query optimization technique to reduce the overhead of vector similarity computations. We evaluate our methods on industrial workloads and demonstrate that HQI yields a 31\u00d7 improvement in throughput for finding related KG queries compared to existing hybrid query processing approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047146404",
+                    "name": "J. Mohoney"
+                },
+                {
+                    "authorId": "4047075",
+                    "name": "Anil Pacaci"
+                },
+                {
+                    "authorId": "2087061163",
+                    "name": "S. R. Chowdhury"
+                },
+                {
+                    "authorId": "143661472",
+                    "name": "A. Mousavi"
+                },
+                {
+                    "authorId": "1743316",
+                    "name": "Ihab F. Ilyas"
+                },
+                {
+                    "authorId": "1856878",
+                    "name": "U. F. Minhas"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                }
+            ]
+        },
+        {
+            "paperId": "b6f229681cf0a3ba38884d281d89b2d498a853a8",
+            "title": "Growing and Serving Large Open-domain Knowledge Graphs",
+            "abstract": "Applications of large open-domain knowledge graphs (KGs) to real-world problems pose many unique challenges. In this paper, we present extensions to Saga our platform for continuous construction and serving of knowledge at scale. In particular, we describe a pipeline for training knowledge graph embeddings that powers key capabilities such as fact ranking, fact verification, a related entities service, and support for entity linking. We then describe how our platform, including graph embeddings, can be leveraged to create a Semantic Annotation service that links unstructured Web documents to entities in our KG. Semantic annotation of the Web effectively expands our knowledge graph with edges to open-domain Web content which can be used in various search and ranking problems. Finally, we leverage annotated Web documents to drive Open-domain Knowledge Extraction. This targeted extraction framework identifies important coverage issues in the KG, then finds relevant data sources for target entities on the Web and extracts missing information to enrich the KG. Finally, we describe adaptations to our knowledge platform needed to construct and serve private personal knowledge on-device. This includes private incremental KG construction, cross- device knowledge sync, and global knowledge enrichment.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1743316",
+                    "name": "Ihab F. Ilyas"
+                },
+                {
+                    "authorId": "2217340760",
+                    "name": "JP Lacerda"
+                },
+                {
+                    "authorId": "1718694",
+                    "name": "Yunyao Li"
+                },
+                {
+                    "authorId": "1856878",
+                    "name": "U. F. Minhas"
+                },
+                {
+                    "authorId": "143661472",
+                    "name": "A. Mousavi"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                },
+                {
+                    "authorId": "3308088",
+                    "name": "C. Sumanth"
+                }
+            ]
+        },
+        {
+            "paperId": "0ab2ecf1748b62c9c00861e21248fb6d483a542a",
+            "title": "Saga: A Platform for Continuous Construction and Serving of Knowledge at Scale",
+            "abstract": "We introduce Saga, a next-generation knowledge construction and serving platform for powering knowledge-based applications at industrial scale. Saga follows a hybrid batch-incremental design to continuously integrate billions of facts about real-world entities and construct a central knowledge graph that supports multiple production use cases with diverse requirements around data freshness, accuracy, and availability. In this paper, we discuss the unique challenges associated with knowledge graph construction at industrial scale, and review the main components of Saga and how they address these challenges. Finally, we share lessons-learned from a wide array of production use cases powered by Saga.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1743316",
+                    "name": "Ihab F. Ilyas"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                },
+                {
+                    "authorId": "40064471",
+                    "name": "V. Konda"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "2162773856",
+                    "name": "Xiaoguang Qi"
+                },
+                {
+                    "authorId": "144018773",
+                    "name": "Mohamed A. Soliman"
+                }
+            ]
+        },
+        {
+            "paperId": "05af44671ab02b499c96808ff5b4c08f2f9f4453",
+            "title": "A Cloud-native Architecture for Replicated Data Services",
+            "abstract": "Many services replicate data for fault-tolerant storage of the data and high-availability of the service. When deployed in the cloud, the replication performed by these services provides the desired high-availability but does not provide signi\ufb01cant additional fault-tolerance for the data. This is because cloud deployments use fault-tolerant storage services instead of the simple local disks that many replicated data services were designed to use. Because the cloud storage services already provide fault-tolerance for the data, the extra replicas create unnecessary cost in running the service. However, replication is still needed for high-availability of the service itself. In this paper, we explore types of replicated data services and how they can be mapped onto various classes of cloud storage. We then propose a general architectural pattern that can be used to: (1) limit additional storage resulting in monetary cost saving, (2) while keeping the same performance for the service, and (3) maintaining the same high-availability of the services and the durability guarantees for the data. We prototype our approach in two popular open-source replicated data services, Kafka and Cassandra, and show that with relatively little modi\ufb01cation these systems can be deployed for a fraction of the storage cost without affecting the availability guarantees, durability guarantees, or performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2065137704",
+                    "name": "Hemant Saxena"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                }
+            ]
+        },
+        {
+            "paperId": "d4b84d173c8871290281ebcdc7cbf2bf24963ebc",
+            "title": "Efficient and consistent replication for distributed logs",
+            "abstract": "Distributed shared logs are a powerful building block for distributed systems. By providing fault-tolerant persistence and strong ordering guarantees, applications can use a distributed shared log to reliably communicate a stream of events between processes. This can be used, for example, to replicate application state or to build a reliable publish/subscribe system. The log itself must also replicate data in order to provide availability and fault-tolerance. Key to the design of a distributed shared log is the choice of replication algorithm, which will determine many properties of the system. We propose an algorithm for consistent replication of log data, quorum-replication with meta-data exchange (QMX), that is linearizable while allowing writes to be successful with only a single round-trip to a quorum of replicas and allowing reads to generally be serviced by any single replica, or read-one/write-quorum. This is achieved by coupling the reads with an asynchronous message exchange algorithm that continuously runs amongst the replicas. The message exchange algorithm allows replicas to infer the global state of writes across the cluster, in order to deduce which writes have been successfully quorum replicated and which have not. This metadata allows any single replica to directly answer reads in many cases, though in the worst case a read must wait for the message passing round to complete before being serviced which requires a majority quorum of servers to be responsive.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144924520",
+                    "name": "Hua Fan"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "2921307",
+                    "name": "P. Bumbulis"
+                },
+                {
+                    "authorId": "2812826",
+                    "name": "Nathan Auch"
+                },
+                {
+                    "authorId": "2076065883",
+                    "name": "Scott MacLean"
+                },
+                {
+                    "authorId": "2054830700",
+                    "name": "Eric Garber"
+                },
+                {
+                    "authorId": "2053886348",
+                    "name": "Anil K. Goel"
+                }
+            ]
+        },
+        {
+            "paperId": "cf855ba4a09c2181d0166705717b5788454fcfa5",
+            "title": "Towards Scalable Real-time Analytics: An Architecture for Scale-out of OLxP Workloads",
+            "abstract": "We present an overview of our work on the SAP HANA Scale-out Extension, a novel distributed database architecture designed to support large scale analytics over real-time data. This platform permits high performance OLAP with massive scale-out capabilities, while concurrently allowing OLTP workloads. This dual capability enables analytics over real-time changing data and allows fine grained user-specified service level agreements (SLAs) on data freshness. We advocate the decoupling of core database components such as query processing, concurrency control, and persistence, a design choice made possible by advances in high-throughput low-latency networks and storage devices. We provide full ACID guarantees and build on a logical timestamp mechanism to provide MVCC-based snapshot isolation, while not requiring synchronous updates of replicas. Instead, we use asynchronous update propagation guaranteeing consistency with timestamp validation. \n \nWe provide a view into the design and development of a large scale data management platform for real-time analytics, driven by the needs of modern enterprise customers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2053886348",
+                    "name": "Anil K. Goel"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "2812826",
+                    "name": "Nathan Auch"
+                },
+                {
+                    "authorId": "2921307",
+                    "name": "P. Bumbulis"
+                },
+                {
+                    "authorId": "2076065883",
+                    "name": "Scott MacLean"
+                },
+                {
+                    "authorId": "1708337",
+                    "name": "Franz F\u00e4rber"
+                },
+                {
+                    "authorId": "2388284",
+                    "name": "Francis Gropengie\u00dfer"
+                },
+                {
+                    "authorId": "30004169",
+                    "name": "Christian Mathis"
+                },
+                {
+                    "authorId": "50386129",
+                    "name": "Thomas Bodner"
+                },
+                {
+                    "authorId": "7337091",
+                    "name": "Wolfgang Lehner"
+                }
+            ]
+        },
+        {
+            "paperId": "78bdbc979d9e28a434f015391069b59a80dab520",
+            "title": "Interpreting and Answering Keyword Queries using Web Knowledge Bases",
+            "abstract": "Many keyword queries issued to Web search engines target information about real world entities, and interpreting these queries over Web knowledge bases can allow a search system to provide exact answers to keyword queries. Such an ability provides a useful service to end users, as their information need can be directly addressed and they need not scour textual results for the desired information. However, not all keyword queries can be addressed by even the most comprehensive knowledge base, and therefore equally important is the problem of recognizing when a reference knowledge base is not capable of modelling the keyword query\u2019s intention. This may be due to lack of coverage of the knowledge base or lack of expressiveness in the underlying query representation formalism. This thesis presents an approach to computing structured representations of keyword queries over a reference knowledge base. Keyword queries are annotated with occurrences of semantic constructs by learning a sequential labelling model from an annotated Web query log. Frequent query structures are then mined from the query log and are used along with the annotations to map keyword queries into a structured representation over the vocabulary of a reference knowledge base. The proposed approach exploits coarse linguistic structure in keyword queries, and combines it with rich structured query representations of information needs. As an intermediate representation formalism, a novel query language is proposed that blends keyword search with structured query processing over large Web knowledge bases. The formalism for structured keyword queries combines the flexibility of keyword search with the expressiveness of structures queries. A solution to the resulting disambiguation problem caused by introducing keywords as primitives in a structured query language is presented. Expressions in our proposed language are rewritten using the vocabulary of the knowledge base, and different possible rewritings are ranked based on their syntactic relationship to the keywords in the query as well as their semantic coherence in the underlying knowledge base. The problem of ranking knowledge base entities returned as a query result is also explored from the perspective of personalized result ranking. User interest models based on entity types are learned from a Web search session by cross referencing clicks on URLs with known entity homepages. The user interest model is then used to effectively rerank answer lists for a given user. A methodology for evaluating entity-based search engines is also proposed and empirically evaluated.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                }
+            ]
+        },
+        {
+            "paperId": "2c6fb1a7da3853b83bd851e1c061bda249694d67",
+            "title": "Interpreting keyword queries over web knowledge bases",
+            "abstract": "Many keyword queries issued to Web search engines target information about real world entities, and interpreting these queries over Web knowledge bases can often enable the search system to provide exact answers to queries. Equally important is the problem of detecting when the reference knowledge base is not capable of answering the keyword query, due to lack of domain coverage. In this work we present an approach to computing structured representations of keyword queries over a reference knowledge base. We mine frequent query structures from a Web query log and map these structures into a reference knowledge base. Our approach exploits coarse linguistic structure in keyword queries, and combines it with rich structured query representations of information needs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "2047969",
+                    "name": "Alexander K. Hudek"
+                },
+                {
+                    "authorId": "1743316",
+                    "name": "Ihab F. Ilyas"
+                },
+                {
+                    "authorId": "40584789",
+                    "name": "G. Weddell"
+                }
+            ]
+        },
+        {
+            "paperId": "142f21fec89ca30221c74ffa6624d8dbecaf5a0d",
+            "title": "Entity Search Evaluation over Structured Web Data",
+            "abstract": "The search for entities is the most common search type on the web beside navigational searches. Whereas most common search techniques are based on the textual descriptions of web pages, semantic search approaches exploit the increasing amount of structured data on the Web in the form of annotations to web-pages and Linked Data. In many technologies, this structured data can consist of factual assertions about entities in which URIs are used to identify entities and their properties. The hypothesis is that this kind of structured data can improve entity search on the web. In order to test this hypothesis and to consistently progress in this eld, a standardized evaluation is necessary. In this work, we discuss an evaluation campaign that specically targets entity search over Linked Data by the means of keyword queries, including both queries that directly mention the entity as well as those that only describe the entities. We also discuss how crowd-sourcing was used to obtain relevance assessments from non-expert web users, the participating systems and the factors that contributed to positive results, and how the competition generalizes results from a previous crowd-sourced entity search evaluation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144367841",
+                    "name": "Roi Blanco"
+                },
+                {
+                    "authorId": "1723984",
+                    "name": "H. Halpin"
+                },
+                {
+                    "authorId": "40469496",
+                    "name": "Daniel M. Herzig"
+                },
+                {
+                    "authorId": "143814916",
+                    "name": "P. Mika"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "143921567",
+                    "name": "H. Thompson"
+                }
+            ]
+        },
+        {
+            "paperId": "204e1420dee0db2f94c00ca3739900a817a4ab63",
+            "title": "Repeatable and reliable search system evaluation using crowdsourcing",
+            "abstract": "The primary problem confronting any new kind of search task is how to boot-strap a reliable and repeatable evaluation campaign, and a crowd-sourcing approach provides many advantages. However, can these crowd-sourced evaluations be repeated over long periods of time in a reliable manner? To demonstrate, we investigate creating an evaluation campaign for the semantic search task of keyword-based ad-hoc object retrieval. In contrast to traditional search over web-pages, object search aims at the retrieval of information from factual assertions about real-world objects rather than searching over web-pages with textual descriptions. Using the first large-scale evaluation campaign that specifically targets the task of ad-hoc Web object retrieval over a number of deployed systems, we demonstrate that crowd-sourced evaluation campaigns can be repeated over time and still maintain reliable results. Furthermore, we show how these results are comparable to expert judges when ranking systems and that the results hold over different evaluation and relevance metrics. This work provides empirical support for scalable, reliable, and repeatable search system evaluation using crowdsourcing.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144367841",
+                    "name": "Roi Blanco"
+                },
+                {
+                    "authorId": "1723984",
+                    "name": "H. Halpin"
+                },
+                {
+                    "authorId": "40469496",
+                    "name": "Daniel M. Herzig"
+                },
+                {
+                    "authorId": "143814916",
+                    "name": "P. Mika"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "143921567",
+                    "name": "H. Thompson"
+                },
+                {
+                    "authorId": "2113248601",
+                    "name": "Thanh Tran"
+                }
+            ]
+        }
+    ]
+}

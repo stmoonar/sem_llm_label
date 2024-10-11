@@ -1,0 +1,345 @@
+{
+    "authorId": "144523744",
+    "papers": [
+        {
+            "paperId": "5e128edb37d34a3b2386a7f0bff94a3223bb7dd9",
+            "title": "Fast Retrieval of Large Entries With Incomplete Measurement Data",
+            "abstract": "In network-wide monitoring, finding the large monitoring data entries is a fundamental network management function. However, the retrieval of large entries is extremely difficult and challenging as a result of incompleteness of network measurement data. Enlightened by tensor model\u2019s strong capability of information representation and extraction, we model the network-wide monitoring data as a 3-way tensor. With tensor completion, the retrieval can be performed after recovering all missing entries. However, this not only incurs an extremely high cost when the tensor is large, but is also unnecessary. Instead, to quickly retrieve large entries at low cost, we transform the large entry retrieving problem to a cosine similarity searching problem, and propose two algorithms: 1) Quickly reordering the factor vectors based on Locality Sensitive Hashing (LSH) hash table so that vectors with small cosine distances are placed in the same hash bucket; 2) Quickly finding the similar vector of a queried one that the two together determine a large entry without incurring the high cost of recovering all entries through the dot products. In the process of LSH table building and similarity query, several novel techniques are proposed, including LSH table representation with the LSH forest, good hash table building to support the flexible search of cosine similarity, and bit-shifting-based quick similarity query. Our experimental studies on 4 real world datasets indicate that our technique is at least up to 60 times faster than the approach based on direct tensor completion.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49478657",
+                    "name": "Kun Xie"
+                },
+                {
+                    "authorId": "2136089655",
+                    "name": "Jiazheng Tian"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1744392",
+                    "name": "Gaogang Xie"
+                },
+                {
+                    "authorId": "144115026",
+                    "name": "Jiannong Cao"
+                },
+                {
+                    "authorId": "145730363",
+                    "name": "Hongbo Jiang"
+                },
+                {
+                    "authorId": "2527344",
+                    "name": "Jigang Wen"
+                }
+            ]
+        },
+        {
+            "paperId": "0ea7c14dc1673d93709ef7b87063a00fe7881c38",
+            "title": "Robust Online Prediction of Spectrum Map With Incomplete and Corrupted Observations",
+            "abstract": "Spectrum map is an essential tool for a range of emerging applications of 5G and 6G networks. Despite the great efforts that have been put on the construction of spectrum maps, access to accurate and valid spectrum data in dynamically changing environments emphasizes the need for more advanced solutions tailored to such rapidly varying scenarios. To this end, the idea of spectrum map prediction is introduced. In this paper, we address the problem of spectrum map prediction from historical spectrum observations in the dynamically changing environments. The problem is particularly challenging when the available historical spectrum observations are incomplete and corrupted by anomalies. We propose three techniques to solve the problem. First, we combine the spectrum map with prediction functionalities so as to offer a huge potential for efficient resource management and flexible sharing of resources in dynamically changing environments. Second, by fully exploiting the hidden spatial-temporal-spectral structures of the spectrum data and the sparsity of anomalies and missing data, we model the spectrum map as a 3rd-order spectrum tensor and formulate the spectrum map prediction problem as a low-rank tensor completion problem. Third, we design a robust online spectrum map prediction (ROSMP) algorithm based on the alternating direction minimization method, which derives the tensor decomposition factors for a new timeslot based on the update of existing ones rather than re-computing from the scratch. By gradually learning the hidden spatial-temporal-spectral structures of the spectrum data, ROSMP is able to predict and obtain the complete spectrum map with high accuracy. Finally, extensive numerical evaluations using a real spectrum measurement dataset confirm the efficacy and efficiency of ROSMP and show the superiority of ROSMP over the baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116226893",
+                    "name": "Xi Li"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "67078310",
+                    "name": "Tiecheng Song"
+                },
+                {
+                    "authorId": "144817656",
+                    "name": "Jing Hu"
+                }
+            ]
+        },
+        {
+            "paperId": "0f1d5dd1246c02226017d861305fbd6015a99e7c",
+            "title": "Expectile Tensor Completion to Recover Skewed Network Monitoring Data",
+            "abstract": "Network applications, such as network state tracking and forecasting, anomaly detection, and failure recovery, require complete network monitoring data. However, the monitoring data are often incomplete due to the use of partial measurements and the unavoidable loss of data during transmissions. Tensor completion has attracted some recent attentions with its capability of exploiting the multi-dimensional data structure for more accurate un-measurement/missing data inference. Although conventional tensor completion algorithms can work well when the application data follow the symmetric normal distribution, it cannot well handle network monitoring data which are highly skewed with heavy tails. To better follow the data distribution for more accurate recovery of the missing entries with large values, we propose a novel expectile tensor completion (ETC) formulation and a simple yet efficient tensor completion algorithm without hard-setting parameters for easy implementation. From both experimental and theoretical ways, we prove the convergence of the proposed algorithm. Extensive experiments on two real-world network monitoring datasets demonstrate the effectiveness of the proposed ETC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49478657",
+                    "name": "Kun Xie"
+                },
+                {
+                    "authorId": "2128964984",
+                    "name": "Siqi Li"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1744392",
+                    "name": "Gaogang Xie"
+                },
+                {
+                    "authorId": "1418356219",
+                    "name": "Yudian Ouyang"
+                }
+            ]
+        },
+        {
+            "paperId": "49cd8f1eff8a3289987dc684aee9408553f09a2f",
+            "title": "Multivariate Time Series Forecasting exploiting Tensor Projection Embedding and Gated Memory Network",
+            "abstract": "Time series forecasting is very important and plays critical roles in many applications. However, making accurate forecasting is a challenge task due to the requirements of learning complex temporal and spatial patterns and combating noise during the feature learning. To address the challenge issues, we propose TEGMNet, a Tensor projection Embedding and Gated Memory Network for multivariate time series forecasting. To more accurately extract local features and reduce the influence of noise, we propose to amplify the data using several data transformation techniques based on MDT (Multi-way delay embedding transform) and TFNN (tensor factorized neural network) to transform the original 2D matrix data to low dimensional 3D tensor data. The local features are then extracted through convolution and LSTM upon the 3D tensor. We also design a long-term feature extraction module based on the structure of gated memory network, which can largely enhance the longterm pattern feature learning ability when the multivariate time series has complex long-term dependencies with dynamic-period patterns. We have done extensive experiments by comparing our TEGMNet with 7 baseline algorithms using 4 real data sets. The experiment results demonstrate that TEGMNet can achieve very good prediction performance even through the data are polluted with noise.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1915985945",
+                    "name": "Zhenxiong Yan"
+                },
+                {
+                    "authorId": "49478657",
+                    "name": "Kun Xie"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "40452934",
+                    "name": "Dafang Zhang"
+                },
+                {
+                    "authorId": "1744392",
+                    "name": "Gaogang Xie"
+                },
+                {
+                    "authorId": "145730774",
+                    "name": "Kenli Li"
+                },
+                {
+                    "authorId": "2527344",
+                    "name": "Jigang Wen"
+                }
+            ]
+        },
+        {
+            "paperId": "bf65c469690b45d771545c4e4724e437355cb77e",
+            "title": "Fast Online Packet Classification With Convolutional Neural Network",
+            "abstract": "Packet classification is a critical component in network appliances. Software Defined Networking and cloud computing update the rulesets frequently for flexible policy configuration. Tuple Space Search (TSS), implemented in Open vSwitch (OVS), achieves fast rule updating at the sacrifice of the classification rate. In TSS, each tuple is managed by a hash table and classifying a packet needs to go through all hash tables. Merging tuples can reduce the number of hash tables, but inevitably increases the hash conflicts that may even worsen the classification performance in some cases. No existing algorithm meets the need of both fast packet classification and online rule updating. In this paper, we propose Convolutional Neural Network (CNN)-based Range Partition (CRP) to achieve fast packet classification and online update simultaneously. CRP exploits CNN-based image recognition to quickly partition tuples into range spaces upon the change of ruleset distribution, which reduces hash operations while avoiding rule overlapping caused by hashing many rules to the same location of the hash table. Experimental results demonstrate that CRP achieves <inline-formula> <tex-math notation=\"LaTeX\">$3.2\\times $ </tex-math></inline-formula> classification speed and <inline-formula> <tex-math notation=\"LaTeX\">$4.2\\times $ </tex-math></inline-formula> update speed on average compared with state-of-the-art algorithms. We also implement CRP in OVS. The throughput of CRP-OVS is <inline-formula> <tex-math notation=\"LaTeX\">$10\\times $ </tex-math></inline-formula> that of native OVS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108263082",
+                    "name": "Xinyi Zhang"
+                },
+                {
+                    "authorId": "1744392",
+                    "name": "Gaogang Xie"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "2110076052",
+                    "name": "Penghao Zhang"
+                },
+                {
+                    "authorId": "1656856753",
+                    "name": "Yanbiao Li"
+                },
+                {
+                    "authorId": "1725388",
+                    "name": "Kave Salamatian"
+                }
+            ]
+        },
+        {
+            "paperId": "c04045c630597a3fb284afd7f40fe90a17b88ab5",
+            "title": "When Edge Caching Meets a Budget: Near Optimal Service Delivery in Multi-Tiered Edge Clouds",
+            "abstract": "More and more artificial intelligence (AI) applications, such as virtual reality (VR) and video analytics, are rapidly progressing towards enterprise and end-users with the promise of bringing immersive experience. Driven by the desire to improve users\u2019 experience and promote business scenarios, such AI applications have unprecedented requirements for ultra-low latency as well as abundant computing resource in networks. Data centers in the core network can meet these demands by deploying various AI services and providing abundant resources. However, data transmission delay from data centers to end-users is too time-consuming because of traffic congestion in the core network, which compromises the performance of the AI applications. 5G and edge computing are emerging technologies to guarantee the timeliness for the delay-sensitive applications. The delay experienced by AI users can be significantly reduced, by \u2018caching\u2019 various services that are initially deployed at data centers to cloudlets in edge networks. Although ubiquitous edge service caching is always preferable for improving user experiences, it is impractical to cache all services from data centers to edge cloudlets, due to often limited caching budget of service providers and resource capacity constraints of cloudlets. Therefore, a service provider has to cautiously decide how many instances of a service can be cached, and where to cache the service instances. In this article, we investigate a fundamental problem of service caching from remote data centers to edge cloudlets in a multi-tiered edge cloud network. We first develop two approximation algorithms with approximation ratios to solve the problem for users demanding a single type of service. We then devise an efficient heuristic to solve the problem that users require different types of services. We finally conduct extensive experiments on a real test-bed to evaluate the performance of the proposed algorithms, and experimental results demonstrate that our algorithms can outperform some existing algorithms significantly.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2806902",
+                    "name": "Qiufen Xia"
+                },
+                {
+                    "authorId": "2053308586",
+                    "name": "Wenhao Ren"
+                },
+                {
+                    "authorId": "2956815",
+                    "name": "Zichuan Xu"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "145884252",
+                    "name": "W. Liang"
+                }
+            ]
+        },
+        {
+            "paperId": "cb416400136d5d9339ab4f40f073051951d3d859",
+            "title": "Efficiently Inferring Top-k Largest Monitoring Data Entries Based on Discrete Tensor Completion",
+            "abstract": "Network-wide monitoring is important for many network functions. Due to the need of sampling to reduce high measurement cost, system failure, and unavoidable data transmission loss, network monitoring systems suffer from the incompleteness of network monitoring data. Different from the traditional network monitoring data estimation problem which aims to infer all missing monitoring data entries with incomplete measurement data, we study a challenging problem of inferring the top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> largest monitoring data entries. The recent study shows it is promising to more accurately interpolate the missing data with a 3-D tensor compared to that based on a 2-D matrix. Taking full advantage of the multilinear structures, we apply tensor completion to first recover the missing data and then find the top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> data entries. To reduce the computational overhead, we propose a novel discrete tensor completion model which uses binary codes to represent the factor matrices. Based on the model, we further propose three novel techniques to speed up the whole top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> entry inference process: a discrete optimization algorithm to train the binary factor matrices, bit operations to facilitate quick missing data inference, and simplifying the finding of top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> largest entries with binary code partition. In our discrete tensor completion model, only one bit is needed to represent the entry in the factor matrices instead of a real value (32 bits) needed in traditional tensor completion model, thus the storage cost is reduced significantly. To quickly infer the top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> largest data entries when measurement data arrive sequentially, we also propose a sliding window based online algorithm using the discrete tensor completion model. Extensive experiments using five real data sets and one synthetic data set demonstrate that compared with the state of art tensor completion algorithms, our discrete tensor completion algorithm can achieve similar top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> entry inference accuracy using significantly smaller time and storage space.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2136089655",
+                    "name": "Jiazheng Tian"
+                },
+                {
+                    "authorId": "49478657",
+                    "name": "Kun Xie"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1744392",
+                    "name": "Gaogang Xie"
+                },
+                {
+                    "authorId": "145730774",
+                    "name": "Kenli Li"
+                },
+                {
+                    "authorId": "2527344",
+                    "name": "Jigang Wen"
+                },
+                {
+                    "authorId": "40452934",
+                    "name": "Dafang Zhang"
+                },
+                {
+                    "authorId": "144115026",
+                    "name": "Jiannong Cao"
+                }
+            ]
+        },
+        {
+            "paperId": "299a987ab7d8fe610765849d5c75812c69e653d2",
+            "title": "Accurate and Fast Recovery of Network Monitoring Data With GPU-Accelerated Tensor Completion",
+            "abstract": "Monitoring the performance of a large network would involve a high measurement cost. To reduce the overhead, sparse network monitoring techniques may be applied to select paths or time intervals to take the measurements, while the remaining monitoring data can be inferred leveraging the spatial-temporal correlations among data. The quality of missing data recovery, however, highly relies on the specific inference technique adopted. Tensor completion is a promising technique for more accurate missing data inference by exploiting the multi-dimensional data structure. However, data processing for higher dimensional tensors involves a large amount of computation, which prevents conventional tensor completion algorithms from practical application in the presence of large amount of data. This work takes the initiative to investigate the potential and methodologies of performing parallel processing for high-speed and high accuracy tensor completion over Graphics Processing Units (GPUs). We propose a GPU-accelerated parallel Tensor Completion scheme (GPU-TC) for accurate and fast recovery of missing data. To improve the data recovery accuracy and speed, we propose three novel techniques to well exploit the tensor factorization structure and the GPU features: grid-based tensor partition, independent task assignment based on Fisher-Yates shuffle, sphere facilitated and memory-correlated scheduling. We have conducted extensive experiments using network traffic trace data to compare the proposed GPU-TC with the state of art tensor completion algorithms and matrix-based algorithms. The experimental results demonstrate that GPU-TC can achieve significantly better performance in terms of two relative error ratio metrics and computation time.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49478657",
+                    "name": "Kun Xie"
+                },
+                {
+                    "authorId": "2109168018",
+                    "name": "Yuxiang Chen"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1744392",
+                    "name": "Gaogang Xie"
+                },
+                {
+                    "authorId": "144115026",
+                    "name": "Jiannong Cao"
+                },
+                {
+                    "authorId": "2527344",
+                    "name": "Jigang Wen"
+                },
+                {
+                    "authorId": "2149522921",
+                    "name": "Guangming Yang"
+                },
+                {
+                    "authorId": "2318248792",
+                    "name": "Jiaqi Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "2b84c2e61d4552c2651c0f90c77582b127a5ceac",
+            "title": "Recovering Missing Values From Corrupted Historical Observations: Approaching the Limit of Predictability in Spectrum Prediction Tasks",
+            "abstract": "Spectrum prediction is a key enabler of a range of emerging applications, from adaptive spectrum sensing to agile and proactive decision making, for dynamic spectrum access. Due to the fact that spectrum sensors easily experience an issue of missing readings and anomaly pollution, spectrum prediction with incomplete and corrupted historical observations has caused extensive concern. In this paper, we aim to tackle the challenging problem on how to accurately and efficiently recover the missing values from corrupted historical spectrum observations for approaching the limit of predictability in the spectrum prediction tasks. Specially, we first formulate a hankelized time-structured spectrum tensor that can naturally preserve both spectral and temporal dependencies among the historical spectrum observations. We then model the spectrum data recovery problem as tensor completion with its latent low-rank structure and sparse anomaly property. To efficiently solve the optimization problem, we design a robust online spectrum data recovery algorithm based on the alternating direction method. In addition, we also introduce the concept of maximum predictability to reveal the harmful effects of missing data and anomalies, as well as to evaluate the effectiveness of our proposed algorithm from an information theory perspective. Extensive experimental evaluations on the real-world spectrum observation dataset show that the proposed algorithm achieves significantly better spectrum data recovery performance in terms of both recovery accuracy and computation efficiency. It also indicates that not only the predictability of the frequency bands but also the prediction accuracy of any predictive algorithm can be improved by the proposed algorithm.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116226893",
+                    "name": "Xi Li"
+                },
+                {
+                    "authorId": "2155228641",
+                    "name": "Guojun Chen"
+                },
+                {
+                    "authorId": "2526895",
+                    "name": "Yinfei Xu"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "67078310",
+                    "name": "Tiecheng Song"
+                }
+            ]
+        },
+        {
+            "paperId": "39e9ac397ea34df171b99181dc72f89caa83a747",
+            "title": "Recovering Missing Values from Corrupted Historical Spectrum Observations for Dependable Spectrum Prediction",
+            "abstract": "Spectrum prediction is a promising technology to infer spectrum state from historical spectrum observations, by exploiting the inherent correlations and regularities among them. Due to the common existence of missing values and anomalies in the real-world spectrum observations, spectrum prediction with incomplete and corrupted historical observations has caused extensive concern. In this paper, we aim to tackle the challenging problem on how to accurately and efficiently recover the missing values from corrupted historical spectrum observations with which dependable spectrum prediction can be performed. To this end, we first formulate a hankelized time-structured spectrum tensor that can naturally preserve both spectral and temporal dependencies among the historical spectrum observations. Then we model the spectrum data recovery as a tensor completion problem by exploiting its latent low-rank structure and sparse anomaly property. To efficiently solve the optimization problem, we design a robust online spectrum data recovery algorithm based on the alternating direction method. Numerical results demonstrate that the proposed algorithm outperforms state-of-the-art schemes and confirm its effectiveness for dependable spectrum prediction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116226893",
+                    "name": "Xi Li"
+                },
+                {
+                    "authorId": "2048589655",
+                    "name": "Zhicheng Liu"
+                },
+                {
+                    "authorId": "2526895",
+                    "name": "Yinfei Xu"
+                },
+                {
+                    "authorId": "144523744",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "67078310",
+                    "name": "Tiecheng Song"
+                }
+            ]
+        }
+    ]
+}

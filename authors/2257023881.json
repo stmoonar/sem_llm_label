@@ -1,0 +1,171 @@
+{
+    "authorId": "2257023881",
+    "papers": [
+        {
+            "paperId": "752f684371c9901791259dc4afd04b9754e803d1",
+            "title": "Can LLM Graph Reasoning Generalize beyond Pattern Memorization?",
+            "abstract": "Large language models (LLMs) demonstrate great potential for problems with implicit graphical structures, while recent works seek to enhance the graph reasoning capabilities of LLMs through specialized instruction tuning. The resulting 'graph LLMs' are evaluated with in-distribution settings only, thus it remains underexplored whether LLMs are learning generalizable graph reasoning skills or merely memorizing patterns in the synthetic training data. To this end, we propose the NLGift benchmark, an evaluation suite of LLM graph reasoning generalization: whether LLMs could go beyond semantic, numeric, structural, reasoning patterns in the synthetic training data and improve utility on real-world graph-based tasks. Extensive experiments with two LLMs across four graph reasoning tasks demonstrate that while generalization on simple patterns (semantic, numeric) is somewhat satisfactory, LLMs struggle to generalize across reasoning and real-world patterns, casting doubt on the benefit of synthetic graph tuning for real-world tasks with underlying network structures. We explore three strategies to improve LLM graph reasoning generalization, and we find that while post-training alignment is most promising for real-world tasks, empowering LLM graph reasoning to go beyond pattern memorization remains an open research question.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2308074430",
+                    "name": "Yizhuo Zhang"
+                },
+                {
+                    "authorId": "2256778370",
+                    "name": "Heng Wang"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2093186816",
+                    "name": "Zhaoxuan Tan"
+                },
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "f6d7482bb5baf33f22b862ad4997f5c8cd13db21",
+            "title": "Tuning Language Models by Proxy",
+            "abstract": "Despite the general capabilities of large pretrained language models, they consistently benefit from further adaptation to better achieve desired behaviors. However, tuning these models has become increasingly resource-intensive, or impossible when model weights are private. We introduce proxy-tuning, a lightweight decoding-time algorithm that operates on top of black-box LMs to achieve the same end as direct tuning, but by accessing only its predictions over the output vocabulary, not its parameters. Our method tunes a smaller LM, then applies the difference between the predictions of the small tuned and untuned LMs to shift the original predictions of the larger untuned model in the direction of tuning, while retaining the benefits of larger-scale pretraining. In experiments, when we apply proxy-tuning to Llama2-70B using proxies of only 7B size, we can close 88% of the gap between Llama2-70B and its truly-tuned chat version, when evaluated across knowledge, reasoning, and safety benchmarks. We then demonstrate the generality of proxy-tuning by applying it to domain adaptation on code, and task-specific finetuning on question-answering and math problems. Finally, we show how to proxy-tune a truly black-box LM, GPT-3.5, for temporal adaptation, increasing its knowledge about recent events. Our work demonstrates the promise of using small tuned LMs to efficiently customize large, potentially proprietary LMs through decoding-time guidance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261363520",
+                    "name": "Alisa Liu"
+                },
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "1705260",
+                    "name": "Yizhong Wang"
+                },
+                {
+                    "authorId": "2258958466",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2259707400",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2261399966",
+                    "name": "Noah A. Smith"
+                }
+            ]
+        },
+        {
+            "paperId": "fb58e778b68f91c30806052bf195f20e98a85eff",
+            "title": "JPEG-LM: LLMs as Image Generators with Canonical Codec Representations",
+            "abstract": "Recent work in image and video generation has been adopting the autoregressive LLM architecture due to its generality and potentially easy integration into multi-modal systems. The crux of applying autoregressive training in language generation to visual generation is discretization -- representing continuous data like images and videos as discrete tokens. Common methods of discretizing images and videos include modeling raw pixel values, which are prohibitively lengthy, or vector quantization, which requires convoluted pre-hoc training. In this work, we propose to directly model images and videos as compressed files saved on computers via canonical codecs (e.g., JPEG, AVC/H.264). Using the default Llama architecture without any vision-specific modifications, we pretrain JPEG-LM from scratch to generate images (and AVC-LM to generate videos as a proof of concept), by directly outputting compressed file bytes in JPEG and AVC formats. Evaluation of image generation shows that this simple and straightforward approach is more effective than pixel-based modeling and sophisticated vector quantization baselines (on which our method yields a 31% reduction in FID). Our analysis shows that JPEG-LM has an especial advantage over vector quantization models in generating long-tail visual elements. Overall, we show that using canonical codec representations can help lower the barriers between language generation and visual generation, facilitating future research on multi-modal language/image/video LLMs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "2320509",
+                    "name": "Marjan Ghazvininejad"
+                },
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "46add102869a54d9360c21f3721778b29d24e210",
+            "title": "P^3Sum: Preserving Author\u2019s Perspective in News Summarization with Diffusion Language Models",
+            "abstract": "In this work, we take a first step towards designing summarization systems that are faithful to the author\u2019s intent, not only the semantic content of the article. Focusing on a case study of preserving political perspectives in news summarization, we find that existing approaches alter the political opinions and stances of news articles in more than 50% of summaries, misrepresenting the intent and perspectives of the news authors. We thus propose P^3Sum, a diffusion model-based summarization approach controlled by political perspective classifiers. In P^3Sum, the political leaning of a generated summary is iteratively evaluated at each decoding step, and any drift from the article\u2019s original stance incurs a loss back-propagated to the embedding layers, steering the political stance of the summary at inference time. Extensive experiments on three news summarization datasets demonstrate that P^3Sum outperforms state-of-the-art summarization systems and large language models by up to 13.7% in terms of the success rate of stance preservation, with competitive performance on standard metrics of summarization quality. Our findings present a first analysis of preservation of pragmatic features in summarization, highlight the lacunae in existing summarization models\u2014that even state-of-the-art models often struggle to preserve author\u2019s intents\u2014and develop new summarization systems that are more faithful to author\u2019s perspectives.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2169159066",
+                    "name": "Yuhan Liu"
+                },
+                {
+                    "authorId": "2114887261",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "50487261",
+                    "name": "Chan Young Park"
+                },
+                {
+                    "authorId": "51467955",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "2073587169",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "94be9ee72de86a909fd29a739f203e1aa6bc165e",
+            "title": "On the Zero-Shot Generalization of Machine-Generated Text Detectors",
+            "abstract": "The rampant proliferation of large language models, fluent enough to generate text indistinguishable from human-written language, gives unprecedented importance to the detection of machine-generated text. This work is motivated by an important research question: How will the detectors of machine-generated text perform on outputs of a new generator, that the detectors were not trained on? We begin by collecting generation data from a wide range of LLMs, and train neural detectors on data from each generator and test its performance on held-out generators. While none of the detectors can generalize to all generators, we observe a consistent and interesting pattern that the detectors trained on data from a medium-size LLM can zero-shot generalize to the larger version. As a concrete application, we demonstrate that robust detectors can be built on an ensemble of training data from medium-sized models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2243189215",
+                    "name": "Xiao Pu"
+                },
+                {
+                    "authorId": "2167508843",
+                    "name": "Jingyu (Jack) Zhang"
+                },
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                }
+            ]
+        }
+    ]
+}

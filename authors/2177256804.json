@@ -1,0 +1,329 @@
+{
+    "authorId": "2177256804",
+    "papers": [
+        {
+            "paperId": "24c406a66842b5e7d7ec1c2c6e5150d688c62b0f",
+            "title": "Robust Federated Contrastive Recommender System against Model Poisoning Attack",
+            "abstract": "Federated Recommender Systems (FedRecs) have garnered increasing attention recently, thanks to their privacy-preserving benefits. However, the decentralized and open characteristics of current FedRecs present two dilemmas. First, the performance of FedRecs is compromised due to highly sparse on-device data for each client. Second, the system's robustness is undermined by the vulnerability to model poisoning attacks launched by malicious users. In this paper, we introduce a novel contrastive learning framework designed to fully leverage the client's sparse data through embedding augmentation, referred to as CL4FedRec. Unlike previous contrastive learning approaches in FedRecs that necessitate clients to share their private parameters, our CL4FedRec aligns with the basic FedRec learning protocol, ensuring compatibility with most existing FedRec implementations. We then evaluate the robustness of FedRecs equipped with CL4FedRec by subjecting it to several state-of-the-art model poisoning attacks. Surprisingly, our observations reveal that contrastive learning tends to exacerbate the vulnerability of FedRecs to these attacks. This is attributed to the enhanced embedding uniformity, making the polluted target item embedding easily proximate to popular items. Based on this insight, we propose an enhanced and robust version of CL4FedRec (rCL4FedRec) by introducing a regularizer to maintain the distance among item embeddings with different popularity levels. Extensive experiments conducted on four commonly used recommendation datasets demonstrate that CL4FedRec significantly enhances both the model's performance and the robustness of FedRecs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "2248231751",
+                    "name": "Quoc Viet Hung Nguyen"
+                },
+                {
+                    "authorId": "2278795560",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "2f651c84fc67a1930b54e44daf2a517db32a7993",
+            "title": "PDC-FRS: Privacy-preserving Data Contribution for Federated Recommender System",
+            "abstract": "Federated recommender systems (FedRecs) have emerged as a popular research direction for protecting users' privacy in on-device recommendations. In FedRecs, users keep their data locally and only contribute their local collaborative information by uploading model parameters to a central server. While this rigid framework protects users' raw data during training, it severely compromises the recommendation model's performance due to the following reasons: (1) Due to the power law distribution nature of user behavior data, individual users have few data points to train a recommendation model, resulting in uploaded model updates that may be far from optimal; (2) As each user's uploaded parameters are learned from local data, which lacks global collaborative information, relying solely on parameter aggregation methods such as FedAvg to fuse global collaborative information may be suboptimal. To bridge this performance gap, we propose a novel federated recommendation framework, PDC-FRS. Specifically, we design a privacy-preserving data contribution mechanism that allows users to share their data with a differential privacy guarantee. Based on the shared but perturbed data, an auxiliary model is trained in parallel with the original federated recommendation process. This auxiliary model enhances FedRec by augmenting each user's local dataset and integrating global collaborative information. To demonstrate the effectiveness of PDC-FRS, we conduct extensive experiments on two widely used recommendation datasets. The empirical results showcase the superiority of PDC-FRS compared to baseline methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "2320840101",
+                    "name": "Thanh Tam Nguyen"
+                }
+            ]
+        },
+        {
+            "paperId": "50e76ab6f51510e9febd6c40ea3168f31441ecc7",
+            "title": "PTF-FSR: A Parameter Transmission-Free Federated Sequential Recommender System",
+            "abstract": "Sequential recommender systems have made significant progress. Recently, due to increasing concerns about user data privacy, some researchers have implemented federated learning for sequential recommendation, a.k.a., Federated Sequential Recommender Systems (FedSeqRecs), in which a public sequential recommender model is shared and frequently transmitted between a central server and clients to achieve collaborative learning. Although these solutions mitigate user privacy to some extent, they present two significant limitations that affect their practical usability: (1) They require a globally shared sequential recommendation model. However, in real-world scenarios, the recommendation model constitutes a critical intellectual property for platform and service providers. Therefore, service providers may be reluctant to disclose their meticulously developed models. (2) The communication costs are high as they correlate with the number of model parameters. This becomes particularly problematic as the current FedSeqRec will be inapplicable when sequential recommendation marches into a large language model era. To overcome the above challenges, this paper proposes a parameter transmission-free federated sequential recommendation framework (PTF-FSR), which ensures both model and data privacy protection to meet the privacy needs of service providers and system users alike. Furthermore, since PTF-FSR only transmits prediction results under privacy protection, which are independent of model sizes, this new federated learning architecture can accommodate more complex and larger sequential recommendation models. Extensive experiments conducted on three widely used recommendation datasets, employing various sequential recommendation models from both ID-based and ID-free paradigms, demonstrate the effectiveness and generalization capability of our proposed framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "2248231751",
+                    "name": "Quoc Viet Hung Nguyen"
+                },
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "2278795560",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "7492e77261c90c9491e790e9c76b3a564c0efb0c",
+            "title": "FELLAS: Enhancing Federated Sequential Recommendation with LLM as External Services",
+            "abstract": "Federated sequential recommendation (FedSeqRec) has gained growing attention due to its ability to protect user privacy. Unfortunately, the performance of FedSeqRec is still unsatisfactory because the models used in FedSeqRec have to be lightweight to accommodate communication bandwidth and clients' on-device computational resource constraints. Recently, large language models (LLMs) have exhibited strong transferable and generalized language understanding abilities and therefore, in the NLP area, many downstream tasks now utilize LLMs as a service to achieve superior performance without constructing complex models. Inspired by this successful practice, we propose a generic FedSeqRec framework, FELLAS, which aims to enhance FedSeqRec by utilizing LLMs as an external service. Specifically, FELLAS employs an LLM server to provide both item-level and sequence-level representation assistance. The item-level representation service is queried by the central server to enrich the original ID-based item embedding with textual information, while the sequence-level representation service is accessed by each client. However, invoking the sequence-level representation service requires clients to send sequences to the external LLM server. To safeguard privacy, we implement dx-privacy satisfied sequence perturbation, which protects clients' sensitive data with guarantees. Additionally, a contrastive learning-based method is designed to transfer knowledge from the noisy sequence representation to clients' sequential recommendation models. Furthermore, to empirically validate the privacy protection capability of FELLAS, we propose two interacted item inference attacks. Extensive experiments conducted on three datasets with two widely used sequential recommendation models demonstrate the effectiveness and privacy-preserving capability of FELLAS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "1849611",
+                    "name": "Guanhua Ye"
+                },
+                {
+                    "authorId": "2324833110",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2248231751",
+                    "name": "Quoc Viet Hung Nguyen"
+                },
+                {
+                    "authorId": null,
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "1c58561c408b77c4ab9b017614cd1fab1f79646e",
+            "title": "Motif-based Prompt Learning for Universal Cross-domain Recommendation",
+            "abstract": "Cross-Domain Recommendation (CDR) stands as a pivotal technology addressing issues of data sparsity and cold start by transferring general knowledge from the source to the target domain. However, existing CDR models suffer limitations in adaptability across various scenarios due to their inherent complexity. To tackle this challenge, recent advancements introduce universal CDR models that leverage shared embeddings to capture general knowledge across domains and transfer it through \"Multi-task Learning'' or \"Pre-train, Fine-tune'' paradigms. However, these models often overlook the broader structural topology that spans domains and fail to align training objectives, potentially leading to negative transfer. To address these issues, we propose a motif-based prompt learning framework, MOP, which introducesmotif-based shared embeddings to encapsulate generalized domain knowledge, catering to both intra-domain and inter-domain CDR tasks. Specifically, we devise three typical motifs: butterfly, triangle, and random walk, and encode them through a Motif-based Encoder to obtain motif-based shared embeddings. Moreover, we train MOP under the \"Pre-training & Prompt Tuning'' paradigm. By unifying pre-training and recommendation tasks as a common motif-based similarity learning task and integrating adaptable prompt parameters to guide the model in downstream recommendation tasks, MOP excels in transferring domain knowledge effectively. Experimental results on four distinct CDR tasks demonstrate the effectiveness of MOP than the state-of-the-art models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1808645522",
+                    "name": "Bowen Hao"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "2261190897",
+                    "name": "Lei Guo"
+                },
+                {
+                    "authorId": "28584977",
+                    "name": "Junliang Yu"
+                },
+                {
+                    "authorId": "2260297841",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "75c71251149947a5e3d9ac2e42b3dff466af4ab0",
+            "title": "Hide Your Model: A Parameter Transmission-free Federated Recommender System",
+            "abstract": "With the growing concerns regarding user data privacy, Federated Recommender System (FedRec) has garnered significant attention recently due to its privacy-preserving capabilities. Existing FedRecs generally adhere to a learning protocol in which a central server shares a global recommendation model with clients, and participants achieve collaborative learning by frequently communicating the model's public parameters. Nevertheless, this learning framework has two drawbacks that limit its practical usability: (1) It necessitates a global-sharing recommendation model; however, in real-world scenarios, information related to the recommendation model, including its algorithm and parameters, constitutes the platforms' intellectual property. Hence, service providers are unlikely to release such information actively. (2) The communication costs of model parameter transmission are expensive since the model parameters are usually high-dimensional matrices. With the model size increasing, the communication burden will be the bottleneck for such traditional FedRecs. Given the above limitations, this paper introduces a novel parameter transmission-free federated recommendation framework that balances the protection between users' data privacy and platforms' model privacy, namely PTF-FedRec. Unlike traditional FedRecs, participants in PTF-FedRec collaboratively exchange knowledge by sharing their predictions within a privacy-preserving mechanism. Through this approach, the central server can learn a recommender model without disclosing its model parameters or accessing clients' raw data, preserving both the server's model privacy and users' data privacy. Besides, since clients and the central server only need to communicate prediction scores which are just a few real numbers, the communication overhead is significantly reduced compared to traditional FedRecs. Extensive experiments conducted on three commonly used recommendation datasets with three recommendation models demonstrate the effectiveness, efficiency, and generalization of our proposed federated recommendation framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "2268398927",
+                    "name": "Liang Qu"
+                },
+                {
+                    "authorId": "2248231751",
+                    "name": "Quoc Viet Hung Nguyen"
+                },
+                {
+                    "authorId": "2238395964",
+                    "name": "Jianxin Li"
+                },
+                {
+                    "authorId": "2260297841",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "b48a8c226efb52844c9b97309a654a383f33b823",
+            "title": "Interaction-level Membership Inference Attack Against Federated Recommender Systems",
+            "abstract": "The marriage of federated learning and recommender system (FedRec) has been widely used to address the growing data privacy concerns in personalized recommendation services. In FedRecs, users\u2019 attribute information and behavior data (i.e., user-item interaction data) are kept locally on their personal devices, therefore, it is considered a fairly secure approach to protect user privacy. As a result, the privacy issue of FedRecs is rarely explored. Unfortunately, several recent studies reveal that FedRecs are vulnerable to user attribute inference attacks, highlighting the privacy concerns of FedRecs. In this paper, we further investigate the privacy problem of user behavior data (i.e., user-item interactions) in FedRecs. Specifically, we perform the first systematic study on interaction-level membership inference attacks on FedRecs. An interaction-level membership inference attacker is first designed, and then the classical privacy protection mechanism, Local Differential Privacy (LDP), is adopted to defend against the membership inference attack. Unfortunately, the empirical analysis shows that LDP is not effective against such new attacks unless the recommendation performance is largely compromised. To mitigate the interaction-level membership attack threats, we design a simple yet effective defense method to significantly reduce the attacker\u2019s inference accuracy without losing recommendation performance. Extensive experiments are conducted with two widely used FedRecs (Fed-NCF and Fed-LightGCN) on three real-world recommendation datasets (MovieLens-100K, Steam-200K, and Amazon Cell Phone), and the experimental results show the effectiveness of our solutions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "101457473",
+                    "name": "Li-zhen Cui"
+                },
+                {
+                    "authorId": "2281761",
+                    "name": "Tieke He"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "bc309d6fca1ef63f5ae99e3413adfd743be3577b",
+            "title": "Manipulating Visually Aware Federated Recommender Systems and Its Countermeasures",
+            "abstract": "Federated recommender systems (FedRecs) have been widely explored recently due to their capability to safeguard user data privacy. These systems enable a central server to collaboratively learn recommendation models by sharing public parameters with clients, providing privacy-preserving solutions. However, this collaborative approach also creates a vulnerability that allows adversaries to manipulate FedRecs. Existing works on FedRec security already reveal that items can easily be promoted by malicious users via model poisoning attacks, but all of them mainly focus on FedRecs with only collaborative information (i.e., user\u2013item interactions). We contend that these attacks are effective primarily due to the data sparsity of collaborative signals. In light of this, we propose a method to address data sparsity and model poisoning threats by incorporating product visual information. Intriguingly, our empirical findings demonstrate that the inclusion of visual information renders all existing model poisoning attacks ineffective. Nevertheless, the integration of visual information also introduces a new avenue for adversaries to manipulate federated recommender systems, as this information typically originates from external sources. To assess such threats, we propose a novel form of poisoning attack tailored for visually aware FedRecs, namely image poisoning attacks, where adversaries can gradually modify the uploaded image with human-unaware perturbations to manipulate item ranks during the FedRecs\u2019 training process. Moreover, we provide empirical evidence showcasing a heightened threat when image poisoning attacks are combined with model poisoning attacks, resulting in easier manipulation of the federated recommendation systems. To ensure the safe utilization of visual information, we employ a diffusion model in visually aware FedRecs to purify each uploaded image and detect the adversarial images. Extensive experiments conducted with two FedRecs on two datasets demonstrate the effectiveness and generalization of our proposed attacks and defenses.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "2217918617",
+                    "name": "Shilong Yuan"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "bc7f7828031ffee86956789ffe651b976351a6e0",
+            "title": "Joint Semantic and Structural Representation Learning for Enhancing User Preference Modelling",
+            "abstract": "Knowledge graphs (KGs) have become important auxiliary information for helping recommender systems obtain a good understanding of user preferences. Despite recent advances in KG-based recommender systems, existing methods are prone to suboptimal performance due to the following two drawbacks: 1) current KG-based methods over-emphasize the heterogeneous structural information within a KG and overlook the underlying semantics of its connections, hindering the recommender from distilling the explicit user preferences; and 2) the inherent incompleteness of a KG (i.e., missing facts, relations and entities) will deteriorate the information extracted from KG and weaken the representation learning of recommender systems. To tackle the aforementioned problems, we investigate the potential of jointly incorporating the structural and semantic information within a KG to model user preferences in finer granularity. A new framework for KG-based recommender systems, namely \\textit{K}nowledge \\textit{I}nfomax \\textit{R}ecommender \\textit{S}ystem with \\textit{C}ontrastive \\textit{L}earning (KIRS-CL) is proposed in this paper. Distinct from previous KG-based approaches, KIRS-CL utilizes structural and connectivity information with high-quality item embeddings learned by encoding KG triples with a pre-trained language model. These well-trained entity representations enable KIRS-CL to find the item to recommend via the preference connection between the user and the item. Additionally, to improve the generalizability of our framework, we introduce a contrastive warm-up learning strategy, making it capable of dealing with both warm- and cold-start recommendation scenarios. Extensive experiments on two real-world datasets demonstrate remarkable improvements over state-of-the-art baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1994610570",
+                    "name": "Xuhui Ren"
+                },
+                {
+                    "authorId": "2106755543",
+                    "name": "Wei Yuan"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "9abdac4ea8c7e461f79d6bda9188f5cfc7d21b0d",
+            "title": "Efficient On-Device Session-Based Recommendation",
+            "abstract": "On-device session-based recommendation systems have been achieving increasing attention on account of the low energy/resource consumption and privacy protection while providing promising recommendation performance. To fit the powerful neural session-based recommendation models in resource-constrained mobile devices, tensor-train decomposition and its variants have been widely applied to reduce memory footprint by decomposing the embedding table into smaller tensors, showing great potential in compressing recommendation models. However, these model compression techniques significantly increase the local inference time due to the complex process of generating index lists and a series of tensor multiplications to form item embeddings. The resultant on-device recommender fails to provide real-time responses and recommendations. To improve the online recommendation efficiency, we propose to learn compositional encoding-based compact item representations. Specifically, each item is represented by a compositional code that consists of several codewords, and we learn embedding vectors to represent each codeword instead of each item. Then the composition of the codeword embedding vectors from different embedding matrices (i.e., codebooks) forms the item embedding. Since the size of codebooks can be extremely small, the recommender model is thus able to fit in resource-constrained devices and save the codebooks for fast local inference. In addition, to prevent the loss of model capacity caused by compression, we propose a bidirectional self-supervised knowledge distillation framework. Extensive experimental results on two benchmark datasets demonstrate that compared with existing methods, the proposed on-device recommender not only achieves an 8\u00d7 inference speedup with a large compression ratio but also shows superior recommendation performance. The code is released at https://github.com/xiaxin1998/EODRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2077454936",
+                    "name": "Xin Xia"
+                },
+                {
+                    "authorId": "28584977",
+                    "name": "Junliang Yu"
+                },
+                {
+                    "authorId": "2108993397",
+                    "name": "Qinyong Wang"
+                },
+                {
+                    "authorId": "2177256804",
+                    "name": "Chao-Peng Yang"
+                },
+                {
+                    "authorId": "1925773",
+                    "name": "Nguyen Quoc Viet Hung"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,331 @@
+{
+    "authorId": "2773849",
+    "papers": [
+        {
+            "paperId": "0c0aabb2660797c6093d335935748f8db91c8b6b",
+            "title": "AutoMLP: Automated MLP for Sequential Recommendations",
+            "abstract": "Sequential recommender systems aim to predict users\u2019 next interested item given their historical interactions. However, a long-standing issue is how to distinguish between users\u2019 long/short-term interests, which may be heterogeneous and contribute differently to the next recommendation. Existing approaches usually set pre-defined short-term interest length by exhaustive search or empirical experience, which is either highly inefficient or yields subpar results. The recent advanced transformer-based models can achieve state-of-the-art performances despite the aforementioned issue, but they have a quadratic computational complexity to the length of the input sequence. To this end, this paper proposes a novel sequential recommender system, AutoMLP, aiming for better modeling users\u2019 long/short-term interests from their historical interactions. In addition, we design an automated and adaptive search algorithm for preferable short-term interest length via end-to-end optimization. Through extensive experiments, we show that AutoMLP has competitive performance against state-of-the-art methods, while maintaining linear computational complexity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187870890",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2187882131",
+                    "name": "Zijian Zhang"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2211473272",
+                    "name": "Wanyu Wang"
+                },
+                {
+                    "authorId": "2152527913",
+                    "name": "Minghao Zhao"
+                },
+                {
+                    "authorId": "2087049767",
+                    "name": "Runze Wu"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "29e847dc83e350f44fe19b51b4c5096670cb2df6",
+            "title": "Inference-time Stochastic Ranking with Risk Control",
+            "abstract": "Learning to Rank (LTR) methods are vital in online economies, affecting users and item providers. Fairness in LTR models is crucial to allocate exposure proportionally to item relevance. Widely used deterministic LTR models can lead to unfair exposure distribution, especially when items with the same relevance receive slightly different ranking scores. Stochastic LTR models, incorporating the Plackett-Luce (PL) ranking model, address fairness issues but suffer from high training cost. In addition, they cannot provide guarantees on the utility or fairness, which can lead to dramatic degraded utility when optimized for fairness. To overcome these limitations, we propose Inference-time Stochastic Ranking with Risk Control (ISRR), a novel method that performs stochastic ranking at inference time with guanranteed utility or fairness given pretrained scoring functions from deterministic or stochastic LTR models. Comprehensive experimental results on three widely adopted datasets demonstrate that our proposed method achieves utility and fairness comparable to existing stochastic ranking methods with much lower computational cost. In addition, results verify that our method provides finite-sample guarantee on utility and fairness. This advancement represents a significant contribution to the field of stochastic ranking and fair LTR with promising real-world applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "50880398",
+                    "name": "Jean-Fran\u00e7ois Ton"
+                },
+                {
+                    "authorId": "40457423",
+                    "name": "Yang Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "54dd00a034a6f8f0e4e86b4fdbab20bb6176e358",
+            "title": "Causal Disentanglement for Implicit Recommendations with Network Information",
+            "abstract": "Online user engagement is highly influenced by various machine learning models, such as recommender systems. These systems recommend new items to the user based on the user\u2019s historical interactions. Implicit recommender systems reflect a binary setting showing whether a user interacted (e.g., clicked on) with an item or not. However, the observed clicks may be due to various causes such as user\u2019s interest, item\u2019s popularity, and social influence factors. Traditional recommender systems consider these causes under a unified representation, which may lead to the emergence and amplification of various biases in recommendations. However, recent work indicates that by disentangling the unified representations, one can mitigate bias (e.g., popularity bias) in recommender systems and help improve recommendation performance. Yet, prior work in causal disentanglement in recommendations does not consider a crucial factor, that is, social influence. Social theories such as homophily and social influence provide evidence that a user\u2019s decision can be highly influenced by the user\u2019s social relations. Thus, accounting for the social relations while disentangling leads to less biased recommendations. To this end, we identify three separate causes behind an effect (e.g., clicks): (a) user\u2019s interest, (b) item\u2019s popularity, and (c) user\u2019s social influence. Our approach seeks to causally disentangle the user and item latent features to mitigate popularity bias in implicit feedback\u2013based social recommender systems. To achieve this goal, we draw from causal inference theories and social network theories and propose a causality-aware disentanglement method that leverages both the user\u2013item interaction network and auxiliary social network information. Experiments on real-world datasets against various state-of-the-art baselines validate the effectiveness of the proposed model for mitigating popularity bias and generating de-biased recommendations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "73409823",
+                    "name": "Paras Sheth"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "2140175677",
+                    "name": "Lu Cheng"
+                },
+                {
+                    "authorId": "2146398099",
+                    "name": "Huan Liu"
+                },
+                {
+                    "authorId": "1720972",
+                    "name": "K. Candan"
+                }
+            ]
+        },
+        {
+            "paperId": "5fd6a5035aeae5807a2052b4be21988e3018d1a6",
+            "title": "Debiasing Recommendation by Learning Identifiable Latent Confounders",
+            "abstract": "Recommendation systems aim to predict users' feedback on items not exposed to them yet. Confounding bias arises due to the presence of unmeasured variables (e.g., the socio-economic status of a user) that can affect both a user's exposure and feedback. Existing methods either (1) make untenable assumptions about these unmeasured variables or (2) directly infer latent confounders from users' exposure. However, they cannot guarantee the identification of counterfactual feedback, which can lead to biased predictions. In this work, we propose a novel method, i.e., identifiable deconfounder (iDCF), which leverages a set of proxy variables (e.g., observed user features) to resolve the aforementioned non-identification issue. The proposed iDCF is a general deconfounded recommendation framework that applies proximal causal inference to infer the unmeasured confounders and identify the counterfactual feedback with theoretical guarantees. Extensive experiments on various real-world and synthetic datasets verify the proposed method's effectiveness and robustness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2305251453",
+                    "name": "Qing Zhang"
+                },
+                {
+                    "authorId": "2115795946",
+                    "name": "Xiaoying Zhang"
+                },
+                {
+                    "authorId": "2152797925",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "31825390",
+                    "name": "Hongning Wang"
+                },
+                {
+                    "authorId": "2155431892",
+                    "name": "Min Gao"
+                },
+                {
+                    "authorId": "34821501",
+                    "name": "Jiheng Zhang"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "7142e920b6b9355d9cbacc9450818f912eca138e",
+            "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment",
+            "abstract": "Ensuring alignment, which refers to making models behave in accordance with human intentions [1,2], has become a critical task before deploying large language models (LLMs) in real-world applications. For instance, OpenAI devoted six months to iteratively aligning GPT-4 before its release [3]. However, a major challenge faced by practitioners is the lack of clear guidance on evaluating whether LLM outputs align with social norms, values, and regulations. This obstacle hinders systematic iteration and deployment of LLMs. To address this issue, this paper presents a comprehensive survey of key dimensions that are crucial to consider when assessing LLM trustworthiness. The survey covers seven major categories of LLM trustworthiness: reliability, safety, fairness, resistance to misuse, explainability and reasoning, adherence to social norms, and robustness. Each major category is further divided into several sub-categories, resulting in a total of 29 sub-categories. Additionally, a subset of 8 sub-categories is selected for further investigation, where corresponding measurement studies are designed and conducted on several widely-used LLMs. The measurement results indicate that, in general, more aligned models tend to perform better in terms of overall trustworthiness. However, the effectiveness of alignment varies across the different trustworthiness categories considered. This highlights the importance of conducting more fine-grained analyses, testing, and making continuous improvements on LLM alignment. By shedding light on these key dimensions of LLM trustworthiness, this paper aims to provide valuable insights and guidance to practitioners in the field. Understanding and addressing these concerns will be crucial in achieving reliable and ethically sound deployment of LLMs in various applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152802545",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "3460027",
+                    "name": "Yuanshun Yao"
+                },
+                {
+                    "authorId": "50880398",
+                    "name": "Jean-Fran\u00e7ois Ton"
+                },
+                {
+                    "authorId": "2115795946",
+                    "name": "Xiaoying Zhang"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "2213374734",
+                    "name": "Hao Cheng"
+                },
+                {
+                    "authorId": "89710641",
+                    "name": "Yegor Klochkov"
+                },
+                {
+                    "authorId": "2169557412",
+                    "name": "Muhammad Faaiz Taufiq"
+                },
+                {
+                    "authorId": "2145573586",
+                    "name": "Hanguang Li"
+                }
+            ]
+        },
+        {
+            "paperId": "ade4176edb0e88190035215f83c1545a2856ff4f",
+            "title": "Learning for Counterfactual Fairness from Observational Data",
+            "abstract": "Fairness-aware machine learning has attracted a surge of attention in many domains, such as online advertising, personalized recommendation, and social media analysis in web applications. Fairness-aware machine learning aims to eliminate biases of learning models against certain subgroups described by certain protected (sensitive) attributes such as race, gender, and age. Among many existing fairness notions, counterfactual fairness is a popular notion defined from a causal perspective. It measures the fairness of a predictor by comparing the prediction of each individual in the original world and that in the counterfactual worlds in which the value of the sensitive attribute is modified. A prerequisite for existing methods to achieve counterfactual fairness is the prior human knowledge of the causal model for the data. However, in real-world scenarios, the underlying causal model is often unknown, and acquiring such human knowledge could be very difficult. In these scenarios, it is risky to directly trust the causal models obtained from information sources with unknown reliability and even causal discovery methods, as incorrect causal models can consequently bring biases to the predictor and lead to unfair predictions. In this work, we address the problem of counterfactually fair prediction from observational data without given causal models by proposing a novel framework CLAIRE. Specifically, under certain general assumptions, CLAIRE effectively mitigates the biases from the sensitive attribute with a representation learning framework based on counterfactual data augmentation and an invariant penalty. Experiments conducted on both synthetic and real-world datasets validate the superiority of CLAIRE in both counterfactual fairness and prediction performance.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2157405959",
+                    "name": "Jing Ma"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "2153660635",
+                    "name": "Aidong Zhang"
+                },
+                {
+                    "authorId": "1737121128",
+                    "name": "Jundong Li"
+                }
+            ]
+        },
+        {
+            "paperId": "cf9f4575087d162b1c82f22769e5868fd6843619",
+            "title": "Virtual Node Tuning for Few-shot Node Classification",
+            "abstract": "Few-shot Node Classification (FSNC) is a challenge in graph representation learning where only a few labeled nodes per class are available for training. To tackle this issue, meta-learning has been proposed to transfer structural knowledge from base classes with abundant labels to target novel classes. However, existing solutions become ineffective or inapplicable when base classes have no or limited labeled nodes. To address this challenge, we propose an innovative method dubbed Virtual Node Tuning (VNT). Our approach utilizes a pretrained graph transformer as the encoder and injects virtual nodes as soft prompts in the embedding space, which can be optimized with few-shot labels in novel classes to modulate node embeddings for each specific FSNC task. A unique feature of VNT is that, by incorporating a Graph-based Pseudo Prompt Evolution (GPPE) module, VNT-GPPE can handle scenarios with sparse labels in base classes. Experimental results on four datasets demonstrate the superiority of the proposed approach in addressing FSNC with unlabeled or sparsely labeled base classes, outperforming existing state-of-the-art methods and even fully supervised baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144630335",
+                    "name": "Zhen Tan"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "66807781",
+                    "name": "Kaize Ding"
+                },
+                {
+                    "authorId": "2155337763",
+                    "name": "Huan Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "dc060b0d93c22eeadcdf288340dda4cfc73eee2f",
+            "title": "Graph-Based Model-Agnostic Data Subsampling for Recommendation Systems",
+            "abstract": "Data subsampling is widely used to speed up the training of large-scale recommendation systems. Most subsampling methods are model-based and often require a pre-trained pilot model to measure data importance via e.g. sample hardness. However, when the pilot model is misspecified, model-based subsampling methods deteriorate. Since model misspecification is persistent in real recommendation systems, we instead propose model-agnostic data subsampling methods by only exploring input data structure represented by graphs. Specifically, we study the topology of the user-item graph to estimate the importance of each user-item interaction (an edge in the user-item graph) via graph conductance, followed by a propagation step on the network to smooth out the estimated importance value. Since our proposed method is model-agnostic, we can marry the merits of both model-agnostic and model-based subsampling methods. Empirically, we show that combing the two consistently improves over any single method on the used datasets. Experimental results on KuaiRec and MIND datasets demonstrate that our proposed methods achieve superior results compared to baseline approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144201630",
+                    "name": "Xiaohui Chen"
+                },
+                {
+                    "authorId": "2152147910",
+                    "name": "Jiankai Sun"
+                },
+                {
+                    "authorId": "3340042",
+                    "name": "Taiqing Wang"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "1391189766",
+                    "name": "Liping Liu"
+                },
+                {
+                    "authorId": "2852051",
+                    "name": "Aonan Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "ec3f2d4d2fd417ad243f2c321bc84e0bedf25df5",
+            "title": "Tensorized Hypergraph Neural Networks",
+            "abstract": "Hypergraph neural networks (HGNN) have recently become attractive and received significant attention due to their excellent performance in various domains. However, most existing HGNNs rely on first-order approximations of hypergraph connectivity patterns, which ignores important high-order information. To address this issue, we propose a novel adjacency-tensor-based \\textbf{T}ensorized \\textbf{H}ypergraph \\textbf{N}eural \\textbf{N}etwork (THNN). THNN is a faithful hypergraph modeling framework through high-order outer product feature message passing and is a natural tensor extension of the adjacency-matrix-based graph neural networks. The proposed THNN is equivalent to a high-order polynomial regression scheme, which enables THNN with the ability to efficiently extract high-order information from uniform hypergraphs. Moreover, in consideration of the exponential complexity of directly processing high-order outer product features, we propose using a partially symmetric CP decomposition approach to reduce model complexity to a linear degree. Additionally, we propose two simple yet effective extensions of our method for non-uniform hypergraphs commonly found in real-world applications. Results from experiments on two widely used {hypergraph datasets for 3-D visual object classification} show the model's promising performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109132520",
+                    "name": "Maolin Wang"
+                },
+                {
+                    "authorId": "2054343446",
+                    "name": "Yao Zhen"
+                },
+                {
+                    "authorId": "143749869",
+                    "name": "Y. Pan"
+                },
+                {
+                    "authorId": "1683510",
+                    "name": "Zenglin Xu"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "2197532318",
+                    "name": "Xiangyu Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "01db6da680379cfc5aef4082928f3ca650f7c4c1",
+            "title": "Causal Disentanglement with Network Information for Debiased Recommendations",
+            "abstract": "Recommender systems aim to recommend new items to users by learning user and item representations. In practice, these representations are highly entangled as they consist of information about multiple factors, including user's interests, item attributes along with confounding factors such as user conformity, and item popularity. Considering these entangled representations for inferring user preference may lead to biased recommendations (e.g., when the recommender model recommends popular items even if they do not align with the user's interests). Recent research proposes to debias by modeling a recommender system from a causal perspective. The exposure and the ratings are analogous to the treatment and the outcome in the causal inference framework, respectively. The critical challenge in this setting is accounting for the hidden confounders. These confounders are unobserved, making it hard to measure them. On the other hand, since these confounders affect both the exposure and the ratings, it is essential to account for them in generating debiased recommendations. To better approximate hidden confounders, we propose to leverage network information (i.e., user-social and user-item networks), which are shown to influence how users discover and interact with an item. Aside from the user conformity, aspects of confounding such as item popularity present in the network information is also captured in our method with the aid of \\textit{causal disentanglement} which unravels the learned representations into independent factors that are responsible for (a) modeling the exposure of an item to the user, (b) predicting the ratings, and (c) controlling the hidden confounders. Experiments on real-world datasets validate the effectiveness of the proposed model for debiasing recommender systems.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "73409823",
+                    "name": "Paras Sheth"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                },
+                {
+                    "authorId": "144842921",
+                    "name": "Lu Cheng"
+                },
+                {
+                    "authorId": "2146398099",
+                    "name": "Huan Liu"
+                },
+                {
+                    "authorId": "1720972",
+                    "name": "K. Candan"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,377 @@
+{
+    "authorId": "1821892",
+    "papers": [
+        {
+            "paperId": "17d46cfdd0a8b76829a3888d433f2a1a1a2f91da",
+            "title": "Does Liking Yellow Imply Driving a School Bus? Semantic Leakage in Language Models",
+            "abstract": "Despite their wide adoption, the biases and unintended behaviors of language models remain poorly understood. In this paper, we identify and characterize a phenomenon never discussed before, which we call semantic leakage, where models leak irrelevant information from the prompt into the generation in unexpected ways. We propose an evaluation setting to detect semantic leakage both by humans and automatically, curate a diverse test suite for diagnosing this behavior, and measure significant semantic leakage in 13 flagship models. We also show that models exhibit semantic leakage in languages besides English and across different settings and generation scenarios. This discovery highlights yet another type of bias in language models that affects their generation patterns and behavior.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "3443287",
+                    "name": "Terra Blevins"
+                },
+                {
+                    "authorId": "2261363520",
+                    "name": "Alisa Liu"
+                },
+                {
+                    "authorId": "2137813791",
+                    "name": "Luke S. Zettlemoyer"
+                },
+                {
+                    "authorId": "2261399966",
+                    "name": "Noah A. Smith"
+                }
+            ]
+        },
+        {
+            "paperId": "8efaa8206874c2f7a79bba2a9bcba542e4cabf31",
+            "title": "MYTE: Morphology-Driven Byte Encoding for Better and Fairer Multilingual Language Modeling",
+            "abstract": "A major consideration in multilingual language modeling is how to best represent languages with diverse vocabularies and scripts. Although contemporary text encoding methods cover most of the world's writing systems, they exhibit bias towards the high-resource languages of the Global West. As a result, texts of underrepresented languages tend to be segmented into long sequences of linguistically meaningless units. To address the disparities, we introduce a new paradigm that encodes the same information with segments of consistent size across diverse languages. Our encoding convention (MYTE) is based on morphemes, as their inventories are more balanced across languages than characters, which are used in previous methods. We show that MYTE produces shorter encodings for all 99 analyzed languages, with the most notable improvements for non-European languages and non-Latin scripts. This, in turn, improves multilingual LM performance and diminishes the perplexity gap throughout diverse languages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1666636295",
+                    "name": "Tomasz Limisiewicz"
+                },
+                {
+                    "authorId": "3443287",
+                    "name": "Terra Blevins"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "1452686038",
+                    "name": "Orevaoghene Ahia"
+                },
+                {
+                    "authorId": "2137813791",
+                    "name": "Luke S. Zettlemoyer"
+                }
+            ]
+        },
+        {
+            "paperId": "92e9acc55013a7408559d5e203eb913378563377",
+            "title": "Voices Unheard: NLP Resources and Models for Yor\u00f9b\u00e1 Regional Dialects",
+            "abstract": "Yor\\`ub\\'a an African language with roughly 47 million speakers encompasses a continuum with several dialects. Recent efforts to develop NLP technologies for African languages have focused on their standard dialects, resulting in disparities for dialects and varieties for which there are little to no resources or tools. We take steps towards bridging this gap by introducing a new high-quality parallel text and speech corpus YOR\\`ULECT across three domains and four regional Yor\\`ub\\'a dialects. To develop this corpus, we engaged native speakers, travelling to communities where these dialects are spoken, to collect text and speech data. Using our newly created corpus, we conducted extensive experiments on (text) machine translation, automatic speech recognition, and speech-to-text translation. Our results reveal substantial performance disparities between standard Yor\\`ub\\'a and the other dialects across all tasks. However, we also show that with dialect-adaptive finetuning, we are able to narrow this gap. We believe our dataset and experimental analysis will contribute greatly to developing NLP tools for Yor\\`ub\\'a and its dialects, and potentially for other African languages, by improving our understanding of existing challenges and offering a high-quality dataset for further development. We release YOR\\`ULECT dataset and models publicly under an open license.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2229432740",
+                    "name": "Orevaoghene Ahia"
+                },
+                {
+                    "authorId": "2056773747",
+                    "name": "Anuoluwapo Aremu"
+                },
+                {
+                    "authorId": "2309005330",
+                    "name": "Diana Abagyan"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "2518906",
+                    "name": "David Ifeoluwa Adelani"
+                },
+                {
+                    "authorId": "2266838146",
+                    "name": "D. Abolade"
+                },
+                {
+                    "authorId": "2298441996",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2287930119",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "9ef2d0327c73393adb509d5793f707447cad2faf",
+            "title": "MAGNET: Improving the Multilingual Fairness of Language Models with Adaptive Gradient-Based Tokenization",
+            "abstract": "In multilingual settings, non-Latin scripts and low-resource languages are usually disadvantaged in terms of language models' utility, efficiency, and cost. Specifically, previous studies have reported multiple modeling biases that the current tokenization algorithms introduce to non-Latin script languages, the main one being over-segmentation. In this work, we propose MAGNET; multilingual adaptive gradient-based tokenization to reduce over-segmentation via adaptive gradient-based subword tokenization. MAGNET learns to predict segment boundaries between byte tokens in a sequence via sub-modules within the model, which act as internal boundary predictors (tokenizers). Previous gradient-based tokenization methods aimed for uniform compression across sequences by integrating a single boundary predictor during training and optimizing it end-to-end through stochastic reparameterization alongside the next token prediction objective. However, this approach still results in over-segmentation for non-Latin script languages in multilingual settings. In contrast, MAGNET offers a customizable architecture where byte-level sequences are routed through language-script-specific predictors, each optimized for its respective language script. This modularity enforces equitable segmentation granularity across different language scripts compared to previous methods. Through extensive experiments, we demonstrate that in addition to reducing segmentation disparities, MAGNET also enables faster language modelling and improves downstream utility.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2229432740",
+                    "name": "Orevaoghene Ahia"
+                },
+                {
+                    "authorId": "2282203839",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "2311117905",
+                    "name": "Valentin Hoffman"
+                },
+                {
+                    "authorId": "1666636295",
+                    "name": "Tomasz Limisiewicz"
+                },
+                {
+                    "authorId": "2287930119",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2298441996",
+                    "name": "Noah A. Smith"
+                }
+            ]
+        },
+        {
+            "paperId": "e4b757235fdc51de0e67cce47e9b4c3a5cab551c",
+            "title": "Breaking the Curse of Multilinguality with Cross-lingual Expert Language Models",
+            "abstract": "Despite their popularity in non-English NLP, multilingual language models often underperform monolingual ones due to inter-language competition for model parameters. We propose Cross-lingual Expert Language Models (X-ELM), which mitigate this competition by independently training language models on subsets of the multilingual corpus. This process specializes X-ELMs to different languages while remaining effective as a multilingual ensemble. Our experiments show that when given the same compute budget, X-ELM outperforms jointly trained multilingual models across all considered languages and that these gains transfer to downstream tasks. X-ELM provides additional benefits over performance improvements: new experts can be iteratively added, adapting X-ELM to new languages without catastrophic forgetting. Furthermore, training is asynchronous, reducing the hardware requirements for multilingual training and democratizing multilingual modeling.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3443287",
+                    "name": "Terra Blevins"
+                },
+                {
+                    "authorId": "1666636295",
+                    "name": "Tomasz Limisiewicz"
+                },
+                {
+                    "authorId": "40895369",
+                    "name": "Suchin Gururangan"
+                },
+                {
+                    "authorId": "2259207413",
+                    "name": "Margaret Li"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "2275951635",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2137813791",
+                    "name": "Luke S. Zettlemoyer"
+                }
+            ]
+        },
+        {
+            "paperId": "07f95090a81a92afe526d3e490d1a0ff44365a53",
+            "title": "That was the last straw, we need more: Are Translation Systems Sensitive to Disambiguating Context?",
+            "abstract": "The translation of ambiguous text presents a challenge for translation systems, as it requires using the surrounding context to disambiguate the intended meaning as much as possible. While prior work has studied ambiguities that result from different grammatical features of the source and target language, we study semantic ambiguities that exist in the source (English in this work) itself. In particular, we focus on idioms that are open to both literal and figurative interpretations (e.g., goose egg), and collect TIDE, a dataset of 512 pairs of English sentences containing idioms with disambiguating context such that one is literal (it laid a goose egg) and another is figurative (they scored a goose egg, as in a score of zero). In experiments, we compare MT-specific models and language models for (i) their preference when given an ambiguous subsentence, (ii) their sensitivity to disambiguating context, and (iii) the performance disparity between figurative and literal source sentences. We find that current MT models consistently translate English idioms literally, even when the context suggests a figurative interpretation. On the other hand, LMs are far more context-aware, although there remain disparities across target languages. Our findings underline the potential of LMs as a strong backbone for context-aware translation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261353791",
+                    "name": "Jaechan Lee"
+                },
+                {
+                    "authorId": "2261363520",
+                    "name": "Alisa Liu"
+                },
+                {
+                    "authorId": "2229432740",
+                    "name": "Orevaoghene Ahia"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "2261399966",
+                    "name": "Noah A. Smith"
+                }
+            ]
+        },
+        {
+            "paperId": "160ae9b2cf9c926d67a7b508d783a4f2c61f9cb8",
+            "title": "Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark",
+            "abstract": "We introduce Universal NER (UNER), an open, community-driven project to develop gold-standard NER benchmarks in many languages. The overarching goal of UNER is to provide high-quality, cross-lingually consistent annotations to facilitate and standardize multilingual NER research. UNER v1 contains 19 datasets annotated with named entities in a cross-lingual consistent schema across 13 diverse languages. In this paper, we detail the dataset creation and composition of UNER; we also provide initial modeling baselines on both in-language and cross-lingual learning settings. We will release the data, code, and fitted models to the public.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266751453",
+                    "name": "Stephen Mayhew"
+                },
+                {
+                    "authorId": "3443287",
+                    "name": "Terra Blevins"
+                },
+                {
+                    "authorId": "2077166614",
+                    "name": "Shuheng Liu"
+                },
+                {
+                    "authorId": "2266751005",
+                    "name": "Marek vSuppa"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "151472158",
+                    "name": "Joseph Marvin Imperial"
+                },
+                {
+                    "authorId": "2047947436",
+                    "name": "B\u00f6rje F. Karlsson"
+                },
+                {
+                    "authorId": "2266791223",
+                    "name": "Peiqin Lin"
+                },
+                {
+                    "authorId": "2266754955",
+                    "name": "Nikola Ljubevsi'c"
+                },
+                {
+                    "authorId": "13614871",
+                    "name": "Lester James Validad Miranda"
+                },
+                {
+                    "authorId": "2266751446",
+                    "name": "Barbara Plank"
+                },
+                {
+                    "authorId": "2003628072",
+                    "name": "Arij Riabi"
+                },
+                {
+                    "authorId": "1826312",
+                    "name": "Yuval Pinter"
+                }
+            ]
+        },
+        {
+            "paperId": "17fbffb05fa14e21d1c506fd5f0f568b955fe983",
+            "title": "Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models",
+            "abstract": "Language models have graduated from being research prototypes to commercialized products offered as web APIs, and recent works have highlighted the multilingual capabilities of these products. The API vendors charge their users based on usage, more specifically on the number of ``tokens'' processed or generated by the underlying language models. What constitutes a token, however, is training data and model dependent with a large variance in the number of tokens required to convey the same information in different languages. In this work, we analyze the effect of this non-uniformity on the fairness of an API's pricing policy across languages. We conduct a systematic analysis of the cost and utility of OpenAI's language model API on multilingual benchmarks in 22 typologically diverse languages. We show evidence that speakers of a large number of the supported languages are overcharged while obtaining poorer results. These speakers tend to also come from regions where the APIs are less affordable to begin with. Through these analyses, we aim to increase transparency around language model APIs' pricing policies and encourage the vendors to make them more equitable.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1452686038",
+                    "name": "Orevaoghene Ahia"
+                },
+                {
+                    "authorId": "51467955",
+                    "name": "Sachin Kumar"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "11348687",
+                    "name": "Jungo Kasai"
+                },
+                {
+                    "authorId": "3407646",
+                    "name": "David R. Mortensen"
+                },
+                {
+                    "authorId": "144365875",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "2073587169",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "62a7f3c14c15d8f5d1c643ceb991dddb36e3c47c",
+            "title": "XLM-V: Overcoming the Vocabulary Bottleneck in Multilingual Masked Language Models",
+            "abstract": "Large multilingual language models typically rely on a single vocabulary shared across 100+ languages. As these models have increased in parameter count and depth, vocabulary size has remained largely unchanged. This \\textit{vocabulary bottleneck} limits the representational capabilities of multilingual models like XLM-R. In this paper, we introduce a new approach for scaling to very large multilingual vocabularies by de-emphasizing token sharing between languages with little lexical overlap and assigning vocabulary capacity to achieve sufficient coverage for each individual language. Tokenizations using our vocabulary are typically more semantically meaningful and shorter compared to XLM-R. Leveraging this improved vocabulary, we train XLM-V, a multilingual language model with a one million token vocabulary. XLM-V outperforms XLM-R on every task we tested on ranging from natural language inference (XNLI), question answering (MLQA, XQuAD, TyDiQA), to named entity recognition (WikiAnn). XLM-V is particularly effective on low-resource language tasks and outperforms XLM-R by 11.2% and 5.8% absolute on MasakhaNER and Americas NLI, respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "25130521",
+                    "name": "Davis Liang"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "3375249",
+                    "name": "Yuning Mao"
+                },
+                {
+                    "authorId": "2132302721",
+                    "name": "Rui Hou"
+                },
+                {
+                    "authorId": "39589154",
+                    "name": "Naman Goyal"
+                },
+                {
+                    "authorId": "2320509",
+                    "name": "Marjan Ghazvininejad"
+                },
+                {
+                    "authorId": "1982950",
+                    "name": "Luke Zettlemoyer"
+                },
+                {
+                    "authorId": "2072010",
+                    "name": "Madian Khabsa"
+                }
+            ]
+        },
+        {
+            "paperId": "64ce6ef1f5cf227bf2bf917c87273386ae16256f",
+            "title": "Dictionary-based Phrase-level Prompting of Large Language Models for Machine Translation",
+            "abstract": "Large language models (LLMs) demonstrate remarkable machine translation (MT) abilities via prompting, even though they were not explicitly trained for this task. However, even given the incredible quantities of data they are trained on, LLMs can struggle to translate inputs with rare words, which are common in low resource or domain transfer scenarios. We show that LLM prompting can provide an effective solution for rare words as well, by using prior knowledge from bilingual dictionaries to provide control hints in the prompts. We propose a novel method, DiPMT, that provides a set of possible translations for a subset of the input words, thereby enabling fine-grained phrase-level prompted control of the LLM. Extensive experiments show that DiPMT outperforms the baseline both in low-resource MT, as well as for out-of-domain MT. We further provide a qualitative analysis of the benefits and limitations of this approach, including the overall level of controllability that is achieved.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2320509",
+                    "name": "Marjan Ghazvininejad"
+                },
+                {
+                    "authorId": "1821892",
+                    "name": "Hila Gonen"
+                },
+                {
+                    "authorId": "1982950",
+                    "name": "Luke Zettlemoyer"
+                }
+            ]
+        }
+    ]
+}

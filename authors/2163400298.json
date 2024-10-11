@@ -1,0 +1,378 @@
+{
+    "authorId": "2163400298",
+    "papers": [
+        {
+            "paperId": "81571f64e0b4b75fedae6a4279290e59e4143976",
+            "title": "Item-side Fairness of Large Language Model-based Recommendation System",
+            "abstract": "Recommendation systems for Web content distribution intricately connect to the information access and exposure opportunities for vulnerable populations. The emergence of Large Language Models-based Recommendation System (LRS) may introduce additional societal challenges to recommendation systems due to the inherent biases in Large Language Models (LLMs). From the perspective of item-side fairness, there remains a lack of comprehensive investigation into the item-side fairness of LRS given the unique characteristics of LRS compared to conventional recommendation systems. To bridge this gap, this study examines the property of LRS with respect to item-side fairness and reveals the influencing factors of both historical users' interactions and inherent semantic biases of LLMs, shedding light on the need to extend conventional item-side fairness methods for LRS. Towards this goal, we develop a concise and effective framework called IFairLRS to enhance the item-side fairness of an LRS. IFairLRS covers the main stages of building an LRS with specifically adapted strategies to calibrate the recommendations of LRS. We utilize IFairLRS to fine-tune LLaMA, a representative LLM, on MovieLens and Steam datasets, and observe significant item-side fairness improvements. The code can be found in https://github.com/JiangM-C/IFairLRS.git.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2225076028",
+                    "name": "Meng Jiang"
+                },
+                {
+                    "authorId": "2188063534",
+                    "name": "Keqin Bao"
+                },
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2261748725",
+                    "name": "Zhengyi Yang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2239071206",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "c52772edbbbc408fe864716a74b08e4e076c0966",
+            "title": "Causal Distillation for Alleviating Performance Heterogeneity in Recommender Systems",
+            "abstract": "Recommendation performance usually exhibits a long-tail distribution over users \u2014 a small portion of head users enjoy much more accurate recommendation services than the others. We reveal two sources of this performance heterogeneity problem: the uneven distribution of historical interactions (a natural source); and the biased training of recommender models (a model source). As addressing this problem cannot sacrifice the overall performance, a wise choice is to eliminate the model bias while maintaining the natural heterogeneity. The key to debiased training lies in eliminating the effect of confounders that influence both the user's historical behaviors and the next behavior. The emerging causal recommendation methods achieve this by modeling the causal effect between user behaviors, however potentially neglect unobserved confounders (e.g., friend suggestions) that are hard to measure in practice. To address unobserved confounders, we resort to the front-door adjustment (FDA) in causal theory and propose a causal multi-teacher distillation framework (CausalD). FDA requires proper mediators in order to estimate the causal effects of historical behaviors on the next behavior. To achieve this, we equip CausalD with multiple heterogeneous recommendation models to model the mediator distribution. Then, the causal effect estimated by FDA is the expectation of recommendation prediction over the mediator distribution and the prior distribution of historical behaviors, which is technically achieved by multi-teacher ensemble. To pursue efficient inference, CausalD further distills multiple teachers into one student model to directly infer the causal effect for making recommendations. We instantiate CausalD on two representative models, DeepFM and DIN, and conduct extensive experiments on three real-world datasets, which validate the superiority of CausalD over state-of-the-art methods. Through in-depth analysis, we find that CausalD largely improves the performance of tail users, reduces the performance heterogeneity, and enhances the overall performance.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1739188006",
+                    "name": "Shengyu Zhang"
+                },
+                {
+                    "authorId": "2142708915",
+                    "name": "Ziqi Jiang"
+                },
+                {
+                    "authorId": "2110069725",
+                    "name": "Jiangchao Yao"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2315590980",
+                    "name": "Kun Kuang"
+                },
+                {
+                    "authorId": "2187385241",
+                    "name": "Zhou Zhao"
+                },
+                {
+                    "authorId": "2222777391",
+                    "name": "Shuo Li"
+                },
+                {
+                    "authorId": "2145952806",
+                    "name": "Hongxia Yang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                },
+                {
+                    "authorId": "2110922423",
+                    "name": "Fei Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "001c35feef59c01394707b29fd95e4c7374b284d",
+            "title": "Recommendation Unlearning via Influence Function",
+            "abstract": "Recommendation unlearning is an emerging task to serve users for erasing unusable data (e.g., some historical behaviors) from a well-trained recommender model. Existing methods process unlearning requests by fully or partially retraining the model after removing the unusable data. However, these methods are impractical due to the high computation cost of full retraining and the highly possible performance damage of partial training. In this light, a desired recommendation unlearning method should obtain a similar model as full retraining in a more efficient manner, i.e., achieving complete, efficient and harmless unlearning. In this work, we propose a new Influence Function-based Recommendation Unlearning (IFRU) framework, which efficiently updates the model without retraining by estimating the influence of the unusable data on the model via the influence function. In the light that recent recommender models use historical data for both the constructions of the optimization loss and the computational graph (e.g., neighborhood aggregation), IFRU jointly estimates the direct influence of unusable data on optimization loss and the spillover influence on the computational graph to pursue complete unlearning. Furthermore, we propose an importance-based pruning algorithm to reduce the cost of the influence function. IFRU is harmless and applicable to mainstream differentiable models. Extensive experiments demonstrate that IFRU achieves more than 250 times acceleration compared to retraining-based methods with recommendation performance comparable to full retraining. Codes are avaiable at https://github.com/baiyimeng/IFRU.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2111297664",
+                    "name": "ZhiYu Hu"
+                },
+                {
+                    "authorId": "1456009564",
+                    "name": "Yimeng Bai"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "1491035012",
+                    "name": "Jiancan Wu"
+                },
+                {
+                    "authorId": "145196279",
+                    "name": "Qifan Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "06673e37f8d8a515d6fe26511dd1fbae69a9237d",
+            "title": "Partial Annotation-based Video Moment Retrieval via Iterative Learning",
+            "abstract": "Given a descriptive language query, Video Moment Retrieval (VMR) aims to seek the corresponding semantic-consistent moment clip in the video, which is represented as a pair of the start and end timestamps. Although current methods have achieved satisfying performance, training these models heavily relies on the fully-annotated VMR datasets. Nonetheless, precise video temporal annotations are extremely labor-intensive and ambiguous due to the diverse preferences of different annotators. Although there are several works trying to explore weakly supervised VMR tasks with scattered annotated frames as labels, there is still much room to improve in terms of accuracy. Therefore, we design a new setting of VMR where users can easily point to small segments of non-controversy video moments and our proposed method can automatically fill in the remaining parts based on the video and query semantics. To support this, we propose a new framework named Video Moment Retrieval via Iterative Learning (VMRIL). It treats the partial temporal region as the seed, then expands the pseudo label by iterative training. In order to restrict the expansion with reasonable boundaries, we utilize a pretrained video action localization model to provide coarse guidance of potential video segments. Compared with other VMR methods, our VMRIL achieves a trade-off between satisfying performance and annotation efficiency. Experimental results show that our proposed method can achieve the SOTA performance in the weakly supervised VMR setting, and are even comparable with some fully-supervised VMR methods but with much less annotation cost.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2261791648",
+                    "name": "Wei Ji"
+                },
+                {
+                    "authorId": "2261748535",
+                    "name": "Renjie Liang"
+                },
+                {
+                    "authorId": "2261751914",
+                    "name": "Lizi Liao"
+                },
+                {
+                    "authorId": "2261750082",
+                    "name": "Hao Fei"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                }
+            ]
+        },
+        {
+            "paperId": "06c9fb858fce351b724e1f5991eb6a81895aeab4",
+            "title": "Equivariant Learning for Out-of-Distribution Cold-start Recommendation",
+            "abstract": "Recommender systems rely on user-item interactions to learn Collaborative Filtering (CF) signals and easily under-recommend the cold-start items without historical interactions. To boost cold-start item recommendation, previous studies usually incorporate item features (e.g., micro-video content features) into CF models. They essentially align the feature representations of warm-start items with CF representations during training, and then adopt the feature representations of cold-start items to make recommendations. However, cold-start items might have feature distribution shifts from warm-start ones due to different upload times. As such, these cold-start item features fall into the underrepresented feature space, where their feature representations cannot align well with CF signals, causing poor cold-start recommendation. To combat item feature shifts, the key lies in pushing feature representation learning to well represent the shifted item features and align with the CF representations in the underrepresented feature space. To this end, we propose an equivariant learning framework, which aims to achieve equivariant alignment between item features, feature representations, and CF representations in the underrepresented feature space. Specifically, since cold-start items are unavailable for training, we interpolate the features and CF representations of two underrepresented warm items to simulate the feature shifts. The interpolated feature representations are then regulated to achieve equivariant alignment with the interpolated features and CF representations via three alignment losses. We instantiate the proposed framework on two competitive cold-start models, and empirical results on three datasets validate that the framework significantly improves cold-start recommendation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2192203811",
+                    "name": "Xinyu Lin"
+                },
+                {
+                    "authorId": "2261789936",
+                    "name": "Liuhui Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "1887997",
+                    "name": "Yin-wei Wei"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "0ed565e9c2ddb80e3d6cc54c921e08f95e569eb0",
+            "title": "Doc2SoarGraph: Discrete Reasoning over Visually-Rich Table-Text Documents via Semantic-Oriented Hierarchical Graphs",
+            "abstract": "Table-text document (e.g., financial reports) understanding has attracted increasing attention in recent two years. TAT-DQA is a realistic setting for the understanding of visually-rich table-text documents, which involves answering associated questions requiring discrete reasoning. Most existing work relies on token-level semantics, falling short in the reasoning across document elements such as quantities and dates. To address this limitation, we propose a novel Doc2SoarGraph model that exploits element-level semantics and employs Semantic-oriented hierarchical Graph structures to capture the differences and correlations among different elements within the given document and question. Extensive experiments on the TAT-DQA dataset reveal that our model surpasses the state-of-the-art conventional method (i.e., MHST) and large language model (i.e., ChatGPT) by 17.73 and 6.49 points respectively in terms of Exact Match (EM) metric, demonstrating exceptional effectiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31734386",
+                    "name": "Fengbin Zhu"
+                },
+                {
+                    "authorId": "2144448019",
+                    "name": "Chao Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2158173064",
+                    "name": "Zifeng Ren"
+                },
+                {
+                    "authorId": "2118769749",
+                    "name": "Moxin Li"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "0fe861147ea756d271d33121ac48519ea3a11811",
+            "title": "Leveraging Watch-time Feedback for Short-Video Recommendations: A Causal Labeling Framework",
+            "abstract": "With the proliferation of short video applications, the significance of short video recommendations has vastly increased. Unlike other recommendation scenarios, short video recommendation systems heavily rely on feedback from watch time. Existing approaches simply treat watch time as a direct label, failing to effectively harness its extensive semantics and introduce bias, thereby limiting the potential for modeling user interests based on watch time. To overcome this challenge, we propose a framework named Debiased Multiple-semantics-extracting Labeling (DML). DML constructs labels that encompass various semantics by utilizing quantiles derived from the distribution of watch time, prioritizing relative order rather than absolute label values. This approach facilitates easier model learning while aligning with the ranking objective of recommendations. Furthermore, we introduce a method inspired by causal adjustment to refine label definitions, thereby directly mitigating bias at the label level. We substantiate the effectiveness of our DML framework through both online and offline experiments. Extensive results demonstrate that our DML could effectively leverage watch time to discover users' real interests, enhancing their engagement in our application.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "1456009564",
+                    "name": "Yimeng Bai"
+                },
+                {
+                    "authorId": "2630544",
+                    "name": "Jianxin Chang"
+                },
+                {
+                    "authorId": "2055666765",
+                    "name": "Xiaoxue Zang"
+                },
+                {
+                    "authorId": "2220987794",
+                    "name": "Song Lu"
+                },
+                {
+                    "authorId": "2115404510",
+                    "name": "Jing Lu"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2056580600",
+                    "name": "Yanan Niu"
+                },
+                {
+                    "authorId": "2157996254",
+                    "name": "Yang Song"
+                }
+            ]
+        },
+        {
+            "paperId": "2504035356a92cf2c8ad2beafd361719ac8aa6da",
+            "title": "SoarGraph: Numerical Reasoning over Financial Table-Text Data via Semantic-Oriented Hierarchical Graphs",
+            "abstract": "Towards the intelligent understanding of table-text data in the finance domain, previous research explores numerical reasoning over table-text content with Question Answering (QA) tasks. A general framework is to extract supporting evidence from the table and text and then perform numerical reasoning over extracted evidence for inferring the answer. However, existing models are vulnerable to missing supporting evidence, which limits their performance. In this work, we propose a novel Semantic-Oriented Hierarchical Graph (SoarGraph) that models the semantic relationships and dependencies among the different elements (e.g., question, table cells, text paragraphs, quantities, and dates) using hierarchical graphs to facilitate supporting evidence extraction and enhance numerical reasoning capability. We conduct our experiments on two popular benchmarks, FinQA and TAT-QA datasets, and the results show that our SoarGraph significantly outperforms all strong baselines, demonstrating remarkable effectiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31734386",
+                    "name": "Fengbin Zhu"
+                },
+                {
+                    "authorId": "2118769749",
+                    "name": "Moxin Li"
+                },
+                {
+                    "authorId": "66358686",
+                    "name": "Junbin Xiao"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2144448019",
+                    "name": "Chao Wang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "28fa51f1b70869c1c8f610b25ddb841c83a8de2b",
+            "title": "Discriminative-Invariant Representation Learning for Unbiased Recommendation",
+            "abstract": "Selection bias hinders recommendation models from learning unbiased user preference. Recent works empirically reveal that pursuing invariant user and item representation across biased and unbiased data is crucial for counteracting selection bias. However, our theoretical analysis reveals that simply optimizing representation invariance is insufficient for addressing the selection bias \u2014 recommendation performance is bounded by both representation invariance and discriminability. Worse still, current invariant representation learning methods in recommendation neglect even hurt the representation discriminability due to data sparsity and label shift. In this light, we propose a new Discriminative-Invariant Representation Learning framework for unbiased recommendation, which incorporates label-conditional clustering and prior-guided contrasting into conventional invariant representation learning to mitigate the impact of data sparsity and label shift, respectively. We conduct extensive experiments on three real-world datasets, validating the rationality and effectiveness of the proposed framework. Code and supplementary materials are available at: https://github.com/HungPaan/DIRL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2153422494",
+                    "name": "Wentao Shi"
+                },
+                {
+                    "authorId": "8612672",
+                    "name": "Junkang Wu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "2e92b3699668f920a8d692535622ebeaa53315e2",
+            "title": "Is ChatGPT Fair for Recommendation? Evaluating Fairness in Large Language Model Recommendation",
+            "abstract": "The remarkable achievements of Large Language Models (LLMs) have led to the emergence of a novel recommendation paradigm \u2014 Recommendation via LLM (RecLLM). Nevertheless, it is important to note that LLMs may contain social prejudices, and therefore, the fairness of recommendations made by RecLLM requires further investigation. To avoid the potential risks of RecLLM, it is imperative to evaluate the fairness of RecLLM with respect to various sensitive attributes on the user side. Due to the differences between the RecLLM paradigm and the traditional recommendation paradigm, it is problematic to directly use the fairness benchmark of traditional recommendation. To address the dilemma, we propose a novel benchmark called Fairness of Recommendation via LLM (FaiRLLM). This benchmark comprises carefully crafted metrics and a dataset that accounts for eight sensitive attributes1 in two recommendation scenarios: music and movies. By utilizing our FaiRLLM benchmark, we conducted an evaluation of ChatGPT and discovered that it still exhibits unfairness to some sensitive attributes when generating recommendations. Our code and dataset can be found at https://github.com/jizhi-zhang/FaiRLLM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "2188063534",
+                    "name": "Keqin Bao"
+                },
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,669 @@
+{
+    "authorId": "2259869648",
+    "papers": [
+        {
+            "paperId": "02ab828fdb7b49d97d3c780906e2a43caa1b3bed",
+            "title": "Chem-FINESE: Validating Fine-Grained Few-shot Entity Extraction through Text Reconstruction",
+            "abstract": "Fine-grained few-shot entity extraction in the chemical domain faces two unique challenges. First, compared with entity extraction tasks in the general domain, sentences from chemical papers usually contain more entities. Moreover, entity extraction models usually have difficulty extracting entities of long-tailed types. In this paper, we propose Chem-FINESE, a novel sequence-to-sequence (seq2seq) based few-shot entity extraction approach, to address these two challenges. Our Chem-FINESE has two components: a seq2seq entity extractor to extract named entities from the input sentence and a seq2seq self-validation module to reconstruct the original input sentence from extracted entities. Inspired by the fact that a good entity extraction system needs to extract entities faithfully, our new self-validation module leverages entity extraction results to reconstruct the original input sentence. Besides, we design a new contrastive loss to reduce excessive copying during the extraction process. Finally, we release ChemNER+, a new fine-grained chemical entity extraction dataset that is annotated by domain experts with the ChemNER schema. Experiments in few-shot settings with both ChemNER+ and CHEMET datasets show that our newly proposed framework has contributed up to 8.26% and 6.84% absolute F1-score gains respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2116461591",
+                    "name": "Zixuan Zhang"
+                },
+                {
+                    "authorId": "2271539616",
+                    "name": "Hongxiang Li"
+                },
+                {
+                    "authorId": "2271402844",
+                    "name": "Xuan Liu"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2271097936",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2271564893",
+                    "name": "Huimin Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "1da54405069963eaa1bba7a221b483a04ab5cdd6",
+            "title": "Text2DB: Integration-Aware Information Extraction with Large Language Model Agents",
+            "abstract": "The task of information extraction (IE) is to extract structured knowledge from text. However, it is often not straightforward to utilize IE output due to the mismatch between the IE ontology and the downstream application needs. We propose a new formulation of IE T EXT 2DB that emphasizes the integration of IE output and the target database (or knowledge base). Given a user instruction, a document set, and a database, our task requires the model to update the database with values from the document set to satisfy the user instruction. This task requires understanding user instructions for what to extract and adapting to the given DB/KB schema for how to extract on the fly. To evaluate this new task, we introduce a new benchmark featuring common demands such as data infilling, row population, and column addition. In addition, we propose an LLM agent framework OPAL (Observe-Plan-Analyze LLM) which includes an Observer component that interacts with the database, the Planner component that generates a code-based plan with calls to IE models, and the Analyzer component that provides feedback regarding code quality before execution. Experiments show that OPAL can successfully adapt to diverse database schemas by generating different code plans and calling the required IE models. We also highlight difficult cases such as dealing with large databases with complex dependencies and extraction hallucination, which we believe deserve further investigation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2293818809",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2187778761",
+                    "name": "Sizhe Zhou"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "6c2f36544226a34ede9aaae4a9655595ab543611",
+            "title": "Establishing Knowledge Preference in Language Models",
+            "abstract": "Language models are known to encode a great amount of factual knowledge through pretraining. However, such knowledge might be insufficient to cater to user requests, requiring the model to integrate external knowledge sources and adhere to user-provided specifications. When answering questions about ongoing events, the model should use recent news articles to update its response; when asked to provide recommendations, the model should prioritize user specifications over retrieved product reviews; when some facts are edited in the model, the updated facts should override all prior knowledge learned by the model even if they are conflicting. In all of the cases above, the model faces a decision between its own parametric knowledge, (retrieved) contextual knowledge, and user instruction knowledge. In this paper, we (1) unify such settings into the problem of knowledge preference and define a three-level preference hierarchy over these knowledge sources; (2) compile a collection of existing datasets IfQA, MQuAKE, and MRQA covering a combination of settings (with/without user specifications, with/without context documents) to systematically evaluate how well models obey the intended knowledge preference; and (3) propose a dataset synthesis method that composes diverse question-answer pairs with user assumptions and related context to directly fine-tune LMs for instilling the hierarchy of knowledge. We demonstrate that a 7B model, fine-tuned on only a few thousand examples automatically generated by our proposed method, effectively achieves superior performance (more than 18% improvement across all evaluation benchmarks) in adhering to the desired knowledge preference hierarchy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2187778761",
+                    "name": "Sizhe Zhou"
+                },
+                {
+                    "authorId": "2293818809",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "ab944b8561dc0280180469bdb94f189be1cc2e80",
+            "title": "ActionIE: Action Extraction from Scientific Literature with Programming Languages",
+            "abstract": "Extraction of experimental procedures from human language in scientific literature and patents into actionable sequences in robotics language holds immense significance in scientific domains. Such an action extraction task is particularly challenging given the intricate details and context-dependent nature of the instructions, especially in fields like chemistry where reproducibility is paramount. In this paper, we introduce A CTION IE, a method that leverages Large Language Models (LLMs) to bridge this divide by converting actions written in natural language into executable Python code. This enables us to capture the entities of interest, and the relationship between each action, given the features of Programming Languages. Utilizing linguistic cues identified by frequent patterns, ActionIE provides an improved mechanism to discern entities of interest. While our method is broadly applicable, we exemplify its power in the domain of chemical literature, wherein we focus on extracting experimental procedures for chemical synthesis. The code generated by our method can be easily transformed into robotics language which is in high demand in scientific fields. Comprehensive experiments demonstrate the superiority of our method. In addition, we propose a graph-based metric to more accurately reflect the precision of extraction. We also develop a dataset to address the scarcity of scientific literature occurred in existing datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2269835943",
+                    "name": "Xianrui Zhong"
+                },
+                {
+                    "authorId": "2312034033",
+                    "name": "Yufeng Du"
+                },
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2316709408",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2316653022",
+                    "name": "Tingfeng Luo"
+                },
+                {
+                    "authorId": "2316633143",
+                    "name": "Qirong Ho"
+                },
+                {
+                    "authorId": "2316788204",
+                    "name": "Hao Peng"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "b2fda33b7c122c044a7faa185d250d59ce9e4453",
+            "title": "Investigating Data Contamination for Pre-training Language Models",
+            "abstract": "Language models pre-trained on web-scale corpora demonstrate impressive capabilities on diverse downstream tasks. However, there is increasing concern whether such capabilities might arise from evaluation datasets being included in the pre-training corpus -- a phenomenon known as \\textit{data contamination} -- in a manner that artificially increases performance. There has been little understanding of how this potential contamination might influence LMs' performance on downstream tasks. In this paper, we explore the impact of data contamination at the pre-training stage by pre-training a series of GPT-2 models \\textit{from scratch}. We highlight the effect of both text contamination (\\textit{i.e.}\\ input text of the evaluation samples) and ground-truth contamination (\\textit{i.e.}\\ the prompts asked on the input and the desired outputs) from evaluation data. We also investigate the effects of repeating contamination for various downstream tasks. Additionally, we examine the prevailing n-gram-based definitions of contamination within current LLM reports, pinpointing their limitations and inadequacy. Our findings offer new insights into data contamination's effects on language model capabilities and underscore the need for independent, comprehensive contamination assessments in LLM studies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2800541",
+                    "name": "Minhao Jiang"
+                },
+                {
+                    "authorId": "2298016051",
+                    "name": "Ken Ziyu Liu"
+                },
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "1749176844",
+                    "name": "Rylan Schaeffer"
+                },
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "123593472",
+                    "name": "Sanmi Koyejo"
+                }
+            ]
+        },
+        {
+            "paperId": "c9cec46da172fbe591a2f086c2647176c34d8ca3",
+            "title": "Law of the Weakest Link: Cross Capabilities of Large Language Models",
+            "abstract": "The development and evaluation of Large Language Models (LLMs) have largely focused on individual capabilities. However, this overlooks the intersection of multiple abilities across different types of expertise that are often required for real-world tasks, which we term cross capabilities. To systematically explore this concept, we first define seven core individual capabilities and then pair them to form seven common cross capabilities, each supported by a manually constructed taxonomy. Building on these definitions, we introduce CrossEval, a benchmark comprising 1,400 human-annotated prompts, with 100 prompts for each individual and cross capability. To ensure reliable evaluation, we involve expert annotators to assess 4,200 model responses, gathering 8,400 human ratings with detailed explanations to serve as reference examples. Our findings reveal that, in both static evaluations and attempts to enhance specific abilities, current LLMs consistently exhibit the\"Law of the Weakest Link,\"where cross-capability performance is significantly constrained by the weakest component. Specifically, across 58 cross-capability scores from 17 models, 38 scores are lower than all individual capabilities, while 20 fall between strong and weak, but closer to the weaker ability. These results highlight the under-performance of LLMs in cross-capability tasks, making the identification and improvement of the weakest capabilities a critical priority for future research to optimize performance in complex, multi-dimensional scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2316417711",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2313922587",
+                    "name": "Aston Zhang"
+                },
+                {
+                    "authorId": "2314067352",
+                    "name": "Xuewei Wang"
+                },
+                {
+                    "authorId": "2323505642",
+                    "name": "Rui Hou"
+                },
+                {
+                    "authorId": "2290750668",
+                    "name": "Wenhan Xiong"
+                },
+                {
+                    "authorId": "2289050839",
+                    "name": "Chenguang Zhu"
+                },
+                {
+                    "authorId": "2266490735",
+                    "name": "Zhengxing Chen"
+                },
+                {
+                    "authorId": "2313924605",
+                    "name": "Liang Tan"
+                },
+                {
+                    "authorId": "2313909658",
+                    "name": "Chloe Bi"
+                },
+                {
+                    "authorId": "2247796743",
+                    "name": "Mike Lewis"
+                },
+                {
+                    "authorId": "2145479276",
+                    "name": "Sravya Popuri"
+                },
+                {
+                    "authorId": "46617804",
+                    "name": "Sharan Narang"
+                },
+                {
+                    "authorId": "2165660870",
+                    "name": "M. Kambadur"
+                },
+                {
+                    "authorId": "2267338678",
+                    "name": "Dhruv Mahajan"
+                },
+                {
+                    "authorId": "2068070",
+                    "name": "Sergey Edunov"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "1803520",
+                    "name": "L. Maaten"
+                }
+            ]
+        },
+        {
+            "paperId": "db40e0e2a7557bb4c9e4ab2e4f81bc3ec85abb17",
+            "title": "Multi-LoRA Composition for Image Generation",
+            "abstract": "Low-Rank Adaptation (LoRA) is extensively utilized in text-to-image models for the accurate rendition of specific elements like distinct characters or unique styles in generated images. Nonetheless, existing methods face challenges in effectively composing multiple LoRAs, especially as the number of LoRAs to be integrated grows, thus hindering the creation of complex imagery. In this paper, we study multi-LoRA composition through a decoding-centric perspective. We present two training-free methods: LoRA Switch, which alternates between different LoRAs at each denoising step, and LoRA Composite, which simultaneously incorporates all LoRAs to guide more cohesive image synthesis. To evaluate the proposed approaches, we establish ComposLoRA, a new comprehensive testbed as part of this research. It features a diverse range of LoRA categories with 480 composition sets. Utilizing an evaluation framework based on GPT-4V, our findings demonstrate a clear improvement in performance with our methods over the prevalent baseline, particularly evident when increasing the number of LoRAs in a composition.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2237948786",
+                    "name": "Yelong Shen"
+                },
+                {
+                    "authorId": "2287785375",
+                    "name": "Shuohang Wang"
+                },
+                {
+                    "authorId": "2238052953",
+                    "name": "Yadong Lu"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2287794511",
+                    "name": "Donghan Yu"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2249538838",
+                    "name": "Weizhu Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "ede9e29755a9856b820137869f136a9b5842f43c",
+            "title": "Investigating Instruction Tuning Large Language Models on Graphs",
+            "abstract": "Inspired by the recent advancements of Large Language Models (LLMs) in NLP tasks, there's growing interest in applying LLMs to graph-related tasks. This study delves into the capabilities of instruction-following LLMs for engaging with real-world graphs, aiming to offer empirical insights into how LLMs can effectively interact with graphs and generalize across graph tasks. We begin by constructing a dataset designed for instruction tuning, which comprises a diverse collection of 79 graph-related tasks from academic and e-commerce domains, featuring 44,240 training instances and 18,960 test samples. Utilizing this benchmark, our initial investigation focuses on identifying the optimal graph representation that serves as a conduit for LLMs to understand complex graph structures. Our findings indicate that JSON format for graph representation consistently outperforms natural language and code formats across various LLMs and graph types. Furthermore, we examine the key factors that influence the generalization abilities of instruction-tuned LLMs by evaluating their performance on both in-domain and out-of-domain graph tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2315925352",
+                    "name": "Kerui Zhu"
+                },
+                {
+                    "authorId": "2110607118",
+                    "name": "Bo-Wei Huang"
+                },
+                {
+                    "authorId": "2057050247",
+                    "name": "Bowen Jin"
+                },
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "2316709408",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2316048447",
+                    "name": "Kevin Chang"
+                },
+                {
+                    "authorId": "2315946279",
+                    "name": "Shou-De Lin"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "fb4dc0178e5d7347b1615c48caf05347b6e5eb48",
+            "title": "TrustLLM: Trustworthiness in Large Language Models",
+            "abstract": "Large language models (LLMs), exemplified by ChatGPT, have gained considerable attention for their excellent natural language processing capabilities. Nonetheless, these LLMs present many challenges, particularly in the realm of trustworthiness. Therefore, ensuring the trustworthiness of LLMs emerges as an important topic. This paper introduces TrustLLM, a comprehensive study of trustworthiness in LLMs, including principles for different dimensions of trustworthiness, established benchmark, evaluation, and analysis of trustworthiness for mainstream LLMs, and discussion of open challenges and future directions. Specifically, we first propose a set of principles for trustworthy LLMs that span eight different dimensions. Based on these principles, we further establish a benchmark across six dimensions including truthfulness, safety, fairness, robustness, privacy, and machine ethics. We then present a study evaluating 16 mainstream LLMs in TrustLLM, consisting of over 30 datasets. Our findings firstly show that in general trustworthiness and utility (i.e., functional effectiveness) are positively related. Secondly, our observations reveal that proprietary LLMs generally outperform most open-source counterparts in terms of trustworthiness, raising concerns about the potential risks of widely accessible open-source LLMs. However, a few open-source LLMs come very close to proprietary ones. Thirdly, it is important to note that some LLMs may be overly calibrated towards exhibiting trustworthiness, to the extent that they compromise their utility by mistakenly treating benign prompts as harmful and consequently not responding. Finally, we emphasize the importance of ensuring transparency not only in the models themselves but also in the technologies that underpin trustworthiness. Knowing the specific trustworthy technologies that have been employed is crucial for analyzing their effectiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257131651",
+                    "name": "Lichao Sun"
+                },
+                {
+                    "authorId": "2257084278",
+                    "name": "Yue Huang"
+                },
+                {
+                    "authorId": "2256769280",
+                    "name": "Haoran Wang"
+                },
+                {
+                    "authorId": "2254867423",
+                    "name": "Siyuan Wu"
+                },
+                {
+                    "authorId": "2254328621",
+                    "name": "Qihui Zhang"
+                },
+                {
+                    "authorId": "2279094112",
+                    "name": "Chujie Gao"
+                },
+                {
+                    "authorId": "2282234921",
+                    "name": "Yixin Huang"
+                },
+                {
+                    "authorId": "2279022836",
+                    "name": "Wenhan Lyu"
+                },
+                {
+                    "authorId": "2257107248",
+                    "name": "Yixuan Zhang"
+                },
+                {
+                    "authorId": "2118053386",
+                    "name": "Xiner Li"
+                },
+                {
+                    "authorId": "2145977326",
+                    "name": "Zheng Liu"
+                },
+                {
+                    "authorId": "2254346817",
+                    "name": "Yixin Liu"
+                },
+                {
+                    "authorId": "2279093879",
+                    "name": "Yijue Wang"
+                },
+                {
+                    "authorId": "2275287781",
+                    "name": "Zhikun Zhang"
+                },
+                {
+                    "authorId": "1749353",
+                    "name": "B. Kailkhura"
+                },
+                {
+                    "authorId": "2266469680",
+                    "name": "Caiming Xiong"
+                },
+                {
+                    "authorId": "2256992325",
+                    "name": "Chaowei Xiao"
+                },
+                {
+                    "authorId": "2268756316",
+                    "name": "Chun-Yan Li"
+                },
+                {
+                    "authorId": "2243234805",
+                    "name": "Eric P. Xing"
+                },
+                {
+                    "authorId": "2268686199",
+                    "name": "Furong Huang"
+                },
+                {
+                    "authorId": "2240876242",
+                    "name": "Haodong Liu"
+                },
+                {
+                    "authorId": "2271097936",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2254303011",
+                    "name": "Hongyi Wang"
+                },
+                {
+                    "authorId": "2237996727",
+                    "name": "Huan Zhang"
+                },
+                {
+                    "authorId": "18307037",
+                    "name": "Huaxiu Yao"
+                },
+                {
+                    "authorId": "2143693283",
+                    "name": "M. Kellis"
+                },
+                {
+                    "authorId": "2095762",
+                    "name": "M. Zitnik"
+                },
+                {
+                    "authorId": "2279159644",
+                    "name": "Meng Jiang"
+                },
+                {
+                    "authorId": "2253396640",
+                    "name": "Mohit Bansal"
+                },
+                {
+                    "authorId": "2278917478",
+                    "name": "James Zou"
+                },
+                {
+                    "authorId": "2228505567",
+                    "name": "Jian Pei"
+                },
+                {
+                    "authorId": "2238123544",
+                    "name": "Jian Liu"
+                },
+                {
+                    "authorId": "2256227183",
+                    "name": "Jianfeng Gao"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2266698166",
+                    "name": "Jieyu Zhao"
+                },
+                {
+                    "authorId": "2279062891",
+                    "name": "Jiliang Tang"
+                },
+                {
+                    "authorId": "2145270616",
+                    "name": "Jindong Wang"
+                },
+                {
+                    "authorId": "2279260447",
+                    "name": "John Mitchell"
+                },
+                {
+                    "authorId": "2241470375",
+                    "name": "Kai Shu"
+                },
+                {
+                    "authorId": "2267887786",
+                    "name": "Kaidi Xu"
+                },
+                {
+                    "authorId": "2256646491",
+                    "name": "Kai-Wei Chang"
+                },
+                {
+                    "authorId": "2254874151",
+                    "name": "Lifang He"
+                },
+                {
+                    "authorId": "34170717",
+                    "name": "Lifu Huang"
+                },
+                {
+                    "authorId": "152981628",
+                    "name": "M. Backes"
+                },
+                {
+                    "authorId": "2249536787",
+                    "name": "Neil Zhenqiang Gong"
+                },
+                {
+                    "authorId": "2258679535",
+                    "name": "Philip S. Yu"
+                },
+                {
+                    "authorId": "2279077171",
+                    "name": "Pin-Yu Chen"
+                },
+                {
+                    "authorId": "2279024252",
+                    "name": "Quanquan Gu"
+                },
+                {
+                    "authorId": "2279097262",
+                    "name": "Ran Xu"
+                },
+                {
+                    "authorId": "2279023269",
+                    "name": "Rex Ying"
+                },
+                {
+                    "authorId": "2279225650",
+                    "name": "Shuiwang Ji"
+                },
+                {
+                    "authorId": "39400201",
+                    "name": "S. Jana"
+                },
+                {
+                    "authorId": "2265221446",
+                    "name": "Tian-Xiang Chen"
+                },
+                {
+                    "authorId": "2254792886",
+                    "name": "Tianming Liu"
+                },
+                {
+                    "authorId": "2144116530",
+                    "name": "Tianying Zhou"
+                },
+                {
+                    "authorId": "2281072607",
+                    "name": "William Wang"
+                },
+                {
+                    "authorId": "2280943906",
+                    "name": "Xiang Li"
+                },
+                {
+                    "authorId": "2261601059",
+                    "name": "Xiang-Yu Zhang"
+                },
+                {
+                    "authorId": "2282386985",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2164984576",
+                    "name": "Xingyao Xie"
+                },
+                {
+                    "authorId": "2257123882",
+                    "name": "Xun Chen"
+                },
+                {
+                    "authorId": "2282196445",
+                    "name": "Xuyu Wang"
+                },
+                {
+                    "authorId": "2275033850",
+                    "name": "Yan Liu"
+                },
+                {
+                    "authorId": "2279157256",
+                    "name": "Yanfang Ye"
+                },
+                {
+                    "authorId": "2279101306",
+                    "name": "Yinzhi Cao"
+                },
+                {
+                    "authorId": "2254062898",
+                    "name": "Yue Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "2967ab775f6cdabc6ab59010734f352dd3ebc8d6",
+            "title": "Instruct and Extract: Instruction Tuning for On-Demand Information Extraction",
+            "abstract": "Large language models with instruction-following capabilities open the door to a wider group of users. However, when it comes to information extraction - a classic task in natural language processing - most task-specific systems cannot align well with long-tail ad hoc extraction use cases for non-expert users. To address this, we propose a novel paradigm, termed On-Demand Information Extraction, to fulfill the personalized demands of real-world users. Our task aims to follow the instructions to extract the desired content from the associated text and present it in a structured tabular format. The table headers can either be user-specified or inferred contextually by the model. To facilitate research in this emerging area, we present a benchmark named InstructIE, inclusive of both automatically generated training data, as well as the human-annotated test set. Building on InstructIE, we further develop an On-Demand Information Extractor, ODIE. Comprehensive evaluations on our benchmark reveal that ODIE substantially outperforms the existing open-source models of similar size. Our code and dataset are released on https://github.com/yzjiao/On-Demand-IE.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1381900594",
+                    "name": "Yizhu Jiao"
+                },
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "2263798673",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2261459570",
+                    "name": "Ruining Zhao"
+                },
+                {
+                    "authorId": "2260339714",
+                    "name": "Siru Ouyang"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                }
+            ]
+        }
+    ]
+}

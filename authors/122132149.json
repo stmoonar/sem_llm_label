@@ -1,0 +1,400 @@
+{
+    "authorId": "122132149",
+    "papers": [
+        {
+            "paperId": "0b5b54b7326eff71505a8ff8f3dd587d9b9ac530",
+            "title": "ANNA: Abstractive Text-to-Image Synthesis with Filtered News Captions",
+            "abstract": "Advancements in Text-to-Image synthesis over recent years have focused more on improving the quality of generated samples using datasets with descriptive prompts. However, real-world image-caption pairs present in domains such as news data do not use simple and directly descriptive captions. With captions containing information on both the image content and underlying contextual cues, they become abstractive in nature. In this paper, we launch ANNA, an Abstractive News captioNs dAtaset extracted from online news articles in a variety of different contexts. We explore the capabilities of current Text-to-Image synthesis models to generate news domain-specific images using abstractive captions by benchmarking them on ANNA, in both standard training and transfer learning settings. The generated images are judged on the basis of contextual relevance, visual quality, and perceptual similarity to ground-truth image-caption pairs. Through our experiments, we show that techniques such as transfer learning achieve limited success in understanding abstractive captions but still fail to consistently learn the relationships between content and context features. The Dataset is available at https://github.com/aashish2000/ANNA .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2199317976",
+                    "name": "Aashish Anantha Ramakrishnan"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                },
+                {
+                    "authorId": "2158951945",
+                    "name": "Dongwon Lee"
+                }
+            ]
+        },
+        {
+            "paperId": "4a825ef20d808c8277b1e53c0b68a18981312e37",
+            "title": "Be Real in Scale: Swing for True Scale in Dual Camera Mode",
+            "abstract": "Many mobile AR apps that use the front-facing camera can benefit significantly from knowing the metric scale of the user\u2019s face. However, the true scale of the face is hard to measure because monocular vision suffers from a fundamental ambiguity in scale. The methods based on prior knowledge about the scene either have a large error or are not easily accessible. In this paper, we propose a new method to measure the face scale by a simple user interaction: the user only needs to swing the phone to capture two selfies while using the recently popular Dual Camera mode. This mode allows simultaneous streaming of the front camera and the rear cameras and has become a key feature in many social apps. A computer vision method is applied to first estimate the absolute motion of the phone from the images captured by two rear cameras, and then calculate the point cloud of the face by triangulation. We develop a prototype mobile app to validate the proposed method. Our user study shows that the proposed method is favored compared to existing methods because of its high accuracy and ease of use. Our method can be built into Dual Camera mode and can enable a wide range of applications (e.g., virtual try-on for online shopping, true-scale 3D face modeling, gaze tracking, and face anti-spoofing) by introducing true scale to smartphone-based XR. The code is available at https://github.com/ruiyu0/Swing-for-True-Scale.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112771388",
+                    "name": "Rui Yu"
+                },
+                {
+                    "authorId": "2347184",
+                    "name": "J. Wang"
+                },
+                {
+                    "authorId": "144028047",
+                    "name": "Sizhuo Ma"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                },
+                {
+                    "authorId": "1868772",
+                    "name": "Gurunandan Krishnan"
+                },
+                {
+                    "authorId": "48607696",
+                    "name": "Yicheng Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "782be1f30bd6c833f4d54065ce7391a120bf0a88",
+            "title": "NeRF-Enhanced Outpainting for Faithful Field-of-View Extrapolation",
+            "abstract": "In various applications, such as robotic navigation and remote visual assistance, expanding the field of view (FOV) of the camera proves beneficial for enhancing environmental perception. Unlike image outpainting techniques aimed solely at generating aesthetically pleasing visuals, these applications demand an extended view that faithfully represents the scene. To achieve this, we formulate a new problem of faithful FOV extrapolation that utilizes a set of pre-captured images as prior knowledge of the scene. To address this problem, we present a simple yet effective solution called NeRF-Enhanced Outpainting (NEO) that uses extended-FOV images generated through NeRF to train a scene-specific image outpainting model. To assess the performance of NEO, we conduct comprehensive evaluations on three photorealistic datasets and one real-world dataset. Extensive experiments on the benchmark datasets showcase the robustness and potential of our method in addressing this challenge. We believe our work lays a strong foundation for future exploration within the research community.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112771388",
+                    "name": "Rui Yu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Jiachen Liu"
+                },
+                {
+                    "authorId": "2246189561",
+                    "name": "Zihan Zhou"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "b8b5015b153709176385873e34339f9e520d128f",
+            "title": "Conditional Image-to-Video Generation with Latent Flow Diffusion Models",
+            "abstract": "Conditional image-to-video (cI2V) generation aims to synthesize a new plausible video starting from an image (e.g., a person's face) and a condition (e.g., an action class label like smile). The key challenge of the cI2V task lies in the simultaneous generation of realistic spatial appearance and temporal dynamics corresponding to the given image and condition. In this paper, we propose an approach for cI2V using novel latent flow diffusion models (LFDM) that synthesize an optical flow sequence in the latent space based on the given condition to warp the given image. Compared to previous direct-synthesis-based works, our proposed LFDM can better synthesize spatial details and temporal motion by fully utilizing the spatial content of the given image and warping it in the latent space according to the generated temporally-coherent flow. The training of LFDM consists of two separate stages: (1) an unsupervised learning stage to train a latent flow auto-encoder for spatial content generation, including a flow predictor to estimate latent flow between pairs of video frames, and (2) a conditional learning stage to train a 3D-UNet-based diffusion model (DM) for temporal latent flow generation. Unlike previous DMs operating in pixel space or latent feature space that couples spatial and temporal information, the DM in our LFDM only needs to learn a low-dimensional latent flow space for motion generation, thus being more computationally efficient. We conduct comprehensive experiments on multiple datasets, where LFDM consistently outperforms prior arts. Furthermore, we show that LFDM can be easily adapted to new domains by simply finetuning the image decoder. Our code is available at https://github.com/nihaomiao/CVPR23_LFDM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9612761",
+                    "name": "Haomiao Ni"
+                },
+                {
+                    "authorId": "2113917550",
+                    "name": "Changhao Shi"
+                },
+                {
+                    "authorId": "3249631",
+                    "name": "Kaican Li"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                },
+                {
+                    "authorId": "2984407",
+                    "name": "Martin Renqiang Min"
+                }
+            ]
+        },
+        {
+            "paperId": "c3b74c518c70ac94baf936d05d82b529e470ac82",
+            "title": "Strain-Level Identification and Analysis of Avian Coronavirus Using Raman Spectroscopy and Interpretable Machine Learning",
+            "abstract": "Strain-level identification of viruses is important for decision making in public health management. Recently, Raman spectroscopy has attained great attention in virus identification since it enables rapid and label-free analysis. In this paper, we present an interpretable machine learning approach for strain-level identification of avian coronaviruses based on Raman spectra. Specifically, we design a spectral transformer to classify the Raman spectra of 32 avian coronavirus strains. After training, relevance maps can be generated through gradient and relevance propagation to further understand the contribution of each wavenumber to the identification. Experimental results show that the proposed method outperforms several machine learning and deep learning baseline models, and achieves 72.72% accuracy in the 32-class identification problem. The relevance maps generated reveal some wavenumber ranges that are important for the identification of almost all strains, and these ranges correlate with Raman peak ranges for lipids, nucleic acids, and proteins.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2236939228",
+                    "name": "Peng Jin"
+                },
+                {
+                    "authorId": "1687095",
+                    "name": "Y. Yeh"
+                },
+                {
+                    "authorId": "2000120834",
+                    "name": "Jiarong Ye"
+                },
+                {
+                    "authorId": "2121314861",
+                    "name": "Ziyang Wang"
+                },
+                {
+                    "authorId": "13012540",
+                    "name": "Yuan Xue"
+                },
+                {
+                    "authorId": "2237103168",
+                    "name": "Na Zhang"
+                },
+                {
+                    "authorId": "2237066382",
+                    "name": "Shengxi Huang"
+                },
+                {
+                    "authorId": "2580269",
+                    "name": "E. Ghedin"
+                },
+                {
+                    "authorId": "47146770",
+                    "name": "Huaguang Lu"
+                },
+                {
+                    "authorId": "39770774",
+                    "name": "A. Schmitt"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                },
+                {
+                    "authorId": "2136377597",
+                    "name": "Mauricio Terrones"
+                }
+            ]
+        },
+        {
+            "paperId": "c60fbcb3a0ae7c18c8360a05f0d453414f5f2865",
+            "title": "Synthetic Augmentation with Large-scale Unconditional Pre-training",
+            "abstract": "Deep learning based medical image recognition systems often require a substantial amount of training data with expert annotations, which can be expensive and time-consuming to obtain. Recently, synthetic augmentation techniques have been proposed to mitigate the issue by generating realistic images conditioned on class labels. However, the effectiveness of these methods heavily depends on the representation capability of the trained generative model, which cannot be guaranteed without sufficient labeled training data. To further reduce the dependency on annotated data, we propose a synthetic augmentation method called HistoDiffusion, which can be pre-trained on large-scale unlabeled datasets and later applied to a small-scale labeled dataset for augmented training. In particular, we train a latent diffusion model (LDM) on diverse unlabeled datasets to learn common features and generate realistic images without conditional inputs. Then, we fine-tune the model with classifier guidance in latent space on an unseen labeled dataset so that the model can synthesize images of specific categories. Additionally, we adopt a selective mechanism to only add synthetic samples with high confidence of matching to target labels. We evaluate our proposed method by pre-training on three histopathology datasets and testing on a histopathology dataset of colorectal cancer (CRC) excluded from the pre-training datasets. With HistoDiffusion augmentation, the classification accuracy of a backbone classifier is remarkably improved by 6.4% using a small set of the original labels. Our code is available at https://github.com/karenyyy/HistoDiffAug.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2000120834",
+                    "name": "Jiarong Ye"
+                },
+                {
+                    "authorId": "9612761",
+                    "name": "Haomiao Ni"
+                },
+                {
+                    "authorId": null,
+                    "name": "Peng Jin"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                },
+                {
+                    "authorId": "13012540",
+                    "name": "Yuan Xue"
+                }
+            ]
+        },
+        {
+            "paperId": "542e09e66dc7c9863e85e6b18765c1f737d028c4",
+            "title": "Forecasting User Interests Through Topic Tag Predictions in Online Health Communities",
+            "abstract": "The increasing reliance on online communities for healthcare information by patients and caregivers has led to the increase in the spread of misinformation, or subjective, anecdotal and inaccurate or non-specific recommendations, which, if acted on, could cause serious harm to the patients. Hence, there is an urgent need to connect users with accurate and tailored health information in a timely manner to prevent such harm. This article proposes an innovative approach to suggesting reliable information to participants in online communities as they move through different stages in their disease or treatment. We hypothesize that patients with similar histories of disease progression or course of treatment would have similar information needs at comparable stages. Specifically, we pose the problem of predicting topic tags or keywords that describe the future information needs of users based on their profiles, traces of their online interactions within the community (past posts, replies) and the profiles and traces of online interactions of other users with similar profiles and similar traces of past interaction with the target users. The result is a variant of the collaborative information filtering or recommendation system tailored to the needs of users of online health communities. We report results of our experiments on two unique datasets from two different social media platforms which demonstrates the superiority of the proposed approach over the state of the art baselines with respect to accurate and timely prediction of topic tags (and hence information sources of interest).",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "3470741",
+                    "name": "A. Adishesha"
+                },
+                {
+                    "authorId": "2187537516",
+                    "name": "Lily Jakielaszek"
+                },
+                {
+                    "authorId": "151582756",
+                    "name": "Fariha Azhar"
+                },
+                {
+                    "authorId": "2115513764",
+                    "name": "Peixuan Zhang"
+                },
+                {
+                    "authorId": "145513516",
+                    "name": "Vasant G Honavar"
+                },
+                {
+                    "authorId": "2068198532",
+                    "name": "Fenglong Ma"
+                },
+                {
+                    "authorId": "152805543",
+                    "name": "C. Belani"
+                },
+                {
+                    "authorId": "143930195",
+                    "name": "P. Mitra"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "eb1fe3c181d6c9fca547ae991c676f5f51a1abc9",
+            "title": "Cross-identity Video Motion Retargeting with Joint Transformation and Synthesis",
+            "abstract": "In this paper, we propose a novel dual-branch Transformation-Synthesis network (TS-Net), for video motion retargeting. Given one subject video and one driving video, TS-Net can produce a new plausible video with the subject appearance of the subject video and motion pattern of the driving video. TS-Net consists of a warp-based transformation branch and a warp-free synthesis branch. The novel design of dual branches combines the strengths of deformation-grid-based transformation and warp-free generation for better identity preservation and robustness to occlusion in the synthesized videos. A mask-aware similarity module is further introduced to the transformation branch to reduce computational overhead. Experimental results on face and dance datasets show that TS-Net achieves better performance in video motion retargeting than several state-of-the-art models as well as its single-branch variants. Our code is available at https://github.com/nihaomiao/WACV23_TSNet.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9612761",
+                    "name": "Haomiao Ni"
+                },
+                {
+                    "authorId": "145575334",
+                    "name": "Yihao Liu"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                },
+                {
+                    "authorId": "13012540",
+                    "name": "Yuan Xue"
+                }
+            ]
+        },
+        {
+            "paperId": "8afe8a80a8a27999b9c73891ae3139c14c9db965",
+            "title": "Multi-turn Dialog System on Single-turn Data in Medical Domain",
+            "abstract": "Recently there has been a huge interest in dialog systems. This interest has also been developed in the field of the medical domain where researchers are focusing on building a dialog system in the medical domain. This research is focused on the multi-turn dialog system trained on the multi-turn dialog data. It is difficult to gather a huge amount of multi-turn conversational data in the medical domain that is verified by professionals and can be trusted. However, there are several frequently asked questions (FAQs) or single-turn QA pairs that have information that is verified by the experts and can be used to build a multi-turn dialog system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2105847397",
+                    "name": "Nazib Sorathiya"
+                },
+                {
+                    "authorId": "1944537007",
+                    "name": "Chuanlin Lin"
+                },
+                {
+                    "authorId": "2105844537",
+                    "name": "Daniel Chen Daniel Xiong"
+                },
+                {
+                    "authorId": "148169455",
+                    "name": "S. zin"
+                },
+                {
+                    "authorId": "2153914636",
+                    "name": "Yi Zhang"
+                },
+                {
+                    "authorId": "2118953136",
+                    "name": "H. Yang"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "d46ef98e960d3b8e8b532611b3219d48b46c5e4c",
+            "title": "Accurate virus identification with interpretable Raman signatures by machine learning",
+            "abstract": "Rapid identification of newly emerging or circulating viruses is an important first step toward managing the public health response to potential outbreaks. A portable virus capture device coupled with label-free Raman Spectroscopy holds the promise of fast detection by rapidly obtaining the Raman signature of a virus followed by a machine learning approach applied to recognize the virus based on its Raman spectrum. In this paper, we present a machine learning analysis on Raman spectra of human and avian viruses. A Convolutional Neural Network (CNN) classifier specifically designed for spectral data achieves very high accuracy for a variety of virus type or subtype identification tasks. In particular, it achieves 99% accuracy for classifying influenza virus type A vs. type B, 96% accuracy for classifying four subtypes of influenza A, 95% accuracy for differentiating enveloped and non-enveloped viruses, and 99% for differentiating avian coronavirus (infectious bronchitis virus, IBV) from other avian viruses. Furthermore, interpretation of neural net responses in the trained CNN model using a full-gradient algorithm highlights Raman spectral ranges that are most important to virus identification. By correlating ML-selected salient Raman ranges with the signature ranges of known biomolecules and chemical functional groups (e.g. amide, amino acid, carboxylic acid) we verify that our ML model effectively recognizes the Raman signatures of proteins, lipids and other vital functional groups present in different viruses and uses a weighted combination of these signatures to identify viruses. The accurate and interpretable machine learning model developed for Raman virus identification presents promising potential in a real-time virus detection system. Significance Statement A portable micro-fluidic platform for virus capture promises rapid enrichment and label-free optical identification of viruses by Raman spectroscopy. A large Raman dataset collected on a variety of viruses enables the training of machine learning (ML) models capable of highly accurate and sensitive virus identification. The trained ML models can then be integrated with the portable device to provide real-time virus detection and identification capability. We validate this conceptual framework by presenting highly accurate virus type and subtype identification results using a convolutional neural network to classify Raman spectra of viruses.",
+            "fieldsOfStudy": [
+                "Biology",
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2000120834",
+                    "name": "Jiarong Ye"
+                },
+                {
+                    "authorId": "1687095",
+                    "name": "Y. Yeh"
+                },
+                {
+                    "authorId": "13012540",
+                    "name": "Yuan Xue"
+                },
+                {
+                    "authorId": "2121314861",
+                    "name": "Ziyang Wang"
+                },
+                {
+                    "authorId": "2107110968",
+                    "name": "N. Zhang"
+                },
+                {
+                    "authorId": "2109276031",
+                    "name": "He Liu"
+                },
+                {
+                    "authorId": "1480943585",
+                    "name": "Kunyan Zhang"
+                },
+                {
+                    "authorId": "1667056296",
+                    "name": "Zhuohang Yu"
+                },
+                {
+                    "authorId": "2552333",
+                    "name": "A. Roder"
+                },
+                {
+                    "authorId": "41191663",
+                    "name": "N. Lopez"
+                },
+                {
+                    "authorId": "6992790",
+                    "name": "Lindsey J. Organtini"
+                },
+                {
+                    "authorId": "2107861843",
+                    "name": "W. Greene"
+                },
+                {
+                    "authorId": "4746449",
+                    "name": "S. Hafenstein"
+                },
+                {
+                    "authorId": "47146770",
+                    "name": "Huaguang Lu"
+                },
+                {
+                    "authorId": "2580269",
+                    "name": "E. Ghedin"
+                },
+                {
+                    "authorId": "3136746",
+                    "name": "M. Terrones"
+                },
+                {
+                    "authorId": "145280047",
+                    "name": "Shengxi Huang"
+                },
+                {
+                    "authorId": "122132149",
+                    "name": "Sharon X. Huang"
+                }
+            ]
+        }
+    ]
+}

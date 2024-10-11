@@ -1,0 +1,103 @@
+{
+    "authorId": "2238394188",
+    "papers": [
+        {
+            "paperId": "a5adf2881910398948f3c7cdbcf73ef2dfa4e1e7",
+            "title": "Lightweight Embeddings for Graph Collaborative Filtering",
+            "abstract": "Graph neural networks (GNNs) are currently one of the most performant collaborative filtering methods. Meanwhile, owing to the use of an embedding table to represent each user/item as a distinct vector, GNN-based recommenders have inherited the long-standing defect of parameter inefficiency. As a common practice for scalable embeddings, parameter sharing enables the use of fewer embedding vectors (i.e., meta-embeddings). When assigning meta-embeddings, most existing methods are a heuristically designed, predefined mapping from each user's/item's ID to the corresponding meta-embedding indexes, thus simplifying the optimization problem into learning only the meta-embeddings. However, in the context of GNN-based collaborative filtering, such a fixed mapping omits the semantic correlations between entities that are evident in the user-item interaction graph, leading to suboptimal recommendation performance. To this end, we propose Lightweight Embeddings for Graph Collaborative Filtering (LEGCF), a parameter-efficient embedding framework dedicated to GNN-based recommenders. LEGCF innovatively introduces an assignment matrix as an extra learnable component on top of meta-embeddings. To jointly optimize these two heavily entangled components, aside from learning the meta-embeddings by minimizing the recommendation loss, LEGCF further performs efficient assignment update by enforcing a novel semantic similarity constraint and finding its closed-form solution based on matrix pseudo-inverse. The meta-embeddings and assignment matrix are alternately updated, where the latter is sparsified on the fly to ensure negligible storage overhead. Extensive experiments on three benchmark datasets have verified LEGCF's smallest trade-off between size and performance, with consistent accuracy gain over state-of-the-art baselines. The codebase of LEGCF is available in https://github.com/xurong-liang/LEGCF.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2238394188",
+                    "name": "Xurong Liang"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2281001972",
+                    "name": "Lizhen Cui"
+                },
+                {
+                    "authorId": "2155651371",
+                    "name": "Yang Wang"
+                },
+                {
+                    "authorId": "2146059429",
+                    "name": "Meng Wang"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "e1dd99a18e859aebd95b54abe66db47d4762ca7e",
+            "title": "Hate Speech Detection with Generalizable Target-aware Fairness",
+            "abstract": "To counter the side effect brought by the proliferation of social media platforms, hate speech detection (HSD) plays a vital role in halting the dissemination of toxic online posts at an early stage. However, given the ubiquitous topical communities on social media, a trained HSD classifier easily becomes biased towards specific targeted groups (e.g., female and black people), where a high rate of false positive/negative results can significantly impair public trust in the fairness of content moderation mechanisms, and eventually harm the diversity of online society. Although existing fairness-aware HSD methods can smooth out some discrepancies across targeted groups, they are mostly specific to a narrow selection of targets that are assumed to be known and fixed. This inevitably prevents those methods from generalizing to real-world use cases where new targeted groups constantly emerge over time. To tackle this defect, we propose Generalizable target-aware Fairness (GetFair), a new method for fairly classifying each post that contains diverse and even unseen targets during inference. To remove the HSD classifier's spurious dependence on target-related features, GetFair trains a series of filter functions in an adversarial pipeline, so as to deceive the discriminator that recovers the targeted group from filtered post embeddings. To maintain scalability and generalizability, we innovatively parameterize all filter functions via a hypernetwork that is regularized by the semantic affinity among targets. Taking a target's pretrained word embedding as input, the hypernetwork generates the weights used by each target-specific filter on-the-fly without storing dedicated filter parameters. Finally, comparative experiments on two HSD datasets have shown advantageous performance of GetFair on out-of-sample targets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2304514683",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "2304966893",
+                    "name": "Danny Wang"
+                },
+                {
+                    "authorId": "2238394188",
+                    "name": "Xurong Liang"
+                },
+                {
+                    "authorId": "2304473656",
+                    "name": "Marten Risius"
+                },
+                {
+                    "authorId": "2279751973",
+                    "name": "Gianluca Demartini"
+                },
+                {
+                    "authorId": "2267513105",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "0d5745bf3072671e37f405c092d99433985aa3d3",
+            "title": "Learning Compact Compositional Embeddings via Regularized Pruning for Recommendation",
+            "abstract": "Latent factor models are the dominant backbones of contemporary recommender systems (RSs) given their performance advantages, where a unique vector embedding with a fixed dimensionality (e.g., 128) is required to represent each entity (commonly a user/item). Due to the large number of users and items on e-commerce sites, the embedding table is arguably the least memory-efficient component of RSs. For any lightweight recommender that aims to efficiently scale with the growing size of users/items or to remain applicable in resource-constrained settings, existing solutions either reduce the number of embeddings needed via hashing, or sparsify the full embedding table to switch off selected embedding dimensions. However, as hash collision arises or embeddings become overly sparse, especially when adapting to a tighter memory budget, those lightweight recommenders inevitably have to compromise their accuracy. To this end, we propose a novel compact embedding framework for RSs, namely Compositional Embedding with Regularized Pruning (CERP). Specifically, CERP represents each entity by combining a pair of embeddings from two independent, substantially smaller meta-embedding tables, which are then jointly pruned via a learnable element-wise threshold. In addition, we innovatively design a regularized pruning mechanism in CERP, such that the two sparsified meta-embedding tables are encouraged to encode information that is mutually complementary. Given the compatibility with agnostic latent factor models, we pair CERP with two popular recommendation models for extensive experiments, where results on two real-world datasets under different memory budgets demonstrate its superiority against state-of-the-art baselines. The codebase of CERP is available in https://github.com/xurong-lianyCERP.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2238394188",
+                    "name": "Xurong Liang"
+                },
+                {
+                    "authorId": "1490931831",
+                    "name": "Tong Chen"
+                },
+                {
+                    "authorId": "144133815",
+                    "name": "Q. Nguyen"
+                },
+                {
+                    "authorId": "2238395964",
+                    "name": "Jianxin Li"
+                },
+                {
+                    "authorId": "2416851",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        }
+    ]
+}

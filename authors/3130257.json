@@ -1,0 +1,429 @@
+{
+    "authorId": "3130257",
+    "papers": [
+        {
+            "paperId": "4daaecd6230523ff346cacbea102dfde922bab0d",
+            "title": "NeRF-Det: Learning Geometry-Aware Volumetric Representation for Multi-View 3D Object Detection",
+            "abstract": "We present NeRF-Det, a novel method for indoor 3D detection with posed RGB images as input. Unlike existing indoor 3D detection methods that struggle to model scene geometry, our method makes novel use of NeRF in an end-to-end manner to explicitly estimate 3D geometry, thereby improving 3D detection performance. Specifically, to avoid the significant extra latency associated with per-scene optimization of NeRF, we introduce sufficient geometry priors to enhance the generalizability of NeRF-MLP. Furthermore, we subtly connect the detection and NeRF branches through a shared MLP, enabling an efficient adaptation of NeRF to detection and yielding geometry-aware volumetric representations for 3D detection. Our method outperforms state-of-the-arts by 3.9 mAP and 3.1 mAP on the ScanNet and ARKITScenes benchmarks, respectively. We provide extensive analysis to shed light on how NeRF-Det works. As a result of our joint-training design, NeRF-Det is able to generalize well to unseen scenes for object detection, view synthesis, and depth estimation tasks without requiring per-scene optimization. Code is available at https://github.com/facebookresearch/NeRF-Det.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1490695028",
+                    "name": "Chenfeng Xu"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "144129263",
+                    "name": "Ji Hou"
+                },
+                {
+                    "authorId": "2225238191",
+                    "name": "Sam S. Tsai"
+                },
+                {
+                    "authorId": "51104559",
+                    "name": "Ruilong Li"
+                },
+                {
+                    "authorId": "46584351",
+                    "name": "Jialiang Wang"
+                },
+                {
+                    "authorId": "144267500",
+                    "name": "Wei Zhan"
+                },
+                {
+                    "authorId": "2558787",
+                    "name": "Zijian He"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "1732330",
+                    "name": "K. Keutzer"
+                },
+                {
+                    "authorId": "1680165",
+                    "name": "M. Tomizuka"
+                }
+            ]
+        },
+        {
+            "paperId": "4f4991f93ed86b777c8b0f192dac034a3144b165",
+            "title": "Pruning Compact ConvNets for Efficient Inference",
+            "abstract": "Neural network pruning is frequently used to compress over-parameterized networks by large amounts, while incurring only marginal drops in generalization performance. However, the impact of pruning on networks that have been highly optimized for efficient inference has not received the same level of attention. In this paper, we analyze the effect of pruning for computer vision, and study state-of-the-art ConvNets, such as the FBNetV3 family of models. We show that model pruning approaches can be used to further optimize networks trained through NAS (Neural Architecture Search). The resulting family of pruned models can consistently obtain better performance than existing FBNetV3 models at the same level of computation, and thus provide state-of-the-art results when trading off between computational complexity and generalization performance on the ImageNet benchmark. In addition to better generalization performance, we also demonstrate that when limited computation resources are available, pruning FBNetV3 models incur only a fraction of GPU-hours involved in running a full-scale NAS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143032877",
+                    "name": "Sayan Ghosh"
+                },
+                {
+                    "authorId": "2107060033",
+                    "name": "Karthik Prasad"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                }
+            ]
+        },
+        {
+            "paperId": "d62daf809266e02a3e3be4bec160579ff3839cc9",
+            "title": "An Investigation on Hardware-Aware Vision Transformer Scaling",
+            "abstract": "Vision Transformer (ViT) has demonstrated promising performance in various computer vision tasks, and recently attracted a lot of research attention. Many recent works have focused on proposing new architectures to improve ViT and deploying it into real-world applications. However, little effort has been made to analyze and understand ViT\u2019s architecture design space and its implication for hardware costs on different devices. In this work, by simply scaling ViT\u2019s depth, width, input size, and other basic configurations, we show that a scaled vanilla ViT model without bells and whistles can achieve comparable or superior accuracy-efficiency trade-off than most of the latest ViT variants. Specifically, compared with DeiT-Tiny, our scaled model achieves a \u2191 1.9% higher ImageNet top-1 accuracy under the same FLOPs and a \u2191 3.7% better ImageNet top-1 accuracy under the same latency on an NVIDIA Edge GPU TX2. Motivated by this, we further investigate the extracted scaling strategies from the following two aspects: (1) can these scaling strategies be transferred across different real hardware devices? and (2) can these scaling strategies be transferred to different ViT variants and tasks?. For (1), our exploration, based on various devices with different resource budgets, indicates that the transferability effectiveness depends on the underlying device together with its corresponding deployment tool. For (2), we validate the effective transferability of the aforementioned scaling strategies obtained from a vanilla ViT model on top of an image classification task to the PiT model, a strong ViT variant targeting efficiency as well as object detection and video classification tasks. In particular, when transferred to PiT, our scaling strategies lead to a boosted ImageNet top-1 accuracy of from 74.6% to 76.7% (\u2191 2.1%) under the same 0.7G FLOPs. When transferred to the COCO object detection task, the average precision is boosted by \u2191 0.7% under a similar throughput on a V100 GPU.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "28987646",
+                    "name": "Chaojian Li"
+                },
+                {
+                    "authorId": "2110017910",
+                    "name": "Kyungmin Kim"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "2232778335",
+                    "name": "Hang Zhang"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "2198041939",
+                    "name": "Yingyan Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "17e059974ed3200c4ad77adaf2beeb224fb8497a",
+            "title": "3D-Aware Encoding for Style-based Neural Radiance Fields",
+            "abstract": "We tackle the task of NeRF inversion for style-based neural radiance fields, (e.g., StyleNeRF). In the task, we aim to learn an inversion function to project an input image to the latent space of a NeRF generator and then synthesize novel views of the original image based on the latent code. Compared with GAN inversion for 2D generative models, NeRF inversion not only needs to 1) preserve the identity of the input image, but also 2) ensure 3D consistency in generated novel views. This requires the latent code obtained from the single-view image to be invariant across multiple views. To address this new challenge, we propose a two-stage encoder for style-based NeRF inversion. In the first stage, we introduce a base encoder that converts the input image to a latent code. To ensure the latent code is view-invariant and is able to synthesize 3D consistent novel view images, we utilize identity contrastive learning to train the base encoder. Second, to better preserve the identity of the input image, we introduce a refining encoder to refine the latent code and add finer details to the output image. Importantly note that the novelty of this model lies in the design of its first-stage encoder which produces the closest latent code lying on the latent manifold and thus the refinement in the second stage would be close to the NeRF manifold. Through extensive experiments, we demonstrate that our proposed two-stage encoder qualitatively and quantitatively exhibits superiority over the existing encoders for inversion in both image reconstruction and novel-view rendering.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3312576",
+                    "name": "Yu-Jhe Li"
+                },
+                {
+                    "authorId": "2118716788",
+                    "name": "Tao Xu"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "2065869523",
+                    "name": "N. Zheng"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "49107901",
+                    "name": "Albert Pumarola"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "144040368",
+                    "name": "Kris Kitani"
+                }
+            ]
+        },
+        {
+            "paperId": "29c2d3d77b6d6f24f4356d5ba20c1a6ab4229c76",
+            "title": "Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP",
+            "abstract": "Open-vocabulary semantic segmentation aims to segment an image into semantic regions according to text descriptions, which may not have been seen during training. Recent two-stage methods first generate class-agnostic mask proposals and then leverage pre-trained vision-language models, e.g., CLIP, to classify masked regions. We identify the performance bottleneck of this paradigm to be the pre-trained CLIP model, since it does not perform well on masked images. To address this, we propose to finetune CLIP on a collection of masked image regions and their corresponding text descriptions. We collect training data by mining an existing image-caption dataset (e.g., COCO Captions), using CLIP to match masked image regions to nouns in the image captions. Compared with the more precise and manually annotated segmentation labels with fixed classes (e.g., COCO-Stuff), we find our noisy but diverse dataset can better retain CLIP's generalization ability. Along with finetuning the entire model, we utilize the \u201cblank\u201d areas in masked images using a method we dub mask prompt tuning. Experiments demonstrate mask prompt tuning brings significant improvement without modifying any weights of CLIP, and it can further improve a fully finetuned model. In particular, when trained on COCO and evaluated on ADE20K-150, our best model achieves 29.6% mIoU, which is +8.5% higher than the previous state-of-the-art. For the first time, open-vocabulary generalist models match the performance of supervised specialist models in 2017 without dataset specific adaptations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2053834046",
+                    "name": "Feng Liang"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "49243413",
+                    "name": "Kunpeng Li"
+                },
+                {
+                    "authorId": "31812669",
+                    "name": "Yinan Zhao"
+                },
+                {
+                    "authorId": "2119077209",
+                    "name": "Hang Zhang"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "92419662",
+                    "name": "D. Marculescu"
+                }
+            ]
+        },
+        {
+            "paperId": "520f7a4817c954432e08e4cf3074308cc252f09d",
+            "title": "INGeo: Accelerating Instant Neural Scene Reconstruction with Noisy Geometry Priors",
+            "abstract": "We present a method that accelerates reconstruction of 3D scenes and objects, aiming to enable instant reconstruction on edge devices such as mobile phones and AR/VR headsets. While recent works have accelerated scene reconstruction training to minute/second-level on high-end GPUs, there is still a large gap to the goal of instant training on edge devices which is yet highly desired in many emerging applications such as immersive AR/VR. To this end, this work aims to further accelerate training by leveraging geometry priors of the target scene. Our method proposes strategies to alleviate the noise of the imperfect geometry priors to accelerate the training speed on top of the highly optimized Instant-NGP. On the NeRF Synthetic dataset, our work uses half of the training iterations to reach an average test PSNR of>30.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "28987646",
+                    "name": "Chaojian Li"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "49107901",
+                    "name": "Albert Pumarola"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "3138925",
+                    "name": "Yingyan Lin"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                }
+            ]
+        },
+        {
+            "paperId": "977351c92f156db27592e88b14dee2c22d4b312a",
+            "title": "Castling-ViT: Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference",
+            "abstract": "Vision Transformers (ViTs) have shown impressive per-formance but still require a high computation cost as compared to convolutional neural networks (CNNs), one rea-son is that ViTs' attention measures global similarities and thus has a quadratic complexity with the number of in-put tokens. Existing efficient ViTs adopt local attention or linear attention, which sacrifice ViTs' capabilities of capturing either global or local context. In this work, we ask an important research question: Can ViTs learn both global and local context while being more efficient during inference? To this end, we propose a framework called Castling- ViT, which trains ViTs using both linear-angular attention and masked softmax-based quadratic attention, but then switches to having only linear-angular attention during inference. Our Castling- ViT leverages angular ker-nels to measure the similarities between queries and keys via spectral angles. And we further simplify it with two techniques: (1) a novel linear-angular attention mechanism: we decompose the angular kernels into linear terms and high-order residuals, and only keep the linear terms; and (2) we adopt two parameterized modules to approximate high-order residuals: a depthwise convolution and an aux-iliary masked softmax attention to help learn global and lo-cal information, where the masks for softmax attention are regularized to gradually become zeros and thus incur no overhead during inference. Extensive experiments validate the effectiveness of our Castling- ViT, e.g., achieving up to a 1.8% higher accuracy or 40% MACs reduction on classification and 1.2 higher mAP on detection under comparable FLOPs, as compared to ViTs with vanilla softmax-based at-tentions. Project page is available at here.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47113848",
+                    "name": "Haoran You"
+                },
+                {
+                    "authorId": "2760194",
+                    "name": "Yunyang Xiong"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "146884473",
+                    "name": "Haoqi Fan"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "3138925",
+                    "name": "Yingyan Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "07a7d49365483ab5cc517103f57664ae434b900e",
+            "title": "Image2Point: 3D Point-Cloud Understanding with Pretrained 2D ConvNets",
+            "abstract": "3D point-clouds and 2D images are different visual representations of the physical world. While human vision can understand both representations, computer vision models designed for 2D image and 3D point-cloud understanding are quite different. Our paper investigates the potential for transferability between these two representations by empirically investigating whether this approach works, what factors affect the transfer performance, and how to make it work even better. We discovered that we can indeed use the same neural net model architectures to understand both images and point-clouds. Moreover, we can transfer pretrained weights from image models to point-cloud models with minimal effort. Speci\ufb01cally, based on a 2D ConvNet pretrained on an image dataset, we can transfer the image model to a point-cloud model by in\ufb02ating 2D convolutional \ufb01lters to 3D then \ufb01netuning its input, output, and optionally normalization layers. The transferred model can achieve competitive performance on 3D point-cloud classi\ufb01cation, indoor and driving scene segmentation, even beating a wide range of point-cloud models that adopt task-speci\ufb01c architectures and use a variety of tricks. The code is avaliable at: https://github.com/chenfengxu714/image2point .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1490695028",
+                    "name": "Chenfeng Xu"
+                },
+                {
+                    "authorId": "2115362026",
+                    "name": "Shijia Yang"
+                },
+                {
+                    "authorId": "1486105474",
+                    "name": "Bohan Zhai"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "27577617",
+                    "name": "Xiangyu Yue"
+                },
+                {
+                    "authorId": "144267500",
+                    "name": "Wei Zhan"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "1732330",
+                    "name": "K. Keutzer"
+                },
+                {
+                    "authorId": "1680165",
+                    "name": "M. Tomizuka"
+                }
+            ]
+        },
+        {
+            "paperId": "100f2e2a810394503472f50938522930bd07b834",
+            "title": "Rethinking the Self-Attention in Vision Transformers",
+            "abstract": "Self-attention is a corner stone for transformer models. However, our analysis shows that self-attention in vision transformer inference is extremely sparse. When applying a sparsity constraint, our experiments on image (ImageNet- 1K) and video (Kinetics-400) understanding show we can achieve 95% sparsity on the self-attention maps while main-taining the performance drop to be less than 2 points. This motivates us to rethink the role of self-attention in vision transformer models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110017910",
+                    "name": "Kyungmin Kim"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "151485208",
+                    "name": "Zhicheng Yan"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                },
+                {
+                    "authorId": "2248551871",
+                    "name": "Seon Joo Kim"
+                }
+            ]
+        },
+        {
+            "paperId": "2e39a96fca9e123b6511ed39b16eb86e32c49ecc",
+            "title": "Differentiable NAS Framework and Application to Ads CTR Prediction",
+            "abstract": "Neural architecture search (NAS) methods aim to automatically find the optimal deep neural network (DNN) architecture as measured by a given objective function, typically some combination of task accuracy and inference efficiency. For many areas, such as computer vision and natural language processing, this is a critical, yet still time consuming process. New NAS methods have recently made progress in improving the efficiency of this process. We implement an extensible and modular framework for Differentiable Neural Architecture Search (DNAS) to help solve this problem. We include an overview of the major components of our codebase and how they interact, as well as a section on implementing extensions to it (including a sample), in order to help users adopt our framework for their applications across different categories of deep learning models. To assess the capabilities of our methodology and implementation, we apply DNAS to the problem of ads click-through rate (CTR) prediction, arguably the highest-value and most worked on AI problem at hyperscalers today. We develop and tailor novel search spaces to a Deep Learning Recommendation Model (DLRM) backbone for CTR prediction, and report state-of-the-art results on the Criteo Kaggle CTR prediction dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143781417",
+                    "name": "Ravi Krishna"
+                },
+                {
+                    "authorId": "2552318",
+                    "name": "Aravind Kalaiah"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "144685269",
+                    "name": "M. Naumov"
+                },
+                {
+                    "authorId": "2205699",
+                    "name": "Dheevatsa Mudigere"
+                },
+                {
+                    "authorId": "1711231",
+                    "name": "M. Smelyanskiy"
+                },
+                {
+                    "authorId": "1732330",
+                    "name": "K. Keutzer"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,394 @@
+{
+    "authorId": "1786863",
+    "papers": [
+        {
+            "paperId": "02ab828fdb7b49d97d3c780906e2a43caa1b3bed",
+            "title": "Chem-FINESE: Validating Fine-Grained Few-shot Entity Extraction through Text Reconstruction",
+            "abstract": "Fine-grained few-shot entity extraction in the chemical domain faces two unique challenges. First, compared with entity extraction tasks in the general domain, sentences from chemical papers usually contain more entities. Moreover, entity extraction models usually have difficulty extracting entities of long-tailed types. In this paper, we propose Chem-FINESE, a novel sequence-to-sequence (seq2seq) based few-shot entity extraction approach, to address these two challenges. Our Chem-FINESE has two components: a seq2seq entity extractor to extract named entities from the input sentence and a seq2seq self-validation module to reconstruct the original input sentence from extracted entities. Inspired by the fact that a good entity extraction system needs to extract entities faithfully, our new self-validation module leverages entity extraction results to reconstruct the original input sentence. Besides, we design a new contrastive loss to reduce excessive copying during the extraction process. Finally, we release ChemNER+, a new fine-grained chemical entity extraction dataset that is annotated by domain experts with the ChemNER schema. Experiments in few-shot settings with both ChemNER+ and CHEMET datasets show that our newly proposed framework has contributed up to 8.26% and 6.84% absolute F1-score gains respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2116461591",
+                    "name": "Zixuan Zhang"
+                },
+                {
+                    "authorId": "2271539616",
+                    "name": "Hongxiang Li"
+                },
+                {
+                    "authorId": "2271402844",
+                    "name": "Xuan Liu"
+                },
+                {
+                    "authorId": "2259869648",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2271097936",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2271564893",
+                    "name": "Huimin Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "676fcd2ca5419fa17251230abaef84ec70618e94",
+            "title": "Named Entity Recognition Under Domain Shift via Metric Learning for Life Sciences",
+            "abstract": "Named entity recognition is a key component of Information Extraction (IE), particularly in scientific domains such as biomedicine and chemistry, where large language models (LLMs), e.g., ChatGPT, fall short. We investigate the applicability of transfer learning for enhancing a named entity recognition model trained in the biomedical domain (the source domain) to be used in the chemical domain (the target domain). A common practice for training such a model in a few-shot learning setting is to pretrain the model on the labeled source data, and then, to finetune it on a hand-full of labeled target examples. In our experiments, we observed that such a model is prone to mislabeling the source entities, which can often appear in the text, as the target entities. To alleviate this problem, we propose a model to transfer the knowledge from the source domain to the target domain, but, at the same time, to project the source entities and target entities into separate regions of the feature space. This diminishes the risk of mislabeling the source entities as the target entities. Our model consists of two stages: 1) entity grouping in the source domain, which incorporates knowledge from annotated events to establish relations between entities, and 2) entity discrimination in the target domain, which relies on pseudo labeling and contrastive learning to enhance discrimination between the entities in the two domains. We conduct our extensive experiments across three source and three target datasets, demonstrating that our method outperforms the baselines by up to 5% absolute value. Code, data, and resources are publicly available for research purposes: https://github.com/Lhtie/Bio-Domain-Transfer .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2280198046",
+                    "name": "Hongyi Liu"
+                },
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2497878",
+                    "name": "Payam Karisani"
+                },
+                {
+                    "authorId": "2283837815",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "7ecf80545dd3d0e8ab7b73640be93e9b3a604e21",
+            "title": "Self-Correction is More than Refinement: A Learning Framework for Visual and Language Reasoning Tasks",
+            "abstract": "While Vision-Language Models (VLMs) have shown remarkable abilities in visual and language reasoning tasks, they invariably generate flawed responses. Self-correction that instructs models to refine their outputs presents a promising solution to this issue. Previous studies have mainly concentrated on Large Language Models (LLMs), while the self-correction abilities of VLMs, particularly concerning both visual and linguistic information, remain largely unexamined. This study investigates the self-correction capabilities of VLMs during both inference and fine-tuning stages. We introduce a Self-Correction Learning (SCL) approach that enables VLMs to learn from their self-generated self-correction data through Direct Preference Optimization (DPO) without relying on external feedback, facilitating self-improvement. Specifically, we collect preferred and disfavored samples based on the correctness of initial and refined responses, which are obtained by two-turn self-correction with VLMs during the inference stage. Experimental results demonstrate that although VLMs struggle to self-correct effectively during iterative inference without additional fine-tuning and external feedback, they can enhance their performance and avoid previous mistakes through preference fine-tuning when their self-generated self-correction data are categorized into preferred and disfavored samples. This study emphasizes that self-correction is not merely a refinement process; rather, it should enhance the reasoning abilities of models through additional training, enabling them to generate high-quality responses directly without further refinement.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2324928346",
+                    "name": "Jiayi He"
+                },
+                {
+                    "authorId": "2324836577",
+                    "name": "Hehai Lin"
+                },
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "51135899",
+                    "name": "Y. Fung"
+                },
+                {
+                    "authorId": null,
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "c84a14bcea97fc755e59594b772da49753bc999c",
+            "title": "Automating Knowledge Discovery from Scientific Literature via LLMs: A Dual-Agent Approach with Progressive Ontology Prompting",
+            "abstract": "To address the challenge of automating knowledge discovery from a vast volume of literature, in this paper, we introduce a novel framework based on large language models (LLMs) that combines a progressive ontology prompting (POP) algorithm with a dual-agent system, named LLM-Duo, designed to enhance the automation of knowledge extraction from scientific articles. The POP algorithm utilizes a prioritized breadth-first search (BFS) across a predefined ontology to generate structured prompt templates and action orders, thereby guiding LLMs to discover knowledge in an automatic manner. Additionally, our LLM-Duo employs two specialized LLM agents: an explorer and an evaluator. These two agents work collaboratively and adversarially to enhance the reliability of the discovery and annotation processes. Experiments demonstrate that our method outperforms advanced baselines, enabling more accurate and complete annotations. To validate the effectiveness of our method in real-world scenarios, we employ our method in a case study of speech-language intervention discovery. Our method identifies 2,421 interventions from 64,177 research articles in the speech-language therapy domain. We curate these findings into a publicly accessible intervention knowledge base that holds significant potential to benefit the speech-language therapy community.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2257349228",
+                    "name": "Yuting Hu"
+                },
+                {
+                    "authorId": "2280142133",
+                    "name": "Dancheng Liu"
+                },
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2110963190",
+                    "name": "Charles Yu"
+                },
+                {
+                    "authorId": "2319457824",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2280070683",
+                    "name": "Jinjun Xiong"
+                }
+            ]
+        },
+        {
+            "paperId": "d0cd8b45949b959c316a3ed75a4683d0a70b1aa9",
+            "title": "MLR-Copilot: Autonomous Machine Learning Research based on Large Language Models Agents",
+            "abstract": "Machine learning research, crucial for technological advancements and innovation, often faces significant challenges due to its inherent complexity, slow pace of experimentation, and the necessity for specialized expertise. Motivated by this, we present a new systematic framework, autonomous Machine Learning Research with large language models (MLR-Copilot), designed to enhance machine learning research productivity through the automatic generation and implementation of research ideas using Large Language Model (LLM) agents. The framework consists of three phases: research idea generation, experiment implementation, and implementation execution. First, existing research papers are used to generate hypotheses and experimental plans vis IdeaAgent powered by LLMs. Next, the implementation generation phase translates these plans into executables with ExperimentAgent. This phase leverages retrieved prototype code and optionally retrieves candidate models and data. Finally, the execution phase, also managed by ExperimentAgent, involves running experiments with mechanisms for human feedback and iterative debugging to enhance the likelihood of achieving executable research outcomes. We evaluate our framework on five machine learning research tasks and the experimental results show the framework's potential to facilitate the research progress and innovations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2316953868",
+                    "name": "Ruochen Li"
+                },
+                {
+                    "authorId": "2221201914",
+                    "name": "Teerth Patel"
+                },
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2316956053",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2319193188",
+                    "name": "Xinya Du"
+                }
+            ]
+        },
+        {
+            "paperId": "e855963bdaa7a3b46d9a79707d80795f06fbf1ed",
+            "title": "L+M-24: Building a Dataset for Language+Molecules @ ACL 2024",
+            "abstract": "Language-molecule models have emerged as an exciting direction for molecular discovery and understanding. However, training these models is challenging due to the scarcity of molecule-language pair datasets. At this point, datasets have been released which are 1) small and scraped from existing databases, 2) large but noisy and constructed by performing entity linking on the scientific literature, and 3) built by converting property prediction datasets to natural language using templates. In this document, we detail the L+M-24 dataset, which has been created for the Language + Molecules Workshop shared task at ACL 2024. In particular, L+M-24 is designed to focus on three key benefits of natural language in molecule design: compositionality, functionality, and abstraction",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Biology"
+            ],
+            "authors": [
+                {
+                    "authorId": "48870109",
+                    "name": "Carl N. Edwards"
+                },
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2289900563",
+                    "name": "Lawrence Zhao"
+                },
+                {
+                    "authorId": "2290170233",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "002bf0720404e5dc6bf43eff64f116ec755b405f",
+            "title": "SciMON: Scientific Inspiration Machines Optimized for Novelty",
+            "abstract": "We explore and enhance the ability of neural language models to generate novel scientific directions grounded in literature. Work on literature-based hypothesis generation has traditionally focused on binary link prediction--severely limiting the expressivity of hypotheses. This line of work also does not focus on optimizing novelty. We take a dramatic departure with a novel setting in which models use as input background contexts (e.g., problems, experimental settings, goals), and output natural language ideas grounded in literature. We present SciMON, a modeling framework that uses retrieval of\"inspirations\"from past scientific papers, and explicitly optimizes for novelty by iteratively comparing to prior papers and updating idea suggestions until sufficient novelty is achieved. Comprehensive evaluations reveal that GPT-4 tends to generate ideas with overall low technical depth and novelty, while our methods partially mitigate this issue. Our work represents a first step toward evaluating and developing language models that generate new ideas derived from the scientific literature",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "145612610",
+                    "name": "Doug Downey"
+                },
+                {
+                    "authorId": "2072975661",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2041698667",
+                    "name": "Tom Hope"
+                }
+            ]
+        },
+        {
+            "paperId": "8c1aa28c0018fbb3ec270b3ed5e7ee0df6771d33",
+            "title": "Multimedia Generative Script Learning for Task Planning",
+            "abstract": "Goal-oriented generative script learning aims to generate subsequent steps to reach a particular goal, which is an essential task to assist robots or humans in performing stereotypical activities. An important aspect of this process is the ability to capture historical states visually, which provides detailed information that is not covered by text and will guide subsequent steps. Therefore, we propose a new task, Multimedia Generative Script Learning, to generate subsequent steps by tracking historical states in both text and vision modalities, as well as presenting the first benchmark containing 5,652 tasks and 79,089 multimedia steps. This task is challenging in three aspects: the multimedia challenge of capturing the visual states in images, the induction challenge of performing unseen tasks, and the diversity challenge of covering different information in individual steps. We propose to encode visual state changes through a selective multimedia encoder to address the multimedia challenge, transfer knowledge from previously observed tasks using a retrieval-augmented decoder to overcome the induction challenge, and further present distinct information at each step by optimizing a diversity-oriented contrastive learning objective. We define metrics to evaluate both generation and inductive quality. Experiment results demonstrate that our approach significantly outperforms strong baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "23181435",
+                    "name": "Hou Pong Chan"
+                },
+                {
+                    "authorId": "34170717",
+                    "name": "Lifu Huang"
+                },
+                {
+                    "authorId": "3118681",
+                    "name": "J. Hockenmaier"
+                },
+                {
+                    "authorId": "1733356",
+                    "name": "Girish V. Chowdhary"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "97107a9b2d60a52ccfc53b6c2ae2f786927dcc7c",
+            "title": "Stage-wise Fine-tuning for Graph-to-Text Generation",
+            "abstract": "Graph-to-text generation has benefited from pre-trained language models (PLMs) in achieving better performance than structured graph encoders. However, they fail to fully utilize the structure information of the input graph. In this paper, we aim to further improve the performance of the pre-trained language model by proposing a structured graph-to-text model with a two-step fine-tuning mechanism which first fine-tunes model on Wikipedia before adapting to the graph-to-text generation. In addition to using the traditional token and position embeddings to encode the knowledge graph (KG), we propose a novel tree-level embedding method to capture the inter-dependency structures of the input graph. This new approach has significantly improved the performance of all text generation metrics for the English WebNLG 2017 dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "3014143",
+                    "name": "Semih Yavuz"
+                },
+                {
+                    "authorId": "2060138164",
+                    "name": "Victoria Lin"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "8937909",
+                    "name": "Nazneen Rajani"
+                }
+            ]
+        },
+        {
+            "paperId": "328d027a999efc9d9e315367f5e01096ef4e7255",
+            "title": "COVID-19 Literature Knowledge Graph Construction and Drug Repurposing Report Generation",
+            "abstract": "To combat COVID-19, both clinicians and scientists need to digest the vast amount of relevant biomedical knowledge in literature to understand the disease mechanism and the related biological functions. We have developed a novel and comprehensive knowledge discovery framework, COVID-KG to extract fine-grained multimedia knowledge elements (entities, relations and events) from scientific literature. We then exploit the constructed multimedia knowledge graphs (KGs) for question answering and report generation, using drug repurposing as a case study. Our framework also provides detailed contextual sentences, subfigures, and knowledge subgraphs as evidence. All of the data, KGs, reports.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1786863",
+                    "name": "Qingyun Wang"
+                },
+                {
+                    "authorId": "3361240",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2154990549",
+                    "name": "Xuan Wang"
+                },
+                {
+                    "authorId": "147697560",
+                    "name": "Nikolaus Nova Parulian"
+                },
+                {
+                    "authorId": "2067641876",
+                    "name": "G. Han"
+                },
+                {
+                    "authorId": "152320135",
+                    "name": "Jiawei Ma"
+                },
+                {
+                    "authorId": "71125575",
+                    "name": "Jingxuan Tu"
+                },
+                {
+                    "authorId": "46179573",
+                    "name": "Ying Lin"
+                },
+                {
+                    "authorId": "46702624",
+                    "name": "H. Zhang"
+                },
+                {
+                    "authorId": "2109300810",
+                    "name": "Weili Liu"
+                },
+                {
+                    "authorId": "72446317",
+                    "name": "Aabhas Chauhan"
+                },
+                {
+                    "authorId": "2069571239",
+                    "name": "Yingjun Guan"
+                },
+                {
+                    "authorId": "1596827240",
+                    "name": "Bangzheng Li"
+                },
+                {
+                    "authorId": "5858064",
+                    "name": "Ruisong Li"
+                },
+                {
+                    "authorId": "19214393",
+                    "name": "Xiangchen Song"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "153034701",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "9546964",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "1707726",
+                    "name": "J. Pustejovsky"
+                },
+                {
+                    "authorId": "72861332",
+                    "name": "D. Liem"
+                },
+                {
+                    "authorId": "144332315",
+                    "name": "Ahmed Elsayed"
+                },
+                {
+                    "authorId": "145755155",
+                    "name": "Martha Palmer"
+                },
+                {
+                    "authorId": "1703851645",
+                    "name": "Jasmine Rah"
+                },
+                {
+                    "authorId": "2064735303",
+                    "name": "Cynthia Schneider"
+                },
+                {
+                    "authorId": "2008000",
+                    "name": "Boyan A. Onyshkevych"
+                }
+            ]
+        }
+    ]
+}

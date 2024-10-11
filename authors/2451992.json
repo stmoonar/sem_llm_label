@@ -1,0 +1,241 @@
+{
+    "authorId": "2451992",
+    "papers": [
+        {
+            "paperId": "c24132d2eb4f4599b4abd363fe55d284d86bd65d",
+            "title": "Streaming Weighted Sampling over Join Queries",
+            "abstract": "Join queries are a fundamental database tool, capturing a range of tasks that involve linking heterogeneous data sources. However, with massive table sizes, it is often impractical to keep these in memory, and we can only take one or few streaming passes over them. Moreover, building out the full join result (e.g., linking heterogeneous data sources along quasi-identifiers) can lead to a combinatorial explosion of results due to many-to-many links. Random sampling is a natural tool to boil this oversized result down to a representative subset with well-understood statistical properties, but turns out to be a challenging task due to the combinatorial nature of the sampling domain. Existing techniques in the literature focus solely on the setting with tabular data residing in main memory, and do not address aspects such as stream operation, weighted sampling and more general join operators that are urgently needed in a modern data processing context. The main contribution of this work is to meet these needs with more lightweight practical approaches. First, a bijection between the sampling problem and a graph problem is introduced to support weighted sampling and common join operators. Second, the sampling techniques are refined to minimise the number of streaming passes. Third, techniques are presented to deal with very large tables under limited memory. Finally, the proposed techniques are compared to existing approaches that rely on database indices and the results indicate substantial memory savings, reduced runtimes for ad-hoc queries and competitive amortised runtimes. All pertinent code and data can be found at:",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "5dafa5e946b1d30591206aabf4de60c47bb2f154",
+            "title": "Differentially Private Top-k Selection via Canonical Lipschitz Mechanism",
+            "abstract": "Selecting the top-$k$ highest scoring items under differential privacy (DP) is a fundamental task with many applications. This work presents three new results. First, the exponential mechanism, permute-and-flip and report-noisy-max, as well as their oneshot variants, are unified into the Lipschitz mechanism, an additive noise mechanism with a single DP-proof via a mandated Lipschitz property for the noise distribution. Second, this new generalized mechanism is paired with a canonical loss function to obtain the canonical Lipschitz mechanism, which can directly select k-subsets out of $d$ items in $O(dk+d \\log d)$ time. The canonical loss function assesses subsets by how many users must change for the subset to become top-$k$. Third, this composition-free approach to subset selection improves utility guarantees by an $\\Omega(\\log k)$ factor compared to one-by-one selection via sequential composition, and our experiments on synthetic and real-world data indicate substantial utility improvements.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1726972",
+                    "name": "Grigorios Loukides"
+                }
+            ]
+        },
+        {
+            "paperId": "b53e1cf4c0837ee6f7dc3864e47be2d1c95d6a34",
+            "title": "Weighted Random Sampling over Joins",
+            "abstract": "Joining records with all other records that meet a linkage condition can result in an astronomically large number of combinations due to many-to-many relationships. For such challenging (acyclic) joins, a random sample over the join result is a practical alternative to working with the oversized join result. Whereas prior works are limited to uniform join sampling where each join row is assigned the same probability, the scope is extended in this work to weighted sampling to support emerging applications such as scientific discovery in observational data and privacy-preserving query answering. Notwithstanding some naive methods, this work presents the first approach for weighted random sampling from join results. Due to a lack of baselines, experiments over various join types and real-world data sets are conducted to show substantial memory savings and competitive performance with main-memory index-based approaches in the equal-probability setting. In contrast to existing uniform sampling approaches that require prepared structures that occupy contested resources to squeeze out slightly faster query-times, the proposed approaches exhibit qualities that are urgently needed in practice, namely reduced memory footprint, streaming operation, support for selections, outer joins, semi joins and anti joins and unequal-probability sampling. All pertinent code and data can be found at: https://github.com/shekelyan/weightedjoinsampling",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "1c38c173a4d4abcd27d3fb0f5b3d12478bcf26df",
+            "title": "Approximating Multidimensional Range Counts with Maximum Error Guarantees",
+            "abstract": "We address the problem of compactly approximating multidimensional range counts with a guaranteed maximum error and propose a novel histogram-based summary structure, termed SliceHist. The key idea is to operate a grid histogram in an approximately rank-transformed space, where the data points are more uniformly distributed and each grid slice contains only a small number of points. Then, the points of each slice are summarised again using the same technique. As each query box partially intersects only few slices and each grid slice has few data points, the summary is able to achieve tight error guarantees. In experiments and through analysis of non-asymptotic formulas we show that SliceHist is not only competitive with existing heuristics in terms of performance, but additionally offers tight error guarantees.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1679309",
+                    "name": "Anton Dign\u00f6s"
+                },
+                {
+                    "authorId": "1719053",
+                    "name": "J. Gamper"
+                },
+                {
+                    "authorId": "1738210",
+                    "name": "Minos N. Garofalakis"
+                }
+            ]
+        },
+        {
+            "paperId": "671061237b92bd490f7857654d96baf0bf7ab807",
+            "title": "PGMJoins: Random Join Sampling with Graphical Models",
+            "abstract": "Modern databases face formidable challenges when called to join (several) massive tables. Joins (especially when entailing many-to-many joins) are very time- and resource-consuming, join results can be too big to keep in memory, and performing analytics/learning tasks over them costs dearly in terms of time, resources, and money (in the cloud). Moreover, although random sampling is a promising idea to mitigate the above problems, the current state of the art leaves lots of room for improvements. With this paper we contribute a principled solution, coined PGMJoins. PGMJoins adapts Probabilistic Graphical Models to deriving provably random samples of the join result for (n-way) key joins, many-to-many joins, and cyclic and acyclic joins. PGMJoins contributes optimizations both for deriving the structure of the graph and for PGM inference. It also contributes a novel Sum-Product Message Passing Algorithm (SP-MPA) to make a uniform sample of the joint distribution (join result) efficiently and a novel way to deal with cyclic joins. Despite the use of PGMs, the learned joint distribution is not approximated, and the uniform samples are drawn from the true distribution. Our experimentation using queries and datasets from TPC-H, JOB, TPC-DS, and Twitter shows PGMJoins to outperform the state of the art (by 2X-28X).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "3081947",
+                    "name": "Mehrdad Almasi"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "f184d68ca8169cad4ca417ed67f14f619a94a280",
+            "title": "Data-Independent Space Partitionings for Summaries",
+            "abstract": "Histograms are a standard tool in data management for describing multidimensional data. It is often convenient or even necessary to define data independent histograms, to partition space in advance without observing the data itself. Specific motivations arise in managing data when it is not suitable to frequently change the boundaries between histogram cells. For example, when the data is subject to many insertions and deletions; when data is distributed across multiple systems; or when producing a privacy-preserving representation of the data. The baseline approach is to consider an equiwidth histogram, i.e., a regular grid over the space. However, this is not optimal for the objective of splitting the multidimensional space into (possibly overlapping) bins, such that each box can be rebuilt using a set of non-overlapping bins with minimal excess (or deficit) of volume. Thus, we investigate how to split the space into bins and identify novel solutions that offer a good balance of desirable properties. As many data processing tools require a dataset as an input, we propose efficient methods how to obtain synthetic point sets that match the histograms over the overlapping bins.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "1738210",
+                    "name": "Minos N. Garofalakis"
+                },
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                }
+            ]
+        },
+        {
+            "paperId": "ffee491a39ad5c182d74d6bf2d3ee779f465a707",
+            "title": "Sequential Random Sampling Revisited: Hidden Shuffle Method",
+            "abstract": "Random sampling (without replacement) is ubiquitously employed to obtain a representative subset of the data. Unlike common methods, sequential methods report samples in ascending order of index without keeping track of previous samples. This enables lightweight iterators that can jump directly from one sampled position to the next. Previously, sequential methods focused on drawing from the distribution of gap sizes, which requires intricate algorithms that are di\ufb03cult to validate and can be slow in the worst-case. This can be avoided by a new method, the Hidden Shu\ufb04e. The name mirrors the fact that although the algorithm does not resemble shu\ufb04ing, its correctness can be proven by conceptualising the sampling process as a random shu\ufb04e. The Hidden Shu\ufb04e al-gorithm stores just a handful of values, can be implemented in few lines of code, o\ufb00ers strong worst-case guarantees and is shown to be faster than state-of-the-art methods while using comparably few random variates.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                }
+            ]
+        },
+        {
+            "paperId": "3d7d39276fefb2cdf60750afa6027f14f20587c7",
+            "title": "Reliable Multidimensional Data Summaries Using Histograms",
+            "abstract": "The main focus of this thesis is the data summary problem, where one takes a large set of multidimensional data points in the Euclidean space, creates a data summary that is much smaller and then uses only the summary to approximately answer range count queries over the data. Range count queries are a crucial tool for data analysis and selectivity estimation in query optimizers. While traditionally the functionality of data summaries is limited to estimates and confidence intervals for the range count, in this thesis the functionality is extended to lower and upper bounds. For this purpose, DigitHist and SliceHist are proposed as two novel histogram-based data summaries and the u-error as a novel metric to assess the histogram precision. A key feature of DigitHist is a fast one-scan construction, whereas SliceHist offers strong theoretical guarantees. The DigitHist summary is comprised of multiple equi-width histograms and summarizes dense areas separately to avoid large buckets with many points. In addition to that, DigitHist incorporates one-dimensional summaries to prevent oversimplifying assumptions about one-dimensional distributions that can lead to large errors. The experiments show that DigitHist offers uniquely tight bounds in a moderate number of dimensions. The SliceHist summary computes approximate ranks of points, summarizes them along regular grids and then summarizes the points in each grid slice again in the same way. The recursive summarization of points produces a compact \u03b5-approximation, i.e., a data summary that guarantees for any dataset and query range to approximate the number of points inside the range with absolute error less than \u03b5n, where n is the data size. SliceHist proves the existence of an \u03b5-approximation data summary of size O( 1 \u03b5\u03bb log 1\u03b5 ) for any arbitrary real \u03bb > 1, which was previously not even conjectured. The experiments show that SliceHist offers comparable estimation accuracy to summaries without guarantees in up to four dimensions, but additionally offers theoretical guarantees and logarithmic query times. Compared to existing \u03b5-approximations it can be constructed significantly faster and offers tighter guarantees and higher estimation accuracy in three and four dimensions. This thesis also tackles two other problems related to data summaries. The first problem is to quantify the similarity of datasets with regards to range count queries. For this purpose, the discrepancy distance is proposed that bounds for a pair of datasets their maximal deviation over all range queries and can be efficiently approximated using SliceHist. The second problem is to compute range sums over low-dimensional data cubes such as grid histograms. Sparse Prefix Sums are proposed to achieve constanttime querying with significantly lowered storage costs for sparsely populated data cubes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                }
+            ]
+        },
+        {
+            "paperId": "5df226467d0020e202c214c25e503fff84851c44",
+            "title": "DigitHist: a Histogram-Based Data Summary with Tight Error Bounds",
+            "abstract": "We propose DigitHist, a histogram summary for selectivity estimation on multi-dimensional data with tight error bounds. By combining multi-dimensional and one-dimensional histograms along regular grids of different resolutions, DigitHist provides an accurate and reliable histogram approach for multi-dimensional data. To achieve a compact summary, we use a sparse representation combined with a novel histogram compression technique that chooses a higher resolution in dense regions and a lower resolution elsewhere. For the construction of DigitHist, we propose a new error measure, termed u-error, which minimizes the width between the guaranteed upper and lower bounds of the selectivity estimate. The construction algorithm performs a single data scan and has linear time complexity. An in-depth experimental evaluation shows that DigitHist delivers superior precision and error bounds than state-of-the-art competitors at a comparable query time.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1679309",
+                    "name": "Anton Dign\u00f6s"
+                },
+                {
+                    "authorId": "1719053",
+                    "name": "J. Gamper"
+                }
+            ]
+        },
+        {
+            "paperId": "39351d7eaf8e540465716902106f0929a59e4a62",
+            "title": "Linear path skylines in multicriteria networks",
+            "abstract": "In many graph applications, computing cost-optimal paths between two locations is an important task for routing and distance computation. Depending on the network multiple cost criteria might be of interest. Examples are travel time, energy consumption and toll fees in road networks. Path skyline queries compute the set of pareto optimal paths between two given locations. However, the number of skyline paths increases exponentially with the distance between the locations and the number of cost criteria. Thus, the result set might be too big to be of any use. In this paper, we introduce multicriteria linear path skyline queries. A linear path skyline is the subset of the conventional path skyline where the paths are optimal under a linear combination of their cost values. We argue that cost vectors being optimal with respect to a weighted sum are intuitive to understand and therefore, more interesting in many cases. We show that linear path skylines are convex hulls of an augmented solution space and propose an algorithm which utilizes this observation to efficiently compute the complete linear path skyline. To further control the size of the result set, we introduce an approximate version of our algorithm guaranteeing a certain level of optimality for each possible weighting. In our experimental evaluation, we show that our approach computes linear path skylines significantly faster than previous approaches, including those computing the complete path skyline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "34830562",
+                    "name": "Gregor Joss\u00e9"
+                },
+                {
+                    "authorId": "39403212",
+                    "name": "Matthias Schubert"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "authorId": "2032373",
+    "papers": [
+        {
+            "paperId": "12ff3ec7f366b80de6050cab3a31b9172ceec483",
+            "title": "Ranking with submodular functions on the fly",
+            "abstract": "Maximizing submodular functions have been studied extensively for a wide range of subset-selection problems. However, much less attention has been given to the role of submodularity in sequence-selection and ranking problems. A recently-introduced framework, named \\emph{maximum submodular ranking} (MSR), tackles a family of ranking problems that arise naturally when resources are shared among multiple demands with different budgets. For example, the MSR framework can be used to rank web pages for multiple user intents. In this paper, we extend the MSR framework in the streaming setting. In particular, we consider two different streaming models and we propose practical approximation algorithms. In the first streaming model, called \\emph{function arriving}, we assume that submodular functions (demands) arrive continuously in a stream, while in the second model, called \\emph{item arriving}, we assume that items (resources) arrive continuously. Furthermore, we study the MSR problem with additional constraints on the output sequence, such as a matroid constraint that can ensure fair exposure among items from different groups. These extensions significantly broaden the range of problems that can be captured by the MSR framework. On the practical side, we develop several novel applications based on the MSR formulation, and empirically evaluate the performance of the proposed~methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2119055703",
+                    "name": "Guangyi Zhang"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "599642353a6f60e255cb9531bfdfb3aa127ffb72",
+            "title": "Finding coherent node groups in directed graphs",
+            "abstract": "Summarizing a large graph by grouping the nodes into clusters is a standard technique for studying the given network. Traditionally, the order of the discovered groups does not matter. However, there are applications where, for example, given a directed graph, we would like to find coherent groups while minimizing the backward cross edges. More formally, in this paper, we study a problem where we are given a directed network and are asked to partition the graph into a sequence of coherent groups while attempting to conform to the cross edges. We assume that nodes in the network have features, and we measure the group coherence by comparing these features. Furthermore, we incorporate the cross edges by penalizing the forward cross edges and backward cross edges with different weights. If the weights are set to 0, then the problem is equivalent to clustering. However, if we penalize the backward edges significantly more, then the order of discovered groups matters, and we can view our problem as a generalization of a classic segmentation problem. To solve the algorithm we consider a common iterative approach where we solve the groups given the centroids, and then find the centroids given the groups. We show that - unlike in clustering - the first subproblem is NP-hard. However, we show that if the underlying graph is a tree we can solve the subproblem with dynamic programming. In addition, if the number of groups is 2, we can solve the subproblem with a minimum cut. For the more general case, we propose a heuristic where we optimize each pair of groups separately while keeping the remaining groups intact. We also propose a greedy search where nodes are moved between the groups while optimizing the overall loss. We demonstrate with our experiments that the algorithms are practical and yield interpretable results.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "16295416",
+                    "name": "Iiro Kumpulainen"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                }
+            ]
+        },
+        {
+            "paperId": "8a65e733e32d69c455e5783333aa049451b0eaed",
+            "title": "Jaccard-constrained dense subgraph discovery",
+            "abstract": "Finding dense subgraphs is a core problem in graph mining with many applications in diverse domains. At the same time many real-world networks vary over time, that is, the dataset can be represented as a sequence of graph snapshots. Hence, it is natural to consider the question of finding dense subgraphs in a temporal network that are allowed to vary over time to a certain degree. In this paper, we search for dense subgraphs that have large pairwise Jaccard similarity coefficients. More formally, given a set of graph snapshots and input parameter $$\\alpha$$\n \u03b1\n , we find a collection of dense subgraphs, with pairwise Jaccard index at least $$\\alpha$$\n \u03b1\n , such that the sum of densities of the induced subgraphs is maximized. We prove that this problem is NP-hard and we present a greedy, iterative algorithm which runs in $${\\mathcal {O}} \\mathopen {} \\left( nk^2 + m\\right)$$\n \n O\n \n \n n\n \n k\n 2\n \n +\n m\n \n \n time per single iteration, where k is the length of the graph sequence and n and m denote number of vertices and total number of edges respectively. We also consider an alternative problem where subgraphs with large pairwise Jaccard indices are rewarded. We do this by incorporating the indices directly into the objective function. More formally, given a set of graph snapshots and a weight $$\\lambda$$\n \u03bb\n , we find a collection of dense subgraphs such that the sum of densities of the induced subgraphs plus the sum of Jaccard indices, weighted by $$\\lambda$$\n \u03bb\n , is maximized. We prove that this problem is NP-hard. To discover dense subgraphs with good objective value, we present an iterative algorithm which runs in $${\\mathcal {O}} \\mathopen {}\\left( n^2k^2 + m \\log n + k^3 n\\right)$$\n \n O\n \n \n \n n\n 2\n \n \n k\n 2\n \n +\n m\n log\n n\n +\n \n k\n 3\n \n n\n \n \n time per single iteration, and a greedy algorithm which runs in $${\\mathcal {O}} \\mathopen {}\\left( n^2k^2 + m \\log n + k^3 n\\right)$$\n \n O\n \n \n \n n\n 2\n \n \n k\n 2\n \n +\n m\n log\n n\n +\n \n k\n 3\n \n n\n \n \n time. We show experimentally that our algorithms are efficient, they can find ground truth in synthetic datasets and provide good results from real-world datasets. Finally, we present two case studies that show the usefulness of our problem.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2165966620",
+                    "name": "Chamalee Wickrama Arachchi"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                }
+            ]
+        },
+        {
+            "paperId": "ceaabf0d9c5d388ca2f90e142ab5aa32664afd79",
+            "title": "Finding Favourite Tuples on Data Streams with Provably Few Comparisons",
+            "abstract": "One of the most fundamental tasks in data science is to assist a user with unknown preferences in finding high-utility tuples within a large database. To accurately elicit the unknown user preferences, a widely-adopted way is by asking the user to compare pairs of tuples. In this paper, we study the problem of identifying one or more high-utility tuples by adaptively receiving user input on a minimum number of pairwise comparisons. We devise a single-pass streaming algorithm, which processes each tuple in the stream at most once, while ensuring that the memory size and the number of requested comparisons are in the worst case logarithmic in n, where n is the number of all tuples. An important variant of the problem, which can help to reduce human error in comparisons, is to allow users to declare ties when confronted with pairs of tuples of nearly equal utility. We show that the theoretical guarantees of our method can be maintained for this important problem variant. In addition, we show how to enhance existing pruning techniques in the literature by leveraging powerful tools from mathematical programming. Finally, we systematically evaluate all proposed algorithms over both synthetic and real-life datasets, examine their scalability, and demonstrate their superior performance over existing methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2119055703",
+                    "name": "Guangyi Zhang"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "1f2433f9f3d3becc3adb7176654d9b3bd216697d",
+            "title": "Optimal deletion-robust coreset for submodular maximization",
+            "abstract": "In recent years we have witnessed an increase on the development of methods for submodular optimization, which have been motivated by the wide applicability of submodular functions in real-world data-science problems. In this paper, we contribute to this line of work by considering the problem of robust submodular maximization against unexpected deletions , which may occur due to privacy issues or user preferences. Speci\ufb01cally, we study and derive bounds for the minimum number of items a streaming algorithm has to remember, in order to achieve a non-trivial approximation guarantee against adversarial deletions up to d items. We call the set of items that are kept by the algorithm before adversarial deletions a deletion-robust coreset . We propose a single-pass streaming algorithm that yields a (1 \u2212 2 \u01eb ) / (4 p ) -approximation for maximizing a non-decreasing submodular function under a general p - matroid constraint and requires a coreset size k + d/\u01eb , where k is the maximum size of a feasible solution. To the best of our knowledge, this is the \ufb01rst work to achieve an (asymptotically) optimal coreset size, as no constant approximation is possible with a coreset of size sublinear in d .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51183366",
+                    "name": "Guangyin Zhang"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "9b7b8d071260a96e9966ef330b5296bc325a3fd3",
+            "title": "Community detection in edge-labeled graphs",
+            "abstract": ". Finding dense communities in networks is a widely-used tool for analysis in graph mining. A popular choice for \ufb01nding such communities is to \ufb01nd subgraphs with a high average degree. While useful, interpreting such subgraphs may be di\ufb03cult. On the other hand, many real-world networks have additional information, and we are speci\ufb01cally interested in networks that have labels on edges. In this paper, we study \ufb01nding dense subgraphs that can be explained with the labels on edges. More speci\ufb01cally, we are looking for a set of labels so that the induced subgraph has a high average degree. There are many ways to induce a subgraph from a set of labels, and we study two cases: First, we study conjunctive-induced dense subgraphs, where the subgraph edges need to have all labels. Secondly, we study disjunctive-induced dense subgraphs, where the subgraph edges need to have at least one label. We show that both problems are NP -hard. Because of the hardness, we resort to greedy heuristics. We show that we can implement the greedy search e\ufb03-ciently: the respective running times for \ufb01nding conjunctive-induced and disjunctive-induced dense subgraphs are in O ( p log k ) and O (cid:0) p log 2 k (cid:1) , where p is the number of edge-label pairs and k is the number of labels. Our experimental evaluation demonstrates that we can \ufb01nd the ground truth in synthetic graphs and that we can \ufb01nd interpretable subgraphs from real-world networks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "16295416",
+                    "name": "Iiro Kumpulainen"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                }
+            ]
+        },
+        {
+            "paperId": "af83feded78865860436fe550b6026dc8262b0d9",
+            "title": "Coresets remembered and items forgotten: submodular maximization with deletions",
+            "abstract": "In recent years we have witnessed an increase on the development of methods for submodular optimization, which have been motivated by the wide applicability of submodular functions in real-world data-science problems. In this paper, we contribute to this line of work by considering the problem of robust submodular maximization against unexpected deletions, which may occur due to privacy issues or user preferences. Specifically, we consider the minimum number of items an algorithm has to remember, in order to achieve a non-trivial approximation guarantee against adversarial deletion of up to d items. We refer to the set of items that an algorithm has to keep before adversarial deletions as a deletion-robust coreset.Our theoretical contributions are two-fold. First, we propose a single- pass streaming algorithm that yields a(1-2$\\epsilon$)/(4 p)-approximation for maximizing a non-decreasing submodular function under a general p-matroid constraint and requires a coreset of size k+ d/$\\epsilon$, where k is the maximum size of a feasible solution. To the best of our knowledge, this is the first work to achieve an (asymptotically) optimal coreset, as no constant-factor approximation is possible with a coreset of size sublinear in $d.$ Second, we devise an effective offline algorithm that guarantees stronger approximation ratios with a coreset of size $O(d\\log(k)/\\epsilon)$. We also demonstrate the superior empirical performance of the proposed algorithms in real-life applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2119055703",
+                    "name": "Guangyi Zhang"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "c1bbc219138177d97185fa357c0d0423eea5b8e6",
+            "title": "Recurrent segmentation meets block models in temporal networks",
+            "abstract": "A popular approach to model interactions is to represent them as a network with nodes being the agents and the interactions being the edges. Interactions are often timestamped, which leads to having timestamped edges. Many real-world temporal networks have a recurrent or possibly cyclic behaviour. In this paper, our main interest is to model recurrent activity in such temporal networks. As a starting point we use stochastic block model, a popular choice for modelling static networks, where nodes are split into R groups. We extend the block model to temporal networks by modelling the edges with a Poisson process. We make the parameters of the process dependent on time by segmenting the time line into K segments. We require that only $$H \\le K$$\n \n H\n \u2264\n K\n \n different set of parameters can be used. If $$H < K$$\n \n H\n <\n K\n \n , then several, not necessarily consecutive, segments must share their parameters, modelling repeating behaviour. We propose two variants where a group membership of a node is fixed over the course of entire time line and group memberships are allowed to vary from segment to segment. We prove that searching for optimal groups and segmentation in both variants is NP-hard. Consequently, we split the problem into 3 subproblems where we optimize groups, model parameters, and segmentation in turn while keeping the remaining structures fixed. We propose an iterative algorithm that requires $$\\mathcal {O} \\left( KHm + Rn + R^2\\,H\\right)$$\n \n O\n \n K\n H\n m\n +\n R\n n\n +\n \n R\n 2\n \n \n H\n \n \n time per iteration, where n and m are the number of nodes and edges in the network. We demonstrate experimentally that the number of required iterations is typically low, the algorithm is able to discover the ground truth from synthetic datasets, and show that certain real-world networks exhibit recurrent behaviour as the likelihood does not deteriorate when H is lowered.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2165966620",
+                    "name": "Chamalee Wickrama Arachchi"
+                },
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                }
+            ]
+        },
+        {
+            "paperId": "19fd6d20eb68f79ae8cf28af91a14ec81d2e45b6",
+            "title": "Discovering bursts revisited: guaranteed optimization of the model parameters",
+            "abstract": "One of the classic data mining tasks is to discover bursts, time intervals, where events occur at abnormally high rate. In this paper we revisit Kleinberg's seminal work, where bursts are discovered by using exponential distribution with a varying rate parameter: the regions where it is more advantageous to set the rate higher are deemed bursty. The model depends on two parameters, the initial rate and the change rate. The initial rate, that is, the rate that is used when there are no burstiness was set to the average rate over the whole sequence. The change rate is provided by the user. \nWe argue that these choices are suboptimal: it leads to worse likelihood, and may lead to missing some existing bursts. We propose an alternative problem setting, where the model parameters are selected by optimizing the likelihood of the model. While this tweak is trivial from the problem definition point of view, this changes the optimization problem greatly. To solve the problem in practice, we propose efficient ($1 + \\epsilon$) approximation schemes. Finally, we demonstrate empirically that with this setting we are able to discover bursts that would have otherwise be undetected.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                }
+            ]
+        },
+        {
+            "paperId": "7aba7881317485149888168a4100fa6ef1a3a9ce",
+            "title": "Density-Friendly Graph Decomposition",
+            "abstract": "Decomposing a graph into a hierarchical structure via k-core analysis is a standard operation in any modern graph-mining toolkit. k-core decomposition is a simple and efficient method that allows to analyze a graph beyond its mere degree distribution. More specifically, it is used to identify areas in the graph of increasing centrality and connectedness, and it allows to reveal the structural organization of the graph. Despite the fact that k-core analysis relies on vertex degrees, k-cores do not satisfy a certain, rather natural, density property. Simply put, the most central k-core is not necessarily the densest subgraph. This inconsistency between k-cores and graph density provides the basis of our study. We start by defining what it means for a subgraph to be locally dense, and we show that our definition entails a nested chain decomposition of the graph, similar to the one given by k-cores, but in this case the components are arranged in order of increasing density. We show that such a locally dense decomposition for a graph G=(V,E) can be computed in polynomial time. The running time of the exact decomposition algorithm is O(|V|2|E|) but is significantly faster in practice. In addition, we develop a linear-time algorithm that provides a factor-2 approximation to the optimal locally dense decomposition. Furthermore, we show that the k-core decomposition is also a factor-2 approximation, however, as demonstrated by our experimental evaluation, in practice k-cores have different structure than locally dense subgraphs, and as predicted by the theory, k-cores are not always well-aligned with graph density.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2032373",
+                    "name": "Nikolaj Tatti"
+                }
+            ]
+        }
+    ]
+}

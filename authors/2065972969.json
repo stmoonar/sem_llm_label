@@ -1,0 +1,241 @@
+{
+    "authorId": "2065972969",
+    "papers": [
+        {
+            "paperId": "36dc4c1f5f16b27f7635c6f1bec28a959fec6ff8",
+            "title": "Incorporate LLMs with Influential Recommender System",
+            "abstract": "Recommender systems have achieved increasing accuracy over the years. However, this precision often leads users to narrow their interests, resulting in issues such as limited diversity and the creation of echo chambers. Current research addresses these challenges through proactive recommender systems by recommending a sequence of items (called influence path) to guide user interest in the target item. However, existing methods struggle to construct a coherent influence path that builds up with items the user is likely to enjoy. In this paper, we leverage the Large Language Model's (LLMs) exceptional ability for path planning and instruction following, introducing a novel approach named LLM-based Influence Path Planning (LLM-IPP). Our approach maintains coherence between consecutive recommendations and enhances user acceptability of the recommended items. To evaluate LLM-IPP, we implement various user simulators and metrics to measure user acceptability and path coherence. Experimental results demonstrate that LLM-IPP significantly outperforms traditional proactive recommender systems. This study pioneers the integration of LLMs into proactive recommender systems, offering a reliable and user-engaging methodology for future recommendation technologies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2320304201",
+                    "name": "Mingze Wang"
+                },
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "2301265313",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2302539923",
+                    "name": "Chongming Gao"
+                },
+                {
+                    "authorId": "2307555570",
+                    "name": "Yangyang Li"
+                },
+                {
+                    "authorId": "2280911299",
+                    "name": "Fuli Feng"
+                }
+            ]
+        },
+        {
+            "paperId": "41064ca2325757137e5ef28ce01014a254c49997",
+            "title": "Proactive Recommendation with Iterative Preference Guidance",
+            "abstract": "Recommender systems mainly tailor personalized recommendations according to user interests learned from user feedback. However, such recommender systems passively cater to user interests and even reinforce existing interests in the feedback loop, leading to problems like filter bubbles and opinion polarization. To counteract this, proactive recommendation actively steers users towards developing new interests in a target item or topic by strategically modulating recommendation sequences. Existing work for proactive recommendation faces significant hurdles: 1) overlooking the user feedback in the guidance process; 2) lacking explicit modeling of the guiding objective; and 3) insufficient flexibility for integration into existing industrial recommender systems. To address these issues, we introduce an Iterative Preference Guidance (IPG) framework. IPG performs proactive recommendation in a flexible post-processing manner by ranking items according to their IPG scores that consider both interaction probability and guiding value. These scores are explicitly estimated with iteratively updated user representation that considers the most recent user interactions. Extensive experiments validate that IPG can effectively guide user interests toward target interests with a reasonable trade-off in recommender accuracy. The code is available at https://github.com/GabyUSTC/IPG-Rec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "2280911299",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2239071206",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "f062dd1f474cb57abf2970cc9e2acb1f2ab942f2",
+            "title": "Proactive Recommendation in Social Networks: Steering User Interest via Neighbor Influence",
+            "abstract": "Recommending items solely catering to users' historical interests narrows users' horizons. Recent works have considered steering target users beyond their historical interests by directly adjusting items exposed to them. However, the recommended items for direct steering might not align perfectly with users' interests evolution, detrimentally affecting target users' experience. To avoid this issue, we propose a new task named Proactive Recommendation in Social Networks (PRSN) that indirectly steers users' interest by utilizing the influence of social neighbors, i.e., indirect steering by adjusting the exposure of a target item to target users' neighbors. The key to PRSN lies in answering an interventional question: what would a target user's feedback be on a target item if the item is exposed to the user's different neighbors? To answer this question, we resort to causal inference and formalize PRSN as: (1) estimating the potential feedback of a user on an item, under the network interference by the item's exposure to the user's neighbors; and (2) adjusting the exposure of a target item to target users' neighbors to trade off steering performance and the damage to the neighbors' experience. To this end, we propose a Neighbor Interference Recommendation (NIRec) framework with two key modules: (1)an interference representation-based estimation module for modeling potential feedback; and (2) a post-learning-based optimization module for optimizing a target item's exposure to trade off steering performance and the neighbors' experience by greedy search. We conduct extensive semi-simulation experiments based on three real-world datasets, validating the steering effectiveness of NIRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2230045941",
+                    "name": "Hang Pan"
+                },
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "2301265313",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2051689367",
+                    "name": "Haoxuan Li"
+                },
+                {
+                    "authorId": "2302131228",
+                    "name": "Peng Wu"
+                },
+                {
+                    "authorId": "2280911299",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2239071206",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "be4de2a546702fa8fb0024bb6c45fb40ac3bf76c",
+            "title": "Partial-Quasi-Newton Methods: Efficient Algorithms for Minimax Optimization Problems with Unbalanced Dimensionality",
+            "abstract": "This paper studies the strongly-convex-strongly-concave minimax optimization with unbalanced dimensionality. Such problems contain several popular applications in data science such as few shot learning and fairness-aware machine learning task. The design of conventional iterative algorithm for minimax optimization typically focuses on reducing the total number of oracle calls, which ignores the unbalanced computational cost for accessing the information from two different variables in minimax. We propose a novel second-order optimization algorithm, called Partial-Quasi-Newton (PQN) method, which takes the advantage of unbalanced structure in the problem to establish the Hessian estimate efficiently. We theoretically prove our PQN method converges to the saddle point faster than existing minimax optimization algorithms. The numerical experiments on real-world applications show the proposed PQN performs significantly better than the state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2215094078",
+                    "name": "Chengchang Liu"
+                },
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "2020695",
+                    "name": "Luo Luo"
+                },
+                {
+                    "authorId": "145462046",
+                    "name": "John C.S. Lui"
+                }
+            ]
+        },
+        {
+            "paperId": "043d047213d6dbfa9cdab1f4ca40d08ca4b78397",
+            "title": "Leveraging Bidding Graphs for Advertiser-Aware Relevance Modeling in Sponsored Search",
+            "abstract": "Recently, sponsored search has become one of the most lucrative channels for market-ing. As the fundamental basis of sponsored search, relevance modeling has attracted in-creasing attention due to the tremendous prac-tical value. Most existing methods solely rely on the query-keyword pairs. However, keywords are usually short texts with scarce semantic information, which may not precisely re\ufb02ect the underlying advertising intents. In this paper, we investigate the novel problem of advertiser-aware relevance modeling, which leverages the advertisers\u2019 information to bridge the gap between the search intents and advertising purposes. Our motivation lies in incorporating the unsupervised bidding behaviors as the complementary graphs to learn desirable advertiser representations. We further propose a B idding- G raph augmented T riple-based R elevance model BGTR with three towers to deeply fuse the bidding graphs and semantic textual data. Empirically, we evaluate the BGTR model over a large industry dataset, and the experimental results consis-tently demonstrate its superiority.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "2869810",
+                    "name": "Chaozhuo Li"
+                },
+                {
+                    "authorId": "2149248164",
+                    "name": "Xiao Han"
+                },
+                {
+                    "authorId": "2145976175",
+                    "name": "Zheng Liu"
+                },
+                {
+                    "authorId": "2110972323",
+                    "name": "Xing Xie"
+                },
+                {
+                    "authorId": "2146285313",
+                    "name": "Haizhen Huang"
+                },
+                {
+                    "authorId": "2152090164",
+                    "name": "Zengxuan Wen"
+                }
+            ]
+        },
+        {
+            "paperId": "734ade7a9abf2738f8ac8958e407bfba50f5ce5a",
+            "title": "Data Augmentation View on Graph Convolutional Network and the Proposal of Monte Carlo Graph Learning",
+            "abstract": "Today, there are two major understandings for graph convolutional networks, i.e., in the spectral and spatial domain. But both lack transparency. In this work, we introduce a new understanding for it -- data augmentation, which is more transparent than the previous understandings. Inspired by it, we propose a new graph learning paradigm -- Monte Carlo Graph Learning (MCGL). The core idea of MCGL contains: (1) Data augmentation: propagate the labels of the training set through the graph structure and expand the training set; (2) Model training: use the expanded training set to train traditional classifiers. We use synthetic datasets to compare the strengths of MCGL and graph convolutional operation on clean graphs. In addition, we show that MCGL's tolerance to graph structure noise is weaker than GCN on noisy graphs (four real-world datasets). Moreover, inspired by MCGL, we re-analyze the reasons why the performance of GCN becomes worse when deepened too much: rather than the mainstream view of over-smoothing, we argue that the main reason is the graph structure noise, and experimentally verify our view. The code is available at this https URL.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1753659544",
+                    "name": "Hande Dong"
+                },
+                {
+                    "authorId": "1753584452",
+                    "name": "Zhaolin Ding"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                }
+            ]
+        },
+        {
+            "paperId": "c3d9e591e230b253a82352b70e529203b7ee9f19",
+            "title": "On the Equivalence of Decoupled Graph Convolution Network and Label Propagation",
+            "abstract": "The original design of Graph Convolution Network (GCN) couples feature transformation and neighborhood aggregation for node representation learning. Recently, some work shows that coupling is inferior to decoupling, which supports deep graph propagation better and has become the latest paradigm of GCN (e.g., APPNP [16] and SGCN [32]). Despite effectiveness, the working mechanisms of the decoupled GCN are not well understood. In this paper, we explore the decoupled GCN for semi-supervised node classification from a novel and fundamental perspective \u2014 label propagation. We conduct thorough theoretical analyses, proving that the decoupled GCN is essentially the same as the two-step label propagation: first, propagating the known labels along the graph to generate pseudo-labels for the unlabeled nodes, and second, training normal neural network classifiers on the augmented pseudo-labeled data. More interestingly, we reveal the effectiveness of decoupled GCN: going beyond the conventional label propagation, it could automatically assign structure- and model- aware weights to the pseudo-label data. This explains why the decoupled GCN is relatively robust to the structure noise and over-smoothing, but sensitive to the label noise and model initialization. Based on this insight, we propose a new label propagation method named Propagation then Training Adaptively (PTA), which overcomes the flaws of the decoupled GCN with a dynamic and adaptive weighting strategy. Our PTA is simple yet more effective and robust than decoupled GCN. We empirically validate our findings on four benchmark datasets, demonstrating the advantages of our method. The code is available at https://github.com/DongHande/PT_propagation_then_training.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1753659544",
+                    "name": "Hande Dong"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2065972969",
+                    "name": "Shuxian Bi"
+                },
+                {
+                    "authorId": "1753584452",
+                    "name": "Zhaolin Ding"
+                },
+                {
+                    "authorId": "143738684",
+                    "name": "Peng Cui"
+                }
+            ]
+        }
+    ]
+}

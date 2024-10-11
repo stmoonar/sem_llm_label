@@ -1,0 +1,421 @@
+{
+    "authorId": "1713801",
+    "papers": [
+        {
+            "paperId": "55c3095681acc82780508b0e484dba0c30cf1caa",
+            "title": "Automated Evaluation of Retrieval-Augmented Language Models with Task-Specific Exam Generation",
+            "abstract": "We propose a new method to measure the task-specific accuracy of Retrieval-Augmented Large Language Models (RAG). Evaluation is performed by scoring the RAG on an automatically-generated synthetic exam composed of multiple choice questions based on the corpus of documents associated with the task. Our method is an automated, cost-efficient, interpretable, and robust strategy to select the optimal components for a RAG system. We leverage Item Response Theory (IRT) to estimate the quality of an exam and its informativeness on task-specific accuracy. IRT also provides a natural way to iteratively improve the exam by eliminating the exam questions that are not sufficiently informative about a model's ability. We demonstrate our approach on four new open-ended Question-Answering tasks based on Arxiv abstracts, StackExchange questions, AWS DevOps troubleshooting guides, and SEC filings. In addition, our experiments reveal more general insights into factors impacting RAG performance like size, retrieval mechanism, prompting and fine-tuning. Most notably, our findings show that choosing the right retrieval algorithms often leads to bigger performance gains than simply using a larger language model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2028200300",
+                    "name": "Gauthier Guinet"
+                },
+                {
+                    "authorId": "1403851743",
+                    "name": "Behrooz Omidvar-Tehrani"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                },
+                {
+                    "authorId": "2302802307",
+                    "name": "Laurent Callot"
+                }
+            ]
+        },
+        {
+            "paperId": "7b3c8d1aacf2c3b356d7ee26d6e7fc2a8914bb45",
+            "title": "Fewer Truncations Improve Language Modeling",
+            "abstract": "In large language model training, input documents are typically concatenated together and then split into sequences of equal length to avoid padding tokens. Despite its efficiency, the concatenation approach compromises data integrity -- it inevitably breaks many documents into incomplete pieces, leading to excessive truncations that hinder the model from learning to compose logically coherent and factually consistent content that is grounded on the complete context. To address the issue, we propose Best-fit Packing, a scalable and efficient method that packs documents into training sequences through length-aware combinatorial optimization. Our method completely eliminates unnecessary truncations while retaining the same training efficiency as concatenation. Empirical results from both text and code pre-training show that our method achieves superior performance (e.g., relatively +4.7% on reading comprehension; +16.8% in context following; and +9.2% on program synthesis), and reduces closed-domain hallucination effectively by up to 58.3%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113455281",
+                    "name": "Hantian Ding"
+                },
+                {
+                    "authorId": "2259065741",
+                    "name": "Zijian Wang"
+                },
+                {
+                    "authorId": "2296990653",
+                    "name": "Giovanni Paolini"
+                },
+                {
+                    "authorId": "40574366",
+                    "name": "Varun Kumar"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                },
+                {
+                    "authorId": "2258962983",
+                    "name": "Dan Roth"
+                },
+                {
+                    "authorId": "2264070792",
+                    "name": "Stefano Soatto"
+                }
+            ]
+        },
+        {
+            "paperId": "8a6cf40cf355eca89d39e5532206b2e7fff028d8",
+            "title": "Collage: Light-Weight Low-Precision Strategy for LLM Training",
+            "abstract": "Large models training is plagued by the intense compute cost and limited hardware memory. A practical solution is low-precision representation but is troubled by loss in numerical accuracy and unstable training rendering the model less useful. We argue that low-precision floating points can perform well provided the error is properly compensated at the critical locations in the training process. We propose Collage which utilizes multi-component float representation in low-precision to accurately perform operations with numerical errors accounted. To understand the impact of imprecision to training, we propose a simple and novel metric which tracks the lost information during training as well as differentiates various precision strategies. Our method works with commonly used low-precision such as half-precision ($16$-bit floating points) and can be naturally extended to work with even lower precision such as $8$-bit. Experimental results show that pre-training using Collage removes the requirement of using $32$-bit floating-point copies of the model and attains similar/better training performance compared to $(16, 32)$-bit mixed-precision strategy, with up to $3.7\\times$ speedup and $\\sim 15\\%$ to $23\\%$ less memory usage in practice.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2300996598",
+                    "name": "Tao Yu"
+                },
+                {
+                    "authorId": "2300099354",
+                    "name": "Gaurav Gupta"
+                },
+                {
+                    "authorId": "31987844",
+                    "name": "Karthick Gopalswamy"
+                },
+                {
+                    "authorId": "1783716",
+                    "name": "Amith R. Mamidala"
+                },
+                {
+                    "authorId": "2296821955",
+                    "name": "Hao Zhou"
+                },
+                {
+                    "authorId": "2300098293",
+                    "name": "Jeffrey Huynh"
+                },
+                {
+                    "authorId": "2296621337",
+                    "name": "Youngsuk Park"
+                },
+                {
+                    "authorId": "2300097468",
+                    "name": "Ron Diamant"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                },
+                {
+                    "authorId": "2296789669",
+                    "name": "Jun Huan"
+                }
+            ]
+        },
+        {
+            "paperId": "c17d6af40861a705a8e5e60aaf54762f43b787d8",
+            "title": "BASS: Batched Attention-optimized Speculative Sampling",
+            "abstract": "Speculative decoding has emerged as a powerful method to improve latency and throughput in hosting large language models. However, most existing implementations focus on generating a single sequence. Real-world generative AI applications often require multiple responses and how to perform speculative decoding in a batched setting while preserving its latency benefits poses non-trivial challenges. This paper describes a system of batched speculative decoding that sets a new state of the art in multi-sequence generation latency and that demonstrates superior GPU utilization as well as quality of generations within a time budget. For example, for a 7.8B-size model on a single A100 GPU and with a batch size of 8, each sequence is generated at an average speed of 5.8ms per token, the overall throughput being 1.1K tokens per second. These results represent state-of-the-art latency and a 2.15X speed-up over optimized regular decoding. Within a time budget that regular decoding does not finish, our system is able to generate sequences with HumanEval Pass@First of 43% and Pass@All of 61%, far exceeding what's feasible with single-sequence speculative decoding. Our peak GPU utilization during decoding reaches as high as 15.8%, more than 3X the highest of that of regular decoding and around 10X of single-sequence speculative decoding.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2287922898",
+                    "name": "Haifeng Qian"
+                },
+                {
+                    "authorId": "1913939",
+                    "name": "Sujan Kumar Gonugondla"
+                },
+                {
+                    "authorId": "2298274846",
+                    "name": "Sungsoo Ha"
+                },
+                {
+                    "authorId": "2282138397",
+                    "name": "Mingyue Shang"
+                },
+                {
+                    "authorId": "40892818",
+                    "name": "Sanjay Krishna Gouda"
+                },
+                {
+                    "authorId": "2285060176",
+                    "name": "Ramesh Nallapati"
+                },
+                {
+                    "authorId": "2072419570",
+                    "name": "Sudipta Sengupta"
+                },
+                {
+                    "authorId": "2282270342",
+                    "name": "Xiaofei Ma"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                }
+            ]
+        },
+        {
+            "paperId": "d7fed7523ec2eb5aaeda51e5608b21e8ffc31549",
+            "title": "Approximately Aligned Decoding",
+            "abstract": "It is common to reject undesired outputs of Large Language Models (LLMs); however, current methods to do so require an excessive amount of computation, or severely distort the distribution of outputs. We present a method to balance the distortion of the output distribution with computational efficiency, allowing for the generation of long sequences of text with difficult-to-satisfy constraints, with less amplification of low probability outputs compared to existing methods. We show through a series of experiments that the task-specific performance of our method is comparable to methods that do not distort the output distribution, while being much more computationally efficient.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2287921227",
+                    "name": "Daniel Melcer"
+                },
+                {
+                    "authorId": "1913939",
+                    "name": "Sujan Kumar Gonugondla"
+                },
+                {
+                    "authorId": "2323783607",
+                    "name": "Pramuditha Perera"
+                },
+                {
+                    "authorId": "2287922898",
+                    "name": "Haifeng Qian"
+                },
+                {
+                    "authorId": "2323783450",
+                    "name": "Wen-Hao Chiang"
+                },
+                {
+                    "authorId": "2323812007",
+                    "name": "Yanjun Wang"
+                },
+                {
+                    "authorId": "2323785679",
+                    "name": "Nihal Jain"
+                },
+                {
+                    "authorId": "1802463",
+                    "name": "P. Garg"
+                },
+                {
+                    "authorId": "2323899101",
+                    "name": "Xiaofei Ma"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                }
+            ]
+        },
+        {
+            "paperId": "f550b02f618cb774d93cad3b9f501514156221ec",
+            "title": "CodeFort: Robust Training for Code Generation Models",
+            "abstract": "Code generation models are not robust to small perturbations, which often lead to inconsistent and incorrect generations and significantly degrade the performance of these models. Improving the robustness of code generation models is crucial to better user experience when these models are deployed in real-world applications. However, existing efforts have not addressed this issue for code generation models. To fill this gap, we propose CodeFort, a framework to improve the robustness of code generation models, generalizing a large variety of code perturbations to enrich the training data and enabling various robust training strategies, mixing data augmentation, batch augmentation, adversarial logits pairing, and contrastive learning, all carefully designed to support high-throughput training. Extensive evaluations show that we improve the average robust pass rates of baseline CodeGen models from 14.79 to 21.74. Notably, the improvement in robustness against code-syntax perturbations is evidenced by a significant decrease in pass rate drop from 95.04% to 53.35%",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2298009155",
+                    "name": "Yuhao Zhang"
+                },
+                {
+                    "authorId": "2291074711",
+                    "name": "Shiqi Wang"
+                },
+                {
+                    "authorId": "2287922898",
+                    "name": "Haifeng Qian"
+                },
+                {
+                    "authorId": "2259065741",
+                    "name": "Zijian Wang"
+                },
+                {
+                    "authorId": "2282138397",
+                    "name": "Mingyue Shang"
+                },
+                {
+                    "authorId": "2297997029",
+                    "name": "Linbo Liu"
+                },
+                {
+                    "authorId": "40892818",
+                    "name": "Sanjay Krishna Gouda"
+                },
+                {
+                    "authorId": "2282366776",
+                    "name": "Baishakhi Ray"
+                },
+                {
+                    "authorId": "2221639706",
+                    "name": "M. K. Ramanathan"
+                },
+                {
+                    "authorId": "2282270342",
+                    "name": "Xiaofei Ma"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                }
+            ]
+        },
+        {
+            "paperId": "f7508f20efdd3d709d3be4f46b964b5a0262fe15",
+            "title": "Training LLMs to Better Self-Debug and Explain Code",
+            "abstract": "In the domain of code generation, self-debugging is crucial. It allows LLMs to refine their generated code based on execution feedback. This is particularly important because generating correct solutions in one attempt proves challenging for complex tasks. Prior works on self-debugging mostly focus on prompting methods by providing LLMs with few-shot examples, which work poorly on small open-sourced LLMs. In this work, we propose a training framework that significantly improves self-debugging capability of LLMs. Intuitively, we observe that a chain of explanations on the wrong code followed by code refinement helps LLMs better analyze the wrong code and do refinement. We thus propose an automated pipeline to collect a high-quality dataset for code explanation and refinement by generating a number of explanations and refinement trajectories and filtering via execution verification. We perform supervised fine-tuning (SFT) and further reinforcement learning (RL) on both success and failure trajectories with a novel reward design considering code explanation and refinement quality. SFT improves the pass@1 by up to 15.92% and pass@10 by 9.30% over four benchmarks. RL training brings additional up to 3.54% improvement on pass@1 and 2.55% improvement on pass@10. The trained LLMs show iterative refinement ability, and can keep refining code continuously. Lastly, our human evaluation shows that the LLMs trained with our framework generate more useful code explanations and help developers better understand bugs in source code.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2296995282",
+                    "name": "Nan Jiang"
+                },
+                {
+                    "authorId": "2297045896",
+                    "name": "Xiaopeng Li"
+                },
+                {
+                    "authorId": "2291074711",
+                    "name": "Shiqi Wang"
+                },
+                {
+                    "authorId": "2297145911",
+                    "name": "Qiang Zhou"
+                },
+                {
+                    "authorId": "2195128700",
+                    "name": "Soneya Binta Hossain"
+                },
+                {
+                    "authorId": "2282366776",
+                    "name": "Baishakhi Ray"
+                },
+                {
+                    "authorId": "40574366",
+                    "name": "Varun Kumar"
+                },
+                {
+                    "authorId": "2282270342",
+                    "name": "Xiaofei Ma"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                }
+            ]
+        },
+        {
+            "paperId": "1825abbe1dede7757e5d3f72fbdfeda64e3e70a7",
+            "title": "Self-consistency for open-ended generations",
+            "abstract": "In this paper, we present a novel approach for improving the quality and consistency of generated outputs from large-scale pre-trained language models (LLMs). Self-consistency has emerged as an effective approach for prompts with \ufb01xed answers, selecting the answer with the highest number of votes. In this paper, we introduce a generalized framework for self-consistency that extends its applicability beyond problems that have \ufb01xed-answer answers. Through extensive simulations, we demonstrate that our approach consistently recovers the optimal or near-optimal generation from a set of candidates. We also propose lightweight parameter-free similarity functions that show signi\ufb01cant and consistent improvements across code generation, autoformalization, and summarization tasks, even without access to token log probabilities. Our method incurs minimal computational overhead, requiring no auxiliary reranker models or modi\ufb01cations to the existing model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2282521448",
+                    "name": "Siddhartha Jain"
+                },
+                {
+                    "authorId": "2282270342",
+                    "name": "Xiaofei Ma"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                },
+                {
+                    "authorId": "2301213456",
+                    "name": "Bing Xiang"
+                }
+            ]
+        },
+        {
+            "paperId": "1e0c7e421d81c58bccea799535664c010874f68e",
+            "title": "Personalized Federated Domain Adaptation for Item-to-Item Recommendation",
+            "abstract": "Item-to-Item (I2I) recommendation is an important function in most recommendation systems, which generates replacement or complement suggestions for a particular item based on its semantic similarities to other cataloged items. Given that subsets of items in a recommendation system might be co-interacted with by the same set of customers, graph-based models, such as graph neural networks (GNNs), provide a natural framework to combine, ingest and extract valuable insights from such high-order relational interactions between cataloged items, as well as their metadata features, as has been shown in many recent studies. However, learning GNNs effectively for I2I requires ingesting a large amount of relational data, which might not always be available, especially in new, emerging market segments. To mitigate this data bottleneck, we postulate that recommendation patterns learned from existing mature market segments (with private data) could be adapted to build effective warm-start models for emerging ones. To achieve this, we propose and investigate a personalized federated modeling framework based on GNNs to summarize, assemble and adapt recommendation patterns across market segments with heterogeneous customer behaviors into effective local models. Our key contribution is a personalized graph adaptation model that bridges the gap between recent literature on federated GNNs and (non-graph) personalized federated learning, which either does not optimize for the adaptability of the federated model or is restricted to local models with homogeneous parameterization, excluding GNNs with heterogeneous local graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2524771",
+                    "name": "Ziwei Fan"
+                },
+                {
+                    "authorId": "2095088964",
+                    "name": "Hao Ding"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                },
+                {
+                    "authorId": "144721482",
+                    "name": "T. Hoang"
+                }
+            ]
+        },
+        {
+            "paperId": "816bcb29c53ba95ee679e2167ef0d6c85e45e1b6",
+            "title": "Trending Now: Modeling Trend Recommendations",
+            "abstract": "Modern recommender systems usually include separate recommendation carousels such as \u2018trending now\u2019 to list trending items and further boost their popularity, thereby attracting active users. Though widely useful, such \u2018trending now\u2019 carousels typically generate item lists based on simple heuristics, e.g., the number of interactions within a time interval, and therefore still leave much room for improvement. This paper aims to systematically study this under-explored but important problem from the new perspective of time series forecasting. We first provide a set of rigorous definitions related to item trendiness and formulate the trend recommendation task as a one-step time series forecasting problem. We then propose a deep latent variable model, dubbed Trend Recommender (TrendRec), to forecast items\u2019 future trends and generate trending item lists. Furthermore, we design associated evaluation protocols for trend recommendation. Experiments on real-world datasets from various domains show that our TrendRec significantly outperforms the baselines, verifying our model\u2019s effectiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2095088964",
+                    "name": "Hao Ding"
+                },
+                {
+                    "authorId": "1681967",
+                    "name": "B. Kveton"
+                },
+                {
+                    "authorId": "50032176",
+                    "name": "Yifei Ma"
+                },
+                {
+                    "authorId": "1845861038",
+                    "name": "Youngsuk Park"
+                },
+                {
+                    "authorId": "3245677",
+                    "name": "Venkataramana B. Kini"
+                },
+                {
+                    "authorId": "2005401",
+                    "name": "Yupeng Gu"
+                },
+                {
+                    "authorId": "1388725630",
+                    "name": "Ravi Divvela"
+                },
+                {
+                    "authorId": "1682816",
+                    "name": "Fei Wang"
+                },
+                {
+                    "authorId": "1713801",
+                    "name": "Anoop Deoras"
+                },
+                {
+                    "authorId": "2256769979",
+                    "name": "Hao Wang"
+                },
+                {
+                    "authorId": "2233485442",
+                    "name": "2023. Trending"
+                }
+            ]
+        }
+    ]
+}

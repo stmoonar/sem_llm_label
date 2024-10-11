@@ -1,0 +1,357 @@
+{
+    "authorId": "2109154767",
+    "papers": [
+        {
+            "paperId": "3130643a5d02f0e849d83bb1f85577a924081f36",
+            "title": "Paxion: Patching Action Knowledge in Video-Language Foundation Models",
+            "abstract": "Action knowledge involves the understanding of textual, visual, and temporal aspects of actions. We introduce the Action Dynamics Benchmark (ActionBench) containing two carefully designed probing tasks: Action Antonym and Video Reversal, which targets multimodal alignment capabilities and temporal understanding skills of the model, respectively. Despite recent video-language models' (VidLM) impressive performance on various benchmark tasks, our diagnostic tasks reveal their surprising deficiency (near-random performance) in action knowledge, suggesting that current models rely on object recognition abilities as a shortcut for action understanding. To remedy this, we propose a novel framework, Paxion, along with a new Discriminative Video Dynamics Modeling (DVDM) objective. The Paxion framework utilizes a Knowledge Patcher network to encode new action knowledge and a Knowledge Fuser component to integrate the Patcher into frozen VidLMs without compromising their existing capabilities. Due to limitations of the widely-used Video-Text Contrastive (VTC) loss for learning action knowledge, we introduce the DVDM objective to train the Knowledge Patcher. DVDM forces the model to encode the correlation between the action text and the correct ordering of video frames. Our extensive analyses show that Paxion and DVDM together effectively fill the gap in action knowledge understanding (~50% to 80%), while maintaining or improving performance on a wide spectrum of both object- and action-centric downstream tasks. The code and data will be made publicly available for research purposes at https://github.com/MikeWangWZHL/Paxion.git.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2052036545",
+                    "name": "Zhenhailong Wang"
+                },
+                {
+                    "authorId": "1380229273",
+                    "name": "Ansel Blume"
+                },
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2217570953",
+                    "name": "Genglin Liu"
+                },
+                {
+                    "authorId": "2706729",
+                    "name": "Jaemin Cho"
+                },
+                {
+                    "authorId": "2125564044",
+                    "name": "Zineng Tang"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                },
+                {
+                    "authorId": "2072975661",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "92fe20f9907083dbacf4ad8197f38a59d30aea97",
+            "title": "OpenPI-C: A Better Benchmark and Stronger Baseline for Open-Vocabulary State Tracking",
+            "abstract": "Open-vocabulary state tracking is a more practical version of state tracking that aims to track state changes of entities throughout a process without restricting the state space and entity space. OpenPI is to date the only dataset annotated for open-vocabulary state tracking. However, we identify issues with the dataset quality and evaluation metric. For the dataset, we categorize 3 types of problems on the procedure level, step level and state change level respectively, and build a clean dataset OpenPI-C using multiple rounds of human judgment. For the evaluation metric, we propose a cluster-based metric to fix the original metric's preference for repetition. Model-wise, we enhance the seq2seq generation baseline by reinstating two key properties for state tracking: temporal dependency and entity awareness. The state of the world after an action is inherently dependent on the previous state. We model this dependency through a dynamic memory bank and allow the model to attend to the memory slots during decoding. On the other hand, the state of the world is naturally a union of the states of involved entities. Since the entities are unknown in the open-vocabulary setting, we propose a two-stage model that refines the state change prediction conditioned on entities predicted from the first stage. Empirical results show the effectiveness of our proposed model especially on the cluster-based metric. The code and data are released at https://github.com/shirley-wu/openpi-c",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117919823",
+                    "name": "Xueqing Wu"
+                },
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2072975661",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "a5ad326e6f726d2b87ca1f55e78c9de3bca00b39",
+            "title": "Explanation Graph Generation via Generative Pre-training over Synthetic Graphs",
+            "abstract": "The generation of explanation graphs is a significant task that aims to produce explanation graphs in response to user input, revealing the internal reasoning process. This task is challenging due to the significant discrepancy between unstructured user queries and structured explanation graphs. Current research commonly fine-tunes a text-based pre-trained language model on a small downstream dataset that is annotated with labeled graphs. However, due to the limited scale of available datasets, this approach may prove to be insufficient in bridging the gap between natural language text and structured graphs. In this paper, to alleviate the above limitations, we propose a novel pre-trained framework EG3P(for Explanation Graph Generation via Generative Pre-training over synthetic graphs) for the explanation graph generation task. Specifically, we first propose a text-to-graph generative task to pre-train the model with the goal of bridging the text-graph gap. Additionally, we propose an automatic corpus synthesis strategy for synthesizing a large scale of high-quality corpus, reducing the reliance on costly manual annotation methods. Experimental results on ExplaGraphs show the effectiveness of EG3P that our model surpasses all baseline systems with remarkable margins. Besides, further analysis demonstrates that EG3P is able to generate better explanation graphs on actual reasoning tasks such as CommonsenseQA and OpenbookQA.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3129614",
+                    "name": "H. Cui"
+                },
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "49889909",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "117637793",
+                    "name": "Qi Shi"
+                }
+            ]
+        },
+        {
+            "paperId": "a5ebebcf0d17d08bfa2895533b121a4411c35685",
+            "title": "GLEN: General-Purpose Event Detection for Thousands of Types",
+            "abstract": "The progress of event extraction research has been hindered by the absence of wide-coverage, large-scale datasets. To make event extraction systems more accessible, we build a general-purpose event detection dataset GLEN, which covers 205K event mentions with 3,465 different types, making it more than 20x larger in ontology than today's largest event dataset. GLEN is created by utilizing the DWD Overlay, which provides a mapping between Wikidata Qnodes and PropBank rolesets. This enables us to use the abundant existing annotation for PropBank as distant supervision. In addition, we also propose a new multi-stage event detection model CEDAR specifically designed to handle the large ontology size in GLEN. We show that our model exhibits superior performance compared to a range of baselines including InstructGPT. Finally, we perform error analysis and show that label noise is still the largest challenge for improving performance for this new dataset. Our dataset, code, and models are released at \\url{https://github.com/ZQS1943/GLEN}.}",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167027235",
+                    "name": "Qiusi Zhan"
+                },
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "39996046",
+                    "name": "Kathryn Conger"
+                },
+                {
+                    "authorId": "145755155",
+                    "name": "Martha Palmer"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "b5ed8385cc8a939994df417467cd4d07ee3f9710",
+            "title": "Non-Sequential Graph Script Induction via Multimedia Grounding",
+            "abstract": "Online resources such as WikiHow compile a wide range of scripts for performing everyday tasks, which can assist models in learning to reason about procedures. However, the scripts are always presented in a linear manner, which does not reflect the flexibility displayed by people executing tasks in real life. For example, in the CrossTask Dataset, 64.5% of consecutive step pairs are also observed in the reverse order, suggesting their ordering is not fixed. In addition, each step has an average of 2.56 frequent next steps, demonstrating \u201cbranching\u201d. In this paper, we propose the new challenging task of non-sequential graph script induction, aiming to capture optional and interchangeable steps in procedural planning. To automate the induction of such graph scripts for given tasks, we propose to take advantage of loosely aligned videos of people performing the tasks. In particular, we design a multimodal framework to ground procedural videos to WikiHow textual steps and thus transform each video into an observed step path on the latent ground truth graph script. This key transformation enables us to train a script knowledge model capable of both generating explicit graph scripts for learnt tasks and predicting future steps given a partial step sequence. Our best model outperforms the strongest pure text/vision baselines by 17.52% absolute gains on F1@3 for next step prediction and 13.8% absolute gains on Acc@1 for partial sequence completion. Human evaluation shows our model outperforming the WikiHow linear baseline by 48.76% absolute gains in capturing sequential and non-sequential step relationships.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2157142269",
+                    "name": "Yu Zhou"
+                },
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "48030192",
+                    "name": "Xudong Lin"
+                },
+                {
+                    "authorId": "2122374530",
+                    "name": "Shih-Fu Chang"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                }
+            ]
+        },
+        {
+            "paperId": "d44996a04e77c990177b589261ceebee5a80ef01",
+            "title": "Human-in-the-loop Schema Induction",
+            "abstract": "Schema induction builds a graph representation explaining how events unfold in a scenario. Existing approaches have been based on information retrieval (IR) and information extraction (IE), often with limited human curation. We demonstrate a human-in-the-loop schema induction system powered by GPT-3. We first describe the different modules of our system, including prompting to generate schematic elements, manual edit of those elements, and conversion of those into a schema graph. By qualitatively comparing our system to previous ones, we show that our system not only transfers to new domains more easily than previous approaches, but also reduces efforts of human curation thanks to our interactive interface.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "123437034",
+                    "name": "Tianyi Zhang"
+                },
+                {
+                    "authorId": "2065421682",
+                    "name": "Isaac Tham"
+                },
+                {
+                    "authorId": "2165225503",
+                    "name": "Zhaoyi Hou"
+                },
+                {
+                    "authorId": "2111472779",
+                    "name": "J. Ren"
+                },
+                {
+                    "authorId": "2202592542",
+                    "name": "Liyang Zhou"
+                },
+                {
+                    "authorId": "2283763073",
+                    "name": "Hainiu Xu"
+                },
+                {
+                    "authorId": "72436283",
+                    "name": "Li Zhang"
+                },
+                {
+                    "authorId": "145262322",
+                    "name": "Lara J. Martin"
+                },
+                {
+                    "authorId": "3372941",
+                    "name": "Rotem Dror"
+                },
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2072975661",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "145755155",
+                    "name": "Martha Palmer"
+                },
+                {
+                    "authorId": "1783500",
+                    "name": "S. Brown"
+                },
+                {
+                    "authorId": "2209984833",
+                    "name": "Reece Suchocki"
+                },
+                {
+                    "authorId": "1763608",
+                    "name": "Chris Callison-Burch"
+                }
+            ]
+        },
+        {
+            "paperId": "d908dbdecadb766b4e993e0cba02f18a1fba2788",
+            "title": "Open-Domain Hierarchical Event Schema Induction by Incremental Prompting and Verification",
+            "abstract": "Event schemas are a form of world knowledge about the typical progression of events. Recent methods for event schema induction use information extraction systems to construct a large number of event graph instances from documents, and then learn to generalize the schema from such instances. In contrast, we propose to treat event schemas as a form of commonsense knowledge that can be derived from large language models (LLMs). This new paradigm greatly simplifies the schema induction process and allows us to handle both hierarchical relations and temporal relations between events in a straightforward way. Since event schemas have complex graph structures, we design an incremental prompting and verification method IncPrompt to break down the construction of a complex event graph into three stages: event skeleton construction, event expansion, and event-event relation verification. Compared to directly using LLMs to generate a linearized graph, IncSchema can generate large and complex schemas with 7.2% F1 improvement in temporal relations and 31.0% F1 improvement in hierarchical relations. In addition, compared to the previous state-of-the-art closed-domain schema induction model, human assessors were able to cover ~10% more events when translating the schemas into coherent stories and rated our schemas 1.3 points higher (on a 5-point scale) in terms of readability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "13518369",
+                    "name": "Ruining Zhao"
+                },
+                {
+                    "authorId": "2114013104",
+                    "name": "Rui Zhao"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "1763608",
+                    "name": "Chris Callison-Burch"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "00971ecf9ea497286c0c454b34ff4ff355170df2",
+            "title": "Open Relation and Event Type Discovery with Type Abstraction",
+            "abstract": "Conventional \u201cclosed-world\u201d information extraction (IE) approaches rely on human ontologies to define the scope for extraction. As a result, such approaches fall short when applied to new domains. This calls for systems that can automatically infer new types from given corpora, a task which we refer to as type discovery.To tackle this problem, we introduce the idea of type abstraction, where the model is prompted to generalize and name the type. Then we use the similarity between inferred names to induce clusters. Observing that this abstraction-based representation is often complementary to the entity/trigger token representation, we set up these two representations as two views and design our model as a co-training framework. Our experiments on multiple relation extraction and event extraction datasets consistently show the advantage of our type abstraction approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "019cb62ec0e5192d9950a21ead39afc4c70e8045",
+            "title": "P4E: Few-Shot Event Detection as Prompt-Guided Identification and Localization",
+            "abstract": "We propose P4E, an identify-and-localize event detection framework that integrates the best of few-shot prompting and structured prediction. Our framework decomposes event detection into an identification task and a localization task. For the identification task, which we formulate as multi-label classification, we leverage cloze-based prompting to align our objective with the pre-training task of language models, allowing our model to quickly adapt to new event types. We then employ an event type-agnostic sequence labeling model to localize the event trigger conditioned on the identification output. This heterogeneous model design allows P4E to quickly learn new event types without sacrificing the ability to make structured predictions. Our experiments demonstrate the effectiveness of our proposed design, and P4E shows superior performance for few-shot event detection on benchmark datasets FewEvent and MAVEN and comparable performance to SOTA for fully-supervised event detection on ACE.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "3355833",
+                    "name": "Liyuan Liu"
+                },
+                {
+                    "authorId": "1892794261",
+                    "name": "Yiqing Xie"
+                },
+                {
+                    "authorId": "2181650518",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        },
+        {
+            "paperId": "16d4b709cc56bca5888ef1960bafba9beafb5904",
+            "title": "PILED: An Identify-and-Localize Framework for Few-Shot Event Detection",
+            "abstract": "Practical applications of event extraction systems have long been hindered by their need for heavy human annotation. In order to scale up to new domains and event types, models must learn to cope with limited supervision, as in few-shot learning settings. To this end, the major challenge is to let the model master the semantics of event types, without requiring abundant event mention annotations. In our study, we employ cloze prompts to elicit event-related knowledge from pretrained language models and further use event de\ufb01nitions and keywords to pinpoint the trigger word. By formulating the event detection task as an identify-then-localize procedure, we minimize the number of type-speci\ufb01c parameters, enabling our model to quickly adapt to event detection tasks for new types. Experiments on three event detection benchmark datasets (ACE, FewEvent, MAVEN) show that our proposed method performs favorably under fully supervised settings and surpasses existing few-shot methods by 21% F1 on the FewEvent dataset and 20% on the MAVEN dataset when only 5 examples are provided for each event type.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109154767",
+                    "name": "Sha Li"
+                },
+                {
+                    "authorId": "2109392217",
+                    "name": "Liyuan Liu"
+                },
+                {
+                    "authorId": "1892794261",
+                    "name": "Yiqing Xie"
+                },
+                {
+                    "authorId": "2113323573",
+                    "name": "Heng Ji"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                }
+            ]
+        }
+    ]
+}

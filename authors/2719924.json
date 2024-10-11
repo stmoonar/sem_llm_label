@@ -1,0 +1,361 @@
+{
+    "authorId": "2719924",
+    "papers": [
+        {
+            "paperId": "a24ab4c0d758fa62ce18ce8afa2d904563c365c8",
+            "title": "Beyond Single Items: Exploring User Preferences in Item Sets with the Conversational Playlist Curation Dataset",
+            "abstract": "Users in consumption domains, like music, are often able to more efficiently provide preferences over a set of items (e.g. a playlist or radio) than over single items (e.g. songs). Unfortunately, this is an underexplored area of research, with most existing recommendation systems limited to understanding preferences over single items. Curating an item set exponentiates the search space that recommender systems must consider (all subsets of items!): this motivates conversational approaches-where users explicitly state or refine their preferences and systems elicit preferences in natural language-as an efficient way to understand user needs. We call this task conversational item set curation and present a novel data collection methodology that efficiently collects realistic preferences about item sets in a conversational setting by observing both item-level and set-level feedback. We apply this methodology to music recommendation to build the Conversational Playlist Curation Dataset (CPCD), where we show that it leads raters to express preferences that would not be otherwise expressed. Finally, we propose a wide range of conversational retrieval models as baselines for this task and evaluate them on the dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                },
+                {
+                    "authorId": "37866790",
+                    "name": "Megan Leszczynski"
+                },
+                {
+                    "authorId": "2108088736",
+                    "name": "Shu Zhang"
+                },
+                {
+                    "authorId": "1958631",
+                    "name": "R. Ganti"
+                },
+                {
+                    "authorId": "1680484",
+                    "name": "K. Balog"
+                },
+                {
+                    "authorId": "1803571",
+                    "name": "Filip Radlinski"
+                }
+            ]
+        },
+        {
+            "paperId": "c0f1fb3314b42aeff192bcee8a723cb35cabd78e",
+            "title": "Generating Synthetic Data for Conversational Music Recommendation Using Random Walks and Language Models",
+            "abstract": "Conversational recommendation systems (CRSs) enable users to use natural language feedback to control their recommendations, overcoming many of the challenges of traditional recommendation systems. However, the practical adoption of CRSs remains limited due to a lack of rich and diverse conversational training data that pairs user utterances with recommendations. To address this problem, we introduce a new method to generate synthetic training data by transforming curated item collections, such as playlists or movie watch lists, into item-seeking conversations. First, we use a biased random walk to generate a sequence of slates, or sets of item recommendations; then, we use a language model to generate corresponding user utterances. We demonstrate our approach by generating a conversational music recommendation dataset with over one million conversations, which were found to be consistent with relevant recommendations by a crowdsourced evaluation. Using the synthetic data to train a CRS, we significantly outperform standard retrieval baselines in offline and online evaluations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37866790",
+                    "name": "Megan Leszczynski"
+                },
+                {
+                    "authorId": "1958631",
+                    "name": "R. Ganti"
+                },
+                {
+                    "authorId": "2108088736",
+                    "name": "Shu Zhang"
+                },
+                {
+                    "authorId": "1680484",
+                    "name": "K. Balog"
+                },
+                {
+                    "authorId": "2065812052",
+                    "name": "Filip Radlinski"
+                },
+                {
+                    "authorId": "2067616758",
+                    "name": "Fernando Pereira"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                }
+            ]
+        },
+        {
+            "paperId": "f32dd0fcb421aaf96593dc9c4be740a1399c9e64",
+            "title": "Talk the Walk: Synthetic Data Generation for Conversational Music Recommendation",
+            "abstract": "Recommender systems are ubiquitous yet often difficult for users to control, and adjust if recommendation quality is poor. This has motivated conversational recommender systems (CRSs), with control provided through natural language feedback. However, as with most application domains, building robust CRSs requires training data that reflects system usage$\\unicode{x2014}$here conversations with user utterances paired with items that cover a wide range of preferences. This has proved challenging to collect scalably using conventional methods. We address the question of whether it can be generated synthetically, building on recent advances in natural language. We evaluate in the setting of item set recommendation, noting the increasing attention to this task motivated by use cases like music, news, and recipe recommendation. We present TalkTheWalk, which synthesizes realistic high-quality conversational data by leveraging domain expertise encoded in widely available curated item collections, generating a sequence of hypothetical yet plausible item sets, then using a language model to produce corresponding user utterances. We generate over one million diverse playlist curation conversations in the music domain, and show these contain consistent utterances with relevant item sets nearly matching the quality of an existing but small human-collected dataset for this task. We demonstrate the utility of the generated synthetic dataset on a conversational item retrieval task and show that it improves over both unsupervised baselines and systems trained on a real dataset.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37866790",
+                    "name": "Megan Leszczynski"
+                },
+                {
+                    "authorId": "1958631",
+                    "name": "R. Ganti"
+                },
+                {
+                    "authorId": "2108088736",
+                    "name": "Shu Zhang"
+                },
+                {
+                    "authorId": "1680484",
+                    "name": "K. Balog"
+                },
+                {
+                    "authorId": "2065812052",
+                    "name": "Filip Radlinski"
+                },
+                {
+                    "authorId": "2067616758",
+                    "name": "Fernando Pereira"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                }
+            ]
+        },
+        {
+            "paperId": "3bbf28bac4c4a150bc271bf17a03e2094def5f65",
+            "title": "Dialog Inpainting: Turning Documents into Dialogs",
+            "abstract": "Many important questions (e.g.\"How to eat healthier?\") require conversation to establish context and explore in depth. However, conversational question answering (ConvQA) systems have long been stymied by scarce training data that is expensive to collect. To address this problem, we propose a new technique for synthetically generating diverse and high-quality dialog data: dialog inpainting. Our approach takes the text of any document and transforms it into a two-person dialog between the writer and an imagined reader: we treat sentences from the article as utterances spoken by the writer, and then use a dialog inpainter to predict what the imagined reader asked or said in between each of the writer's utterances. By applying this approach to passages from Wikipedia and the web, we produce WikiDialog and WebDialog, two datasets totalling 19 million diverse information-seeking dialogs -- 1,000x larger than the largest existing ConvQA dataset. Furthermore, human raters judge the answer adequacy and conversationality of WikiDialog to be as good or better than existing manually-collected datasets. Using our inpainted data to pre-train ConvQA retrieval systems, we significantly advance state-of-the-art across three benchmarks (QReCC, OR-QuAC, TREC CAsT) yielding up to 40% relative gains on standard evaluation metrics.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2475437",
+                    "name": "Zhuyun Dai"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                },
+                {
+                    "authorId": "2664737",
+                    "name": "Vincent Zhao"
+                },
+                {
+                    "authorId": "41183532",
+                    "name": "Aida Amini"
+                },
+                {
+                    "authorId": "2211605631",
+                    "name": "Q. Rashid"
+                },
+                {
+                    "authorId": "2165607179",
+                    "name": "Mike Green"
+                },
+                {
+                    "authorId": "2091768",
+                    "name": "Kelvin Guu"
+                }
+            ]
+        },
+        {
+            "paperId": "4ef5410ec4b546eda642fe786cc1bdbb5a7251e1",
+            "title": "Attributed Text Generation via Post-hoc Research and Revision",
+            "abstract": "Language models (LMs) now excel at many tasks such as few-shot learning, question answering, reasoning, and dialog. However, they sometimes generate unsupported or misleading content. A user cannot easily determine whether their outputs are trust-worthy or not, because most LMs do not have any built-in mechanism for attribution to external evidence. To enable attribution while still preserving all the powerful advantages of recent generation models, we propose RARR ( Retro\ufb01t Attribution using Research and Revision ), a system that 1) automatically \ufb01nds attribution for the output of any text generation model and 2) post-edits the output to \ufb01x unsupported content while preserving the original output as much as possible. When applied to the output of several state-of-the-art LMs on a diverse set of generation tasks, we \ufb01nd that RARR sig-ni\ufb01cantly improves attribution while otherwise preserving the original input to a much greater degree than previously explored edit models. Furthermore, the implementation of RARR requires only a handful of training examples, a large language model, and standard web search.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49715441",
+                    "name": "Luyu Gao"
+                },
+                {
+                    "authorId": "2475437",
+                    "name": "Zhuyun Dai"
+                },
+                {
+                    "authorId": "2616463",
+                    "name": "Panupong Pasupat"
+                },
+                {
+                    "authorId": "52151521",
+                    "name": "Anthony Chen"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                },
+                {
+                    "authorId": "2051969653",
+                    "name": "Yicheng Fan"
+                },
+                {
+                    "authorId": "2664737",
+                    "name": "Vincent Zhao"
+                },
+                {
+                    "authorId": "1914797",
+                    "name": "N. Lao"
+                },
+                {
+                    "authorId": "8386466",
+                    "name": "Hongrae Lee"
+                },
+                {
+                    "authorId": "50270386",
+                    "name": "Da-Cheng Juan"
+                },
+                {
+                    "authorId": "2091768",
+                    "name": "Kelvin Guu"
+                }
+            ]
+        },
+        {
+            "paperId": "66242baf48b0f6b828e7547ac39ffaa5e1b2cb3e",
+            "title": "RARR: Researching and Revising What Language Models Say, Using Language Models",
+            "abstract": "Language models (LMs) now excel at many tasks such as question answering, reasoning, and dialog. However, they sometimes generate unsupported or misleading content. A user cannot easily determine whether their outputs are trustworthy or not, because most LMs do not have any built-in mechanism for attribution to external evidence. To enable attribution while still preserving all the powerful advantages of recent generation models, we propose RARR (Retrofit Attribution using Research and Revision), a system that 1) automatically finds attribution for the output of any text generation model, and 2) post-edits the output to fix unsupported content while preserving the original output as much as possible. When applied to the output of several state-of-the-art LMs on a diverse set of generation tasks, we find that RARR significantly improves attribution while otherwise preserving the original input to a much greater degree than previously explored edit models. Furthermore, the implementation of RARR requires only a handful of training examples, a large language model, and standard web search.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49715441",
+                    "name": "Luyu Gao"
+                },
+                {
+                    "authorId": "2475437",
+                    "name": "Zhuyun Dai"
+                },
+                {
+                    "authorId": "2616463",
+                    "name": "Panupong Pasupat"
+                },
+                {
+                    "authorId": "52151521",
+                    "name": "Anthony Chen"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                },
+                {
+                    "authorId": "2051969653",
+                    "name": "Yicheng Fan"
+                },
+                {
+                    "authorId": "2664737",
+                    "name": "Vincent Zhao"
+                },
+                {
+                    "authorId": "1914797",
+                    "name": "N. Lao"
+                },
+                {
+                    "authorId": "8386466",
+                    "name": "Hongrae Lee"
+                },
+                {
+                    "authorId": "50270386",
+                    "name": "Da-Cheng Juan"
+                },
+                {
+                    "authorId": "2091768",
+                    "name": "Kelvin Guu"
+                }
+            ]
+        },
+        {
+            "paperId": "a5b38f8986fc69b9edf9e4d596f4a30c62862126",
+            "title": "Conformal retrofitting via Riemannian manifolds: distilling task-specific graphs into pretrained embeddings",
+            "abstract": "Pretrained (language) embeddings are versatile, task-agnostic feature representations of entities, like words, that are central to many machine learning applications. These representations can be enriched through retrofitting, a class of methods that incorporate task-specific domain knowledge encoded as a graph over a subset of these entities. However, existing retrofitting algorithms face two limitations: they overfit the observed graph by failing to represent relationships with missing entities; and they underfit the observed graph by only learning embeddings in Euclidean manifolds, which cannot faithfully represent even simple tree-structured or cyclic graphs. We address these problems with two key contributions: (i) we propose a novel regularizer, a conformality regularizer, that preserves local geometry from the pretrained embeddings---enabling generalization to missing entities and (ii) a new Riemannian feedforward layer that learns to map pre-trained embeddings onto a non-Euclidean manifold that can better represent the entire graph. Through experiments on WordNet, we demonstrate that the conformality regularizer prevents even existing (Euclidean-only) methods from overfitting on link prediction for missing entities, and---together with the Riemannian feedforward layer---learns non-Euclidean embeddings that outperform them.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150142727",
+                    "name": "Justin Dieter"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                }
+            ]
+        },
+        {
+            "paperId": "240750d5fe5b0458d18f8ed3ab05d4ee449d977d",
+            "title": "Mimic and Rephrase: Reflective Listening in Open-Ended Dialogue",
+            "abstract": "Reflective listening\u2013demonstrating that you have heard your conversational partner\u2013is key to effective communication. Expert human communicators often mimic and rephrase their conversational partner, e.g., when responding to sentimental stories or to questions they don\u2019t know the answer to. We introduce a new task and an associated dataset wherein dialogue agents similarly mimic and rephrase a user\u2019s request to communicate sympathy (I\u2019m sorry to hear that) or lack of knowledge (I do not know that). We study what makes a rephrasal response good against a set of qualitative metrics. We then evaluate three models for generating responses: a syntax-aware rule-based system, a seq2seq LSTM neural models with attention (S2SA), and the same neural model augmented with a copy mechanism (S2SA+C). In a human evaluation, we find that S2SA+C and the rule-based system are comparable and approach human-generated response quality. In addition, experiences with a live deployment of S2SA+C in a customer support setting suggest that this generation task is a practical contribution to real world conversational agents.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150142727",
+                    "name": "Justin Dieter"
+                },
+                {
+                    "authorId": "2118914544",
+                    "name": "Tian Wang"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                },
+                {
+                    "authorId": "32301760",
+                    "name": "Gabor Angeli"
+                },
+                {
+                    "authorId": "145830541",
+                    "name": "Angel X. Chang"
+                }
+            ]
+        },
+        {
+            "paperId": "2be63d6b7dc137aa202907a471243e91deab258d",
+            "title": "Textual Analogy Parsing: What\u2019s Shared and What\u2019s Compared among Analogous Facts",
+            "abstract": "To understand a sentence like \u201cwhereas only 10% of White Americans live at or below the poverty line, 28% of African Americans do\u201d it is important not only to identify individual facts, e.g., poverty rates of distinct demographic groups, but also the higher-order relations between them, e.g., the disparity between them. In this paper, we propose the task of Textual Analogy Parsing (TAP) to model this higher-order meaning. Given a sentence such as the one above, TAP outputs a frame-style meaning representation which explicitly specifies what is shared (e.g., poverty rates) and what is compared (e.g., White Americans vs. African Americans, 10% vs. 28%) between its component facts. Such a meaning representation can enable new applications that rely on discourse understanding such as automated chart generation from quantitative text. We present a new dataset for TAP, baselines, and a model that successfully uses an ILP to enforce the structural constraints of the problem.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48024953",
+                    "name": "Matthew Lamm"
+                },
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                },
+                {
+                    "authorId": "144783904",
+                    "name": "Christopher D. Manning"
+                },
+                {
+                    "authorId": "1746807",
+                    "name": "Dan Jurafsky"
+                },
+                {
+                    "authorId": "145419642",
+                    "name": "Percy Liang"
+                }
+            ]
+        },
+        {
+            "paperId": "92f44bfc47dbe6b377bc5f4981697cb18c50efdf",
+            "title": "The price of debiasing automatic metrics in natural language evalaution",
+            "abstract": "For evaluating generation systems, automatic metrics such as BLEU cost nothing to run but have been shown to correlate poorly with human judgment, leading to systematic bias against certain model improvements. On the other hand, averaging human judgments, the unbiased gold standard, is often too expensive. In this paper, we use control variates to combine automatic metrics with human evaluation to obtain an unbiased estimator with lower cost than human evaluation alone. In practice, however, we obtain only a 7-13% cost reduction on evaluating summarization and open-response question answering systems. We then prove that our estimator is optimal: there is no unbiased estimator with lower cost. Our theory further highlights the two fundamental bottlenecks\u2014the automatic metric and the prompt shown to human evaluators\u2014both of which need to be improved to obtain greater cost savings.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2719924",
+                    "name": "Arun Tejasvi Chaganty"
+                },
+                {
+                    "authorId": "1776721",
+                    "name": "Stephen Mussmann"
+                },
+                {
+                    "authorId": "145419642",
+                    "name": "Percy Liang"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,375 @@
+{
+    "authorId": "2108593481",
+    "papers": [
+        {
+            "paperId": "3f57f297eb80171f9c2a900d087cfcac943c4c1e",
+            "title": "DGI: An Easy and Efficient Framework for GNN Model Evaluation",
+            "abstract": "While many systems have been developed to train graph neural networks (GNNs), efficient model evaluation, which computes node embedding according to a given model, remains to be addressed. For instance, using the widely adopted node-wise approach, model evaluation can account for over 90% of the time in the end-to-end training process due to neighbor explosion, which means that a node accesses its multi-hop neighbors. The layer-wise approach avoids neighbor explosion by conducting computation layer by layer in GNN models. However, layer-wise model evaluation takes considerable implementation efforts because users need to manually decompose the GNN model into layers, and different implementations are required for GNN models with different structures. In this paper, we present DGI -a framework for easy and efficient GNN model evaluation, which automatically translates the training code of a GNN model for layer-wise evaluation to minimize user effort. DGI is general for different GNN models and evaluation requests (e.g., computing embedding for all or some of the nodes), and supports out-of-core execution on large graphs that cannot fit in CPU memory. Under the hood, DGI traces the computation graph of GNN model, partitions the computation graph into layers that are suitable for layer-wise evaluation according to tailored rules, and executes each layer efficiently by reordering the computation tasks and managing device memory consumption. Experiment results show that DGI matches hand-written implementations of layer-wise evaluation in efficiency and consistently outperforms node-wise evaluation across different datasets and hardware settings, and the speedup can be over 1,000x.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113653096",
+                    "name": "Peiqi Yin"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "9695889",
+                    "name": "Jinjing Zhou"
+                },
+                {
+                    "authorId": "2167292330",
+                    "name": "Qiang Fu"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2084612700",
+                    "name": "Bo Tang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "46210e170045df3c0c50a17bb63e6de480d62f9d",
+            "title": "FreshGNN: Reducing Memory Access via Stable Historical Embeddings for Graph Neural Network Training",
+            "abstract": "A key performance bottleneck when training graph neural network (GNN) models on large, real-world graphs is loading node features onto a GPU. Due to limited GPU memory, expensive data movement is necessary to facilitate the storage of these features on alternative devices with slower access (e.g. CPU memory). Moreover, the irregularity of graph structures contributes to poor data locality which further exacerbates the problem. Consequently, existing frameworks capable of efficiently training large GNN models usually incur a significant accuracy degradation because of the currently-available shortcuts involved. To address these limitations, we instead propose FreshGNN, a general-purpose GNN mini-batch training framework that leverages a historical cache for storing and reusing GNN node embeddings instead of re-computing them through fetching raw features at every iteration. Critical to its success, the corresponding cache policy is designed, using a combination of gradient-based and staleness criteria, to selectively screen those embeddings which are relatively stable and can be cached, from those that need to be re-computed to reduce estimation errors and subsequent downstream accuracy loss. When paired with complementary system enhancements to support this selective historical cache, FreshGNN is able to accelerate the training speed on large graph datasets such as ogbn-papers100M and MAG240M by 3.4\u00d7 up to 20.5\u00d7 and reduce the memory access by 59%, with less than 1% influence on test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "6eea7fa1e628c47b16335034faf18e2fb3a01844",
+            "title": "Optimizing Irregular Dense Operators of Heterogeneous GNN Models on GPU",
+            "abstract": "GNN models on heterogeneous graphs have achieved state-of-the-art (SOTA) performance in various graph tasks such as link prediction and node classification. Despite their success in providing SOTA results, popular GNN libraries, such as PyG and DGL, fail to provide fast and efficient solutions for heterogeneous GNN models. One common key bottlenecks of models like RGAT, RGCN, and HGT is relation-specific linear projection. In this paper, we propose two high-performing tensor operators: gather-mm and segment-mm to address the issue. We demonstrate the effectiveness of the proposed operators in training two popular heterogeneous GNN models \u2013 RGCN and HGT. Our proposed approaches outperform the full-batch training time of RGCN by up to 3\u00d7 and mini-batch by up to 2\u00d7.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "10429687",
+                    "name": "Israt Nisa"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2167292330",
+                    "name": "Qiang Fu"
+                },
+                {
+                    "authorId": "1710813",
+                    "name": "\u00dcmit V. \u00c7ataly\u00fcrek"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "a27189b28d8360d185a7663facdca0d14eb977e4",
+            "title": "BiFeat: Supercharge GNN Training via Graph Feature Quantization",
+            "abstract": "Graph Neural Networks (GNNs) is a promising approach for applications with nonEuclidean data. However, training GNNs on large scale graphs with hundreds of millions nodes is both resource and time consuming. Different from DNNs, GNNs usually have larger memory footprints, and thus the GPU memory capacity and PCIe bandwidth are the main resource bottlenecks in GNN training. To address this problem, we present BiFeat: a graph feature quantization methodology to accelerate GNN training by significantly reducing the memory footprint and PCIe bandwidth requirement so that GNNs can take full advantage of GPU computing capabilities. Our key insight is that unlike DNN, GNN is less prone to the information loss of input features caused by quantization. We identify the main accuracy impact factors in graph feature quantization and theoretically prove that BiFeat training converges to a network where the loss is within $\\epsilon$ of the optimal loss of uncompressed network. We perform extensive evaluation of BiFeat using several popular GNN models and datasets, including GraphSAGE on MAG240M, the largest public graph dataset. The results demonstrate that BiFeat achieves a compression ratio of more than 30 and improves GNN training speed by 200%-320% with marginal accuracy loss. In particular, BiFeat achieves a record by training GraphSAGE on MAG240M within one hour using only four GPUs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2317038420",
+                    "name": "Yuxin Ma"
+                },
+                {
+                    "authorId": "2134719313",
+                    "name": "Ping Gong"
+                },
+                {
+                    "authorId": "2114335651",
+                    "name": "Jun Yi"
+                },
+                {
+                    "authorId": "9088433",
+                    "name": "Z. Yao"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2133092553",
+                    "name": "Cheng Li"
+                },
+                {
+                    "authorId": "2145020341",
+                    "name": "Yuxiong He"
+                },
+                {
+                    "authorId": "145552742",
+                    "name": "Feng Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "d4cdadb0355e7c8bad2a6040687ae4f9a9233937",
+            "title": "DGI: Easy and Efficient Inference for GNNs",
+            "abstract": "While many systems have been developed to train Graph Neural Networks (GNNs), efficient model inference and evaluation remain to be addressed. For instance, using the widely adopted node-wise approach, model evaluation can account for up to 94% of the time in the end-to-end training process due to neighbor explosion, which means that a node accesses its multi-hop neighbors. On the other hand, layer-wise inference avoids the neighbor explosion problem by conducting inference layer by layer such that the nodes only need their one-hop neighbors in each layer. However, implementing layer-wise inference requires substantial engineering efforts because users need to manually decompose a GNN model into layers for computation and split workload into batches to fit into device memory. In this paper, we develop Deep Graph Inference (DGI) -- a system for easy and efficient GNN model inference, which automatically translates the training code of a GNN model for layer-wise execution. DGI is general for various GNN models and different kinds of inference requests, and supports out-of-core execution on large graphs that cannot fit in CPU memory. Experimental results show that DGI consistently outperforms layer-wise inference across different datasets and hardware settings, and the speedup can be over 1,000x.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113653096",
+                    "name": "Peiqi Yin"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "9695889",
+                    "name": "Jinjing Zhou"
+                },
+                {
+                    "authorId": "2089209772",
+                    "name": "Qiang Fu"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2084612700",
+                    "name": "Bo Tang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "3cdcd5d33df0eeb0abd1fac29049c4bb3f1a80da",
+            "title": "Distributed Hybrid CPU and GPU training for Graph Neural Networks on Billion-Scale Graphs",
+            "abstract": "Graph neural networks (GNN) have shown great success in learning from graph-structured data. They are widely used in various applications, such as recommendation, fraud detection, and search. In these domains, the graphs are typically large, containing hundreds of millions or billions of nodes. To tackle this challenge, we develop DistDGLv2, a system that extends DistDGL for training GNNs in a mini-batch fashion, using distributed hybrid CPU/GPU training to scale to large graphs. DistDGLv2 places graph data in distributed CPU memory and performs mini-batch computation in GPUs. Dist-DGLv2 distributes the graph and its associated data (initial features) across the machines and uses this distribution to derive a computational decomposition by following an owner-compute rule. DistDGLv2 follows a synchronous training approach and allows ego-networks forming mini-batches to include non-local nodes. To minimize the overheads associated with distributed computations, DistDGLv2 uses a multi-level graph partitioning algorithm with min-edge cut along with multiple balancing constraints. This localizes computation in both machine level and GPU level and statically balance the computations. DistDGLv2 deploys an asynchronous mini-batch generation pipeline that makes all computation and data access asynchronous to fully utilize all hardware (CPU, GPU, network, PCIe). The combination allows DistDGLv2 to train high-quality models while achieving high parallel ef-\ufb01ciency and memory scalability. We demonstrate DistDGLv2 on various GNN workloads. Our results show that DistDGLv2 achieves 2 \u2212 3 \u00d7 speedup over DistDGL and 18 \u00d7 speedup over Euler. It takes only 5 \u2212 10 seconds to complete an epoch on graphs with 100s millions of nodes on",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "51166040",
+                    "name": "Chengrun Yang"
+                },
+                {
+                    "authorId": "1813695",
+                    "name": "Dominique LaSalle"
+                },
+                {
+                    "authorId": "1994202136",
+                    "name": "Qidong Su"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2112662910",
+                    "name": "Chao Ma"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "3dc03d35be9b554cd61264d607860bccec38f92d",
+            "title": "Fast and Accurate Graph Learning for Huge Data via Minipatch Ensembles",
+            "abstract": "\u2014Gaussian graphical models provide a powerful framework for uncovering conditional dependence relationships between sets of nodes; they have found applications in a wide variety of \ufb01elds including sensor and communication networks, image processing and computer vision, physics, \ufb01nance, and computational biology. Often, one observes data on the nodes and the task is to learn the graph structure, or perform graphical model selection. While this is a well-studied problem with many popular techniques, there are typically three major practical challenges: i) many existing algorithms become computationally intractable in huge-data settings with tens of thousands of nodes; ii) the need for separate data-driven hyperparameter tuning considerably adds to the computational burden; iii) the statistical accuracy of selected edges often deteriorates as the dimension and/or the complexity of the underlying graph structures increase. We tackle these problems by developing the novel Minipatch Graph (MPGraph) estimator. Our approach breaks up the huge graph learning problem into many smaller problems by creating an ensemble of tiny random subsets of both the observations and the nodes, termed minipatches. We then leverage recent advances that use hard thresholding to solve the latent variable graphical model problem to consistently learn the graph on each minipatch. Our approach is computationally fast, embarrassingly paral- lelizable, memory ef\ufb01cient, and has integrated stability-based hyperparamter tuning. Additionally, we prove that under weaker assumptions than that of the Graphical Lasso, our MPGraph estimator achieves graph selection consistency. We compare our approach to state-of-the-art computational approaches for Gaussian graphical model selection including the BigQUIC algorithm, and empirically demonstrate that our approach is not only more statistically accurate but also extensively faster for huge graph learning problems.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150326071",
+                    "name": "Tianyi Yao"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2302572",
+                    "name": "Genevera I. Allen"
+                }
+            ]
+        },
+        {
+            "paperId": "7c417a384d11ec908b8db72aa56ba612f3aa056a",
+            "title": "Deep Generate Residual Similar Feature Networks for Image Super-Resolution",
+            "abstract": "In this paper, Driven by advanced convolutional neural networks, we present a deep generate residual similar feature networks to improve super-resolution performance. Many researches have found that many CNN network training of SR requires skill and computing equipment. The input low-resolution features and CNN intermediate features contain rich similar feature maps. The different upscaling factor is used for needing the different model, which increase computational complexity. For the problem raised above, we proposed the generate residual feature (GRF) module to generate more high-frequency information in the residual feature. Each generated residual structure contains the short skip connection and long skip connection. Furthermore, we extract the similar feature in the residual feature by considering the interrelation among residual feature. Qualitative and quantitative assessments on benchmark datasets shows that we use different methods to achieve the same effect as best results of SR, while we make the network light weighted. Meanwhile, Our experiments shows that the pedestrian detection in the monitoring scene has achieved good results.",
+            "fieldsOfStudy": [
+                "Physics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116236024",
+                    "name": "Xian Li"
+                },
+                {
+                    "authorId": null,
+                    "name": "Jiahuan Zhang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2110691137",
+                    "name": "Gang Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "9147cce0c48a1248f116792c51d2ceee7f59a056",
+            "title": "Person Re-Identification via Group Symmetry Theory",
+            "abstract": "In recent years, deep learning represented by convolutional neural networks (CNNs) has developed rapidly. The development of deep learning has also led to rapid progress in the field of person re-identification. Many related researchers have begun to use deep learning to solve the problem of person re-identification. The existing deep learning methods for person re-identification mainly use the convolutional neural networks to extract features. The middle layers of the convolutional neural networks contain a wealth of structural information but the previous methods have not fully exploited them. This paper proposes a network named ResGroupNet that uses group symmetry theory to constrain the middle structure of ResNet-50. In detail, we added a branch at the fourth layer of the backbone, the branch was implemented based on theory, at each tail to the backbone and branch, we use sphere loss and triplet loss, respectively. According to our survey, we are the first to introduce the group theory into the ReID task. The experiments show that the proposed method is effective and have achieved good results on the Market-1501, DukeMTMC-reID, and CUHK03-NP datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Jiahuan Zhang"
+                },
+                {
+                    "authorId": "2510651",
+                    "name": "Xuelong Hu"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "116162610",
+                    "name": "Huixiang Qiao"
+                },
+                {
+                    "authorId": "2116236024",
+                    "name": "Xian Li"
+                },
+                {
+                    "authorId": "2113204886",
+                    "name": "Tianbao Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "df3ae44ea07a58772d126ed949c77fb48a0004ba",
+            "title": "Mask-FgS: Feature Global Networks and Supsampling for Instance Segmentation",
+            "abstract": "The instance segmentation based on deep learning can combine the results of semantic segmentation and target detection to solve more powerful segmentation tasks. In this paper, we address the instance segmentation task with a network called Mask-FgS, which is based on Mask R-CNN. In addition, in our model, the output of the network is still with three branches: box prediction, semantic segmentation, and classification score. Our network proposes a new feature extraction module that improves the performance of the feature pyramid and provides significant improvements in both accuracy and speed. Furthermore, Supsampling replaces traditional bilinear upsampling in the network on mask branches. The proposed network performs experiments in the instance segmentation branch of the coco data set, and the performance of detection and segmentation is better than the current instance segmentation networks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066700066",
+                    "name": "Lei Lei"
+                },
+                {
+                    "authorId": "2111824941",
+                    "name": "Haoyu Zhou"
+                },
+                {
+                    "authorId": "2110714426",
+                    "name": "Chuanhong Zhou"
+                },
+                {
+                    "authorId": "150353134",
+                    "name": "Ying Xu"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2113567099",
+                    "name": "Chengbin Peng"
+                }
+            ]
+        }
+    ]
+}

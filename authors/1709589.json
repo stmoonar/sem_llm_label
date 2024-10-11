@@ -1,0 +1,238 @@
+{
+    "authorId": "1709589",
+    "papers": [
+        {
+            "paperId": "026b49cbbe77c4918fca292fc51545d879576a01",
+            "title": "Technical Perspective on 'R2T: Instance-optimal Truncation for Differentially Private Query Evaluation with Foreign Keys",
+            "abstract": "Increased use of data to inform decision making has brought with it a rising awareness of the importance of privacy, and the need for appropriate mitigations to be put in place to protect the interests of individuals whose data is being processed. From the demographic statistics that are produced by national censuses, to the complex predictive models built by \"big tech\" companies, data is the fuel that powers these applications. A majority of such uses rely on data that is derived from the properties and actions of individual people. This data is therefore considered sensitive, and in need of protections to prevent inappropriate use or disclosure. Some protections come from enforcing policies, access control, and contractual agreements. But in addition, we also seek technical interventions: definitions and algorithms that can be applied by computer systems in order to protect the private information while still enabling the intended use.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                }
+            ]
+        },
+        {
+            "paperId": "4dafa1092e1dcdf01a061ad6d32ee12a48625957",
+            "title": "Applications of Sketching and Pathways to Impact",
+            "abstract": "Data summaries (a.k.a., sketches) are compact data structures that can be updated flexibly and efficiently to capture certain properties of a data set. Well-known examples include set summaries (Bloom Filters) and cardinality estimators (e.g., Hyperloglog), amongst others. PODS and SIGMOD have been home to many papers on sketching, including several best paper recipients. Sketch algorithms have emerged from the theoretical research community, but have found wide impact in practice. This paper describes some of the impacts that sketches have had, from online advertising to privacy-preserving data analysis. It will consider the range of different strategies that researchers can follow to encourage the adoption of their work, and what has and has not worked for sketches as a case study.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                }
+            ]
+        },
+        {
+            "paperId": "4f4991f93ed86b777c8b0f192dac034a3144b165",
+            "title": "Pruning Compact ConvNets for Efficient Inference",
+            "abstract": "Neural network pruning is frequently used to compress over-parameterized networks by large amounts, while incurring only marginal drops in generalization performance. However, the impact of pruning on networks that have been highly optimized for efficient inference has not received the same level of attention. In this paper, we analyze the effect of pruning for computer vision, and study state-of-the-art ConvNets, such as the FBNetV3 family of models. We show that model pruning approaches can be used to further optimize networks trained through NAS (Neural Architecture Search). The resulting family of pruned models can consistently obtain better performance than existing FBNetV3 models at the same level of computation, and thus provide state-of-the-art results when trading off between computational complexity and generalization performance on the ImageNet benchmark. In addition to better generalization performance, we also demonstrate that when limited computation resources are available, pruning FBNetV3 models incur only a fraction of GPU-hours involved in running a full-scale NAS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143032877",
+                    "name": "Sayan Ghosh"
+                },
+                {
+                    "authorId": "2107060033",
+                    "name": "Karthik Prasad"
+                },
+                {
+                    "authorId": "4527324",
+                    "name": "Xiaoliang Dai"
+                },
+                {
+                    "authorId": "2918780",
+                    "name": "Peizhao Zhang"
+                },
+                {
+                    "authorId": "3130257",
+                    "name": "Bichen Wu"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "48682997",
+                    "name": "P\u00e9ter Vajda"
+                }
+            ]
+        },
+        {
+            "paperId": "a207e3b032c9d79cd2b5cd5123426a6411733ae3",
+            "title": "PrivLava: Synthesizing Relational Data with Foreign Keys under Differential Privacy",
+            "abstract": "Answering database queries while preserving privacy is an important problem that has attracted considerable research attention in recent years. A canonical approach to this problem is to use synthetic data. That is, we replace the input database R with a synthetic database R* that preserves the characteristics of R, and use R* to answer queries. Existing solutions for relational data synthesis, however, either fail to provide strong privacy protection, or assume that R contains a single relation. In addition, it is challenging to extend the existing single-relation solutions to the case of multiple relations, because they are unable to model the complex correlations induced by the foreign keys. Therefore, multi-relational data synthesis with strong privacy guarantees is an open problem. In this paper, we address the above open problem by proposing PrivLava, the first solution for synthesizing relational data with foreign keys under differential privacy, a rigorous privacy framework widely adopted in both academia and industry. The key idea of PrivLava is to model the data distribution in R using graphical models, with latent variables included to capture the inter-relational correlations caused by foreign keys. We show that PrivLava supports arbitrary foreign key references that form a directed acyclic graph, and is able to tackle the common case when R contains a mixture of public and private relations. Extensive experiments on census data sets and the TPC-H benchmark demonstrate that PrivLava significantly outperforms its competitors in terms of the accuracy of aggregate queries processed on the synthetic data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2124455504",
+                    "name": "Kuntai Cai"
+                },
+                {
+                    "authorId": "33285410",
+                    "name": "Xiaokui Xiao"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                }
+            ]
+        },
+        {
+            "paperId": "c24132d2eb4f4599b4abd363fe55d284d86bd65d",
+            "title": "Streaming Weighted Sampling over Join Queries",
+            "abstract": "Join queries are a fundamental database tool, capturing a range of tasks that involve linking heterogeneous data sources. However, with massive table sizes, it is often impractical to keep these in memory, and we can only take one or few streaming passes over them. Moreover, building out the full join result (e.g., linking heterogeneous data sources along quasi-identifiers) can lead to a combinatorial explosion of results due to many-to-many links. Random sampling is a natural tool to boil this oversized result down to a representative subset with well-understood statistical properties, but turns out to be a challenging task due to the combinatorial nature of the sampling domain. Existing techniques in the literature focus solely on the setting with tabular data residing in main memory, and do not address aspects such as stream operation, weighted sampling and more general join operators that are urgently needed in a modern data processing context. The main contribution of this work is to meet these needs with more lightweight practical approaches. First, a bijection between the sampling problem and a graph problem is introduced to support weighted sampling and common join operators. Second, the sampling techniques are refined to minimise the number of streaming passes. Third, techniques are presented to deal with very large tables under limited memory. Finally, the proposed techniques are compared to existing approaches that rely on database indices and the results indicate substantial memory savings, reduced runtimes for ad-hoc queries and competitive amortised runtimes. All pertinent code and data can be found at:",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "e8776fd7ed1d5c26de6df9e6d33213ffa2d24328",
+            "title": "Sketch-Flip-Merge: Mergeable Sketches for Private Distinct Counting",
+            "abstract": "Data sketching is a critical tool for distinct counting, enabling multisets to be represented by compact summaries that admit fast cardinality estimates. Because sketches may be merged to summarize multiset unions, they are a basic building block in data warehouses. Although many practical sketches for cardinality estimation exist, none provide privacy when merging. We propose the first practical cardinality sketches that are simultaneously mergeable, differentially private (DP), and have low empirical errors. These introduce a novel randomized algorithm for performing logical operations on noisy bits, a tight privacy analysis, and provably optimal estimation. Our sketches dramatically outperform existing theoretical solutions in simulations and on real-world data.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "48506830",
+                    "name": "J. Hehir"
+                },
+                {
+                    "authorId": "144722992",
+                    "name": "Daniel Ting"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                }
+            ]
+        },
+        {
+            "paperId": "eac877c27e940bfde277b8123e89f6db32cad6e5",
+            "title": "Streaming Zero-Knowledge Proofs",
+            "abstract": "Streaming interactive proofs (SIPs) enable a space-bounded algorithm with one-pass access to a massive stream of data to verify a computation that requires large space, by communicating with a powerful but untrusted prover. This work initiates the study of zero-knowledge proofs for data streams. We define the notion of zero-knowledge in the streaming setting and construct zero-knowledge SIPs for the two main algorithmic building blocks in the streaming interactive proofs literature: the sumcheck and polynomial evaluation protocols. To the best of our knowledge all known streaming interactive proofs are based on either of these tools, and indeed, this allows us to obtain zero-knowledge SIPs for central streaming problems such as index, point and range queries, median, frequency moments, and inner product. Our protocols are efficient in terms of time and space, as well as communication: the verifier algorithm's space complexity is $\\mathrm{polylog}(n)$ and, after a non-interactive setup that uses a random string of near-linear length, the remaining parameters are $n^{o(1)}$. En route, we develop an algorithmic toolkit for designing zero-knowledge data stream protocols, consisting of an algebraic streaming commitment protocol and a temporal commitment protocol.Our analyses rely on delicate algebraic and information-theoretic arguments and reductions from average-case communication complexity.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2076323150",
+                    "name": "M. Dall'Agnol"
+                },
+                {
+                    "authorId": "1774258",
+                    "name": "Tom Gur"
+                },
+                {
+                    "authorId": "143756994",
+                    "name": "Chris Hickey"
+                }
+            ]
+        },
+        {
+            "paperId": "037dd3bc76ca7d1b31a2bc4d3b13d3a43ef08a10",
+            "title": "Verifiable Differential Privacy For When The Curious Become Dishonest",
+            "abstract": "Many applications seek to produce differentially private statistics on sensitive data. Traditional approaches in the centralised model rely on a trusted aggregator to gather the raw data, aggregate statistics and introduce appropriate noise. Recent work has tried to relax the trust assumptions and reduce the need for trusted entities. However, such systems can trade off trust for increased noise and still require complete trust in some participants. Moreover, they do not prevent a malicious entity from introducing adversarial noise to skew the result or unmask some inputs. In this paper, we introduce the notion of \u201cveri\ufb01able differential privacy with covert security\u201d. The purpose is to ensure both privacy of the client\u2019s data and assurance that the output is not subject to any form of adversarial manipulation. The result is that everyone is assured that the noise used for differential privacy has been generated correctly, but no one can determine what the noise was. In the event of a malicious entity attempting to pervert the protocol, their actions will be detected with a constant probability negligibly close to one. We show that such veri\ufb01able privacy is practical and can be implemented at scale.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2182220719",
+                    "name": "Ari Biswas"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                }
+            ]
+        },
+        {
+            "paperId": "0de69dfe766375061ab0a267d281da8a6ce4bbe6",
+            "title": "Federated Boosted Decision Trees with Differential Privacy",
+            "abstract": "There is great demand for scalable, secure, and efficient privacy-preserving machine learning models that can be trained over distributed data. While deep learning models typically achieve the best results in a centralized non-secure setting, different models can excel when privacy and communication constraints are imposed. Instead, tree-based approaches such as XGBoost have attracted much attention for their high performance and ease of use; in particular, they often achieve state-of-the-art results on tabular data. Consequently, several recent works have focused on translating Gradient Boosted Decision Tree (GBDT) models like XGBoost into federated settings, via cryptographic mechanisms such as Homomorphic Encryption (HE) and Secure Multi-Party Computation (MPC). However, these do not always provide formal privacy guarantees, or consider the full range of hyperparameters and implementation settings. In this work, we implement the GBDT model under Differential Privacy (DP). We propose a general framework that captures and extends existing approaches for differentially private decision trees. Our framework of methods is tailored to the federated setting, and we show that with a careful choice of techniques it is possible to achieve very high utility while maintaining strong levels of privacy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1388516394",
+                    "name": "Samuel Maddock"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "49980880",
+                    "name": "Tianhao Wang"
+                },
+                {
+                    "authorId": "2091059383",
+                    "name": "C. Maple"
+                },
+                {
+                    "authorId": "1680133",
+                    "name": "S. Jha"
+                }
+            ]
+        },
+        {
+            "paperId": "282f6c2c482ef29966da15a821af1d56c4b44793",
+            "title": "Federated Calibration and Evaluation of Binary Classifiers",
+            "abstract": "\n We address two major obstacles to practical deployment of AI-based models on distributed private data. Whether a model was trained by a federation of cooperating clients or trained centrally, (1) the output scores must be calibrated, and (2) performance metrics must be evaluated --- all without assembling labels in one place. In particular, we show how to perform calibration and compute the standard metrics of precision, recall, accuracy and ROC-AUC in the federated setting under three privacy models (\n i\n ) secure aggregation, (\n ii\n ) distributed differential privacy, (\n iii\n ) local differential privacy. Our theorems and experiments clarify tradeoffs between privacy, accuracy, and data efficiency. They also help decide if a given application has sufficient data to support federated calibration and evaluation.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2064751613",
+                    "name": "Igor L. Markov"
+                }
+            ]
+        }
+    ]
+}

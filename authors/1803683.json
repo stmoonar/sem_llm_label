@@ -1,0 +1,354 @@
+{
+    "authorId": "1803683",
+    "papers": [
+        {
+            "paperId": "036a937d48e7837043161c085251da7afac4dbae",
+            "title": "Feather: Lightweight Container Alternatives for Deploying Workloads in the Edge",
+            "abstract": ": Recent years have seen the adoption of workload orchestration into the network edge. Cloud orchestrators such as Kubernetes have been extended to edge computing, providing the virtual infrastructure to efficiently manage containerized workloads across the edge-cloud continuum. However, cloud-based orchestrators are resource intensive, sometimes occupying the bulk of resources of an edge device even when idle. While various Kubernetes-based solutions, such as K3s and KubeEdge, have been developed with a specific focus on edge computing, they remain limited to container runtimes. This paper proposes a Kubernetes-compatible solution for edge workload packaging, distribution, and execution, named Feather , which extends edge work-loads beyond containers. Feather is based on Virtual Kubelets, superseding previous work from FLEDGE. It is capable of operating in existing Kubernetes clusters, with minimal, optional additions to the Kubernetes PodSpec to enable multi-runtime images and execution. Both Containerd and OSv unikernel backends are implemented, and evaluations show that unikernel workloads can be executed highly efficiently, with a memory reduction of up to 20% for Java applications at the cost of up to 25% CPU power. Evaluations also show that Feather itself is suitable for most modern edge devices, with the x86 version only requiring 58-62 MiB of memory for the agent itself.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "52223901",
+                    "name": "Tom Goethals"
+                },
+                {
+                    "authorId": "2304403544",
+                    "name": "M. D. Clercq"
+                },
+                {
+                    "authorId": "32059621",
+                    "name": "Merlijn Sebrechts"
+                },
+                {
+                    "authorId": "1715957",
+                    "name": "F. Turck"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                }
+            ]
+        },
+        {
+            "paperId": "c1fff20b398fa1086a156a52a1f96412eeb33ded",
+            "title": "Trusting the Cloud-Native Edge: Remotely Attested Kubernetes Workers",
+            "abstract": "A Kubernetes cluster typically consists of trusted nodes, running within the confines of a physically secure datacenter. With recent advances in edge orchestration, this is no longer the case. This poses a new challenge: how can we trust a device that an attacker has physical access to? This paper presents an architecture and open-source implementation that securely enrolls edge devices as trusted Kubernetes worker nodes. By providing boot attestation rooted in a hardware Trusted Platform Module, a strong base of trust is provided. A new custom controller directs a modified version of Keylime to cross the cloud-edge gap and securely deliver unique cluster credentials required to enroll an edge worker. The controller dynamically grants and revokes these credentials based on attestation events, preventing a possibly compromised node from accessing sensitive cluster resources. We provide both a qualitative and a quantitative evaluation of the architecture. The qualitative scenarios prove its ability to attest and enroll an edge device with role-based access control (RBAC) permissions that dynamically adjust to attestation events. The quantitative evaluation reflects an average of 10.28 seconds delay incurred on the startup time of the edge node due to attestation for a total average enrollment time of 20.91 seconds. The presented architecture thus provides a strong base of trust, securing a physically exposed edge device and paving the way for a robust and resilient edge computing ecosystem.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2301456044",
+                    "name": "Jordi Thijsman"
+                },
+                {
+                    "authorId": "32059621",
+                    "name": "Merlijn Sebrechts"
+                },
+                {
+                    "authorId": "1715957",
+                    "name": "F. Turck"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                }
+            ]
+        },
+        {
+            "paperId": "e4fcd83de478fbaf7b84db627fcdacdaffc45262",
+            "title": "Warrens: Decentralized Connectionless Tunnels for Edge Container Networks",
+            "abstract": "In recent years, workload containerisation has been extended to the edge, bringing with it the need for flexible overlay networking. However, current container networking solutions are generally designed for the cloud, aimed at relatively static clusters with centralized generation of container subnet addresses and assigning them to nodes. Added to that existing tunneling solutions, such as Virtual Private Networks (VPN), also have centralized components. Conversely, the network edge is geo-dispersed and has a volatile topology,with edge nodes typically hidden behind routers, in private networks. To enable large-scale networking at the edge, there is need for decentralized self-management of container network addresses and overlay tunnels. This manuscript presents Warrens, a framework for fully decentralized and self-organizing cloud-edge container networks. Warrens enables communication between edge nodes in different private networks by enabling connectionless tunnels, supported by decentralized self-assignment of container IP addresses, with the assignment scheme minimizing address conflict to a negligible level. Warrens has been implemented in two variants using kernel-level eBPF for processing speed, and user-level Golang for wider compatibility. Warrens is shown to be highly scalable compared to a typical VPN solution, and performance evaluations demonstrate it can handle a full network load on both x64 devices and a Raspberry Pi with $\\approx 0.5\\%$ to 5% total CPU load, depending on traffic direction and protocols used.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "52223901",
+                    "name": "Tom Goethals"
+                },
+                {
+                    "authorId": "1404810662",
+                    "name": "Mays F. Al-Naday"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                },
+                {
+                    "authorId": "2065702132",
+                    "name": "F. de Turck"
+                }
+            ]
+        },
+        {
+            "paperId": "38d5f06f6d2333580eb9fe4ccec908a34f472bf9",
+            "title": "Cloud-Native-Bench: an Extensible Benchmarking Framework to Streamline Cloud Performance Tests",
+            "abstract": "The shift to the cloud among organizations has surged enormously over the last decade. As a result, an overwhelming amount of new cloud-based technologies emerged, making it increasingly more challenging to compare the different technologies and to identify the ideal technology that aligns best with a specific use case. The performance and resource usage of a system or software technology can be assessed by running benchmarks. Performing benchmarks has proven to be a time-consuming and error-prone task, especially when executing multiple consecutive tests on the same system. This sparked curiosity in exploring the feasibility of automating this manual benchmarking process. This paper proposes Cloud-NativeBench (CNB), a novel open source benchmarking framework implemented as a Kubernetes operator that fully automates the benchmarking cycle. The entire process, including benchmark deployment, the consecutive execution of benchmarks in a queue, results collection, and statistical data analysis, is fully automated. The framework is designed to be extensible without the need to adapt the operator itself, enabling users to develop fine-tuned custom benchmarks according to their specific use cases. A detailed evaluation shows the ease-of-use of Cloud-Native-Bench and how it streamlines the process of running benchmarks in cloud-native environments. Experiments show the importance of running benchmarks on cloud technologies. For example, employing a different web server technology can increase the mean throughput by 252%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2226520947",
+                    "name": "Michiel Van Kenhove"
+                },
+                {
+                    "authorId": "32059621",
+                    "name": "Merlijn Sebrechts"
+                },
+                {
+                    "authorId": "1715957",
+                    "name": "F. Turck"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                }
+            ]
+        },
+        {
+            "paperId": "3b95d3100605228c9bf105b188a2a0484c50e498",
+            "title": "Task Assignment and Capacity Allocation for ML-Based Intrusion Detection as a Service in a Multi-Tier Architecture",
+            "abstract": "Intrusion Detection Systems (IDS) play an important role in detecting network intrusions. Because intrusions have many variants and zero-day attacks, traditional signature- and anomaly-based IDS often fail to detect them. On the other hand, solutions based on Machine Learning (ML), have better capabilities for detecting variants. In this work, we adopt an ML-based IDS which uses three in-sequence tasks, pre-processing, binary detection, and multi-class detection, with a multi-tier architecture with one-, two-, and three-tier architectural configurations. We then mapped three in-sequence tasks into these architectures, resulting in ten task assignments. We evaluated these with queueing theory to determine which tasks assignments were more appropriate for particular service providers. With simulated annealing, we obtained the computation capacity by allocating the total cost appropriate to each tier, based on the fixed parameter set with the objective of minimizing overall delay. These investigations showed that using only the edge and allocating all tasks to it gave the best performance. Furthermore, a two-tier architecture with edge and cloud components was also sufficient for IDS as a Service with the delay that was three times better than for other task assignments. Our results also indicate that more than 85% of the total capacity was allocated and spread across nodes in the lowest tier for pre-processing to reduce delays.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144769612",
+                    "name": "Y. Lai"
+                },
+                {
+                    "authorId": "66381937",
+                    "name": "Didik Sudyana"
+                },
+                {
+                    "authorId": "1682210",
+                    "name": "Ying-Dar Lin"
+                },
+                {
+                    "authorId": "2029679358",
+                    "name": "Miel Verkerken"
+                },
+                {
+                    "authorId": "1414010294",
+                    "name": "Laurens D\u2019hooge"
+                },
+                {
+                    "authorId": "145115855",
+                    "name": "T. Wauters"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                },
+                {
+                    "authorId": "1715957",
+                    "name": "F. Turck"
+                }
+            ]
+        },
+        {
+            "paperId": "42fdeae3cc061d25d95bd903f4e93ae18f2576eb",
+            "title": "Real-Time Estimation and Monitoring of COVID-19 Aerosol Transmission Risk in Office Buildings",
+            "abstract": "A healthy and safe indoor environment is an important part of containing the coronavirus disease 2019 (COVID-19) pandemic. Therefore, this work presents a real-time Internet of things (IoT) software architecture to automatically calculate and visualize a COVID-19 aerosol transmission risk estimation. This risk estimation is based on indoor climate sensor data, such as carbon dioxide (CO2) and temperature, which is fed into Streaming MASSIF, a semantic stream processing platform, to perform the computations. The results are visualized on a dynamic dashboard that automatically suggests appropriate visualizations based on the semantics of the data. To evaluate the complete architecture, the indoor climate during the student examination periods of January 2020 (pre-COVID) and January 2021 (mid-COVID) was analyzed. When compared to each other, we observe that the COVID-19 measures in 2021 resulted in a safer indoor environment.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2209736649",
+                    "name": "Jelle Vanhaeverbeke"
+                },
+                {
+                    "authorId": "2118862221",
+                    "name": "Emiel Deprost"
+                },
+                {
+                    "authorId": "33122761",
+                    "name": "P. Bonte"
+                },
+                {
+                    "authorId": "3200385",
+                    "name": "M. Strobbe"
+                },
+                {
+                    "authorId": "1893004",
+                    "name": "J. Nelis"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                },
+                {
+                    "authorId": "1726557",
+                    "name": "F. Ongenae"
+                },
+                {
+                    "authorId": "1711619",
+                    "name": "S. Verstockt"
+                },
+                {
+                    "authorId": "134767416",
+                    "name": "Sofie Van Hoecke"
+                }
+            ]
+        },
+        {
+            "paperId": "4e1d3ea4fec2db6da95519644f702f7cabaadb6c",
+            "title": "Performance Impact of Queue Sorting in Container-Based Application Scheduling",
+            "abstract": "Containerization has revolutionized application deployments in current cloud platforms, enabling the flexible instantiation of loosely-coupled microservices and enhancing operational efficacy. However, optimizing the performance of container-based applications remains a challenge and a major topic in cloud research. This paper studies the impact of queue sorting in application scheduling, focused on complex inter-dependencies among microservices. Queue sorting determines the deployment order of containers in the infrastructure, typically based on container priorities and resource requests. Optimizing these algorithms directly influences scheduling efficiency and overall application performance. This paper compares several schedulers and sorting algorithms, leveraging extensive benchmark tests conducted on the widely-used Kubernetes (K8s) platform. The evaluation includes a novel sorting algorithm named Topological-Sort, designed to prioritize containers for application scheduling focused on microservice inter-dependencies. Results show the significant impact of queue sorting on application performance, with TopologicalSort algorithms outperforming default mechanisms, yielding an average increase of 20 % in throughput and reducing response time by at least 15 %. These results highlight the importance of considering microservice inter-dependencies for effective application deployment in modern container-based environments.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115681922",
+                    "name": "Jos\u00e9 Santos"
+                },
+                {
+                    "authorId": "2221110373",
+                    "name": "Miel Verkerken"
+                },
+                {
+                    "authorId": "1414010294",
+                    "name": "Laurens D\u2019hooge"
+                },
+                {
+                    "authorId": "145115855",
+                    "name": "T. Wauters"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                },
+                {
+                    "authorId": "1715957",
+                    "name": "F. Turck"
+                }
+            ]
+        },
+        {
+            "paperId": "601d5e8f2f6586acd85c124b931679b272f78990",
+            "title": "Secure Key Management for Multi-Party Computation in MOZAIK",
+            "abstract": "The immense growth of data from the proliferation of Internet of Things (IoT) devices presents opportunities and challenges for privacy engineering. On the one hand, this data can be harnessed for personalized services, cost savings, and environmental benefits. On the other hand, (new) legislation must be complied with and privacy risks arise from collecting and processing of such data. Distributed privacy-preserving analytics offers a promising solution, providing insights while also protecting privacy. However, this approach has new challenges and risks, such as key management and confidentiality. When designing a data marketplace which offers distributed privacy-preserving analytics, the key management comes with different threats, which require a solution adapted to the distributed architecture.In this context, the paper presents a comprehensive, end-to-end secure system called MOZAIK for privacy-preserving data collection, analysis, and sharing. The article focuses on the key management aspect of the secure multi-party computation (MPC) component in a distributed privacy-preserving analytics architecture and the specific challenges created by introducing MPC. The proposed solution involves temporary storage of (symmetric) key shares and public-key encryption schemes to ensure secure key management for privacy-preserving computation. Our solution has the potential to be applied in other MPC-based setups, making it a valuable addition to the field of privacy engineering. By addressing key management challenges and risks, MOZAIK enhances data protection while enabling valuable insights from IoT data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2226514331",
+                    "name": "Enzo Marquet"
+                },
+                {
+                    "authorId": "90961760",
+                    "name": "Jerico Moeyersons"
+                },
+                {
+                    "authorId": "1498868820",
+                    "name": "Erik Pohle"
+                },
+                {
+                    "authorId": "2226520947",
+                    "name": "Michiel Van Kenhove"
+                },
+                {
+                    "authorId": "2108451",
+                    "name": "Aysajan Abidin"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                }
+            ]
+        },
+        {
+            "paperId": "69ca530ad7b2a4fdb3eb2f279cdee22103107cf4",
+            "title": "A Novel Multi-Stage Approach for Hierarchical Intrusion Detection",
+            "abstract": "An intrusion detection system (IDS), traditionally an example of an effective security monitoring system, is facing significant challenges due to the ongoing digitization of our modern society. The growing number and variety of connected devices are not only causing a continuous emergence of new threats that are not recognized by existing systems, but the amount of data to be monitored is also exceeding the capabilities of a single system. This raises the need for a scalable IDS capable of detecting unknown, zero-day, attacks. In this paper, a novel multi-stage approach for hierarchical intrusion detection is proposed. The proposed approach is validated on the public benchmark datasets, CIC-IDS-2017 and CSE-CIC-IDS-2018. Results demonstrate that our proposed approach besides effective and robust zero-day detection, outperforms both the baseline and existing approaches, achieving high classification performance, up to 96% balanced accuracy. Additionally, the proposed approach is easily adaptable without any retraining and takes advantage of n-tier deployments to reduce bandwidth and computational requirements while preserving privacy constraints. The best-performing models with a balanced set of thresholds correctly classified 87% or 41 out of 47 zero-day attacks, while reducing the bandwidth requirements up to 69%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2029679358",
+                    "name": "Miel Verkerken"
+                },
+                {
+                    "authorId": "1414010294",
+                    "name": "Laurens D\u2019hooge"
+                },
+                {
+                    "authorId": "66381937",
+                    "name": "Didik Sudyana"
+                },
+                {
+                    "authorId": "2117033183",
+                    "name": "Ying Lin"
+                },
+                {
+                    "authorId": "145115855",
+                    "name": "T. Wauters"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                },
+                {
+                    "authorId": "1715957",
+                    "name": "F. Turck"
+                }
+            ]
+        },
+        {
+            "paperId": "6c14b2e78dc3921bbbc05232eb7cf718ae979949",
+            "title": "MOZAIK: An End-to-End Secure Data Sharing Platform",
+            "abstract": "The proliferation of Internet of Things (IoT) devices has led to exponential data growth that can be harnessed for personalized services, cost savings, and environmental benefits. However, collecting and sharing this data comes with significant risks, including hacking attacks, breaches of sensitive data, and non-compliance with privacy regulations. This paper proposes a comprehensive, end-to-end secure system, MOZAIK, for privacy-preserving data collection, analysis, and sharing to address these challenges. We perform a requirements analysis from the perspectives of security, privacy, legal, and functionality, highlighting the various mechanisms employed to safeguard sensitive data throughout the entire data cycle. This includes the use of lightweight encryption, distributed computation, and anonymous communication mechanisms to reduce security and privacy risks and to protect against single points of failure. MOZAIK provides a trusted and secure platform for data sharing and processing that can enable the creation of a data market and data economy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108451",
+                    "name": "Aysajan Abidin"
+                },
+                {
+                    "authorId": "2226514331",
+                    "name": "Enzo Marquet"
+                },
+                {
+                    "authorId": "90961760",
+                    "name": "Jerico Moeyersons"
+                },
+                {
+                    "authorId": "2197165683",
+                    "name": "Xhulio Limani"
+                },
+                {
+                    "authorId": "1498868820",
+                    "name": "Erik Pohle"
+                },
+                {
+                    "authorId": "2238213352",
+                    "name": "Michiel Van Kenhove"
+                },
+                {
+                    "authorId": "1404349274",
+                    "name": "J. M\u00e1rquez-Barja"
+                },
+                {
+                    "authorId": "1418053219",
+                    "name": "Nina Slamnik-Krije\u0161torac"
+                },
+                {
+                    "authorId": "1803683",
+                    "name": "B. Volckaert"
+                }
+            ]
+        }
+    ]
+}

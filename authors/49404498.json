@@ -1,0 +1,401 @@
+{
+    "authorId": "49404498",
+    "papers": [
+        {
+            "paperId": "2c6638f6c817b7dc94365e217138d5b60cc699fa",
+            "title": "A Chinese Dataset for Evaluating the Safeguards in Large Language Models",
+            "abstract": "Many studies have demonstrated that large language models (LLMs) can produce harmful responses, exposing users to unexpected risks when LLMs are deployed. Previous studies have proposed comprehensive taxonomies of the risks posed by LLMs, as well as corresponding prompts that can be used to examine the safety mechanisms of LLMs. However, the focus has been almost exclusively on English, and little has been explored for other languages. Here we aim to bridge this gap. We first introduce a dataset for the safety evaluation of Chinese LLMs, and then extend it to two other scenarios that can be used to better identify false negative and false positive examples in terms of risky prompt rejections. We further present a set of fine-grained safety assessment criteria for each risk type, facilitating both manual annotation and automatic evaluation in terms of LLM response harmfulness. Our experiments on five LLMs show that region-specific risks are the prevalent type of risk, presenting the major issue with all Chinese LLMs we experimented with. Our data is available at https://github.com/Libr-AI/do-not-answer. Warning: this paper contains example data that may be offensive, harmful, or biased.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2275119551",
+                    "name": "Yuxia Wang"
+                },
+                {
+                    "authorId": "51230252",
+                    "name": "Zenan Zhai"
+                },
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2110982198",
+                    "name": "Xudong Han"
+                },
+                {
+                    "authorId": "2284823063",
+                    "name": "Lizhi Lin"
+                },
+                {
+                    "authorId": "2284691442",
+                    "name": "Zhenxuan Zhang"
+                },
+                {
+                    "authorId": "2284725378",
+                    "name": "Jingru Zhao"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                },
+                {
+                    "authorId": "2256987316",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "b156cdef9e685be5e8aa4a5ab45eb8a5b25ee167",
+            "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+            "abstract": "Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine-tuning data scarce and acquiring it both difficult and costly. Discarding failed trajectories also leads to significant wastage of data and resources and limits the possible optimization paths during fine-tuning. In this paper, we argue that unsuccessful trajectories offer valuable insights, and LLMs can learn from these trajectories through appropriate quality control and fine-tuning strategies. By simply adding a prefix or suffix that tells the model whether to generate a successful trajectory during training, we improve model performance by a large margin on mathematical reasoning, multi-hop question answering, and strategic question answering tasks. We further analyze the inference results and find that our method provides a better trade-off between valuable information and errors in unsuccessful trajectories. To our knowledge, we are the first to demonstrate the value of negative trajectories and their application in agent-tunning scenarios. Our findings offer guidance for developing better agent-tuning methods and low-resource data usage techniques.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2215688800",
+                    "name": "Renxi Wang"
+                },
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2110982198",
+                    "name": "Xudong Han"
+                },
+                {
+                    "authorId": "2266000475",
+                    "name": "Yixuan Zhang"
+                },
+                {
+                    "authorId": "2256987316",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "bf53b1f16b364704bcfc633b3f531450551aa45d",
+            "title": "Location Aware Modular Biencoder for Tourism Question Answering",
+            "abstract": "Answering real-world tourism questions that seek Point-of-Interest (POI) recommendations is challenging, as it requires both spatial and non-spatial reasoning, over a large candidate pool. The traditional method of encoding each pair of question and POI becomes inefficient when the number of candidates increases, making it infeasible for real-world applications. To overcome this, we propose treating the QA task as a dense vector retrieval problem, where we encode questions and POIs separately and retrieve the most relevant POIs for a question by utilizing embedding space similarity. We use pretrained language models (PLMs) to encode textual information, and train a location encoder to capture spatial information of POIs. Experiments on a real-world tourism QA dataset demonstrate that our approach is effective, efficient, and outperforms previous methods across all metrics. Enabled by the dense retrieval architecture, we further build a global evaluation baseline, expanding the search space by 20 times compared to previous work. We also explore several factors that impact on the model's performance through follow-up experiments. Our code and model are publicly available at https://github.com/haonan-li/LAMB.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2277740513",
+                    "name": "Martin Tomko"
+                },
+                {
+                    "authorId": "2256987316",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "f9f23c63e2822687096b86edf4ae9435cb579b8c",
+            "title": "Do-Not-Answer: Evaluating Safeguards in LLMs",
+            "abstract": "With the rapid evolution of large language models (LLMs), new and hard-to-predict harmful capabilities are emerging. This requires developers to identify potential risks through the evaluation of \u201cdangerous capabilities\u201d in order to responsibly deploy LLMs. Here we aim to facilitate this process. In particular, we collect an open-source dataset to evaluate the safeguards in LLMs, to facilitate the deployment of safer open-source LLMs at a low cost. Our dataset is curated and filtered to consist only of instructions that responsible language models should not follow. We assess the responses of six popular LLMs to these instructions, and we find that simple BERT-style classifiers can achieve results that are comparable to GPT-4 on automatic safety evaluation. Our data and code are available at https://github.com/Libr-AI/do-not-answer",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2275119551",
+                    "name": "Yuxia Wang"
+                },
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2110982198",
+                    "name": "Xudong Han"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                },
+                {
+                    "authorId": "2256987316",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "288063323dddad9bea7eb1230a2048546435687e",
+            "title": "Do-Not-Answer: A Dataset for Evaluating Safeguards in LLMs",
+            "abstract": "With the rapid evolution of large language models (LLMs), new and hard-to-predict harmful capabilities are emerging. This requires developers to be able to identify risks through the evaluation of\"dangerous capabilities\"in order to responsibly deploy LLMs. In this work, we collect the first open-source dataset to evaluate safeguards in LLMs, and deploy safer open-source LLMs at a low cost. Our dataset is curated and filtered to consist only of instructions that responsible language models should not follow. We annotate and assess the responses of six popular LLMs to these instructions. Based on our annotation, we proceed to train several BERT-like classifiers, and find that these small classifiers can achieve results that are comparable with GPT-4 on automatic safety evaluation. Warning: this paper contains example data that may be offensive, harmful, or biased.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115829571",
+                    "name": "Yuxia Wang"
+                },
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2110982198",
+                    "name": "Xudong Han"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                },
+                {
+                    "authorId": "2112644025",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "3f421c7defc20c21e97abad5fa92887a06ec5df8",
+            "title": "Large Language Models Only Pass Primary School Exams in Indonesia: A Comprehensive Test on IndoMMLU",
+            "abstract": "Although large language models (LLMs) are often pre-trained on large-scale multilingual texts, their reasoning abilities and real-world knowledge are mainly evaluated based on English datasets. Assessing LLM capabilities beyond English is increasingly vital but hindered due to the lack of suitable datasets. In this work, we introduce IndoMMLU, the first multi-task language understanding benchmark for Indonesian culture and languages, which consists of questions from primary school to university entrance exams in Indonesia. By employing professional teachers, we obtain 14,981 questions across 64 tasks and education levels, with 46% of the questions focusing on assessing proficiency in the Indonesian language and knowledge of nine local languages and cultures in Indonesia. Our empirical evaluations show that GPT-3.5 only manages to pass the Indonesian primary school level, with limited knowledge of local Indonesian languages and culture. Other smaller models such as BLOOMZ and Falcon perform at even lower levels.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2789148",
+                    "name": "Fajri Koto"
+                },
+                {
+                    "authorId": "2256987672",
+                    "name": "Nurul Aisyah"
+                },
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2256987316",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "5c577988ccebfea96de86678d04fd94fad367d2e",
+            "title": "Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative Large Language Models",
+            "abstract": "We introduce Jais and Jais-chat, new state-of-the-art Arabic-centric foundation and instruction-tuned open generative large language models (LLMs). The models are based on the GPT-3 decoder-only architecture and are pretrained on a mixture of Arabic and English texts, including source code in various programming languages. With 13 billion parameters, they demonstrate better knowledge and reasoning capabilities in Arabic than any existing open Arabic and multilingual models by a sizable margin, based on extensive evaluation. Moreover, the models are competitive in English compared to English-centric open models of similar size, despite being trained on much less English data. We provide a detailed description of the training, the tuning, the safety alignment, and the evaluation of the models. We release two open versions of the model -- the foundation Jais model, and an instruction-tuned Jais-chat variant -- with the aim of promoting research on Arabic LLMs. Available at https://huggingface.co/inception-mbzuai/jais-13b-chat",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1880394",
+                    "name": "Neha Sengupta"
+                },
+                {
+                    "authorId": "3422905",
+                    "name": "Sunil Kumar Sahu"
+                },
+                {
+                    "authorId": "2087720002",
+                    "name": "Bokang Jia"
+                },
+                {
+                    "authorId": "2235818050",
+                    "name": "Satheesh Katipomu"
+                },
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2789148",
+                    "name": "Fajri Koto"
+                },
+                {
+                    "authorId": "49843300",
+                    "name": "Osama Mohammed Afzal"
+                },
+                {
+                    "authorId": "2203791403",
+                    "name": "Samta Kamboj"
+                },
+                {
+                    "authorId": "22171629",
+                    "name": "O. Pandit"
+                },
+                {
+                    "authorId": "2235794681",
+                    "name": "Rahul Pal"
+                },
+                {
+                    "authorId": "2076256459",
+                    "name": "Lalit Pradhan"
+                },
+                {
+                    "authorId": "123838298",
+                    "name": "Zainul Mujahid"
+                },
+                {
+                    "authorId": "1380273855",
+                    "name": "Massa Baali"
+                },
+                {
+                    "authorId": "2110982198",
+                    "name": "Xudong Han"
+                },
+                {
+                    "authorId": "8129718",
+                    "name": "Alham Fikri Aji"
+                },
+                {
+                    "authorId": "100468503",
+                    "name": "Zhengzhong Liu"
+                },
+                {
+                    "authorId": "2235826325",
+                    "name": "Andy Hock"
+                },
+                {
+                    "authorId": "77917645",
+                    "name": "Andrew Feldman"
+                },
+                {
+                    "authorId": "2235945609",
+                    "name": "Jonathan Lee"
+                },
+                {
+                    "authorId": "2064974174",
+                    "name": "A. Jackson"
+                },
+                {
+                    "authorId": "1683562",
+                    "name": "Preslav Nakov"
+                },
+                {
+                    "authorId": "145465286",
+                    "name": "Timothy Baldwin"
+                },
+                {
+                    "authorId": "2064963077",
+                    "name": "Eric P. Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "647f520eea08cf8e98b99319dcb7e32cc3a78c72",
+            "title": "Bactrian-X : A Multilingual Replicable Instruction-Following Model with Low-Rank Adaptation",
+            "abstract": "Instruction tuning has shown great promise in improving the performance of large language models. However, research on multilingual instruction tuning has been limited due to the scarcity of high-quality instruction-response datasets across different languages. To bridge this gap, we present Bactrian-X, a comprehensive multilingual parallel dataset of 3.4 million instruction-response pairs across 52 languages. Leveraging this dataset, we train a set of adapters using low-rank adaptation (LoRA), which are lightweight components that seamlessly integrate with large language models. These adapters have a substantially lower parameter count than the base model, making them easily replaceable and usable as plug-ins for different languages or language groups. Extensive experiments in various multilingual evaluation settings demonstrate that models derived from LoRA-based training over Bactrian-X outperform both the vanilla models and existing instruction-tuned models. The code and models are publicly available at https://github.com/mbzuai-nlp/bactrian-x",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2789148",
+                    "name": "Fajri Koto"
+                },
+                {
+                    "authorId": "2145209409",
+                    "name": "Minghao Wu"
+                },
+                {
+                    "authorId": "8129718",
+                    "name": "Alham Fikri Aji"
+                },
+                {
+                    "authorId": "145465286",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "bb9a44c94a89dbe00f0061d05c70a45064ff6ea6",
+            "title": "CMMLU: Measuring massive multitask language understanding in Chinese",
+            "abstract": "As the capabilities of large language models (LLMs) continue to advance, evaluating their performance becomes increasingly crucial and challenging. This paper aims to bridge this gap by introducing CMMLU, a comprehensive Chinese benchmark that covers various subjects, including natural science, social sciences, engineering, and humanities. We conduct a thorough evaluation of 18 advanced multilingual- and Chinese-oriented LLMs, assessing their performance across different subjects and settings. The results reveal that most existing LLMs struggle to achieve an average accuracy of 50%, even when provided with in-context examples and chain-of-thought prompts, whereas the random baseline stands at 25%. This highlights significant room for improvement in LLMs. Additionally, we conduct extensive experiments to identify factors impacting the models' performance and propose directions for enhancing LLMs. CMMLU fills the gap in evaluating the knowledge and reasoning capabilities of large language models within the Chinese context.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2211919724",
+                    "name": "Yixuan Zhang"
+                },
+                {
+                    "authorId": "2789148",
+                    "name": "Fajri Koto"
+                },
+                {
+                    "authorId": "2108989265",
+                    "name": "Yifei Yang"
+                },
+                {
+                    "authorId": "2146232510",
+                    "name": "Hai Zhao"
+                },
+                {
+                    "authorId": "2171182",
+                    "name": "Yeyun Gong"
+                },
+                {
+                    "authorId": "46429989",
+                    "name": "Nan Duan"
+                },
+                {
+                    "authorId": "123917295",
+                    "name": "Tim Baldwin"
+                }
+            ]
+        },
+        {
+            "paperId": "ec9414654469692d8f1de8e2401a3dcbc58ee11a",
+            "title": "Demystifying Instruction Mixing for Fine-tuning Large Language Models",
+            "abstract": "Instruction tuning significantly enhances the performance of large language models (LLMs) across various tasks. However, the procedure to optimizing the mixing of instruction datasets for LLM fine-tuning is still poorly understood. This study categorizes instructions into three primary types: NLP downstream tasks, coding, and general chat. We explore the effects of instruction tuning on different combinations of datasets on LLM performance, and find that certain instruction types are more advantageous for specific applications but can negatively impact other areas. This work provides insights into instruction mixtures, laying the foundations for future research.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2215688800",
+                    "name": "Renxi Wang"
+                },
+                {
+                    "authorId": "49404498",
+                    "name": "Haonan Li"
+                },
+                {
+                    "authorId": "2145209409",
+                    "name": "Minghao Wu"
+                },
+                {
+                    "authorId": "2275119551",
+                    "name": "Yuxia Wang"
+                },
+                {
+                    "authorId": "2110982198",
+                    "name": "Xudong Han"
+                },
+                {
+                    "authorId": "50445559",
+                    "name": "Chiyu Zhang"
+                },
+                {
+                    "authorId": "2256987316",
+                    "name": "Timothy Baldwin"
+                }
+            ]
+        }
+    ]
+}

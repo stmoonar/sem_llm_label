@@ -1,0 +1,278 @@
+{
+    "authorId": "1727204",
+    "papers": [
+        {
+            "paperId": "0434e5ed1f9c40d7412769c87a03d4cccf4586a0",
+            "title": "Anticipating Next Active Objects for Egocentric Videos",
+            "abstract": "Active objects are those in contact with the first person in an egocentric video. This paper addresses the challenge of anticipating the future location of the next active object in relation to a person within a given egocentric video clip, which is challenging since the contact is poised to happen after the last observed frame by the model, even before any action takes place. As we aim to estimate the position of objects, this problem is particularly hard in a scenario where the observed clip and the action segment are separated by the so-called time-to-contact segment. We term this task Anticipating the Next ACTive Object (ANACTO) and introduce a transformer-based self-attention framework to tackle it. We compare our model with the existing anticipation-based methods to establish relevant baseline methods, where our approach outperforms all of them on three major egocentric datasets: EpicKitchens-100, EGTEA+, and Ego4D. We also conduct an ablation study to better present the effectiveness of the proposed and baseline methods on varying conditions. The code as well as the ANACTO task annotations for the aforementioned first two datasets will be made available upon the acceptance of this paper.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118577994",
+                    "name": "Sanket Thakur"
+                },
+                {
+                    "authorId": "2457914",
+                    "name": "Cigdem Beyan"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                },
+                {
+                    "authorId": "8955013",
+                    "name": "A. D. Bue"
+                }
+            ]
+        },
+        {
+            "paperId": "1f8b61a60d6cb5dc692187f545904f9ff5a92689",
+            "title": "Continual Source-Free Unsupervised Domain Adaptation",
+            "abstract": "Existing Source-free Unsupervised Domain Adaptation (SUDA) approaches inherently exhibit catastrophic forgetting. Typically, models trained on a labeled source domain and adapted to unlabeled target data improve performance on the target while dropping performance on the source, which is not available during adaptation. In this study, our goal is to cope with the challenging problem of SUDA in a continual learning setting, i.e., adapting to the target(s) with varying distributional shifts while maintaining performance on the source. The proposed framework consists of two main stages: i) a SUDA model yielding cleaner target labels -- favoring good performance on target, and ii) a novel method for synthesizing class-conditioned source-style images by leveraging only the source model and pseudo-labeled target data as a prior. An extensive pool of experiments on major benchmarks, e.g., PACS, Visda-C, and DomainNet demonstrates that the proposed Continual SUDA (C-SUDA) framework enables preserving satisfactory performance on the source domain without exploiting the source data at all.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2133706169",
+                    "name": "Waqar Ahmed"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                }
+            ]
+        },
+        {
+            "paperId": "6c9b85dddbc8f9c5bd77e58b2135ce01e5daddde",
+            "title": "Leveraging Next-Active Objects for Context-Aware Anticipation in Egocentric Videos",
+            "abstract": "Objects are crucial for understanding human-object interactions. By identifying the relevant objects, one can also predict potential future interactions or actions that may occur with these objects. In this paper, we study the problem of Short-Term Object interaction anticipation (STA) and propose NAOGAT (Next-Active-Object Guided Anticipation Transformer), a multi-modal end-to-end transformer network, that attends to objects in observed frames in order to anticipate the next-active-object (NAO) and, eventually, to guide the model to predict context-aware future actions. The task is challenging since it requires anticipating future action along with the object with which the action occurs and the time after which the interaction will begin, a.k.a. the time to contact (TTC). Compared to existing video modeling architectures for action anticipation, NAOGAT captures the relationship between objects and the global scene context in order to predict detections for the next active object and anticipate relevant future actions given these detections, leveraging the objects\u2019 dynamics to improve accuracy. One of the key strengths of our approach, in fact, is its ability to exploit the motion dynamics of objects within a given clip , which is often ignored by other models, and separately decoding the object-centric and motion-centric information. Through our experiments, we show that our model outperforms existing methods on two separate datasets, Ego4D and EpicKitchens-100 (\"Unseen Set\"), as measured by several additional metrics, such as time to contact, and next-active-object localization. The code can be found on project page : sanketsans.github.io/wacv24",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118577994",
+                    "name": "Sanket Thakur"
+                },
+                {
+                    "authorId": "2457914",
+                    "name": "Cigdem Beyan"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                },
+                {
+                    "authorId": "8955013",
+                    "name": "A. D. Bue"
+                }
+            ]
+        },
+        {
+            "paperId": "70dbb0e2de6e20db7380dfe4e66b19e7a8223a2a",
+            "title": "Enhancing Next Active Object-Based Egocentric Action Anticipation with Guided Attention",
+            "abstract": "Short-term action anticipation (STA) in first-person videos is a challenging task that involves understanding the next active object interactions and predicting future actions. Existing action anticipation methods have primarily focused on utilizing features extracted from video clips, but often overlooked the importance of objects and their interactions. To this end, we propose a novel approach that applies a guided attention mechanism between the objects, and the spatiotemporal features extracted from video clips, enhancing the motion and contextual information, and further decoding the object-centric and motion-centric information to address the problem of STA in egocentric videos. Our method, GANO (Guided Attention for Next active Objects) is a multi-modal, end-to-end, single transformer-based network. The experimental results performed on the largest egocentric dataset demonstrate that GANO outperforms the existing state-of-the-art methods for the prediction of the next active object label, its bounding box location, the corresponding future action, and the time to contact the object. The ablation study shows the positive contribution of the guided attention mechanism compared to other fusion methods. Moreover, it is possible to improve the next active object location and class label prediction results of GANO by just appending the learnable object tokens with the region of interest embeddings. Related implementations are available at: sanketsans.github.io/guided-attention-egocentric.html",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118577994",
+                    "name": "Sanket Thakur"
+                },
+                {
+                    "authorId": "2457914",
+                    "name": "Cigdem Beyan"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                },
+                {
+                    "authorId": "8955013",
+                    "name": "A. D. Bue"
+                }
+            ]
+        },
+        {
+            "paperId": "8dda3021b1f96ec0c809bea3fe278c3d1958ce6a",
+            "title": "Learning unbiased classifiers from biased data with meta-learning",
+            "abstract": "It is well known that large deep architectures are powerful models when adequately trained, but may exhibit undesirable behavior leading to confident incorrect predictions, even when evaluated on slightly different test examples. Test data characterized by distribution shifts (from training data distribution), outliers, and adversarial samples are among the types of data affected by this problem. This situation worsens whenever data are biased, meaning that predictions are mostly based on spurious correlations present in the data. Unfortunately, since such correlations occur in the most of data, a model is prevented from correctly generalizing the considered classes. In this work, we tackle this problem from a meta-learning perspective. Considering the dataset as composed of unknown biased and unbiased samples, we first identify these two subsets by a pseudo-labeling algorithm, even if coarsely. Subsequently, we apply a bi-level optimization algorithm in which, in the inner loop, we look for the best parameters guiding the training of the two subsets, while in the outer loop, we train the final model taking benefit from augmented data generated using Mixup. Properly tuning the contributions of biased and unbiased data, together with the regularization introduced by the mixed data has proved to be an effective training strategy to learn unbiased models, showing superior generalization capabilities. Experimental results on synthetically and realistically biased datasets surpass state-of-the-art performance, as compared to existing methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1481698015",
+                    "name": "R. Ragonesi"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                }
+            ]
+        },
+        {
+            "paperId": "a6d8a24cfa3dee7b127648538d9dacf8279fca8c",
+            "title": "Guided Attention for Next Active Object @ EGO4D STA Challenge",
+            "abstract": "In this technical report, we describe the Guided-Attention mechanism based solution for the short-term anticipation (STA) challenge for the EGO4D challenge. It combines the object detections, and the spatiotemporal features extracted from video clips, enhancing the motion and contextual information, and further decoding the object-centric and motion-centric information to address the problem of STA in egocentric videos. For the challenge, we build our model on top of StillFast with Guided Attention applied on fast network. Our model obtains better performance on the validation set and also achieves state-of-the-art (SOTA) results on the challenge test set for EGO4D Short-Term Object Interaction Anticipation Challenge.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118577994",
+                    "name": "Sanket Thakur"
+                },
+                {
+                    "authorId": "2457914",
+                    "name": "Cigdem Beyan"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                },
+                {
+                    "authorId": "8955013",
+                    "name": "A. D. Bue"
+                }
+            ]
+        },
+        {
+            "paperId": "da6239fc1d4bb001e6d40c2660ff84233c100401",
+            "title": "Target-driven One-Shot Unsupervised Domain Adaptation",
+            "abstract": "In this paper, we introduce a novel framework for the challenging problem of One-Shot Unsupervised Domain Adaptation (OSUDA), which aims to adapt to a target domain with only a single unlabeled target sample. Unlike existing approaches that rely on large labeled source and unlabeled target data, our Target-driven One-Shot UDA (TOS-UDA) approach employs a learnable augmentation strategy guided by the target sample's style to align the source distribution with the target distribution. Our method consists of three modules: an augmentation module, a style alignment module, and a classifier. Unlike existing methods, our augmentation module allows for strong transformations of the source samples, and the style of the single target sample available is exploited to guide the augmentation by ensuring perceptual similarity. Furthermore, our approach integrates augmentation with style alignment, eliminating the need for separate pre-training on additional datasets. Our method outperforms or performs comparably to existing OS-UDA methods on the Digits and DomainNet benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057485721",
+                    "name": "Julio Ivan Davila Carrazco"
+                },
+                {
+                    "authorId": "9249892",
+                    "name": "Suvarna Kadam"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "8955013",
+                    "name": "A. D. Bue"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                }
+            ]
+        },
+        {
+            "paperId": "f13549c4a6f11d96b392aba854c78af0634531eb",
+            "title": "No Adversaries to Zero-Shot Learning: Distilling an Ensemble of Gaussian Feature Generators",
+            "abstract": "In zero-shot learning (ZSL), the task of recognizing unseen categories when no data for training is available, state-of-the-art methods generate visual features from semantic auxiliary information (e.g., attributes). In this work, we propose a valid alternative (simpler, yet better scoring) to fulfill the very same task. We observe that, if first- and second-order statistics of the classes to be recognized were known, sampling from Gaussian distributions would synthesize visual features that are almost identical to the real ones as per classification purposes. We propose a novel mathematical framework to estimate first- and second-order statistics, even for unseen classes: our framework builds upon prior compatibility functions for ZSL and does not require additional training. Endowed with such statistics, we take advantage of a pool of class-specific Gaussian distributions to solve the feature generation stage through sampling. We exploit an ensemble mechanism to aggregate a pool of softmax classifiers, each trained in a one-seen-class-out fashion to better balance the performance over seen and unseen classes. Neural distillation is finally applied to fuse the ensemble into a single architecture which can perform inference through one forward pass only. Our method, termed Distilled Ensemble of Gaussian Generators, scores favorably with respect to state-of-the-art works.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3393678",
+                    "name": "Jacopo Cavazza"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                },
+                {
+                    "authorId": "8955013",
+                    "name": "A. D. Bue"
+                }
+            ]
+        },
+        {
+            "paperId": "f3b752a0e6cbb805ca157b971ba9d56d02478d96",
+            "title": "Audio-Visual Inpainting: Reconstructing Missing Visual Information with Sound",
+            "abstract": "We tackle audio-visual inpainting, the problem of completing an image in such a way to be consistent with the sound associated to the scene. To this end, we propose a multimodal, audio-visual inpainting method (AVIN), and show how to leverage sound to reconstruct semantically consistent images. AVIN is a 2-stage algorithm, which first learns the scene semantics and reconstructs low resolution images based on a conditional probability distribution of pixels in the space conditioned to audio, and then refines such result with a GAN-based network to increase the resolution of the reconstructed image. We show that AVIN is able to recover the original content, especially in the hard cases where the missing area heavily degrades the scene semantics: it can perform cross-modal generation whenever no visual context is observed at all, reconstructing visual data from sound only. Code will be made available upon acceptance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50113109",
+                    "name": "Valentina Sanguineti"
+                },
+                {
+                    "authorId": "2118577994",
+                    "name": "Sanket Thakur"
+                },
+                {
+                    "authorId": "1389596256",
+                    "name": "Pietro Morerio"
+                },
+                {
+                    "authorId": "122073467",
+                    "name": "Alessio Del Bue"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                }
+            ]
+        },
+        {
+            "paperId": "120265f96e0fc5961a9db204f5353f6801604b02",
+            "title": "On the Importance of Appearance and Interaction Feature Representations for Person Re-identification",
+            "abstract": "In recent person re-identification (Re-ID) approaches, combining global and local appearance-based features has been shown to increase performance effectively. These types of models are often characterized by multiple branches that act as experts for specific local regions or global high-level semantic features. We argue that attention mechanisms can be useful for multi-branch Re-ID models by creating more robust representations based on the interaction of informative image features. In this paper, we investigate this idea and propose a novel multi-branch architecture with experts that learn distinct representations based on (i) the global image appearance and (ii) the interaction between features. Unlike former methods with local experts acting on partitions that are fixed a-priori, our feature interaction expert uses a novel attention-based pooling to automatically extract semantically-rich and discriminative features from different regions of a person image. Compared with existing attention-based algorithms, our method maintains the feature interaction information separately in order to discriminate between identities. Our approach achieves state-of-the-art performance across three popular benchmarks - CUHK03, Market1501 and MSMT17. Furthermore, saliency visualizations show that appearance and interaction experts learn complementary representations that attend to multiple discriminant regions, leading to improved classification ability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "80428389",
+                    "name": "R. Blythman"
+                },
+                {
+                    "authorId": "144733334",
+                    "name": "Andrea Zunino"
+                },
+                {
+                    "authorId": "2052341684",
+                    "name": "Christopher Murray"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                }
+            ]
+        }
+    ]
+}

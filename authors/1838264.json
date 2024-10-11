@@ -1,0 +1,338 @@
+{
+    "authorId": "1838264",
+    "papers": [
+        {
+            "paperId": "b24b9a07979b98038618327d218e1c7e2880e598",
+            "title": "Harnessing GPU Power for Enhanced OLTP: A Study in Concurrency Control Schemes",
+            "abstract": "GPUs, whose performance has gone through a huge leap over the past decade, have proved their ability to accelerate Online Analytical Processing (OLAP) operations. On the other hand, there is still a huge gap in the field of GPU-accelerated Online Transaction Processing (OLTP) operations since it was generally believed that GPUswere not suitable for OLTP in the past. However, the massive parallelism and high memory bandwidth give GPUs the potential to process thousands of transactions concurrently. Among the components of OLTP systems, Concurrency Control (CC) schemes have a great impact on the performance of transaction processing and they may behave differently on GPUs because of the different hardware architectures between GPUs and CPUs. In this paper, we design and build the first test-bed gCCTB for CCschemes on GPUsandimplement eight CC schemes for gCCTB. These schemes include six common schemes previously designed for CPUs and two schemes designed for GPUs. Then we make a comprehensive evaluation of these CC schemes with YCSB and TPC-C benchmarks and a number of launch parameters on GPUs. The experience accumulated on our test-bed can assist researchers andengineers to design andimplementnewGPU-acceleratedOLTP systems. Furthermore, the results of our evaluation cast light on research directions of high performance CC schemes on GPUs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2228342123",
+                    "name": "Zihan Sun"
+                },
+                {
+                    "authorId": "2144287948",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "32287149",
+                    "name": "Chaoqin Li"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "ecb258c9a0a86dcb1c07fcee1105e4d7a96aa21f",
+            "title": "MatrixGate: A High-performance Data Ingestion Tool for Time-series Databases",
+            "abstract": "Recent years have seen massive time-series data generated in many areas. This different scenario brings new challenges, particularly in terms of data ingestion, where existing technologies struggle to handle such massive time-series data, leading to low loading speed and poor timeliness. To address these challenges, this paper presents MatrixGate, a new and efficient data ingestion approach for massive time-series data. MatrixGate implements both single-instance and multi-instance parallel procedures, which is based on its unique ingestion strategies. First, MatrixGate uses policies to tune the slots that are synchronized with segments to ingest data, which eliminates the cost of starting transactions and enhance the efficiency. Second, multi-coroutines are responsible for transfer data, which can increase the degree of parallelism significantly. Third, lock-free queues are used to enable direct data transfer without the need for disk storage or lodging in the master instance. Experiment results on multiple datasets show that MatrixGate outperforms state-of-the-art methods by 3 to 100 times in loading speed, and cuts down about 80% query latency. Furthermore, MatrixGate scales out efficiently under distributed architecture, achieving scalability of 86%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2305646143",
+                    "name": "Shuhui Wang"
+                },
+                {
+                    "authorId": "2228342123",
+                    "name": "Zihan Sun"
+                },
+                {
+                    "authorId": "2153653168",
+                    "name": "Chaochen Hu"
+                },
+                {
+                    "authorId": "32287149",
+                    "name": "Chaoqin Li"
+                },
+                {
+                    "authorId": "2144287948",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "2305630247",
+                    "name": "Yandong Yao"
+                },
+                {
+                    "authorId": "2306851890",
+                    "name": "Hao Wang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "11ff450ad8d6eb98f5c320106f96652d3509faeb",
+            "title": "Survey of Time Series Data Generation in IoT",
+            "abstract": "Nowadays, with the rapid growth of the internet of things (IoT), massive amounts of time series data are being generated. Time series data play an important role in scientific and technological research for conducting experiments and studies to obtain solid and convincing results. However, due to privacy restrictions, limited access to time series data is always an obstacle. Moreover, the limited available open source data are often not suitable because of a small quantity and insufficient dimensionality and complexity. Therefore, time series data generation has become an imperative and promising solution. In this paper, we provide an overview of classical and state-of-the-art time series data generation methods in IoT. We classify the time series data generation methods into four major categories: rule-based methods, simulation-model-based methods, traditional machine-learning-based methods, and deep-learning-based methods. For each category, we first illustrate its characteristics and then describe the principles and mechanisms of the methods. Finally, we summarize the challenges and future directions of time series data generation in IoT. The systematic classification and evaluation will be a valuable reference for researchers in the time series data generation field.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153653168",
+                    "name": "Chaochen Hu"
+                },
+                {
+                    "authorId": "2228342123",
+                    "name": "Zihan Sun"
+                },
+                {
+                    "authorId": "46651866",
+                    "name": "Chao Li"
+                },
+                {
+                    "authorId": "33603226",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "25327a796cedd469d11da3bf252d7e0bff449f47",
+            "title": "An Efficient Algorithm for Distance-based Structural Graph Clustering",
+            "abstract": "Structural graph clustering (SCAN) is a classic graph clustering algorithm. In SCAN, a key step is to compute the structural similarity between vertices according to the overlap ratio of one-hop neighborhoods. Given two vertices u and v, existing studies only consider the case when u and v are neighbors. However, the structural similarity between non-neighboring vertices in SCAN is always zero, and using only one-hop neighbors on weighted graphs discards the weights on each edge. Both may not reflect the true closeness of two vertices and may fail to return high-quality clustering results. To tackle this issue, we define and study the distance-based structural graph clustering problem. Given a distance threshold d and two vertices u and v, the structural similarity between u and v is defined as the ratio of their respective neighbors within a distance of no more than d. We show that the newly defined distance-based SCAN achieves better clustering results compared to the vanilla version of SCAN. However, the new definition brings challenges in the computation of final clustering results. To tackle this efficiency issue, we propose DistanceSCAN, an efficient approximate algorithm for solving the distance-based SCAN problem. The main idea of DistanceSCAN is to use all-distances bottom-k sketches (ADS) to speed up the computation of similarities. Given the ADS, we can derive the similarity between two vertices with a bounded cost of O(k). However, to ensure that the estimated similarity has an approximation guarantee, the value of k still needs to be set to as large as thousands. This brings high computational costs when computing the similarities between neighboring vertices. To tackle this issue, we further construct histograms to prune the structural similarity computations of vertices pairs. Extensive experiments on real datasets validate the effectiveness and efficiency of DistanceSCAN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146384880",
+                    "name": "Kaixin Liu"
+                },
+                {
+                    "authorId": "39996718",
+                    "name": "Sibo Wang"
+                },
+                {
+                    "authorId": "33603226",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "338b61463f5d77ca12c7651952ceb5af95e1de69",
+            "title": "OpenSiteRec: An Open Dataset for Site Recommendation",
+            "abstract": "As a representative information retrieval task, site recommendation, which aims at predicting the optimal sites for a brand or an institution to open new branches in an automatic data-driven way, is beneficial and crucial for brand development in modern business. However, there is no publicly available dataset so far and most existing approaches are limited to an extremely small scope of brands, which seriously hinders the research on site recommendation. Therefore, we collect, construct and release an open comprehensive dataset, namely OpenSiteRec, to facilitate and promote the research on site recommendation. Specifically, OpenSiteRec leverages a heterogeneous graph schema to represent various types of real-world entities and relations in four international metropolises. To evaluate the performance of the existing general methods on the site recommendation task, we conduct benchmarking experiments of several representative recommendation models on OpenSiteRec. Furthermore, we also highlight the potential application directions to demonstrate the wide applicability of OpenSiteRec. We believe that our OpenSiteRec dataset is significant and anticipated to encourage the development of advanced methods for site recommendation. OpenSiteRec is available online at https://OpenSiteRec.github.io/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "78145275",
+                    "name": "Xinhang Li"
+                },
+                {
+                    "authorId": "2116711312",
+                    "name": "Xiang Zhao"
+                },
+                {
+                    "authorId": "2162455919",
+                    "name": "Yejing Wang"
+                },
+                {
+                    "authorId": "2146400187",
+                    "name": "Yu Liu"
+                },
+                {
+                    "authorId": "2154405613",
+                    "name": "Yong Li"
+                },
+                {
+                    "authorId": "2221009794",
+                    "name": "Cheng Long"
+                },
+                {
+                    "authorId": "33603226",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "607d9eb8ceab0533bcfc65e8aced69aee4e40976",
+            "title": "IMF: Interactive Multimodal Fusion Model for Link Prediction",
+            "abstract": "Link prediction aims to identify potential missing triples in knowledge graphs. To get better results, some recent studies have introduced multimodal information to link prediction. However, these methods utilize multimodal information separately and neglect the complicated interaction between different modalities. In this paper, we aim at better modeling the inter-modality information and thus introduce a novel Interactive Multimodal Fusion (IMF) model to integrate knowledge from different modalities. To this end, we propose a two-stage multimodal fusion framework to preserve modality-specific knowledge as well as take advantage of the complementarity between different modalities. Instead of directly projecting different modalities into a unified space, our multimodal fusion module limits the representations of different modalities independent while leverages bilinear pooling for fusion and incorporates contrastive learning as additional constraints. Furthermore, the decision fusion module delivers the learned weighted average over the predictions of all modalities to better incorporate the complementarity of different modalities. Our approach has been demonstrated to be effective through empirical evaluations on several real-world datasets. The implementation code is available online at https://github.com/HestiaSky/IMF-Pytorch.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "78145275",
+                    "name": "Xinhang Li"
+                },
+                {
+                    "authorId": "2197532318",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2157763562",
+                    "name": "Jiaxing Xu"
+                },
+                {
+                    "authorId": "33603226",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "84557e06b971ff71acef88d5c94a274dee71e304",
+            "title": "Conditional Cross-Platform User Engagement Prediction",
+            "abstract": "The bursting of media sharing platforms like TikTok, YouTube, and Kwai enables normal users to create and share content with worldwide audiences. The most popular YouTuber can attract up to 100 million followers. Since there are multiple popular platforms, it\u2019s quite common that a YouTuber publishes the same media to multiple platforms, or replicates all media from one platform to another. However, the users of different platforms have different tastes. The media that is popular on one platform may not be a great vogue on other platforms. Observing such cross-platform variance, we propose a new task: estimating the user engagement score of a media on one platform given its popularity on other platforms. This task can benefit both the YouTubers and the platform. On one hand, YouTubers can use the predicted engagement to guide the media reworking; on the other hand, the platform can use the predicted engagement to establish promotion and advertising plans. Therefore, this task is of great practical value. To tackle this task, we propose a disentangled neural network that can separate the general media adorability from platform inclinations. In this manner, by substituting the inclination from the source platform to the target platform, we are able to predict the user engagement in the target platform. To validate the proposed model, we manage to build a dataset of micro-videos which are published on four platforms TikTok, Kwai, Bilibili, and WESEE. The experimental results prove the effectiveness of the proposed model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "78145275",
+                    "name": "Xinhang Li"
+                },
+                {
+                    "authorId": "2382872",
+                    "name": "Zhaopeng Qiu"
+                },
+                {
+                    "authorId": "2212137234",
+                    "name": "Jiacheng Jiang"
+                },
+                {
+                    "authorId": "33603226",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                },
+                {
+                    "authorId": "144620591",
+                    "name": "X. Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "b8ec7eae49fac24553e1b8c58e0ae36356f7f9ac",
+            "title": "HuaBaseChain: An Extensible Blockchain With High Performance",
+            "abstract": "Blockchain has been extensively used on the Internet of Things (IoT). However, several problems exist in current blockchain systems that limit their usability in IoT networks. First, Proof-of-Work (PoW) consensus most used in current blockchain systems generates excessive energy consumption. Second, the single digital token system limits the development of blockchain in multiple IoT applications. Finally, the large amount of data generated by IoT devices and stored in blockchains has huge storage requirements. To deal with these problems, we propose HuaBaseChain\u2014an extensible blockchain with high performance. HuaBaseChain has three features. First, HuaBaseChain uses a novel Proof-of-Participation (PoP) consensus to reduce energy consumption. Second, HuaBaseChain extends the single digital token model to a multidimensional digital token model, enabling more varied applications that can be tailored to the needs of IoT device managers. Third, HuaBaseChain devises an underlying Merkle forest data structure to reduce storage requirements. HuaBaseChain is suited for IoT applications that contain a variety of IoT devices and generate massive amounts of data. We demonstrate the efficiency of HuaBaseChain on IoT data sets and the significantly larger Bitcoin data set. Our experiments show that HuaBaseChain runs efficiently, with significantly reduced energy consumption, greater efficiency, lower storage requirements, and higher query speed.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9184458",
+                    "name": "Xiangke Mao"
+                },
+                {
+                    "authorId": "46651287",
+                    "name": "C. Li"
+                },
+                {
+                    "authorId": "33603226",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "8273966",
+                    "name": "Guigang Zhang"
+                },
+                {
+                    "authorId": "2210254329",
+                    "name": "Jiafu Li"
+                },
+                {
+                    "authorId": "2111862661",
+                    "name": "Mira Shah"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "cf659af952ee98182f9dc7cd6173bad55aa57daa",
+            "title": "E4SRec: An Elegant Effective Efficient Extensible Solution of Large Language Models for Sequential Recommendation",
+            "abstract": "The recent advancements in Large Language Models (LLMs) have sparked interest in harnessing their potential within recommender systems. Since LLMs are designed for natural language tasks, existing recommendation approaches have predominantly transformed recommendation tasks into open-domain natural language generation tasks. However, this approach necessitates items to possess rich semantic information, often generates out-of-range results, and suffers from notably low efficiency and limited extensibility. Furthermore, practical ID-based recommendation strategies, reliant on a huge number of unique identities (IDs) to represent users and items, have gained prominence in real-world recommender systems due to their effectiveness and efficiency. Nevertheless, the incapacity of LLMs to model IDs presents a formidable challenge when seeking to leverage LLMs for personalized recommendations. In this paper, we introduce an Elegant Effective Efficient Extensible solution for large language models for Sequential Recommendation (E4SRec), which seamlessly integrates LLMs with traditional recommender systems that exclusively utilize IDs to represent items. Specifically, E4SRec takes ID sequences as inputs, ensuring that the generated outputs fall within the candidate lists. Furthermore, E4SRec possesses the capability to generate the entire ranking list in a single forward process, and demands only a minimal set of pluggable parameters, which are trained for each dataset while keeping the entire LLM frozen. We substantiate the effectiveness, efficiency, and extensibility of our proposed E4SRec through comprehensive experiments conducted on four widely-used real-world datasets. The implementation code is accessible at https://github.com/HestiaSky/E4SRec/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "78145275",
+                    "name": "Xinhang Li"
+                },
+                {
+                    "authorId": "2269755998",
+                    "name": "Chong Chen"
+                },
+                {
+                    "authorId": "2269779369",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2144287948",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                }
+            ]
+        },
+        {
+            "paperId": "d0111516fa5b32157bcbae322476b489a0b77d7b",
+            "title": "REST: Drug-Drug Interaction Prediction via Reinforced Student-Teacher Curriculum Learning",
+            "abstract": "Accurate prediction of drug-drug interaction (DDI) is crucial to achieving effective decision-making in medical treatment for both doctors and patients. Recently, many deep learning based methods have been proposed to learn from drug-related features and conduct DDI prediction. These works have achieved promising results. However, the extreme imbalance of medical data poses a serious problem to DDI prediction, where a small fraction of DDI types occupy the majority training data. A straightforward way is to develop an appropriate policy to sample the data. Due to the high complexity and speciality of medical science, a dynamic learnable policy is required instead of a heuristic, uniform or static one. Therefore, we propose a REinforced Student-Teacher curriculum learning model (REST) for effective sampling to tackle this imbalance problem. Specifically, REST consists of two interactive parts, which are a heterogeneous graph neural network as the student and a reinforced sampler as the teacher. In each interaction, the teacher model takes action to sample an appropriate batch to train the student model according to the student model state while the cumulated improvement in performance of the student model is treated as the reward for policy gradient of the teacher model. The experimental results on two benchmarking datasets have demonstrated the significant effectiveness of our proposed model in DDI prediction, especially for the DDI types with low frequency.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "78145275",
+                    "name": "Xinhang Li"
+                },
+                {
+                    "authorId": "2382872",
+                    "name": "Zhaopeng Qiu"
+                },
+                {
+                    "authorId": "2116711669",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2144287948",
+                    "name": "Yong Zhang"
+                },
+                {
+                    "authorId": "1838264",
+                    "name": "Chunxiao Xing"
+                },
+                {
+                    "authorId": "2261065257",
+                    "name": "Xian Wu"
+                }
+            ]
+        }
+    ]
+}

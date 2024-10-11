@@ -1,0 +1,401 @@
+{
+    "authorId": "2154871075",
+    "papers": [
+        {
+            "paperId": "5bde14509d9be0cd751194c6035a02799e97605d",
+            "title": "Is Contrastive Learning Necessary? A Study of Data Augmentation vs Contrastive Learning in Sequential Recommendation",
+            "abstract": "Sequential recommender systems (SRS) are designed to predict users' future behaviors based on their historical interaction data. Recent research has increasingly utilized contrastive learning (CL) to leverage unsupervised signals to alleviate the data sparsity issue in SRS. In general, CL-based SRS first augments the raw sequential interaction data by using data augmentation strategies and employs a contrastive training scheme to enforce the representations of those sequences from the same raw interaction data to be similar. Despite the growing popularity of CL, data augmentation, as a basic component of CL, has not received sufficient attention. This raises the question: Is it possible to achieve superior recommendation results solely through data augmentation? To answer this question, we benchmark eight widely used data augmentation strategies, as well as state-of-the-art CL-based SRS methods, on four real-world datasets under both warm- and cold-start settings. Intriguingly, the conclusion drawn from our study is that, certain data augmentation strategies can achieve similar or even superior performance compared with some CL-based methods, demonstrating the potential to significantly alleviate the data sparsity issue with fewer computational overhead. We hope that our study can further inspire more fundamental studies on the key functional components of complex CL techniques. Our processed datasets and codes are available at https://github.com/AIM-SE/DA4Rec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2293137193",
+                    "name": "Peilin Zhou"
+                },
+                {
+                    "authorId": "2265951415",
+                    "name": "You-Liang Huang"
+                },
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "2292122107",
+                    "name": "Jingqi Gao"
+                },
+                {
+                    "authorId": "2292055270",
+                    "name": "Shoujin Wang"
+                },
+                {
+                    "authorId": "2156009696",
+                    "name": "Jae Boum Kim"
+                },
+                {
+                    "authorId": "2118021616",
+                    "name": "Sunghun Kim"
+                }
+            ]
+        },
+        {
+            "paperId": "7b3b81c91e328ab3a8a2fbd131967cefa7fcccf4",
+            "title": "GradSafe: Detecting Jailbreak Prompts for LLMs via Safety-Critical Gradient Analysis",
+            "abstract": "Large Language Models (LLMs) face threats from jailbreak prompts. Existing methods for detecting jailbreak prompts are primarily online moderation APIs or finetuned LLMs. These strategies, however, often require extensive and resource-intensive data collection and training processes. In this study, we propose GradSafe, which effectively detects jailbreak prompts by scrutinizing the gradients of safety-critical parameters in LLMs. Our method is grounded in a pivotal observation: the gradients of an LLM's loss for jailbreak prompts paired with compliance response exhibit similar patterns on certain safety-critical parameters. In contrast, safe prompts lead to different gradient patterns. Building on this observation, GradSafe analyzes the gradients from prompts (paired with compliance responses) to accurately detect jailbreak prompts. We show that GradSafe, applied to Llama-2 without further training, outperforms Llama Guard, despite its extensive finetuning with a large dataset, in detecting jailbreak prompts. This superior performance is consistent across both zero-shot and adaptation scenarios, as evidenced by our evaluations on ToxicChat and XSTest. The source code is available at https://github.com/xyq7/GradSafe.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "2256437881",
+                    "name": "Minghong Fang"
+                },
+                {
+                    "authorId": "2066420772",
+                    "name": "Renjie Pi"
+                },
+                {
+                    "authorId": "2261282099",
+                    "name": "N. Gong"
+                }
+            ]
+        },
+        {
+            "paperId": "8d28d2ef602e8b518b7daecc39a0f2f8d2caaa09",
+            "title": "MLLM-Protector: Ensuring MLLM's Safety without Hurting Performance",
+            "abstract": "The deployment of multimodal large language models (MLLMs) has brought forth a unique vulnerability: susceptibility to malicious attacks through visual inputs. This paper investigates the novel challenge of defending MLLMs against such attacks. Compared to large language models (LLMs), MLLMs include an additional image modality. We discover that images act as a ``foreign language\"that is not considered during safety alignment, making MLLMs more prone to producing harmful responses. Unfortunately, unlike the discrete tokens considered in text-based LLMs, the continuous nature of image signals presents significant alignment challenges, which poses difficulty to thoroughly cover all possible scenarios. This vulnerability is exacerbated by the fact that most state-of-the-art MLLMs are fine-tuned on limited image-text pairs that are much fewer than the extensive text-based pretraining corpus, which makes the MLLMs more prone to catastrophic forgetting of their original abilities during safety fine-tuning. To tackle these challenges, we introduce MLLM-Protector, a plug-and-play strategy that solves two subtasks: 1) identifying harmful responses via a lightweight harm detector, and 2) transforming harmful responses into harmless ones via a detoxifier. This approach effectively mitigates the risks posed by malicious visual inputs without compromising the original performance of MLLMs. Our results demonstrate that MLLM-Protector offers a robust solution to a previously unaddressed aspect of MLLM security.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066420772",
+                    "name": "Renjie Pi"
+                },
+                {
+                    "authorId": "2278220435",
+                    "name": "Tianyang Han"
+                },
+                {
+                    "authorId": "2305732949",
+                    "name": "Jianshu Zhang"
+                },
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": null,
+                    "name": "Rui Pan"
+                },
+                {
+                    "authorId": "2237987004",
+                    "name": "Qing Lian"
+                },
+                {
+                    "authorId": "35279146",
+                    "name": "Hanze Dong"
+                },
+                {
+                    "authorId": "2275280334",
+                    "name": "Jipeng Zhang"
+                },
+                {
+                    "authorId": "2266465257",
+                    "name": "Tong Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "ec992be6cadcfe7861718886f96329b182028cf8",
+            "title": "Model Poisoning Attacks to Federated Learning via Multi-Round Consistency",
+            "abstract": "Model poisoning attacks are critical security threats to Federated Learning (FL). Existing model poisoning attacks suffer from two key limitations: 1) they achieve suboptimal effectiveness when defenses are deployed, and/or 2) they require knowledge of the model updates or local training data on genuine clients. In this work, we make a key observation that their suboptimal effectiveness arises from only leveraging model-update consistency among malicious clients within individual training rounds, making the attack effect self-cancel across training rounds. In light of this observation, we propose PoisonedFL, which enforces multi-round consistency among the malicious clients' model updates while not requiring any knowledge about the genuine clients. Our empirical evaluation on five benchmark datasets shows that PoisonedFL breaks eight state-of-the-art defenses and outperforms seven existing model poisoning attacks. Moreover, we also explore new defenses that are tailored to PoisonedFL, but our results show that we can still adapt PoisonedFL to break them. Our study shows that FL systems are considerably less robust than previously thought, underlining the urgency for the development of new defense mechanisms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "2256437881",
+                    "name": "Minghong Fang"
+                },
+                {
+                    "authorId": "2261282099",
+                    "name": "N. Gong"
+                }
+            ]
+        },
+        {
+            "paperId": "6d465be006615460d41060f9f5068d51fc1f46b1",
+            "title": "Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models",
+            "abstract": "The integration of large language models (LLMs) with external content has enabled more up-to-date and wide-ranging applications of LLMs, such as Microsoft Copilot. However, this integration has also exposed LLMs to the risk of indirect prompt injection attacks, where an attacker can embed malicious instructions within external content, compromising LLM output and causing responses to deviate from user expectations. To investigate this important but underexplored issue, we introduce the first benchmark for indirect prompt injection attacks, named BIPIA, to evaluate the risk of such attacks. Based on the evaluation, our work makes a key analysis of the underlying reason for the success of the attack, namely the inability of LLMs to distinguish between instructions and external content and the absence of LLMs' awareness to not execute instructions within external content. Building upon this analysis, we develop two black-box methods based on prompt learning and a white-box defense method based on fine-tuning with adversarial training accordingly. Experimental results demonstrate that black-box defenses are highly effective in mitigating these attacks, while the white-box defense reduces the attack success rate to near-zero levels. Overall, our work systematically investigates indirect prompt injection attacks by introducing a benchmark, analyzing the underlying reason for the success of the attack, and developing an initial set of defenses.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2087122322",
+                    "name": "Jingwei Yi"
+                },
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "2276416062",
+                    "name": "Bin Zhu"
+                },
+                {
+                    "authorId": "2276204594",
+                    "name": "Keegan Hines"
+                },
+                {
+                    "authorId": "2264962872",
+                    "name": "Emre Kiciman"
+                },
+                {
+                    "authorId": "2273404944",
+                    "name": "Guangzhong Sun"
+                },
+                {
+                    "authorId": "2276268072",
+                    "name": "Xing Xie"
+                },
+                {
+                    "authorId": "2397264",
+                    "name": "Fangzhao Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "6ec3b6306b53a5685bab6d1a58b77c0d26e2f562",
+            "title": "Rethinking Multi-Interest Learning for Candidate Matching in Recommender Systems",
+            "abstract": "Existing research efforts for multi-interest candidate matching in recommender systems mainly focus on improving model architecture or incorporating additional information, neglecting the importance of training schemes. This work revisits the training framework and uncovers two major problems hindering the expressiveness of learned multi-interest representations. First, the current training objective (i.e., uniformly sampled softmax) fails to effectively train discriminative representations in a multi-interest learning scenario due to the severe increase in easy negative samples. Second, a routing collapse problem is observed where each learned interest may collapse to express information only from a single item, resulting in information loss. To address these issues, we propose the REMI framework, consisting of an Interest-aware Hard Negative mining strategy (IHN) and a Routing Regularization (RR) method. IHN emphasizes interest-aware hard negatives by proposing an ideal sampling distribution and developing a Monte-Carlo strategy for efficient approximation. RR prevents routing collapse by introducing a novel regularization term on the item-to-interest routing matrices. These two components enhance the learned multi-interest representations from both the optimization objective and the composition information. REMI is a general framework that can be readily applied to various existing multi-interest candidate matching methods. Experiments on three real-world datasets show our method can significantly improve state-of-the-art methods with easy implementation and negligible computational overhead. The source code is available at https://github.com/Tokkiu/REMI.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "2118389668",
+                    "name": "Jingqi Gao"
+                },
+                {
+                    "authorId": "1800462890",
+                    "name": "Peilin Zhou"
+                },
+                {
+                    "authorId": "2190432576",
+                    "name": "Qichen Ye"
+                },
+                {
+                    "authorId": "2147311343",
+                    "name": "Y. Hua"
+                },
+                {
+                    "authorId": "2173708050",
+                    "name": "Jaeboum Kim"
+                },
+                {
+                    "authorId": "2397264",
+                    "name": "Fangzhao Wu"
+                },
+                {
+                    "authorId": "2118021616",
+                    "name": "Sunghun Kim"
+                }
+            ]
+        },
+        {
+            "paperId": "85722b13631d9846866d45ff2bfc2a2fe1026ac8",
+            "title": "LLMRec: Benchmarking Large Language Models on Recommendation Task",
+            "abstract": "Recently, the fast development of Large Language Models (LLMs) such as ChatGPT has significantly advanced NLP tasks by enhancing the capabilities of conversational models. However, the application of LLMs in the recommendation domain has not been thoroughly investigated. To bridge this gap, we propose LLMRec, a LLM-based recommender system designed for benchmarking LLMs on various recommendation tasks. Specifically, we benchmark several popular off-the-shelf LLMs, such as ChatGPT, LLaMA, ChatGLM, on five recommendation tasks, including rating prediction, sequential recommendation, direct recommendation, explanation generation, and review summarization. Furthermore, we investigate the effectiveness of supervised finetuning to improve LLMs' instruction compliance ability. The benchmark results indicate that LLMs displayed only moderate proficiency in accuracy-based tasks such as sequential and direct recommendation. However, they demonstrated comparable performance to state-of-the-art methods in explainability-based tasks. We also conduct qualitative evaluations to further evaluate the quality of contents generated by different models, and the results show that LLMs can truly understand the provided information and generate clearer and more reasonable results. We aspire that this benchmark will serve as an inspiration for researchers to delve deeper into the potential of LLMs in enhancing recommendation performance. Our codes, processed data and benchmark results are available at https://github.com/williamliujl/LLMRec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2218869839",
+                    "name": "Junling Liu"
+                },
+                {
+                    "authorId": "3741691",
+                    "name": "Chao-Hong Liu"
+                },
+                {
+                    "authorId": "1800462890",
+                    "name": "Peilin Zhou"
+                },
+                {
+                    "authorId": "2190432576",
+                    "name": "Qichen Ye"
+                },
+                {
+                    "authorId": "52290752",
+                    "name": "Dading Chong"
+                },
+                {
+                    "authorId": "2165702320",
+                    "name": "Kangan Zhou"
+                },
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "150346771",
+                    "name": "Yuwei Cao"
+                },
+                {
+                    "authorId": "2116951322",
+                    "name": "Shoujin Wang"
+                },
+                {
+                    "authorId": "2061592207",
+                    "name": "Chenyu You"
+                },
+                {
+                    "authorId": "2233087809",
+                    "name": "Philip S.Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "a44d904432cdda9d188bfff8e31619e02f2a4d89",
+            "title": "Attention Calibration for Transformer-based Sequential Recommendation",
+            "abstract": "Transformer-based sequential recommendation (SR) has been booming in recent years, with the self-attention mechanism as its key component. Self-attention has been widely believed to be able to effectively select those informative and relevant items from a sequence of interacted items for next-item prediction via learning larger attention weights for these items. However, this may not always be true in reality. Our empirical analysis of some representative Transformer-based SR models reveals that it is not uncommon for large attention weights to be assigned to less relevant items, which can result in inaccurate recommendations. Through further in-depth analysis, we find two factors that may contribute to such inaccurate assignment of attention weights:sub-optimal position encoding andnoisy input. To this end, in this paper, we aim to address this significant yet challenging gap in existing works. To be specific, we propose a simple yet effective framework called Attention Calibration for Transformer-based Sequential Recommendation (AC-TSR). In AC-TSR, a novel spatial calibrator and adversarial calibrator are designed respectively to directly calibrates those incorrectly assigned attention weights. The former is devised to explicitly capture the spatial relationships (i.e., order and distance) among items for more precise calculation of attention weights. The latter aims to redistribute the attention weights based on each item's contribution to the next-item prediction. AC-TSR is readily adaptable and can be seamlessly integrated into various existing transformer-based SR models. Extensive experimental results on four benchmark real-world datasets demonstrate the superiority of our proposed AC-TSR via significant recommendation performance enhancements. The source code is available at https://github.com/AIM-SE/AC-TSR.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1800462890",
+                    "name": "Peilin Zhou"
+                },
+                {
+                    "authorId": "2190432576",
+                    "name": "Qichen Ye"
+                },
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "2118389668",
+                    "name": "Jingqi Gao"
+                },
+                {
+                    "authorId": "2116951322",
+                    "name": "Shoujin Wang"
+                },
+                {
+                    "authorId": "2156009696",
+                    "name": "Jae Boum Kim"
+                },
+                {
+                    "authorId": "2061592207",
+                    "name": "Chenyu You"
+                },
+                {
+                    "authorId": "2118021616",
+                    "name": "Sunghun Kim"
+                }
+            ]
+        },
+        {
+            "paperId": "afd609e63462aff0e4d2ccd4051a4ce7041511d8",
+            "title": "Exploring Recommendation Capabilities of GPT-4V(ision): A Preliminary Case Study",
+            "abstract": "Large Multimodal Models (LMMs) have demonstrated impressive performance across various vision and language tasks, yet their potential applications in recommendation tasks with visual assistance remain unexplored. To bridge this gap, we present a preliminary case study investigating the recommendation capabilities of GPT-4V(ison), a recently released LMM by OpenAI. We construct a series of qualitative test samples spanning multiple domains and employ these samples to assess the quality of GPT-4V's responses within recommendation scenarios. Evaluation results on these test samples prove that GPT-4V has remarkable zero-shot recommendation abilities across diverse domains, thanks to its robust visual-text comprehension capabilities and extensive general knowledge. However, we have also identified some limitations in using GPT-4V for recommendations, including a tendency to provide similar responses when given similar inputs. This report concludes with an in-depth discussion of the challenges and research opportunities associated with utilizing GPT-4V in recommendation scenarios. Our objective is to explore the potential of extending LMMs from vision and language tasks to recommendation tasks. We hope to inspire further research into next-generation multimodal generative recommendation models, which can enhance user experiences by offering greater diversity and interactivity. All images and prompts used in this report will be accessible at https://github.com/PALIN2018/Evaluate_GPT-4V_Rec.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1800462890",
+                    "name": "Peilin Zhou"
+                },
+                {
+                    "authorId": "2265583496",
+                    "name": "Meng Cao"
+                },
+                {
+                    "authorId": "2265951415",
+                    "name": "You-Liang Huang"
+                },
+                {
+                    "authorId": "2258550058",
+                    "name": "Qichen Ye"
+                },
+                {
+                    "authorId": "2265621321",
+                    "name": "Peiyan Zhang"
+                },
+                {
+                    "authorId": "2218869839",
+                    "name": "Junling Liu"
+                },
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "2147311343",
+                    "name": "Y. Hua"
+                },
+                {
+                    "authorId": "2173708050",
+                    "name": "Jaeboum Kim"
+                }
+            ]
+        },
+        {
+            "paperId": "14972fbfaea65826dff146a3ae807105929fe590",
+            "title": "Robust Federated Learning against both Data Heterogeneity and Poisoning Attack via Aggregation Optimization",
+            "abstract": "Non-IID data distribution across clients and poisoning attacks are two main challenges in real-world federated learning (FL) systems. While both of them have attracted great research interest with specific strategies developed, no known solution manages to address them in a unified framework. To universally overcome both challenges, we propose SmartFL, a generic approach that optimizes the server-side aggregation process with a small amount of proxy data collected by the service provider itself via a subspace training technique. Specifically, the aggregation weight of each participating client at each round is optimized using the server-collected proxy data, which is essentially the optimization of the global model in the convex hull spanned by client models. Since at each round, the number of tunable parameters optimized on the server side equals the number of participating clients (thus independent of the model size), we are able to train a global model with massive parameters using only a small amount of proxy data (e.g., around one hundred samples). With optimized aggregation, SmartFL ensures robustness against both heterogeneous and malicious clients, which is desirable in real-world FL where either or both problems may occur. We provide theoretical analyses of the convergence and generalization capacity for SmartFL. Empirically, SmartFL achieves state-of-the-art performance on both FL with non-IID data distribution and FL with malicious clients. The source code will be released.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154871075",
+                    "name": "Yueqi Xie"
+                },
+                {
+                    "authorId": "47527753",
+                    "name": "Weizhong Zhang"
+                },
+                {
+                    "authorId": "2066420772",
+                    "name": "Renjie Pi"
+                },
+                {
+                    "authorId": "2397264",
+                    "name": "Fangzhao Wu"
+                },
+                {
+                    "authorId": "2109347324",
+                    "name": "Qifeng Chen"
+                },
+                {
+                    "authorId": "2149195520",
+                    "name": "Xing Xie"
+                },
+                {
+                    "authorId": "2118021616",
+                    "name": "Sunghun Kim"
+                }
+            ]
+        }
+    ]
+}

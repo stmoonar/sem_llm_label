@@ -1,0 +1,269 @@
+{
+    "authorId": "1732298",
+    "papers": [
+        {
+            "paperId": "570a341a8fd511cf0e05687110f053aaac646010",
+            "title": "Towards Unbounded Machine Unlearning",
+            "abstract": "Deep machine unlearning is the problem of `removing' from a trained neural network a subset of its training set. This problem is very timely and has many applications, including the key tasks of removing biases (RB), resolving confusion (RC) (caused by mislabelled data in trained models), as well as allowing users to exercise their `right to be forgotten' to protect User Privacy (UP). This paper is the first, to our knowledge, to study unlearning for different applications (RB, RC, UP), with the view that each has its own desiderata, definitions for `forgetting' and associated metrics for forget quality. For UP, we propose a novel adaptation of a strong Membership Inference Attack for unlearning. We also propose SCRUB, a novel unlearning algorithm, which is the only method that is consistently a top performer for forget quality across the different application-dependent metrics for RB, RC, and UP. At the same time, SCRUB is also consistently a top performer on metrics that measure model utility (i.e. accuracy on retained data and generalization), and is more efficient than previous work. The above are substantiated through a comprehensive empirical evaluation against previous state-of-the-art.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                },
+                {
+                    "authorId": "2064782825",
+                    "name": "Eleni Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "c24132d2eb4f4599b4abd363fe55d284d86bd65d",
+            "title": "Streaming Weighted Sampling over Join Queries",
+            "abstract": "Join queries are a fundamental database tool, capturing a range of tasks that involve linking heterogeneous data sources. However, with massive table sizes, it is often impractical to keep these in memory, and we can only take one or few streaming passes over them. Moreover, building out the full join result (e.g., linking heterogeneous data sources along quasi-identifiers) can lead to a combinatorial explosion of results due to many-to-many links. Random sampling is a natural tool to boil this oversized result down to a representative subset with well-understood statistical properties, but turns out to be a challenging task due to the combinatorial nature of the sampling domain. Existing techniques in the literature focus solely on the setting with tabular data residing in main memory, and do not address aspects such as stream operation, weighted sampling and more general join operators that are urgently needed in a modern data processing context. The main contribution of this work is to meet these needs with more lightweight practical approaches. First, a bijection between the sampling problem and a graph problem is introduced to support weighted sampling and common join operators. Second, the sampling techniques are refined to minimise the number of streaming passes. Third, techniques are presented to deal with very large tables under limited memory. Finally, the proposed techniques are compared to existing approaches that rely on database indices and the results indicate substantial memory savings, reduced runtimes for ad-hoc queries and competitive amortised runtimes. All pertinent code and data can be found at:",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "48d7ce298ee0fe9db5fbbcc075a7e17c68ada3c3",
+            "title": "Artifacts Availability & Reproducibility (VLDB 2021 Round Table)",
+            "abstract": "In the last few years, SIGMOD and VLDB have intensified efforts to encourage, facilitate, and establish reproducibility as a key process for accepted research papers, awarding them with the Reproducibility badge. In addition, complementary efforts have focused on increasing the sharing of accompanying artifacts of published work (code, scripts, data), independently of reproducibility, awarding them the Artifacts Available badge. In this short note, we summarize the discussion of a panel held during VLDB 2021 titled \"Artifacts, Availability & Reproducibility\". We first present a more detailed summary of the recent efforts. Then, we present the discussion and the contributed key points that were made, aiming to assess the reproducibility of data management research and to propose changes moving forward.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1840402",
+                    "name": "Manos Athanassoulis"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                },
+                {
+                    "authorId": "32113594",
+                    "name": "Raja Appuswamy"
+                },
+                {
+                    "authorId": "1766516",
+                    "name": "R. Bordawekar"
+                },
+                {
+                    "authorId": "2241445",
+                    "name": "Badrish Chandramouli"
+                },
+                {
+                    "authorId": "2116271757",
+                    "name": "Xuntao Cheng"
+                },
+                {
+                    "authorId": "1739309",
+                    "name": "I. Manolescu"
+                },
+                {
+                    "authorId": "1786049",
+                    "name": "Y. Papakonstantinou"
+                },
+                {
+                    "authorId": "1738467643",
+                    "name": "Nesime Tatbul"
+                }
+            ]
+        },
+        {
+            "paperId": "4d575433e3c854d33f505ec3e8c58054fe7718f7",
+            "title": "Anatomy of Learned Database Tuning with Bayesian Optimization",
+            "abstract": "Database Management System (DBMS) tuning is central to the performance of the end-to-end database system. DBMSs are typically characterised by hundreds of configuration knobs that impact various facets of their behavior and planning abilities. Tuning such a system is a prohibitively-challenging task due to the obfuscated knob inter-dependencies and the intimidating size of the design space. The general vendor recommendation is to sequentially tune each knob, which further exacerbates the time-consuming nature of the task. To overcome this, recent work in the realm of self-driving database systems proxy the design problem through Machine Learning. Among the most prominent proxies in self-managing databases literature is the Bayesian-inference proxy. The purpose of this proxy, or surrogate in Bayesian Optimisation parlance, is to learn the inter-knob relationships and how they relate to the overall performance, independent of any human guidance. To this end, one of the goals of this work is to shed light on the common design patterns we identify in Bayesian-driven DBMS tuning agents. Second of all, we aim to provide a handbook for implementing such agents through the lens of a new tuning framework that leverages a multi-regression proxy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2175520838",
+                    "name": "George-Octavian Barbulescu"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "50bca53ff65a92e0776ed7f04ff692f87afaed85",
+            "title": "Graphical Join: A New Physical Join Algorithm for RDBMSs",
+            "abstract": "Join operations (especially n-way, many-to-many joins) are known to be time- and resource-consuming. At large scales, with respect to table and join-result sizes, current state of the art approaches (in-cluding both binary-join plans which use Nested-loop/Hash/Sort-merge Join algorithms or, alternatively, worst-case optimal join algorithms (WOJAs)), may even fail to produce any answer given reasonable resource and time constraints. In this work, we introduce a new approach for n-way equi-join processing, the Graphical Join (GJ). The key idea is two-fold: First, to map the physical join computation problem to PGMs and introduce tweaked inference algorithms which can compute a Run-Length Encoding (RLE) based join-result summary, entailing all statistics necessary to materialize the join result. Second, and most importantly, to show that a join algorithm, like GJ, which produces the above join-result summary and then desummarizes it, can introduce large performance bene fi ts in time and space. Comprehensive experimentation is undertaken with join queries from the JOB, TPCDS, and lastFM datasets, comparing GJ against PostgresQL and MonetDB and a state of the art WOJA implemented within the Umbra system. The results for in-memory join computation show performance improvements up to 64 \u00d7 , 388 \u00d7 , and 6 \u00d7 faster than PostgreSQL, MonetDB and Um- bra, respectively. For on-disk join computation, GJ is faster than PostgreSQL, MonetDB and Umbra by up to 820 \u00d7 , 717 \u00d7 and 165 \u00d7 , re- spectively. Furthermore, GJ space needs are up to 21,488 \u00d7 , 38,333 \u00d7 , and 78,750 \u00d7 smaller than PostgresQL, MonetDB, and Umbra, re- spectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "6c47bfbab4d5ac95bcf3158e16e9471f92b7fb05",
+            "title": "Model Joins: Enabling Analytics Over Joins of Absent Big Tables",
+            "abstract": "This work is motivated by two key facts. First, it is highly desirable to be able to learn and perform knowledge discovery and analytics (LKD) tasks without the need to access raw-data tables. This may be due to organizations finding it increasingly frustrating and costly to manage and maintain ever-growing tables, or for privacy reasons. Hence, compact models can be developed from the raw data and used instead of the tables. Second, oftentimes, LKD tasks are to be performed on a (potentially very large) table which is itself the result of joining separate (potentially very large) relational tables. But how can one do this, when the individual to-be-joined tables are absent? Here, we pose the following fundamental questions: Q1: How can one\"join models\"of (absent/deleted) tables or\"join models with other tables\"in a way that enables LKD as if it were performed on the join of the actual raw tables? Q2: What are appropriate models to use per table? Q3: As the model join would be an approximation of the actual data join, how can one evaluate the quality of the model join result? This work puts forth a framework, Model Join, addressing these challenges. The framework integrates and joins the per-table models of the absent tables and generates a uniform and independent sample that is a high-quality approximation of a uniform and independent sample of the actual raw-data join. The approximation stems from the models, but not from the Model Join framework. The sample obtained by the Model Join can be used to perform LKD downstream tasks, such as approximate query processing, classification, clustering, regression, association rule mining, visualization, and so on. To our knowledge, this is the first work with this agenda and solutions. Detailed experiments with TPC-DS data and synthetic data showcase Model Join's usefulness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "b53e1cf4c0837ee6f7dc3864e47be2d1c95d6a34",
+            "title": "Weighted Random Sampling over Joins",
+            "abstract": "Joining records with all other records that meet a linkage condition can result in an astronomically large number of combinations due to many-to-many relationships. For such challenging (acyclic) joins, a random sample over the join result is a practical alternative to working with the oversized join result. Whereas prior works are limited to uniform join sampling where each join row is assigned the same probability, the scope is extended in this work to weighted sampling to support emerging applications such as scientific discovery in observational data and privacy-preserving query answering. Notwithstanding some naive methods, this work presents the first approach for weighted random sampling from join results. Due to a lack of baselines, experiments over various join types and real-world data sets are conducted to show substantial memory savings and competitive performance with main-memory index-based approaches in the equal-probability setting. In contrast to existing uniform sampling approaches that require prepared structures that occupy contested resources to squeeze out slightly faster query-times, the proposed approaches exhibit qualities that are urgently needed in practice, namely reduced memory footprint, streaming operation, support for selections, outer joins, semi joins and anti joins and unequal-probability sampling. All pertinent code and data can be found at: https://github.com/shekelyan/weightedjoinsampling",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "e12a970a0069ae11b99616694cfb715a01c29f6e",
+            "title": "Detect, Distill and Update: Learned DB Systems Facing Out of Distribution Data",
+            "abstract": "Machine Learning (ML) is changing DBs as many DB components are being replaced by ML models. One open problem in this setting is how to update such ML models in the presence of data updates. We start this investigation focusing on data insertions (dominating updates in analytical DBs). We study how to update neural network (NN) models when new data follows a different distribution (a.k.a. it is \"out-of-distribution\" -- OOD), rendering previously-trained NNs inaccurate. A requirement in our problem setting is that learned DB components should ensure high accuracy for tasks on old and new data (e.g., for approximate query processing (AQP), cardinality estimation (CE), synthetic data generation (DG), etc.). This paper proposes a novel updatability framework (DDUp). DDUp can provide updatability for different learned DB system components, even based on different NNs, without the high costs to retrain the NNs from scratch. DDUp entails two components: First, a novel, efficient, and principled statistical-testing approach to detect OOD data. Second, a novel model updating approach, grounded on the principles of transfer learning with knowledge distillation, to update learned models efficiently, while still ensuring high accuracy. We develop and showcase DDUp's applicability for three different learned DB components, AQP, CE, and DG, each employing a different type of NN. Detailed experimental evaluation using real and benchmark datasets for AQP, CE, and DG detail DDUp's performance advantages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "159a9cd819ec1e8542c32d93442d9d077acd4b59",
+            "title": "Learned Approximate Query Processing: Make it Light, Accurate and Fast",
+            "abstract": "The advent of learning algorithms has revealed many opportunities for improving Data Systems\u2019 functionality and performance. Ap-proximate Query Processing (AQP) is one such area where machine learning (ML) models have been used to improve query execution efficiency and accuracy, outperforming the traditional sampling-based approaches. Based on our group\u2019s experience in the ML-for-DBs area, [3\u20137, 29, 37\u201339], we contribute a novel AQP engine, coined DBEst++ , which extends our previous effort (DBEst, [29]) and sets the state of the art in terms of accuracy and query execution efficiency. The DBEst++ salient design objective is to derive lightweight ML models for the task, allowing a plethora of ML models to coexist, covering a very large fraction of the expected analytical query workload without requiring very large memory footprints. The DBEst++ salient architectural feature rests on a novel blending of word embedding models with neural networks tasked with regression-based predictions for density estimation and aggregation-attribute values. We present design features and motivations/rationale behind DBEst++ and discuss how all the ML models are brought together. We also present how DBEst++ can deal with challenging scenarios, including how to deal with high-cardinality categorical attributes and how to ensure high accuracy under data updates. We provide a detailed experimental evaluation using the TPC-DS and Flights datasets against state of the art learned and sampling-based AQP engines, showcasing DBEst++ \u2019s gains in terms of accuracy, response-times, and memory space overheads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "3081947",
+                    "name": "Mehrdad Almasi"
+                },
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "671061237b92bd490f7857654d96baf0bf7ab807",
+            "title": "PGMJoins: Random Join Sampling with Graphical Models",
+            "abstract": "Modern databases face formidable challenges when called to join (several) massive tables. Joins (especially when entailing many-to-many joins) are very time- and resource-consuming, join results can be too big to keep in memory, and performing analytics/learning tasks over them costs dearly in terms of time, resources, and money (in the cloud). Moreover, although random sampling is a promising idea to mitigate the above problems, the current state of the art leaves lots of room for improvements. With this paper we contribute a principled solution, coined PGMJoins. PGMJoins adapts Probabilistic Graphical Models to deriving provably random samples of the join result for (n-way) key joins, many-to-many joins, and cyclic and acyclic joins. PGMJoins contributes optimizations both for deriving the structure of the graph and for PGM inference. It also contributes a novel Sum-Product Message Passing Algorithm (SP-MPA) to make a uniform sample of the joint distribution (join result) efficiently and a novel way to deal with cyclic joins. Despite the use of PGMs, the learned joint distribution is not approximated, and the uniform samples are drawn from the true distribution. Our experimentation using queries and datasets from TPC-H, JOB, TPC-DS, and Twitter shows PGMJoins to outperform the state of the art (by 2X-28X).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "3081947",
+                    "name": "Mehrdad Almasi"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        }
+    ]
+}

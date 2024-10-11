@@ -1,0 +1,309 @@
+{
+    "authorId": "1808417",
+    "papers": [
+        {
+            "paperId": "b5d138070977167b3965053c826fa699f6db9f3f",
+            "title": "E2bird: Enhanced Elastic Batch for Improving Responsiveness and Throughput of Deep Learning Services",
+            "abstract": "We aim to tackle existing problems about deep learning serving on GPUs in the view of the system. GPUs have been widely adopted to serve online deep learning-based services that have stringent QoS(Quality-of-Service) requirements. However, emerging deep learning serving systems often result in poor responsiveness and low throughput of the inferences that damage user experience and increase the number of GPUs required to host an online service. Our investigation shows that the poor batching operation and the lack of data transfer-computation overlap are the root causes of the poor responsiveness and low throughput. To this end, we propose E<inline-formula><tex-math notation=\"LaTeX\">$^2$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"chen-ieq1-3047638.gif\"/></alternatives></inline-formula>bird, a deep learning serving system that is comprised of a GPU-resident memory pool, a multi-granularity inference engine, and an elastic batch scheduler. The memory pool eliminates the unnecessary waiting of the batching operation and enables data transfer-computation overlap. The inference engine enables concurrent execution of different batches, improving the GPU resource utilization. The batch scheduler organizes inferences elastically to guarantee the QoS. Our experimental results on an Nvidia Titan RTX GPU show that E<inline-formula><tex-math notation=\"LaTeX\">$^2$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"chen-ieq2-3047638.gif\"/></alternatives></inline-formula>bird reduces the response latency of inferences by up to 82.4 percent and improves the throughput by up to 62.8 percent while guaranteeing the QoS target compared with TensorFlow Serving.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1492129615",
+                    "name": "Weihao Cui"
+                },
+                {
+                    "authorId": "1596812259",
+                    "name": "Quan Chen"
+                },
+                {
+                    "authorId": "2112674260",
+                    "name": "Han Zhao"
+                },
+                {
+                    "authorId": "1492129575",
+                    "name": "Mengze Wei"
+                },
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "1697293",
+                    "name": "M. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "fc4c7ffaa2bb670a4aae08866446cf3321aec518",
+            "title": "ELSE: an efficient link-time static instrumentation tool for embedded system",
+            "abstract": "Unlike general systems, hardware and software of embedded systems are usually customized for specific purposes and many of them are real-time systems. With time changing, their workloads are also changing rapidly and maintaining their software becomes a complicated job. The key is to understand their behaviours so that developers can make changes to them according to the new situations. To trace their runtime behaviours, instrumentation techniques are widely used in general systems. However, applying them on embedded system faces several problems including big size growth rate, long instrumentation time, high runtime overhead, etc. As the hardware performance of embedded system are usually limited, these problems are crucial and cannot be ignored. As far as we know, existing tools can only partly solve all these problems. In this paper, we propose ELSE, an Efficient and Link-time, Static instrumentation tool for Embedded system. It supports efficient low-level and high-level instrumentation to collect most runtime information developers want. It does not waste any space during instrumentation thus its size growth rate is very small, which is only about 30% of other existing tools. Its processing time is also orders of magnitude less than other existing tools. We optimize the influence of registers and cache which can further reduce its runtime overhead. Overall, ELSE performs the best compared with other state-of-the-art tools on SPEC 2006 benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "12e386d3e993127ecc72bfbc9d35d98de177a513",
+            "title": "Ebird: Elastic Batch for Improving Responsiveness and Throughput of Deep Learning Services",
+            "abstract": "GPUs have been widely adopted to serve online deep learning-based services that have stringent QoS requirements. However, emerging deep learning serving systems often result in long latency and low throughput of the inference requests that damage user experience and increase the number of GPUs required to host an online service. Our investigation shows that the poor batching operation and the lacking of data transfer-computation overlap are the root causes of the long latency and low throughput. To this end, we propose Ebird, a deep learning serving system that is comprised of a GPU-resident memory pool, a multi-granularity inference engine, and an elastic batch scheduler. The memory pool eliminates the unnecessary waiting of the batching operation and enables data transfer-computation overlap. The inference engine enables concurrent execution of different batches, improving the GPUs resource utilization. The batch scheduler organizes inference requests elastically. Our experimental results on an Nvidia Titan RTX GPU show that Ebird reduces the response latency of inferences by up to 70.9% and improves the throughput by up to 49.3% while guaranteeing the QoS target compared with TensorFlow Serving.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1492129615",
+                    "name": "Weihao Cui"
+                },
+                {
+                    "authorId": "1492129575",
+                    "name": "Mengze Wei"
+                },
+                {
+                    "authorId": "1596812259",
+                    "name": "Quan Chen"
+                },
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "1831521",
+                    "name": "Jingwen Leng"
+                },
+                {
+                    "authorId": "40108968",
+                    "name": "Li Li"
+                },
+                {
+                    "authorId": "2112542089",
+                    "name": "Ming Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "307ca979ff1a05df0b5e351a4da0999a4902cb97",
+            "title": "Towards Scalable and Reliable In-Memory Storage System: A Case Study with Redis",
+            "abstract": "In recent years, in-memory key-value storage systems have become more and more popular in solving real-time and interactive tasks. Compared with disks, memories have much higher throughput and lower latency which enables them to process data requests with much higher performance. However, since memories have much smaller capacity than disks, how to expand the capacity of in-memory storage system while maintain its high performance become a crucial problem. At the same time, since data in memories are non-persistent, the data may be lost when the system is down. In this paper, we make a case study with Redis, which is one popular in-memory key-value storage system. We find that although the latest release of Redis support clustering so that data can be stored in distributed nodes to support a larger storage capacity, its performance is limited by its decentralized design that clients usually need two connections to get their request served. To make the system more scalable, we propose a Clientside Key-to-Node Caching method that can help direct request to the right service node. Experimental results show that by applying this technique, it can significantly improve the system's performance by near 2 times. We also find that although Redis supports data replication on slave nodes to ensure data safety, it still gets a chance of losing a part of the data due to a weak consistency between master and slave nodes that its defective order of data replication and request reply may lead to losing data without notifying the client. To make it more reliable, we propose a Master-slave Semi Synchronization method which utilizes TCP protocol to ensure the order of data replication and request reply so that when a client receives an \"OK\" message, the corresponding data must have been replicated. With a significant improvement in data reliability, its performance overhead is limited within 5%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118435622",
+                    "name": "Shanshan Chen"
+                },
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "49527724",
+                    "name": "Hongwei Wang"
+                },
+                {
+                    "authorId": "2112674260",
+                    "name": "Han Zhao"
+                },
+                {
+                    "authorId": "1697293",
+                    "name": "M. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "beb1915b2e7cea34dfe47945bdf52e2472f3694f",
+            "title": "Online Credit Card Fraud Detection: A Hybrid Framework with Big Data Technologies",
+            "abstract": "In this paper, we focus on designing an online credit card fraud detection framework with big data technologies, by which we want to achieve three major goals: 1) the ability to fuse multiple detection models to improve accuracy, 2) the ability to process large amount of data and 3) the ability to do the detection in real time. To accomplish that, we propose a general workflow, which satisfies most design ideas of current credit card fraud detection systems. We further implement the workflow with a new framework which consists of four layers: distributed storage layer, batch training layer, key-value sharing layer and streaming detection layer. With the four layers, we are able to support massive trading data storage, fast detection model training, quick model data sharing and real-time online fraud detection, respectively. We implement it with latest big data technologies like Hadoop, Spark, Storm, HBase, etc. A prototype is implemented and tested with a synthetic dataset, which shows great potentials of achieving the above goals.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145989251",
+                    "name": "You Dai"
+                },
+                {
+                    "authorId": "32334923",
+                    "name": "Jin Yan"
+                },
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "2112674260",
+                    "name": "Han Zhao"
+                },
+                {
+                    "authorId": "1697293",
+                    "name": "M. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "c855f8d6df606efbb085b7ce72457f3d276602ab",
+            "title": "Efficient Selection Algorithm for Fast k-NN Search on GPUs",
+            "abstract": "k Nearest Neighbours (k-NN) search is a fundamental problem in many computer vision and machine learning tasks. These tasks frequently involve a large number of high-dimensional vectors, which require intensive computations. Recent research work has shown that the Graphics Processing Unit (GPU) is a promising platform for solving k-NN search. However, these search algorithms often meet a serious bottleneck on GPUs due to a selection procedure, called k-selection, which is the final stage of k-NN and significantly affects the overall performance. In this paper, we propose new data structures and optimization techniques to accelerate k-selection on GPUs. Three key techniques are proposed: Merge Queue, Buffered Search and Hierarchical Partition. Compared with previous works, the proposed techniques can significantly improve the computing efficiency of k-selection on GPUs. Experimental results show that our techniques can achieve an up to 4:2\u00d7 performance improvement over the state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "1780413",
+                    "name": "Zhiyi Huang"
+                },
+                {
+                    "authorId": "1784358",
+                    "name": "D. Eyers"
+                },
+                {
+                    "authorId": "144569016",
+                    "name": "S. Mills"
+                },
+                {
+                    "authorId": "1697293",
+                    "name": "M. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "f724cbf5035e2df0dbe9a4992a0100465f5c6db5",
+            "title": "Scalable Multicore k-NN Search via Subspace Clustering for Filtering",
+            "abstract": "k Nearest Neighbors (k-NN) search is a widely used category of algorithms with applications in domains such as computer vision and machine learning. Despite the desire to process increasing amounts of high-dimensional data within these domains, k-NN algorithms scale poorly on multicore systems because they hit a memory wall. In this paper, we propose a novel data filtering strategy for k-NN search algorithms on multicore platforms. By excluding unlikely features during the k-NN search process, this strategy can reduce the amount of computation required as well as the memory footprint. It is complementary to the data selection strategies used in other state-of-the-art k-NN algorithms. A Subspace Clustering for Filtering (SCF) method is proposed to implement the data filtering strategy. Experimental results on four k-NN algorithms show that SCF can significantly improve their performance on three modern multicore platforms with only a small loss of search precision.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "1780413",
+                    "name": "Zhiyi Huang"
+                },
+                {
+                    "authorId": "1784358",
+                    "name": "D. Eyers"
+                },
+                {
+                    "authorId": "144569016",
+                    "name": "S. Mills"
+                },
+                {
+                    "authorId": "1697293",
+                    "name": "M. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "c8087b50431451f3bc9976b5800b63bfe93bd350",
+            "title": "Data filtering for scalable high-dimensional k-NN search on multicore systems",
+            "abstract": "K Nearest Neighbors (k-NN) search is a widely used category of algorithms with applications in domains such as computer vision and machine learning. With the rapidly increasing amount of data available, and their high dimensionality, k-NN algorithms scale poorly on multicore systems because they hit a memory wall. In this paper, we propose a novel data filtering strategy, named Subspace Clustering for Filtering (SCF), for k-NN search algorithms on multicore platforms. By excluding unlikely features in k-NN search, this strategy can reduce memory footprint as well as computation. Experimental results on four k-NN algorithms show that SCF can improve their performance on two modern multicore platforms with insignificant loss of search precision.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "144569016",
+                    "name": "S. Mills"
+                },
+                {
+                    "authorId": "1784358",
+                    "name": "D. Eyers"
+                },
+                {
+                    "authorId": "1803024",
+                    "name": "K. Leung"
+                },
+                {
+                    "authorId": "1780413",
+                    "name": "Zhiyi Huang"
+                },
+                {
+                    "authorId": "1697293",
+                    "name": "M. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "0848aec5ddca9eb01835a0fba335c80b63affb5c",
+            "title": "Performance Bottlenecks in Manycore Systems: A Case Study on Large Scale Feature Matching within Image Collections",
+            "abstract": "In memory-intensive algorithms, the problem size is often so large that it cannot fit into the cache of a CPU, and this may result in an excessive number of cache misses, a bottleneck that can easily make seemingly embarrassingly-parallel algorithms such as feature-matching unscalable in many core systems. To solve this bottleneck, this paper proposes a general Divide-and-Merge methodology, which divides the feature space into several small sub-spaces, so that the shared resources in each sub-space can be satisfied without causing bottlenecks. Experimental results have shown that the Divide-and-Merge methodology reduces the L3 cache misses and time spent on memory-allocation-related system calls, resulting in a 211% performance improvement on an AMD 64-core CPU machine, and 57% and 16% performance improvements on AMD and Intel 16-core machines respectively. Performance results on a modern GPU also show that a well-tuned algorithm with time complexity of O(F^2) is able to defeat a state-of-the-art O(F^1.5) algorithm by 188% for our real-world dataset, which again highlights the huge performance impact of the memory system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "144569016",
+                    "name": "S. Mills"
+                },
+                {
+                    "authorId": "1784358",
+                    "name": "D. Eyers"
+                },
+                {
+                    "authorId": "1803024",
+                    "name": "K. Leung"
+                },
+                {
+                    "authorId": "1780413",
+                    "name": "Zhiyi Huang"
+                },
+                {
+                    "authorId": "1697293",
+                    "name": "M. Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "1c02004a53df73ca81b54711dd86f57610306e5d",
+            "title": "Investigating large-scale feature matching using the Intel\u00ae Xeon Phi\u2122 coprocessor",
+            "abstract": "Many computer vision applications are entering the `big data' era: it is straightforward to acquire very large datasets that need to be processed. Our current research targets a large-scale structure-from-motion application, in which 3D models are formed from large collections of digital photographs. There have also been many recent technological developments suitable for speeding up the data processing for these computer vision applications. However many of the emerging technologies have very different costs in terms of developer time and experience. We have previously implemented our system on multicore CPUs, clusters of such multicore machines, and GPUs. The Intel\u00ae Xeon Phi\u2122 coprocessor aims to provide highly efficient processing of massively parallel workloads. The Phi tries to strike a pragmatic balance between the vector processing power of GPUs, and the ease of programming provided by deploying to CPUs. Very recently, some Phi coprocessors have been made available through the New Zealand eScience Infrastructure (NeSI) facilities. This paper reports on our initial findings porting and running part of our processing pipeline on the Intel\u00ae Xeon Phi\u2122.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1803024",
+                    "name": "K. Leung"
+                },
+                {
+                    "authorId": "1784358",
+                    "name": "D. Eyers"
+                },
+                {
+                    "authorId": "1808417",
+                    "name": "Xiaoxin Tang"
+                },
+                {
+                    "authorId": "144569016",
+                    "name": "S. Mills"
+                },
+                {
+                    "authorId": "1780413",
+                    "name": "Zhiyi Huang"
+                }
+            ]
+        }
+    ]
+}

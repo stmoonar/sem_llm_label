@@ -1,0 +1,367 @@
+{
+    "authorId": "37374479",
+    "papers": [
+        {
+            "paperId": "2905dc5ad70b462f4f5543df3047dffadb5c0e4e",
+            "title": "Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling",
+            "abstract": "Large language models are trained on massive scrapes of the web, which are often unstructured, noisy, and poorly phrased. Current scaling laws show that learning from such data requires an abundance of both compute and data, which grows with the size of the model being trained. This is infeasible both because of the large compute costs and duration associated with pre-training, and the impending scarcity of high-quality data on the web. In this work, we propose Web Rephrase Augmented Pre-training ($\\textbf{WRAP}$) that uses an off-the-shelf instruction-tuned model prompted to paraphrase documents on the web in specific styles such as\"like Wikipedia\"or in\"question-answer format\"to jointly pre-train LLMs on real and synthetic rephrases. First, we show that using WRAP on the C4 dataset, which is naturally noisy, speeds up pre-training by $\\sim3x$. At the same pre-training compute budget, it improves perplexity by more than 10% on average across different subsets of the Pile, and improves zero-shot question answer accuracy across 13 tasks by more than 2%. Second, we investigate the impact of the re-phrasing style on the performance of the model, offering insights into how the composition of the training data can impact the performance of LLMs in OOD settings. Our gains are attributed to the fact that re-phrased synthetic data has higher utility than just real data because it (i) incorporates style diversity that closely reflects downstream evaluation style, and (ii) has higher 'quality' than web-scraped data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "153742303",
+                    "name": "Pratyush Maini"
+                },
+                {
+                    "authorId": "31855650",
+                    "name": "Skyler Seto"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2529182",
+                    "name": "David Grangier"
+                },
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "4393655baf5a41bf365741bf2b6de89a43c35ad0",
+            "title": "dMel: Speech Tokenization made Simple",
+            "abstract": "Large language models have revolutionized natural language processing by leveraging self-supervised pretraining on vast textual data. Inspired by this success, researchers have investigated complicated speech tokenization methods to discretize continuous speech signals so that language modeling techniques can be applied to speech data. However, existing approaches either model semantic (content) tokens, potentially losing acoustic information, or model acoustic tokens, risking the loss of semantic (content) information. Having multiple token types also complicates the architecture and requires additional pretraining. Here we show that discretizing mel-filterbank channels into discrete intensity bins produces a simple representation (dMel), that performs better than other existing speech tokenization methods. Using an LM-style transformer architecture for speech-text modeling, we comprehensively evaluate different speech tokenization methods on speech recognition (ASR) and speech synthesis (TTS). Our results demonstrate the effectiveness of dMel in achieving high performance on both tasks within a unified framework, paving the way for efficient and effective joint modeling of speech and text.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2256707284",
+                    "name": "Tatiana Likhomanenko"
+                },
+                {
+                    "authorId": "2290365185",
+                    "name": "Ruixiang Zhang"
+                },
+                {
+                    "authorId": "2038089137",
+                    "name": "Zijin Gu"
+                },
+                {
+                    "authorId": "8319315",
+                    "name": "Zakaria Aldeneh"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "4836552444124ac88c24323497993090a853b0d4",
+            "title": "Denoising LM: Pushing the Limits of Error Correction Models for Speech Recognition",
+            "abstract": "Language models (LMs) have long been used to improve results of automatic speech recognition (ASR) systems, but they are unaware of the errors that ASR systems make. Error correction models are designed to fix ASR errors, however, they showed little improvement over traditional LMs mainly due to the lack of supervised training data. In this paper, we present Denoising LM (DLM), which is a $\\textit{scaled}$ error correction model trained with vast amounts of synthetic data, significantly exceeding prior attempts meanwhile achieving new state-of-the-art ASR performance. We use text-to-speech (TTS) systems to synthesize audio, which is fed into an ASR system to produce noisy hypotheses, which are then paired with the original texts to train the DLM. DLM has several $\\textit{key ingredients}$: (i) up-scaled model and data; (ii) usage of multi-speaker TTS systems; (iii) combination of multiple noise augmentation strategies; and (iv) new decoding techniques. With a Transformer-CTC ASR, DLM achieves 1.5% word error rate (WER) on $\\textit{test-clean}$ and 3.3% WER on $\\textit{test-other}$ on Librispeech, which to our knowledge are the best reported numbers in the setting where no external audio data are used and even match self-supervised methods which use external audio data. Furthermore, a single DLM is applicable to different ASRs, and greatly surpassing the performance of conventional LM based beam-search rescoring. These results indicate that properly investigated error correction models have the potential to replace conventional LMs, holding the key to a new level of accuracy in ASR systems.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2038089137",
+                    "name": "Zijin Gu"
+                },
+                {
+                    "authorId": "2256707284",
+                    "name": "Tatiana Likhomanenko"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2303254408",
+                    "name": "Erik McDermott"
+                },
+                {
+                    "authorId": "2939803",
+                    "name": "R. Collobert"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "5e7d4bb5431bc91d0ffd1b4e1575d7227021eaf8",
+            "title": "Divide-or-Conquer? Which Part Should You Distill Your LLM?",
+            "abstract": "Recent methods have demonstrated that Large Language Models (LLMs) can solve reasoning tasks better when they are encouraged to solve subtasks of the main task first. In this paper we devise a similar strategy that breaks down reasoning tasks into a problem decomposition phase and a problem solving phase and show that the strategy is able to outperform a single stage solution. Further, we hypothesize that the decomposition should be easier to distill into a smaller model compared to the problem solving because the latter requires large amounts of domain knowledge while the former only requires learning general problem solving strategies. We propose methods to distill these two capabilities and evaluate their impact on reasoning outcomes and inference cost. We find that we can distill the problem decomposition phase and at the same time achieve good generalization across tasks, datasets, and models. However, it is harder to distill the problem solving capability without losing performance and the resulting distilled model struggles with generalization. These results indicate that by using smaller, distilled problem decomposition models in combination with problem solving LLMs we can achieve reasoning with cost-efficient inference and local adaptation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109569304",
+                    "name": "Zhuofeng Wu"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2287241564",
+                    "name": "Aonan Zhang"
+                },
+                {
+                    "authorId": "2287733778",
+                    "name": "Jiatao Gu"
+                },
+                {
+                    "authorId": "2258720173",
+                    "name": "V. Vydiswaran"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "672ad7c1bd1a6e4e47e4748b878a448225f07a10",
+            "title": "How Far Are We from Intelligent Visual Deductive Reasoning?",
+            "abstract": "Vision-Language Models (VLMs) have recently demonstrated incredible strides on diverse vision language tasks. We dig into vision-based deductive reasoning, a more sophisticated but less explored realm, and find previously unexposed blindspots in the current SOTA VLMs. Specifically, we leverage Raven's Progressive Matrices (RPMs), to assess VLMs' abilities to perform multi-hop relational and deductive reasoning relying solely on visual clues. We perform comprehensive evaluations of several popular VLMs employing standard strategies such as in-context learning, self-consistency, and Chain-of-thoughts (CoT) on three diverse datasets, including the Mensa IQ test, IntelligenceTest, and RAVEN. The results reveal that despite the impressive capabilities of LLMs in text-based reasoning, we are still far from achieving comparable proficiency in visual deductive reasoning. We found that certain standard strategies that are effective when applied to LLMs do not seamlessly translate to the challenges presented by visual reasoning tasks. A detailed analysis reveals that VLMs struggle to solve these tasks mainly because they are unable to perceive and comprehend multiple, confounding abstract patterns in RPM examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2290365185",
+                    "name": "Ruixiang Zhang"
+                },
+                {
+                    "authorId": "2287733778",
+                    "name": "Jiatao Gu"
+                },
+                {
+                    "authorId": "2443456",
+                    "name": "Shuangfei Zhai"
+                },
+                {
+                    "authorId": "49158771",
+                    "name": "J. Susskind"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "bb86a2592e9efa196aefd6bbc39bf62a3202e9db",
+            "title": "Construction of Paired Knowledge Graph - Text Datasets Informed by Cyclic Evaluation",
+            "abstract": "Datasets that pair Knowledge Graphs (KG) and text together (KG-T) can be used to train forward and reverse neural models that generate text from KG and vice versa. However models trained on datasets where KG and text pairs are not equivalent can suffer from more hallucination and poorer recall. In this paper, we verify this empirically by generating datasets with different levels of noise and find that noisier datasets do indeed lead to more hallucination. We argue that the ability of forward and reverse models trained on a dataset to cyclically regenerate source KG or text is a proxy for the equivalence between the KG and the text in the dataset. Using cyclic evaluation we find that manually created WebNLG is much better than automatically created TeKGen and T-REx. Informed by these observations, we construct a new, improved dataset called LAGRANGE using heuristics meant to improve equivalence between KG and text and show the impact of each of the heuristics on cyclic evaluation. We also construct two synthetic datasets using large language models (LLMs), and observe that these are conducive to models that perform significantly well on cyclic generation of text, but less so on cyclic generation of KGs, probably because of a lack of a consistent underlying ontology.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2243336632",
+                    "name": "Ali Mousavi"
+                },
+                {
+                    "authorId": "2243337763",
+                    "name": "Xin Zhan"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2243340600",
+                    "name": "Peng Shi"
+                },
+                {
+                    "authorId": "2243336634",
+                    "name": "Theo Rekatsinas"
+                },
+                {
+                    "authorId": "2243377351",
+                    "name": "Benjamin Han"
+                },
+                {
+                    "authorId": "1718694",
+                    "name": "Yunyao Li"
+                },
+                {
+                    "authorId": "2243336030",
+                    "name": "Jeff Pound"
+                },
+                {
+                    "authorId": "2243336902",
+                    "name": "Josh Susskind"
+                },
+                {
+                    "authorId": "2243335295",
+                    "name": "Natalie Schluter"
+                },
+                {
+                    "authorId": "2243335549",
+                    "name": "Ihab Ilyas"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "de7bb717cdc2759d619fcf5f5032633544b561ae",
+            "title": "KGLens: Towards Efficient and Effective Knowledge Probing of Large Language Models with Knowledge Graphs",
+            "abstract": "Large Language Models (LLMs) might hallucinate facts, while curated Knowledge Graph (KGs) are typically factually reliable especially with domain-specific knowledge. Measuring the alignment between KGs and LLMs can effectively probe the factualness and identify the knowledge blind spots of LLMs. However, verifying the LLMs over extensive KGs can be expensive. In this paper, we present KGLens, a Thompson-sampling-inspired framework aimed at effectively and efficiently measuring the alignment between KGs and LLMs. KGLens features a graph-guided question generator for converting KGs into natural language, along with a carefully designed importance sampling strategy based on parameterized KG structure to expedite KG traversal. Our simulation experiment compares the brute force method with KGLens under six different sampling methods, demonstrating that our approach achieves superior probing efficiency. Leveraging KGLens, we conducted in-depth analyses of the factual accuracy of ten LLMs across three large domain-specific KGs from Wikidata, composing over 19K edges, 700 relations, and 21K entities. Human evaluation results indicate that KGLens can assess LLMs with a level of accuracy nearly equivalent to that of human annotators, achieving 95.7% of the accuracy rate.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2239063646",
+                    "name": "Shangshang Zheng"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                },
+                {
+                    "authorId": "2118006538",
+                    "name": "Yi Su"
+                },
+                {
+                    "authorId": "2238954895",
+                    "name": "Xiaochuan Niu"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "38e1a9c5599fc7597b7c5ffd37951ba5f528094c",
+            "title": "XRICL: Cross-lingual Retrieval-Augmented In-Context Learning for Cross-lingual Text-to-SQL Semantic Parsing",
+            "abstract": "In-context learning using large language models has recently shown surprising results for semantic parsing tasks such as Text-to-SQL translation. Prompting GPT-3 or Codex using several examples of question-SQL pairs can produce excellent results, comparable to state-of-the-art finetuning-based models. However, existing work primarily focuses on English datasets, and it is unknown whether large language models can serve as competitive semantic parsers for other languages. To bridge this gap, our work focuses on cross-lingual Text-to-SQL semantic parsing for translating non-English utterances into SQL queries based on an English schema. We consider a zero-shot transfer learning setting with the assumption that we do not have any labeled examples in the target language (but have annotated examples in English). This work introduces the XRICL framework, which learns to retrieve relevant English exemplars for a given query to construct prompts. We also include global translation exemplars for a target language to facilitate the translation process for large language models. To systematically evaluate our model, we construct two new benchmark datasets, XSpider and XKaggle-dbqa, which include questions in Chinese, Vietnamese, Farsi, and Hindi. Our experiments show that XRICL effectively leverages large pre-trained language models to outperform existing baselines. Data and code are publicly available at https://github.com/Impavidity/XRICL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2055357805",
+                    "name": "Peng Shi"
+                },
+                {
+                    "authorId": "15176410",
+                    "name": "Rui Zhang"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "145580839",
+                    "name": "Jimmy J. Lin"
+                }
+            ]
+        },
+        {
+            "paperId": "603c11bc7d00c50fd66687a1dda8181e2b593e03",
+            "title": "Cross-lingual Text-to-SQL Semantic Parsing with Representation Mixup",
+            "abstract": ",",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1884766",
+                    "name": "Peng Shi"
+                },
+                {
+                    "authorId": "1748796",
+                    "name": "Linfeng Song"
+                },
+                {
+                    "authorId": "50496698",
+                    "name": "Lifeng Jin"
+                },
+                {
+                    "authorId": "2013337",
+                    "name": "Haitao Mi"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2121626141",
+                    "name": "Jimmy Lin"
+                },
+                {
+                    "authorId": "2111505433",
+                    "name": "Dong Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "609e1c196fced582caf9113aa6a003b64d3cdcd6",
+            "title": "Better Language Model with Hypernym Class Prediction",
+            "abstract": "Class-based language models (LMs) have been long devised to address context sparsity in n-gram LMs. In this study, we revisit this approach in the context of neural LMs. We hypothesize that class-based prediction leads to an implicit context aggregation for similar words and thus can improve generalization for rare words. We map words that have a common WordNet hypernym to the same class and train large neural LMs by gradually annealing from predicting the class to token prediction during training. Empirically, this curriculum learning strategy consistently improves perplexity over various large, highly-performant state-of-the-art Transformer-based models on two datasets, WikiText-103 and ARXIV. Our analysis shows that the performance improvement is achieved without sacrificing performance on rare words. Finally, we document other attempts that failed to yield empirical gains, and discuss future directions for the adoption of class-based LMs on a larger scale.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2116678322",
+                    "name": "Tong Wang"
+                },
+                {
+                    "authorId": "2041695",
+                    "name": "Alessandro Sordoni"
+                },
+                {
+                    "authorId": "2055357849",
+                    "name": "Peng Shi"
+                }
+            ]
+        }
+    ]
+}

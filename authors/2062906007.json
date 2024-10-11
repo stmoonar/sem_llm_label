@@ -1,0 +1,845 @@
+{
+    "authorId": "2062906007",
+    "papers": [
+        {
+            "paperId": "8aa7cbf16117ad0e98765e9eb45303937dbf517d",
+            "title": "Ponder: Online Prediction of Task Memory Requirements for Scientific Workflows",
+            "abstract": "Scientific workflows are used to analyze large amounts of data. These workflows comprise numerous tasks, many of which are executed repeatedly, running the same custom program on different inputs. Users specify resource allocations for each task, which must be sufficient for all inputs to prevent task failures. As a result, task memory allocations tend to be overly conservative, wasting precious cluster resources, limiting overall parallelism, and increasing workflow makespan.In this paper, we first benchmark a state-of-the-art method on four real-life workflows from the nf-core workflow repository. This analysis reveals that certain assumptions underlying current prediction methods, which typically were evaluated only on simulated workflows, cannot generally be confirmed for real workflows and executions. We then present Ponder, a new online task-sizing strategy that considers and chooses between different methods to cater to different memory demand patterns. We implemented Ponder for Nextflow and made the code publicly available. In an experimental evaluation that also considers the impact of memory predictions on scheduling, Ponder improves Memory Allocation Quality on average by 71.0% and makespan by 21.8% in comparison to a state-of-the-art method. Moreover, Ponder produces 93.8% fewer task failures.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2099890233",
+                    "name": "Ninon De Mecquenem"
+                },
+                {
+                    "authorId": "2314613310",
+                    "name": "Xing Wang"
+                },
+                {
+                    "authorId": "2203425052",
+                    "name": "Vasilis Bountris"
+                },
+                {
+                    "authorId": "2278665135",
+                    "name": "F. Friederici"
+                },
+                {
+                    "authorId": "2247695355",
+                    "name": "Ulf Leser"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                }
+            ]
+        },
+        {
+            "paperId": "90c9f4f379219af4073bdb798ef5b6f1808e12a5",
+            "title": "KS+: Predicting Workflow Task Memory Usage Over Time",
+            "abstract": "Scientific workflow management systems enable the reproducible execution of data analysis pipelines on cluster infrastructures managed by resource managers such as Kubernetes, Slurm, or HTCondor. These resource managers require resource estimates for each workflow task to be executed on one of the cluster nodes. However, task resource consumption varies significantly between different tasks and for the same task with different inputs. Furthermore, resource consumption also fluctuates during a task\u2019s execution. As a result, manually configuring static memory allocations is error-prone, often leading users to overestimate memory usage to avoid costly failures from under-provisioning, which results in significant memory wastage.We propose KS+, a method that predicts a task\u2019s memory consumption over time depending on its inputs. For this, KS+ dynamically segments the task execution and predicts the memory required for each segment. Our experimental evaluation shows an average reduction in memory wastage of 38% compared to the best-performing state-of-the-art baseline for two real-world workflows from the popular nf-core repository.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2191897550",
+                    "name": "Ansgar Losser"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                },
+                {
+                    "authorId": "2280443496",
+                    "name": "Bj\u00f6rn Scheuermann"
+                },
+                {
+                    "authorId": "2065669792",
+                    "name": "O. Kao"
+                }
+            ]
+        },
+        {
+            "paperId": "cb493f0249d1f96309de3a37034ac3ee803bc39a",
+            "title": "Sizey: Memory-Efficient Execution of Scientific Workflow Tasks",
+            "abstract": "As the amount of available data continues to grow in fields as diverse as bioinformatics, physics, and remote sensing, the importance of scientific workflows in the design and implementation of reproducible data analysis pipelines increases. When developing workflows, resource requirements must be defined for each type of task in the workflow. Typically, task types vary widely in their computational demands because they are simply wrappers for arbitrary black-box analysis tools. Furthermore, the resource consumption for the same task type can vary considerably as well due to different inputs. Since underestimating memory resources leads to bottlenecks and task failures, workflow developers tend to overestimate memory resources. However, overprovisioning of memory wastes resources and limits cluster throughput. Addressing this problem, we propose Sizey, a novel online memory prediction method for workflow tasks. During workflow execution, Sizey simultaneously trains multiple machine learning models and then dynamically selects the best model for each workflow task. To evaluate the quality of the model, we introduce a novel resource allocation quality (RAQ) score based on memory prediction accuracy and efficiency. Sizey's prediction models are retrained and re-evaluated online during workflow execution, continuously incorporating metrics from completed tasks. Our evaluation with a prototype implementation of Sizey uses metrics from six real-world scientific workflows from the popular nf-core framework and shows a median reduction in memory waste over time of 24.68% compared to the respective best-performing state-of-the-art baseline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2312404020",
+                    "name": "Fabian Skalski"
+                },
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "2051551482",
+                    "name": "Dominik Scheinert"
+                },
+                {
+                    "authorId": "153294591",
+                    "name": "Jonathan Will"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                },
+                {
+                    "authorId": "2065669792",
+                    "name": "O. Kao"
+                }
+            ]
+        },
+        {
+            "paperId": "0212b576be29c7f1ce1676d6bf63cf776e9dc00d",
+            "title": "Predicting Dynamic Memory Requirements for Scientific Workflow Tasks",
+            "abstract": "With the increasing amount of data available to scientists in disciplines as diverse as bioinformatics, physics, and remote sensing, scientific workflow systems are becoming increasingly important for composing and executing scalable data analysis pipelines. When writing such workflows, users need to specify the resources to be reserved for tasks so that sufficient resources are allocated on the target cluster infrastructure. Crucially, underestimating a task\u2019s memory requirements can result in task failures. Therefore, users often resort to overprovisioning, resulting in significant resource wastage and decreased throughput.In this paper, we propose a novel online method that uses monitoring time series data to predict task memory usage in order to reduce the memory wastage of scientific workflow tasks. Our method predicts a task\u2019s runtime, divides it into k equally-sized segments, and learns the peak memory value for each segment depending on the total file input size. We evaluate the prototype implementation of our method using workflows from the publicly available nf-core repository, showing an average memory wastage reduction of 29.48% compared to the best state-of-the-art approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2266466363",
+                    "name": "Nils Diedrich"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                },
+                {
+                    "authorId": "144754478",
+                    "name": "O. Kao"
+                }
+            ]
+        },
+        {
+            "paperId": "04da6185966f733279010eb09e97f371cc57fdad",
+            "title": "Novel Approaches Toward Scalable Composable Workflows in Hyper-Heterogeneous Computing Environments",
+            "abstract": "The annual Workshop on Workflows in Support of Large-Scale Science (WORKS) is a premier venue for the scientific workflow community to present the latest advances in research and development on the many facets of scientific workflows throughout their life-cycle. The Lightning Talks at WORKS focus on describing a novel tool, scientific workflow, or concept, which are work-in-progress and address emerging technologies and frameworks to foster discussion in the community. This paper summarizes the lightning talks at the 2023 edition of WORKS, covering five topics: leveraging large language models to build and execute workflows; developing a common workflow scheduler interface; scaling uncertainty workflow applications on exascale computing systems; evaluating a transcriptomics workflow for cloud vs. HPC systems; and best practices in migrating legacy workflows to workflow management systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2266399897",
+                    "name": "Jim Belak"
+                },
+                {
+                    "authorId": "2266203965",
+                    "name": "Matt Bement"
+                },
+                {
+                    "authorId": "2266402214",
+                    "name": "Matthew Berry"
+                },
+                {
+                    "authorId": "2266400356",
+                    "name": "Robert Carson"
+                },
+                {
+                    "authorId": "2266399122",
+                    "name": "Daniela Cassol"
+                },
+                {
+                    "authorId": "2266420078",
+                    "name": "Stephen Chan"
+                },
+                {
+                    "authorId": "2266205471",
+                    "name": "John Coleman"
+                },
+                {
+                    "authorId": "2266401980",
+                    "name": "Kastan Day"
+                },
+                {
+                    "authorId": "2266399207",
+                    "name": "Alejandro Duque"
+                },
+                {
+                    "authorId": "2211840",
+                    "name": "Kjiersten Fagnan"
+                },
+                {
+                    "authorId": "2266401850",
+                    "name": "Jeff Froula"
+                },
+                {
+                    "authorId": "1693678",
+                    "name": "S. Jha"
+                },
+                {
+                    "authorId": "2266399973",
+                    "name": "Daniel S. Katz"
+                },
+                {
+                    "authorId": "2266398906",
+                    "name": "Piotr Kica"
+                },
+                {
+                    "authorId": "2254318841",
+                    "name": "Volodymyr V. Kindratenko"
+                },
+                {
+                    "authorId": "2266399671",
+                    "name": "Edward Kirton"
+                },
+                {
+                    "authorId": "1658921321",
+                    "name": "Ramani Kothadia"
+                },
+                {
+                    "authorId": "145145659",
+                    "name": "Daniel E. Laney"
+                },
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "2247695355",
+                    "name": "Ulf Leser"
+                },
+                {
+                    "authorId": "2264584535",
+                    "name": "S. Licho\u0142ai"
+                },
+                {
+                    "authorId": "2311808821",
+                    "name": "Maciej Malawski"
+                },
+                {
+                    "authorId": "2266400279",
+                    "name": "Mario Melara"
+                },
+                {
+                    "authorId": "2266401292",
+                    "name": "Elais Player Jackson"
+                },
+                {
+                    "authorId": "101173303",
+                    "name": "M. Rolchigo"
+                },
+                {
+                    "authorId": "2266688276",
+                    "name": "Setareh Sarrafan"
+                },
+                {
+                    "authorId": "3313499",
+                    "name": "Seung-Jin Sul"
+                },
+                {
+                    "authorId": "2266390448",
+                    "name": "Abdullah Syed"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                },
+                {
+                    "authorId": "2266179778",
+                    "name": "Mikhail Titov"
+                },
+                {
+                    "authorId": "1840916",
+                    "name": "M. Turilli"
+                },
+                {
+                    "authorId": "2304561021",
+                    "name": "Silvina Ca\u00edno-Lores"
+                },
+                {
+                    "authorId": "2266398223",
+                    "name": "Anirban Mandal"
+                }
+            ]
+        },
+        {
+            "paperId": "794ba58adbce4d1630bbf3e3001347c2643f9a65",
+            "title": "Workflows Community Summit 2022: A Roadmap Revolution",
+            "abstract": "Scientific workflows have become integral tools in broad scientific computing use cases. Science discovery is increasingly dependent on workflows to orchestrate large and complex scientific experiments that range from execution of a cloud-based data preprocessing pipeline to multi-facility instrument-to-edge-to-HPC computational workflows. Given the changing landscape of scientific computing and the evolving needs of emerging scientific applications, it is paramount that the development of novel scientific workflows and system functionalities seek to increase the efficiency, resilience, and pervasiveness of existing systems and applications. Specifically, the proliferation of machine learning/artificial intelligence (ML/AI) workflows, need for processing large scale datasets produced by instruments at the edge, intensification of near real-time data processing, support for long-term experiment campaigns, and emergence of quantum computing as an adjunct to HPC, have significantly changed the functional and operational requirements of workflow systems. Workflow systems now need to, for example, support data streams from the edge-to-cloud-to-HPC enable the management of many small-sized files, allow data reduction while ensuring high accuracy, orchestrate distributed services (workflows, instruments, data movement, provenance, publication, etc.) across computing and user facilities, among others. Further, to accelerate science, it is also necessary that these systems implement specifications/standards and APIs for seamless (horizontal and vertical) integration between systems and applications, as well as enabling the publication of workflows and their associated products according to the FAIR principles. This document reports on discussions and findings from the 2022 international edition of the Workflows Community Summit that took place on November 29 and 30, 2022.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2140039842",
+                    "name": "Rafael Ferreira da Silva"
+                },
+                {
+                    "authorId": "1799983",
+                    "name": "Rosa M. Badia"
+                },
+                {
+                    "authorId": "2213299279",
+                    "name": "Venkat Bala"
+                },
+                {
+                    "authorId": "152409031",
+                    "name": "Deborah Bard"
+                },
+                {
+                    "authorId": "145466013",
+                    "name": "P. Bremer"
+                },
+                {
+                    "authorId": "2213305232",
+                    "name": "Ian Buckley"
+                },
+                {
+                    "authorId": "2304561021",
+                    "name": "Silvina Ca\u00edno-Lores"
+                },
+                {
+                    "authorId": "3091414",
+                    "name": "K. Chard"
+                },
+                {
+                    "authorId": "46555127",
+                    "name": "C. Goble"
+                },
+                {
+                    "authorId": "1693678",
+                    "name": "S. Jha"
+                },
+                {
+                    "authorId": "2059296518",
+                    "name": "D. Katz"
+                },
+                {
+                    "authorId": "33947553",
+                    "name": "D. Laney"
+                },
+                {
+                    "authorId": "145203664",
+                    "name": "M. Parashar"
+                },
+                {
+                    "authorId": "35531371",
+                    "name": "F. Suter"
+                },
+                {
+                    "authorId": "50329328",
+                    "name": "N. Tyler"
+                },
+                {
+                    "authorId": "2066071",
+                    "name": "T. Uram"
+                },
+                {
+                    "authorId": "1729053",
+                    "name": "I. Altintas"
+                },
+                {
+                    "authorId": "121299213",
+                    "name": "S. Andersson"
+                },
+                {
+                    "authorId": "144110414",
+                    "name": "W. Arndt"
+                },
+                {
+                    "authorId": "2057561277",
+                    "name": "J. Aznar"
+                },
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "1960359",
+                    "name": "B. Bali\u015b"
+                },
+                {
+                    "authorId": "108377253",
+                    "name": "Chris E. Blanton"
+                },
+                {
+                    "authorId": "2199664",
+                    "name": "K. Braghetto"
+                },
+                {
+                    "authorId": "2651403",
+                    "name": "Aharon Brodutch"
+                },
+                {
+                    "authorId": "2213427261",
+                    "name": "Paul Brunk"
+                },
+                {
+                    "authorId": "1707417",
+                    "name": "H. Casanova"
+                },
+                {
+                    "authorId": "104449865",
+                    "name": "Alba Cervera Lierta"
+                },
+                {
+                    "authorId": "2213298896",
+                    "name": "Justin Chigu"
+                },
+                {
+                    "authorId": "1572245697",
+                    "name": "T. Coleman"
+                },
+                {
+                    "authorId": "2065988217",
+                    "name": "Nick Collier"
+                },
+                {
+                    "authorId": "2120657141",
+                    "name": "Iacopo Colonnelli"
+                },
+                {
+                    "authorId": "144108029",
+                    "name": "Frederik Coppens"
+                },
+                {
+                    "authorId": "144361904",
+                    "name": "M. Crusoe"
+                },
+                {
+                    "authorId": "2058475897",
+                    "name": "W. Cunningham"
+                },
+                {
+                    "authorId": "3362335",
+                    "name": "B. Kinoshita"
+                },
+                {
+                    "authorId": "3062856",
+                    "name": "Paolo Di Tommaso"
+                },
+                {
+                    "authorId": "2802678",
+                    "name": "C. Doutriaux"
+                },
+                {
+                    "authorId": "143916458",
+                    "name": "M. Downton"
+                },
+                {
+                    "authorId": "1799299",
+                    "name": "W. Elwasif"
+                },
+                {
+                    "authorId": "144504471",
+                    "name": "B. Enders"
+                },
+                {
+                    "authorId": "17606192",
+                    "name": "Chris Erdmann"
+                },
+                {
+                    "authorId": "1719226",
+                    "name": "T. Fahringer"
+                },
+                {
+                    "authorId": "84336109",
+                    "name": "Ludmilla Figueiredo"
+                },
+                {
+                    "authorId": "1698908",
+                    "name": "Rosa Filgueira"
+                },
+                {
+                    "authorId": "1443779643",
+                    "name": "M. Foltin"
+                },
+                {
+                    "authorId": "2850787",
+                    "name": "A. Fouilloux"
+                },
+                {
+                    "authorId": "2811678",
+                    "name": "Luiz M. R. Gadelha"
+                },
+                {
+                    "authorId": "2053600243",
+                    "name": "Andrew Gallo"
+                },
+                {
+                    "authorId": "2079451840",
+                    "name": "A. G. Saez"
+                },
+                {
+                    "authorId": "1398926410",
+                    "name": "D. Garijo"
+                },
+                {
+                    "authorId": "2027553659",
+                    "name": "R. Gerlach"
+                },
+                {
+                    "authorId": "2072840094",
+                    "name": "Ryan E. Grant"
+                },
+                {
+                    "authorId": "51124744",
+                    "name": "Samuel Grayson"
+                },
+                {
+                    "authorId": "2923900",
+                    "name": "Patricia A. Grubel"
+                },
+                {
+                    "authorId": "48985473",
+                    "name": "Johan O. R. Gustafsson"
+                },
+                {
+                    "authorId": "2308097253",
+                    "name": "Val\u00e9rie Hayot-Sasson"
+                },
+                {
+                    "authorId": "2053161325",
+                    "name": "Oscar R. Hernandez"
+                },
+                {
+                    "authorId": "1967862",
+                    "name": "Marcus Hilbrich"
+                },
+                {
+                    "authorId": "2205970689",
+                    "name": "Annmary Justine"
+                },
+                {
+                    "authorId": "152142617",
+                    "name": "I. Laflotte"
+                },
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "50631038",
+                    "name": "Andr\u00e9 Luckow"
+                },
+                {
+                    "authorId": "2086648690",
+                    "name": "Jakob Luettgau"
+                },
+                {
+                    "authorId": "145341601",
+                    "name": "K. Maheshwari"
+                },
+                {
+                    "authorId": "3299313",
+                    "name": "Motohiko Matsuda"
+                },
+                {
+                    "authorId": "3421209",
+                    "name": "Doriana Medic"
+                },
+                {
+                    "authorId": "102153641",
+                    "name": "P. Mendygral"
+                },
+                {
+                    "authorId": "32733424",
+                    "name": "M. Michalewicz"
+                },
+                {
+                    "authorId": "2489735",
+                    "name": "J. Nonaka"
+                },
+                {
+                    "authorId": "40258733",
+                    "name": "Maciej Pawlik"
+                },
+                {
+                    "authorId": "34635073",
+                    "name": "L. Pottier"
+                },
+                {
+                    "authorId": "32809071",
+                    "name": "Line C. Pouchard"
+                },
+                {
+                    "authorId": "2213308235",
+                    "name": "Mathias Putz"
+                },
+                {
+                    "authorId": "46254996",
+                    "name": "Santosh Kumar Radha"
+                },
+                {
+                    "authorId": "1792683",
+                    "name": "L. Ramakrishnan"
+                },
+                {
+                    "authorId": "3445802",
+                    "name": "S. Ristov"
+                },
+                {
+                    "authorId": "1961788",
+                    "name": "P. Romano"
+                },
+                {
+                    "authorId": "21168032",
+                    "name": "Daniel Rosendo"
+                },
+                {
+                    "authorId": "3493555",
+                    "name": "M. Ruefenacht"
+                },
+                {
+                    "authorId": "2771040",
+                    "name": "Katarzyna Rycerz"
+                },
+                {
+                    "authorId": "2653506",
+                    "name": "Nishant Saurabh"
+                },
+                {
+                    "authorId": "144276915",
+                    "name": "V. Savchenko"
+                },
+                {
+                    "authorId": "2057456497",
+                    "name": "Martin Schulz"
+                },
+                {
+                    "authorId": "2037776232",
+                    "name": "C. Simpson"
+                },
+                {
+                    "authorId": "66188222",
+                    "name": "R. Sirvent"
+                },
+                {
+                    "authorId": "8884013",
+                    "name": "Tyler J. Skluzacek"
+                },
+                {
+                    "authorId": "1399487720",
+                    "name": "S. Soiland-Reyes"
+                },
+                {
+                    "authorId": "144712722",
+                    "name": "Renan Souza"
+                },
+                {
+                    "authorId": "1750800",
+                    "name": "S. Sukumar"
+                },
+                {
+                    "authorId": "48064827",
+                    "name": "Ziheng Sun"
+                },
+                {
+                    "authorId": "1746329",
+                    "name": "A. Sussman"
+                },
+                {
+                    "authorId": "1686699",
+                    "name": "D. Thain"
+                },
+                {
+                    "authorId": "2072191295",
+                    "name": "Mikhail Titov"
+                },
+                {
+                    "authorId": "50883695",
+                    "name": "Benjam\u00edn Tovar"
+                },
+                {
+                    "authorId": "2643562",
+                    "name": "Aalap Tripathy"
+                },
+                {
+                    "authorId": "1840916",
+                    "name": "M. Turilli"
+                },
+                {
+                    "authorId": "2165288240",
+                    "name": "Bartosz Tuznik"
+                },
+                {
+                    "authorId": "1942636",
+                    "name": "H. V. Dam"
+                },
+                {
+                    "authorId": "2006915860",
+                    "name": "Aurelio Vivas"
+                },
+                {
+                    "authorId": "47766095",
+                    "name": "Logan T. Ward"
+                },
+                {
+                    "authorId": "2946172",
+                    "name": "Patrick M. Widener"
+                },
+                {
+                    "authorId": "153569593",
+                    "name": "Sean R. Wilkinson"
+                },
+                {
+                    "authorId": "2169430585",
+                    "name": "Justyna Zawalska"
+                },
+                {
+                    "authorId": "2065914488",
+                    "name": "M. Zulfiqar"
+                }
+            ]
+        },
+        {
+            "paperId": "81538af0c225aff3e99fe8b0d9b1da27dec94c47",
+            "title": "How Workflow Engines Should Talk to Resource Managers: A Proposal for a Common Workflow Scheduling Interface",
+            "abstract": "Scientific workflow management systems (SWMSs) and resource managers together ensure that tasks are scheduled on provisioned resources so that all dependencies are obeyed, and some optimization goal, such as makespan minimization, is achieved. In practice, however, there is no clear separation of scheduling responsibilities between an SWMS and a resource manager because there exists no agreed-upon separation of concerns between their different components. This has two consequences. First, the lack of a standardized API to exchange scheduling information between SWMSs and resource managers hinders portability. It incurs costly adaptations when a component should be replaced by a different one (e.g., an SWMS with another SWMS on the same resource manager). Second, due to overlapping functionalities, current installations often actually have two schedulers, both making partial scheduling decisions under incomplete information, leading to suboptimal workflow scheduling. In this paper, we propose a simple REST interface between SWMSs and resource managers, which allows any SWMS to pass dynamic workflow information to a resource manager, enabling maximally informed scheduling decisions. We provide an implementation of this API as an example, using Nextflow as an SWMS and Kubernetes as a resource manager. Our experiments with nine real-world workflows show that this strategy reduces makespan by up to 25.1% and 10.8% on average compared to the standard Nextflow/Kubernetes configuration. Furthermore, a more widespread implementation of this API would enable leaner code bases, a simpler exchange of components of workflow systems, and a unified place to implement new scheduling algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2205814893",
+                    "name": "Friedrich Tschirpke"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                },
+                {
+                    "authorId": "1693022",
+                    "name": "U. Leser"
+                }
+            ]
+        },
+        {
+            "paperId": "150d620b3207725c4db1ae464e8182bd2c611586",
+            "title": "Leveraging Reinforcement Learning for Task Resource Allocation in Scientific Workflows",
+            "abstract": "Scientific workflows are designed as directed acyclic graphs (DAGs) and consist of multiple dependent task definitions. They are executed over a large amount of data, often resulting in thousands of tasks with heterogeneous compute requirements and long runtimes, even on cluster infrastructures. In order to optimize the workflow performance, enough resources, e.g., CPU and memory, need to be provisioned for the respective tasks. Typically, workflow systems rely on user resource estimates which are known to be highly error-prone and can result in over- or underprovisioning. While resource overprovisioning leads to high resource wastage, underprovisioning can result in long runtimes or even failed tasks.In this paper, we propose two different reinforcement learning approaches based on gradient bandits and Q-learning, respectively, in order to minimize resource wastage by selecting suitable CPU and memory allocations. We provide a prototypical implementation in the well-known scientific workflow management system Nextflow, evaluate our approaches with five workflows, and compare them against the default resource configurations and a state-of-the-art feedback loop baseline. The evaluation yields that our reinforcement learning approaches significantly reduce resource wastage compared to the default configuration. Further, our approaches also reduce the allocated CPU hours compared to the state-of-the-art feedback loop by 6.79% and 24.53%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2191688495",
+                    "name": "Nicolas Zunker"
+                },
+                {
+                    "authorId": "2069538665",
+                    "name": "Soeren Becker"
+                },
+                {
+                    "authorId": "144754478",
+                    "name": "O. Kao"
+                }
+            ]
+        },
+        {
+            "paperId": "22b7adcbcd489d312ef56269b84dfbd5815aed6e",
+            "title": "Reshi: Recommending Resources for Scientific Workflow Tasks on Heterogeneous Infrastructures",
+            "abstract": "Scientific workflows typically comprise a multitude of different processing steps which often are executed in parallel on different partitions of the input data. These executions, in turn, must be scheduled on the compute nodes of the computational infrastructure at hand. This assignment is complicated by the facts that (a) tasks typically have highly heterogeneous resource requirements and (b) in many infrastructures, compute nodes offer highly heterogeneous resources. In consequence, predictions of the runtime of a given task on a given node, as required by many scheduling algorithms, are often rather imprecise, which can lead to sub-optimal scheduling decisions.We propose Reshi, a method for recommending task-node assignments during workflow execution that can cope with heterogeneous tasks and heterogeneous nodes. Reshi approaches the problem as a regression task, where task-node pairs are modeled as feature vectors over the results of dedicated micro benchmarks and past task executions. Based on these features, Reshi trains a regression tree model to rank and recommend nodes for each ready-to-run task, which can be used as input to a scheduler. For our evaluation, we benchmarked 27 AWS machine types using three representative workflows. We compare Reshi\u2019s recommendations with three state-of-the-art schedulers. Our evaluation shows that Reshi outperforms HEFT by a mean makespan reduction of 7.18% and 18.01% assuming a mean task runtime prediction error of 15%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "151494370",
+                    "name": "Fabian Lehmann"
+                },
+                {
+                    "authorId": "2181810449",
+                    "name": "Alexander Groth"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                },
+                {
+                    "authorId": "2051551482",
+                    "name": "Dominik Scheinert"
+                },
+                {
+                    "authorId": "153294591",
+                    "name": "Jonathan Will"
+                },
+                {
+                    "authorId": "1693022",
+                    "name": "U. Leser"
+                },
+                {
+                    "authorId": "144754478",
+                    "name": "O. Kao"
+                }
+            ]
+        },
+        {
+            "paperId": "23a6e0bd5ef9e9deeb0b939b1521b97dc54a0707",
+            "title": "Ruya: Memory-Aware Iterative Optimization of Cluster Configurations for Big Data Processing",
+            "abstract": "Selecting appropriate computational resources for data processing jobs on large clusters is difficult, even for expert users like data engineers. Inadequate choices can result in vastly increased costs, without significantly improving performance. One crucial aspect of selecting an efficient resource configuration is avoiding memory bottlenecks. By knowing the required memory of a job in advance, the search space for an optimal resource configuration can be greatly reduced.Therefore, we present Ruya, a method for memory-aware optimization of data processing cluster configurations based on iteratively exploring a narrowed-down search space. First, we perform job profiling runs with small samples of the dataset on just a single machine to model the job\u2019s memory usage patterns. Second, we prioritize cluster configurations with a suitable amount of total memory and within this reduced search space, we iteratively search for the best cluster configuration with Bayesian optimization. This search process stops once it converges on a configuration that is believed to be optimal for the given job. In our evaluation on a dataset with 1031 Spark and Hadoop jobs, we see a reduction of search iterations to find an optimal configuration by around half, compared to the baseline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "153294591",
+                    "name": "Jonathan Will"
+                },
+                {
+                    "authorId": "2294791",
+                    "name": "L. Thamsen"
+                },
+                {
+                    "authorId": "2062906007",
+                    "name": "Jonathan Bader"
+                },
+                {
+                    "authorId": "2051551482",
+                    "name": "Dominik Scheinert"
+                },
+                {
+                    "authorId": "144754478",
+                    "name": "O. Kao"
+                }
+            ]
+        }
+    ]
+}

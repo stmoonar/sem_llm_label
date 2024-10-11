@@ -1,0 +1,389 @@
+{
+    "authorId": "2240599706",
+    "papers": [
+        {
+            "paperId": "ab05a23225a9dda684892f106820bcee73d616f1",
+            "title": "Understanding the Generalizability of Link Predictors Under Distribution Shifts on Graphs",
+            "abstract": "Recently, multiple models proposed for link prediction (LP) demonstrate impressive results on benchmark datasets. However, many popular benchmark datasets often assume that dataset samples are drawn from the same distribution (i.e., IID samples). In real-world situations, this assumption is often incorrect; since uncontrolled factors may lead train and test samples to come from separate distributions. To tackle the distribution shift problem, recent work focuses on creating datasets that feature distribution shifts and designing generalization methods that perform well on the new data. However, those studies only consider distribution shifts that affect {\\it node-} and {\\it graph-level} tasks, thus ignoring link-level tasks. Furthermore, relatively few LP generalization methods exist. To bridge this gap, we introduce a set of LP-specific data splits which utilizes structural properties to induce a controlled distribution shift. We verify the shift's effect empirically through evaluation of different SOTA LP methods and subsequently couple these methods with generalization techniques. Interestingly, LP-specific methods frequently generalize poorly relative to heuristics or basic GNN methods. Finally, this work provides analysis to uncover insights for enhancing LP generalization. Our code is available at: \\href{https://github.com/revolins/LPStructGen}{https://github.com/revolins/LPStructGen}",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2296816494",
+                    "name": "Jay Revolinsky"
+                },
+                {
+                    "authorId": "2220302956",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "be21727ba12cdb50401b30c29a46d05c799f7945",
+            "title": "Towards Better Benchmark Datasets for Inductive Knowledge Graph Completion",
+            "abstract": "Knowledge Graph Completion (KGC) attempts to predict missing facts in a Knowledge Graph (KG). Recently, there's been an increased focus on designing KGC methods that can excel in the {\\it inductive setting}, where a portion or all of the entities and relations seen in inference are unobserved during training. Numerous benchmark datasets have been proposed for inductive KGC, all of which are subsets of existing KGs used for transductive KGC. However, we find that the current procedure for constructing inductive KGC datasets inadvertently creates a shortcut that can be exploited even while disregarding the relational information. Specifically, we observe that the Personalized PageRank (PPR) score can achieve strong or near SOTA performance on most inductive datasets. In this paper, we study the root cause of this problem. Using these insights, we propose an alternative strategy for constructing inductive KGC datasets that helps mitigate the PPR shortcut. We then benchmark multiple popular methods using the newly constructed datasets and analyze their performance. The new benchmark datasets help promote a better understanding of the capabilities and challenges of inductive KGC by removing any shortcuts that obfuscate performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "93719189",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2296816494",
+                    "name": "Jay Revolinsky"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "be9f4354285fc4ef1a9af5868797a25a2fa13cb5",
+            "title": "Mixture of Link Predictors",
+            "abstract": "Link prediction, which aims to forecast unseen connections in graphs, is a fundamental task in graph machine learning. Heuristic methods, leveraging a range of different pairwise measures such as common neighbors and shortest paths, often rival the performance of vanilla Graph Neural Networks (GNNs). Therefore, recent advancements in GNNs for link prediction (GNN4LP) have primarily focused on integrating one or a few types of pairwise information. In this work, we reveal that different node pairs within the same dataset necessitate varied pairwise information for accurate prediction and models that only apply the same pairwise information uniformly could achieve suboptimal performance. As a result, we propose a simple mixture of experts model Link-MoE for link prediction. Link-MoE utilizes various GNNs as experts and strategically selects the appropriate expert for each node pair based on various types of pairwise information. Experimental results across diverse real-world datasets demonstrate substantial performance improvement from Link-MoE. Notably, Link-MoE achieves a relative improvement of 18.82\\% on the MRR metric for the Pubmed dataset and 10.8\\% on the Hits@100 metric for the ogbl-ppa dataset, compared to the best baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284027842",
+                    "name": "Li Ma"
+                },
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2220302956",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2261366610",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "11732258",
+                    "name": "Xiaofeng Gao"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "efd221731cee0e670ae2b65cb6649315d71cd01a",
+            "title": "Rethinking Large Language Model Architectures for Sequential Recommendations",
+            "abstract": "Recently, sequential recommendation has been adapted to the LLM paradigm to enjoy the power of LLMs. LLM-based methods usually formulate recommendation information into natural language and the model is trained to predict the next item in an auto-regressive manner. Despite their notable success, the substantial computational overhead of inference poses a significant obstacle to their real-world applicability. In this work, we endeavor to streamline existing LLM-based recommendation models and propose a simple yet highly effective model Lite-LLM4Rec. The primary goal of Lite-LLM4Rec is to achieve efficient inference for the sequential recommendation task. Lite-LLM4Rec circumvents the beam search decoding by using a straight item projection head for ranking scores generation. This design stems from our empirical observation that beam search decoding is ultimately unnecessary for sequential recommendations. Additionally, Lite-LLM4Rec introduces a hierarchical LLM structure tailored to efficiently handle the extensive contextual information associated with items, thereby reducing computational overhead while enjoying the capabilities of LLMs. Experiments on three publicly available datasets corroborate the effectiveness of Lite-LLM4Rec in both performance and inference efficiency (notably 46.8% performance improvement and 97.28% efficiency improvement on ML-1m) over existing LLM-based methods. Our implementations will be open sourced.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284304726",
+                    "name": "Hanbing Wang"
+                },
+                {
+                    "authorId": "2124928119",
+                    "name": "Xiaorui Liu"
+                },
+                {
+                    "authorId": "2255025428",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "3245677",
+                    "name": "Venkataramana B. Kini"
+                },
+                {
+                    "authorId": "2284224395",
+                    "name": "Devendra Yadav"
+                },
+                {
+                    "authorId": "2284327268",
+                    "name": "Fei Wang"
+                },
+                {
+                    "authorId": "2284300150",
+                    "name": "Zhen Wen"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                },
+                {
+                    "authorId": "2253533415",
+                    "name": "Hui Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "f5aa366ff70215f06ae6501c322eba2f0934a7c3",
+            "title": "Node-wise Filtering in Graph Neural Networks: A Mixture of Experts Approach",
+            "abstract": "Graph Neural Networks (GNNs) have proven to be highly effective for node classification tasks across diverse graph structural patterns. Traditionally, GNNs employ a uniform global filter, typically a low-pass filter for homophilic graphs and a high-pass filter for heterophilic graphs. However, real-world graphs often exhibit a complex mix of homophilic and heterophilic patterns, rendering a single global filter approach suboptimal. In this work, we theoretically demonstrate that a global filter optimized for one pattern can adversely affect performance on nodes with differing patterns. To address this, we introduce a novel GNN framework Node-MoE that utilizes a mixture of experts to adaptively select the appropriate filters for different nodes. Extensive experiments demonstrate the effectiveness of Node-MoE on both homophilic and heterophilic graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2049039664",
+                    "name": "Haoyu Han"
+                },
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2267308439",
+                    "name": "Wei Huang"
+                },
+                {
+                    "authorId": "2301317582",
+                    "name": "Xianfeng Tang"
+                },
+                {
+                    "authorId": "2257363913",
+                    "name": "Hanqing Lu"
+                },
+                {
+                    "authorId": "2305051640",
+                    "name": "Chen Luo"
+                },
+                {
+                    "authorId": "2253533415",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "3e80c134db377491c12e8cc9a65752444cc5c0d3",
+            "title": "Distance-Based Propagation for Efficient Knowledge Graph Reasoning",
+            "abstract": "Knowledge graph completion (KGC) aims to predict unseen edges in knowledge graphs (KGs), resulting in the discovery of new facts. A new class of methods have been proposed to tackle this problem by aggregating path information. These methods have shown tremendous ability in the task of KGC. However they are plagued by efficiency issues. Though there are a few recent attempts to address this through learnable path pruning, they often sacrifice the performance to gain efficiency. In this work, we identify two intrinsic limitations of these methods that affect the efficiency and representation quality. To address the limitations, we introduce a new method, TAGNet, which is able to efficiently propagate information. This is achieved by only aggregating paths in a fixed window for each source-target pair. We demonstrate that the complexity of TAGNet is independent of the number of layers. Extensive experiments demonstrate that TAGNet can cut down on the number of propagated messages by as much as 90% while achieving competitive performance on multiple KG datasets. The code is available at https://github.com/HarryShomer/TAGNet.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "93719189",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2254813628",
+                    "name": "Yao Ma"
+                },
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2259889350",
+                    "name": "Bo Wu"
+                },
+                {
+                    "authorId": "2166048911",
+                    "name": "Charu Aggarwal"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "85bbc8af01084d2328c49cb3c70241c76e3ef4d5",
+            "title": "Embedding in Recommender Systems: A Survey",
+            "abstract": "Recommender systems have become an essential component of many online platforms, providing personalized recommendations to users. A crucial aspect is embedding techniques that coverts the high-dimensional discrete features, such as user and item IDs, into low-dimensional continuous vectors and can enhance the recommendation performance. Applying embedding techniques captures complex entity relationships and has spurred substantial research. In this survey, we provide an overview of the recent literature on embedding techniques in recommender systems. This survey covers embedding methods like collaborative filtering, self-supervised learning, and graph-based techniques. Collaborative filtering generates embeddings capturing user-item preferences, excelling in sparse data. Self-supervised methods leverage contrastive or generative learning for various tasks. Graph-based techniques like node2vec exploit complex relationships in network-rich environments. Addressing the scalability challenges inherent to embedding methods, our survey delves into innovative directions within the field of recommendation systems. These directions aim to enhance performance and reduce computational complexity, paving the way for improved recommender systems. Among these innovative approaches, we will introduce Auto Machine Learning (AutoML), hash techniques, and quantization techniques in this survey. We discuss various architectures and techniques and highlight the challenges and future directions in these aspects. This survey aims to provide a comprehensive overview of the state-of-the-art in this rapidly evolving field and serve as a useful resource for researchers and practitioners working in the area of recommender systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2262447141",
+                    "name": "Maolin Wang"
+                },
+                {
+                    "authorId": "2262447995",
+                    "name": "Xinjian Zhao"
+                },
+                {
+                    "authorId": "2262510496",
+                    "name": "Jiansheng Li"
+                },
+                {
+                    "authorId": "2262865343",
+                    "name": "Shucheng Zhou"
+                },
+                {
+                    "authorId": "2240617631",
+                    "name": "Dawei Yin"
+                },
+                {
+                    "authorId": "2297955888",
+                    "name": "Qing Li"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                },
+                {
+                    "authorId": "2264097358",
+                    "name": "Ruocheng Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "9be934355f24c0c4f8757e839e352efab96649cb",
+            "title": "Revisiting Link Prediction: A Data Perspective",
+            "abstract": "Link prediction, a fundamental task on graphs, has proven indispensable in various applications, e.g., friend recommendation, protein analysis, and drug interaction prediction. However, since datasets span a multitude of domains, they could have distinct underlying mechanisms of link formation. Evidence in existing literature underscores the absence of a universally best algorithm suitable for all datasets. In this paper, we endeavor to explore principles of link prediction across diverse datasets from a data-centric perspective. We recognize three fundamental factors critical to link prediction: local structural proximity, global structural proximity, and feature proximity. We then unearth relationships among those factors where (i) global structural proximity only shows effectiveness when local structural proximity is deficient. (ii) The incompatibility can be found between feature and structural proximity. Such incompatibility leads to GNNs for Link Prediction (GNN4LP) consistently underperforming on edges where the feature proximity factor dominates. Inspired by these new insights from a data perspective, we offer practical instruction for GNN4LP model design and guidelines for selecting appropriate benchmark datasets for more comprehensive evaluations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2125202063",
+                    "name": "Haitao Mao"
+                },
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2220302956",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2254637024",
+                    "name": "Bingheng Li"
+                },
+                {
+                    "authorId": "2255025428",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2254813628",
+                    "name": "Yao Ma"
+                },
+                {
+                    "authorId": "2256340293",
+                    "name": "Tong Zhao"
+                },
+                {
+                    "authorId": "2253409421",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "f193329a4ae4167f28e43b6d358b37a3d47ee065",
+            "title": "LPFormer: An Adaptive Graph Transformer for Link Prediction",
+            "abstract": "Link prediction is a common task on graph-structured data that has seen applications in a variety of domains. Classically, hand-crafted heuristics were used for this task. Heuristic measures are chosen such that they correlate well with the underlying factors related to link formation. In recent years, a new class of methods has emerged that combines the advantages of message-passing neural networks (MPNN) and heuristics methods. These methods perform predictions by using the output of an MPNN in conjunction with a\"pairwise encoding\"that captures the relationship between nodes in the candidate link. They have been shown to achieve strong performance on numerous datasets. However, current pairwise encodings often contain a strong inductive bias, using the same underlying factors to classify all links. This limits the ability of existing methods to learn how to properly classify a variety of different links that may form from different factors. To address this limitation, we propose a new method, LPFormer, which attempts to adaptively learn the pairwise encodings for each link. LPFormer models the link factors via an attention module that learns the pairwise encoding that exists between nodes by modeling multiple factors integral to link prediction. Extensive experiments demonstrate that LPFormer can achieve SOTA performance on numerous datasets while maintaining efficiency. The code is available at The code is available at https://github.com/HarryShomer/LPFormer.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2220302956",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2254813628",
+                    "name": "Yao Ma"
+                },
+                {
+                    "authorId": "2125202063",
+                    "name": "Haitao Mao"
+                },
+                {
+                    "authorId": "2162405317",
+                    "name": "Juanhui Li"
+                },
+                {
+                    "authorId": "2259889350",
+                    "name": "Bo Wu"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "ede2eb7697b5e0a41c4f832813b365eb10d0ad9b",
+            "title": "AutoEmb: Automated Embedding Dimensionality Search in Streaming Recommendations",
+            "abstract": "Deep learning-based recommender systems (DLRSs) often have embedding layers, which are utilized to lessen the dimension of categorical variables (e.g., user/item identifiers) and meaningfully transform them in the low-dimensional space. The majority of existing DLRSs empirically pre-define a fixed and unified dimension for all user/item embeddings. It is evident from recent researches that different embedding sizes are highly desired for different users/items according to their frequency. However, manually selecting embedding sizes in recommender systems can be very challenging due to a large number of users/items and the dynamic nature of their frequency. Thus, in this paper, we propose an AutoML based end-to-end framework (AutoEmb), enabling various embedding dimensions according to the frequency in an automated and dynamic manner. To be specific, we first enhance a typical DLRS to allow various embedding dimensions; then, we propose an end-to-end differentiable framework that can automatically select different embedding dimensions according to user/item frequency; finally, we propose an AutoML based optimization algorithm in a streaming recommendation setting. The experimental results based on widely used benchmark datasets demonstrate the effectiveness of the AutoEmb framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "66442354",
+                    "name": "Haochen Liu"
+                },
+                {
+                    "authorId": "2255025428",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2146672392",
+                    "name": "Hui Liu"
+                },
+                {
+                    "authorId": "2240599706",
+                    "name": "Jiliang Tang"
+                },
+                {
+                    "authorId": "2128077726",
+                    "name": "Chong Wang"
+                },
+                {
+                    "authorId": "2265558277",
+                    "name": "Ming Chen"
+                },
+                {
+                    "authorId": "2265622616",
+                    "name": "Xudong Zheng"
+                },
+                {
+                    "authorId": "2265595188",
+                    "name": "Xiaobing Liu"
+                },
+                {
+                    "authorId": "2265577657",
+                    "name": "Xiwang Yang"
+                }
+            ]
+        }
+    ]
+}

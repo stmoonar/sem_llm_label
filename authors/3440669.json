@@ -1,0 +1,741 @@
+{
+    "authorId": "3440669",
+    "papers": [
+        {
+            "paperId": "341489abe1b665a612c9724b82b1824f65603b45",
+            "title": "FeatSet+: Visual Features Extracted from Public Image Datasets",
+            "abstract": "Real-world applications generate large amounts of images every day. With the generalized use of social media, users frequently share images acquired by smartphones. Also, hospitals, clinics, exhibits, factories, and other facilities generate images with potential use for many applications. Processing the generated images usually requires feature extraction, which can be time-consuming and laborious. In this paper, we present FeatSet+, a compilation of color, texture and shape visual features extracted from 17 open image datasets reported in the literature. FeatSet+ provides a collection of 11 distinct visual features, extracted by well-known Feature Extraction Methods (FEMs) such as LBP, Haralick, and Color Layout. We organized the available features in a standard collection, including the metadata and labels, when available. Eleven of the datasets also contain classes, which aid the evaluation of supervised methods such as classifiers and clustering tasks. FeatSet+ is available for download in a public repository as sql scripts and csv files. Additionally, FeatSet+ provides a description of the domain of each dataset, including the reference to the original work and link. We show the potential applicability of FeatSet+ in four computational tasks: multi-attribute analysis and retrieval, visual analysis using Multidimensional Scaling (MDS) and Principal Components Analysis (PCA), global feature classification, and dimensionality reduction. FeatSet+ can be employed to evaluate supervised and non-supervised learning tasks, also widely supporting Content-Based Image Retrieval (CBIR) applications and complex data indexing using Metric Access Methods (MAMs).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "40991665",
+                    "name": "Guilherme F. Zabot"
+                },
+                {
+                    "authorId": "2067919824",
+                    "name": "M. A. Gutierrez"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                },
+                {
+                    "authorId": "2056162982",
+                    "name": "A. J. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "4690dce7202de83debaf3598949776483920bb64",
+            "title": "SHARq: sharing recursive queries in relational databases",
+            "abstract": "Processing navigational graph-like queries in relational databases requires executing several recursive join operations, which are computationally costly. However, when the need for graph-like queries arises, applications often execute a sequence of related queries in a single session. We argue that it is possible to reduce the total cost of a set of related queries, by expanding individual intermediate results and sharing them among multiple queries. SHARq is our framework that enables sharing intermediate results of the common graph-like queries Single-Source Shortest Paths (SSSP), Connected Components (CC), and PageRank (PR). Our solution prepares result tables expanded with additional columns to store partial results of graph-like query combinations, such as multiple SSSP, or a sequence of queries comprising SSSP, CC, and PR. Experimental results on 9 datasets show query speedups of up to ten times when combining multiple SSSP queries, and up to two times when combining SSSP, CC, and PR queries. The results reveal a significant reduction in the query time, providing timely results for analyses relying on multiple navigational graph-like queries.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "8167068",
+                    "name": "Gabriel Spadon"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "3149323",
+                    "name": "D. S. Kaster"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "144540185",
+                    "name": "Jos\u00e9 F. Rodrigues"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "5efd795ce49375525125702cd3106a0ad3f63c96",
+            "title": "APEHR: Automated Prognosis in Electronic Health Records using multi-head self-attention",
+            "abstract": "Automated prognosis has been a topic of intense research. Many works have sought to learn from Electronic Health Records using Recurrent Neural Networks that, despite promising results, have been overcome by novel techniques. We introduce APEHR, a Transformer approach that leverages medical prognosis using the latest technology Neural Network Transformer, which has demonstrated superior results in problems whose data is organized in sequential fashion. We contribute with an innovative problem modeling along with a detailed discussion of how Transformers can be used in the medical domain. Our results demonstrate a prognostic performance that surpasses previous works by at least 6% for metric Recall@k in the public dataset MIMIC-III.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1668049518",
+                    "name": "A. Florez"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "143883122",
+                    "name": "D. M. Eler"
+                },
+                {
+                    "authorId": "144540185",
+                    "name": "Jos\u00e9 F. Rodrigues"
+                }
+            ]
+        },
+        {
+            "paperId": "822be8759e7917611a4edee4df2968c9f0aa40fb",
+            "title": "VD-tree: how to build an efficient and fit metric access method using voronoi diagrams",
+            "abstract": "Efficient similarity search is a core issue for retrieval operations on large amounts of complex data, often relying on Metric Access Methods (MAMs) to speed up the Range and k-NN queries. Among the most used MAMs are those based on covering radius, which create balanced structures, and enable efficient data retrieval and dynamic maintenance. MAMs typically suffer from node overlapping, which increases retrieval costs. Some strategies aim to reduce node over-lapping by employing global pivots to improve the filtering process during queries, but result at significant costs to maintain the pivots, whereas not completely removing the overlaps, which impacts queries over large databases. Other strategies use hyper-plane-based MAMs, which can get rid of overlaps but with large costs to create and update the index. We propose VD-Tree, a MAM which combines a covering radius strategy with a Voronoi-like organization. VD-Tree retains index flexibility for updates whereas reducing the node overlap using dynamic swap of elements among nodes. The method relies on only the solid organization fostered by Voronoi, and does not require storing further information to the tree. Experimental analysis using five real-world image datasets and four feature extractors shows that VD-Tree reduced node overlaps up to 43% and the average time needed to answer similarity queries by up to 28%, when compared to its closest competitor.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1394231839",
+                    "name": "A. Moriyama"
+                },
+                {
+                    "authorId": "134329314",
+                    "name": "L. S. Rodrigues"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "0fab5869fe9f31cfc16a13e259e6cde2bd7af26d",
+            "title": "Enhancing recursive graph querying on RDBMS with data clustering approaches",
+            "abstract": "Recursive queries are one of the main mechanisms in Relational Database Management Systems to process topology-aware, or graph-like, queries. However, existing works focus only on optimizing the recursive query statements and processing, disregarding the potential physical arrangements that might improve performance. In this work, we propose to use an approach based on adjacent-list storage to physically organize the graph-like data aiming at both reducing the recursive query time and the number of I/O operations. By using Clustered Tables, we tied the adjacency list in chunks for (i) storing both vertex and edge tables together in a Combined Tables approach; and (ii) reordering the edge table with the Edge Clustered Table approach using 20% and 80% of the total adjacency list size. The clustered approaches enabled a faster recursive query processing (up to 22%) and a reduction of up to 61% in the number of page accesses when compared to the Conventional approach. When starting from multiple vertices, the Combined Tables approach achieved a query reduction time of up to 50% in the first join operation, and Edge Clustered Table 20% provided an overall time reduction of up to 20%. The results show that our physical design is effective and allows one to use recursive queries without adaptations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "8167068",
+                    "name": "Gabriel Spadon"
+                },
+                {
+                    "authorId": "144646435",
+                    "name": "Paulo H. Oliveira"
+                },
+                {
+                    "authorId": "144540185",
+                    "name": "Jos\u00e9 F. Rodrigues"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "5369cb5fe941d9e753412c949eb54c8dd769c90a",
+            "title": "Augmentation Techniques for Sequential Clinical Data to Improve Deep Learning Prediction Techniques",
+            "abstract": "Methods based on neural networks have become more and more attractive in the medical domain as Deep Learning frameworks mature and popularize. One application in this context refers to the use of recurrent networks to predict the most probable clinical conditions of a patient, given his/her history of hospital/medical admissions. The problem is that clinical data to support machine learning is scarce, mainly due to privacy matters and to ill-structured medical databases. In this work, we demonstrate that it is possible to augment clinical data to improve the performance of automatic predictive systems. We introduce two methods to create synthetic clinical histories (trajectories) based on existing data; the first one extracts subsequences of trajectories to emphasize the transition in between hospital admissions; the second method benefits from the hierarchical structure of standard diagnosis codes (like ICD-9) trajectories whose characteristics resemble those of real-world clinics. Our results demonstrate significant improvements in two datasets, demonstrating the feasibility of data augmentation in the clinical scenario. Our results shall inspire the augmentation of data in several other scenarios related to the medical domain.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1668049518",
+                    "name": "A. Florez"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "3430964",
+                    "name": "J. F. R. Junior"
+                }
+            ]
+        },
+        {
+            "paperId": "8f5d1d7b11d22247255cc4bc9aa7bff055cb0ea8",
+            "title": "Semi-Automatic Ulcer Segmentation and Wound Area Measurement Supporting Telemedicine",
+            "abstract": "Many patients suffer from chronic skin lesions, commonly known as ulcers. The size evolution of chronic wounds provides meaningful clues regarding the patient's clinical state for healthcare professionals and caretakers. Many studies have been proposed in recent years to support the treatment of skin ulcers. However, there is a lack of practical solutions, as existing studies are not targeted at immediate use in daily medical practice. In this work, we propose URule, an essentially practical framework for segmentation and measurement of skin ulcers. URule-App, a mobile instance of the framework, analyzes images taken by a common camera from a mobile device. The segmentation requires the user to manually outline the outsider region of both the wound and the measurement tool. URule-Seg segments the image and estimates the wound area. The user can further improve the estimated area by manually informing the span of a centimeter in the image. The experimental evaluation reveals that URule can accurately segment ulcer wounds semi-automatically, with an average F-Measure of 0.8 for segmentation, and processing measurement tools better than the manual process in three out of five tested rulers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "145758150",
+                    "name": "Jonathan S. Ramos"
+                },
+                {
+                    "authorId": "134329314",
+                    "name": "L. S. Rodrigues"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "39159322",
+                    "name": "D. Y. T. Chino"
+                },
+                {
+                    "authorId": "8775296",
+                    "name": "A. E. Jorge"
+                },
+                {
+                    "authorId": "144346978",
+                    "name": "P. M. A. Marques"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "1d14b4261f37910af1add75e7a1b4e94b475785b",
+            "title": "Efficient Indexing of Multiple Metric Spaces with Spectra",
+            "abstract": "The widespread of social networks and online channels has increased the capture of large amounts of complex data, such as images and videos, which demand efficient and flexible tools to perform information retrieval. Many existing approaches to retrieve complex data follow the \"Query by Similarity\" paradigm, using Metric Access Methods (MAMs) to index complex data and speed-up information retrieval. In this context, many descriptors represent complex data using representative features such as color, shape, or texture for images. MAMs were initially designed to index features from complex data using only one descriptor, leading users to build several indexes when more than one descriptor is required. Recent approaches that use different representations in a single index structure suffer from a higher number of distance calculations. In this work, we propose the Spectra MAM, which indexes complex data using several features at once. Spectra integrates several metric spaces and answers queries based on one or more descriptors at once. Moreover, Spectra relies on existing correlations among different spaces to choose the best descriptors to obtain a concise yet accurate indexing space. Thus, it reduces the number of distance calculations, speeding up the query execution, and improving the resulting quality.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40991665",
+                    "name": "Guilherme F. Zabot"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "3965398855119e6eb7aeb414c2244f403b7d6adb",
+            "title": "A DBMS-Based Framework for Content-Based Retrieval and Analysis of Skin Ulcer Images in Medical Practice",
+            "abstract": "Bedridden patients with skin lesions (ulcers) often do not have access to specialized clinic equipment. It is important to allow healthcare practitioners to use their smartphones to leverage information regarding the proper treatment to be carried. Existing applications require special equipment, such as heat sensors, or focus only on general information. To fulfill this gap, we propose ULEARn, a DBMS-based framework for the processing of ulcer images, providing tools to store and retrieve similar images of past cases. The proposed mobile application ULEARn-App allows healthcare practitioners to send a photo from a patient to ULEARn, and obtain a timely feedback that allows the improvement of procedures on therapeutic interventions. Experimental results of ULEARn and ULEARn-App using a real-world dataset showed that our tool can quickly respond to the required analysis and retrieval tasks, being up to 4.6 times faster than the specialist\u2019 expected execution time.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "134329314",
+                    "name": "L. S. Rodrigues"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "40991665",
+                    "name": "Guilherme F. Zabot"
+                },
+                {
+                    "authorId": "40990317",
+                    "name": "Guilherme Q. Vasconcelos"
+                },
+                {
+                    "authorId": "39159322",
+                    "name": "D. Y. T. Chino"
+                },
+                {
+                    "authorId": "8775296",
+                    "name": "A. E. Jorge"
+                },
+                {
+                    "authorId": "8631174",
+                    "name": "R. Cordeiro"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "be457fa3b45bdeca3f93456607ebdc9ce0133420",
+            "title": "Employing Domain Indexes to Efficiently Query Medical Data From Multiple Repositories",
+            "abstract": "Content-based retrieval still remains one of the main problems with respect to controversies and challenges in digital healthcare over big data. To properly address this problem, there is a need for efficient computational techniques, especially in scenarios involving queries across multiple data repositories. In such scenarios, the common computational approach searches the repositories separately and combines the results into one final response, which slows down the process altogether. In order to improve the performance of queries in that kind of scenario, we present the Domain Index, a new category of index structures intended to efficiently query a data domain across multiple repositories, regardless of the repository to which the data belong. To evaluate our method, we carried out experiments involving content-based queries, namely range and k nearest neighbor (kNN) queries, 1) over real-world data from a public data set of mammograms, as well as 2) over synthetic data to perform scalability evaluations. The results show that images from any repository are seamlessly retrieved, sustaining performance gains of up to 53% in range queries and up to 81% in kNN queries. Regarding scalability, our proposal scaled well as we increased 1) the cardinality of data (up to 59% of gain) and 2) the number of queried repositories (up to 71% of gain). Hence, our method enables significant performance improvements, and should be of most importance for medical data repository maintainers and for physicians\u2019 IT support.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "144646435",
+                    "name": "Paulo H. Oliveira"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "143771906",
+                    "name": "Willian D. Oliveira"
+                },
+                {
+                    "authorId": "144116496",
+                    "name": "Rafael S. Paix\u00e3o"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "ff3c183fb0cdc6b6d4e188176d31051e2eec8091",
+            "title": "UCORM: Indexing Uncorrelated Metric Spaces for Concise Content-Based Retrieval of Medical Images",
+            "abstract": "The large amount of medical exams generated by hospitals has a great potential to boost the support for physicians on decision making tasks. This requires efficient and reliable computational systems to retrieve relevant information in real-time. Existing Content-Based Image Retrieval (CBIR) systems rely on Metric Access Methods (MAMs) to speed-up the retrieval task. In this context, images are represented by Feature Extraction Methods (FEMs), according to information such as color or texture. However, MAMs usually index images based on a single FEM. Whenever physicians want to search for similar images using multiple FEMs simultaneously, they need to perform separated queries. In this work, we propose UCORM, an access method capable of indexing images using multiple FEMs by overlapping different metric spaces. UCORM selects the best FEMs to generate a concise yet accurate indexing space. It relies on an interesting use of Pearson correlation, that we named PCMS, to compute the correlation between different FEMs. PCMS allows UCORM to improve the retrieval task by minimizing the overlapping between metric spaces, resulting on fewer intermediary images when performing a query. Experimental analysis shows that UCORM prunes well the data distribution regions with low correlation between FEMs. Also, two medical application scenarios support our claim that UCORM is well-fitted for clinical environments.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40991665",
+                    "name": "Guilherme F. Zabot"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "2273944",
+                    "name": "Bruno S. Fai\u00e7al"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "12b870a86c753344635098a4d1e6321e4d06d31d",
+            "title": "ICARUS: Retrieving Skin Ulcer Images through Bag-of-Signatures",
+            "abstract": "The images collected during medical exams are a strong asset for diagnosing and decision making. One scenario where clinical images are especially useful is the analysis of chronic lesions on the skin (skin ulcers). The visual appearance of these wounds may provide meaningful clues that may help physicians in the diagnosis. In this context, we propose ICARUS, an image retrieval system for dermatological ulcer images based on Bag-of-Visual-Words of color and texture signatures. ICARUS analyzes the image and extracts only the relevant signatures. The results show that ICARUS achieves improvement of up to 7% in image retrieval precision whereas being up to 5 orders of magnitude faster when compared to the state-of-the-art methods. Our results showed that ICARUS is effective and fast, and successfully adds semantic to the image representation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "39159322",
+                    "name": "D. Y. T. Chino"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "8775296",
+                    "name": "A. E. Jorge"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "4439ac02cdda571cb103522da31dc3c1495b7b27",
+            "title": "BoSS: image retrieval using bag-of-superpixels signatures",
+            "abstract": "Techniques of bags-of-visual-words based on signature have been employed in image retrieval and analysis, with the benefit of dismissing expensive clustering processes. However, the limitations of such techniques are the requirement of multiple parameters, which may be unintuitive and in most cases depends on the application domain. In this paper, we overcome these limitations by proposing Bag-of-Superpixel Signatures (BoSS), which extracts visual signatures using local features from superpixels. Moreover, our proposal also employs a fractal analysis to extract intrinsic information about the domain application and also to diminish the amount of parameters needed. The results demonstrated that BoSS achieved an improvement up to 31.2% in image retrieval precision during experimental evaluations over five distinct datasets. We conclude that BoSS introduces an intuitive, self-contained, scalable and effective approach for image retrieval using bags-of-visual words.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "39159322",
+                    "name": "D. Y. T. Chino"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "bdfd1151a29d5a3219a4ffe907d67f32c4708012",
+            "title": "Cutting-edge Relational Graph Data Management with Edge-k: From One to Multiple Edges in the Same Row",
+            "abstract": "Relational Database Management Systems (RDBMSs) are widely employed in several applications, including those that deal with data modeled as graphs. Existing solutions store every edge in a distinct row in the edge table, however, for most cases, such modeling does not provide adequate performance. In this work, we propose Edge-k, a technique to group the vertex neighborhood into a reduced number of rows in a table through additional columns that stores up to k edges per row. The technique provides a better table organization and reduces both table size and query processing time. We evaluate Edge-k table management for insert, update, delete and bulkload operations, and compare the query processing performance both with the conventional edge table \u2014 adopted by the existing frameworks \u2014 and with the Neo4j graph database. Experiments using Single-Source Shortest Path (SSSP) queries reveal that our new proposal approach always outperforms the conventional edge table as well as it was faster than Neo4j for the first iterations, being slightly slower than Neo4j only for iterations after having loaded the whole graph from disk to memory. It was able to reach a speedup of 66% over a representative real dataset, with an average reduction of up to 58% in our tests. The average speedup over synthetic datasets was up to 54%. Edge-k was also the best one when performing graph degree distribution queries. Moreover, the Edge-k table obtained a processing time reduction of 70% for bulkload operations, despite having an overhead of 50% for individual insert, update and delete operations. Finally, Edge-k advances the state of the art for graph data management within relational database systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "144646435",
+                    "name": "Paulo H. Oliveira"
+                },
+                {
+                    "authorId": "8167068",
+                    "name": "Gabriel Spadon"
+                },
+                {
+                    "authorId": "3149323",
+                    "name": "D. S. Kaster"
+                },
+                {
+                    "authorId": "144540185",
+                    "name": "Jos\u00e9 F. Rodrigues"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "2068707342",
+                    "name": "C. J\u00fanior"
+                }
+            ]
+        },
+        {
+            "paperId": "ff745139c1869ab3f3899b83a0c8e2b3be0606db",
+            "title": "RAFIKI: Retrieval-Based Application for Imaging and Knowledge Investigation",
+            "abstract": "Medical exams, such as CT scans and mammograms, are obtained and stored every day in hospitals all over the world, including images, patient data, and medical reports. It is paramount to have tools and systems to improve computer-aided diagnoses based on such huge volumes of stored information. The Content-Based Image Retrieval (CBIR) is a powerful paradigm to help reaching such a goal, providing physicians with intelligent retrieval tools to present him/her with similar or complementary cases, in which visual characteristics improve textual data. Employing comparative inspection on previous cases, the physician can obtain a more comprehensive understanding of the case he/she is working on. Current hospital systems do not carry native CBIR functionalities yet, relying on add-on subsystems, which often do not adhere to the existing relational database infrastructures. In this work, we propose RAFIKI, a software prototype that extends the Relational Database Management System (RDBMS) PostgreSQL, providing native support for CBIR functionalities, modular extensibility, and seamless integration for data science tools, such as Python and R. We show the applicability of our system by evaluating three clinical scenarios, performing queries over a real-world image dataset of lung exams. Our results spot actual potential in promoting informed decision-making from the physician's perspective. Besides, the system exhibited a higher performance when compared to previous systems found in the literature. Moreover, RAFIKI contributes with a model to establish how to put together CBIR concepts and relational data, providing a powerful design for further development of theoretical and practical concepts and tools.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "29343183",
+                    "name": "Marcos Roberto Nesso Junior"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "144646435",
+                    "name": "Paulo H. Oliveira"
+                },
+                {
+                    "authorId": "8167068",
+                    "name": "Gabriel Spadon"
+                },
+                {
+                    "authorId": "3023434",
+                    "name": "J. D. Souza"
+                },
+                {
+                    "authorId": "143771906",
+                    "name": "Willian D. Oliveira"
+                },
+                {
+                    "authorId": "39159322",
+                    "name": "D. Y. T. Chino"
+                },
+                {
+                    "authorId": "144540186",
+                    "name": "J. F. Rodrigues"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "08bc321f0f5933354aab180f42151c9eed1b6538",
+            "title": "BREATH: Heat Maps Assisting the Detection of Abnormal Lung Regions in CT Scans",
+            "abstract": "Computed Tomography (CT) scans are often employed to diagnose lung diseases, as abnormal tissue regions may indicate whether proper treatment is required. However, detecting specific regions containing abnormalities in a CT scan demands time and effort of specialists. Moreover, different parts of a single lung image may present both normal and abnormal characteristics, what makes inaccurate the classification of a single lung as healthy (normal) or not. In this paper we propose the BREATH method, capable of detecting abnormalities in lung tissue regions, highlighting them by means of a heat map visualization. The method starts by segmenting lung tissues using a superpixel-based approach, followed by the training of a statistical model to represent normal tissues and, finally, the generation of a heat map showing abnormal regions that require attention from the physicians. We validated our statistical model using a dataset with 246 lung CT scans, where 40 are healthy and the remaining present varying diseases. Experimental results show that BREATH is accurate for lung segmentation with F-Measure of up to 0.99. The statistical modeling of healthy and abnormal lung regions has shown almost no overlap, and the detection of superpixels containing abnormalities presented precision values higher than 86%, for all values of recall. These values support our claim that the heat map representation of BREATH for the abnormal detection can be used as an intuitive method to assist physicians during the diagnosis.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "1819014",
+                    "name": "Alceu Ferraz Costa"
+                },
+                {
+                    "authorId": "29343183",
+                    "name": "Marcos Roberto Nesso Junior"
+                },
+                {
+                    "authorId": "40197078",
+                    "name": "Luis Fernando Milano Oliveira"
+                },
+                {
+                    "authorId": "3149323",
+                    "name": "D. S. Kaster"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "46b76ed4658f7a5394bb5f7eb6b0e91166b61c26",
+            "title": "One index to dominate them all: domain indexes for improving queries across multiple tables",
+            "abstract": "Relational Database Management Systems (RDBMS) organize data into relations, representing them as tables. Most of queries executed over them are optimized by index structures. However, considering queries that require scanning indexes across multiple tables, the common approach involves scanning multiple indexes and combining their results, which is potentially costly, especially regarding similarity queries over complex data. This paper proposes a new type of index for modern RDBMS called domain index. Such proposal consists of indexes that allow searching columns of the same type, across multiple tables, with a single index scan, hence with superior performance. To evaluate our proposal, we carried out experiments (i) over a medical image dataset, to evaluate the performance in content-based similarity queries; and (ii) over a flow-based intrusion detection dataset, to evaluate the performance in conventional queries both in a real scenario and over synthetic data so to evaluate scalability. The results exhibit the higher performance of domain indexes. Specifically, the gains reached up to 42.9+ in similarity queries and up to 65.9+ in conventional queries. As the first paper on this subject, we expect this work to provide a basis for further developments on indexing techniques over domains of attributes within modern RDBMS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144646435",
+                    "name": "Paulo H. Oliveira"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                },
+                {
+                    "authorId": "3149323",
+                    "name": "D. S. Kaster"
+                }
+            ]
+        },
+        {
+            "paperId": "5c1231907d00eceae38e4d375a0b3955a7dd4a13",
+            "title": "Prediction of winners in MOBA games",
+            "abstract": "Multiplayer Online Battle Arena (MOBA) games are very popular in the current eSport scenario, being highlighted in several competitions around the world. However, the domain of knowledge contained in these games is large, which makes it difficult to discover and predict the course of a match. The present work proposes the application of classification algorithms to determine the team with more chances to win a match. Two classifications procedures were used, one based on the composition of heroes in each team and another considering the duration of the match. The experiments were performed on data collected from 123,326 matches of Dota 2, showing that it was possible to achieve approximately 77% accuracy. The results demonstrate the effectiveness of the application when using techniques assisted by computers, and when using the methodology described in championships or other similar games that require the definition of strategies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057827423",
+                    "name": "Carlos E. M. Almeida"
+                },
+                {
+                    "authorId": "1840393",
+                    "name": "R. C. M. Correia"
+                },
+                {
+                    "authorId": "143883122",
+                    "name": "D. M. Eler"
+                },
+                {
+                    "authorId": "1411252352",
+                    "name": "Celso Olivete-Jr"
+                },
+                {
+                    "authorId": "1413986712",
+                    "name": "Rog\u00e9rio E. Garci"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "8167068",
+                    "name": "Gabriel Spadon"
+                }
+            ]
+        },
+        {
+            "paperId": "9f4138964fe5b6ef3a46f503c538d7b482ce4f94",
+            "title": "Relational graph data management on the edge: Grouping vertices' neighborhood with Edge-k",
+            "abstract": "As the amount of data represented as graph grows, several frameworks are employing relational databases to manage them. However, the existing solutions store graphs creating a row for each edge in an edge table. In this paper, we propose Edge-k, a novel storage approach that combines additional columns in the edges table, allowing to tune the number of edges stored in a single row by taking into account the overall neighborhood of the vertices, thus providing a better table organization. Compared to the existing approaches in the literature, experiments reveal that our proposal was able to reach a speedup of 66% over a representative real dataset and up to 57% in synthetic datasets when processing Single Source Shortest Path queries. Hence, our solution advances the state of the art in the context of graph data management within relational databases systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "144646435",
+                    "name": "Paulo H. Oliveira"
+                },
+                {
+                    "authorId": "3149323",
+                    "name": "D. S. Kaster"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "ed49a14399ce181e473b4cfe6d2be3dbf424459e",
+            "title": "Efficiently Indexing Multiple Repositories of Medical Image Databases",
+            "abstract": "Performing content-based image retrieval over large repositories of medical images demands efficient computational techniques. The use of such techniques is intended to speed up the work of physicians, who often have to deal with information from multiple data repositories. When dealing with multiple data repositories, the common computational approach is to search each repository separately and merge the multiple results into one final response, which slows down the whole process. This can be improved if we build a mechanism able to search several repositories as if they were a single one, i.e. a mechanism to search the whole domain of medical images. Aiming at this goal, we propose the Domain Index, a new category of index structures aimed at efficiently searching domains of data, regardless of the repository to which they belong. To evaluate our proposal, we carried out experiments over multiple mammography repositories involving k Nearest Neighbor (kNN) and Range queries. The results show that images from any repository are seamlessly retrieved, even sustaining gains in performance of up to 36% in kNN queries and up to 7% in Range queries. The experimental evaluation shows that the Domain Index allows fast retrieval from multiple data repositories for medical systems, allowing a better performance in similarity queries over them.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144646435",
+                    "name": "Paulo H. Oliveira"
+                },
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "2647968",
+                    "name": "M. Cazzolato"
+                },
+                {
+                    "authorId": "143771906",
+                    "name": "Willian D. Oliveira"
+                },
+                {
+                    "authorId": "1745003",
+                    "name": "A. Traina"
+                },
+                {
+                    "authorId": "104501789",
+                    "name": "C. Traina"
+                }
+            ]
+        },
+        {
+            "paperId": "60819814be2d13a10ed7595b597984a7ea9e4889",
+            "title": "Physical Data Warehouse Design on NoSQL Databases - OLAP Query Processing over HBase",
+            "abstract": "Nowadays, data warehousing and online analytical processing (OLAP) are core technologies in business intelligence and therefore have drawn much interest by researchers in the last decade. However, these technologies have been mainly developed for relational database systems in centralized environments. In other words, these technologies have not been designed to be applied in scalable systems such as NoSQL databases. Adapting a data warehousing environment to NoSQL databases introduces several advantages, such as scalability and flexibility. This paper investigates three physical data warehouse designs to adapt the Star Schema Benchmark for its use in NoSQL databases. In particular, our main investigation refers to the OLAP query processing over column-oriented databases using the MapReduce framework. We analyze the impact of distributing attributes among column-families in HBase on the OLAP query performance. Our experiments showed how processing time of OLAP queries was impacted by a physical data warehouse design regarding the number of dimensions accessed and the data volume. We conclude that using distinct distributions of attributes among column-families can improve OLAP query performance in HBase and consequently make the benchmark more suitable for OLAP over NoSQL databases.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3440669",
+                    "name": "L. C. Scabora"
+                },
+                {
+                    "authorId": "1921670",
+                    "name": "J. Brito"
+                },
+                {
+                    "authorId": "1742412",
+                    "name": "R. R. Ciferri"
+                },
+                {
+                    "authorId": "1709113",
+                    "name": "C. D. Ciferri"
+                }
+            ]
+        }
+    ]
+}

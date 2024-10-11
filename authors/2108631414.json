@@ -1,0 +1,323 @@
+{
+    "authorId": "2108631414",
+    "papers": [
+        {
+            "paperId": "096f9f9a73bf84a56a444b5e995e51e754eff2ac",
+            "title": "Practical Unlearning for Large Language Models",
+            "abstract": "While LLMs have demonstrated impressive performance across various domains and tasks, their security issues have become increasingly severe. Machine unlearning (MU) has emerged as a promising solution to address these issues by removing the influence of undesired data on the target model without compromising its utility in other aspects. MU typically assumes full access to the original training data to preserve utility, which is difficult to achieve in LLM unlearning. Existing LLM unlearning methods often assume access to data most affected by undesired data unlearning. However, this assumption underestimates the entanglement among various LLM capabilities and ignores data access limitations due to various issues. Moreover, these LLM unlearning methods do not sufficiently consider that unlearning requests in real-world scenarios are continuously emerging. To overcome these challenges and achieve practical LLM unlearning, we propose the O3 framework. The O3 framework includes an Out-Of-Distribution (OOD) detector to measure the similarity between input and unlearning data, and an Orthogonal low-rank adapter (LoRA) for continuously unlearning requested data. The OOD detector is trained with a novel contrastive entropy loss and utilizes a local-global layer-aggregated scoring mechanism. The orthogonal LoRA achieves parameter disentanglement among continual unlearning requests. During inference, our O3 framework can smartly decide whether and to what extent to load the unlearning LoRA based on the OOD detector's predictions. Notably, O3's effectiveness does not rely on any retained data. We conducted extensive experiments on O3 and state-of-the-art LLM unlearning methods across three tasks and seven datasets. The results indicate that O3 consistently achieves the best trade-off between unlearning effectiveness and utility preservation, especially when facing continuous unlearning requests.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2311833838",
+                    "name": "Chongyang Gao"
+                },
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "2148353350",
+                    "name": "Chenkai Weng"
+                },
+                {
+                    "authorId": "2276121035",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2275773112",
+                    "name": "Qi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "5d62b1e57090f828614140bd2af2d8a54818af28",
+            "title": "Semantic Feature Learning for Universal Unsupervised Cross-Domain Retrieval",
+            "abstract": "Cross-domain retrieval (CDR), as a crucial tool for numerous technologies, is finding increasingly broad applications. However, existing efforts face several major issues, with the most critical being the need for accurate supervision, which often demands costly resources and efforts. Cutting-edge studies focus on achieving unsupervised CDR but typically assume that the category spaces across domains are identical, an assumption that is often unrealistic in real-world scenarios. This is because only through dedicated and comprehensive analysis can the category spaces of different domains be confirmed as identical, which contradicts the premise of unsupervised scenarios. Therefore, in this work, we introduce the problem of Universal Unsupervised Cross-Domain Retrieval (U^2CDR) for the first time and design a two-stage semantic feature learning framework to address it. In the first stage, a cross-domain unified prototypical structure is established under the guidance of an instance-prototype-mixed contrastive loss and a semantic-enhanced loss, to counteract category space differences. In the second stage, through a modified adversarial training mechanism, we ensure minimal changes for the established prototypical structure during domain alignment, enabling more accurate nearest-neighbor searching. Extensive experiments across multiple datasets and scenarios, including closet, partial, and open-set CDR, demonstrate that our approach significantly outperforms existing state-of-the-art CDR works and some potentially effective studies from other topics in solving U^2CDR challenges.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "2280995000",
+                    "name": "Xinyu Du"
+                },
+                {
+                    "authorId": "2275773112",
+                    "name": "Qi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "85fe670df8b056520eb747277d70769f9a532816",
+            "title": "Can We Trust Embodied Agents? Exploring Backdoor Attacks against Embodied LLM-based Decision-Making Systems",
+            "abstract": "Large Language Models (LLMs) have shown significant promise in real-world decision-making tasks for embodied artificial intelligence, especially when fine-tuned to leverage their inherent common sense and reasoning abilities while being tailored to specific applications. However, this fine-tuning process introduces considerable safety and security vulnerabilities, especially in safety-critical cyber-physical systems. In this work, we propose the first comprehensive framework for Backdoor Attacks against LLM-based Decision-making systems (BALD) in embodied AI, systematically exploring the attack surfaces and trigger mechanisms. Specifically, we propose three distinct attack mechanisms: word injection, scenario manipulation, and knowledge injection, targeting various components in the LLM-based decision-making pipeline. We perform extensive experiments on representative LLMs (GPT-3.5, LLaMA2, PaLM2) in autonomous driving and home robot tasks, demonstrating the effectiveness and stealthiness of our backdoor triggers across various attack channels, with cases like vehicles accelerating toward obstacles and robots placing knives on beds. Our word and knowledge injection attacks achieve nearly 100% success rate across multiple models and datasets while requiring only limited access to the system. Our scenario manipulation attack yields success rates exceeding 65%, reaching up to 90%, and does not require any runtime system intrusion. We also assess the robustness of these attacks against defenses, revealing their resilience. Our findings highlight critical security vulnerabilities in embodied LLM systems and emphasize the urgent need for safeguarding these systems to mitigate potential risks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1879340802",
+                    "name": "Ruochen Jiao"
+                },
+                {
+                    "authorId": "2305113291",
+                    "name": "Shaoyuan Xie"
+                },
+                {
+                    "authorId": "2235823008",
+                    "name": "Justin Yue"
+                },
+                {
+                    "authorId": "145364206",
+                    "name": "Takami Sato"
+                },
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "2130356642",
+                    "name": "Yixuan Wang"
+                },
+                {
+                    "authorId": "2241973718",
+                    "name": "Qi Alfred Chen"
+                },
+                {
+                    "authorId": "2269768951",
+                    "name": "Qi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "8afaf2f41bc85fd8c0413754fa9ccc2b1e9303d5",
+            "title": "Phase-driven Domain Generalizable Learning for Nonstationary Time Series",
+            "abstract": "Monitoring and recognizing patterns in continuous sensing data is crucial for many practical applications. These real-world time-series data are often nonstationary, characterized by varying statistical and spectral properties over time. This poses a significant challenge in developing learning models that can effectively generalize across different distributions. In this work, based on our observation that nonstationary statistics are intrinsically linked to the phase information, we propose a time-series learning framework, PhASER. It consists of three novel elements: 1) phase augmentation that diversifies non-stationarity while preserving discriminatory semantics, 2) separate feature encoding by viewing time-varying magnitude and phase as independent modalities, and 3) feature broadcasting by incorporating phase with a novel residual connection for inherent regularization to enhance distribution invariant learning. Upon extensive evaluation on 5 datasets from human activity recognition, sleep-stage classification, and gesture recognition against 10 state-of-the-art baseline methods, we demonstrate that PhASER consistently outperforms the best baselines by an average of 5% and up to 13% in some cases. Moreover, PhASER's principles can be applied broadly to boost the generalization ability of existing time series classification models.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "30868987",
+                    "name": "Payal Mohapatra"
+                },
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "2275773112",
+                    "name": "Qi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "8b2daef609768cc030bfa26126bff97990b3b1aa",
+            "title": "Federated Learning with New Knowledge: Fundamentals, Advances, and Futures",
+            "abstract": "Federated Learning (FL) is a privacy-preserving distributed learning approach that is rapidly developing in an era where privacy protection is increasingly valued. It is this rapid development trend, along with the continuous emergence of new demands for FL in the real world, that prompts us to focus on a very important problem: Federated Learning with New Knowledge. The primary challenge here is to effectively incorporate various new knowledge into existing FL systems and evolve these systems to reduce costs, extend their lifespan, and facilitate sustainable development. In this paper, we systematically define the main sources of new knowledge in FL, including new features, tasks, models, and algorithms. For each source, we thoroughly analyze and discuss how to incorporate new knowledge into existing FL systems and examine the impact of the form and timing of new knowledge arrival on the incorporation process. Furthermore, we comprehensively discuss the potential future directions for FL with new knowledge, considering a variety of factors such as scenario setups, efficiency, and security. There is also a continuously updating repository for this topic: https://github.com/conditionWang/FLNK.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "2282552083",
+                    "name": "Yang Zhao"
+                },
+                {
+                    "authorId": "2275767389",
+                    "name": "Jiahua Dong"
+                },
+                {
+                    "authorId": "2158928758",
+                    "name": "Ating Yin"
+                },
+                {
+                    "authorId": "2282544565",
+                    "name": "Qinbin Li"
+                },
+                {
+                    "authorId": "2276121035",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "1713586",
+                    "name": "D. Niyato"
+                },
+                {
+                    "authorId": "2275773112",
+                    "name": "Qi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "f7adc75573f4dbcfecfe3bbc9540de4ac5306ecd",
+            "title": "DACR: Distribution-Augmented Contrastive Reconstruction for Time-Series Anomaly Detection",
+            "abstract": "Anomaly detection in time-series data is crucial for identifying faults, failures, threats, and outliers across a range of applications. Recently, deep learning techniques have been applied to this topic, but they often struggle in real-world scenarios that are complex and highly dynamic, e.g., the normal data may consist of multiple distributions, and various types of anomalies may differ from the normal data to different degrees. In this work, to tackle these challenges, we propose Distribution-Augmented Contrastive Reconstruction (DACR). DACR generates extra data disjoint from the normal data distribution to compress the normal data\u2019s representation space, and enhances the feature extractor through contrastive learning to better capture the intrinsic semantics from time-series data. Furthermore, DACR employs an attention mechanism to model the semantic dependencies among multivariate time-series features, thereby achieving more robust reconstruction for anomaly detection. Extensive experiments conducted on nine benchmark datasets in various anomaly detection scenarios demonstrate the effectiveness of DACR in achieving new state-of-the-art time-series anomaly detection.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "3030561",
+                    "name": "Shichao Xu"
+                },
+                {
+                    "authorId": "2280995000",
+                    "name": "Xinyu Du"
+                },
+                {
+                    "authorId": "2152205303",
+                    "name": "Qi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "1432133bf51be0bcd42676ca916143e321e101f0",
+            "title": "DEJA VU: Continual Model Generalization For Unseen Domains",
+            "abstract": "In real-world applications, deep learning models often run in non-stationary environments where the target data distribution continually shifts over time. There have been numerous domain adaptation (DA) methods in both online and offline modes to improve cross-domain adaptation ability. However, these DA methods typically only provide good performance after a long period of adaptation, and perform poorly on new domains before and during adaptation - in what we call the\"Unfamiliar Period\", especially when domain shifts happen suddenly and significantly. On the other hand, domain generalization (DG) methods have been proposed to improve the model generalization ability on unadapted domains. However, existing DG works are ineffective for continually changing domains due to severe catastrophic forgetting of learned knowledge. To overcome these limitations of DA and DG in handling the Unfamiliar Period during continual domain shift, we propose RaTP, a framework that focuses on improving models' target domain generalization (TDG) capability, while also achieving effective target domain adaptation (TDA) capability right after training on certain domains and forgetting alleviation (FA) capability on past domains. RaTP includes a training-free data augmentation module to prepare data for TDG, a novel pseudo-labeling mechanism to provide reliable supervision for TDA, and a prototype contrastive alignment algorithm to align different domains for achieving TDG, TDA and FA. Extensive experiments on Digits, PACS, and DomainNet demonstrate that RaTP significantly outperforms state-of-the-art works from Continual DA, Source-Free DA, Test-Time/Online DA, Single DG, Multiple DG and Unified DA&DG in TDG, and achieves comparable TDA and FA capabilities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2308913917",
+                    "name": "Chenxi Liu"
+                },
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "145225199",
+                    "name": "Lingjuan Lyu"
+                },
+                {
+                    "authorId": "2118831761",
+                    "name": "Chen Sun"
+                },
+                {
+                    "authorId": "144129720",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2152206866",
+                    "name": "Qi Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "19db7f766c679e12970e106ec4989682aed6b896",
+            "title": "A Survey of Federated Unlearning: A Taxonomy, Challenges and Future Directions",
+            "abstract": "With the development of trustworthy Federated Learning (FL), the requirement of implementing right to be forgotten gives rise to the area of Federated Unlearning (FU). Comparing to machine unlearning, a major challenge of FU lies in the decentralized and privacy-preserving nature of FL, in which clients jointly train a global model without sharing their raw data, making it substantially more intricate to selectively unlearn specific information. In that regard, many efforts have been made to tackle the challenges of FU and have achieved significant progress. In this paper, we present a comprehensive survey of FU. Specially, we provide the existing algorithms, objectives, evaluation metrics, and identify some challenges of FU. By reviewing and comparing some studies, we summarize them into a taxonomy for various schemes, potential applications and future directions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2264341901",
+                    "name": "Jiaxi Yang"
+                },
+                {
+                    "authorId": "2282552083",
+                    "name": "Yang Zhao"
+                },
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "31ee0380445ac9b79b1369093c7ce8cb313e10bf",
+            "title": "InOR-Net: Incremental 3-D Object Recognition Network for Point Cloud Representation",
+            "abstract": "3-D object recognition has successfully become an appealing research topic in the real world. However, most existing recognition models unreasonably assume that the categories of 3-D objects cannot change over time in the real world. This unrealistic assumption may result in significant performance degradation for them to learn new classes of 3-D objects consecutively due to the catastrophic forgetting on old learned classes. Moreover, they cannot explore which 3-D geometric characteristics are essential to alleviate the catastrophic forgetting on old classes of 3-D objects. To tackle the above challenges, we develop a novel Incremental 3-D Object Recognition Network (i.e., InOR-Net), which could recognize new classes of 3-D objects continuously by overcoming the catastrophic forgetting on old classes. Specifically, category-guided geometric reasoning is proposed to reason local geometric structures with distinctive 3-D characteristics of each class by leveraging intrinsic category information. We then propose a novel critic-induced geometric attention mechanism to distinguish which 3-D geometric characteristics within each class are beneficial to overcome the catastrophic forgetting on old classes of 3-D objects while preventing the negative influence of useless 3-D characteristics. In addition, a dual adaptive fairness compensations\u2019 strategy is designed to overcome the forgetting brought by class imbalance by compensating biased weights and predictions of the classifier. Comparison experiments verify the state-of-the-art performance of the proposed InOR-Net model on several public point cloud datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "46436215",
+                    "name": "Jiahua Dong"
+                },
+                {
+                    "authorId": "145702758",
+                    "name": "Yang Cong"
+                },
+                {
+                    "authorId": "7332901",
+                    "name": "Gan Sun"
+                },
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "3366777",
+                    "name": "L. Lyu"
+                },
+                {
+                    "authorId": "145409858",
+                    "name": "Jun Li"
+                },
+                {
+                    "authorId": "1796918",
+                    "name": "E. Konukoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "544cecd9102ea3cff07b033e695f55e343daffdd",
+            "title": "Federated Continual Novel Class Learning",
+            "abstract": "In a privacy-focused era, Federated Learning (FL) has emerged as a promising machine learning technique. However, most existing FL studies assume that the data distribution remains nearly fixed over time, while real-world scenarios often involve dynamic and continual changes. To equip FL systems with continual model evolution capabilities, we focus on an important problem called Federated Continual Novel Class Learning (FedCN) in this work. The biggest challenge in FedCN is to merge and align novel classes that are discovered and learned by different clients without compromising privacy. To address this, we propose a Global Alignment Learning (GAL) framework that can accurately estimate the global novel class number and provide effective guidance for local training from a global perspective, all while maintaining privacy protection. Specifically, GAL first locates high-density regions in the representation space through a bi-level clustering mechanism to estimate the novel class number, with which the global prototypes corresponding to novel classes can be constructed. Then, GAL uses a novel semantic weighted loss to capture all possible correlations between these prototypes and the training data for mitigating the impact of pseudo-label noise and data heterogeneity. Extensive experiments on various datasets demonstrate GAL's superior performance over state-of-the-art novel class discovery methods. In particular, GAL achieves significant improvements in novel-class performance, increasing the accuracy by 5.1% to 10.6% in the case of one novel class learning stage and by 7.8% to 17.9% in the case of two novel class learning stages, without sacrificing known-class performance. Moreover, GAL is shown to be effective in equipping a variety of different mainstream FL algorithms with novel class discovery and learning capability, highlighting its potential for many real-world applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108631414",
+                    "name": "Lixu Wang"
+                },
+                {
+                    "authorId": "2308913917",
+                    "name": "Chenxi Liu"
+                },
+                {
+                    "authorId": "2275765198",
+                    "name": "Junfeng Guo"
+                },
+                {
+                    "authorId": "2275767389",
+                    "name": "Jiahua Dong"
+                },
+                {
+                    "authorId": "2276121035",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2261394090",
+                    "name": "Heng Huang"
+                },
+                {
+                    "authorId": "2275773112",
+                    "name": "Qi Zhu"
+                }
+            ]
+        }
+    ]
+}

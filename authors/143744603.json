@@ -1,0 +1,325 @@
+{
+    "authorId": "143744603",
+    "papers": [
+        {
+            "paperId": "1c5f8e384b06c01d71d629040f3dc3e3fc2da6c1",
+            "title": "InPars Toolkit: A Unified and Reproducible Synthetic Data Generation Pipeline for Neural Information Retrieval",
+            "abstract": "Recent work has explored Large Language Models (LLMs) to overcome the lack of training data for Information Retrieval (IR) tasks. The generalization abilities of these models have enabled the creation of synthetic in-domain data by providing instructions and a few examples on a prompt. InPars and Promptagator have pioneered this approach and both methods have demonstrated the potential of using LLMs as synthetic data generators for IR tasks. This makes them an attractive solution for IR tasks that suffer from a lack of annotated data. However, the reproducibility of these methods was limited, because InPars' training scripts are based on TPUs -- which are not widely accessible -- and because the code for Promptagator was not released and its proprietary LLM is not publicly accessible. To fully realize the potential of these methods and make their impact more widespread in the research community, the resources need to be accessible and easy to reproduce by researchers and practitioners. Our main contribution is a unified toolkit for end-to-end reproducible synthetic data generation research, which includes generation, filtering, training and evaluation. Additionally, we provide an interface to IR libraries widely used by the community and support for GPU. Our toolkit not only reproduces the InPars method and partially reproduces Promptagator, but also provides a plug-and-play functionality allowing the use of different LLMs, exploring filtering methods and finetuning various reranker models on the generated data. We also made available all the synthetic data generated in this work for the 18 different datasets in the BEIR benchmark which took more than 2,000 GPU hours to be generated as well as the reranker models finetuned on the synthetic data. Code and data are available at https://github.com/zetaalphavector/InPars",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1394470211",
+                    "name": "Hugo Abonizio"
+                },
+                {
+                    "authorId": "2003019597",
+                    "name": "L. Bonifacio"
+                },
+                {
+                    "authorId": "2167031295",
+                    "name": "Vitor Jeronymo"
+                },
+                {
+                    "authorId": "2066179820",
+                    "name": "R. Lotufo"
+                },
+                {
+                    "authorId": "3316623",
+                    "name": "Jakub Zavrel"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        },
+        {
+            "paperId": "1eb01953f35e1c3baab90409eaa1f59507c56889",
+            "title": "A Personalized Dense Retrieval Framework for Unified Information Access",
+            "abstract": "Developing a universal model that can efficiently and effectively respond to a wide range of information access requests-from retrieval to recommendation to question answering---has been a long-lasting goal in the information retrieval community. This paper argues that the flexibility, efficiency, and effectiveness brought by the recent development in dense retrieval and approximate nearest neighbor search have smoothed the path towards achieving this goal. We develop a generic and extensible dense retrieval framework, called framework, that can handle a wide range of (personalized) information access requests, such as keyword search, query by example, and complementary item recommendation. Our proposed approach extends the capabilities of dense retrieval models for ad-hoc retrieval tasks by incorporating user-specific preferences through the development of a personalized attentive network. This allows for a more tailored and accurate personalized information access experience. Our experiments on real-world e-commerce data suggest the feasibility of developing universal information access models by demonstrating significant improvements even compared to competitive baselines specifically developed for each of these individual information access tasks. This work opens up a number of fundamental research directions for future exploration.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2029235362",
+                    "name": "Hansi Zeng"
+                },
+                {
+                    "authorId": "3378098",
+                    "name": "Surya Kallumadi"
+                },
+                {
+                    "authorId": "70347838",
+                    "name": "Zaid Alibadi"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                },
+                {
+                    "authorId": "2499986",
+                    "name": "Hamed Zamani"
+                }
+            ]
+        },
+        {
+            "paperId": "3add55c068fe19bb2e5392cbe994602a91630ec1",
+            "title": "Evaluating GPT-3.5 and GPT-4 Models on Brazilian University Admission Exams",
+            "abstract": "The present study aims to explore the capabilities of Language Models (LMs) in tackling high-stakes multiple-choice tests, represented here by the Exame Nacional do Ensino M\\'edio (ENEM), a multidisciplinary entrance examination widely adopted by Brazilian universities. This exam poses challenging tasks for LMs, since its questions may span into multiple fields of knowledge, requiring understanding of information from diverse domains. For instance, a question may require comprehension of both statistics and biology to be solved. This work analyzed responses generated by GPT-3.5 and GPT-4 models for questions presented in the 2009-2017 exams, as well as for questions of the 2022 exam, which were made public after the training of the models was completed. Furthermore, different prompt strategies were tested, including the use of Chain-of-Thought (CoT) prompts to generate explanations for answers. On the 2022 edition, the best-performing model, GPT-4 with CoT, achieved an accuracy of 87%, largely surpassing GPT-3.5 by 11 points. The code and data used on experiments are available at https://github.com/piresramon/gpt-4-enem.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2212983357",
+                    "name": "Desnes Nunes"
+                },
+                {
+                    "authorId": "2076129712",
+                    "name": "Ricardo Primi"
+                },
+                {
+                    "authorId": "2150351942",
+                    "name": "Ramon Pires"
+                },
+                {
+                    "authorId": "2066179820",
+                    "name": "R. Lotufo"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        },
+        {
+            "paperId": "610bfeb562ce11cd3a6e7588427daf489e3b4e94",
+            "title": "Simple Yet Effective Neural Ranking and Reranking Baselines for Cross-Lingual Information Retrieval",
+            "abstract": "The advent of multilingual language models has generated a resurgence of interest in cross-lingual information retrieval (CLIR), which is the task of searching documents in one language with queries from another. However, the rapid pace of progress has led to a confusing panoply of methods and reproducibility has lagged behind the state of the art. In this context, our work makes two important contributions: First, we provide a conceptual framework for organizing different approaches to cross-lingual retrieval using multi-stage architectures for mono-lingual retrieval as a scaffold. Second, we implement simple yet effective reproducible baselines in the Anserini and Pyserini IR toolkits for test collections from the TREC 2022 NeuCLIR Track, in Persian, Russian, and Chinese. Our efforts are built on a collaboration of the two teams that submitted the most effective runs to the TREC evaluation. These contributions provide a firm foundation for future advances.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145580839",
+                    "name": "Jimmy J. Lin"
+                },
+                {
+                    "authorId": "1419474794",
+                    "name": "David Alfonso-Hermelo"
+                },
+                {
+                    "authorId": "2167031295",
+                    "name": "Vitor Jeronymo"
+                },
+                {
+                    "authorId": "2023642",
+                    "name": "Ehsan Kamalloo"
+                },
+                {
+                    "authorId": "2131640257",
+                    "name": "Carlos Lassance"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                },
+                {
+                    "authorId": "2166106776",
+                    "name": "Odunayo Ogundepo"
+                },
+                {
+                    "authorId": "2066076226",
+                    "name": "Mehdi Rezagholizadeh"
+                },
+                {
+                    "authorId": "47583894",
+                    "name": "Nandan Thakur"
+                },
+                {
+                    "authorId": "2109723027",
+                    "name": "Jheng-Hong Yang"
+                },
+                {
+                    "authorId": "2118895402",
+                    "name": "Xinyu Crystina Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "74f61cdfe820d3c796cf8f511016dfc596492586",
+            "title": "NeuralMind-UNICAMP at 2022 TREC NeuCLIR: Large Boring Rerankers for Cross-lingual Retrieval",
+            "abstract": "This paper reports on a study of cross-lingual information retrieval (CLIR) using the mT5-XXL reranker on the NeuCLIR track of TREC 2022. Perhaps the biggest contribution of this study is the finding that despite the mT5 model being fine-tuned only on query-document pairs of the same language it proved to be viable for CLIR tasks, where query-document pairs are in different languages, even in the presence of suboptimal first-stage retrieval performance. The results of the study show outstanding performance across all tasks and languages, leading to a high number of winning positions. Finally, this study provides valuable insights into the use of mT5 in CLIR tasks and highlights its potential as a viable solution. For reproduction refer to https://github.com/unicamp-dl/NeuCLIR22-mT5",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167031295",
+                    "name": "Vitor Jeronymo"
+                },
+                {
+                    "authorId": "2066179820",
+                    "name": "R. Lotufo"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        },
+        {
+            "paperId": "76427fe94e4564fd5df2177bb259d93527fddca5",
+            "title": "InPars-v2: Large Language Models as Efficient Dataset Generators for Information Retrieval",
+            "abstract": "Recently, InPars introduced a method to efficiently use large language models (LLMs) in information retrieval tasks: via few-shot examples, an LLM is induced to generate relevant queries for documents. These synthetic query-document pairs can then be used to train a retriever. However, InPars and, more recently, Promptagator, rely on proprietary LLMs such as GPT-3 and FLAN to generate such datasets. In this work we introduce InPars-v2, a dataset generator that uses open-source LLMs and existing powerful rerankers to select synthetic query-document pairs for training. A simple BM25 retrieval pipeline followed by a monoT5 reranker finetuned on InPars-v2 data achieves new state-of-the-art results on the BEIR benchmark. To allow researchers to further improve our method, we open source the code, synthetic data, and finetuned models: https://github.com/zetaalphavector/inPars/tree/master/tpu",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167031295",
+                    "name": "Vitor Jeronymo"
+                },
+                {
+                    "authorId": "2003019597",
+                    "name": "L. Bonifacio"
+                },
+                {
+                    "authorId": "1394470211",
+                    "name": "Hugo Abonizio"
+                },
+                {
+                    "authorId": "2818759",
+                    "name": "Marzieh Fadaee"
+                },
+                {
+                    "authorId": "2066179820",
+                    "name": "R. Lotufo"
+                },
+                {
+                    "authorId": "3316623",
+                    "name": "Jakub Zavrel"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        },
+        {
+            "paperId": "988ca520327c2ead08d29c4907130b8a8833d769",
+            "title": "ExaRanker: Explanation-Augmented Neural Ranker",
+            "abstract": "Recent work has shown that inducing a large language model (LLM) to generate explanations prior to outputting an answer is an effective strategy to improve performance on a wide range of reasoning tasks. In this work, we show that neural rankers also benefit from explanations. We use LLMs such as GPT-3.5 to augment retrieval datasets with explanations and train a sequence-to-sequence ranking model to output a relevance label and an explanation for a given query-document pair. Our model, dubbed ExaRanker, finetuned on a few thousand examples with synthetic explanations performs on par with models finetuned on 3x more examples without explanations. Furthermore, the ExaRanker model incurs no additional computational cost during ranking and allows explanations to be requested on demand.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2202551194",
+                    "name": "Fernando Ferraretto"
+                },
+                {
+                    "authorId": "2188833716",
+                    "name": "Thiago Laitz"
+                },
+                {
+                    "authorId": "2066179820",
+                    "name": "R. Lotufo"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        },
+        {
+            "paperId": "b84c7390bf9de7e00a0d2a7a597f0385d827cf8b",
+            "title": "Neuro-Symbolic Representations for Information Retrieval",
+            "abstract": "This tutorial will provide an overview of recent advances on neuro-symbolic approaches for information retrieval. A decade ago, knowledge graphs and semantic annotations technology led to active research on how to best leverage symbolic knowledge. At the same time, neural methods have demonstrated to be versatile and highly effective. From a neural network perspective, the same representation approach can service document ranking or knowledge graph reasoning. End-to-end training allows to optimize complex methods for downstream tasks. We are at the point where both the symbolic and the neural research advances are coalescing into neuro-symbolic approaches. The underlying research questions are how to best combine symbolic and neural approaches, what kind of symbolic/neural approaches are most suitable for which use case, and how to best integrate both ideas to advance the state of the art in information retrieval. Materials are available online: https://github.com/laura-dietz/neurosymbolic-representations-for-IR",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145798497",
+                    "name": "Laura Dietz"
+                },
+                {
+                    "authorId": "143959908",
+                    "name": "Hannah Bast"
+                },
+                {
+                    "authorId": "2113355478",
+                    "name": "Shubham Chatterjee"
+                },
+                {
+                    "authorId": "49694325",
+                    "name": "Jeffrey Stephen Dalton"
+                },
+                {
+                    "authorId": "143619007",
+                    "name": "Jian-Yun Nie"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        },
+        {
+            "paperId": "c92516b47444b2b18108b8a6e5785d263173789d",
+            "title": "ExaRanker: Synthetic Explanations Improve Neural Rankers",
+            "abstract": "Recent work has shown that incorporating explanations into the output generated by large language models (LLMs) can significantly enhance performance on a broad spectrum of reasoning tasks. Our study extends these findings by demonstrating the benefits of explanations for neural rankers. By utilizing LLMs such as GPT-3.5 to enrich retrieval datasets with explanations, we trained a sequence-to-sequence ranking model, dubbed ExaRanker, to generate relevance labels and explanations for query-document pairs. The ExaRanker model, finetuned on a limited number of examples and synthetic explanations, exhibits performance comparable to models finetuned on three times more examples, but without explanations. Moreover, incorporating explanations imposes no additional computational overhead into the reranking step and allows for on-demand explanation generation. The codebase and datasets used in this study will be available at https://github.com/unicamp-dl/ExaRanker",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2202551194",
+                    "name": "Fernando Ferraretto"
+                },
+                {
+                    "authorId": "2188833716",
+                    "name": "Thiago Laitz"
+                },
+                {
+                    "authorId": "2066179820",
+                    "name": "R. Lotufo"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        },
+        {
+            "paperId": "d84a9d48362cb69ef175cdfc9908a6ffbd1aa936",
+            "title": "BLUEX: A benchmark based on Brazilian Leading Universities Entrance eXams",
+            "abstract": "One common trend in recent studies of language models (LMs) is the use of standardized tests for evaluation. However, despite being the fifth most spoken language worldwide, few such evaluations have been conducted in Portuguese. This is mainly due to the lack of high-quality datasets available to the community for carrying out evaluations in Portuguese. To address this gap, we introduce the Brazilian Leading Universities Entrance eXams (BLUEX), a dataset of entrance exams from the two leading universities in Brazil: UNICAMP and USP. The dataset includes annotated metadata for evaluating the performance of NLP models on a variety of subjects. Furthermore, BLUEX includes a collection of recently administered exams that are unlikely to be included in the training data of many popular LMs as of 2023. The dataset is also annotated to indicate the position of images in each question, providing a valuable resource for advancing the state-of-the-art in multimodal language understanding and reasoning. We describe the creation and characteristics of BLUEX and establish a benchmark through experiments with state-of-the-art LMs, demonstrating its potential for advancing the state-of-the-art in natural language understanding and reasoning in Portuguese. The data and relevant code can be found at https://github.com/Portuguese-Benchmark-Datasets/BLUEX",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2188833452",
+                    "name": "Thales Sales Almeida"
+                },
+                {
+                    "authorId": "2188833716",
+                    "name": "Thiago Laitz"
+                },
+                {
+                    "authorId": "2222822863",
+                    "name": "Giovana K. Bon'as"
+                },
+                {
+                    "authorId": "143744603",
+                    "name": "Rodrigo Nogueira"
+                }
+            ]
+        }
+    ]
+}

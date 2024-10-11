@@ -1,0 +1,293 @@
+{
+    "authorId": "4842965",
+    "papers": [
+        {
+            "paperId": "0751cf49d19ba3533e9aa7af243088fb80944193",
+            "title": "Towards Realistic Incremental Scenario in Class Incremental Semantic Segmentation",
+            "abstract": "This paper addresses the unrealistic aspect of the commonly adopted Continuous Incremental Semantic Segmentation (CISS) scenario, termed overlapped. We point out that overlapped allows the same image to reappear in future tasks with different pixel labels, which is far from practical incremental learning scenarios. Moreover, we identified that this flawed scenario may lead to biased results for two commonly used techniques in CISS, pseudo-labeling and exemplar memory, resulting in unintended advantages or disadvantages for certain techniques. To mitigate this, a practical scenario called partitioned is proposed, in which the dataset is first divided into distinct subsets representing each class, and then the subsets are assigned to each corresponding task. This efficiently addresses the issue above while meeting the requirement of CISS scenario, such as capturing the background shifts. Furthermore, we identify and address the code implementation issues related to retrieving data from the exemplar memory, which was ignored in previous works. Lastly, we introduce a simple yet competitive memory-based baseline, MiB-AugM, that handles background shifts of current tasks in the exemplar memory. This baseline achieves state-of-the-art results across multiple tasks involving learning numerous new classes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2029945525",
+                    "name": "Jihwan Kwak"
+                },
+                {
+                    "authorId": "34352481",
+                    "name": "Sungmin Cha"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "41fdc913008d7d74779827108319fdce46dadfbd",
+            "title": "Regularizing with Pseudo-Negatives for Continual Self-Supervised Learning",
+            "abstract": "We introduce a novel Pseudo-Negative Regularization (PNR) framework for effective continual self-supervised learning (CSSL). Our PNR leverages pseudo-negatives obtained through model-based augmentation in a way that newly learned representations may not contradict what has been learned in the past. Specifically, for the InfoNCE-based contrastive learning methods, we define symmetric pseudo-negatives obtained from current and previous models and use them in both main and regularization loss terms. Furthermore, we extend this idea to non-contrastive learning methods which do not inherently rely on negatives. For these methods, a pseudo-negative is defined as the output from the previous model for a differently augmented version of the anchor sample and is asymmetrically applied to the regularization term. Extensive experimental results demonstrate that our PNR framework achieves state-of-the-art performance in representation learning during CSSL by effectively balancing the trade-off between plasticity and stability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34352481",
+                    "name": "Sungmin Cha"
+                },
+                {
+                    "authorId": "2291442384",
+                    "name": "Kyunghyun Cho"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "81b6622174c6109710235030623991e18741ae5a",
+            "title": "Continual Learning in the Presence of Spurious Correlation",
+            "abstract": "Most continual learning (CL) algorithms have focused on tackling the stability-plasticity dilemma, that is, the challenge of preventing the forgetting of previous tasks while learning new ones. However, they have overlooked the impact of the knowledge transfer when the dataset in a certain task is biased - namely, when some unintended spurious correlations of the tasks are learned from the biased dataset. In that case, how would they affect learning future tasks or the knowledge already learned from the past tasks? In this work, we carefully design systematic experiments using one synthetic and two real-world datasets to answer the question from our empirical findings. Specifically, we first show through two-task CL experiments that standard CL methods, which are unaware of dataset bias, can transfer biases from one task to another, both forward and backward, and this transfer is exacerbated depending on whether the CL methods focus on the stability or the plasticity. We then present that the bias transfer also exists and even accumulate in longer sequences of tasks. Finally, we propose a simple, yet strong plug-in method for debiasing-aware continual learning, dubbed as Group-class Balanced Greedy Sampling (BGS). As a result, we show that our BGS can always reduce the bias of a CL model, with a slight loss of CL performance at most.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109499598",
+                    "name": "Donggyu Lee"
+                },
+                {
+                    "authorId": "47165273",
+                    "name": "Sangwon Jung"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "834310310d39110b8356f4646eac104144946e89",
+            "title": "Learning to Unlearn: Instance-wise Unlearning for Pre-trained Classifiers",
+            "abstract": "Since the recent advent of regulations for data protection (e.g., the General Data Protection Regulation), there has been increasing demand in deleting information learned from sensitive data in pre-trained models without retraining from scratch. The inherent vulnerability of neural networks towards adversarial attacks and unfairness also calls for a robust method to remove or correct information in an instance-wise fashion, while retaining the predictive performance across remaining data. To this end, we consider instance-wise unlearning, of which the goal is to delete information on a set of instances from a pre-trained model, by either misclassifying each instance away from its original prediction or relabeling the instance to a different label. We also propose two methods that reduce forgetting on the remaining data: 1) utilizing adversarial examples to overcome forgetting at the representation-level and 2) leveraging weight importance metrics to pinpoint network parameters guilty of propagating unwanted information. Both methods only require the pre-trained model and data instances to forget, allowing painless application to real-life settings where the entire training set is unavailable. Through extensive experimentation on various image classification benchmarks, we show that our approach effectively preserves knowledge of remaining data while unlearning given instances in both single-task and continual unlearning scenarios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34352481",
+                    "name": "Sungmin Cha"
+                },
+                {
+                    "authorId": "2149157242",
+                    "name": "Sungjun Cho"
+                },
+                {
+                    "authorId": "1474356736",
+                    "name": "Dasol Hwang"
+                },
+                {
+                    "authorId": "1697141",
+                    "name": "Honglak Lee"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                },
+                {
+                    "authorId": "3056520",
+                    "name": "Moontae Lee"
+                }
+            ]
+        },
+        {
+            "paperId": "ca1e342d7747d19562cd1a49b6ed5a16357b5735",
+            "title": "SwiFT: Swin 4D fMRI Transformer",
+            "abstract": "Modeling spatiotemporal brain dynamics from high-dimensional data, such as functional Magnetic Resonance Imaging (fMRI), is a formidable task in neuroscience. Existing approaches for fMRI analysis utilize hand-crafted features, but the process of feature extraction risks losing essential information in fMRI scans. To address this challenge, we present SwiFT (Swin 4D fMRI Transformer), a Swin Transformer architecture that can learn brain dynamics directly from fMRI volumes in a memory and computation-efficient manner. SwiFT achieves this by implementing a 4D window multi-head self-attention mechanism and absolute positional embeddings. We evaluate SwiFT using multiple large-scale resting-state fMRI datasets, including the Human Connectome Project (HCP), Adolescent Brain Cognitive Development (ABCD), and UK Biobank (UKB) datasets, to predict sex, age, and cognitive intelligence. Our experimental outcomes reveal that SwiFT consistently outperforms recent state-of-the-art models. Furthermore, by leveraging its end-to-end learning capability, we show that contrastive loss-based self-supervised pre-training of SwiFT can enhance performance on downstream tasks. Additionally, we employ an explainable AI method to identify the brain regions associated with sex classification. To our knowledge, SwiFT is the first Swin Transformer architecture to process dimensional spatiotemporal brain functional data in an end-to-end fashion. Our work holds substantial potential in facilitating scalable learning of functional brain imaging in neuroscience research by reducing the hurdles associated with applying Transformer models to high-dimensional fMRI.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2074033092",
+                    "name": "P. Y. Kim"
+                },
+                {
+                    "authorId": "2112278098",
+                    "name": "Junbeom Kwon"
+                },
+                {
+                    "authorId": "2075281223",
+                    "name": "Sunghwan Joo"
+                },
+                {
+                    "authorId": "2104225206",
+                    "name": "Sang-Peel Bae"
+                },
+                {
+                    "authorId": "2109499598",
+                    "name": "Donggyu Lee"
+                },
+                {
+                    "authorId": "2223243661",
+                    "name": "Yoonho Jung"
+                },
+                {
+                    "authorId": "2282774",
+                    "name": "Shinjae Yoo"
+                },
+                {
+                    "authorId": "40209044",
+                    "name": "Jiook Cha"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "d444ee024ac296c848a8cee326ea57c91ff273fe",
+            "title": "Issues for Continual Learning in the Presence of Dataset Bias",
+            "abstract": "While most continual learning algorithms have focused on tackling the stability-plasticity dilemma, they have overlooked the effects of the knowledge transfer when the dataset is biased \u2014 namely, when some unintended spurious correlations, not the true causal structures, of the tasks are learned from the biased dataset. In that case, how would they affect learning future tasks or the knowledge already learned from the past tasks? In this work, we design systematic experiments with a synthetic biased dataset and try to answer the above question from our empirical findings. Namely, we first show that standard continual learning methods that are unaware of dataset bias can transfer biases from one task to another, both forward and backward. In addition, we find that naively using existing debiasing methods after each continual learning step can lead to significant forgetting of past tasks and reduced overall continual learning performance. These findings highlight the need for a causality-aware design of continual learning algorithms to prevent both bias transfers and catastrophic forgetting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109499598",
+                    "name": "Donggyu Lee"
+                },
+                {
+                    "authorId": "47165273",
+                    "name": "Sangwon Jung"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "eb776076b4653f45a399e0afef781919d94b0578",
+            "title": "Re-weighting Based Group Fairness Regularization via Classwise Robust Optimization",
+            "abstract": "Many existing group fairness-aware training methods aim to achieve the group fairness by either re-weighting underrepresented groups based on certain rules or using weakly approximated surrogates for the fairness metrics in the objective as regularization terms. Although each of the learning schemes has its own strength in terms of applicability or performance, respectively, it is difficult for any method in the either category to be considered as a gold standard since their successful performances are typically limited to specific cases. To that end, we propose a principled method, dubbed as \\ours, which unifies the two learning schemes by incorporating a well-justified group fairness metric into the training objective using a class wise distributionally robust optimization (DRO) framework. We then develop an iterative optimization algorithm that minimizes the resulting objective by automatically producing the correct re-weights for each group. Our experiments show that FairDRO is scalable and easily adaptable to diverse applications, and consistently achieves the state-of-the-art performance on several benchmark datasets in terms of the accuracy-fairness trade-off, compared to recent strong baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47165273",
+                    "name": "Sangwon Jung"
+                },
+                {
+                    "authorId": "122744007",
+                    "name": "Taeeon Park"
+                },
+                {
+                    "authorId": "2647582",
+                    "name": "Sanghyuk Chun"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "0d1f5778005a51a23a59899b882eb590b28ad575",
+            "title": "Task-Balanced Batch Normalization for Exemplar-based Class-Incremental Learning",
+            "abstract": "Batch Normalization (BN) is an essential layer for training neural network models in various computer vision tasks. It has been widely used in continual learning scenarios with little discussion, but we \ufb01nd that BN should be carefully applied, particularly for the exemplar memory based class incremental learning (CIL). We \ufb01rst analyze that the empirical mean and variance obtained for normalization in a BN layer become highly biased toward the current task. To tackle its signi\ufb01cant problems in training and test phases, we propose Task-Balanced Batch Normalization (TBBN). Given each mini-batch imbalanced between the current and previous tasks, TBBN \ufb01rst reshapes and repeats the batch, calculating near task-balanced mean and variance. Second, we show that when the af\ufb01ne transformation parameters of BN are learned from a reshaped feature map, they become less-biased toward the current task. Based on our extensive CIL experiments with CIFAR-100 and ImageNet-100 datasets, we demonstrate that our TBBN is easily applicable to most of existing exemplar-based CIL algorithms, improving their performance by decreasing the forgetting on the previous tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34352481",
+                    "name": "Sungmin Cha"
+                },
+                {
+                    "authorId": "2213157408",
+                    "name": "Soonwon Hong"
+                },
+                {
+                    "authorId": "3056520",
+                    "name": "Moontae Lee"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "39de0956e5ddb13fd3a65467c4f355eb6253c490",
+            "title": "Towards Diverse Evaluation of Class Incremental Learning: A Representation Learning Perspective",
+            "abstract": "Class incremental learning (CIL) algorithms aim to continually learn new object classes from incrementally arriving data while not forgetting past learned classes. The common evaluation protocol for CIL algorithms is to measure the average test accuracy across all classes learned so far -- however, we argue that solely focusing on maximizing the test accuracy may not necessarily lead to developing a CIL algorithm that also continually learns and updates the representations, which may be transferred to the downstream tasks. To that end, we experimentally analyze neural network models trained by CIL algorithms using various evaluation protocols in representation learning and propose new analysis methods. Our experiments show that most state-of-the-art algorithms prioritize high stability and do not significantly change the learned representation, and sometimes even learn a representation of lower quality than a naive baseline. However, we observe that these algorithms can still achieve high test accuracy because they enable a model to learn a classifier that closely resembles an estimated linear classifier trained for linear probing. Furthermore, the base model learned in the first task, which involves single-task learning, exhibits varying levels of representation quality across different algorithms, and this variance impacts the final performance of CIL algorithms. Therefore, we suggest that the representation-level evaluation should be considered as an additional recipe for more diverse evaluation for CIL algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34352481",
+                    "name": "Sungmin Cha"
+                },
+                {
+                    "authorId": "2029945525",
+                    "name": "Jihwan Kwak"
+                },
+                {
+                    "authorId": "2067760840",
+                    "name": "Dongsub Shim"
+                },
+                {
+                    "authorId": "2108926667",
+                    "name": "Hyunwoo J. Kim"
+                },
+                {
+                    "authorId": "3056520",
+                    "name": "Moontae Lee"
+                },
+                {
+                    "authorId": "2118338545",
+                    "name": "Honglak Lee"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "409c0a96af63ff0bfc13f4bf64ed5c3e78100f48",
+            "title": "Descent Steps of a Relation-Aware Energy Produce Heterogeneous Graph Neural Networks",
+            "abstract": "Heterogeneous graph neural networks (GNNs) achieve strong performance on node classification tasks in a semi-supervised learning setting. However, as in the simpler homogeneous GNN case, message-passing-based heterogeneous GNNs may struggle to balance between resisting the oversmoothing that may occur in deep models, and capturing long-range dependencies of graph structured data. Moreover, the complexity of this trade-off is compounded in the heterogeneous graph case due to the disparate heterophily relationships between nodes of different types. To address these issues, we propose a novel heterogeneous GNN architecture in which layers are derived from optimization steps that descend a novel relation-aware energy function. The corresponding minimizer is fully differentiable with respect to the energy function parameters, such that bilevel optimization can be applied to effectively learn a functional form whose minimum provides optimal node representations for subsequent classification tasks. In particular, this methodology allows us to model diverse heterophily relationships between different node types while avoiding oversmoothing effects. Experimental results on 8 heterogeneous graph benchmarks demonstrates that our proposed method can achieve competitive node classification accuracy",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112569591",
+                    "name": "Hongjoon Ahn"
+                },
+                {
+                    "authorId": "2108658833",
+                    "name": "You\u2010Jun Yang"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        }
+    ]
+}

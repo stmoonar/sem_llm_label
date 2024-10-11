@@ -1,0 +1,165 @@
+{
+    "authorId": "2087919519",
+    "papers": [
+        {
+            "paperId": "c24132d2eb4f4599b4abd363fe55d284d86bd65d",
+            "title": "Streaming Weighted Sampling over Join Queries",
+            "abstract": "Join queries are a fundamental database tool, capturing a range of tasks that involve linking heterogeneous data sources. However, with massive table sizes, it is often impractical to keep these in memory, and we can only take one or few streaming passes over them. Moreover, building out the full join result (e.g., linking heterogeneous data sources along quasi-identifiers) can lead to a combinatorial explosion of results due to many-to-many links. Random sampling is a natural tool to boil this oversized result down to a representative subset with well-understood statistical properties, but turns out to be a challenging task due to the combinatorial nature of the sampling domain. Existing techniques in the literature focus solely on the setting with tabular data residing in main memory, and do not address aspects such as stream operation, weighted sampling and more general join operators that are urgently needed in a modern data processing context. The main contribution of this work is to meet these needs with more lightweight practical approaches. First, a bijection between the sampling problem and a graph problem is introduced to support weighted sampling and common join operators. Second, the sampling techniques are refined to minimise the number of streaming passes. Third, techniques are presented to deal with very large tables under limited memory. Finally, the proposed techniques are compared to existing approaches that rely on database indices and the results indicate substantial memory savings, reduced runtimes for ad-hoc queries and competitive amortised runtimes. All pertinent code and data can be found at:",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "b53e1cf4c0837ee6f7dc3864e47be2d1c95d6a34",
+            "title": "Weighted Random Sampling over Joins",
+            "abstract": "Joining records with all other records that meet a linkage condition can result in an astronomically large number of combinations due to many-to-many relationships. For such challenging (acyclic) joins, a random sample over the join result is a practical alternative to working with the oversized join result. Whereas prior works are limited to uniform join sampling where each join row is assigned the same probability, the scope is extended in this work to weighted sampling to support emerging applications such as scientific discovery in observational data and privacy-preserving query answering. Notwithstanding some naive methods, this work presents the first approach for weighted random sampling from join results. Due to a lack of baselines, experiments over various join types and real-world data sets are conducted to show substantial memory savings and competitive performance with main-memory index-based approaches in the equal-probability setting. In contrast to existing uniform sampling approaches that require prepared structures that occupy contested resources to squeeze out slightly faster query-times, the proposed approaches exhibit qualities that are urgently needed in practice, namely reduced memory footprint, streaming operation, support for selections, outer joins, semi joins and anti joins and unequal-probability sampling. All pertinent code and data can be found at: https://github.com/shekelyan/weightedjoinsampling",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "159a9cd819ec1e8542c32d93442d9d077acd4b59",
+            "title": "Learned Approximate Query Processing: Make it Light, Accurate and Fast",
+            "abstract": "The advent of learning algorithms has revealed many opportunities for improving Data Systems\u2019 functionality and performance. Ap-proximate Query Processing (AQP) is one such area where machine learning (ML) models have been used to improve query execution efficiency and accuracy, outperforming the traditional sampling-based approaches. Based on our group\u2019s experience in the ML-for-DBs area, [3\u20137, 29, 37\u201339], we contribute a novel AQP engine, coined DBEst++ , which extends our previous effort (DBEst, [29]) and sets the state of the art in terms of accuracy and query execution efficiency. The DBEst++ salient design objective is to derive lightweight ML models for the task, allowing a plethora of ML models to coexist, covering a very large fraction of the expected analytical query workload without requiring very large memory footprints. The DBEst++ salient architectural feature rests on a novel blending of word embedding models with neural networks tasked with regression-based predictions for density estimation and aggregation-attribute values. We present design features and motivations/rationale behind DBEst++ and discuss how all the ML models are brought together. We also present how DBEst++ can deal with challenging scenarios, including how to deal with high-cardinality categorical attributes and how to ensure high accuracy under data updates. We provide a detailed experimental evaluation using the TPC-DS and Flights datasets against state of the art learned and sampling-based AQP engines, showcasing DBEst++ \u2019s gains in terms of accuracy, response-times, and memory space overheads.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "3081947",
+                    "name": "Mehrdad Almasi"
+                },
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "671061237b92bd490f7857654d96baf0bf7ab807",
+            "title": "PGMJoins: Random Join Sampling with Graphical Models",
+            "abstract": "Modern databases face formidable challenges when called to join (several) massive tables. Joins (especially when entailing many-to-many joins) are very time- and resource-consuming, join results can be too big to keep in memory, and performing analytics/learning tasks over them costs dearly in terms of time, resources, and money (in the cloud). Moreover, although random sampling is a promising idea to mitigate the above problems, the current state of the art leaves lots of room for improvements. With this paper we contribute a principled solution, coined PGMJoins. PGMJoins adapts Probabilistic Graphical Models to deriving provably random samples of the join result for (n-way) key joins, many-to-many joins, and cyclic and acyclic joins. PGMJoins contributes optimizations both for deriving the structure of the graph and for PGM inference. It also contributes a novel Sum-Product Message Passing Algorithm (SP-MPA) to make a uniform sample of the joint distribution (join result) efficiently and a novel way to deal with cyclic joins. Despite the use of PGMs, the learned joint distribution is not approximated, and the uniform samples are drawn from the true distribution. Our experimentation using queries and datasets from TPC-H, JOB, TPC-DS, and Twitter shows PGMJoins to outperform the state of the art (by 2X-28X).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2034659",
+                    "name": "A. Shanghooshabad"
+                },
+                {
+                    "authorId": "151499040",
+                    "name": "M. Kurmanji"
+                },
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "2451992",
+                    "name": "Michael Shekelyan"
+                },
+                {
+                    "authorId": "3081947",
+                    "name": "Mehrdad Almasi"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "7065821183507bde38333d02482cb2aa95a3e805",
+            "title": "Query-Centric Regression for In-DBMS Analytics",
+            "abstract": "Research in enriching DBs with Machine Learning (ML) models is receiving increasingly greater attention. This paper experimentally analyzes the problem of empowering data systems with (and its users with access to) regression models (RMs). The paper offers a data system\u2019s perspective, which unveils an interesting \u2018 impedance mismatch \u2032 problem: ML models aim to offer a high expected overall prediction accuracy, which essentially assumes that queries will target data using the same distributions of the data on which the models are trained. However, in data management it is widely recognized that query distributions do not necessarily follow data distributions. Queries using selection operators target specific data subspaces on which, even an overall highly-accurate model, may be weak. If such queried subspaces are popular, large numbers of queries will suffer. The paper will reveal, shed light, and quantify this \u2018 impedance mismatch \u2032 phenomenon. It will study in detail 8 real-life data sets and data from TPC-DS and experiment with various dimensionalities therein. It will employ new appropriate metrics, substantiating the problem across a wide variety of popular RMs, ranging from simple linear models to advanced, state-of-the-art, ensembles (which enjoy excellent generalization performance). It will put forth and study a new, query-centric , model that addresses this problem, improving per-query accuracy, while also offering excellent overall accuracy. Finally, it will study the effects of scale on the problem and its solutions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        },
+        {
+            "paperId": "387881afb8ce8b057edd3c4389a8962ebc0a6344",
+            "title": "DBEst: Revisiting Approximate Query Processing Engines with Machine Learning Models",
+            "abstract": "In the era of big data, computing exact answers to analytical queries becomes prohibitively expensive. This greatly increases the value of approaches that can compute efficiently approximate, but highly-accurate, answers to analytical queries. Alas, the state of the art still suffers from many shortcomings: Errors are still high unless large memory investments are made. Many important analytics tasks are not supported. Query response times are too long and thus approaches rely on parallel execution of queries atop large big data analytics clusters, in-situ or in the cloud, whose acquisition/use costs dearly. Hence, the following questions are crucial: Can we develop AQP engines that reduce response times by orders of magnitude, ensure high accuracy, and support most aggregate functions? With smaller memory footprints and small overheads to build the state upon which they are based? With this paper, we show that the answers to all questions above can be positive. The paper presents DBEst, a system based on Machine Learning models (regression models and probability density estimators). It will discuss its limitations, promises, and how it can complement existing systems. It will substantiate its advantages using queries and data from the TPC-DS benchmark and real-life datasets, compared against state of the art AQP engines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2087919519",
+                    "name": "Qingzhi Ma"
+                },
+                {
+                    "authorId": "1732298",
+                    "name": "P. Triantafillou"
+                }
+            ]
+        }
+    ]
+}

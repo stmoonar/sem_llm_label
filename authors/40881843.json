@@ -1,0 +1,333 @@
+{
+    "authorId": "40881843",
+    "papers": [
+        {
+            "paperId": "4efc5543d34de96e0f6eb97cc9ccecbaf94ceae3",
+            "title": "Extreme Miscalibration and the Illusion of Adversarial Robustness",
+            "abstract": "Deep learning-based Natural Language Processing (NLP) models are vulnerable to adversarial attacks, where small perturbations can cause a model to misclassify. Adversarial Training (AT) is often used to increase model robustness. However, we have discovered an intriguing phenomenon: deliberately or accidentally miscalibrating models masks gradients in a way that interferes with adversarial attack search methods, giving rise to an apparent increase in robustness. We show that this observed gain in robustness is an illusion of robustness (IOR), and demonstrate how an adversary can perform various forms of test-time temperature calibration to nullify the aforementioned interference and allow the adversarial attack to find adversarial examples. Hence, we urge the NLP community to incorporate test-time temperature scaling into their robustness evaluations to ensure that any observed gains are genuine. Finally, we show how the temperature can be scaled during \\textit{training} to improve genuine robustness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2007545675",
+                    "name": "Vyas Raina"
+                },
+                {
+                    "authorId": "2289657888",
+                    "name": "Samson Tan"
+                },
+                {
+                    "authorId": "1678641",
+                    "name": "V. Cevher"
+                },
+                {
+                    "authorId": "2287837386",
+                    "name": "Aditya Rawal"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "2064547804",
+                    "name": "George Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "5dfe0272bb24399bb1b6a33add2d525c241204ad",
+            "title": "Pre-training Differentially Private Models with Limited Public Data",
+            "abstract": "The superior performance of large foundation models relies on the use of massive amounts of high-quality data, which often contain sensitive, private and copyrighted material that requires formal protection. While differential privacy (DP) is a prominent method to gauge the degree of security provided to the models, its application is commonly limited to the model fine-tuning stage, due to the performance degradation when applying DP during the pre-training stage. Consequently, DP is yet not capable of protecting a substantial portion of the data used during the initial pre-training process. In this work, we first provide a theoretical understanding of the efficacy of DP training by analyzing the per-iteration loss improvement. We make a key observation that DP optimizers' performance degradation can be significantly mitigated by the use of limited public data, which leads to a novel DP continual pre-training strategy. Empirically, using only 10\\% of public data, our strategy can achieve DP accuracy of 41.5\\% on ImageNet-21k (with $\\epsilon=8$), as well as non-DP accuracy of 55.7\\% and and 60.0\\% on downstream tasks Places365 and iNaturalist-2021, respectively, on par with state-of-the-art standard pre-training and substantially outperforming existing DP pre-trained models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151267882",
+                    "name": "Zhiqi Bu"
+                },
+                {
+                    "authorId": "46448049",
+                    "name": "Xinwei Zhang"
+                },
+                {
+                    "authorId": "2268336812",
+                    "name": "Mingyi Hong"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "2064547804",
+                    "name": "George Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "d28d5f0928ede8b15e79ae92e58ea2f78a4be9eb",
+            "title": "Revisiting SMoE Language Models by Evaluating Inefficiencies with Task Specific Expert Pruning",
+            "abstract": "Sparse Mixture of Expert (SMoE) models have emerged as a scalable alternative to dense models in language modeling. These models use conditionally activated feedforward subnetworks in transformer blocks, allowing for a separation between total model parameters and per-example computation. However, large token-routed SMoE models face a significant challenge: during inference, the entire model must be used for a sequence or a batch, resulting in high latencies in a distributed setting that offsets the advantages of per-token sparse activation. Our research explores task-specific model pruning to inform decisions about designing SMoE architectures, mainly modulating the choice of expert counts in pretraining. We investigate whether such pruned models offer advantages over smaller SMoE models trained from scratch, when evaluating and comparing them individually on tasks. To that end, we introduce an adaptive task-aware pruning technique UNCURL to reduce the number of experts per MoE layer in an offline manner post-training. Our findings reveal a threshold pruning factor for the reduction that depends on the number of experts used in pretraining, above which, the reduction starts to degrade model performance. These insights contribute to our understanding of model design choices when pretraining with SMoE architectures, particularly useful when considering task-specific inference optimization for later stages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3081847",
+                    "name": "Soumajyoti Sarkar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "1678641",
+                    "name": "V. Cevher"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "2319409769",
+                    "name": "Thomas Brox"
+                },
+                {
+                    "authorId": "2064547804",
+                    "name": "George Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "0ff029e91b8185739646a4ac6ab0713909d31d16",
+            "title": "Large Language Models of Code Fail at Completing Code with Potential Bugs",
+            "abstract": "Large language models of code (Code-LLMs) have recently brought tremendous advances to code completion, a fundamental feature of programming assistance and code intelligence. However, most existing works ignore the possible presence of bugs in the code context for generation, which are inevitable in software development. Therefore, we introduce and study the buggy-code completion problem, inspired by the realistic scenario of real-time code suggestion where the code context contains potential bugs -- anti-patterns that can become bugs in the completed program. To systematically study the task, we introduce two datasets: one with synthetic bugs derived from semantics-altering operator changes (buggy-HumanEval) and one with realistic bugs derived from user submissions to coding problems (buggy-FixEval). We find that the presence of potential bugs significantly degrades the generation performance of the high-performing Code-LLMs. For instance, the passing rates of CODEGEN-2B-MONO on test cases of buggy-HumanEval drop more than 50% given a single potential bug in the context. Finally, we investigate several post-hoc methods for mitigating the adverse effect of potential bugs and find that there remains a significant gap in post-mitigation performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Tuan Dinh"
+                },
+                {
+                    "authorId": "26128283",
+                    "name": "Jinman Zhao"
+                },
+                {
+                    "authorId": "145814654",
+                    "name": "Samson Tan"
+                },
+                {
+                    "authorId": "1905927",
+                    "name": "Renato M. P. Negrinho"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "65f86451e96ad61ffca50eed6a007a19bc03093d",
+            "title": "Better Context Makes Better Code Language Models: A Case Study on Function Call Argument Completion",
+            "abstract": "Pretrained code language models have enabled great progress towards program synthesis. However, common approaches only consider in-file local context and thus miss information and constraints imposed by other parts of the codebase and its external dependencies. Existing code completion benchmarks also lack such context. To resolve these restrictions we curate a new dataset of permissively licensed Python packages that includes full projects and their dependencies and provide tools to extract non-local information with the help of program analyzers. We then focus on the task of function call argument completion which requires predicting the arguments to function calls. We show that existing code completion models do not yield good results on our completion task. To better solve this task, we query a program analyzer for information relevant to a given function call, and consider ways to provide the analyzer results to different code completion models during inference and training. Our experiments show that providing access to the function implementation and function usages greatly improves the argument completion performance. Our ablation study provides further insights on how different types of information available from the program analyzer and different ways of incorporating the information affect the model performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "146922081",
+                    "name": "Hengzhi Pei"
+                },
+                {
+                    "authorId": "26128283",
+                    "name": "Jinman Zhao"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "a7e58dc03d029100fd437e229f7ee80e976fc842",
+            "title": "HYTREL: Hypergraph-enhanced Tabular Data Representation Learning",
+            "abstract": "Language models pretrained on large collections of tabular data have demonstrated their effectiveness in several downstream tasks. However, many of these models do not take into account the row/column permutation invariances, hierarchical structure, etc. that exist in tabular data. To alleviate these limitations, we propose HYTREL, a tabular language model, that captures the permutation invariances and three more structural properties of tabular data by using hypergraphs - where the table cells make up the nodes and the cells occurring jointly together in each row, column, and the entire table are used to form three different types of hyperedges. We show that HYTREL is maximally invariant under certain conditions for tabular data, i.e., two tables obtain the same representations via HYTREL iff the two tables are identical up to permutations. Our empirical results demonstrate that HYTREL consistently outperforms other competitive baselines on four downstream tasks with minimal pretraining, illustrating the advantages of incorporating the inductive biases associated with tabular data into the representations. Finally, our qualitative analyses showcase that HYTREL can assimilate the table structures to generate robust representations for the cells, rows, columns, and the entire table.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2901524",
+                    "name": "Pei Chen"
+                },
+                {
+                    "authorId": "3081847",
+                    "name": "Soumajyoti Sarkar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "40372969",
+                    "name": "Ruihong Huang"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "bbda46e106fe60f24fdb7d2623fd1d3269fb1f17",
+            "title": "On the accuracy and efficiency of group-wise clipping in differentially private optimization",
+            "abstract": "Recent advances have substantially improved the accuracy, memory cost, and training speed of differentially private (DP) deep learning, especially on large vision and language models with millions to billions of parameters. In this work, we thoroughly study the per-sample gradient clipping style, a key component in DP optimization. We show that different clipping styles have the same time complexity but instantiate an accuracy-memory trade-off: while the all-layer clipping (of coarse granularity) is the most prevalent and usually gives the best accuracy, it incurs heavier memory cost compared to other group-wise clipping, such as the layer-wise clipping (of finer granularity). We formalize this trade-off through our convergence theory and complexity analysis. Importantly, we demonstrate that the accuracy gap between group-wise clipping and all-layer clipping becomes smaller for larger models, while the memory advantage of the group-wise clipping remains. Consequently, the group-wise clipping allows DP optimization of large models to achieve high accuracy and low peak memory simultaneously.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151267882",
+                    "name": "Zhiqi Bu"
+                },
+                {
+                    "authorId": "2255754181",
+                    "name": "Ruixuan Liu"
+                },
+                {
+                    "authorId": "2253843063",
+                    "name": "Yu-xiang Wang"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "d2eeab8d00cb836be735213b641efb0456bc6136",
+            "title": "Coupling public and private gradient provably helps optimization",
+            "abstract": "The success of large neural networks is crucially determined by the availability of data. It has been observed that training only on a small amount of public data, or privately on the abundant private data can lead to undesirable degradation of accuracy. In this work, we leverage both private and public data to improve the optimization, by coupling their gradients via a weighted linear combination. We formulate an optimal solution for the optimal weight in the convex setting to indicate that the weighting coefficient should be hyperparameter-dependent. Then, we prove the acceleration in the convergence of non-convex loss and the effects of hyper-parameters such as privacy budget, number of iterations, batch size, and model size on the choice of the weighting coefficient. We support our analysis with empirical experiments across language and vision benchmarks, and provide a guideline for choosing the optimal weight of the gradient coupling.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2255754181",
+                    "name": "Ruixuan Liu"
+                },
+                {
+                    "authorId": "151267882",
+                    "name": "Zhiqi Bu"
+                },
+                {
+                    "authorId": "2253843063",
+                    "name": "Yu-xiang Wang"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "da4f5ce72b98cb5bce3ad7633794acd396246081",
+            "title": "Zero redundancy distributed learning with differential privacy",
+            "abstract": "Deep learning using large models have achieved great success in a wide range of domains. However, training these models on billions of parameters is very challenging in terms of the training speed, memory cost, and communication efficiency, especially under the privacy-preserving regime with differential privacy (DP). On the one hand, DP optimization has comparable efficiency to the standard non-private optimization on a single GPU, but on multiple GPUs, existing DP distributed learning (such as pipeline parallel) has suffered from significantly worse efficiency. On the other hand, the Zero Redundancy Optimizer (ZeRO) is a state-of-the-art solution to the standard distributed learning, exhibiting excellent training efficiency on large models, but to work compatibly with DP is technically complicated. In this work, we develop a new systematic solution, DP-ZeRO, (I) to scale up the trainable DP model size, e.g. to GPT-100B, (II) to obtain the same computation and communication efficiency as the standard ZeRO, and (III) to enable mixed-precision DP training. Our DP-ZeRO, like the standard ZeRO, has the potential to train models with arbitrary size and is evaluated on the world's largest DP models in terms of the number of trainable parameters.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151267882",
+                    "name": "Zhiqi Bu"
+                },
+                {
+                    "authorId": "2293313467",
+                    "name": "Justin Chiu"
+                },
+                {
+                    "authorId": "2255754181",
+                    "name": "Ruixuan Liu"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "3d4eaaa47ae3054036449675b407a7e2b5f9219e",
+            "title": "Exploring the Role of Task Transferability in Large-Scale Multi-Task Learning",
+            "abstract": "Recent work has found that multi-task training with a large number of diverse tasks can uniformly improve downstream performance on unseen target tasks. In contrast, literature on task transferability has established that the choice of intermediate tasks can heavily affect downstream task performance. In this work, we aim to disentangle the effect of scale and relatedness of tasks in multi-task representation learning. We find that, on average, increasing the scale of multi-task learning, in terms of the number of tasks, indeed results in better learned representations than smaller multi-task setups. However, if the target tasks are known ahead of time, then training on a smaller set of related tasks is competitive to the large-scale multi-task training at a reduced computational cost.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2044959912",
+                    "name": "Vishakh Padmakumar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "143668305",
+                    "name": "Miguel Ballesteros"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "144533687",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        }
+    ]
+}

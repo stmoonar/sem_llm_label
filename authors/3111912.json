@@ -1,0 +1,437 @@
+{
+    "authorId": "3111912",
+    "papers": [
+        {
+            "paperId": "2905dc5ad70b462f4f5543df3047dffadb5c0e4e",
+            "title": "Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling",
+            "abstract": "Large language models are trained on massive scrapes of the web, which are often unstructured, noisy, and poorly phrased. Current scaling laws show that learning from such data requires an abundance of both compute and data, which grows with the size of the model being trained. This is infeasible both because of the large compute costs and duration associated with pre-training, and the impending scarcity of high-quality data on the web. In this work, we propose Web Rephrase Augmented Pre-training ($\\textbf{WRAP}$) that uses an off-the-shelf instruction-tuned model prompted to paraphrase documents on the web in specific styles such as\"like Wikipedia\"or in\"question-answer format\"to jointly pre-train LLMs on real and synthetic rephrases. First, we show that using WRAP on the C4 dataset, which is naturally noisy, speeds up pre-training by $\\sim3x$. At the same pre-training compute budget, it improves perplexity by more than 10% on average across different subsets of the Pile, and improves zero-shot question answer accuracy across 13 tasks by more than 2%. Second, we investigate the impact of the re-phrasing style on the performance of the model, offering insights into how the composition of the training data can impact the performance of LLMs in OOD settings. Our gains are attributed to the fact that re-phrased synthetic data has higher utility than just real data because it (i) incorporates style diversity that closely reflects downstream evaluation style, and (ii) has higher 'quality' than web-scraped data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "153742303",
+                    "name": "Pratyush Maini"
+                },
+                {
+                    "authorId": "31855650",
+                    "name": "Skyler Seto"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2529182",
+                    "name": "David Grangier"
+                },
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "4393655baf5a41bf365741bf2b6de89a43c35ad0",
+            "title": "dMel: Speech Tokenization made Simple",
+            "abstract": "Large language models have revolutionized natural language processing by leveraging self-supervised pretraining on vast textual data. Inspired by this success, researchers have investigated complicated speech tokenization methods to discretize continuous speech signals so that language modeling techniques can be applied to speech data. However, existing approaches either model semantic (content) tokens, potentially losing acoustic information, or model acoustic tokens, risking the loss of semantic (content) information. Having multiple token types also complicates the architecture and requires additional pretraining. Here we show that discretizing mel-filterbank channels into discrete intensity bins produces a simple representation (dMel), that performs better than other existing speech tokenization methods. Using an LM-style transformer architecture for speech-text modeling, we comprehensively evaluate different speech tokenization methods on speech recognition (ASR) and speech synthesis (TTS). Our results demonstrate the effectiveness of dMel in achieving high performance on both tasks within a unified framework, paving the way for efficient and effective joint modeling of speech and text.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2256707284",
+                    "name": "Tatiana Likhomanenko"
+                },
+                {
+                    "authorId": "2290365185",
+                    "name": "Ruixiang Zhang"
+                },
+                {
+                    "authorId": "2038089137",
+                    "name": "Zijin Gu"
+                },
+                {
+                    "authorId": "8319315",
+                    "name": "Zakaria Aldeneh"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "4836552444124ac88c24323497993090a853b0d4",
+            "title": "Denoising LM: Pushing the Limits of Error Correction Models for Speech Recognition",
+            "abstract": "Language models (LMs) have long been used to improve results of automatic speech recognition (ASR) systems, but they are unaware of the errors that ASR systems make. Error correction models are designed to fix ASR errors, however, they showed little improvement over traditional LMs mainly due to the lack of supervised training data. In this paper, we present Denoising LM (DLM), which is a $\\textit{scaled}$ error correction model trained with vast amounts of synthetic data, significantly exceeding prior attempts meanwhile achieving new state-of-the-art ASR performance. We use text-to-speech (TTS) systems to synthesize audio, which is fed into an ASR system to produce noisy hypotheses, which are then paired with the original texts to train the DLM. DLM has several $\\textit{key ingredients}$: (i) up-scaled model and data; (ii) usage of multi-speaker TTS systems; (iii) combination of multiple noise augmentation strategies; and (iv) new decoding techniques. With a Transformer-CTC ASR, DLM achieves 1.5% word error rate (WER) on $\\textit{test-clean}$ and 3.3% WER on $\\textit{test-other}$ on Librispeech, which to our knowledge are the best reported numbers in the setting where no external audio data are used and even match self-supervised methods which use external audio data. Furthermore, a single DLM is applicable to different ASRs, and greatly surpassing the performance of conventional LM based beam-search rescoring. These results indicate that properly investigated error correction models have the potential to replace conventional LMs, holding the key to a new level of accuracy in ASR systems.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2038089137",
+                    "name": "Zijin Gu"
+                },
+                {
+                    "authorId": "2256707284",
+                    "name": "Tatiana Likhomanenko"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2303254408",
+                    "name": "Erik McDermott"
+                },
+                {
+                    "authorId": "2939803",
+                    "name": "R. Collobert"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "4da96a97a09dab8181c90a3cb195ee0ccb7e8601",
+            "title": "Improving GFlowNets for Text-to-Image Diffusion Alignment",
+            "abstract": "Diffusion models have become the de-facto approach for generating visual data, which are trained to match the distribution of the training dataset. In addition, we also want to control generation to fulfill desired properties such as alignment to a text description, which can be specified with a black-box reward function. Prior works fine-tune pretrained diffusion models to achieve this goal through reinforcement learning-based algorithms. Nonetheless, they suffer from issues including slow credit assignment as well as low quality in their generated samples. In this work, we explore techniques that do not directly maximize the reward but rather generate high-reward images with relatively high probability -- a natural scenario for the framework of generative flow networks (GFlowNets). To this end, we propose the Diffusion Alignment with GFlowNet (DAG) algorithm to post-train diffusion models with black-box property functions. Extensive experiments on Stable Diffusion and various reward specifications corroborate that our method could effectively align large-scale text-to-image diffusion models with given reward information.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2304711602",
+                    "name": "Dinghuai Zhang"
+                },
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                },
+                {
+                    "authorId": "2287733778",
+                    "name": "Jiatao Gu"
+                },
+                {
+                    "authorId": "2290365185",
+                    "name": "Ruixiang Zhang"
+                },
+                {
+                    "authorId": "49158771",
+                    "name": "J. Susskind"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "2443456",
+                    "name": "Shuangfei Zhai"
+                }
+            ]
+        },
+        {
+            "paperId": "5e7d4bb5431bc91d0ffd1b4e1575d7227021eaf8",
+            "title": "Divide-or-Conquer? Which Part Should You Distill Your LLM?",
+            "abstract": "Recent methods have demonstrated that Large Language Models (LLMs) can solve reasoning tasks better when they are encouraged to solve subtasks of the main task first. In this paper we devise a similar strategy that breaks down reasoning tasks into a problem decomposition phase and a problem solving phase and show that the strategy is able to outperform a single stage solution. Further, we hypothesize that the decomposition should be easier to distill into a smaller model compared to the problem solving because the latter requires large amounts of domain knowledge while the former only requires learning general problem solving strategies. We propose methods to distill these two capabilities and evaluate their impact on reasoning outcomes and inference cost. We find that we can distill the problem decomposition phase and at the same time achieve good generalization across tasks, datasets, and models. However, it is harder to distill the problem solving capability without losing performance and the resulting distilled model struggles with generalization. These results indicate that by using smaller, distilled problem decomposition models in combination with problem solving LLMs we can achieve reasoning with cost-efficient inference and local adaptation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109569304",
+                    "name": "Zhuofeng Wu"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2287241564",
+                    "name": "Aonan Zhang"
+                },
+                {
+                    "authorId": "2287733778",
+                    "name": "Jiatao Gu"
+                },
+                {
+                    "authorId": "2258720173",
+                    "name": "V. Vydiswaran"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "672ad7c1bd1a6e4e47e4748b878a448225f07a10",
+            "title": "How Far Are We from Intelligent Visual Deductive Reasoning?",
+            "abstract": "Vision-Language Models (VLMs) have recently demonstrated incredible strides on diverse vision language tasks. We dig into vision-based deductive reasoning, a more sophisticated but less explored realm, and find previously unexposed blindspots in the current SOTA VLMs. Specifically, we leverage Raven's Progressive Matrices (RPMs), to assess VLMs' abilities to perform multi-hop relational and deductive reasoning relying solely on visual clues. We perform comprehensive evaluations of several popular VLMs employing standard strategies such as in-context learning, self-consistency, and Chain-of-thoughts (CoT) on three diverse datasets, including the Mensa IQ test, IntelligenceTest, and RAVEN. The results reveal that despite the impressive capabilities of LLMs in text-based reasoning, we are still far from achieving comparable proficiency in visual deductive reasoning. We found that certain standard strategies that are effective when applied to LLMs do not seamlessly translate to the challenges presented by visual reasoning tasks. A detailed analysis reveals that VLMs struggle to solve these tasks mainly because they are unable to perceive and comprehend multiple, confounding abstract patterns in RPM examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                },
+                {
+                    "authorId": "37374479",
+                    "name": "Richard He Bai"
+                },
+                {
+                    "authorId": "2290365185",
+                    "name": "Ruixiang Zhang"
+                },
+                {
+                    "authorId": "2287733778",
+                    "name": "Jiatao Gu"
+                },
+                {
+                    "authorId": "2443456",
+                    "name": "Shuangfei Zhai"
+                },
+                {
+                    "authorId": "49158771",
+                    "name": "J. Susskind"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                }
+            ]
+        },
+        {
+            "paperId": "a9dc0f71e67e3af597d8e4b4e9c35fb30778aaba",
+            "title": "Achieving Human Level Competitive Robot Table Tennis",
+            "abstract": "Achieving human-level speed and performance on real world tasks is a north star for the robotics research community. This work takes a step towards that goal and presents the first learned robot agent that reaches amateur human-level performance in competitive table tennis. Table tennis is a physically demanding sport which requires human players to undergo years of training to achieve an advanced level of proficiency. In this paper, we contribute (1) a hierarchical and modular policy architecture consisting of (i) low level controllers with their detailed skill descriptors which model the agent's capabilities and help to bridge the sim-to-real gap and (ii) a high level controller that chooses the low level skills, (2) techniques for enabling zero-shot sim-to-real including an iterative approach to defining the task distribution that is grounded in the real-world and defines an automatic curriculum, and (3) real time adaptation to unseen opponents. Policy performance was assessed through 29 robot vs. human matches of which the robot won 45% (13/29). All humans were unseen players and their skill level varied from beginner to tournament level. Whilst the robot lost all matches vs. the most advanced players it won 100% matches vs. beginners and 55% matches vs. intermediate players, demonstrating solidly amateur human-level performance. Videos of the matches can be viewed at https://sites.google.com/view/competitive-robot-table-tennis",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2315124957",
+                    "name": "David B. D'Ambrosio"
+                },
+                {
+                    "authorId": "2394165",
+                    "name": "Saminda Abeyruwan"
+                },
+                {
+                    "authorId": "30131402",
+                    "name": "L. Graesser"
+                },
+                {
+                    "authorId": "2106754",
+                    "name": "Atil Iscen"
+                },
+                {
+                    "authorId": "2207330",
+                    "name": "H. B. Amor"
+                },
+                {
+                    "authorId": "2238127835",
+                    "name": "Alex Bewley"
+                },
+                {
+                    "authorId": "2221140997",
+                    "name": "Barney J. Reed"
+                },
+                {
+                    "authorId": "2163522073",
+                    "name": "Krista Reymann"
+                },
+                {
+                    "authorId": "2281641163",
+                    "name": "Leila Takayama"
+                },
+                {
+                    "authorId": "2109481",
+                    "name": "Yuval Tassa"
+                },
+                {
+                    "authorId": "2261085335",
+                    "name": "Krzysztof Choromanski"
+                },
+                {
+                    "authorId": "1716551",
+                    "name": "Erwin Coumans"
+                },
+                {
+                    "authorId": "2058985645",
+                    "name": "Deepali Jain"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "2315123068",
+                    "name": "Natasha Jaques"
+                },
+                {
+                    "authorId": "2315123167",
+                    "name": "Satoshi Kataoka"
+                },
+                {
+                    "authorId": "2161342687",
+                    "name": "Yuheng Kuang"
+                },
+                {
+                    "authorId": "2849560",
+                    "name": "N. Lazic"
+                },
+                {
+                    "authorId": "2071658",
+                    "name": "R. Mahjourian"
+                },
+                {
+                    "authorId": "144375552",
+                    "name": "Sherry Moore"
+                },
+                {
+                    "authorId": "21095952",
+                    "name": "Kenneth Oslund"
+                },
+                {
+                    "authorId": "2176182697",
+                    "name": "Anish Shankar"
+                },
+                {
+                    "authorId": "1808676",
+                    "name": "Vikas Sindhwani"
+                },
+                {
+                    "authorId": "2657155",
+                    "name": "Vincent Vanhoucke"
+                },
+                {
+                    "authorId": "2419315",
+                    "name": "Grace Vesom"
+                },
+                {
+                    "authorId": "2315280138",
+                    "name": "Peng Xu"
+                },
+                {
+                    "authorId": "2840758",
+                    "name": "Pannag R. Sanketi"
+                }
+            ]
+        },
+        {
+            "paperId": "f2ade71bf8cfdef0ac82d50ad9e99b6bb8aa076a",
+            "title": "Kaleido Diffusion: Improving Conditional Diffusion Models with Autoregressive Latent Modeling",
+            "abstract": "Diffusion models have emerged as a powerful tool for generating high-quality images from textual descriptions. Despite their successes, these models often exhibit limited diversity in the sampled images, particularly when sampling with a high classifier-free guidance weight. To address this issue, we present Kaleido, a novel approach that enhances the diversity of samples by incorporating autoregressive latent priors. Kaleido integrates an autoregressive language model that encodes the original caption and generates latent variables, serving as abstract and intermediary representations for guiding and facilitating the image generation process. In this paper, we explore a variety of discrete latent representations, including textual descriptions, detection bounding boxes, object blobs, and visual tokens. These representations diversify and enrich the input conditions to the diffusion models, enabling more diverse outputs. Our experimental results demonstrate that Kaleido effectively broadens the diversity of the generated image samples from a given textual description while maintaining high image quality. Furthermore, we show that Kaleido adheres closely to the guidance provided by the generated latent variables, demonstrating its capability to effectively control and direct the image generation process.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2287733778",
+                    "name": "Jiatao Gu"
+                },
+                {
+                    "authorId": "2304371756",
+                    "name": "Ying Shen"
+                },
+                {
+                    "authorId": "2443456",
+                    "name": "Shuangfei Zhai"
+                },
+                {
+                    "authorId": "2254045488",
+                    "name": "Yizhe Zhang"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "49158771",
+                    "name": "J. Susskind"
+                }
+            ]
+        },
+        {
+            "paperId": "1a741783b9b2ae266327e42465d8161a58ca45b0",
+            "title": "Swallowing the Bitter Pill: Simplified Scalable Conformer Generation",
+            "abstract": "We present a novel way to predict molecular conformers through a simple formulation that sidesteps many of the heuristics of prior works and achieves state of the art results by using the advantages of scale. By training a diffusion generative model directly on 3D atomic positions without making assumptions about the explicit structure of molecules (e.g. modeling torsional angles) we are able to radically simplify structure learning, and make it trivial to scale up the model sizes. This model, called Molecular Conformer Fields (MCF), works by parameterizing conformer structures as functions that map elements from a molecular graph directly to their 3D location in space. This formulation allows us to boil down the essence of structure prediction to learning a distribution over functions. Experimental results show that scaling up the model capacity leads to large gains in generalization performance without enforcing inductive biases like rotational equivariance. MCF represents an advance in extending diffusion models to handle complex scientific problems in a conceptually simple, scalable and effective manner.",
+            "fieldsOfStudy": [
+                "Physics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268823212",
+                    "name": "Yuyang Wang"
+                },
+                {
+                    "authorId": "83724577",
+                    "name": "Ahmed A. A. Elhag"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "49158771",
+                    "name": "J. Susskind"
+                },
+                {
+                    "authorId": "2258553333",
+                    "name": "Miguel Angel Bautista"
+                }
+            ]
+        },
+        {
+            "paperId": "3098a76007227d428400acbc59128749dd056c87",
+            "title": "Generating Molecular Conformer Fields",
+            "abstract": "In this paper we tackle the problem of generating conformers of a molecule in 3D space given its molecular graph. We parameterize these conformers as continuous functions that map elements from the molecular graph to points in 3D space. We then formulate the problem of learning to generate conformers as learning a distribution over these functions using a diffusion generative model, called Molecular Conformer Fields (MCF). Our approach is simple and scalable, and achieves state-of-the-art performance on challenging molecular conformer generation benchmarks while making no assumptions about the explicit structure of molecules ( e . g . modeling torsional angles). MCF represents an advance in extending diffusion models to handle complex scientific problems in a conceptually simple, scalable and effective manner.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2268823212",
+                    "name": "Yuyang Wang"
+                },
+                {
+                    "authorId": "83724577",
+                    "name": "Ahmed A. A. Elhag"
+                },
+                {
+                    "authorId": "3111912",
+                    "name": "N. Jaitly"
+                },
+                {
+                    "authorId": "49158771",
+                    "name": "J. Susskind"
+                },
+                {
+                    "authorId": "2258553333",
+                    "name": "Miguel Angel Bautista"
+                }
+            ]
+        }
+    ]
+}

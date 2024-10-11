@@ -1,0 +1,413 @@
+{
+    "authorId": "2156072391",
+    "papers": [
+        {
+            "paperId": "0c7897aeb7cce34927f28a7fe6c3b98ad8a7750b",
+            "title": "Measuring Item Global Residual Value for Fair Recommendation",
+            "abstract": "In the era of information explosion, numerous items emerge every day, especially in feed scenarios. Due to the limited system display slots and user browsing attention, various recommendation systems are designed not only to satisfy users' personalized information needs but also to allocate items' exposure. However, recent recommendation studies mainly focus on modeling user preferences to present satisfying results and maximize user interactions, while paying little attention to developing item-side fair exposure mechanisms for rational information delivery. This may lead to serious resource allocation problems on the item side, such as the Snowball Effect. Furthermore, unfair exposure mechanisms may hurt recommendation performance. In this paper, we call for a shift of attention from modeling user preferences to developing fair exposure mechanisms for items. We first conduct empirical analyses of feed scenarios to explore exposure problems between items with distinct uploaded times. This points out that unfair exposure caused by the time factor may be the major cause of the Snowball Effect. Then, we propose to explicitly model item-level customized timeliness distribution, Global Residual Value (GRV), for fair resource allocation. This GRV module is introduced into recommendations with the designed Timeliness-aware Fair Recommendation Framework (TaFR). Extensive experiments on two datasets demonstrate that TaFR achieves consistent improvements with various backbone recommendation models. By modeling item-side customized Global Residual Value, we achieve a fairer distribution of resources and, at the same time, improve recommendation performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2181296217",
+                    "name": "Jiayin Wang"
+                },
+                {
+                    "authorId": "2903964",
+                    "name": "Weizhi Ma"
+                },
+                {
+                    "authorId": "2223716415",
+                    "name": "Chumeng Jiang"
+                },
+                {
+                    "authorId": "2157501595",
+                    "name": "Min Zhang"
+                },
+                {
+                    "authorId": "49889831",
+                    "name": "Yuan Zhang"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "14cbf1cfd5dd4b451bfd6ef89e2bc277799df9bd",
+            "title": "Alleviating Matthew Effect of Offline Reinforcement Learning in Interactive Recommendation",
+            "abstract": "Offline reinforcement learning (RL), a technology that offline learns a policy from logged data without the need to interact with online environments, has become a favorable choice in decision-making processes like interactive recommendation. Offline RL faces the value overestimation problem. To address it, existing methods employ conservatism, e.g., by constraining the learned policy to be close to behavior policies or punishing the rarely visited state-action pairs. However, when applying such offline RL to recommendation, it will cause a severe Matthew effect, i.e., the rich get richer and the poor get poorer, by promoting popular items or categories while suppressing the less popular ones. It is a notorious issue that needs to be addressed in practical recommender systems. In this paper, we aim to alleviate the Matthew effect in offline RL-based recommendation. Through theoretical analyses, we find that the conservatism of existing methods fails in pursuing users' long-term satisfaction. It inspires us to add a penalty term to relax the pessimism on states with high entropy of the logging policy and indirectly penalizes actions leading to less diverse states. This leads to the main technical contribution of the work: Debiased model-based Offline RL (DORL) method. Experiments show that DORL not only captures user interests well but also alleviates the Matthew effect. The implementation is available via https://github.com/chongminggao/DORL-codes",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31446099",
+                    "name": "Chongming Gao"
+                },
+                {
+                    "authorId": "2112441120",
+                    "name": "Kexin Huang"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "49889831",
+                    "name": "Yuan Zhang"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                },
+                {
+                    "authorId": "2108622235",
+                    "name": "Shiqin Wang"
+                },
+                {
+                    "authorId": "2221728472",
+                    "name": "Zhong Zhang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ]
+        },
+        {
+            "paperId": "7d9185004276381ab00bb08fd25bac16fc53736a",
+            "title": "Divide and Conquer: Towards Better Embedding-based Retrieval for Recommender Systems from a Multi-task Perspective",
+            "abstract": "Embedding-based retrieval (EBR) methods are widely used in modern recommender systems thanks to its simplicity and effectiveness. However, along the journey of deploying and iterating on EBR in production, we still identify some fundamental issues in existing methods. First, when dealing with large corpus of candidate items, EBR models often have difficulties in balancing the performance on distinguishing highly relevant items (positives) from both irrelevant ones (easy negatives) and from somewhat related yet not competitive ones (hard negatives). Also, we have little control in the diversity and fairness of the retrieval results because of the \u201cgreedy\u201d nature of nearest vector search. These issues compromise the performance of EBR methods in large-scale industrial scenarios. This paper introduces a simple and proven-in-production solution to overcome these issues. The proposed solution takes a divide-and-conquer approach: the whole set of candidate items are divided into multiple clusters and we run EBR to retrieve relevant candidates from each cluster in parallel; top candidates from each cluster are then combined by some controllable merging strategies. This approach allows our EBR models to only concentrate on discriminating positives from mostly hard negatives. It also enables further improvement from a multi-tasking learning (MTL) perspective: retrieval problems within each cluster can be regarded as individual tasks; inspired by recent successes in prompting and prefix-tuning, we propose an efficient task adaption technique further boosting the retrieval performance within each cluster with negligible overheads. The presented solution has been deployed in Kuaishou, one of the most popular short-video streaming platforms in China with hundreds of millions of active users.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49889831",
+                    "name": "Yuan Zhang"
+                },
+                {
+                    "authorId": "2204669948",
+                    "name": "Xue Dong"
+                },
+                {
+                    "authorId": "2051321269",
+                    "name": "Wei Ding"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                }
+            ]
+        },
+        {
+            "paperId": "81cc2738cf574b015e6bf7b1129dfdc7a748b453",
+            "title": "Disentangled Causal Embedding With Contrastive Learning For Recommender System",
+            "abstract": "Recommender systems usually rely on observed user interaction data to build personalized recommendation models, assuming that the observed data reflect user interest. However, user interacting with an item may also due to conformity, the need to follow popular items. Most previous studies neglect user\u2019s conformity and entangle interest with it, which may cause the recommender systems fail to provide satisfying results. Therefore, from the cause-effect view, disentangling these interaction causes is a crucial issue. It also contributes to OOD problems, where training and test data are out-of-distribution. Nevertheless, it is quite challenging as we lack the signal to differentiate interest and conformity. The data sparsity of pure cause and the items\u2019 long-tail problem hinder disentangled causal embedding. In this paper, we propose DCCL, a framework that adopts contrastive learning to disentangle these two causes by sample augmentation for interest and conformity respectively. Futhermore, DCCL is model-agnostic, which can be easily deployed in any industrial online system. Extensive experiments are conducted over two real-world datasets and DCCL outperforms state-of-the-art baselines on top of various backbone models in various OOD environments. We also demonstrate the performance improvements by online A/B testing on Kuaishou, a billion-user scale short-video recommender system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "49260883",
+                    "name": "Weiqi Zhao"
+                },
+                {
+                    "authorId": "51290435",
+                    "name": "Dianjuan Tang"
+                },
+                {
+                    "authorId": "2145231152",
+                    "name": "Xin Chen"
+                },
+                {
+                    "authorId": "2204646172",
+                    "name": "Dawei Lv"
+                },
+                {
+                    "authorId": "2008289004",
+                    "name": "Daoli Ou"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061281682",
+                    "name": "P. Jiang"
+                },
+                {
+                    "authorId": "20029557",
+                    "name": "Kun Gai"
+                }
+            ]
+        },
+        {
+            "paperId": "89709d4794aa04894462600c60a39a8b82633ada",
+            "title": "Tree based Progressive Regression Model for Watch-Time Prediction in Short-video Recommendation",
+            "abstract": "An accurate prediction of watch time has been of vital importance to enhance user engagement in video recommender systems. To achieve this, there are four properties that a watch time prediction framework should satisfy: first, despite its continuous value, watch time is also an ordinal variable and the relative ordering between its values reflects the differences in user preferences. Therefore the ordinal relations should be reflected in watch time predictions. Second, the conditional dependence between the video-watching behaviors should be captured in the model. For instance, one has to watch half of the video before he/she finishes watching the whole video. Third, modeling watch time with a point estimation ignores the fact that models might give results with high uncertainty and this could cause bad cases in recommender systems. Therefore the framework should be aware of prediction uncertainty. Forth, the real-life recommender systems suffer from severe bias amplifications thus an estimation without bias amplification is expected. How to design a framework that solves these four issues simultaneously remain unexplored. Therefore we propose TPM (Tree-based Progressive regression Model) for watch time prediction. Specifically, the ordinal ranks of watch time are introduced into TPM and the problem is decomposed into a series of conditional dependent classification tasks which are organized into a tree structure. The expectation of watch time can be generated by traversing the tree and the variance of watch time predictions is explicitly introduced into the objective function as a measurement for uncertainty. Moreover, we illustrate that backdoor adjustment can be seamlessly incorporated into TPM, which alleviates bias amplifications. Extensive offline evaluations have been conducted in public datasets and TPM have been deployed in a real-world video app Kuaishou with over 300 million DAUs. The results indicate that TPM outperforms state-of-the-art approaches and indeed improves video consumption significantly.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117690202",
+                    "name": "Xiao Lin"
+                },
+                {
+                    "authorId": "2108954002",
+                    "name": "Xiaokai Chen"
+                },
+                {
+                    "authorId": "1748796",
+                    "name": "Linfeng Song"
+                },
+                {
+                    "authorId": "2108968840",
+                    "name": "Jing-wen Liu"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "ff20da6eefa82491fa93631f1313293f89f73a17",
+            "title": "Discrete Conditional Diffusion for Reranking in Recommendation",
+            "abstract": "Reranking plays a crucial role in modern multi-stage recommender systems by rearranging the initial ranking list to model interplay between items. Considering the inherent challenges of reranking such as combinatorial searching space, some previous studies have adopted the evaluator-generator paradigm, with a generator producing feasible sequences and a evaluator selecting the best one based on estimated listwise utility. This paper explores the potential of diffusion models for generating high-quality sequences in reranking tasks, as the intrinsic nature of diffusion models is to improve generation quality by iterative refinements of generated samples. However, we argue that it is nontrivial to take diffusion models as the generator in the context of recommendation. Firstly, diffusion models primarily operate in continuous data space, differing from the discrete data space of item permutations. Secondly, the recommendation task is different from conventional generation tasks as the purpose of recommender systems is to fulfill user interests. Lastly, real-life recommender systems require efficiency, posing challenges for the inference of diffusion models. To overcome these challenges, we propose a novel Discrete Conditional Diffusion Reranking (DCDR) framework for recommendation. DCDR extends traditional diffusion models by introducing a discrete forward process with tractable posteriors, which adds noise to item sequences through step-wise discrete operations (e.g., swapping). Additionally, DCDR incorporates a conditional reverse process that generates item sequences conditioned on expected user responses. For efficient and robust inference, we propose several optimizations to enable the deployment of DCDR in real-life recommender systems. Extensive offline experiments conducted on public datasets demonstrate that DCDR outperforms state-of-the-art reranking methods. Furthermore, DCDR has been deployed in a real-world video app with over 300 million daily active users, significantly enhancing online recommendation quality.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117690202",
+                    "name": "Xiao Lin"
+                },
+                {
+                    "authorId": "2108954002",
+                    "name": "Xiaokai Chen"
+                },
+                {
+                    "authorId": "47074678",
+                    "name": "Chenyang Wang"
+                },
+                {
+                    "authorId": "2228512691",
+                    "name": "Hantao Shu"
+                },
+                {
+                    "authorId": "1748796",
+                    "name": "Linfeng Song"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "1e213c3cde47d2ae4bf4492b30874e3fc47e0d92",
+            "title": "Make Fairness More Fair: Fair Item Utility Estimation and Exposure Re-Distribution",
+            "abstract": "The item fairness issue has become one of the significant concerns with the development of recommender systems in recent years, focusing on whether items' exposures are consistent with their utilities. So the measurement of item unfairness depends on the modeling of item utility, and most previous approaches estimated item utility simply based on user-item interaction logs in recommender systems. The Click-through rate (CTR) is the most popular one. However, we argue that these types of item utilities (named observed utility here) measurements may result in unfair exposures of items. The number of exposure for each item is uneven, and recommendation methods select the exposure audiences (users). In this work, we propose the concept of items' fair utility, defined as the proportion of users who are interested in the item among all users. Firstly, we conduct a large-scale random exposure experiment to collect the fair utility in a real-world recommender application. Significant differences are observed between the fair utility and the widely used observed utility (CTR). Then, intending to obtain fair utility at a low cost, we propose an exploratory task for real-time estimations of fair utility with handy historical interaction logs. Encouraging results are achieved, validating the feasibility of fair utility projections. Furthermore, we present a fairness-aware re-distribution framework and conduct abundant simulation experiments, adopting fair utility to improve fairness and overall recommendation performance at the same time. Online and offline results show that both item fairness and recommendation quality can be improved simultaneously by introducing item fair utility.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2181296217",
+                    "name": "Jiayin Wang"
+                },
+                {
+                    "authorId": "2903964",
+                    "name": "Weizhi Ma"
+                },
+                {
+                    "authorId": "2109010749",
+                    "name": "Jiayu Li"
+                },
+                {
+                    "authorId": "2115863242",
+                    "name": "Hongyu Lu"
+                },
+                {
+                    "authorId": "39767557",
+                    "name": "M. Zhang"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "1783406",
+                    "name": "Yiqun Liu"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                },
+                {
+                    "authorId": "8093158",
+                    "name": "Shaoping Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "474d8a7758a4fc479f19c4e56ef8334cdc4b6ca7",
+            "title": "CIRS: Bursting Filter Bubbles by Counterfactual Interactive Recommender System",
+            "abstract": "While personalization increases the utility of recommender systems, it also brings the issue of filter bubbles. e.g., if the system keeps exposing and recommending the items that the user is interested in, it may also make the user feel bored and less satisfied. Existing work studies filter bubbles in static recommendation, where the effect of overexposure is hard to capture. In contrast, we believe it is more meaningful to study the issue in interactive recommendation and optimize long-term user satisfaction. Nevertheless, it is unrealistic to train the model online due to the high cost. As such, we have to leverage offline training data and disentangle the causal effect on user satisfaction. To achieve this goal, we propose a counterfactual interactive recommender system (CIRS) that augments offline reinforcement learning (offline RL) with causal inference. The basic idea is to first learn a causal user model on historical data to capture the overexposure effect of items on user satisfaction. It then uses the learned causal user model to help the planning of the RL policy. To conduct evaluation offline, we innovatively create an authentic RL environment (KuaiEnv) based on a real-world fully observed user rating dataset. The experiments show the effectiveness of CIRS in bursting filter bubbles and achieving long-term success in interactive recommendation. The implementation of CIRS is available via https://github.com/chongminggao/ CIRS-codes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31446099",
+                    "name": "Chongming Gao"
+                },
+                {
+                    "authorId": "39165620",
+                    "name": "Wenqiang Lei"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": null,
+                    "name": "Shiqi Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "2137366124",
+                    "name": "Shijun Li"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yuan Zhang"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "811a8ce433d7eebe3bce94372a2fd68a16d1e0c2",
+            "title": "Real-time Short Video Recommendation on Mobile Devices",
+            "abstract": "Short video applications have attracted billions of users in recent years, fulfilling their various needs with diverse content. Users usually watch short videos on many topics on mobile devices in a short period of time, and give explicit or implicit feedback very quickly to the short videos they watch. The recommender system needs to perceive users' preferences in real-time in order to satisfy their changing interests. Traditionally, recommender systems deployed at server side return a ranked list of videos for each request from client. Thus it cannot adjust the recommendation results according to the user's real-time feedback before the next request. Due to client-server transmitting latency, it is also unable to make immediate use of users' real-time feedback. However, as users continue to watch videos and feedback, the changing context leads the ranking of the server-side recommendation system inaccurate. In this paper, we propose to deploy a short video recommendation framework on mobile devices to solve these problems. Specifically, we design and deploy a tiny on-device ranking model to enable real-time re-ranking of server-side recommendation results. We improve its prediction accuracy by exploiting users' real-time feedback of watched videos and client-specific real-time features. With more accurate predictions, we further consider interactions among candidate videos, and propose a context-aware re-ranking method based on adaptive beam search. The framework has been deployed on Kuaishou, a billion-user scale short video application, and improved effective view, like and follow by 1.28%, 8.22% and 13.6% respectively.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1630380410",
+                    "name": "Xudong Gong"
+                },
+                {
+                    "authorId": "8645153",
+                    "name": "Qinlin Feng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yuan Zhang"
+                },
+                {
+                    "authorId": "71214333",
+                    "name": "Jiangling Qin"
+                },
+                {
+                    "authorId": "2051321269",
+                    "name": "Wei Ding"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "99a337e5a990f12a0afc218501cfdc4acc7d363a",
+            "title": "KuaiRec: A Fully-observed Dataset and Insights for Evaluating Recommender Systems",
+            "abstract": "The progress of recommender systems is hampered mainly by evaluation as it requires real-time interactions between humans and systems, which is too laborious and expensive. This issue is usually approached by utilizing the interaction history to conduct offline evaluation. However, existing datasets of user-item interactions are partially observed, leaving it unclear how and to what extent the missing interactions will influence the evaluation. To answer this question, we collect a fully-observed dataset from Kuaishou's online environment, where almost all 1,411 users have been exposed to all 3,327 items. To the best of our knowledge, this is the first real-world fully-observed data with millions of user-item interactions. With this unique dataset, we conduct a preliminary analysis of how the two factors - data density and exposure bias - affect the evaluation results of multi-round conversational recommendation. Our main discoveries are that the performance ranking of different methods varies with the two factors, and this effect can only be alleviated in certain cases by estimating missing interactions for user simulation. This demonstrates the necessity of the fully-observed dataset. We release the dataset and the pipeline implementation for evaluation at https://kuairec.com",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31446099",
+                    "name": "Chongming Gao"
+                },
+                {
+                    "authorId": "2137366124",
+                    "name": "Shijun Li"
+                },
+                {
+                    "authorId": "39165620",
+                    "name": "Wenqiang Lei"
+                },
+                {
+                    "authorId": "1452347263",
+                    "name": "Jiawei Chen"
+                },
+                {
+                    "authorId": "2156072391",
+                    "name": "Biao Li"
+                },
+                {
+                    "authorId": "2061280682",
+                    "name": "Peng Jiang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "3340223",
+                    "name": "Jiaxin Mao"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,278 @@
+{
+    "authorId": "50014661",
+    "papers": [
+        {
+            "paperId": "179c8c7364caaf3b4d0d03018657aaec6c22a372",
+            "title": "Pruning Before Training May Improve Generalization, Provably",
+            "abstract": "It has been observed in practice that applying pruning-at-initialization methods to neural networks and training the sparsified networks can not only retain the testing performance of the original dense models, but also sometimes even slightly boost the generalization performance. Theoretical understanding for such experimental observations are yet to be developed. This work makes the first attempt to study how different pruning fractions affect the model's gradient descent dynamics and generalization. Specifically, this work considers a classification task for overparameterized two-layer neural networks, where the network is randomly pruned according to different rates at the initialization. It is shown that as long as the pruning fraction is below a certain threshold, gradient descent can drive the training loss toward zero and the network exhibits good generalization performance. More surprisingly, the generalization bound gets better as the pruning fraction gets larger. To complement this positive result, this work further shows a negative result: there exists a large pruning fraction such that while gradient descent is still able to drive the training loss toward zero (by memorizing noise), the generalization performance is no better than random guessing. This further suggests that pruning can change the feature learning process, which leads to the performance drop of the pruned neural network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "3008832",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "303d96bab3766557529ceb1d9d5856c1090a7ba2",
+            "title": "Convergence and Generalization of Wide Neural Networks with Large Bias",
+            "abstract": "This work studies training one-hidden-layer overparameterized ReLU networks via gradient descent in the neural tangent kernel (NTK) regime, where the networks' biases are initialized to some constant rather than zero. The tantalizing benefit of such initialization is that the neural network will provably have sparse activation through the entire training process, which enables fast training procedures. The first set of results characterizes the convergence of gradient descent training. Surprisingly, it is shown that the network after sparsification can achieve as fast convergence as the dense network, in comparison to the previous work indicating that the sparse networks converge slower. Further, the required width is improved to ensure gradient descent can drive the training error towards zero at a linear rate. Secondly, the networks' generalization is studied: a width-sparsity dependence is provided which yields a sparsity-dependent Rademacher complexity and generalization bound. To our knowledge, this is the first sparsity-dependent generalization result via Rademacher complexity. Lastly, this work further studies the least eigenvalue of the limiting NTK. Surprisingly, while it is not shown that trainable biases are necessary, trainable bias, which is enabled by our improved analysis scheme, helps to identify a nice data-dependent region where a much finer analysis of the NTK's smallest eigenvalue can be conducted. This leads to a much sharper lower bound on the NTK's smallest eigenvalue than the one previously known and, consequently, an improved generalization bound.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118571035",
+                    "name": "Hongru Yang"
+                },
+                {
+                    "authorId": "152420547",
+                    "name": "Ziyu Jiang"
+                },
+                {
+                    "authorId": "2140713366",
+                    "name": "Ruizhe Zhang"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                }
+            ]
+        },
+        {
+            "paperId": "3197de72fa4407f1c0c667529edcda7566fb5aa9",
+            "title": "Online Nonconvex Optimization with Limited Instantaneous Oracle Feedback",
+            "abstract": "We investigate online nonconvex optimization from a local regret minimization perspective. Previous studies along this line implicitly required the access to sufficient gradient oracles at each time instance in order to design double-loop algorithms. In this work, we focus on more challenging but practical settings where only limited number of oracles are available in online nonconvex optimization, including window-smoothed single gradient oracle (Window-SGO), single function value oracle (Window-SVO) and multiple function value oracles (Window-MVO). Specifically, in the Window-SGO setting which allows only single-loop algorithm design, we derive a local regret lower bound, which indicates that single-loop algorithms are provably worse than double-loop algorithms. Further, the simple classical OGD algorithm achieves the window-unconditioned lower bound. Moreover, in the Window-SVO setting, we propose a novel single-loop online algorithm named SkipOGD, and show that it achieves a near-optimal local regret that matches the Window-SGO regret lower bound up to a factor of the dimension d due to the function value feedback. Lastly, in the Window-MVO setting, we propose a new double-loop online algorithm named LoopOGD and show that it achieves a smooth trade-off between regret minimization and sample complexity over the number of oracle calls K per time instance. In particular, with K = 1 and wd , LoopOGD respectively achieves our regret lower bound with Window-SGO (up to the factor d due to function value feedback) and the existing regret lower bound with multiple gradient oracle feedback.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "11701175",
+                    "name": "Ziwei Guan"
+                },
+                {
+                    "authorId": "2118764630",
+                    "name": "Yi Zhou"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "1741549",
+                    "name": "Gergely Neu"
+                },
+                {
+                    "authorId": "1690976",
+                    "name": "L. Rosasco"
+                }
+            ]
+        },
+        {
+            "paperId": "4906972dc84f7658f321d841db992426e9cd7552",
+            "title": "Generalized-Smooth Nonconvex Optimization is As Efficient As Smooth Nonconvex Optimization",
+            "abstract": "Various optimal gradient-based algorithms have been developed for smooth nonconvex optimization. However, many nonconvex machine learning problems do not belong to the class of smooth functions and therefore the existing algorithms are sub-optimal. Instead, these problems have been shown to satisfy certain generalized-smooth conditions, which have not been well understood in the existing literature. In this paper, we propose a notion of $\\alpha$-symmetric generalized-smoothness that extends the existing notions and covers many important functions such as high-order polynomials and exponential functions. We study the fundamental properties and establish descent lemmas for the functions in this class. Then, to solve such a large class of nonconvex problems, we design a special deterministic normalized gradient descent algorithm that achieves the optimal iteration complexity $\\mathcal{O}(\\epsilon^{-2})$, and also prove that the popular SPIDER variance reduction algorithm achieves the optimal sample complexity $\\mathcal{O}(\\epsilon^{-3})$ in the stochastic setting. Our results show that solving generalized-smooth nonconvex problems is as efficient as solving smooth nonconvex problems.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144251699",
+                    "name": "Ziyi Chen"
+                },
+                {
+                    "authorId": "2118765295",
+                    "name": "Yi Zhou"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "6201715",
+                    "name": "Zhaosong Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "02ad21eea9ec32783ba529487e74a76e85499a53",
+            "title": "Model-Based Offline Meta-Reinforcement Learning with Regularization",
+            "abstract": "Existing offline reinforcement learning (RL) methods face a few major challenges, particularly the distributional shift between the learned policy and the behavior policy. Offline Meta-RL is emerging as a promising approach to address these challenges, aiming to learn an informative meta-policy from a collection of tasks. Nevertheless, as shown in our empirical studies, offline Meta-RL could be outperformed by offline single-task RL methods on tasks with good quality of datasets, indicating that a right balance has to be delicately calibrated between\"exploring\"the out-of-distribution state-actions by following the meta-policy and\"exploiting\"the offline dataset by staying close to the behavior policy. Motivated by such empirical analysis, we explore model-based offline Meta-RL with regularized Policy Optimization (MerPO), which learns a meta-model for efficient task structure inference and an informative meta-policy for safe exploration of out-of-distribution state-actions. In particular, we devise a new meta-Regularized model-based Actor-Critic (RAC) method for within-task policy optimization, as a key building block of MerPO, using conservative policy evaluation and regularized policy improvement; and the intrinsic tradeoff therein is achieved via striking the right balance between two regularizers, one based on the behavior policy and the other on the meta-policy. We theoretically show that the learnt policy offers guaranteed improvement over both the behavior policy and the meta-policy, thus ensuring the performance improvement on new tasks via offline Meta-RL. Experiments corroborate the superior performance of MerPO over existing offline Meta-RL methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1641386905",
+                    "name": "Sen Lin"
+                },
+                {
+                    "authorId": "2153470794",
+                    "name": "Jialin Wan"
+                },
+                {
+                    "authorId": "51020953",
+                    "name": "Tengyu Xu"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "47540395",
+                    "name": "Junshan Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "0d1277bf6d79e436a9ce39c565024cc74ee1d020",
+            "title": "A Primal-Dual Approach to Bilevel Optimization with Multiple Inner Minima",
+            "abstract": "Bilevel optimization has found extensive applications in modern machine learning problems such as hyperparameter optimization, neural architecture search, meta-learning, etc. While bilevel problems with a unique inner minimal point (e.g., where the inner function is strongly convex) are well understood, such a problem with multiple inner minimal points remains to be challenging and open. Existing algorithms designed for such a problem were applicable to restricted situations and do not come with a full guarantee of convergence. In this paper, we adopt a reformulation of bilevel optimization to constrained optimization, and solve the problem via a primal-dual bilevel optimization (PDBO) algorithm. PDBO not only addresses the multiple inner minima challenge, but also features fully first-order efficiency without involving second-order Hessian and Jacobian computations, as opposed to most existing gradient-based bilevel algorithms. We further characterize the convergence rate of PDBO, which serves as the first known non-asymptotic convergence guarantee for bilevel optimization with multiple inner minima. Our experiments demonstrate desired performance of the proposed approach.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "143827145",
+                    "name": "Daouda Sow"
+                },
+                {
+                    "authorId": "24006255",
+                    "name": "Kaiyi Ji"
+                },
+                {
+                    "authorId": "11701175",
+                    "name": "Ziwei Guan"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                }
+            ]
+        },
+        {
+            "paperId": "1d6da3878aeec164d56414c4a1a899342f139fe7",
+            "title": "Will Bilevel Optimizers Benefit from Loops",
+            "abstract": "Bilevel optimization has arisen as a powerful tool for solving a variety of machine learning problems. Two current popular bilevel optimizers AID-BiO and ITD-BiO naturally involve solving one or two sub-problems, and consequently, whether we solve these problems with loops (that take many iterations) or without loops (that take only a few iterations) can significantly affect the overall computational efficiency. Existing studies in the literature cover only some of those implementation choices, and the complexity bounds available are not refined enough to enable rigorous comparison among different implementations. In this paper, we first establish unified convergence analysis for both AID-BiO and ITD-BiO that are applicable to all implementation choices of loops. We then specialize our results to characterize the computational complexity for all implementations, which enable an explicit comparison among them. Our result indicates that for AID-BiO, the loop for estimating the optimal point of the inner function is beneficial for overall efficiency, although it causes higher complexity for each update step, and the loop for approximating the outer-level Hessian-inverse-vector product reduces the gradient complexity. For ITD-BiO, the two loops always coexist, and our convergence upper and lower bounds show that such loops are necessary to guarantee a vanishing convergence error, whereas the no-loop scheme suffers from an unavoidable non-vanishing convergence error. Our numerical experiments further corroborate our theoretical results.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "24006255",
+                    "name": "Kaiyi Ji"
+                },
+                {
+                    "authorId": "14697929",
+                    "name": "Mingrui Liu"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "2167030792",
+                    "name": "Lei Ying"
+                }
+            ]
+        },
+        {
+            "paperId": "42bce7bd068f36f3091ac5469dac55ae8a0ae721",
+            "title": "Provable Generalization of Overparameterized Meta-learning Trained with SGD",
+            "abstract": "Despite the superior empirical success of deep meta-learning, theoretical understanding of overparameterized meta-learning is still limited. This paper studies the generalization of a widely used meta-learning approach, Model-Agnostic Meta-Learning (MAML), which aims to find a good initialization for fast adaptation to new tasks. Under a mixed linear regression model, we analyze the generalization properties of MAML trained with SGD in the overparameterized regime. We provide both upper and lower bounds for the excess risk of MAML, which captures how SGD dynamics affect these generalization bounds. With such sharp characterizations, we further explore how various learning parameters impact the generalization capability of overparameterized MAML, including explicitly identifying typical data and task distributions that can achieve diminishing generalization error with overparameterization, and characterizing the impact of adaptation learning rate on both excess risk and the early stopping time. Our theoretical findings are further validated by experiments.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108861171",
+                    "name": "Yu Huang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Longbo Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "4b20c81a39d1ccc41f749f59dbb632e632135d7a",
+            "title": "Global Convergence of Two-timescale Actor-Critic for Solving Linear Quadratic Regulator",
+            "abstract": "The actor-critic (AC) reinforcement learning algorithms have been the powerhouse behind many challenging applications. Nevertheless, its convergence is fragile in general. To study its instability, existing works mostly consider the uncommon double-loop variant or basic models with finite state and action space. We investigate the more practical single-sample two-timescale AC for solving the canonical linear quadratic regulator (LQR) problem, where the actor and the critic update only once with a single sample in each iteration on an unbounded continuous state and action space. Existing analysis cannot conclude the convergence for such a challenging case. We develop a new analysis framework that allows establishing the global convergence to an epsilon-optimal solution with at most an order of epsilon to -2.5 sample complexity. To our knowledge, this is the first finite-time convergence analysis for the single sample two-timescale AC for solving LQR with global optimality. The sample complexity improves those of other variants by orders, which sheds light on the practical wisdom of single sample algorithms. We also further validate our theoretical findings via comprehensive simulation comparisons.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109214039",
+                    "name": "Xu-yang Chen"
+                },
+                {
+                    "authorId": "23637596",
+                    "name": "Jingliang Duan"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                },
+                {
+                    "authorId": "2146089833",
+                    "name": "Lin Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "50911bce5f5aee1eb1d27ca2b17d483e9c3cf0c5",
+            "title": "Safe Exploration Incurs Nearly No Additional Sample Complexity for Reward-free RL",
+            "abstract": "Reward-free reinforcement learning (RF-RL), a recently introduced RL paradigm, relies on random action-taking to explore the unknown environment without any reward feedback information. While the primary goal of the exploration phase in RF-RL is to reduce the uncertainty in the estimated model with minimum number of trajectories, in practice, the agent often needs to abide by certain safety constraint at the same time. It remains unclear how such safe exploration requirement would affect the corresponding sample complexity in order to achieve the desired optimality of the obtained policy in planning. In this work, we make a first attempt to answer this question. In particular, we consider the scenario where a safe baseline policy is known beforehand, and propose a unified Safe reWard-frEe ExploraTion (SWEET) framework. We then particularize the SWEET framework to the tabular and the low-rank MDP settings, and develop algorithms coined Tabular-SWEET and Low-rank-SWEET, respectively. Both algorithms leverage the concavity and continuity of the newly introduced truncated value functions, and are guaranteed to achieve zero constraint violation during exploration with high probability. Furthermore, both algorithms can provably find a near-optimal policy subject to any constraint in the planning phase. Remarkably, the sample complexities under both algorithms match or even outperform the state of the art in their constraint-free counterparts up to some constant factors, proving that safety constraint hardly increases the sample complexity for RF-RL.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2140386847",
+                    "name": "Ruiquan Huang"
+                },
+                {
+                    "authorId": "145039750",
+                    "name": "J. Yang"
+                },
+                {
+                    "authorId": "50014661",
+                    "name": "Yingbin Liang"
+                }
+            ]
+        }
+    ]
+}

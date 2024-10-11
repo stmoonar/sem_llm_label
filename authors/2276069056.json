@@ -1,0 +1,109 @@
+{
+    "authorId": "2276069056",
+    "papers": [
+        {
+            "paperId": "42c6c93b2ed24cdb19ccb4013a27369afb6886f5",
+            "title": "Continual Learning on Graphs: Challenges, Solutions, and Opportunities",
+            "abstract": "Continual learning on graph data has recently attracted paramount attention for its aim to resolve the catastrophic forgetting problem on existing tasks while adapting the sequentially updated model to newly emerged graph tasks. While there have been efforts to summarize progress on continual learning research over Euclidean data, e.g., images and texts, a systematic review of progress in continual learning on graphs, a.k.a, continual graph learning (CGL) or lifelong graph learning, is still demanding. Graph data are far more complex in terms of data structures and application scenarios, making CGL task settings, model designs, and applications extremely challenging. To bridge the gap, we provide a comprehensive review of existing continual graph learning (CGL) algorithms by elucidating the different task settings and categorizing the existing methods based on their characteristics. We compare the CGL methods with traditional continual learning techniques and analyze the applicability of the traditional continual learning techniques to CGL tasks. Additionally, we review the benchmark works that are crucial to CGL research. Finally, we discuss the remaining challenges and propose several future directions. We will maintain an up-to-date GitHub repository featuring a comprehensive list of CGL algorithms, accessible at https://github.com/UConn-DSIS/Survey-of-Continual-Learning-on-Graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2276069056",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "45dfa18409290d3cbed71d97b9dd435783cc7384",
+            "title": "Topology-aware Embedding Memory for Continual Learning on Expanding Networks",
+            "abstract": "Memory replay based techniques have shown great success for continual learning with incrementally accumulated Euclidean data. Directly applying them to continually expanding networks, however, leads to the potential memory explosion problem due to the need to buffer representative nodes and their associated topological neighborhood structures. To this end, we systematically analyze the key challenges in the memory explosion problem, and present a general framework, \\textit{i.e.}, Parameter Decoupled Graph Neural Networks (PDGNNs) with Topology-aware Embedding Memory (TEM), to tackle this issue. The proposed framework not only reduces the memory space complexity from $\\mathcal{O}(nd^L)$ to $\\mathcal{O}(n)$~\\footnote{$n$: memory budget, $d$: average node degree, $L$: the radius of the GNN receptive field}, but also fully utilizes the topological information for memory replay. Specifically, PDGNNs decouple trainable parameters from the computation ego-subnetwork via \\textit{Topology-aware Embeddings} (TEs), which compress ego-subnetworks into compact vectors (\\textit{i.e.}, TEs) to reduce the memory consumption. Based on this framework, we discover a unique \\textit{pseudo-training effect} in continual learning on expanding networks and this effect motivates us to develop a novel \\textit{coverage maximization sampling} strategy that can enhance the performance with a tight memory budget. Thorough empirical studies demonstrate that, by tackling the memory explosion problem and incorporating topological information into memory replay, PDGNNs with TEM significantly outperform state-of-the-art techniques, especially in the challenging class-incremental setting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2276069056",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "c4d4149a0d0bf727b22d3e3c297ddd7760cd69c0",
+            "title": "Topology-aware Embedding Memory for Learning on Expanding Graphs",
+            "abstract": "Memory replay based techniques have shown great success for continual learning with incrementally accumulated Euclidean data. Directly applying them to continually expanding graphs, however, leads to the potential memory explosion problem due to the need to buffer representative nodes and their associated topological neighborhood structures. To this end, we systematically analyze the key challenges in the memory explosion problem, and present a general framework, i.e. , Parameter Decoupled Graph Neural Networks (PDGNNs) with Topology-aware Embedding Memory (TEM), to tackle this issue. The proposed framework not only reduces the memory space complexity from O( \ud835\udc5b\ud835\udc51 \ud835\udc3f ) to O( \ud835\udc5b ) 1 , but also fully utilizes the topological information for memory replay. Specifically, PDGNNs decouple trainable parameters from the computation ego-subgraph via Topology-aware Embeddings (TEs), which compress ego-subgraphs into compact vectors ( i.e. , TEs) to reduce the memory consumption. Based on this framework, we discover a unique pseudo-training effect in continual learning on expanding graphs and this effect motivates us to develop a novel coverage maximization sampling strategy that can enhance the performance with a tight memory budget. Thorough empirical studies demonstrate that, by tackling the memory explosion problem and incorporating topological information into memory replay, PDGNNs with TEM significantly outperform state-of-the-art techniques, especially in the challenging class-incremental setting. All code will be publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2276069056",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "cb4045f3e6f4dfdaceedc6d8a70fc7a232722b3e",
+            "title": "Learning System Dynamics without Forgetting",
+            "abstract": "Predicting the trajectories of systems with unknown dynamics (\\textit{i.e.} the governing rules) is crucial in various research fields, including physics and biology. This challenge has gathered significant attention from diverse communities. Most existing works focus on learning fixed system dynamics within one single system. However, real-world applications often involve multiple systems with different types of dynamics or evolving systems with non-stationary dynamics (dynamics shifts). When data from those systems are continuously collected and sequentially fed to machine learning models for training, these models tend to be biased toward the most recently learned dynamics, leading to catastrophic forgetting of previously observed/learned system dynamics. To this end, we aim to learn system dynamics via continual learning. Specifically, we present a novel framework of Mode-switching Graph ODE (MS-GODE), which can continually learn varying dynamics and encode the system-specific dynamics into binary masks over the model parameters. During the inference stage, the model can select the most confident mask based on the observational data to identify the system and predict future trajectories accordingly. Empirically, we systematically investigate the task configurations and compare the proposed MS-GODE with state-of-the-art techniques. More importantly, we construct a novel benchmark of biological dynamic systems, featuring diverse systems with disparate dynamics and significantly enriching the research field of machine learning for dynamic systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "2276324326",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "2223152252",
+                    "name": "Yixin Chen"
+                },
+                {
+                    "authorId": "2276069056",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        }
+    ]
+}

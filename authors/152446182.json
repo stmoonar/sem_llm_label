@@ -1,0 +1,161 @@
+{
+    "authorId": "152446182",
+    "papers": [
+        {
+            "paperId": "3937b11717c22f62ab0b48dfd89e5dab75cedf40",
+            "title": "Are self-explanations from Large Language Models faithful?",
+            "abstract": "Instruction-tuned Large Language Models (LLMs) excel at many tasks and will even explain their reasoning, so-called self-explanations. However, convincing and wrong self-explanations can lead to unsupported confidence in LLMs, thus increasing risk. Therefore, it's important to measure if self-explanations truly reflect the model's behavior. Such a measure is called interpretability-faithfulness and is challenging to perform since the ground truth is inaccessible, and many LLMs only have an inference API. To address this, we propose employing self-consistency checks to measure faithfulness. For example, if an LLM says a set of words is important for making a prediction, then it should not be able to make its prediction without these words. While self-consistency checks are a common approach to faithfulness, they have not previously been successfully applied to LLM self-explanations for counterfactual, feature attribution, and redaction explanations. Our results demonstrate that faithfulness is explanation, model, and task-dependent, showing self-explanations should not be trusted in general. For example, with sentiment classification, counterfactuals are more faithful for Llama2, feature attribution for Mistral, and redaction for Falcon 40B.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152446182",
+                    "name": "Andreas Madsen"
+                },
+                {
+                    "authorId": "123607932",
+                    "name": "Sarath Chandar"
+                },
+                {
+                    "authorId": "145732771",
+                    "name": "Siva Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "5a93e89d01dc3ba61a3bd2a3ac64aa895859f471",
+            "title": "Interpretability Needs a New Paradigm",
+            "abstract": "Interpretability is the study of explaining models in understandable terms to humans. At present, interpretability is divided into two paradigms: the intrinsic paradigm, which believes that only models designed to be explained can be explained, and the post-hoc paradigm, which believes that black-box models can be explained. At the core of this debate is how each paradigm ensures its explanations are faithful, i.e., true to the model's behavior. This is important, as false but convincing explanations lead to unsupported confidence in artificial intelligence (AI), which can be dangerous. This paper's position is that we should think about new paradigms while staying vigilant regarding faithfulness. First, by examining the history of paradigms in science, we see that paradigms are constantly evolving. Then, by examining the current paradigms, we can understand their underlying beliefs, the value they bring, and their limitations. Finally, this paper presents 3 emerging paradigms for interpretability. The first paradigm designs models such that faithfulness can be easily measured. Another optimizes models such that explanations become faithful. The last paradigm proposes to develop models that produce both a prediction and an explanation.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "152446182",
+                    "name": "Andreas Madsen"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                },
+                {
+                    "authorId": "145732771",
+                    "name": "Siva Reddy"
+                },
+                {
+                    "authorId": "123607932",
+                    "name": "Sarath Chandar"
+                }
+            ]
+        },
+        {
+            "paperId": "62587d93133a91c458103fd3a6f4b584f1f9548e",
+            "title": "Faithfulness Measurable Masked Language Models",
+            "abstract": "A common approach to explaining NLP models is to use importance measures that express which tokens are important for a prediction. Unfortunately, such explanations are often wrong despite being persuasive. Therefore, it is essential to measure their faithfulness. One such metric is if tokens are truly important, then masking them should result in worse model performance. However, token masking introduces out-of-distribution issues, and existing solutions that address this are computationally expensive and employ proxy models. Furthermore, other metrics are very limited in scope. This work proposes an inherently faithfulness measurable model that addresses these challenges. This is achieved using a novel fine-tuning method that incorporates masking, such that masking tokens become in-distribution by design. This differs from existing approaches, which are completely model-agnostic but are inapplicable in practice. We demonstrate the generality of our approach by applying it to 16 different datasets and validate it using statistical in-distribution tests. The faithfulness is then measured with 9 different importance measures. Because masking is in-distribution, importance measures that themselves use masking become consistently more faithful. Additionally, because the model makes faithfulness cheap to measure, we can optimize explanations towards maximal faithfulness; thus, our model becomes indirectly inherently explainable.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152446182",
+                    "name": "Andreas Madsen"
+                },
+                {
+                    "authorId": "145732771",
+                    "name": "Siva Reddy"
+                },
+                {
+                    "authorId": "123607932",
+                    "name": "Sarath Chandar"
+                }
+            ]
+        },
+        {
+            "paperId": "e8243b2aafab80aac0be162f17a720c40fba180d",
+            "title": "Evaluating the Faithfulness of Importance Measures in NLP by Recursively Masking Allegedly Important Tokens and Retraining",
+            "abstract": "To explain NLP models a popular approach is to use importance measures, such as attention, which inform input tokens are important for making a prediction. However, an open question is how well these explanations accurately reflect a model's logic, a property called faithfulness. To answer this question, we propose Recursive ROAR, a new faithfulness metric. This works by recursively masking allegedly important tokens and then retraining the model. The principle is that this should result in worse model performance compared to masking random tokens. The result is a performance curve given a masking-ratio. Furthermore, we propose a summarizing metric using relative area-between-curves (RACU), which allows for easy comparison across papers, models, and tasks. We evaluate 4 different importance measures on 8 different datasets, using both LSTM-attention models and RoBERTa models. We find that the faithfulness of importance measures is both model-dependent and task-dependent. This conclusion contradicts previous evaluations in both computer vision and faithfulness of attention literature.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152446182",
+                    "name": "Andreas Madsen"
+                },
+                {
+                    "authorId": "150247363",
+                    "name": "Nicholas Meade"
+                },
+                {
+                    "authorId": "1666183192",
+                    "name": "Vaibhav Adlakha"
+                },
+                {
+                    "authorId": "145732771",
+                    "name": "Siva Reddy"
+                }
+            ]
+        },
+        {
+            "paperId": "eadb1e7da375939e25083ae3936c4f4ef1f2a719",
+            "title": "Post-hoc Interpretability for Neural NLP: A Survey",
+            "abstract": "Neural networks for NLP are becoming increasingly complex and widespread, and there is a growing concern if these models are responsible to use. Explaining models helps to address the safety and ethical concerns and is essential for accountability. Interpretability serves to provide these explanations in terms that are understandable to humans. Additionally, post-hoc methods provide explanations after a model is learned and are generally model-agnostic. This survey provides a categorization of how recent post-hoc interpretability methods communicate explanations to humans, it discusses each method in-depth, and how they are validated, as the latter is often a common concern.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152446182",
+                    "name": "Andreas Madsen"
+                },
+                {
+                    "authorId": "145732771",
+                    "name": "Siva Reddy"
+                },
+                {
+                    "authorId": "144631588",
+                    "name": "A. Chandar"
+                }
+            ]
+        },
+        {
+            "paperId": "4aea918d9bd66440ce0c00abbfbb57b212d76158",
+            "title": "Neural Arithmetic Units",
+            "abstract": "Neural networks can approximate complex functions, but they struggle to perform exact arithmetic operations over real numbers. The lack of inductive bias for arithmetic operations leaves neural networks without the underlying logic necessary to extrapolate on tasks such as addition, subtraction, and multiplication. We present two new neural network components: the Neural Addition Unit (NAU), which can learn exact addition and subtraction; and the Neural Multiplication Unit (NMU) that can multiply subsets of a vector. The NMU is, to our knowledge, the first arithmetic neural network component that can learn to multiply elements from a vector, when the hidden size is large. The two new components draw inspiration from a theoretical analysis of recently proposed arithmetic components. We find that careful initialization, restricting parameter space, and regularizing for sparsity is important when optimizing the NAU and NMU. Our proposed units NAU and NMU, compared with previous neural units, converge more consistently, have fewer parameters, learn faster, can converge for larger hidden sizes, obtain sparse and meaningful weights, and can extrapolate to negative and small values.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "152446182",
+                    "name": "Andreas Madsen"
+                },
+                {
+                    "authorId": "153849889",
+                    "name": "alexander rosenberg johansen"
+                }
+            ]
+        },
+        {
+            "paperId": "112ac68ddb0f021517dd465e89918fa52755cc35",
+            "title": "Measuring Arithmetic Extrapolation Performance",
+            "abstract": "The Neural Arithmetic Logic Unit (NALU) is a neural network layer that can learn exact arithmetic operations between the elements of a hidden state. The goal of NALU is to learn perfect extrapolation, which requires learning the exact underlying logic of an unknown arithmetic problem. Evaluating the performance of the NALU is non-trivial as one arithmetic problem might have many solutions. As a consequence, single-instance MSE has been used to evaluate and compare performance between models. However, it can be hard to interpret what magnitude of MSE represents a correct solution and models sensitivity to initialization. We propose using a success-criterion to measure if and when a model converges. Using a success-criterion we can summarize success-rate over many initialization seeds and calculate confidence intervals. We contribute a generalized version of the previous arithmetic benchmark to measure models sensitivity under different conditions. This is, to our knowledge, the first extensive evaluation with respect to convergence of the NALU and its sub-units. Using a success-criterion to summarize 4800 experiments we find that consistently learning arithmetic extrapolation is challenging, in particular for multiplication.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "152446182",
+                    "name": "Andreas Madsen"
+                },
+                {
+                    "authorId": "153849889",
+                    "name": "alexander rosenberg johansen"
+                }
+            ]
+        }
+    ]
+}

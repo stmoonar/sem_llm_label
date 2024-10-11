@@ -1,0 +1,390 @@
+{
+    "authorId": "2140409319",
+    "papers": [
+        {
+            "paperId": "51810835dab8f0617f48462b8ad1d36ecebefa0d",
+            "title": "Poisson Process for Bayesian Optimization",
+            "abstract": "BayesianOptimization(BO) is a sample-efficient black-box optimizer, and extensive methods have been proposed to build the absolute function response of the black-box function through a probabilistic surrogate model, including Tree-structured Parzen Estimator (TPE), random forest (SMAC), and Gaussian process (GP). However, few methods have been explored to estimate the relative rankings of candidates, which can be more robust to noise and have better practicality than absolute function responses, especially when the function responses are intractable but preferences can be acquired. To this end, we propose a novel ranking-based surrogate model based on the Poisson process and introduce an efficient BO framework, namely Poisson Process Bayesian Optimization (PoPBO). Two tailored acquisition functions are further derived from classic LCB and EI to accommodate it. Compared to the classic GP-BO method, our PoPBO has lower computation costs and better robustness to noise, which is verified by abundant experiments. The results on both simulated and real-world benchmarks, including hyperparameter optimization (HPO) and neural architecture search (NAS), show the effectiveness of PoPBO.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108168283",
+                    "name": "Xiaoxing Wang"
+                },
+                {
+                    "authorId": "2277232917",
+                    "name": "Jiaxing Li"
+                },
+                {
+                    "authorId": "2282531216",
+                    "name": "Chao Xue"
+                },
+                {
+                    "authorId": "2255470429",
+                    "name": "Wei Liu"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "2159107948",
+                    "name": "Xiaokang Yang"
+                },
+                {
+                    "authorId": "2277244020",
+                    "name": "Junchi Yan"
+                },
+                {
+                    "authorId": "2265580808",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "acc7a0a881d0914a5856768e22b7347ce06bd445",
+            "title": "Building Accurate Translation-Tailored LLMs with Language Aware Instruction Tuning",
+            "abstract": "Translation-tailored Large language models (LLMs) exhibit remarkable translation capabilities, even competing with supervised-trained commercial translation systems. However, off-target translation remains an unsolved problem, especially for low-resource languages, hindering us from developing accurate LLMs-based translation models. To mitigate the off-target translation problem and enhance the performance of LLMs on translation, recent works have either designed advanced prompting strategies to highlight the functionality of translation instructions or exploited the in-context learning ability of LLMs by feeding few-shot demonstrations. However, these methods essentially do not improve LLM's ability to follow translation instructions, especially the language direction information. In this work, we design a two-stage fine-tuning algorithm to improve the instruction-following ability (especially the translation direction) of LLMs. Specifically, we first tune LLMs with the maximum likelihood estimation loss on the translation dataset to elicit the basic translation capabilities. In the second stage, we construct instruction-conflicting samples by randomly replacing the translation directions with a wrong one within the instruction, and then introduce an extra unlikelihood loss to learn those samples. Experiments on IWSLT and WMT benchmarks upon the LLaMA model spanning 16 zero-shot directions show that, compared to the competitive baseline -- translation-finetuned LLama, our method could effectively reduce the off-target translation ratio (averagely -53.3\\%), thus improving translation quality with average +5.7 SacreBLEU and +16.4 BLEURT. Analysis shows that our method could preserve the model's general task performance on AlpacaEval. Code and models will be released at \\url{https://github.com/alphadl/LanguageAware_Tuning}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114248045",
+                    "name": "Changtong Zan"
+                },
+                {
+                    "authorId": "46573238",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "2248152216",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2292408117",
+                    "name": "Yibing Zhen"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "2255502438",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "14bd93a3fc50834e317bcaf4317f9d8d87ecee9c",
+            "title": "Tensor Canonical Correlation Analysis Networks for Multi-view Remote Sensing Scene Recognition (Extended Abstract)",
+            "abstract": "Remote sensing (RS) images are frequently observed from multiviews. In this paper, we propose the tensor canonical correlation analysis network (TCCANet) to tackle the multiview RS recognition problem. Particularly, TCCANet learns filter banks by simultaneously maximizing arbitrary number of views with high-order-correlation and solves the optimization problem by decomposing a covariance tensor. After the convolutional stage, we utilize binarization and block-wise histogram strategies to generate the final feature. Furthermore, we also develop a Multiple Scale version of TCCANet, i.e., MS-TCCANet, to extract enriched representation of the RS data by incorporating all previous convolutional layers. Numerical experiment results on RSSCN7 and SAT-6 datasets demonstrate the advantages of TCCANet and MS-TCCANet for RS scene recognition.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "48520199",
+                    "name": "Xinghao Yang"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "46641573",
+                    "name": "W. Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "2c2a1c360e86c81d8a005b4b32c4fcba4463b0d3",
+            "title": "Unlikelihood Tuning on Negative Samples Amazingly Improves Zero-Shot Translation",
+            "abstract": "Zero-shot translation (ZST), which is generally based on a multilingual neural machine translation model, aims to translate between unseen language pairs in training data. The common practice to guide the zero-shot language mapping during inference is to deliberately insert the source and target language IDs, e.g.,for English andfor German. Recent studies have shown that language IDs sometimes fail to navigate the ZST task, making them suffer from the off-target problem (non-target language words exist in the generated translation) and, therefore, difficult to apply the current multilingual translation model to a broad range of zero-shot language scenarios. To understand when and why the navigation capabilities of language IDs are weakened, we compare two extreme decoder input cases in the ZST directions: Off-Target (OFF) and On-Target (ON) cases. By contrastively visualizing the contextual word representations (CWRs) of these cases with teacher forcing, we show that 1) the CWRs of different languages are effectively distributed in separate regions when the sentence and ID are matched (ON setting), and 2) if the sentence and ID are unmatched (OFF setting), the CWRs of different languages are chaotically distributed. Our analyses suggest that although they work well in ideal ON settings, language IDs become fragile and lose their navigation ability when faced with off-target tokens, which commonly exist during inference but are rare in training scenarios. In response, we employ unlikelihood tuning on the negative (OFF) samples to minimize their probability such that the language IDs can discriminate between the on- and off-target tokens during training. Experiments spanning 40 ZST directions show that our method reduces the off-target ratio by -48.0% on average, leading to a +9.1 BLEU improvement with only an extra +0.3% tuning cost.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114248045",
+                    "name": "Changtong Zan"
+                },
+                {
+                    "authorId": "46573238",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "2144035454",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "2166060981",
+                    "name": "Yibin Lei"
+                },
+                {
+                    "authorId": "1895813",
+                    "name": "Yibing Zhan"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "2140448089",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "4a0c8ad3d9351929a260ebe6f52e6ecbbb97bd87",
+            "title": "Tilted Sparse Additive Models",
+            "abstract": "Additive models have been burgeoning in data analysis due to their flexible representation and desirable interpretability. However, most existing approaches are constructed under empirical risk minimization (ERM), and thus perform poorly in situations where average performance is not a suitable criterion for the problems of interest, e.g., data with complex non-Gaussian noise, imbalanced labels or both of them. In this paper, a novel class of sparse additive models is proposed under tilted empirical risk minimization (TERM), which addresses the deficiencies in ERM by imposing tilted impact on individual losses, and is flexibly capable of achieving a variety of learning objectives, e.g., variable selection, robust estimation, imbalanced classification and multi-objective learning. On the theoretical side, a learning theory analysis which is centered around the generalization bound and function approximation error bound (under some specific data distributions) is conducted rigorously. On the practical side, an accelerated optimization algorithm is designed by integrating Prox-SVRG and random Fourier acceleration technique. The empirical assessments verify the competitive performance of our approach on both synthetic and real data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108796145",
+                    "name": "Yingjie Wang"
+                },
+                {
+                    "authorId": "2118061634",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "51209425",
+                    "name": "Fengxiang He"
+                },
+                {
+                    "authorId": "2283634",
+                    "name": "Tieliang Gong"
+                },
+                {
+                    "authorId": "2202306558",
+                    "name": "Youcheng Fu"
+                },
+                {
+                    "authorId": "2135519749",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "59e35e1995f711edbf1e6300c74f29a9f82aedf7",
+            "title": "Self-Paced Hard Task-Example Mining for Few-Shot Classification",
+            "abstract": "In recent years, researchers have commonly employed assistant tasks to enhance the training phase of the few-shot classification models. Several methods have been proposed to exploit and optimize the training tasks, such as Curriculum Learning (CL) and Hard Example Mining (HEM). However, most of the existing strategies can not elaborately leverage the training tasks and share some common drawbacks, including 1) the ignorance of the target tasks\u2019 properties, and 2) the neglect of sample relationships. In this work, we propose a Self-Paced Hard tAsk-Example Mining (SP-HAEM) method to solve these problems. Specifically, the SP-HAEM automatically chooses hard examples via the similarity between training and target tasks to optimize the support set. To represent the property of target tasks, SP-HAEM obtains a representation of the dataset, called \u201cmeta-task\u201d. No need to apply an additional model to measure difficulty and choose hard examples like other HEM methods, SP-HAEM selects the tasks with large optimal transport distance to the meta-task as hard tasks. Thus, training with such hard tasks can not only enhances the generalization ability of the model but also eliminate the negative effect of redundancy tasks. To evaluate the effectiveness of SP-HAEM, we conduct extensive experiments on a variety of datasets, including MiniImageNet, TieredImageNet, and FC100. The results of the experiments show that SP-HAEM can achieve higher accuracy compared with the typical few-shot classification models, e.g., Prototypical Network, MAML, FEAT, and MTL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2213692261",
+                    "name": "Renjie Xu"
+                },
+                {
+                    "authorId": "48520199",
+                    "name": "Xinghao Yang"
+                },
+                {
+                    "authorId": "2193486131",
+                    "name": "Xingxing Yao"
+                },
+                {
+                    "authorId": "1701119",
+                    "name": "Dapeng Tao"
+                },
+                {
+                    "authorId": "151482853",
+                    "name": "Weijia Cao"
+                },
+                {
+                    "authorId": "2152840019",
+                    "name": "Xiaoping Lu"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "850b8f31a1bb762544bd35163923784a664b315a",
+            "title": "Prompt-Learning for Cross-Lingual Relation Extraction",
+            "abstract": "Relation Extraction (RE) is a crucial task in Information Extraction, which entails predicting relationships between entities within a given sentence. However, extending pre-trained RE models to other languages is challenging, particularly in real-world scenarios where Cross-Lingual Relation Extraction (XRE) is required. Despite recent advancements in Prompt-Learning, which involves transferring knowledge from Multilingual Pre-trained Language Models (PLMs) to diverse downstream tasks, there is limited research on the effective use of multilingual PLMs with prompts to improve XRE. In this paper, we present a novel XRE algorithm based on Prompt-Tuning, referred to as Prompt-Xre. To evaluate its effectiveness, we design and implement several prompt templates, including hard, soft, and hybrid prompts, and empirically test their performance on competitive multilingual PLMs, specifically mBART. Our extensive experiments, conducted on the low-resource ACE05 benchmark across multiple languages, demonstrate that our Prompt-Xre algorithm significantly outperforms both vanilla multilingual PLMs and other existing models, achieving state-of-the-art performance in XRE. To further show the generalization of our Prompt-XRE on larger data scales, we construct and release a new XRE dataset-WMTI7-EnZh XRE, containing 0.9M English-Chinese pairs extracted from WMT 2017 parallel corpus. Experiments on WMTI7-EnZh XRE also show the effectiveness of our Prompt-XRE against other competitive baselines. The code and newly constructed dataset are freely available at httus://2ithub.com/HSU-CHIA-MING/Promut-XRE.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214830106",
+                    "name": "Chiaming Hsu"
+                },
+                {
+                    "authorId": "2114248045",
+                    "name": "Changtong Zan"
+                },
+                {
+                    "authorId": "46573238",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "2111542852",
+                    "name": "Longyue Wang"
+                },
+                {
+                    "authorId": "2214829136",
+                    "name": "Xiaoting Wang"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "2214922886",
+                    "name": "Fu Lin"
+                },
+                {
+                    "authorId": "2146226874",
+                    "name": "Wenbin Hu"
+                }
+            ]
+        },
+        {
+            "paperId": "64c40c77f40d9c009d3af35bf60763ae9713c93c",
+            "title": "On the Complementarity between Pre-Training and Random-Initialization for Resource-Rich Machine Translation",
+            "abstract": "Pre-Training (PT) of text representations has been successfully applied to low-resource Neural Machine Translation (NMT). However, it usually fails to achieve notable gains (some- times, even worse) on resource-rich NMT on par with its Random-Initialization (RI) counterpart. We take the first step to investigate the complementarity between PT and RI in resource-rich scenarios via two probing analyses, and find that: 1) PT improves NOT the accuracy, but the generalization by achieving flatter loss landscapes than that of RI; 2) PT improves NOT the confidence of lexical choice, but the negative diversity by assigning smoother lexical probability distributions than that of RI. Based on these insights, we propose to combine their complementarities with a model fusion algorithm that utilizes optimal transport to align neurons between PT and RI. Experiments on two resource-rich translation benchmarks, WMT\u201917 English-Chinese (20M) and WMT\u201919 English-German (36M), show that PT and RI could be nicely complementary to each other, achieving substantial improvements considering both translation accuracy, generalization, and negative diversity. Probing tools and code are released at: https://github.com/zanchangtong/PTvsRI.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114248045",
+                    "name": "Changtong Zan"
+                },
+                {
+                    "authorId": "46573238",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "2144035454",
+                    "name": "Li Shen"
+                },
+                {
+                    "authorId": "143789117",
+                    "name": "Yu Cao"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "2140448089",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "78bb5b5a16e0223c3deb2689e8d45353451938c1",
+            "title": "Where Does the Performance Improvement Come From?: - A Reproducibility Concern about Image-Text Retrieval",
+            "abstract": "This article aims to provide the information retrieval community with some reflections on recent advances in retrieval learning by analyzing the reproducibility of image-text retrieval models. Due to the increase of multimodal data over the last decade, image-text retrieval has steadily become a major research direction in the field of information retrieval. Numerous researchers train and evaluate image-text retrieval algorithms using benchmark datasets such as MS-COCO and Flickr30k. Research in the past has mostly focused on performance, with multiple state-of-the-art methodologies being suggested in a variety of ways. According to their assertions, these techniques provide improved modality interactions and hence more precise multimodal representations. In contrast to previous works, we focus on the reproducibility of the approaches and the examination of the elements that lead to improved performance by pretrained and nonpretrained models in retrieving images and text. To be more specific, we first examine the related reproducibility concerns and explain why our focus is on image-text retrieval tasks. Second, we systematically summarize the current paradigm of image-text retrieval models and the stated contributions of those approaches. Third, we analyze various aspects of the reproduction of pretrained and nonpretrained retrieval models. To complete this, we conducted ablation experiments and obtained some influencing factors that affect retrieval recall more than the improvement claimed in the original paper. Finally, we present some reflections and challenges that the retrieval community should consider in the future. Our source code is publicly available at https://github.com/WangFei-2019/Image-text-Retrieval.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2142545243",
+                    "name": "Jun Rao"
+                },
+                {
+                    "authorId": "39586294",
+                    "name": "Fei Wang"
+                },
+                {
+                    "authorId": "46573238",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "1679286",
+                    "name": "Shuhan Qi"
+                },
+                {
+                    "authorId": "1895813",
+                    "name": "Yibing Zhan"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "143719920",
+                    "name": "D. Tao"
+                }
+            ]
+        },
+        {
+            "paperId": "7d096aae1bd971045aedfe7c40563c3c33a5173f",
+            "title": "Vega-MT: The JD Explore Academy Machine Translation System for WMT22",
+            "abstract": "We describe the JD Explore Academy\u2019s submission of the WMT 2022 shared general translation task. We participated in all high-resource tracks and one medium-resource track, including Chinese-English, German-English, Czech-English, Russian-English, and Japanese-English. We push the limit of our previous work \u2013 bidirectional training for translation by scaling up two main factors, i.e. language pairs and model sizes, namely the {textbf{Vega-MT} system. As for language pairs, we scale the \u201cbidirectional\u201d up to the \u201cmultidirectional\u201d settings, covering all participating languages, to exploit the common knowledge across languages, and transfer them to the downstream bilingual tasks. As for model sizes, we scale the Transformer-Big up to the extremely large model that owns nearly 4.7 Billion parameters, to fully enhance the model capacity for our Vega-MT. Also, we adopt the data augmentation strategies, e.g. cycle translation for monolingual data, and bidirectional self-training for bilingual and monolingual data, to comprehensively exploit the bilingual and monolingual data. To adapt our Vega-MT to the general domain test set, generalization tuning is designed. Based on the official automatic scores of constrained systems, in terms of the sacreBLEU shown in Figure-1, we got the 1st place on {Zh-En (33.5), En-Zh (49.7), De-En (33.7), En-De (37.8), Cs-En (54.9), En-Cs (41.4) and En-Ru (32.7)}, 2nd place on {Ru-En (45.1) and Ja-En (25.6)}, and 3rd place on {En-Ja(41.5)}, respectively; W.R.T the COMET, we got the 1st place on {Zh-En (45.1), En-Zh (61.7), De-En (58.0), En-De (63.2), Cs-En (74.7), Ru-En (64.9), En-Ru (69.6) and En-Ja (65.1)}, 2nd place on {En-Cs (95.3) and Ja-En (40.6)}, respectively. Models will be released to facilitate the MT community through GitHub and OmniForce Platform.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114248045",
+                    "name": "Changtong Zan"
+                },
+                {
+                    "authorId": "2065263152",
+                    "name": "Keqin Peng"
+                },
+                {
+                    "authorId": "46573238",
+                    "name": "Liang Ding"
+                },
+                {
+                    "authorId": "2136339354",
+                    "name": "Baopu Qiu"
+                },
+                {
+                    "authorId": "2185826034",
+                    "name": "Boan Liu"
+                },
+                {
+                    "authorId": "2152235390",
+                    "name": "Shwai He"
+                },
+                {
+                    "authorId": "2117523622",
+                    "name": "Qingyu Lu"
+                },
+                {
+                    "authorId": "2157141735",
+                    "name": "Zhenghang Zhang"
+                },
+                {
+                    "authorId": "145760439",
+                    "name": "Chuang Liu"
+                },
+                {
+                    "authorId": "2140409319",
+                    "name": "Weifeng Liu"
+                },
+                {
+                    "authorId": "1895813",
+                    "name": "Yibing Zhan"
+                },
+                {
+                    "authorId": "2140448089",
+                    "name": "Dacheng Tao"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,326 @@
+{
+    "authorId": "2109583192",
+    "papers": [
+        {
+            "paperId": "46210e170045df3c0c50a17bb63e6de480d62f9d",
+            "title": "FreshGNN: Reducing Memory Access via Stable Historical Embeddings for Graph Neural Network Training",
+            "abstract": "A key performance bottleneck when training graph neural network (GNN) models on large, real-world graphs is loading node features onto a GPU. Due to limited GPU memory, expensive data movement is necessary to facilitate the storage of these features on alternative devices with slower access (e.g. CPU memory). Moreover, the irregularity of graph structures contributes to poor data locality which further exacerbates the problem. Consequently, existing frameworks capable of efficiently training large GNN models usually incur a significant accuracy degradation because of the currently-available shortcuts involved. To address these limitations, we instead propose FreshGNN, a general-purpose GNN mini-batch training framework that leverages a historical cache for storing and reusing GNN node embeddings instead of re-computing them through fetching raw features at every iteration. Critical to its success, the corresponding cache policy is designed, using a combination of gradient-based and staleness criteria, to selectively screen those embeddings which are relatively stable and can be cached, from those that need to be re-computed to reduce estimation errors and subsequent downstream accuracy loss. When paired with complementary system enhancements to support this selective historical cache, FreshGNN is able to accelerate the training speed on large graph datasets such as ogbn-papers100M and MAG240M by 3.4\u00d7 up to 20.5\u00d7 and reduce the memory access by 59%, with less than 1% influence on test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "7d37a031cb7e5e12fe8d2403b762e5adb1c9764b",
+            "title": "Learning Regularized Noise Contrastive Estimation for Robust Network Embedding",
+            "abstract": "Skip-gram models are popular in large-scale network embedding for their cost-effectiveness. The objectives of many skip-gram based methods relate to the word2vec model which closely relates to Noise Contrastive Estimation (NCE). Among existing embedding methods, the differences mostly lie in how the node neighborhood is modeled e.g., by different ways of random walk, which leads to different learning strategies. Orthogonal to these efforts, we take a unified view that the NCE based methods commonly involve two basic NCE components in the learning objective. This perspective allows a natural generalization of the objectives by taking different forms of scoring function in the NCE components. We theoretically analyze how the vanilla NCE-based objectives suffer from the slow convergence speed and challenge in first-/second-order proximity preservation. We also prove the fundamental difficulty for NCE methods to capture non-linearity of complex networks. To mitigate such issues, we devise a general distance-based term added to the used NCE term, inspired by its physical meaning. The distance functions include Wasserstein-<inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"yan-ieq1-3148284.gif\"/></alternatives></inline-formula> distance and Laplacian/Gaussian kernel functions, with relatively little additional time overhead. The effectiveness of our approach is verified both by prototype examples as well as real-world datasets, for the task of node classification and network reconstruction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1699650539",
+                    "name": "Hao Xiong"
+                },
+                {
+                    "authorId": "3063894",
+                    "name": "Junchi Yan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "f848d33d6ee8067303382019bba098272d1d1fc1",
+            "title": "UNREAL: Unlabeled Nodes Retrieval and Labeling for Heavily-imbalanced Node Classification",
+            "abstract": "Extremely skewed label distributions are common in real-world node classification tasks. If not dealt with appropriately, it significantly hurts the performance of GNNs in minority classes. Due to its practical importance, there have been a series of recent research devoted to this challenge. Existing over-sampling techniques smooth the label distribution by generating ``fake'' minority nodes and synthesizing their features and local topology, which largely ignore the rich information of unlabeled nodes on graphs. In this paper, we propose UNREAL, an iterative over-sampling method. The first key difference is that we only add unlabeled nodes instead of synthetic nodes, which eliminates the challenge of feature and neighborhood generation. To select which unlabeled nodes to add, we propose geometric ranking to rank unlabeled nodes. Geometric ranking exploits unsupervised learning in the node embedding space to effectively calibrates pseudo-label assignment. Finally, we identify the issue of geometric imbalance in the embedding space and provide a simple metric to filter out geometrically imbalanced nodes. Extensive experiments on real-world benchmark datasets are conducted, and the empirical results show that our method significantly outperforms current state-of-the-art methods consistent on different datasets with different imbalance ratios.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2204625330",
+                    "name": "Liang Yan"
+                },
+                {
+                    "authorId": "2145522606",
+                    "name": "Shengzhong Zhang"
+                },
+                {
+                    "authorId": "2162903099",
+                    "name": "Bisheng Li"
+                },
+                {
+                    "authorId": "2152174679",
+                    "name": "Min Zhou"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "168e32bb9b0d3abead4da6e366d204c5d9177f6f",
+            "title": "Transformers from an Optimization Perspective",
+            "abstract": "Deep learning models such as the Transformer are often constructed by heuristics and experience. To provide a complementary foundation, in this work we study the following problem: Is it possible to find an energy function underlying the Transformer model, such that descent steps along this energy correspond with the Transformer forward pass? By finding such a function, we can view Transformers as the unfolding of an interpretable optimization process across iterations. This unfolding perspective has been frequently adopted in the past to elucidate more straightforward deep models such as MLPs and CNNs; however, it has thus far remained elusive obtaining a similar equivalence for more complex models with self-attention mechanisms like the Transformer. To this end, we first outline several major obstacles before providing companion techniques to at least partially address them, demonstrating for the first time a close association between energy function minimization and deep layers with self-attention. This interpretation contributes to our intuition and understanding of Transformers, while potentially laying the ground-work for new model designs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144182425",
+                    "name": "Yongyi Yang"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "7dd6e1027aaa21471371ddb28225a01b30171d34",
+            "title": "BSAL: A Framework of Bi-component Structure and Attribute Learning for Link Prediction",
+            "abstract": "Given the ubiquitous existence of graph-structured data, learning the representations of nodes for the downstream tasks ranging from node classification, link prediction to graph classification is of crucial importance. Regarding missing link inference of diverse networks, we revisit the link prediction techniques and identify the importance of both the structural and attribute information. However, the available techniques either heavily count on the network topology which is spurious in practice, or cannot integrate graph topology and features properly. To bridge the gap, we propose a bicomponent structural and attribute learning framework (BSAL) that is designed to adaptively leverage information from topology and feature spaces. Specifically, BSAL constructs a semantic topology via the node attributes and then gets the embeddings regarding the semantic view, which provides a flexible and easy-to-implement solution to adaptively incorporate the information carried by the node attributes. Then the semantic embedding together with topology embedding are fused together using attention mechanism for the final prediction. Extensive experiments show the superior performance of our proposal and it significantly outperforms baselines on diverse research benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2162903099",
+                    "name": "Bisheng Li"
+                },
+                {
+                    "authorId": "2152175543",
+                    "name": "Min Zhou"
+                },
+                {
+                    "authorId": "2145522606",
+                    "name": "Shengzhong Zhang"
+                },
+                {
+                    "authorId": "2111077098",
+                    "name": "Menglin Yang"
+                },
+                {
+                    "authorId": "1862782",
+                    "name": "Defu Lian"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "a454969934cfe9b397fe51cb20cf6a9a1a93cfa4",
+            "title": "ASGNN: Graph Neural Networks with Adaptive Structure",
+            "abstract": "The graph neural network (GNN) models have presented impressive achievements in numerous machine learning tasks. However, many existing GNN models are shown to be vulnerable to adversarial attacks, which creates a stringent need to build robust GNN architectures. In this work, we propose a novel interpretable message passing scheme with adaptive structure (ASMP) to defend against adversarial attacks on graph structure. Layers in ASMP are derived based on optimization steps that minimize an objective function that learns the node feature and the graph structure simultaneously. ASMP is adaptive in the sense that the message passing process in different layers is able to be carried out over dynamically adjusted graphs. Such property allows more fine-grained handling of the noisy (or perturbed) graph structure and hence improves the robustness. Convergence properties of the ASMP scheme are theoretically established. Integrating ASMP with neural networks can lead to a new family of GNN models with adaptive structure (ASGNN). Extensive experiments on semi-supervised node classification tasks demonstrate that the proposed ASGNN outperforms the state-of-the-art GNN architectures in terms of classification performance under various adversarial attacks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118690723",
+                    "name": "Zepeng Zhang"
+                },
+                {
+                    "authorId": "1606015788",
+                    "name": "Songtao Lu"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "150358968",
+                    "name": "Ziping Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "d3fb40fdca4162a5749132317c52d24359f92aba",
+            "title": "Exploiting Neighbor Effect: Conv-Agnostic GNNs Framework for Graphs with Heterophily",
+            "abstract": "Due to the homophily assumption in graph convolution networks (GCNs), a common consensus in the graph node classification task is that graph neural networks (GNNs) perform well on homophilic graphs but may fail on heterophilic graphs with many interclass edges. However, the previous interclass edges' perspective and related homo-ratio metrics cannot well explain the GNNs' performance under some heterophilic datasets, which implies that not all the interclass edges are harmful to GNNs. In this work, we propose a new metric based on the von Neumann entropy to reexamine the heterophily problem of GNNs and investigate the feature aggregation of interclass edges from an entire neighbor identifiable perspective. Moreover, we propose a simple yet effective Conv-Agnostic GNN framework (CAGNNs) to enhance the performance of most GNNs on the heterophily datasets by learning the neighbor effect for each node. Specifically, we first decouple the feature of each node into the discriminative feature for downstream tasks and the aggregation feature for graph convolution (GC). Then, we propose a shared mixer module to adaptively evaluate the neighbor effect of each node to incorporate the neighbor information. The proposed framework can be regarded as a plug-in component and is compatible with most GNNs. The experimental results over nine well-known benchmark datasets indicate that our framework can significantly improve performance, especially for the heterophily graphs. The average performance gain is 9.81%, 25.81%, and 20.61% compared with graph isomorphism network (GIN), graph attention network (GAT), and GCN, respectively. Extensive ablation studies and robustness analysis further verify the effectiveness, robustness, and interpretability of our framework. Code is available at https://github.com/JC-202/CAGNN.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Jie Chen"
+                },
+                {
+                    "authorId": "2107977562",
+                    "name": "Shouzhen Chen"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2144127151",
+                    "name": "Junping Zhang"
+                },
+                {
+                    "authorId": "2058905282",
+                    "name": "Jian Pu"
+                }
+            ]
+        },
+        {
+            "paperId": "2f64df4e61994b127e36f8114da3a070535941f4",
+            "title": "Why Propagate Alone? Parallel Use of Labels and Features on Graphs",
+            "abstract": "Graph neural networks (GNNs) and label propagation represent two interrelated modeling strategies designed to exploit graph structure in tasks such as node property prediction. The former is typically based on stacked message-passing layers that share neighborhood information to transform node features into predictive embeddings. In contrast, the latter involves spreading label information to unlabeled nodes via a parameter-free diffusion process, but operates independently of the node features. Given then that the material difference is merely whether features or labels are smoothed across the graph, it is natural to consider combinations of the two for improving performance. In this regard, it has recently been proposed to use a randomly-selected portion of the training labels as GNN inputs, concatenated with the original node features for making predictions on the remaining labels. This so-called label trick accommodates the parallel use of features and labels, and is foundational to many of the top-ranking submissions on the Open Graph Benchmark (OGB) leaderboard. And yet despite its wide-spread adoption, thus far there has been little attempt to carefully unpack exactly what statistical properties the label trick introduces into the training pipeline, intended or otherwise. To this end, we prove that under certain simplifying assumptions, the stochastic label trick can be reduced to an interpretable, deterministic training objective composed of two factors. The first is a data-fitting term that naturally resolves potential label leakage issues, while the second serves as a regularization factor conditioned on graph structure that adapts to graph size and connectivity. Later, we leverage this perspective to motivate a broader range of label trick use cases, and provide experiments to verify the efficacy of these extensions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2146020415",
+                    "name": "Yangkun Wang"
+                },
+                {
+                    "authorId": "16278568",
+                    "name": "Jiarui Jin"
+                },
+                {
+                    "authorId": "2108309275",
+                    "name": "Weinan Zhang"
+                },
+                {
+                    "authorId": "2144182425",
+                    "name": "Yongyi Yang"
+                },
+                {
+                    "authorId": "1391200710",
+                    "name": "Jiuhai Chen"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2119021541",
+                    "name": "Yong Yu"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "43ea60953d675c3daa8cff594c8525ec513876b7",
+            "title": "Discrete-time Temporal Network Embedding via Implicit Hierarchical Learning in Hyperbolic Space",
+            "abstract": "Representation learning over temporal networks has drawn considerable attention in recent years. Efforts are mainly focused on modeling structural dependencies and temporal evolving regularities in Euclidean space which, however, underestimates the inherent complex and hierarchical properties in many real-world temporal networks, leading to sub-optimal embeddings. To explore these properties of a complex temporal network, we propose a hyperbolic temporal graph network (HTGN) that fully takes advantage of the exponential capacity and hierarchical awareness of hyperbolic geometry. More specially, HTGN maps the temporal graph into hyperbolic space, and incorporates hyperbolic graph neural network and hyperbolic gated recurrent neural network, to capture the evolving behaviors and implicitly preserve hierarchical information simultaneously. Furthermore, in the hyperbolic space, we propose two important modules that enable HTGN to successfully model temporal networks: (1) hyperbolic temporal contextual self-attention (HTA) module to attend to historical states and (2) hyperbolic temporal consistency (HTC) module to ensure stability and generalization. Experimental results on multiple real-world datasets demonstrate the superiority of HTGN for temporal graph embedding, as it consistently outperforms competing methods by significant margins in various temporal link prediction tasks. Specifically, HTGN achieves AUC improvement up to 9.98% for link prediction and 11.4% for new link prediction. Moreover, the ablation study further validates the representational ability of hyperbolic geometry and the effectiveness of the proposed HTA and HTC modules.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111077098",
+                    "name": "Menglin Yang"
+                },
+                {
+                    "authorId": "49542295",
+                    "name": "Min Zhou"
+                },
+                {
+                    "authorId": "152238016",
+                    "name": "Marcus Kalander"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "145310663",
+                    "name": "Irwin King"
+                }
+            ]
+        },
+        {
+            "paperId": "55ff2d800643f11c0dceab7525fb38758086028c",
+            "title": "Implicit vs Unfolded Graph Neural Networks",
+            "abstract": "It has been observed that graph neural networks (GNN) sometimes struggle to maintain a healthy balance between the efficient modeling long-range dependencies across nodes while avoiding unintended consequences such oversmoothed node representations or sensitivity to spurious edges. To address this issue (among other things), two separate strategies have recently been proposed, namely implicit and unfolded GNNs. The former treats node representations as the fixed points of a deep equilibrium model that can efficiently facilitate arbitrary implicit propagation across the graph with a fixed memory footprint. In contrast, the latter involves treating graph propagation as unfolded descent iterations as applied to some graph-regularized energy function. While motivated differently, in this paper we carefully quantify explicit situations where the solutions they produce are equivalent and others where their properties sharply diverge. This includes the analysis of convergence, representational capacity, and interpretability. In support of this analysis, we also provide empirical head-to-head comparisons across multiple synthetic and public real-world node classification benchmarks. These results indicate that while IGNN is substantially more memory-efficient, UGNN models support unique, integrated graph attention mechanisms and propagation rules that can achieve SOTA node classification accuracy across disparate regimes such as adversarially-perturbed graphs, graphs with heterophily, and graphs involving long-range dependencies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2144182425",
+                    "name": "Yongyi Yang"
+                },
+                {
+                    "authorId": "2146020415",
+                    "name": "Yangkun Wang"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        }
+    ]
+}

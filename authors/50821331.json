@@ -1,0 +1,248 @@
+{
+    "authorId": "50821331",
+    "papers": [
+        {
+            "paperId": "21a5ae62d18f9b3b0763e5fe2df56b19b0519e13",
+            "title": "Matchings, Predictions and Counterfactual Harm in Refugee Resettlement Processes",
+            "abstract": "Resettlement agencies have started to adopt data-driven algorithmic matching to match refugees to locations using employment rate as a measure of utility. Given a pool of refugees, data-driven algorithmic matching utilizes a classifier to predict the probability that each refugee would find employment at any given location. Then, it uses the predicted probabilities to estimate the expected utility of all possible placement decisions. Finally, it finds the placement decisions that maximize the predicted utility by solving a maximum weight bipartite matching problem. In this work, we argue that, using existing solutions, there may be pools of refugees for which data-driven algorithmic matching is (counterfactually) harmful -- it would have achieved lower utility than a given default policy used in the past, had it been used. Then, we develop a post-processing algorithm that, given placement decisions made by a default policy on a pool of refugees and their employment outcomes, solves an inverse~matching problem to minimally modify the predictions made by a given classifier. Under these modified predictions, the optimal matching policy that maximizes predicted utility on the pool is guaranteed to be not harmful. Further, we introduce a Transformer model that, given placement decisions made by a default policy on multiple pools of refugees and their employment outcomes, learns to modify the predictions made by a classifier so that the optimal matching policy that maximizes predicted utility under the modified predictions on an unseen pool of refugees is less likely to be harmful than under the original predictions. Experiments on simulated resettlement processes using synthetic refugee data created from a variety of publicly available data suggest that our methodology may be effective in making algorithmic placement decisions that are less likely to be harmful than existing solutions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2311988999",
+                    "name": "Seungeon Lee"
+                },
+                {
+                    "authorId": "2095525016",
+                    "name": "N. C. Benz"
+                },
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "2303463167",
+                    "name": "Manuel Gomez-Rodriguez"
+                }
+            ]
+        },
+        {
+            "paperId": "22ac64caf847ba15703912d5494ff1b9aa482d09",
+            "title": "Controlling Counterfactual Harm in Decision Support Systems Based on Prediction Sets",
+            "abstract": "Decision support systems based on prediction sets help humans solve multiclass classification tasks by narrowing down the set of potential label values to a subset of them, namely a prediction set, and asking them to always predict label values from the prediction sets. While this type of systems have been proven to be effective at improving the average accuracy of the predictions made by humans, by restricting human agency, they may cause harm$\\unicode{x2014}$a human who has succeeded at predicting the ground-truth label of an instance on their own may have failed had they used these systems. In this paper, our goal is to control how frequently a decision support system based on prediction sets may cause harm, by design. To this end, we start by characterizing the above notion of harm using the theoretical framework of structural causal models. Then, we show that, under a natural, albeit unverifiable, monotonicity assumption, we can estimate how frequently a system may cause harm using only predictions made by humans on their own. Further, we also show that, under a weaker monotonicity assumption, which can be verified experimentally, we can bound how frequently a system may cause harm again using only predictions made by humans on their own. Building upon these assumptions, we introduce a computational framework to design decision support systems based on prediction sets that are guaranteed to cause harm less frequently than a user-specified value using conformal risk control. We validate our framework using real human predictions from two different human subject studies and show that, in decision support systems based on prediction sets, there is a trade-off between accuracy and counterfactual harm.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2127873667",
+                    "name": "Eleni Straitouri"
+                },
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "2288250392",
+                    "name": "Manuel Gomez Rodriguez"
+                }
+            ]
+        },
+        {
+            "paperId": "30c1f450040b65c23f758dbdee7f1daffe278eef",
+            "title": "Prediction-Powered Ranking of Large Language Models",
+            "abstract": "Large language models are often ranked according to their level of alignment with human preferences -- a model is better than other models if its outputs are more frequently preferred by humans. One of the popular ways to elicit human preferences utilizes pairwise comparisons between the outputs provided by different models to the same inputs. However, since gathering pairwise comparisons by humans is costly and time-consuming, it has become a common practice to gather pairwise comparisons by a strong large language model -- a model strongly aligned with human preferences. Surprisingly, practitioners cannot currently measure the uncertainty that any mismatch between human and model preferences may introduce in the constructed rankings. In this work, we develop a statistical framework to bridge this gap. Given a (small) set of pairwise comparisons by humans and a large set of pairwise comparisons by a model, our framework provides a rank-set -- a set of possible ranking positions -- for each of the models under comparison. Moreover, it guarantees that, with a probability greater than or equal to a user-specified value, the rank-sets cover the true ranking consistent with the distribution of human pairwise preferences asymptotically. Using pairwise comparisons made by humans in the LMSYS Chatbot Arena platform and pairwise comparisons made by three strong large language models, we empirically demonstrate the effectivity of our framework and show that the rank-sets constructed using only pairwise comparisons by the strong large language models are often inconsistent with (the distribution of) human pairwise preferences.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2287930916",
+                    "name": "Ivi Chatzi"
+                },
+                {
+                    "authorId": "2127873667",
+                    "name": "Eleni Straitouri"
+                },
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "2288250392",
+                    "name": "Manuel Gomez Rodriguez"
+                }
+            ]
+        },
+        {
+            "paperId": "51aea640bb78d01d80223f439622c9fbbcee335b",
+            "title": "Towards Human-AI Complementarity with Predictions Sets",
+            "abstract": "Decision support systems based on prediction sets have proven to be effective at helping human experts solve classification tasks. Rather than providing single-label predictions, these systems provide sets of label predictions constructed using conformal prediction, namely prediction sets, and ask human experts to predict label values from these sets. In this paper, we first show that the prediction sets constructed using conformal prediction are, in general, suboptimal in terms of average accuracy. Then, we show that the problem of finding the optimal prediction sets under which the human experts achieve the highest average accuracy is NP-hard. More strongly, unless P = NP, we show that the problem is hard to approximate to any factor less than the size of the label set. However, we introduce a simple and efficient greedy algorithm that, for a large class of expert models and non-conformity scores, is guaranteed to find prediction sets that provably offer equal or greater performance than those constructed using conformal prediction. Further, using a simulation study with both synthetic and real expert predictions, we demonstrate that, in practice, our greedy algorithm finds near-optimal prediction sets offering greater performance than conformal prediction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1657672584",
+                    "name": "G. D. Toni"
+                },
+                {
+                    "authorId": "41022166",
+                    "name": "Nastaran Okati"
+                },
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "2127873667",
+                    "name": "Eleni Straitouri"
+                },
+                {
+                    "authorId": "2303463167",
+                    "name": "Manuel Gomez-Rodriguez"
+                }
+            ]
+        },
+        {
+            "paperId": "8489bf3ccdda5ac8e26e47ae1dda7409d0cf11a1",
+            "title": "Diversity-aware clustering: Computational Complexity and Approximation Algorithms",
+            "abstract": "In this work, we study diversity-aware clustering problems where the data points are associated with multiple attributes resulting in intersecting groups. A clustering solution need to ensure that a minimum number of cluster centers are chosen from each group while simultaneously minimizing the clustering objective, which can be either $k$-median, $k$-means or $k$-supplier. We present parameterized approximation algorithms with approximation ratios $1+ \\frac{2}{e}$, $1+\\frac{8}{e}$ and $3$ for diversity-aware $k$-median, diversity-aware $k$-means and diversity-aware $k$-supplier, respectively. The approximation ratios are tight assuming Gap-ETH and FPT $\\neq$ W[2]. For fair $k$-median and fair $k$-means with disjoint faicility groups, we present parameterized approximation algorithm with approximation ratios $1+\\frac{2}{e}$ and $1+\\frac{8}{e}$, respectively. For fair $k$-supplier with disjoint facility groups, we present a polynomial-time approximation algorithm with factor $3$, improving the previous best known approximation ratio of factor $5$.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "35332118",
+                    "name": "Bruno Ordozgoiti"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "e31b00d44bf5eb0a2980d0fc6a089b1d1cbabf79",
+            "title": "Fair Column Subset Selection",
+            "abstract": "The problem of column subset selection asks for a subset of columns from an input matrix such that the matrix can be reconstructed as accurately as possible within the span of the selected columns. A natural extension is to consider a setting where the matrix rows are partitioned into two groups, and the goal is to choose a subset of columns that minimizes the maximum reconstruction error of both groups, relative to their respective best rank-k approximation. Extending the known results of column subset selection to this fair setting is not straightforward: in certain scenarios it is unavoidable to choose columns separately for each group, resulting in double the expected column count. We propose a deterministic leverage-score sampling strategy for the fair setting and show that sampling a column subset of minimum size becomes NP-hard in the presence of two groups. Despite these negative results, we give an approximation algorithm that guarantees a solution within 1.5 times the optimal solution size. We also present practical heuristic algorithms based on rank-revealing QR factorization. Finally, we validate our methods through an extensive set of experiments using real-world data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2064231321",
+                    "name": "Antonis Matakos"
+                },
+                {
+                    "authorId": "35332118",
+                    "name": "Bruno Ordozgoiti"
+                },
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                }
+            ]
+        },
+        {
+            "paperId": "82d2348cc9041491e690db884a6014a553c7bcd0",
+            "title": "Clustering with Fair-Center Representation: Parameterized Approximation Algorithms and Heuristics",
+            "abstract": "We study a variant of classical clustering formulations in the context of algorithmic fairness, known as diversity-aware clustering. In this variant we are given a collection of facility subsets, and a solution must contain at least a specified number of facilities from each subset while simultaneously minimizing the clustering objective (k-median or k-means). We investigate the fixed-parameter tractability of these problems and show several negative hardness and inapproximability results, even when we afford exponential running time with respect to some parameters. Motivated by these results we identify natural parameters of the problem, and present fixed-parameter approximation algorithms with approximation ratios (1 + 2 over e + \u2208) and (1 + 8 over e + \u2208) for diversity-aware k-median and diversity-aware k-means respectively, and argue that these ratios are essentially tight assuming the gap-exponential time hypothesis. We also present a simple and more practical bicriteria approximation algorithm with better running time bounds. We finally propose efficient and practical heuristics. We evaluate the scalability and effectiveness of our methods in a wide variety of rigorously conducted experiments, on both real and synthetic data.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "35332118",
+                    "name": "Bruno Ordozgoiti"
+                },
+                {
+                    "authorId": "100592338",
+                    "name": "M. Osadnik"
+                }
+            ]
+        },
+        {
+            "paperId": "8ca8777afc8e2b85b391518e10ba20b5a3c04ca4",
+            "title": "Approximation algorithms for k-median with lower-bound constraints",
+            "abstract": "We study a variant of the classical k -median problem known as diversity-aware k -median (introduced by Thejaswi et al. 2021), where we are given a collection of facility subsets, and a solution must contain at least a speci\ufb01ed number of facilities from each subset. We investigate the \ufb01xed-parameter tractability of this problem and show several negative hardness and inapproximability results, even when we a\ufb00ord exponential running time with respect to some parameters of the problem. Motivated by these results we present a \ufb01xed parameter approximation algorithm with approximation ratio (1 + 2 e + (cid:15) ), and argue that this ratio is essentially tight assuming the gap-exponential time hypothesis. We also present a simple, practical local-search algorithm that gives a bicriteria (2 k, 3 + (cid:15) ) approximation with better running time bounds.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1715867",
+                    "name": "Ameet Gadekar"
+                },
+                {
+                    "authorId": "35332118",
+                    "name": "Bruno Ordozgoiti"
+                },
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                }
+            ]
+        },
+        {
+            "paperId": "465e02d68e2d9c86d0e9ff6633a504ea4e244bfd",
+            "title": "Restless reachability problems in temporal graphs.",
+            "abstract": "We study a family of reachability problems under waiting-time restrictions in temporal and vertex-colored temporal graphs. Given a temporal graph and a set of source vertices, we find the set of vertices that are reachable from a source via a time-respecting path, where the difference in timestamps between consecutive edges is at most a resting time. Given a vertex-colored temporal graph and a multiset query of colors, we find the set of vertices reachable from a source via a time-respecting path such that the vertex colors of the path agree with the multiset query and the difference in timestamps between consecutive edges is at most a resting time. These kind of problems have several applications in understanding the spread of a disease in a network, tracing contacts in epidemic outbreaks, finding signaling pathways in the brain network, and recommending tours for tourists. We present an algebraic algorithmic framework based on constrained multilinear sieving for solving the restless reachability problems we propose. In particular, parameterized by the length of a path $k$ sought, we show the problems can be solved in $O(2^k k m \\Delta)$ time and $O(n \\tau)$ space, where $n$ is the number of vertices, $m$ the number of edges, $\\Delta$ the maximum resting time and $\\tau$ the maximum timestamp of an input temporal graph. In addition, we prove that the algorithms presented for the restless reachability problems in vertex-colored temporal graphs are optimal under plausible complexity-theoretic assumptions. Finally, with an open-source implementation, we demonstrate that our algorithm scales to large graphs with up to one billion temporal edges, despite the problems being NP-hard. Specifically, we present extensive experiments to evaluate our scalability claims both on synthetic and real-world graphs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "1954220",
+                    "name": "Juho Lauri"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        },
+        {
+            "paperId": "a941b01d79a1bdb8446ac5e74772cf3eee06db80",
+            "title": "Finding temporal patterns using algebraic fingerprints",
+            "abstract": "In this paper we study a family of pattern-detection problems in vertex-colored temporal graphs. In particular, given a vertex-colored temporal graph and a multi-set of colors as a query, we search for temporal paths in the graph that contain the colors specified in the query. These types of problems have several interesting applications, for example, recommending tours for tourists, or searching for abnormal behavior in a network of financial transactions. For the family of pattern-detection problems we define, we establish complexity results and design an algebraic-algorithmic framework based on constrained multilinear sieving. We demonstrate that our solution can scale to massive graphs with up to hundred million edges, despite the problems being NP-hard. Our implementation, which is publicly available, exhibits practical edge-linear scalability and highly optimized. For example, in a real-world graph dataset with more than six million edges and a multi-set query with ten colors, we can extract an optimal solution in less than eight minutes on a haswell desktop with four cores.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50821331",
+                    "name": "Suhas Thejaswi"
+                },
+                {
+                    "authorId": "1682878",
+                    "name": "A. Gionis"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,346 @@
+{
+    "authorId": "5462268",
+    "papers": [
+        {
+            "paperId": "296f58530cb3423a193b273f3cc8b3ad28bf903d",
+            "title": "Data-Driven Distributed Grid Topology Identification Using Backtracking Jacobian Matrix Approach",
+            "abstract": "The topology identification of the distribution system is the foundation of state estimation and system analyses. However, the lack of sufficient measurement devices in practice makes full-scale identification of distributed grids hardly achievable. On the other hand, the high-scale distributed renewable energy grid-connected aggravates the complex associations between nodal injection power and voltage. Taking full advantage of it, this article proposes a novel data-driven approach to identify the topology by backtracking the Jacobian matrix from the voltage and power data from grid terminal units. Specifically, a data-driven power-to-voltage mapping model is proposed. It uses the adaptive online deep learning algorithm based on hedge backpropagation to model the mapping relationship of terminal active power, reactive power, and voltage. Then, backtracking the mapping model, a Jacobian matrix consisting of the partial derivative of voltage to the active and reactive power is obtained, which reflects the connectivity between nodes. Finally, through the Jacobian matrix, a maximum connectivity screening algorithm is developed to generate the topology of medium distribution systems. The effectiveness of the proposed method is verified on IEEE 33-node, IEEE 123-node, and actual distribution systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2139766615",
+                    "name": "Xiao Yu"
+                },
+                {
+                    "authorId": "2143573185",
+                    "name": "Jian Zhao"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "2118775938",
+                    "name": "Xiaoyu Wang"
+                },
+                {
+                    "authorId": "1605958755",
+                    "name": "Xiao-liang Bian"
+                }
+            ]
+        },
+        {
+            "paperId": "31496aa700dc812572fc42ce0fffb5a365dc739a",
+            "title": "Make the U in UDA Matter: Invariant Consistency Learning for Unsupervised Domain Adaptation",
+            "abstract": "Domain Adaptation (DA) is always challenged by the spurious correlation between domain-invariant features (e.g., class identity) and domain-specific features (e.g., environment) that does not generalize to the target domain. Unfortunately, even enriched with additional unsupervised target domains, existing Unsupervised DA (UDA) methods still suffer from it. This is because the source domain supervision only considers the target domain samples as auxiliary data (e.g., by pseudo-labeling), yet the inherent distribution in the target domain -- where the valuable de-correlation clues hide -- is disregarded. We propose to make the U in UDA matter by giving equal status to the two domains. Specifically, we learn an invariant classifier whose prediction is simultaneously consistent with the labels in the source domain and clusters in the target domain, hence the spurious correlation inconsistent in the target domain is removed. We dub our approach\"Invariant CONsistency learning\"(ICON). Extensive experiments show that ICON achieves the state-of-the-art performance on the classic UDA benchmarks: Office-Home and VisDA-2017, and outperforms all the conventional methods on the challenging WILDS 2.0 benchmark. Codes are in https://github.com/yue-zhongqi/ICON.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2068671905",
+                    "name": "Zhongqi Yue"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "32222907",
+                    "name": "Qianru Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "34f7ed9673b8e49e44c2e68dc641395947bc7b3e",
+            "title": "Learning to Double-Check Model Prediction From a Causal Perspective",
+            "abstract": "The present machine learning schema typically uses a one-pass model inference (e.g., forward propagation) to make predictions in the testing phase. It is inherently different from human students who double-check the answer during examinations especially when the confidence is low. To bridge this gap, we propose a learning to double-check (L2D) framework, which formulates double check as a learnable procedure with two core operations: recognizing unreliable predictions and revising predictions. To judge the correctness of a prediction, we resort to counterfactual faithfulness in causal theory and design a contrastive faithfulness measure. In particular, L2D generates counterfactual features by imagining: \u201cwhat would the sample features be if its label was the predicted class\u201d and judges the prediction by the faithfulness of the counterfactual features. Furthermore, we design a simple and effective revision module to revise the original model prediction according to the faithfulness. We apply the L2D framework to three classification models and conduct experiments on two public datasets for image classification, validating the effectiveness of L2D in prediction correctness judgment and revision.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214550033",
+                    "name": "Xun Deng"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "3ba7fb7b6ba42f003f89ca1cc2487d9aaddc28cf",
+            "title": "Learning Trajectory-Word Alignments for Video-Language Tasks",
+            "abstract": "In a video, an object usually appears as the trajectory, i.e., it spans over a few spatial but longer temporal patches, that contains abundant spatiotemporal contexts. However, modern Video-Language BERTs (VDL-BERTs) neglect this trajectory characteristic that they usually follow image-language BERTs (IL-BERTs) to deploy the patch-to-word (P2W) attention that may over-exploit trivial spatial contexts and neglect significant temporal contexts. To amend this, we propose a novel TW-BERT to learn Trajectory-Word alignment by a newly designed trajectory-to-word (T2W) attention for solving video-language tasks. Moreover, previous VDL-BERTs usually uniformly sample a few frames into the model while different trajectories have diverse graininess, i.e., some trajectories span longer frames and some span shorter, and using a few frames will lose certain useful temporal contexts. However, simply sampling more frames will also make pre-training infeasible due to the largely increased training burdens. To alleviate the problem, during the fine-tuning stage, we insert a novel Hierarchical Frame-Selector (HFS) module into the video encoder. HFS gradually selects the suitable frames conditioned on the text context for the later cross-modal encoder to learn better trajectory-word alignments. By the proposed T2W attention and HFS, our TW-BERT achieves SOTA performances on text-to-video retrieval tasks, and comparable performances on video question-answering tasks with some VDL-BERTs trained on much more data. The code will be available in the supplementary material.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143731503",
+                    "name": "Xu Yang"
+                },
+                {
+                    "authorId": "2145305855",
+                    "name": "Zhang Li"
+                },
+                {
+                    "authorId": "153194420",
+                    "name": "Haiyang Xu"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "2199011713",
+                    "name": "Qinghao Ye"
+                },
+                {
+                    "authorId": "143971529",
+                    "name": "Chenliang Li"
+                },
+                {
+                    "authorId": "2047087220",
+                    "name": "Ming Yan"
+                },
+                {
+                    "authorId": "2153637936",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "143857288",
+                    "name": "Fei Huang"
+                },
+                {
+                    "authorId": "2410938",
+                    "name": "Songfang Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "57f01f0bb6ef7d3ae8128b588d8d60ba3ec2d65f",
+            "title": "Hypothetical Training for Robust Machine Reading Comprehension of Tabular Context",
+            "abstract": "Machine Reading Comprehension (MRC) models easily learn spurious correlations from complex contexts such as tabular data. Counter-factual training\u2014using the factual and coun-terfactual data by augmentation\u2014has become a promising solution. However, it is costly to construct faithful counterfactual examples because it is tricky to maintain the consistency and dependency of the tabular data. In this paper, we take a more efficient fashion to ask hypothetical questions like \u201cin which year would the net profit be larger if the revenue in 2019 were $38,298?\u201d , whose effects on the answers are equivalent to those expensive coun-terfactual tables. We propose a hypothetical training framework that uses paired examples with different hypothetical questions to super-vise the direction of model gradient towards the counterfactual answer change. The superior generalization results on tabular MRC datasets, including a newly constructed stress test and MultiHiertt, validate our effectiveness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118769749",
+                    "name": "Moxin Li"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "2145778781",
+                    "name": "Qifan Wang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "659fe8f1004adf2c60711d6f74a56e9945a89643",
+            "title": "Fast Diffusion Model",
+            "abstract": "Diffusion models (DMs) have been adopted across diverse fields with its remarkable abilities in capturing intricate data distributions. In this paper, we propose a Fast Diffusion Model (FDM) to significantly speed up DMs from a stochastic optimization perspective for both faster training and sampling. We first find that the diffusion process of DMs accords with the stochastic optimization process of stochastic gradient descent (SGD) on a stochastic time-variant problem. Then, inspired by momentum SGD that uses both gradient and an extra momentum to achieve faster and more stable convergence than SGD, we integrate momentum into the diffusion process of DMs. This comes with a unique challenge of deriving the noise perturbation kernel from the momentum-based diffusion process. To this end, we frame the process as a Damped Oscillation system whose critically damped state -- the kernel solution -- avoids oscillation and yields a faster convergence speed of the diffusion process. Empirical results show that our FDM can be applied to several popular DM frameworks, e.g., VP, VE, and EDM, and reduces their training cost by about 50% with comparable image synthesis performance on CIFAR-10, FFHQ, and AFHQv2 datasets. Moreover, FDM decreases their sampling steps by about 3x to achieve similar performance under the same samplers. The code is available at https://github.com/sail-sg/FDM.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2279764134",
+                    "name": "Zike Wu"
+                },
+                {
+                    "authorId": "2219917996",
+                    "name": "Pan Zhou"
+                },
+                {
+                    "authorId": "2054994779",
+                    "name": "Kenji Kawaguchi"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "70550ec6521ce35c43454059ec5b12316d68df9c",
+            "title": "Research on the Magnetomechanical Coupling Effect of Ferromagnetic Cavity Based on Improved Jiles\u2013Atherton Theory",
+            "abstract": "Magnetic field generated by ferromagnetic materials of underwater detectors varies with seawater pressure, which affects the accuracy of deep-sea resource exploration. Therefore, to precisely simulate the influence of deep-sea pressure on the magnetic field around the underwater detectors, a magnetomechanical numerical model must be developed. In this article, a magnetomechanical coupling model of an oxygen tank was developed in COMSOL Multiphysics. Hysteresis curves of 37Mn-type steel were measured with superconducting quantum interference device (SQUID), on which Jiles\u2013Atherton parameters were identified. Initial magnetization of the oxygen tank was calculated according to the obtained conversion matrix and flux density matrix measured by sensors. Furthermore, the concept of equivalent mean field parameter was introduced to describe the magnetomechanical coupling effect of ferromagnets by improving Jiles\u2013Atherton theory, and three equivalent mean field parameters of 37Mn-type steel were obtained. The irreversibility of magnetization and relationship between the pressure and the spatial magnetic field were experimentally obtained and verified. With the escalation of inner pressure and the augmentation of the stress cycle number, reduction in the spatial magnetic field components occurred. The spatial magnetic field components demonstrated an approximate quadratic relationship with the pressure, while exhibiting an approximately linear association with the stress cycle number.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "30999789",
+                    "name": "Zuoshuai Wang"
+                },
+                {
+                    "authorId": "2150054905",
+                    "name": "Jiajie Long"
+                },
+                {
+                    "authorId": "2108261322",
+                    "name": "Xianhao Li"
+                },
+                {
+                    "authorId": "31101994",
+                    "name": "Wentie Yang"
+                },
+                {
+                    "authorId": "2218862642",
+                    "name": "Meng Chen"
+                },
+                {
+                    "authorId": "50125869",
+                    "name": "Ying Xu"
+                },
+                {
+                    "authorId": "2109351453",
+                    "name": "Jing Shi"
+                },
+                {
+                    "authorId": "145704540",
+                    "name": "L. Ren"
+                }
+            ]
+        },
+        {
+            "paperId": "8e17d54fc97c5e3d34606531ea59260f48365310",
+            "title": "Adaptively Clustering Neighbor Elements for Image Captioning",
+            "abstract": "We propose a novel Transformer-based captioning model termed as Ada-ClustFormer ( ACF ) that can adaptively cluster vision patches into object regions and language words into phrases to implicitly learn object-phrase alignments for better captions. To achieve this, we design a novel self-attention layer that applies self-attention over the elements in a local cluster window instead of the whole sequence. The window size is softly decided by a clustering matrix that is calculated by the current input data and thus the clustering process is adaptive. By stacking these revised self-attention layers to construct ACF, the small clusters in the lower layers can be grouped into a bigger cluster, e.g ., vision/language ACF clusters small objects/phrases into a bigger one. In this gradual clustering process, a parsing tree is also generated which embeds the hierarchical knowledge of the input sequence. As a result, by using ACF to build the vision encoder and language de-coder, the hierarchical object-phrase alignments are embedded and then transferred from vision to language domains for more grounded captions. The experiment re-sults demonstrate the effectiveness of ACF that we achieve",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2193451398",
+                    "name": "Zihua Wang"
+                },
+                {
+                    "authorId": "2143731503",
+                    "name": "Xu Yang"
+                },
+                {
+                    "authorId": "153194420",
+                    "name": "Haiyang Xu"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "143971529",
+                    "name": "Chenliang Li"
+                },
+                {
+                    "authorId": "2410938",
+                    "name": "Songfang Huang"
+                },
+                {
+                    "authorId": "4443395",
+                    "name": "Feisi Huang"
+                },
+                {
+                    "authorId": "2153638435",
+                    "name": "Yu Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "9375a7f37942d4bbdca6a3c4641709bad00b6538",
+            "title": "Rate-Flexible Coherent PON Up To 300 Gb/s Demonstrations with Low Complexity TDM Burst Design",
+            "abstract": "Two flexible-rate coherent PON architectures have been demonstrated, featuring a low complexity TDM burst DSP. A peak data rate of up to 300-Gb/s and transmission over 50-km link and 1\u00d732 split ratio has been achieved.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "8620210",
+                    "name": "Z. Jia"
+                },
+                {
+                    "authorId": "40443707",
+                    "name": "L. A. Campos"
+                },
+                {
+                    "authorId": "2797767",
+                    "name": "C. Knittle"
+                }
+            ]
+        },
+        {
+            "paperId": "a5be68c00d6f3393b9295616cdb67b1fb773bc89",
+            "title": "Edge-FVV: Free Viewpoint Video Streaming by Learning at the Edge",
+            "abstract": "Audiences cangain an immersive experience watching videos from multiple angles (a.k.a. viewpoints). Free Viewpoint Video (FVV) is developed to enable users to choose their preferred viewpoints during the play of a video. However, users may experience a delay if video frames of the chosen viewpoint cannot be timely loaded, or synthesized from multiple video streams of neighboring viewpoints. To address this problem, we present Edge-FVV, an edge-assisted FVV system that employs edge caches to reduce the delay in streaming the requested FVV from the server to client users. We first analyze the capacity and delay at edge caches when answering FVV requests. Next, we propose two types of machine learning algorithms that allocate the users\u2019 requests to appropriate edge caches. Our evaluation shows that two types of proposed algorithms outperform benchmarks by 4.2-7.4% and 4.6-6.8%, respectively, in reducing the delay for FVV requests.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "2233500362",
+                    "name": "Jie Zhang"
+                },
+                {
+                    "authorId": "3435443",
+                    "name": "Weimiao Feng"
+                },
+                {
+                    "authorId": "145987447",
+                    "name": "Kaigui Bian"
+                },
+                {
+                    "authorId": "51170622",
+                    "name": "Hu Tuo"
+                }
+            ]
+        }
+    ]
+}

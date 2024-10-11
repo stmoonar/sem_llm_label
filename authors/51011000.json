@@ -1,0 +1,421 @@
+{
+    "authorId": "51011000",
+    "papers": [
+        {
+            "paperId": "6c18a52a4ff2cf3d9462f14b5f99456ea731f4ff",
+            "title": "Explaining Datasets in Words: Statistical Models with Natural Language Parameters",
+            "abstract": "To make sense of massive data, we often fit simplified models and then interpret the parameters; for example, we cluster the text embeddings and then interpret the mean parameters of each cluster. However, these parameters are often high-dimensional and hard to interpret. To make model parameters directly interpretable, we introduce a family of statistical models -- including clustering, time series, and classification models -- parameterized by natural language predicates. For example, a cluster of text about COVID could be parameterized by the predicate\"discusses COVID\". To learn these statistical models effectively, we develop a model-agnostic algorithm that optimizes continuous relaxations of predicate parameters with gradient descent and discretizes them by prompting language models (LMs). Finally, we apply our framework to a wide range of problems: taxonomizing user chat dialogues, characterizing how they evolve across time, finding categories where one language model is better than the other, clustering math problems based on subareas, and explaining visual features in memorable images. Our framework is highly versatile, applicable to both textual and visual domains, can be easily steered to focus on specific properties (e.g. subareas), and explains sophisticated concepts that classical methods (e.g. n-gram analysis) struggle to produce.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2321531039",
+                    "name": "Heng Wang"
+                },
+                {
+                    "authorId": "2321178236",
+                    "name": "Dan Klein"
+                },
+                {
+                    "authorId": "2269733338",
+                    "name": "Jacob Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "03f692d89c480cc7ce4c757f1ede6bfcd8a46b1f",
+            "title": "Describing Differences in Image Sets with Natural Language",
+            "abstract": "How do two sets of images differ? Discerning set-level differences is crucial for understanding model behaviors and analyzing datasets, yet manually sifting through thousands of images is impractical. To aid in this discovery process, we explore the task of automatically describing the differences between two sets of images, which we term Set Difference Captioning. This task takes in image sets $\\mathcal{D}_{A}$ and $\\mathcal{D}_{B}$, and outputs a description that is more often true on $\\mathcal{D}_{A}$ than $\\mathcal{D}_{B}$. We outline a two-stage approach that first proposes candidate difference descriptions from image sets and then re-ranks the candidates by checking how well they can differentiate the two sets. We introduce VisDiff, which first captions the images and prompts a language model to propose candidate descriptions, then re-ranks these descriptions using CLIP. To evaluate VisDiff, we collect VisDiffBench, a dataset with 187 paired image sets with ground truth difference descriptions. We apply VisDiff to various domains, such as comparing datasets (e.g., ImageNet vs. ImageNetV2), comparing classification models (e.g., zero-shot CLIP vs. supervised ResNet), characterizing differences between generative models (e.g., StableDiffusionV1 and V2), and discovering what makes images memorable. Using VisDiff, we are able to find interesting and previously unknown differences in datasets and models, demonstrating its utility in revealing nuanced insights.11Project page available at https:/understanding-visual-datasets.github.io/VisDiff-website/.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151088535",
+                    "name": "Lisa Dunlap"
+                },
+                {
+                    "authorId": "49889860",
+                    "name": "Yuhui Zhang"
+                },
+                {
+                    "authorId": "2269778420",
+                    "name": "Xiaohan Wang"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2267488244",
+                    "name": "Trevor Darrell"
+                },
+                {
+                    "authorId": "2269733338",
+                    "name": "Jacob Steinhardt"
+                },
+                {
+                    "authorId": "2260456251",
+                    "name": "Joseph Gonzalez"
+                },
+                {
+                    "authorId": "2275638250",
+                    "name": "Serena Yeung-Levy"
+                }
+            ]
+        },
+        {
+            "paperId": "69f2ba0f33a54e01de32c616b64e85d5d7194067",
+            "title": "Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations",
+            "abstract": "Large language models (LLMs) are trained to imitate humans to explain human decisions. However, do LLMs explain themselves? Can they help humans build mental models of how LLMs process different inputs? To answer these questions, we propose to evaluate $\\textbf{counterfactual simulatability}$ of natural language explanations: whether an explanation can enable humans to precisely infer the model's outputs on diverse counterfactuals of the explained input. For example, if a model answers\"yes\"to the input question\"Can eagles fly?\"with the explanation\"all birds can fly\", then humans would infer from the explanation that it would also answer\"yes\"to the counterfactual input\"Can penguins fly?\". If the explanation is precise, then the model's answer should match humans' expectations. We implemented two metrics based on counterfactual simulatability: precision and generality. We generated diverse counterfactuals automatically using LLMs. We then used these metrics to evaluate state-of-the-art LLMs (e.g., GPT-4) on two tasks: multi-hop factual reasoning and reward modeling. We found that LLM's explanations have low precision and that precision does not correlate with plausibility. Therefore, naively optimizing human approvals (e.g., RLHF) may not be a sufficient solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109268730",
+                    "name": "Yanda Chen"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2218040104",
+                    "name": "Narutatsu Ri"
+                },
+                {
+                    "authorId": "145756130",
+                    "name": "Chen Zhao"
+                },
+                {
+                    "authorId": "2140062900",
+                    "name": "He He"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "145590324",
+                    "name": "K. McKeown"
+                }
+            ]
+        },
+        {
+            "paperId": "6aceefb7b260a4797986a5f42bfd474904af3124",
+            "title": "Goal Driven Discovery of Distributional Differences via Language Descriptions",
+            "abstract": "Mining large corpora can generate useful discoveries but is time-consuming for humans. We formulate a new task, D5, that automatically discovers differences between two large corpora in a goal-driven way. The task input is a problem comprising a research goal\"$\\textit{comparing the side effects of drug A and drug B}$\"and a corpus pair (two large collections of patients' self-reported reactions after taking each drug). The output is a language description (discovery) of how these corpora differ (patients taking drug A\"$\\textit{mention feelings of paranoia}$\"more often). We build a D5 system, and to quantitatively measure its performance, we 1) contribute a meta-dataset, OpenD5, aggregating 675 open-ended problems ranging across business, social sciences, humanities, machine learning, and health, and 2) propose a set of unified evaluation metrics: validity, relevance, novelty, and significance. With the dataset and the unified metrics, we confirm that language models can use the goals to propose more relevant, novel, and significant candidate discoveries. Finally, our system produces discoveries previously unknown to the authors on a wide range of applications in OpenD5, including temporal and demographic differences in discussion topics, political stances and stereotypes in speech, insights in commercial reviews, and error patterns in NLP models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2110001677",
+                    "name": "Peter Zhang"
+                },
+                {
+                    "authorId": "2210287616",
+                    "name": "Steve Li"
+                },
+                {
+                    "authorId": "5233596",
+                    "name": "Jinwoo Ahn"
+                },
+                {
+                    "authorId": "38666915",
+                    "name": "D. Klein"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "9f83468092ccbe60deeff8e7d82e40a81f3ae8cf",
+            "title": "Goal-Driven Explainable Clustering via Language Descriptions",
+            "abstract": "Unsupervised clustering is widely used to explore large corpora, but existing formulations neither consider the users' goals nor explain clusters' meanings. We propose a new task formulation,\"Goal-Driven Clustering with Explanations\"(GoalEx), which represents both the goal and the explanations as free-form language descriptions. For example, to categorize the errors made by a summarization system, the input to GoalEx is a corpus of annotator-written comments for system-generated summaries and a goal description\"cluster the comments based on why the annotators think the summary is imperfect.''; the outputs are text clusters each with an explanation (\"this cluster mentions that the summary misses important context information.\"), which relates to the goal and precisely explain which comments should (not) belong to a cluster. To tackle GoalEx, we prompt a language model with\"[corpus subset] + [goal] + Brainstorm a list of explanations each representing a cluster.\"; then we classify whether each sample belongs to a cluster based on its explanation; finally, we use integer linear programming to select a subset of candidate clusters to cover most samples while minimizing overlaps. Under both automatic and human evaluation on corpora with or without labels, our method produces more accurate and goal-related explanations than prior methods. We release our data and implementation at https://github.com/ZihanWangKi/GoalEx.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2240689",
+                    "name": "Zihan Wang"
+                },
+                {
+                    "authorId": "2884976",
+                    "name": "Jingbo Shang"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                }
+            ]
+        },
+        {
+            "paperId": "5288b9f3a9f575543f44c39e1d3b78b3ca4c99da",
+            "title": "InCoder: A Generative Model for Code Infilling and Synthesis",
+            "abstract": "Code is seldom written in a single left-to-right pass and is instead repeatedly edited and refined. We introduce InCoder, a unified generative model that can perform program synthesis (via left-to-right generation) as well as editing (via infilling). InCoder is trained to generate code files from a large corpus of permissively licensed code, where regions of code have been randomly masked and moved to the end of each file, allowing code infilling with bidirectional context. Our model is the first generative model that is able to directly perform zero-shot code infilling, which we evaluate on challenging tasks such as type inference, comment generation, and variable re-naming. We find that the ability to condition on bidirectional context substantially improves performance on these tasks, while still performing comparably on standard program synthesis benchmarks in comparison to left-to-right only models pretrained at similar scale. The InCoder models and code are publicly released. https://sites.google.com/view/incoder-code-models",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47070750",
+                    "name": "Daniel Fried"
+                },
+                {
+                    "authorId": "2201435",
+                    "name": "Armen Aghajanyan"
+                },
+                {
+                    "authorId": "32815692",
+                    "name": "Jessy Lin"
+                },
+                {
+                    "authorId": "8729431",
+                    "name": "Sida I. Wang"
+                },
+                {
+                    "authorId": "145217343",
+                    "name": "Eric Wallace"
+                },
+                {
+                    "authorId": "8815141",
+                    "name": "Freda Shi"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "2072801764",
+                    "name": "Wen-tau Yih"
+                },
+                {
+                    "authorId": "1982950",
+                    "name": "Luke Zettlemoyer"
+                },
+                {
+                    "authorId": "35084211",
+                    "name": "M. Lewis"
+                }
+            ]
+        },
+        {
+            "paperId": "5ef91beb3037a35f296d8df8c556ac5353d1160a",
+            "title": "Describing Differences between Text Distributions with Natural Language",
+            "abstract": "How do two distributions of texts differ? Humans are slow at answering this, since discovering patterns might require tediously reading through hundreds of samples. We propose to automatically summarize the differences by\"learning a natural language hypothesis\": given two distributions $D_{0}$ and $D_{1}$, we search for a description that is more often true for $D_{1}$, e.g.,\"is military-related.\"To tackle this problem, we fine-tune GPT-3 to propose descriptions with the prompt:\"[samples of $D_{0}$] + [samples of $D_{1}$] + the difference between them is_____.\"We then re-rank the descriptions by checking how often they hold on a larger set of samples with a learned verifier. On a benchmark of 54 real-world binary classification tasks, while GPT-3 Curie (13B) only generates a description similar to human annotation 7% of the time, the performance reaches 61% with fine-tuning and re-ranking, and our best system using GPT-3 Davinci (175B) reaches 76%. We apply our system to describe distribution shifts, debug dataset shortcuts, summarize unknown tasks, and label text clusters, and present analyses based on automatically generated descriptions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "117111135",
+                    "name": "Charles Burton Snell"
+                },
+                {
+                    "authorId": "38666915",
+                    "name": "D. Klein"
+                },
+                {
+                    "authorId": "5164568",
+                    "name": "J. Steinhardt"
+                }
+            ]
+        },
+        {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057038673",
+                    "name": "Tianbao Xie"
+                },
+                {
+                    "authorId": "114621402",
+                    "name": "Chen Henry Wu"
+                },
+                {
+                    "authorId": "2055357805",
+                    "name": "Peng Shi"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "11869783",
+                    "name": "Torsten Scholak"
+                },
+                {
+                    "authorId": "19168196",
+                    "name": "Michihiro Yasunaga"
+                },
+                {
+                    "authorId": "30340989",
+                    "name": "Chien-Sheng Wu"
+                },
+                {
+                    "authorId": "1606040932",
+                    "name": "Ming Zhong"
+                },
+                {
+                    "authorId": "38253388",
+                    "name": "Pengcheng Yin"
+                },
+                {
+                    "authorId": "8729431",
+                    "name": "Sida I. Wang"
+                },
+                {
+                    "authorId": "3428769",
+                    "name": "Victor Zhong"
+                },
+                {
+                    "authorId": "2118640406",
+                    "name": "Bailin Wang"
+                },
+                {
+                    "authorId": "2155795167",
+                    "name": "Chengzu Li"
+                },
+                {
+                    "authorId": "2143195008",
+                    "name": "Connor Boyle"
+                },
+                {
+                    "authorId": "33981736",
+                    "name": "Ansong Ni"
+                },
+                {
+                    "authorId": "3366595",
+                    "name": "Ziyu Yao"
+                },
+                {
+                    "authorId": "9215251",
+                    "name": "Dragomir R. Radev"
+                },
+                {
+                    "authorId": "2054594326",
+                    "name": "Caiming Xiong"
+                },
+                {
+                    "authorId": "47648549",
+                    "name": "Lingpeng Kong"
+                },
+                {
+                    "authorId": "15176410",
+                    "name": "Rui Zhang"
+                },
+                {
+                    "authorId": "144365875",
+                    "name": "Noah A. Smith"
+                },
+                {
+                    "authorId": "1982950",
+                    "name": "Luke Zettlemoyer"
+                },
+                {
+                    "authorId": "48881008",
+                    "name": "Tao Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "8a4fc5f00cd4aca61e148e46a2125c3a406719f1",
+            "title": "DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation",
+            "abstract": "We introduce DS-1000, a code generation benchmark with a thousand data science problems spanning seven Python libraries, such as NumPy and Pandas. Compared to prior works, DS-1000 incorporates three core features. First, our problems reflect diverse, realistic, and practical use cases since we collected them from StackOverflow. Second, our automatic evaluation is highly specific (reliable) -- across all Codex-002-predicted solutions that our evaluation accept, only 1.8% of them are incorrect; we achieve this with multi-criteria metrics, checking both functional correctness by running test cases and surface-form constraints by restricting API usages or keywords. Finally, we proactively defend against memorization by slightly modifying our problems to be different from the original StackOverflow source; consequently, models cannot answer them correctly by memorizing the solutions from pre-training. The current best public system (Codex-002) achieves 43.3% accuracy, leaving ample room for improvement. We release our benchmark at https://ds1000-code-gen.github.io.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191638875",
+                    "name": "Yuhang Lai"
+                },
+                {
+                    "authorId": "2145582245",
+                    "name": "Chengxi Li"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yiming Wang"
+                },
+                {
+                    "authorId": "2146331419",
+                    "name": "Tianyi Zhang"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                },
+                {
+                    "authorId": "1982950",
+                    "name": "Luke Zettlemoyer"
+                },
+                {
+                    "authorId": "3156075",
+                    "name": "S. Yih"
+                },
+                {
+                    "authorId": "47070750",
+                    "name": "Daniel Fried"
+                },
+                {
+                    "authorId": "2128046669",
+                    "name": "Si-yi Wang"
+                },
+                {
+                    "authorId": "48881008",
+                    "name": "Tao Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "8fbd7ddf1ea30c991f3b1152a245df77caa18e16",
+            "title": "Learning by Distilling Context",
+            "abstract": "Language models significantly benefit from context tokens, such as prompts or scratchpads. They perform better when prompted with informative instructions, and they acquire new reasoning capabilities by generating a scratch-pad before predicting the final answers. However, they do not \\textit{internalize} these performance gains, which disappear when the context tokens are gone. Our work proposes to apply context distillation so that a language model can improve itself by internalizing these gains. Concretely, given a synthetic unlabeled input for the target task, we condition the model on ``[instructions] + [task-input]'' to predict ``[scratch-pad] + [final answer]''; then we fine-tune the same model to predict its own ``[final answer]'' conditioned on the ``[task-input]'', without seeing the ``[instructions]'' or using the ``[scratch-pad]''. We show that context distillation is a general method to train language models, and it can effectively internalize 3 types of training signals. First, it can internalize abstract task instructions and explanations, so we can iteratively update the model parameters with new instructions and overwrite old ones. Second, it can internalize step-by-step reasoning for complex tasks (e.g., 8-digit addition), and such a newly acquired capability proves to be useful for other downstream tasks. Finally, it can internalize concrete training examples, and it outperforms directly learning with gradient descent by 9\\% on the SPIDER Text-to-SQL dataset; furthermore, combining context distillation operations can internalize more training examples than the context window size allows.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "117111135",
+                    "name": "Charles Burton Snell"
+                },
+                {
+                    "authorId": "38666915",
+                    "name": "D. Klein"
+                },
+                {
+                    "authorId": "51011000",
+                    "name": "Ruiqi Zhong"
+                }
+            ]
+        }
+    ]
+}

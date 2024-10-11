@@ -1,0 +1,325 @@
+{
+    "authorId": "3395273",
+    "papers": [
+        {
+            "paperId": "64162e706e825d3ed324a3a91feb5e96ef297709",
+            "title": "A Unified Knowledge Distillation Framework for Deep Directed Graphical Models",
+            "abstract": "Knowledge distillation (KD) is a technique that transfers the knowledge from a large teacher network to a small student network. It has been widely applied to many different tasks, such as model compression and federated learning. However, existing KD methods fail to generalize to general deep directed graphical models (DGMs) with arbitrary layers of random variables. We refer by deep DGMs to DGMs whose conditional distributions are parameterized by deep neural networks. In this work, we propose a novel unified knowledge distillation framework for deep DGMs on various applications. Specifically, we leverage the reparameterization trick to hide the intermediate latent variables, resulting in a compact DGM. Then we develop a surrogate distillation loss to reduce error accumulation through multiple layers of random variables. Moreover, we present the connections between our method and some existing knowledge distillation approaches. The proposed framework is evaluated on four applications: data-free hierarchical variational autoencoder (VAE) compression, data-free variational recurrent neural networks (VRNN) compression, data-free Helmholtz Machine (HM) compression, and VAE continual learning. The results show that our distillation method out-performs the baselines in data-free model compression tasks. We further demonstrate that our method significantly improves the performance of KD-based continual learning for data generation. Our source code is available at https://github.com/YizhuoChen99/KD4DGM-CVPR.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154548041",
+                    "name": "Yizhuo Chen"
+                },
+                {
+                    "authorId": "102461072",
+                    "name": "Kaizhao Liang"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "6eb9cf311e4d0d6cd492f635119f2717e0133744",
+            "title": "Scalable Neural Symbolic Regression using Control Variables",
+            "abstract": "Symbolic regression (SR) is a powerful technique for discovering the analytical mathematical expression from data, finding various applications in natural sciences due to its good interpretability of results. However, existing methods face scalability issues when dealing with complex equations involving multiple variables. To address this challenge, we propose ScaleSR, a scalable symbolic regression model that leverages control variables to enhance both accuracy and scalability. The core idea is to decompose multi-variable symbolic regression into a set of single-variable SR problems, which are then combined in a bottom-up manner. The proposed method involves a four-step process. First, we learn a data generator from observed data using deep neural networks (DNNs). Second, the data generator is used to generate samples for a certain variable by controlling the input variables. Thirdly, single-variable symbolic regression is applied to estimate the corresponding mathematical expression. Lastly, we repeat steps 2 and 3 by gradually adding variables one by one until completion. We evaluate the performance of our method on multiple benchmark datasets. Experimental results demonstrate that the proposed ScaleSR significantly outperforms state-of-the-art baselines in discovering mathematical expressions with multiple variables. Moreover, it can substantially reduce the search space for symbolic regression. The source code will be made publicly available upon publication.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2219697110",
+                    "name": "Xieting Chu"
+                },
+                {
+                    "authorId": "2219845967",
+                    "name": "Hongjue Zhao"
+                },
+                {
+                    "authorId": "2034352668",
+                    "name": "Enze Xu"
+                },
+                {
+                    "authorId": "2072590181",
+                    "name": "Hairong Qi"
+                },
+                {
+                    "authorId": "2199245644",
+                    "name": "Minghan Chen"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "7202a7649a9c689d7c9e5ad78459d5ef3ec21831",
+            "title": "Balancing Privacy Protection and Interpretability in Federated Learning",
+            "abstract": "Federated learning (FL) aims to collaboratively train the global model in a distributed manner by sharing the model parameters from local clients to a central server, thereby potentially protecting users' private information. Nevertheless, recent studies have illustrated that FL still suffers from information leakage as adversaries try to recover the training data by analyzing shared parameters from local clients. To deal with this issue, differential privacy (DP) is adopted to add noise to the gradients of local models before aggregation. It, however, results in the poor performance of gradient-based interpretability methods, since some weights capturing the salient region in feature map will be perturbed. To overcome this problem, we propose a simple yet effective adaptive differential privacy (ADP) mechanism that selectively adds noisy perturbations to the gradients of client models in FL. We also theoretically analyze the impact of gradient perturbation on the model interpretability. Finally, extensive experiments on both IID and Non-IID data demonstrate that the proposed ADP can achieve a good trade-off between privacy and interpretability in FL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109739348",
+                    "name": "Zhe Li"
+                },
+                {
+                    "authorId": "2191041257",
+                    "name": "Honglong Chen"
+                },
+                {
+                    "authorId": "101080596",
+                    "name": "Zhichen Ni"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "a5723a4a28d475c80f1a328d06ff46b31fe3b287",
+            "title": "General-Purpose Multi-Modal OOD Detection Framework",
+            "abstract": "Out-of-distribution (OOD) detection identifies test samples that differ from the training data, which is critical to ensuring the safety and reliability of machine learning (ML) systems. While a plethora of methods have been developed to detect uni-modal OOD samples, only a few have focused on multi-modal OOD detection. Current contrastive learning-based methods primarily study multi-modal OOD detection in a scenario where both a given image and its corresponding textual description come from a new domain. However, real-world deployments of ML systems may face more anomaly scenarios caused by multiple factors like sensor faults, bad weather, and environmental changes. Hence, the goal of this work is to simultaneously detect from multiple different OOD scenarios in a fine-grained manner. To reach this goal, we propose a general-purpose weakly-supervised OOD detection framework, called WOOD, that combines a binary classifier and a contrastive learning component to reap the benefits of both. In order to better distinguish the latent representations of in-distribution (ID) and OOD samples, we adopt the Hinge loss to constrain their similarity. Furthermore, we develop a new scoring metric to integrate the prediction results from both the binary classifier and contrastive learning for identifying OOD samples. We evaluate the proposed WOOD model on multiple real-world datasets, and the experimental results demonstrate that the WOOD model outperforms the state-of-the-art methods for multi-modal OOD detection. Importantly, our approach is able to achieve high accuracy in OOD detection in three different OOD scenarios simultaneously. The source code will be made publicly available upon publication.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2053501789",
+                    "name": "V. Duong"
+                },
+                {
+                    "authorId": "2195367659",
+                    "name": "Qiong Wu"
+                },
+                {
+                    "authorId": "2118666287",
+                    "name": "Zhengyi Zhou"
+                },
+                {
+                    "authorId": "2900213",
+                    "name": "E. Zavesky"
+                },
+                {
+                    "authorId": "2108200854",
+                    "name": "Jiahe Chen"
+                },
+                {
+                    "authorId": "2224992780",
+                    "name": "Xiangzhou Liu"
+                },
+                {
+                    "authorId": "2765517",
+                    "name": "Wen-Ling Hsu"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "c9f8fd88b20d0618682869af5461152b7fa4d074",
+            "title": "Data-Free One-Shot Federated Learning Under Very High Statistical Heterogeneity",
+            "abstract": "one-shot",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2220894281",
+                    "name": "Clare Elizabeth Heinbaugh"
+                },
+                {
+                    "authorId": "2167539426",
+                    "name": "Emilio Luz-Ricca"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "ecb61d7bfd47ad1136ea0e97d7fc2cf025d96b21",
+            "title": "Condensed Prototype Replay for Class Incremental Learning",
+            "abstract": "Incremental learning (IL) suffers from catastrophic forgetting of old tasks when learning new tasks. This can be addressed by replaying previous tasks' data stored in a memory, which however is usually prone to size limits and privacy leakage. Recent studies store only class centroids as prototypes and augment them with Gaussian noises to create synthetic data for replay. However, they cannot effectively avoid class interference near their margins that leads to forgetting. Moreover, the injected noises distort the rich structure between real data and prototypes, hence even detrimental to IL. In this paper, we propose YONO that You Only Need to replay One condensed prototype per class, which for the first time can even outperform memory-costly exemplar-replay methods. To this end, we develop a novel prototype learning method that (1) searches for more representative prototypes in high-density regions by an attentional mean-shift algorithm and (2) moves samples in each class to their prototype to form a compact cluster distant from other classes. Thereby, the class margins are maximized, which effectively reduces interference causing future forgetting. In addition, we extend YONO to YONO+, which creates synthetic replay data by random sampling in the neighborhood of each prototype in the representation space. We show that the synthetic data can further improve YONO. Extensive experiments on IL benchmarks demonstrate the advantages of YONO/YONO+ over existing IL methods in terms of both accuracy and forgetting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2072805835",
+                    "name": "Jiangtao Kong"
+                },
+                {
+                    "authorId": "2218723669",
+                    "name": "Zhenyu Zong"
+                },
+                {
+                    "authorId": "2213956781",
+                    "name": "Tianyi Zhou"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                }
+            ]
+        },
+        {
+            "paperId": "1fbf42f4f2f40522c3271acb780865b641177726",
+            "title": "Patient Similarity Learning with Selective Forgetting",
+            "abstract": "Patient similarity learning aims to use patient information such as electronic medical records and genetic data as input to calculate the pairwise similarity between patients, and it is becoming increasingly important in healthcare applications. However, in many cases, patient similarity learning models also need to forget some patient data. From the perspective of privacy, patients desire a tool to erase the impacts of their sensitive data from the trained patient similarity models. From the perspective of utility, if a patient similarity model\u2019s utility is damaged by some bad patient data, the patient similarity model needs to forget such patient data to regain utility. Although some researchers have studied the problem of machine unlearning, existing methods cannot be directly applied to patient similarity learning as they fail to consider the comparative relationships among patients. In addition, they also fail to identify the optimal conditions of the local objective functions. In this paper, we fill in this gap by studying the unlearning problem in patient similarity learning. To unlearn the knowledge of a specific patient, we propose a novel erasable patient similarity learning framework, which enjoys the provable data removal guarantee and achieves high unlearning efficiency while keeping high model utility in patient similarity learning. We also conduct extensive experiments on real-world patient disease datasets to verify the desired properties of the proposed erasable framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2105608332",
+                    "name": "Wei Qian"
+                },
+                {
+                    "authorId": "36681034",
+                    "name": "Chenxu Zhao"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "2199245644",
+                    "name": "Minghan Chen"
+                },
+                {
+                    "authorId": "1682816",
+                    "name": "Fei Wang"
+                },
+                {
+                    "authorId": "2925985",
+                    "name": "Mengdi Huai"
+                }
+            ]
+        },
+        {
+            "paperId": "3ce0bec388afbf934b3900cb01f8479bd87f5fb8",
+            "title": "Rethinking Controllable Variational Autoencoders",
+            "abstract": "The Controllable Variational Autoencoder (ControlVAE) combines automatic control theory with the basic VAE model to manipulate the KL-divergence for overcoming posterior collapse and learning disentangled representations. It has shown success in a variety of applications, such as image generation, disentangled representation learning, and language modeling. However, when it comes to disentangled representation learning, ControlVAE does not delve into the rationale behind it. The goal of this paper is to develop a deeper understanding of ControlVAE in learning disentangled representations, including the choice of a desired KL-divergence (i.e, set point), and its stability during training. We first fundamentally explain its ability to disentangle latent variables from an information bottleneck perspective. We show that KL-divergence is an upper bound of the variational information bottleneck. By controlling the KL-divergence gradually from a small value to a target value, ControlVAE can disentangle the latent factors one by one. Based on this finding, we propose a new DynamicVAE that leverages a modified incremental PI (proportionalintegral) controller, a variant of the proportional-integralderivative (PID) algorithm, and employs a moving average as well as a hybrid annealing method to evolve the value of KL-divergence smoothly in a tightly controlled fashion. In addition, we analytically derive a lower bound of the set point for disentangling. We then theoretically prove the stability of the proposed approach. Evaluation results on multiple benchmark datasets demonstrate that DynamicVAE achieves a good trade-off between the disentanglement and reconstruction quality. We also discover that it can separate disentangled representation learning and re-construction via manipulating the desired KL-divergence.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "2160860889",
+                    "name": "Yifei Yang"
+                },
+                {
+                    "authorId": "2258702",
+                    "name": "Haohong Lin"
+                },
+                {
+                    "authorId": "2157629327",
+                    "name": "Longzhong Lin"
+                },
+                {
+                    "authorId": "2154548041",
+                    "name": "Yizhuo Chen"
+                },
+                {
+                    "authorId": "2149534610",
+                    "name": "Qinmin Yang"
+                },
+                {
+                    "authorId": "2146233072",
+                    "name": "Han Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "514a6f7c68093bf11dbed0e109f84a3482a87112",
+            "title": "COMBO: Pre-Training Representations of Binary Code Using Contrastive Learning",
+            "abstract": "Compiled software is delivered as executable binary code. Developers write source code to express the software semantics, but the compiler converts it to a binary format that the CPU can directly execute. Therefore, binary code analysis is critical to applications in reverse engineering and computer security tasks where source code is not available. However, unlike source code and natural language that contain rich semantic information, binary code is typically difficult for human engineers to understand and analyze. While existing work uses AI models to assist source code analysis, few studies have considered binary code. In this paper, we propose a COntrastive learning Model for Binary cOde Analysis, or COMBO, that incorporates source code and comment information into binary code during representation learning. Specifically, we present three components in COMBO: (1) a primary contrastive learning method for cold-start pre-training, (2) a simplex interpolation method to incorporate source code, comments, and binary code, and (3) an intermediate representation learning algorithm to provide binary code embeddings. Finally, we evaluate the effectiveness of the pre-trained representations produced by COMBO using three indicative downstream tasks relating to binary code: algorithmic functionality classification, binary code similarity, and vulnerability detection. Our experimental results show that COMBO facilitates representation learning of binary code visualized by distribution analysis, and improves the performance on all three downstream tasks by 5.45% on average compared to state-of-the-art large-scale language representation models. To the best of our knowledge, COMBO is the first language representation model that incorporates source code, binary code, and comments into contrastive code representation learning and unifies multiple tasks for binary code analysis.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Yifan Zhang"
+                },
+                {
+                    "authorId": "2187442756",
+                    "name": "Chen Huang"
+                },
+                {
+                    "authorId": "2178599452",
+                    "name": "Yueke Zhang"
+                },
+                {
+                    "authorId": "2187430059",
+                    "name": "Kevin Cao"
+                },
+                {
+                    "authorId": "2187429988",
+                    "name": "Scott Thomas Andersen"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "3263287",
+                    "name": "Kevin Leach"
+                },
+                {
+                    "authorId": "2108861093",
+                    "name": "Yu Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "5abd34dc1461f9ab64771e2eed3f1cf69b5ddc0d",
+            "title": "Phy-Taylor: Physics-Model-Based Deep Neural Networks",
+            "abstract": "Purely data-driven deep neural networks (DNNs) applied to physical engineering systems can infer relations that violate physics laws, thus leading to unexpected consequences. To address this challenge, we propose a physics-model-based DNN framework, called Phy-Taylor, that accelerates learning compliant representations with physical knowledge. The Phy-Taylor framework makes two key contributions; it introduces a new architectural Physics-compatible neural network (PhN), and features a novel compliance mechanism, we call {\\em Physics-guided Neural Network Editing\\}. The PhN aims to directly capture nonlinearities inspired by physical quantities, such as kinetic energy, potential energy, electrical power, and aerodynamic drag force. To do so, the PhN augments neural network layers with two key components: (i) monomials of Taylor series expansion of nonlinear functions capturing physical knowledge, and (ii) a suppressor for mitigating the influence of noise. The neural-network editing mechanism further modifies network links and activation functions consistently with physical knowledge. As an extension, we also propose a self-correcting Phy-Taylor framework that introduces two additional capabilities: (i) physics-model-based safety relationship learning, and (ii) automatic output correction when violations of safety occur. Through experiments, we show that (by expressing hard-to-learn nonlinearities directly and by constraining dependencies) Phy-Taylor features considerably fewer parameters, and a remarkably accelerated training process, while offering enhanced model robustness and accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1937682",
+                    "name": "Y. Mao"
+                },
+                {
+                    "authorId": "2919287",
+                    "name": "L. Sha"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "30955167",
+                    "name": "Yuliang Gu"
+                },
+                {
+                    "authorId": "2109090616",
+                    "name": "Qixin Wang"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        }
+    ]
+}

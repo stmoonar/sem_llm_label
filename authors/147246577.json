@@ -1,0 +1,125 @@
+{
+    "authorId": "147246577",
+    "papers": [
+        {
+            "paperId": "c0d0cef340e7af49b5e3ec86e92b8a9f01b1fa2f",
+            "title": "Adaptive Handling of Out-of-order Streams in Conformance Checking",
+            "abstract": "Organizations function through the execution of various business processes. Non-conformant behavior in these processes impacts organizations negatively through implications such as reduced efficiency, lower quality, and compliance risks. Thus, it is important to identify non-conformant process behavior rapidly. While this is a challenging problem on its own, it is further complicated by the advent of big data, distributed systems, and a fragmented landscape of cloud-and on-premise tools that all provide data for the analysis of a business process and for determining its conformance. In such a landscape, it is common that events may arrive out of order. This complicates the conformance-checking analysis, which commonly expects events within a process to arrive in a specific sequence allowed by the process model. This paper introduces the first streaming conformance-checking method that incorporates event time awareness, thus having the ability to correct imperfections stemming from the out-of-order arrival of events. The method is scalable, utilizing the Beamline framework built on top of Apache Flink. Furthermore, the method includes an adaptive approach for handling various levels of out-of-order events in event streams. Experiments were conducted to demonstrate the applicability of the method for real-world use cases with different levels of out-of-order events. The results indicate that the method is well suited for identifying conformance in business processes that rely on a multitude of underlying systems for aggregating a holistic view of the process.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147246577",
+                    "name": "Kristo Raun"
+                },
+                {
+                    "authorId": "2293728669",
+                    "name": "Riccardo Tommasini"
+                },
+                {
+                    "authorId": "2293728960",
+                    "name": "Ahmed Awad"
+                }
+            ]
+        },
+        {
+            "paperId": "960093070ba735676203a4dca6a7e033f82440ab",
+            "title": "I Will Survive: An Event-driven Conformance Checking Approach Over Process Streams",
+            "abstract": "Online conformance checking deals with finding discrepancies between real-life and modeled behavior on data streams. The current state-of-the-art output of online conformance checking is a prefix-alignment, which is used for pinpointing the exact deviations in terms of the trace and the model while accommodating a trace's unknown termination in an online setting. Current methods for producing prefix-alignments are computationally expensive and hinder the applicability in real-life settings. This paper introduces a new approximate algorithm - I Will Survive (IWS). The algorithm utilizes the trie data structure to improve the calculation speed, while remaining memory-efficient. Comparative analysis on real-life and synthetic datasets shows that the IWS algorithm can achieve an order of magnitude faster execution time while having a smaller error cost, compared to the current state of the art. In extreme cases, the IWS finds prefix-alignments roughly three orders of magnitude faster than previous approximate methods. The IWS algorithm includes a discounted decay time setting for more efficient memory usage and a look-ahead limit for improving computation time. Finally, the algorithm is stress tested for performance using a simulation of high-traffic event streams.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147246577",
+                    "name": "Kristo Raun"
+                },
+                {
+                    "authorId": "50271459",
+                    "name": "Riccardo Tommasini"
+                },
+                {
+                    "authorId": "47331186",
+                    "name": "Ahmed Awad"
+                }
+            ]
+        },
+        {
+            "paperId": "7aceea856b279853d41d4f0b0319beafbe9c7f34",
+            "title": "I Will Survive: An Online Conformance Checking Algorithm Using Decay Time",
+            "abstract": "Process executions in organizations generate a large variety of data. Process mining is a data-driven analytical approach for analyzing this data from a business process point of view. Online conformance checking deals with finding discrepancies between real-life and modeled process behavior on data streams. The current state-of-the-art output of online conformance checking is a prefix-alignment, which is used for pinpointing the exact deviations in terms of the trace and the model while accommodating a trace's unknown termination in a streaming setting. However, producing prefix-alignments entails a state space search to find the shortest path from a common start state to a common end state between the trace and the model. This is computationally expensive and makes the method infeasible in an online setting. Previously, the trie data structure has been shown to be efficient for constructing alignments, utilizing a proxy log representing the process model in a finite way. This paper introduces a new approximate algorithm (IWS) on top of the trie for online conformance checking. The algorithm is shown to be fast, memory-efficient, and able to output both a prefix and a complete alignment event-by-event while keeping track of previously seen cases and their state. Comparative analysis against the current state-of-the-art algorithm for finding prefix-alignments shows that the IWS algorithm achieves, in some cases, an order of magnitude faster execution time while having a smaller error cost. In extreme cases, the IWS finds prefix-alignments roughly three orders of magnitude faster than the current state of the art. The IWS algorithm includes a discounted decay time setting for efficient memory usage and a look-ahead limit for improving computation time. Finally, the algorithm is stress tested for performance using a simulation of high-traffic event streams.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147246577",
+                    "name": "Kristo Raun"
+                },
+                {
+                    "authorId": "144185337",
+                    "name": "Ahmed Awad"
+                }
+            ]
+        },
+        {
+            "paperId": "12add370abcb49e6f869236841197d7351dfa78b",
+            "title": "Efficient Approximate Conformance Checking Using Trie Data Structures",
+            "abstract": "Conformance checking compares a process model and recorded executions of a process, i.e., a log of traces. To this end, state-of-the-art approaches compute an alignment between a trace and an execution sequence of the model. Since the construction of alignments is computationally expensive, approximation schemes have been developed to strike a balance between the efficiency and the accuracy of conformance checking. Specifically, conformance checking may rely only on so-called proxy behavior, a subset of the behavior of the model. However, the question how such proxy behavior shall be represented for efficient alignment computation has been largely neglected.In this paper, we contribute a new formulation of the proxy behavior derived from a model for approximate conformance checking. By encoding the proxy behavior using a trie data structure, we obtain a logarithmically reduced search space for alignment computation compared to a set-based representation. We show how our algorithm supports the definition of a budget for alignment computation and also augment it with strategies for meta-heuristic optimization and pruning of the search space. Evaluation experiments with five real-world event logs show that our approach reduces the runtime of alignment construction by two orders of magnitude with a modest estimation error.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144185337",
+                    "name": "Ahmed Awad"
+                },
+                {
+                    "authorId": "147246577",
+                    "name": "Kristo Raun"
+                },
+                {
+                    "authorId": "2315762",
+                    "name": "M. Weidlich"
+                }
+            ]
+        },
+        {
+            "paperId": "94e57670ddd40dd0d0662fc3a18272d689e67b42",
+            "title": "Conformance Checking on Out-of-Order Streams (Extended Abstract)",
+            "abstract": "\u2014Conformance checking is a sub\ufb01eld of process mining that deals with comparing process models to event logs. Usually, it is done in an of\ufb02ine fashion. With the increased connectivity to the internet and ubiquity of data generators, increased attention is given to acquiring fast and reliable conformance checking results in an online setting. In return, a number of approaches have been developed to enable online conformance checking based on so-called pre\ufb01x alignments. However, the current approaches assume that the events of process execution are arriving in order on the streams. Unfortunately, due to the complexity of networks and the distributed nature of processing, out-of-order arrival is the common case. The main focus of this PhD is to develop performant and self-correcting methods for online conformance checking which can handle out-of-order event arrival. Additionally, the work will include \ufb01nding methods which will best utilize approximate techniques while minimizing the impact on the accuracy. Finally, to be applicable in real life settings, the research results will be implemented on top of a distributed stream processing system, e.g. Apache Spark.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147246577",
+                    "name": "Kristo Raun"
+                }
+            ]
+        },
+        {
+            "paperId": "d6d670407489bb42b8ecbdb01d95207f400781b2",
+            "title": "Concise Description of Telecom Service Use Through Concept Chains",
+            "abstract": "Binary data arise naturally in many fields including shopping carts, pass-fail tests, social networks etc. Descriptive data mining aims to discover a concise set of general patterns in these possibly noisy data. An important tool for describing binary data is Formal Concept Analysis (FCA) which describes the data through formal concepts. As the full lattice of formal concepts can become large even when dealing with relatively modest amounts of data there are several methods to reduce the number of concepts used to describe the data: selecting a subset of \"interesting\" concepts, finding a subset of concepts that cover the data fully etc. In this paper we apply a novel method of concept chain coverage generation to service use data of a telecommunications company. Concept chain coverage aims to cover the data not with single concepts but with chains of related concepts. The aim is not the full coverage but high enough coverage through a concise set of concept chains. We show that a relatively modest set of concept chains (4 to 10) can describe most of the data and that the performance of the algorithm is very acceptable for this case study.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2631247",
+                    "name": "A. Torim"
+                },
+                {
+                    "authorId": "143962778",
+                    "name": "S. Yahia"
+                },
+                {
+                    "authorId": "147246577",
+                    "name": "Kristo Raun"
+                }
+            ]
+        }
+    ]
+}

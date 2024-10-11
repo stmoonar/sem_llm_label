@@ -1,0 +1,321 @@
+{
+    "authorId": "2284701198",
+    "papers": [
+        {
+            "paperId": "314a471e8fa6788054e98aca1a74622f90fccbb9",
+            "title": "Know Your Limits: A Survey of Abstention in Large Language Models",
+            "abstract": "Abstention, the refusal of large language models (LLMs) to provide an answer, is increasingly recognized for its potential to mitigate hallucinations and enhance safety in LLM systems. In this survey, we introduce a framework to examine abstention from three perspectives: the query, the model, and human values. We organize the literature on abstention methods, benchmarks, and evaluation metrics using this framework, and discuss merits and limitations of prior work. We further identify and motivate areas for future work, centered around whether abstention can be achieved as a meta-capability that transcends specific tasks or domains, while still providing opportunities to optimize abstention abilities based on context.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2275606374",
+                    "name": "Bingbing Wen"
+                },
+                {
+                    "authorId": "2313589667",
+                    "name": "Jihan Yao"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2313566903",
+                    "name": "Chenjun Xu"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2275575830",
+                    "name": "Bill Howe"
+                },
+                {
+                    "authorId": "31860505",
+                    "name": "Lucy Lu Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "5a8a6b61033ba2355f7c149cec596c88a1d61954",
+            "title": "Stumbling Blocks: Stress Testing the Robustness of Machine-Generated Text Detectors Under Attacks",
+            "abstract": "The widespread use of large language models (LLMs) is increasing the demand for methods that detect machine-generated text to prevent misuse. The goal of our study is to stress test the detectors' robustness to malicious attacks under realistic scenarios. We comprehensively study the robustness of popular machine-generated text detectors under attacks from diverse categories: editing, paraphrasing, prompting, and co-generating. Our attacks assume limited access to the generator LLMs, and we compare the performance of detectors on different attacks under different budget levels. Our experiments reveal that almost none of the existing detectors remain robust under all the attacks, and all detectors exhibit different loopholes. Averaging all detectors, the performance drops by 35% across all attacks. Further, we investigate the reasons behind these defects and propose initial out-of-the-box patches to improve robustness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2125062703",
+                    "name": "Yichen Wang"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2257002716",
+                    "name": "Abe Bohan Hou"
+                },
+                {
+                    "authorId": "2284689671",
+                    "name": "Xiao Pu"
+                },
+                {
+                    "authorId": "2154740036",
+                    "name": "Chao Shen"
+                },
+                {
+                    "authorId": "2265689457",
+                    "name": "Xiaoming Liu"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                }
+            ]
+        },
+        {
+            "paperId": "5c7752de11cb2cb9671a6f32edb046b1e0c9b7fc",
+            "title": "MEDIQ: Question-Asking LLMs for Adaptive and Reliable Clinical Reasoning",
+            "abstract": "In high-stakes domains like clinical reasoning, AI assistants powered by large language models (LLMs) are yet to be reliable and safe. We identify a key obstacle towards reliability: existing LLMs are trained to answer any question, even with incomplete context in the prompt or insufficient parametric knowledge. We propose to change this paradigm to develop more careful LLMs that ask follow-up questions to gather necessary and sufficient information and respond reliably. We introduce MEDIQ, a framework to simulate realistic clinical interactions, which incorporates a Patient System and an adaptive Expert System. The Patient may provide incomplete information in the beginning; the Expert refrains from making diagnostic decisions when unconfident, and instead elicits missing details from the Patient via follow-up questions. To evaluate MEDIQ, we convert MEDQA and CRAFT-MD -- medical benchmarks for diagnostic question answering -- into an interactive setup. We develop a reliable Patient system and prototype several Expert systems, first showing that directly prompting state-of-the-art LLMs to ask questions degrades the quality of clinical reasoning, indicating that adapting LLMs to interactive information-seeking settings is nontrivial. We then augment the Expert with a novel abstention module to better estimate model confidence and decide whether to ask more questions, thereby improving diagnostic accuracy by 20.3%; however, performance still lags compared to an (unrealistic in practice) upper bound when full information is given upfront. Further analyses reveal that interactive performance can be improved by filtering irrelevant contexts and reformatting conversations. Overall, our paper introduces a novel problem towards LLM reliability, a novel MEDIQ framework, and highlights important future directions to extend the information-seeking abilities of LLM assistants in critical domains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2295954288",
+                    "name": "Shuyue Stella Li"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2304468718",
+                    "name": "Jonathan Ilgen"
+                },
+                {
+                    "authorId": "2276202987",
+                    "name": "Emma Pierson"
+                },
+                {
+                    "authorId": "2276205042",
+                    "name": "Pang Wei Koh"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "752f684371c9901791259dc4afd04b9754e803d1",
+            "title": "Can LLM Graph Reasoning Generalize beyond Pattern Memorization?",
+            "abstract": "Large language models (LLMs) demonstrate great potential for problems with implicit graphical structures, while recent works seek to enhance the graph reasoning capabilities of LLMs through specialized instruction tuning. The resulting 'graph LLMs' are evaluated with in-distribution settings only, thus it remains underexplored whether LLMs are learning generalizable graph reasoning skills or merely memorizing patterns in the synthetic training data. To this end, we propose the NLGift benchmark, an evaluation suite of LLM graph reasoning generalization: whether LLMs could go beyond semantic, numeric, structural, reasoning patterns in the synthetic training data and improve utility on real-world graph-based tasks. Extensive experiments with two LLMs across four graph reasoning tasks demonstrate that while generalization on simple patterns (semantic, numeric) is somewhat satisfactory, LLMs struggle to generalize across reasoning and real-world patterns, casting doubt on the benefit of synthetic graph tuning for real-world tasks with underlying network structures. We explore three strategies to improve LLM graph reasoning generalization, and we find that while post-training alignment is most promising for real-world tasks, empowering LLM graph reasoning to go beyond pattern memorization remains an open research question.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2308074430",
+                    "name": "Yizhuo Zhang"
+                },
+                {
+                    "authorId": "2256778370",
+                    "name": "Heng Wang"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2093186816",
+                    "name": "Zhaoxuan Tan"
+                },
+                {
+                    "authorId": "2257023881",
+                    "name": "Xiaochuang Han"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "bd163edab21a07feeb7a00f2c7c3b83bd5958aaa",
+            "title": "The Art of Refusal: A Survey of Abstention in Large Language Models",
+            "abstract": "Abstention, the refusal of large language models (LLMs) to provide an answer, is increasingly recognized for its potential to mitigate hallucinations and enhance safety in building LLM systems. In this survey, we introduce a framework to examine abstention behavior from three perspectives: the query, the model, and human values. We review the literature on abstention methods (categorized based on the development stages of LLMs), benchmarks, and evaluation metrics, and discuss the merits and limitations of prior work. We further identify and motivate areas for future research, such as encouraging the study of abstention as a meta-capability across tasks and customizing abstention abilities based on context. In doing so, we aim to broaden the scope and impact of abstention methodologies in AI systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2275606374",
+                    "name": "Bingbing Wen"
+                },
+                {
+                    "authorId": "2313589667",
+                    "name": "Jihan Yao"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2313566903",
+                    "name": "Chenjun Xu"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2275575830",
+                    "name": "Bill Howe"
+                },
+                {
+                    "authorId": "2317105910",
+                    "name": "Lucy Lu Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "e03648463405a77515c6af6cae4947a029b465ae",
+            "title": "Teaching LLMs to Abstain across Languages via Multilingual Feedback",
+            "abstract": "Multilingual LLMs often have knowledge disparities across languages, with larger gaps in under-resourced languages. Teaching LLMs to abstain in the face of knowledge gaps is thus a promising strategy to mitigate hallucinations in multilingual settings. However, previous studies on LLM abstention primarily focus on English; we find that directly applying existing solutions beyond English results in up to 20.5% performance gaps between high and low-resource languages, potentially due to LLMs' drop in calibration and reasoning beyond a few resource-rich languages. To this end, we propose strategies to enhance LLM abstention by learning from multilingual feedback, where LLMs self-reflect on proposed answers in one language by generating multiple feedback items in related languages: we show that this helps identifying the knowledge gaps across diverse languages, cultures, and communities. Extensive experiments demonstrate that our multilingual feedback approach outperforms various strong baselines, achieving up to 9.2% improvement for low-resource languages across three black-box and open models on three datasets, featuring open-book, closed-book, and commonsense QA. Further analysis reveals that multilingual feedback is both an effective and a more equitable abstain strategy to serve diverse language speakers, and cultural factors have great impact on language selection and LLM abstention behavior, highlighting future directions for multilingual and multi-cultural reliable language modeling.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2254168375",
+                    "name": "Weijia Shi"
+                },
+                {
+                    "authorId": "2108853330",
+                    "name": "Yike Wang"
+                },
+                {
+                    "authorId": "2282214127",
+                    "name": "Wenxuan Ding"
+                },
+                {
+                    "authorId": "1452686038",
+                    "name": "Orevaoghene Ahia"
+                },
+                {
+                    "authorId": "2295954288",
+                    "name": "Shuyue Stella Li"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2256989615",
+                    "name": "Sunayana Sitaram"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "e485176690bdd275a2080388824fdd55745f02bf",
+            "title": "Modular Pluralism: Pluralistic Alignment via Multi-LLM Collaboration",
+            "abstract": "While existing alignment paradigms have been integral in developing large language models (LLMs), LLMs often learn an averaged human preference and struggle to model diverse preferences across cultures, demographics, and communities. We propose Modular Pluralism, a modular framework based on multi-LLM collaboration for pluralistic alignment: it\"plugs into\"a base LLM a pool of smaller but specialized community LMs, where models collaborate in distinct modes to flexibility support three modes of pluralism: Overton, steerable, and distributional. Modular Pluralism is uniquely compatible with black-box LLMs and offers the modular control of adding new community LMs for previously underrepresented communities. We evaluate Modular Pluralism with six tasks and four datasets featuring questions/instructions with value-laden and perspective-informed responses. Extensive experiments demonstrate that Modular Pluralism advances the three pluralism objectives across six black-box and open-source LLMs. Further analysis reveals that LLMs are generally faithful to the inputs from smaller community LLMs, allowing seamless patching by adding a new community LM to better cover previously underrepresented communities.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "122436831",
+                    "name": "Taylor Sorensen"
+                },
+                {
+                    "authorId": "2169159066",
+                    "name": "Yuhan Liu"
+                },
+                {
+                    "authorId": "33772445",
+                    "name": "Jillian R. Fisher"
+                },
+                {
+                    "authorId": "50487261",
+                    "name": "Chan Young Park"
+                },
+                {
+                    "authorId": "2259707400",
+                    "name": "Yejin Choi"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        },
+        {
+            "paperId": "513fdb089e079f1aa640b76da2427eee64a86439",
+            "title": "Knowledge Crosswords: Geometric Knowledge Reasoning with Large Language Models",
+            "abstract": "We propose Knowledge Crosswords, a geometric knowledge reasoning benchmark consisting of incomplete knowledge networks bounded by structured factual constraints, where LLMs are tasked with inferring the missing facts to meet all constraints. The novel setting of geometric knowledge reasoning necessitates new LM abilities beyond existing atomic/linear multi-hop QA, such as backtracking, verifying facts and constraints, reasoning with uncertainty, and more. Knowledge Crosswords contains 2,101 individual problems, covering diverse knowledge domains, and is further divided into three difficulty levels. We conduct extensive experiments to evaluate existing LLMs and approaches on Knowledge Crosswords. Results demonstrate that baseline approaches struggle with larger knowledge networks and semantically-equivalent entity distractors. In light of their limitations, we propose two new approaches, Staged Prompting and Verify-All, to augment LLMs' abilities for error-aware backtracking and constraint verification. Our Verify-All significantly outperforms prior methods and is more robust towards problems in the hard subset. Further analysis shows that geometric knowledge reasoning poses new challenges to LLMs' knowledge abilities, particularly in robustness towards varying option orders, complex structural constraints in knowledge networks,\"none of the above\"scenarios, and more.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2282214127",
+                    "name": "Wenxuan Ding"
+                },
+                {
+                    "authorId": "2284701198",
+                    "name": "Shangbin Feng"
+                },
+                {
+                    "authorId": "2169159066",
+                    "name": "Yuhan Liu"
+                },
+                {
+                    "authorId": "2093186816",
+                    "name": "Zhaoxuan Tan"
+                },
+                {
+                    "authorId": "143820870",
+                    "name": "Vidhisha Balachandran"
+                },
+                {
+                    "authorId": "2249540815",
+                    "name": "Tianxing He"
+                },
+                {
+                    "authorId": "2249583325",
+                    "name": "Yulia Tsvetkov"
+                }
+            ]
+        }
+    ]
+}

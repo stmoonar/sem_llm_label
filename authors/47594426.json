@@ -1,0 +1,736 @@
+{
+    "authorId": "47594426",
+    "papers": [
+        {
+            "paperId": "46210e170045df3c0c50a17bb63e6de480d62f9d",
+            "title": "FreshGNN: Reducing Memory Access via Stable Historical Embeddings for Graph Neural Network Training",
+            "abstract": "A key performance bottleneck when training graph neural network (GNN) models on large, real-world graphs is loading node features onto a GPU. Due to limited GPU memory, expensive data movement is necessary to facilitate the storage of these features on alternative devices with slower access (e.g. CPU memory). Moreover, the irregularity of graph structures contributes to poor data locality which further exacerbates the problem. Consequently, existing frameworks capable of efficiently training large GNN models usually incur a significant accuracy degradation because of the currently-available shortcuts involved. To address these limitations, we instead propose FreshGNN, a general-purpose GNN mini-batch training framework that leverages a historical cache for storing and reusing GNN node embeddings instead of re-computing them through fetching raw features at every iteration. Critical to its success, the corresponding cache policy is designed, using a combination of gradient-based and staleness criteria, to selectively screen those embeddings which are relatively stable and can be cached, from those that need to be re-computed to reduce estimation errors and subsequent downstream accuracy loss. When paired with complementary system enhancements to support this selective historical cache, FreshGNN is able to accelerate the training speed on large graph datasets such as ogbn-papers100M and MAG240M by 3.4\u00d7 up to 20.5\u00d7 and reduce the memory access by 59%, with less than 1% influence on test accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1512189758",
+                    "name": "Kezhao Huang"
+                },
+                {
+                    "authorId": "1557293815",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2046958974",
+                    "name": "Guangxuan Xiao"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2109583192",
+                    "name": "Zengfeng Huang"
+                },
+                {
+                    "authorId": "2467444",
+                    "name": "Jidong Zhai"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "47d69cf2a9d8acaefab20b70d70a6df9e8011a0a",
+            "title": "Efficient Link Prediction via GNN Layers Induced by Negative Sampling",
+            "abstract": "Graph neural networks (GNNs) for link prediction can loosely be divided into two broad categories. First, \\emph{node-wise} architectures pre-compute individual embeddings for each node that are later combined by a simple decoder to make predictions. While extremely efficient at inference time (since node embeddings are only computed once and repeatedly reused), model expressiveness is limited such that isomorphic nodes contributing to candidate edges may not be distinguishable, compromising accuracy. In contrast, \\emph{edge-wise} methods rely on the formation of edge-specific subgraph embeddings to enrich the representation of pair-wise relationships, disambiguating isomorphic nodes to improve accuracy, but with the cost of increased model complexity. To better navigate this trade-off, we propose a novel GNN architecture whereby the \\emph{forward pass} explicitly depends on \\emph{both} positive (as is typical) and negative (unique to our approach) edges to inform more flexible, yet still cheap node-wise embeddings. This is achieved by recasting the embeddings themselves as minimizers of a forward-pass-specific energy function (distinct from the actual training loss) that favors separation of positive and negative samples. As demonstrated by extensive empirical evaluations, the resulting architecture retains the inference speed of node-wise models, while producing competitive accuracy with edge-wise alternatives.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258757827",
+                    "name": "Yuxin Wang"
+                },
+                {
+                    "authorId": "2197411811",
+                    "name": "Xiannian Hu"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "1790227",
+                    "name": "Xuanjing Huang"
+                },
+                {
+                    "authorId": "2256661980",
+                    "name": "Xipeng Qiu"
+                },
+                {
+                    "authorId": "2256635267",
+                    "name": "David Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "612d15383f5bd258f0521b81b295c7d3c811e4d5",
+            "title": "From Hypergraph Energy Functions to Hypergraph Neural Networks",
+            "abstract": "Hypergraphs are a powerful abstraction for representing higher-order interactions between entities of interest. To exploit these relationships in making downstream predictions, a variety of hypergraph neural network architectures have recently been proposed, in large part building upon precursors from the more traditional graph neural network (GNN) literature. Somewhat differently, in this paper we begin by presenting an expressive family of parameterized, hypergraph-regularized energy functions. We then demonstrate how minimizers of these energies effectively serve as node embeddings that, when paired with a parameterized classifier, can be trained end-to-end via a supervised bilevel optimization process. Later, we draw parallels between the implicit architecture of the predictive models emerging from the proposed bilevel hypergraph optimization, and existing GNN architectures in common use. Empirically, we demonstrate state-of-the-art results on various hypergraph node classification benchmarks. Code is available at https://github.com/yxzwang/PhenomNN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2180352936",
+                    "name": "Yuxin Wang"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "1767521",
+                    "name": "Xipeng Qiu"
+                },
+                {
+                    "authorId": "1790227",
+                    "name": "Xuanjing Huang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "6d18dcd4b562ea15f3270551b71596b2a1980b07",
+            "title": "Tutorials at The Web Conference 2023",
+            "abstract": "This paper summarizes the content of the 28 tutorials that have been given at The Web Conference 2023.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1705291",
+                    "name": "Valeria Fionda"
+                },
+                {
+                    "authorId": "2215622430",
+                    "name": "Olaf Hartig"
+                },
+                {
+                    "authorId": "1805958417",
+                    "name": "Reyhaneh Abdolazimi"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "2215690996",
+                    "name": "Hongzhi Chen"
+                },
+                {
+                    "authorId": "2117027107",
+                    "name": "Xiao Chen"
+                },
+                {
+                    "authorId": "2052469774",
+                    "name": "P. Cui"
+                },
+                {
+                    "authorId": "145269114",
+                    "name": "Jeffrey Dalton"
+                },
+                {
+                    "authorId": "2215596266",
+                    "name": "Xin Luna Dong"
+                },
+                {
+                    "authorId": "2957808",
+                    "name": "Lisette Espin Noboa"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2132398392",
+                    "name": "Manuela Fritz"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "2215622544",
+                    "name": "Torsten Hahmann"
+                },
+                {
+                    "authorId": "145325584",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2046142",
+                    "name": "S. Han"
+                },
+                {
+                    "authorId": "1842532",
+                    "name": "Estevam Hruschka"
+                },
+                {
+                    "authorId": "2118850040",
+                    "name": "Liang Hu"
+                },
+                {
+                    "authorId": "2139299903",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "47247243",
+                    "name": "Utkarshani Jaimini"
+                },
+                {
+                    "authorId": "2299944027",
+                    "name": "Olivier Jeunen"
+                },
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "51118506",
+                    "name": "F. Karimi"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "1769861",
+                    "name": "K. Kenthapadi"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                },
+                {
+                    "authorId": "3309003",
+                    "name": "Hady W. Lauw"
+                },
+                {
+                    "authorId": "145535348",
+                    "name": "Thai Le"
+                },
+                {
+                    "authorId": "1808423005",
+                    "name": "Trung-Hoang Le"
+                },
+                {
+                    "authorId": "2158951945",
+                    "name": "Dongwon Lee"
+                },
+                {
+                    "authorId": "2110855835",
+                    "name": "Geon Lee"
+                },
+                {
+                    "authorId": "19326298",
+                    "name": "Liat Levontin"
+                },
+                {
+                    "authorId": "2144231489",
+                    "name": "Cheng-Te Li"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2110471246",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2030126978",
+                    "name": "Jay Chiehen Liao"
+                },
+                {
+                    "authorId": "2157067900",
+                    "name": "Qidong Liu"
+                },
+                {
+                    "authorId": "46189109",
+                    "name": "Usha Lokala"
+                },
+                {
+                    "authorId": "2085850",
+                    "name": "Ben London"
+                },
+                {
+                    "authorId": "32545338",
+                    "name": "Siqu Long"
+                },
+                {
+                    "authorId": "153612944",
+                    "name": "H. Mcginty"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "29072828",
+                    "name": "Seungwhan Moon"
+                },
+                {
+                    "authorId": "1394609613",
+                    "name": "Usman Naseem"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "1403851743",
+                    "name": "Behrooz Omidvar-Tehrani"
+                },
+                {
+                    "authorId": "2069543964",
+                    "name": "Zijie Pan"
+                },
+                {
+                    "authorId": "48331451",
+                    "name": "Devesh Parekh"
+                },
+                {
+                    "authorId": "2188744953",
+                    "name": "Jian Pei"
+                },
+                {
+                    "authorId": "2101664",
+                    "name": "Tiago P. Peixoto"
+                },
+                {
+                    "authorId": "144615425",
+                    "name": "S. Pemberton"
+                },
+                {
+                    "authorId": "144179461",
+                    "name": "Josiah Poon"
+                },
+                {
+                    "authorId": "2065812052",
+                    "name": "Filip Radlinski"
+                },
+                {
+                    "authorId": "48890086",
+                    "name": "Federico Rossetto"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "2911888",
+                    "name": "Aghiles Salah"
+                },
+                {
+                    "authorId": "2128305",
+                    "name": "M. Sameki"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                },
+                {
+                    "authorId": "28908689",
+                    "name": "C. Shimizu"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                },
+                {
+                    "authorId": "2451800",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2064266862",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2528063",
+                    "name": "Johanne R. Trippas"
+                },
+                {
+                    "authorId": "39603708",
+                    "name": "Quoc-Tuan Truong"
+                },
+                {
+                    "authorId": "1896151979",
+                    "name": "Yu-Che Tsai"
+                },
+                {
+                    "authorId": "150035131",
+                    "name": "Adaku Uchendu"
+                },
+                {
+                    "authorId": "2215624802",
+                    "name": "Bram Van Den Akker"
+                },
+                {
+                    "authorId": "3265905",
+                    "name": "Linshan Wang"
+                },
+                {
+                    "authorId": "2144295736",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2116951322",
+                    "name": "Shoujin Wang"
+                },
+                {
+                    "authorId": "2153691630",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1684687",
+                    "name": "Ingmar Weber"
+                },
+                {
+                    "authorId": "69047048",
+                    "name": "H. Weld"
+                },
+                {
+                    "authorId": "2116666963",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2181385841",
+                    "name": "D. Xu"
+                },
+                {
+                    "authorId": "2138609128",
+                    "name": "E. Xu"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2156653838",
+                    "name": "Bo Yang"
+                },
+                {
+                    "authorId": "2125559318",
+                    "name": "Keyue Yang"
+                },
+                {
+                    "authorId": "1388775854",
+                    "name": "E. Yom-Tov"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "2281410",
+                    "name": "R. Zafarani"
+                },
+                {
+                    "authorId": "2499986",
+                    "name": "Hamed Zamani"
+                },
+                {
+                    "authorId": "41154657",
+                    "name": "Meike Zehlike"
+                },
+                {
+                    "authorId": "2145906426",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "1739818",
+                    "name": "Yongfeng Zhang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2148904413",
+                    "name": "Zhengqi Zhang"
+                },
+                {
+                    "authorId": "144010790",
+                    "name": "Liang Zhao"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "d3f856c9d6007ab186b2a71b936c6ec9a3a49dde",
+            "title": "Dense Representation Learning and Retrieval for Tabular Data Prediction",
+            "abstract": "Data science is concerned with mining data patterns from a database, which is assembled by tabular data. As the routine of machine learning, most of the previous work mining the tabular data's pattern based on a single instance. However, they neglect the similar tabular data instances that could help make the label prediction of the target data instance. Recently, some retrieval-based methods for tabular data label prediction have been proposed, which, however, treat the data as sparse vectors to perform the retrieval, which fails to make use of the semantic information of the tabular data. To address such a problem, in this paper, we propose a novel framework of dense retrieval on tabular data (DERT) to support flexible data representation learning and effective label prediction on tabular data. DERT consists of two major components: (i) the encoder that makes the tabular data as embeddings, which could be trained by flexible neural networks and auxiliary loss functions; (ii) the retrieval and prediction component, which makes use of similar rows in the table to make label prediction of the target row. We test DERT on two tasks based on five real-world datasets and experimental results show that DERT achieves consistent improvements over the state-of-the-art and various baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115223579",
+                    "name": "Lei Zheng"
+                },
+                {
+                    "authorId": "2227588913",
+                    "name": "Ning Li"
+                },
+                {
+                    "authorId": "150343399",
+                    "name": "Xianyu Chen"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2108309275",
+                    "name": "Weinan Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "1211ba752bfc4f35ab93f47cefed37f4accf5360",
+            "title": "CEP3: Community Event Prediction with Neural Point Process on Graph",
+            "abstract": "Many real world applications can be formulated as event forecasting on Continuous Time Dynamic Graphs (CTDGs) where the occurrence of a timed event between two entities is represented as an edge along with its occurrence timestamp in the graphs.However, most previous works approach the problem in compromised settings, either formulating it as a link prediction task on the graph given the event time or a time prediction problem given which event will happen next. In this paper, we propose a novel model combining Graph Neural Networks and Marked Temporal Point Process (MTPP) that jointly forecasts multiple link events and their timestamps on communities over a CTDG. Moreover, to scale our model to large graphs, we factorize the jointly event prediction problem into three easier conditional probability modeling problems.To evaluate the effectiveness of our model and the rationale behind such a decomposition, we establish a set of benchmarks and evaluation metrics for this event forecasting task. Our experiments demonstrate the superior performance of our model in terms of both model accuracy and training efficiency.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47119335",
+                    "name": "Xuhong Wang"
+                },
+                {
+                    "authorId": "2144340010",
+                    "name": "Sirui Chen"
+                },
+                {
+                    "authorId": "2118917694",
+                    "name": "Yixuan He"
+                },
+                {
+                    "authorId": "1508337194",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "153690188",
+                    "name": "Yupu Yang"
+                },
+                {
+                    "authorId": "3063894",
+                    "name": "Junchi Yan"
+                }
+            ]
+        },
+        {
+            "paperId": "271f40f4fad4d112e436565e668b79ede690d755",
+            "title": "Inductive Relation Prediction Using Analogy Subgraph Embeddings",
+            "abstract": "Prevailing methods for relation prediction in heterogeneous graphs including knowledge graphs aim at learning the latent representations (i.e., embeddings) of observed nodes and relations, and are thus limited to the transductive setting where the relation types must be known during training. In this paper, we propose ANalogy SubGraph Embedding Learning (GraphANGEL), a novel relation prediction framework that predicts relations between each node pair by checking whether the subgraphs containing the pair are similar to other subgraphs containing the considered relation. Each graph pattern explicitly represents a specific logical rule, which contributes to an inductive bias that facilitates generalization to unseen relation types and leads to more explainable predictive models. Our model consistently outperforms existing models in terms of heterogeneous graph based recommendation as well as knowledge graph completion. We also empirically demonstrate the capability of our model in generalizing to new relation types while producing explainable heat maps of attention scores across the discovered logics.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "16278568",
+                    "name": "Jiarui Jin"
+                },
+                {
+                    "authorId": "2146020415",
+                    "name": "Yangkun Wang"
+                },
+                {
+                    "authorId": "1780721965",
+                    "name": "Kounianhua Du"
+                },
+                {
+                    "authorId": "2108309275",
+                    "name": "Weinan Zhang"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2156098229",
+                    "name": "Yong Yu"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                }
+            ]
+        },
+        {
+            "paperId": "369b01b8b0b73c021c89c9991e1b6d38b1fd7d7c",
+            "title": "GNNRank: Learning Global Rankings from Pairwise Comparisons via Directed Graph Neural Networks",
+            "abstract": "Recovering global rankings from pairwise comparisons has wide applications from time synchronization to sports team ranking. Pairwise comparisons corresponding to matches in a competition can be construed as edges in a directed graph (digraph), whose nodes represent e.g. competitors with an unknown rank. In this paper, we introduce neural networks into the ranking recovery problem by proposing the so-called GNNRank, a trainable GNN-based framework with digraph embedding. Moreover, new objectives are devised to encode ranking upsets/violations. The framework involves a ranking score estimation approach, and adds an inductive bias by unfolding the Fiedler vector computation of the graph constructed from a learnable similarity matrix. Experimental results on extensive data sets show that our methods attain competitive and often superior performance against baselines, as well as showing promising transfer ability. Codes and preprocessed data are at: \\url{https://github.com/SherylHYX/GNNRank}.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118917694",
+                    "name": "Yixuan He"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "2666765",
+                    "name": "G. Reinert"
+                },
+                {
+                    "authorId": "3063894",
+                    "name": "Junchi Yan"
+                },
+                {
+                    "authorId": "2264879492",
+                    "name": "Mihai Cucuringu"
+                }
+            ]
+        },
+        {
+            "paperId": "409c0a96af63ff0bfc13f4bf64ed5c3e78100f48",
+            "title": "Descent Steps of a Relation-Aware Energy Produce Heterogeneous Graph Neural Networks",
+            "abstract": "Heterogeneous graph neural networks (GNNs) achieve strong performance on node classification tasks in a semi-supervised learning setting. However, as in the simpler homogeneous GNN case, message-passing-based heterogeneous GNNs may struggle to balance between resisting the oversmoothing that may occur in deep models, and capturing long-range dependencies of graph structured data. Moreover, the complexity of this trade-off is compounded in the heterogeneous graph case due to the disparate heterophily relationships between nodes of different types. To address these issues, we propose a novel heterogeneous GNN architecture in which layers are derived from optimization steps that descend a novel relation-aware energy function. The corresponding minimizer is fully differentiable with respect to the energy function parameters, such that bilevel optimization can be applied to effectively learn a functional form whose minimum provides optimal node representations for subsequent classification tasks. In particular, this methodology allows us to model diverse heterophily relationships between different node types while avoiding oversmoothing effects. Experimental results on 8 heterogeneous graph benchmarks demonstrates that our proposed method can achieve competitive node classification accuracy",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112569591",
+                    "name": "Hongjoon Ahn"
+                },
+                {
+                    "authorId": "2108658833",
+                    "name": "You\u2010Jun Yang"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                },
+                {
+                    "authorId": "4842965",
+                    "name": "Taesup Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "6e7e2b075363015e046dcb1fcddae9f5c30c68f5",
+            "title": "Learning Enhanced Representations for Tabular Data via Neighborhood Propagation",
+            "abstract": "Prediction over tabular data is an essential and fundamental problem in many important downstream tasks. However, existing methods either take a data instance of the table independently as input or do not fully utilize the multi-rows features and labels to directly change and enhance the target data representations. In this paper, we propose to 1) construct a hypergraph from relevant data instance retrieval to model the cross-row and cross-column patterns of those instances, and 2) perform message Propagation to Enhance the target data instance representation for Tabular prediction tasks. Specifically, our specially-designed message propagation step benefits from 1) fusion of label and features during propagation, and 2) locality-aware high-order feature interactions. Experiments on two important tabular data prediction tasks validate the superiority of the proposed PET model against other baselines. Additionally, we demonstrate the effectiveness of the model components and the feature enhancement ability of PET via various ablation studies and visualizations. The code is included in https://github.com/KounianhuaDu/PET.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1780721965",
+                    "name": "Kounianhua Du"
+                },
+                {
+                    "authorId": "2108309275",
+                    "name": "Weinan Zhang"
+                },
+                {
+                    "authorId": "2046150680",
+                    "name": "Ruiwen Zhou"
+                },
+                {
+                    "authorId": "2146020415",
+                    "name": "Yangkun Wang"
+                },
+                {
+                    "authorId": "2163050574",
+                    "name": "Xilong Zhao"
+                },
+                {
+                    "authorId": "16278568",
+                    "name": "Jiarui Jin"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                },
+                {
+                    "authorId": "2242717",
+                    "name": "D. Wipf"
+                }
+            ]
+        }
+    ]
+}

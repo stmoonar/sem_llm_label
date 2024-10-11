@@ -1,0 +1,260 @@
+{
+    "authorId": "21613538",
+    "papers": [
+        {
+            "paperId": "8e282feff7b01de91b32edef70723373f49ede54",
+            "title": "Descriptive Kernel Convolution Network with Improved Random Walk Kernel",
+            "abstract": "Graph kernels used to be the dominant approach to feature engineering for structured data, which are superseded by modern GNNs as the former lacks learnability. Recently, a suite of Kernel Convolution Networks (KCNs) successfully revitalized graph kernels by introducing learnability, which convolves input with learnable hidden graphs using a certain graph kernel. The random walk kernel (RWK) has been used as the default kernel in many KCNs, gaining increasing attention. In this paper, we first revisit the RWK and its current usage in KCNs, revealing several shortcomings of the existing designs, and propose an improved graph kernel RWK^+ , by introducing color-matching random walks and deriving its efficient computation. We then propose RWK^+ CN, a KCN that uses RWK^+ as the core kernel to learn descriptive graph features with an unsupervised objective, which can not be achieved by GNNs. Further, by unrolling RWK^+ , we discover its connection with a regular GCN layer, and propose a novel GNN layer RWK^+ Conv. In the first part of experiments, we demonstrate the descriptive learning ability of RWK^+ CN with the improved random walk kernel RWK^+ on unsupervised pattern mining tasks; in the second part, we show the effectiveness of RWK^+ for a variety of KCN architectures and supervised graph learning tasks, and demonstrate the expressiveness of RWK^+ Conv layer, especially on the graph-level tasks. RWK^+ and RWK^+ Conv adapt to various real-world applications, including web applications such as bot detection in a web-scale Twitter social network, and community classification in Reddit social interaction networks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2283818773",
+                    "name": "Meng-Chieh Lee"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "b8e59871669c0c4f77c414e8b413b1de10078072",
+            "title": "Pard: Permutation-Invariant Autoregressive Diffusion for Graph Generation",
+            "abstract": "Graph generation has been dominated by autoregressive models due to their simplicity and effectiveness, despite their sensitivity to ordering. Yet diffusion models have garnered increasing attention, as they offer comparable performance while being permutation-invariant. Current graph diffusion models generate graphs in a one-shot fashion, but they require extra features and thousands of denoising steps to achieve optimal performance. We introduce PARD, a Permutation-invariant Auto Regressive Diffusion model that integrates diffusion models with autoregressive methods. PARD harnesses the effectiveness and efficiency of the autoregressive model while maintaining permutation invariance without ordering sensitivity. Specifically, we show that contrary to sets, elements in a graph are not entirely unordered and there is a unique partial order for nodes and edges. With this partial order, PARD generates a graph in a block-by-block, autoregressive fashion, where each block's probability is conditionally modeled by a shared diffusion model with an equivariant network. To ensure efficiency while being expressive, we further propose a higher-order graph transformer, which integrates transformer with PPGN. Like GPT, we extend the higher-order graph transformer to support parallel training of all blocks. Without any extra features, PARD achieves state-of-the-art performance on molecular and non-molecular datasets, and scales to large datasets like MOSES containing 1.9M molecules. Pard is open-sourced at https://github.com/LingxiaoShawn/Pard.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2268636882",
+                    "name": "Xueying Ding"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "c675873dad31073ae1f4135e349d89dd2a36af17",
+            "title": "Unified Discrete Diffusion for Categorical Data",
+            "abstract": "Discrete diffusion models have seen a surge of attention with applications on naturally discrete data such as language and graphs. Although discrete-time discrete diffusion has been established for a while, only recently Campbell et al. (2022) introduced the first framework for continuous-time discrete diffusion. However, their training and sampling processes differ significantly from the discrete-time version, necessitating nontrivial approximations for tractability. In this paper, we first present a series of mathematical simplifications of the variational lower bound that enable more accurate and easy-to-optimize training for discrete diffusion. In addition, we derive a simple formulation for backward denoising that enables exact and accelerated sampling, and importantly, an elegant unification of discrete-time and continuous-time discrete diffusion. Thanks to simpler analytical formulations, both forward and now also backward probabilities can flexibly accommodate any noise distribution, including different noise distributions for multi-element objects. Experiments show that our proposed USD3 (for Unified Simplified Discrete Denoising Diffusion) outperform all SOTA baselines on established datasets. We open-source our unified code at https://github.com/LingxiaoShawn/USD3.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2268636882",
+                    "name": "Xueying Ding"
+                },
+                {
+                    "authorId": "2282947975",
+                    "name": "Lijun Yu"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "2d569e92218ff1cd0a7c7ef41389d765d7589bab",
+            "title": "ADAMM: Anomaly Detection of Attributed Multi-graphs with Metadata: A Unified Neural Network Approach",
+            "abstract": "Given a complex graph database of node- and edge-attributed multi-graphs as well as associated metadata for each graph, how can we spot the anomalous instances? Many real-world problems can be cast as graph inference tasks where the graph representation could capture complex relational phenomena (e.g., transactions among financial accounts in a journal entry), along with metadata reflecting tabular features (e.g. approver, effective date, etc.). While numerous anomaly detectors based on Graph Neural Networks (GNNs) have been proposed, none are capable of directly handling directed graphs with multi-edges and self-loops. Furthermore, the simultaneous handling of relational and tabular features remains an unexplored area. In this work we propose ADAMM, a novel graph neural network model that handles directed multi-graphs, providing a unified end-to-end architecture that fuses metadata and graph-level representation learning through an unsupervised anomaly detection objective. Experiments on datasets from two different domains, namely, general-ledger journal entries from different firms (accounting) as well as human GPS trajectories from thousands of individuals (urban mobility), validate ADAMM\u2019s generality and detection effectiveness of expert-guided and ground-truth anomalies. Notably, ADAMM outperforms existing baselines that handle the two data modalities (graph and metadata) separately with post hoc synthesis efforts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266395923",
+                    "name": "Konstantinos Sotiropoulos"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2266394457",
+                    "name": "Pierre Jinghong Liang"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "78d3cde1da06a51530f7451e4005cd35bad4af20",
+            "title": "Heterophily and Graph Neural Networks: Past, Present and Future",
+            "abstract": "Recently, there has been interest in understanding the performance of Graph Neural Networks (GNNs) on input graphs exhibiting heterophily, or the tendency for nodes of different classes to connect. Initial findings showed that many standard GNN models struggled on certain benchmark datasets exhibiting high heterophily, prompting research into existing and novel GNN designs that improved learning in these contexts. However, further analyses revealed that certain highly heterophilous settings did not challenge GNNs without these specialized designs, raising questions about the true factors causing performance degradation. In this work, we first review various GNN designs proposed for handling graphs with heterophily, and examine their connections to other GNN research objectives such as robustness, fairness, and oversmoothing avoidance. Next, we conduct an empirical study to investigate the specific heterophilous graph conditions under which GNNs can and cannot perform effectively. Our analysis reveals that although high heterophily does not universally impede conventional GNNs, unique challenges in heterophilous graphs, particularly the intertwined effects with low-degree nodes and complex compatibility patterns, warrant GNN designs specifically tailored to heterophily. In conclusion, we discuss future research directions aimed at advancing the understanding of the impact of heterophily on GNNs across a broader range of contexts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "50077183",
+                    "name": "Jiong Zhu"
+                },
+                {
+                    "authorId": "7957569",
+                    "name": "Yujun Yan"
+                },
+                {
+                    "authorId": "35505461",
+                    "name": "Mark Heimann"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                }
+            ]
+        },
+        {
+            "paperId": "87319dfd745225736457906aa49f3fb79a347136",
+            "title": "End-to-End Augmentation Hyperparameter Tuning for Self-Supervised Anomaly Detection",
+            "abstract": "Self-supervised learning (SSL) has emerged as a promising paradigm that presents self-generated supervisory signals to real-world problems, bypassing the extensive manual labeling burden. SSL is especially attractive for unsupervised tasks such as anomaly detection, where labeled anomalies are often nonexistent and costly to obtain. While self-supervised anomaly detection (SSAD) has seen a recent surge of interest, the literature has failed to treat data augmentation as a hyperparameter. Meanwhile, recent works have reported that the choice of augmentation has significant impact on detection performance. In this paper, we introduce ST-SSAD (Self-Tuning Self-Supervised Anomaly Detection), the first systematic approach to SSAD in regards to rigorously tuning augmentation. To this end, our work presents two key contributions. The first is a new unsupervised validation loss that quantifies the alignment between the augmented training data and the (unlabeled) test data. In principle we adopt transduction, quantifying the extent to which augmentation mimics the true anomaly-generating mechanism, in contrast to augmenting data with arbitrary pseudo anomalies without regard to test data. Second, we present new differentiable augmentation functions, allowing data augmentation hyperparameter(s) to be tuned end-to-end via our proposed validation loss. Experiments on two testbeds with semantic class anomalies and subtle industrial defects show that systematically tuning augmentation offers significant performance gains over current practices.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "f03cec99e75dc74ab653b2598da16dc606c15da5",
+            "title": "DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection",
+            "abstract": "Self-supervised learning (SSL) has proven effective in solving various problems by generating internal supervisory signals. Unsupervised anomaly detection, which faces the high cost of obtaining true labels, is an area that can greatly benefit from SSL. However, recent literature suggests that tuning the hyperparameters (HP) of data augmentation functions is crucial to the success of SSL-based anomaly detection (SSAD), yet a systematic method for doing so remains unknown. In this work, we propose DSV (Discordance and Separability Validation), an unsupervised validation loss to select high-performing detection models with effective augmentation HPs. DSV captures the alignment between an augmentation function and the anomaly-generating mechanism with surrogate losses, which approximate the discordance and separability of test data, respectively. As a result, the evaluation via DSV leads to selecting an effective SSAD model exhibiting better alignment, which results in high detection accuracy. We theoretically derive the degree of approximation conducted by the surrogate losses and empirically show that DSV outperforms a wide range of baselines on 21 real-world tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "145454815",
+                    "name": "Yue Zhao"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "1b95e5c134d56a43f362f607406aa11e3bd55569",
+            "title": "A Practical, Progressively-Expressive GNN",
+            "abstract": "Message passing neural networks (MPNNs) have become a dominant flavor of graph neural networks (GNNs) in recent years. Yet, MPNNs come with notable limitations; namely, they are at most as powerful as the 1-dimensional Weisfeiler-Leman (1-WL) test in distinguishing graphs in a graph isomorphism testing frame-work. To this end, researchers have drawn inspiration from the k-WL hierarchy to develop more expressive GNNs. However, current k-WL-equivalent GNNs are not practical for even small values of k, as k-WL becomes combinatorially more complex as k grows. At the same time, several works have found great empirical success in graph learning tasks without highly expressive models, implying that chasing expressiveness with a coarse-grained ruler of expressivity like k-WL is often unneeded in practical tasks. To truly understand the expressiveness-complexity tradeoff, one desires a more fine-grained ruler, which can more gradually increase expressiveness. Our work puts forth such a proposal: Namely, we first propose the (k, c)(<=)-SETWL hierarchy with greatly reduced complexity from k-WL, achieved by moving from k-tuples of nodes to sets with<=k nodes defined over<=c connected components in the induced original graph. We show favorable theoretical results for this model in relation to k-WL, and concretize it via (k, c)(<=)-SETGNN, which is as expressive as (k, c)(<=)-SETWL. Our model is practical and progressively-expressive, increasing in power with k and c. We demonstrate effectiveness on several benchmark datasets, achieving several state-of-the-art results with runtime and memory usage applicable to practical graphs. We open source our implementation at https://github.com/LingxiaoShawn/KCSetGNN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2188745512",
+                    "name": "Louis H\u00e4rtel"
+                },
+                {
+                    "authorId": "145474474",
+                    "name": "Neil Shah"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "93d1d4afffffa86a0f2200224d9089d22a02a258",
+            "title": "Hyperparameter Sensitivity in Deep Outlier Detection: Analysis and a Scalable Hyper-Ensemble Solution",
+            "abstract": "Outlier detection (OD) literature exhibits numerous algorithms as it applies to diverse domains. However, given a new detection task, it is unclear how to choose an algorithm to use, nor how to set its hyperparameter(s) (HPs) in unsupervised settings. HP tuning is an ever-growing problem with the arrival of many new detectors based on deep learning, which usually come with a long list of HPs. Surprisingly, the issue of model selection in the outlier mining literature has been\"the elephant in the room\"; a significant factor in unlocking the utmost potential of deep methods, yet little said or done to systematically tackle the issue. In the first part of this paper, we conduct the first large-scale analysis on the HP sensitivity of deep OD methods, and through more than 35,000 trained models, quantitatively demonstrate that model selection is inevitable. Next, we design a HP-robust and scalable deep hyper-ensemble model called ROBOD that assembles models with varying HP configurations, bypassing the choice paralysis. Importantly, we introduce novel strategies to speed up ensemble training, such as parameter sharing, batch/simultaneous training, and data subsampling, that allow us to train fewer models with fewer parameters. Extensive experiments on both image and tabular datasets show that ROBOD achieves and retains robust, state-of-the-art detection performance as compared to its modern counterparts, while taking only $2$-$10$\\% of the time by the naive hyper-ensemble with independent training.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "151257348",
+                    "name": "Xueying Ding"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "98aab73839715f6c020d76fc9ed9a4c0342aaa5b",
+            "title": "Graph Anomaly Detection with Unsupervised GNNs",
+            "abstract": "Graph-based anomaly detection finds numerous applications in the real-world. Thus, there exists extensive literature on the topic that has recently shifted toward deep detection models due to advances in deep learning and graph neural networks (GNNs). A vast majority of prior work focuses on detecting node/edge/subgraph anomalies within a single graph, with much less work on graph-level anomaly detection in a graph database. This work aims to fill two gaps in the literature: We (1) design GLAM, an end-to-end graph-level anomaly detection model based on GNNs, and (2) focus on unsupervised model selection, which is notoriously hard due to lack of any labels, yet especially critical for deep NN based models with a long list of hyper-parameters. Further, we propose a new pooling strategy for graph-level embedding, called MMD-pooling, that is geared toward detecting distribution anomalies which has not been considered before. Through extensive experiments on 15 real-world datasets, we show that (i) GLAM outperforms node-level and two-stage (i.e. not end-to-end) baselines, and (ii) model selection picks a significantly more effective model than expectation (i.e. average) -- without using any labels -- among candidates with otherwise large variation in performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "2533470",
+                    "name": "Saurabh Sawlani"
+                },
+                {
+                    "authorId": "1684736163",
+                    "name": "Arvind Srinivasan"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,345 @@
+{
+    "authorId": "2057595515",
+    "papers": [
+        {
+            "paperId": "2dc0c0a00544cd306abec905a98e4701e2401ba2",
+            "title": "OpenTab: Advancing Large Language Models as Open-domain Table Reasoners",
+            "abstract": "Large Language Models (LLMs) trained on large volumes of data excel at various natural language tasks, but they cannot handle tasks requiring knowledge that has not been trained on previously. One solution is to use a retriever that fetches relevant information to expand LLM's knowledge scope. However, existing textual-oriented retrieval-based LLMs are not ideal on structured table data due to diversified data modalities and large table sizes. In this work, we propose OpenTab, an open-domain table reasoning framework powered by LLMs. Overall, OpenTab leverages table retriever to fetch relevant tables and then generates SQL programs to parse the retrieved tables efficiently. Utilizing the intermediate data derived from the SQL executions, it conducts grounded inference to produce accurate response. Extensive experimental evaluation shows that OpenTab significantly outperforms baselines in both open- and closed-domain settings, achieving up to 21.5% higher accuracy. We further run ablation studies to validate the efficacy of our proposed designs of the system.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284981676",
+                    "name": "Kezhi Kong"
+                },
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2223137915",
+                    "name": "Chuan Lei"
+                },
+                {
+                    "authorId": "2263543517",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "03613effe356d2a8815f899027d6a5868822fd93",
+            "title": "Which Examples to Annotate for In-Context Learning? Towards Effective and Efficient Selection",
+            "abstract": "Large Language Models (LLMs) can adapt to new tasks via in-context learning (ICL). ICL is efficient as it does not require any parameter updates to the trained LLM, but only few annotated examples as input for the LLM. In this work, we investigate an active learning approach for ICL, where there is a limited budget for annotating examples. We propose a model-adaptive optimization-free algorithm, termed AdaICL, which identifies examples that the model is uncertain about, and performs semantic diversity-based example selection. Diversity-based sampling improves overall effectiveness, while uncertainty sampling improves budget efficiency and helps the LLM learn new information. Moreover, AdaICL poses its sampling strategy as a Maximum Coverage problem, that dynamically adapts based on the model's feedback and can be approximately solved via greedy algorithms. Extensive experiments on nine datasets and seven LLMs show that AdaICL improves performance by 4.4% accuracy points over SOTA (7.7% relative improvement), is up to 3x more budget-efficient than performing annotations uniformly at random, while it outperforms SOTA with 2x fewer ICL examples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1944251405",
+                    "name": "Costas Mavromatis"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "2263543517",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "16e0b8c878c75bb57ffb62c08ebf23b51ac10b99",
+            "title": "BioBridge: Bridging Biomedical Foundation Models via Knowledge Graphs",
+            "abstract": "Foundation models (FMs) are able to leverage large volumes of unlabeled data to demonstrate superior performance across a wide range of tasks. However, FMs developed for biomedical domains have largely remained unimodal, i.e., independently trained and used for tasks on protein sequences alone, small molecule structures alone, or clinical data alone. To overcome this limitation of biomedical FMs, we present BioBridge, a novel parameter-efficient learning framework, to bridge independently trained unimodal FMs to establish multimodal behavior. BioBridge achieves it by utilizing Knowledge Graphs (KG) to learn transformations between one unimodal FM and another without fine-tuning any underlying unimodal FMs. Our empirical results demonstrate that BioBridge can beat the best baseline KG embedding methods (on average by around 76.3%) in cross-modal retrieval tasks. We also identify BioBridge demonstrates out-of-domain generalization ability by extrapolating to unseen modalities or relations. Additionally, we also show that BioBridge presents itself as a general purpose retriever that can aid biomedical multimodal question answering as well as enhance the guided generation of novel drugs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2255392612",
+                    "name": "Zifeng Wang"
+                },
+                {
+                    "authorId": "2255392614",
+                    "name": "Zichen Wang"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "40043851",
+                    "name": "V. Ioannidis"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "2432216",
+                    "name": "Rishita Anubhai"
+                }
+            ]
+        },
+        {
+            "paperId": "38b75403553508c7623196f10d625c1d162510e5",
+            "title": "NameGuess: Column Name Expansion for Tabular Data",
+            "abstract": "Recent advances in large language models have revolutionized many sectors, including the database industry. One common challenge when dealing with large volumes of tabular data is the pervasive use of abbreviated column names, which can negatively impact performance on various data search, access, and understanding tasks. To address this issue, we introduce a new task, called NameGuess, to expand column names (used in database schema) as a natural language generation problem. We create a training dataset of 384K abbreviated-expanded column pairs using a new data fabrication method and a human-annotated evaluation benchmark that includes 9.2K examples from real-world tables. To tackle the complexities associated with polysemy and ambiguity in NameGuess, we enhance auto-regressive language models by conditioning on table content and column header names -- yielding a fine-tuned model (with 2.7B parameters) that matches human performance. Furthermore, we conduct a comprehensive analysis (on multiple LLMs) to validate the effectiveness of table content in NameGuess and identify promising future opportunities. Code has been made available at https://github.com/amazon-science/nameguess.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2261294497",
+                    "name": "Shen Wang"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "a7e58dc03d029100fd437e229f7ee80e976fc842",
+            "title": "HYTREL: Hypergraph-enhanced Tabular Data Representation Learning",
+            "abstract": "Language models pretrained on large collections of tabular data have demonstrated their effectiveness in several downstream tasks. However, many of these models do not take into account the row/column permutation invariances, hierarchical structure, etc. that exist in tabular data. To alleviate these limitations, we propose HYTREL, a tabular language model, that captures the permutation invariances and three more structural properties of tabular data by using hypergraphs - where the table cells make up the nodes and the cells occurring jointly together in each row, column, and the entire table are used to form three different types of hyperedges. We show that HYTREL is maximally invariant under certain conditions for tabular data, i.e., two tables obtain the same representations via HYTREL iff the two tables are identical up to permutations. Our empirical results demonstrate that HYTREL consistently outperforms other competitive baselines on four downstream tasks with minimal pretraining, illustrating the advantages of incorporating the inductive biases associated with tabular data into the representations. Finally, our qualitative analyses showcase that HYTREL can assimilate the table structures to generate robust representations for the cells, rows, columns, and the entire table.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2901524",
+                    "name": "Pei Chen"
+                },
+                {
+                    "authorId": "3081847",
+                    "name": "Soumajyoti Sarkar"
+                },
+                {
+                    "authorId": "8789103",
+                    "name": "Leonard Lausen"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "40881843",
+                    "name": "Sheng Zha"
+                },
+                {
+                    "authorId": "40372969",
+                    "name": "Ruihong Huang"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "e274f9e367fb3b7fd1a777d6984df7b7f13c3411",
+            "title": "Mixed-Type Tabular Data Synthesis with Score-based Diffusion in Latent Space",
+            "abstract": "Recent advances in tabular data generation have greatly enhanced synthetic data quality. However, extending diffusion models to tabular data is challenging due to the intricately varied distributions and a blend of data types of tabular data. This paper introduces Tabsyn, a methodology that synthesizes tabular data by leveraging a diffusion model within a variational autoencoder (VAE) crafted latent space. The key advantages of the proposed Tabsyn include (1) Generality: the ability to handle a broad spectrum of data types by converting them into a single unified space and explicitly capture inter-column relations; (2) Quality: optimizing the distribution of latent embeddings to enhance the subsequent training of diffusion models, which helps generate high-quality synthetic data, (3) Speed: much fewer number of reverse steps and faster synthesis speed than existing diffusion-based methods. Extensive experiments on six datasets with five metrics demonstrate that Tabsyn outperforms existing methods. Specifically, it reduces the error rates by 86% and 67% for column-wise distribution and pair-wise column correlation estimations compared with the most competitive baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2258788681",
+                    "name": "Hengrui Zhang"
+                },
+                {
+                    "authorId": "2258747730",
+                    "name": "Jiani Zhang"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2223163421",
+                    "name": "Zhengyuan Shen"
+                },
+                {
+                    "authorId": "2258942704",
+                    "name": "Xiao Qin"
+                },
+                {
+                    "authorId": "2257160535",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "145344187",
+                    "name": "H. Rangwala"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "6667a57c8ffa3f3c0d724b1e8e986758995df2b8",
+            "title": "Equivariant Subgraph Aggregation Networks",
+            "abstract": "Message-passing neural networks (MPNNs) are the leading architecture for deep learning on graph-structured data, in large part due to their simplicity and scalability. Unfortunately, it was shown that these architectures are limited in their expressive power. This paper proposes a novel framework called Equivariant Subgraph Aggregation Networks (ESAN) to address this issue. Our main observation is that while two graphs may not be distinguishable by an MPNN, they often contain distinguishable subgraphs. Thus, we propose to represent each graph as a set of subgraphs derived by some predefined policy, and to process it using a suitable equivariant architecture. We develop novel variants of the 1-dimensional Weisfeiler-Leman (1-WL) test for graph isomorphism, and prove lower bounds on the expressiveness of ESAN in terms of these new WL variants. We further prove that our approach increases the expressive power of both MPNNs and more expressive architectures. Moreover, we provide theoretical results that describe how design choices such as the subgraph selection policy and equivariant neural architecture affect our architecture's expressive power. To deal with the increased computational cost, we propose a subgraph sampling scheme, which can be viewed as a stochastic version of our framework. A comprehensive set of experiments on real and synthetic datasets demonstrates that our framework improves the expressive power and overall performance of popular GNN architectures.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2079900490",
+                    "name": "Beatrice Bevilacqua"
+                },
+                {
+                    "authorId": "51484149",
+                    "name": "Fabrizio Frasca"
+                },
+                {
+                    "authorId": "50436643",
+                    "name": "Derek Lim"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "2053992712",
+                    "name": "Chen Cai"
+                },
+                {
+                    "authorId": "2131004089",
+                    "name": "G. Balamurugan"
+                },
+                {
+                    "authorId": "1732570",
+                    "name": "M. Bronstein"
+                },
+                {
+                    "authorId": "3416939",
+                    "name": "Haggai Maron"
+                }
+            ]
+        },
+        {
+            "paperId": "91f3d3933ee6131a5982e11b601c4e399e8bd8ed",
+            "title": "Learning over Families of Sets - Hypergraph Representation Learning for Higher Order Tasks",
+            "abstract": "Graph representation learning has made major strides over the past decade. However, in many relational domains, the input data are not suited for simple graph representations as the relationships between entities go beyond pairwise interactions. In such cases, the relationships in the data are better represented as hyperedges (set of entities) of a non-uniform hypergraph. While there have been works on principled methods for learning representations of nodes of a hypergraph, these approaches are limited in their applicability to tasks on non-uniform hypergraphs (hyperedges with different cardinalities). In this work, we exploit the incidence structure to develop a hypergraph neural network to learn provably expressive representations of variable sized hyperedges which preserve local-isomorphism in the line graph of the hypergraph, while also being invariant to permutations of its constituent vertices. Specifically, for a given vertex set, we propose frameworks for (1) hyperedge classification and (2) variable sized expansion of partially observed hyperedges which captures the higher order interactions among vertices and hyperedges. We evaluate performance on multiple real-world hypergraph datasets and demonstrate consistent, significant improvement in accuracy, over state-of-the-art models.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "6be30bc4d47392f0e8d9664b0580848f7a3805cb",
+            "title": "On the Equivalence between Node Embeddings and Structural Graph Representations",
+            "abstract": "This work provides the first unifying theoretical framework for node embeddings and structural graph representations, bridging methods like matrix factorization and graph neural networks. Using invariant theory, we show that the relationship between structural representations and node embeddings is analogous to that of a distribution and its samples. We prove that all tasks that can be performed by node embeddings can also be performed by structural representations and vice-versa. We also show that the concept of transductive and inductive learning is unrelated to node embeddings and graph representations, clearing another source of confusion in the literature. Finally, we introduce new practical guidelines to generating and using node embeddings, which fixes significant shortcomings of standard operating procedures used today.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "145617731",
+                    "name": "Bruno Ribeiro"
+                }
+            ]
+        },
+        {
+            "paperId": "7f5ea861a57e14796f033fd0f5580dbc34ff88f2",
+            "title": "Relational Pooling for Graph Representations",
+            "abstract": "This work generalizes graph neural networks (GNNs) beyond those based on the Weisfeiler-Lehman (WL) algorithm, graph Laplacians, and diffusions. Our approach, denoted Relational Pooling (RP), draws from the theory of finite partial exchangeability to provide a framework with maximal representation power for graphs. RP can work with existing graph representation models and, somewhat counterintuitively, can make them even more powerful than the original WL isomorphism test. Additionally, RP allows architectures like Recurrent Neural Networks and Convolutional Neural Networks to be used in a theoretically sound approach for graph classification. We demonstrate improved performance of RP-based graph representations over state-of-the-art methods on a number of tasks.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "49433805",
+                    "name": "R. Murphy"
+                },
+                {
+                    "authorId": "2057595515",
+                    "name": "Balasubramaniam Srinivasan"
+                },
+                {
+                    "authorId": "144208693",
+                    "name": "Vinayak A. Rao"
+                },
+                {
+                    "authorId": "145617731",
+                    "name": "Bruno Ribeiro"
+                }
+            ]
+        }
+    ]
+}

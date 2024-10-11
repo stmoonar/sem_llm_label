@@ -1,0 +1,371 @@
+{
+    "authorId": "145136889",
+    "papers": [
+        {
+            "paperId": "1f49e67f06efe21aa524f02048dac706d7678b34",
+            "title": "L3DMC: Lifelong Learning using Distillation via Mixed-Curvature Space",
+            "abstract": "The performance of a lifelong learning (L3) model degrades when it is trained on a series of tasks, as the geometrical formation of the embedding space changes while learning novel concepts sequentially. The majority of existing L3 approaches operate on a fixed-curvature (e.g., zero-curvature Euclidean) space that is not necessarily suitable for modeling the complex geometric structure of data. Furthermore, the distillation strategies apply constraints directly on low-dimensional embeddings, discouraging the L3 model from learning new concepts by making the model highly stable. To address the problem, we propose a distillation strategy named L3DMC that operates on mixed-curvature spaces to preserve the already-learned knowledge by modeling and maintaining complex geometrical structures. We propose to embed the projected low dimensional embedding of fixed-curvature spaces (Euclidean and hyperbolic) to higher-dimensional Reproducing Kernel Hilbert Space (RKHS) using a positive-definite kernel function to attain rich representation. Afterward, we optimize the L3 model by minimizing the discrepancies between the new sample representation and the subspace constructed using the old representation in RKHS. L3DMC is capable of adapting new knowledge better without forgetting old knowledge as it combines the representation power of multiple fixed-curvature spaces and is performed on higher-dimensional RKHS. Thorough experiments on three benchmarks demonstrate the effectiveness of our proposed distillation strategy for medical image classification in L3 settings. Our code implementation is publicly available at https://github.com/csiro-robotics/L3DMC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                }
+            ]
+        },
+        {
+            "paperId": "40d73a1a8e46b7d57815701b3516b26ca923dd82",
+            "title": "GeoAdapt: Self-Supervised Test-Time Adaptation in LiDAR Place Recognition Using Geometric Priors",
+            "abstract": "LiDAR place recognition approaches based on deep learning suffer from significant performance degradation when there is a shift between the distribution of training and test datasets, often requiring re-training the networks to achieve peak performance. However, obtaining accurate ground truth data for new training data can be prohibitively expensive, especially in complex or GPS-deprived environments. To address this issue we propose GeoAdapt, which introduces a novel auxiliary classification head to generate pseudo-labels for re-training on unseen environments in a self-supervised manner. GeoAdapt uses geometric consistency as a prior to improve the robustness of our generated pseudo-labels against domain shift, improving the performance and reliability of our Test-Time Adaptation approach. Comprehensive experiments show that GeoAdapt significantly boosts place recognition performance across moderate to severe domain shifts, and is competitive with fully supervised test-time adaptation approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1612061859",
+                    "name": "Joshua Knights"
+                },
+                {
+                    "authorId": "51474137",
+                    "name": "Stephen Hausler"
+                },
+                {
+                    "authorId": "1729760",
+                    "name": "S. Sridharan"
+                },
+                {
+                    "authorId": "3140440",
+                    "name": "C. Fookes"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                }
+            ]
+        },
+        {
+            "paperId": "6986c7ca340f997c7e16629c31d60d3f86d751db",
+            "title": "Exploiting Field Dependencies for Learning on Categorical Data",
+            "abstract": "Traditional approaches for learning on categorical data underexploit the dependencies between columns (a.k.a. fields) in a dataset because they rely on the embedding of data points driven alone by the classification/regression loss. In contrast, we propose a novel method for learning on categorical data with the goal of exploiting dependencies between fields. Instead of modelling statistics of features globally (i.e., by the covariance matrix of features), we learn a global field dependency matrix that captures dependencies between fields and then we refine the global field dependency matrix at the instance-wise level with different weights (so-called local dependency modelling) w.r.t. each field to improve the modelling of the field dependencies. Our algorithm exploits the meta-learning paradigm, i.e., the dependency matrices are refined in the inner loop of the meta-learning algorithm without the use of labels, whereas the outer loop intertwines the updates of the embedding matrix (the matrix performing projection) and global dependency matrix in a supervised fashion (with the use of labels). Our method is simple yet it outperforms several state-of-the-art methods on six popular dataset benchmarks. Detailed ablation studies provide additional insights into our method.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "49970257",
+                    "name": "Zhibin Li"
+                },
+                {
+                    "authorId": "2155775",
+                    "name": "Piotr Koniusz"
+                },
+                {
+                    "authorId": "2223993111",
+                    "name": "Lu Zhang"
+                },
+                {
+                    "authorId": "2321505",
+                    "name": "D. Pagendam"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                }
+            ]
+        },
+        {
+            "paperId": "8585400fef0b77e7da19192790a2cda6ff3b8d51",
+            "title": "Learning Partial Correlation based Deep Visual Representation for Image Classification",
+            "abstract": "Visual representation based on covariance matrix has demonstrates its efficacy for image classification by characterising the pairwise correlation of different channels in convolutional feature maps. However, pairwise correlation will become misleading once there is another channel correlating with both channels of interest, resulting in the \u201cconfounding\u201d effect. For this case, \u201cpartial correlation\u201d which removes the confounding effect shall be estimated instead. Nevertheless, reliably estimating partial correlation requires to solve a symmetric positive definite matrix optimisation, known as sparse inverse covariance estimation (SICE). How to incorporate this process into CNN remains an open issue. In this work, we formulate SICE as a novel structured layer of CNN. To ensure end-to-end trainability, we develop an iterative method to solve the above matrix optimisation during forward and backward propagation steps. Our work obtains a partial correlation based deep visual representation and mitigates the small sample problem often encountered by covariance matrix estimation in CNN. Computationally, our model can be effectively trained with GPU and works well with a large number of channels of advanced CNNs. Experiments show the efficacy and superior classification performance of our deep visual representation compared to covariance matrix based counterparts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "12100407",
+                    "name": "Saimunur Rahman"
+                },
+                {
+                    "authorId": "2155775",
+                    "name": "Piotr Koniusz"
+                },
+                {
+                    "authorId": "2152505258",
+                    "name": "Lei Wang"
+                },
+                {
+                    "authorId": "6578587",
+                    "name": "Luping Zhou"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "47810178",
+                    "name": "Changming Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "aa07a67494fc5ffcd1a0db36ab80ec4d2ecc0736",
+            "title": "Deep Robust Multi-Robot Re-Localisation in Natural Environments",
+            "abstract": "The success of re-localisation has crucial implications for the practical deployment of robots operating within a prior map or relative to one another in real-world scenarios. Using single-modality, place recognition and localisation can be compromised in challenging environments such as forests. To address this, we propose a strategy to prevent lidar-based re-localisation failure using lidar-image cross-modality. Our solution relies on self-supervised 2D-3D feature matching to predict alignment and misalignment. Leveraging a deep network for lidar feature extraction and relative pose estimation between point clouds, we train a model to evaluate the estimated transformation. A model predicting the presence of misalignment is learned by analysing image-lidar similarity in the embedding space and the geometric constraints available within the region seen in both modalities in Euclidean space. Experimental results using real datasets (offline and online modes) demonstrate the effectiveness of the proposed pipeline for robust re-localisation in unstructured, natural environments.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31367273",
+                    "name": "Milad Ramezani"
+                },
+                {
+                    "authorId": "2061651963",
+                    "name": "E. Griffiths"
+                },
+                {
+                    "authorId": "37608891",
+                    "name": "Maryam Haghighat"
+                },
+                {
+                    "authorId": "2008208964",
+                    "name": "Alex Pitt"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                }
+            ]
+        },
+        {
+            "paperId": "b7305e90c68aa0711b2381d826566f94aba35a2d",
+            "title": "Subspace Distillation for Continual Learning",
+            "abstract": "An ultimate objective in continual learning is to preserve knowledge learned in preceding tasks while learning new tasks. To mitigate forgetting prior knowledge, we propose a novel knowledge distillation technique that takes into the account the manifold structure of the latent/output space of a neural network in learning novel tasks. To achieve this, we propose to approximate the data manifold up-to its first order, hence benefiting from linear subspaces to model the structure and maintain the knowledge of a neural network while learning novel concepts. We demonstrate that the modeling with subspaces provides several intriguing properties, including robustness to noise and therefore effective for mitigating Catastrophic Forgetting in continual learning. We also discuss and show how our proposed method can be adopted to address both classification and segmentation problems. Empirically, we observe that our proposed method outperforms various continual learning methods on several challenging datasets including Pascal VOC, and Tiny-Imagenet. Furthermore, we show how the proposed method can be seamlessly combined with existing learning approaches to improve their performances. The codes of this article will be available at https://github.com/csiro-robotics/SDCL.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "144616396",
+                    "name": "Christian Simon"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "23911916",
+                    "name": "Mehrtash Harandi"
+                }
+            ]
+        },
+        {
+            "paperId": "26e4d1678598fb9246266e3b4f4b608fee26ef94",
+            "title": "Uncertainty-Aware Lidar Place Recognition in Novel Environments",
+            "abstract": "State-of-the-art lidar place recognition models exhibit unreliable performance when tested on environments different from their training dataset, which limits their use in complex and evolving environments. To address this issue, we investigate the task of uncertainty-aware lidar place recognition, where each predicted place must have an associated uncertainty that can be used to identify and reject incorrect predictions. We introduce a novel evaluation protocol and present the first comprehensive benchmark for this task, testing across five uncertainty estimation techniques and three large-scale datasets. Our results show that an Ensembles approach is the highest performing technique, consistently improving the performance of lidar place recognition and uncertainty estimation in novel environments, though it incurs a computational cost. Code is publicly available at https://github.com/csiro-robotics/Uncertainty-LPR.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2186874511",
+                    "name": "Keita Mason"
+                },
+                {
+                    "authorId": "1612061859",
+                    "name": "Joshua Knights"
+                },
+                {
+                    "authorId": "31367273",
+                    "name": "Milad Ramezani"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "30379446",
+                    "name": "Dimity Miller"
+                }
+            ]
+        },
+        {
+            "paperId": "3dec9835653bc5a0c95780e0c68016feb989acab",
+            "title": "A Survey on Terrain Traversability Analysis for Autonomous Ground Vehicles: Methods, Sensors, and Challenges",
+            "abstract": "Understanding the terrain in the upcoming path of a ground robot is one of the most challenging problems in field robotics. Terrain and traversability analysis is a multidisciplinary field combining robotics with image and signal processing, feature extraction, machine learning, three-dimensional (3D) mapping, and 3D geometry. Application scenarios range from autonomous vehicles on urban networks to agriculture, defence, exploration, mining, and search and rescue. Given the broad set of techniques available and the fast progress in this area, in this paper we organize and survey the corresponding literature, define unambiguous key terms, and discuss links among fundamental building blocks ranging from terrain classification to traversability regression. The advantages and the drawbacks of the methods are critically discussed, providing a comprehensive coverage of key aspects, including open code, available datasets for experimentation and comparisons, and important open research issues.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2166311610",
+                    "name": "Paulo Borges"
+                },
+                {
+                    "authorId": "2877376",
+                    "name": "T. Peynot"
+                },
+                {
+                    "authorId": "2176594692",
+                    "name": "Sisi Liang"
+                },
+                {
+                    "authorId": "144303756",
+                    "name": "B. Arain"
+                },
+                {
+                    "authorId": "2078501755",
+                    "name": "Matt Wildie"
+                },
+                {
+                    "authorId": "2176574244",
+                    "name": "Melih Minareci"
+                },
+                {
+                    "authorId": "2784388",
+                    "name": "Serge Lichman"
+                },
+                {
+                    "authorId": "2176578473",
+                    "name": "Garima Samvedi"
+                },
+                {
+                    "authorId": "1867220",
+                    "name": "Inkyu Sa"
+                },
+                {
+                    "authorId": "2176578769",
+                    "name": "Nicolas Hudson"
+                },
+                {
+                    "authorId": "1809144",
+                    "name": "Michael Milford"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "1714296",
+                    "name": "Peter Corke"
+                }
+            ]
+        },
+        {
+            "paperId": "434caa452e4c7572c7efaf25a36256cb05f9673d",
+            "title": "What\u2019s in the Black Box? The False Negative Mechanisms Inside Object Detectors",
+            "abstract": "In object detection, false negatives arise when a detector fails to detect a target object. To understand why object detectors produce false negatives, we identify five \u2018false negative mechanisms,\u2019 where each mechanism describes how a specific component inside the detector architecture failed. Focusing on two-stage and one-stage anchor-box object detector architectures, we introduce a framework for quantifying these false negative mechanisms. Using this framework, we investigate why Faster R-CNN and RetinaNet fail to detect objects in benchmark vision datasets and robotics datasets. We show that a detector\u2019s false negative mechanisms differ significantly between computer vision benchmark datasets and robotics deployment scenarios. This has implications for the translation of object detectors developed for benchmark datasets to robotics applications.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "30379446",
+                    "name": "Dimity Miller"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "143707842",
+                    "name": "Mark Cox"
+                },
+                {
+                    "authorId": "2078501755",
+                    "name": "Matt Wildie"
+                },
+                {
+                    "authorId": "1742526120",
+                    "name": "R. Jurdak"
+                }
+            ]
+        },
+        {
+            "paperId": "5936c42edc5ea9366fb23c8c121799f43498e320",
+            "title": "A real-time edge-AI system for reef surveys",
+            "abstract": "Crown-of-Thorn Starfish (COTS) outbreaks are a major cause of coral loss on the Great Barrier Reef (GBR) and substantial surveillance and control programs are ongoing to manage COTS populations to ecologically sustainable levels. In this paper, we present a comprehensive real-time machine learning-based underwater data collection and curation system on edge devices for COTS monitoring. In particular, we leverage the power of deep learning-based object detection techniques, and propose a resource-efficient COTS detector that performs detection inferences on the edge device to assist marine experts with COTS identification during the data collection phase. The preliminary results show that several strategies for improving computational efficiency (e.g., batch-wise processing, frame skipping, model input size) can be combined to run the proposed detection model on edge hardware with low resource consumption and low information loss.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "98177814",
+                    "name": "Y. Li"
+                },
+                {
+                    "authorId": "2136211636",
+                    "name": "Jiajun Liu"
+                },
+                {
+                    "authorId": "98424393",
+                    "name": "Brano Kusy"
+                },
+                {
+                    "authorId": "48879783",
+                    "name": "R. Marchant"
+                },
+                {
+                    "authorId": "2142455048",
+                    "name": "Brendan Do"
+                },
+                {
+                    "authorId": "39732616",
+                    "name": "T. Merz"
+                },
+                {
+                    "authorId": "2179887815",
+                    "name": "Joey Crosswell"
+                },
+                {
+                    "authorId": "2079572289",
+                    "name": "Andrew D. L. Steven"
+                },
+                {
+                    "authorId": "1403195877",
+                    "name": "Lachlan Tychsen-Smith"
+                },
+                {
+                    "authorId": "1404441879",
+                    "name": "David Ahmedt-Aristizabal"
+                },
+                {
+                    "authorId": "2584923",
+                    "name": "Jeremy Oorloff"
+                },
+                {
+                    "authorId": "145136889",
+                    "name": "Peyman Moghadam"
+                },
+                {
+                    "authorId": "121527446",
+                    "name": "R. Babcock"
+                },
+                {
+                    "authorId": "1412824086",
+                    "name": "Megha Malpani"
+                },
+                {
+                    "authorId": "31532800",
+                    "name": "Ard A. J. Oerlemans"
+                }
+            ]
+        }
+    ]
+}

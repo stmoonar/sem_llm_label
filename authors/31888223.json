@@ -1,0 +1,634 @@
+{
+    "authorId": "31888223",
+    "papers": [
+        {
+            "paperId": "7791e09dfca5e0a1f94f2e31a39f799d92c4328e",
+            "title": "Representative and Back-In-Time Sampling from Real-world Hypergraphs",
+            "abstract": "Graphs are widely used for representing pairwise interactions in complex systems. Since such real-world graphs are large and often evergrowing, sampling subgraphs is useful for various purposes, including simulation, visualization, stream processing, representation learning, and crawling. However, many complex systems consist of group interactions (e.g., collaborations of researchers and discussions on online Q&A platforms) and thus are represented more naturally and accurately by hypergraphs than by ordinary graphs. Motivated by the prevalence of large-scale hypergraphs, we study the problem of sampling from real-world hypergraphs, aiming at answering (Q1) how can we measure the goodness of sub-hypergraphs, and (Q2) how can we efficiently find a \u201cgood\u201d sub-hypergraph. Regarding Q1, we distinguish between two goals: (a) representative sampling, which aims at capturing the characteristics of the input hypergraph, and (b) back-in-time sampling, which aims at closely approximating a past snapshot of the input time-evolving hypergraph. To evaluate the similarity of the sampled sub-hypergraph to the target (i.e., the input hypergraph or its past snapshot), we consider 10 graph-level, hyperedge-level, and node-level statistics. Regarding Q2, we first conduct a thorough analysis of various intuitive approaches using 11 real-world hypergraphs. Then, based on this analysis, we propose MiDaS and MiDaS-B, designed for representative sampling and back-in-time sampling, respectively. Regarding representative sampling, we demonstrate through extensive experiments that MiDaS, which employs a sampling bias toward high-degree nodes in hyperedge selection, is (a) Representative: finding overall the most representative samples among 15 considered approaches, (b) Fast: several orders of magnitude faster than the strongest competitors, and (c) Automatic: automatically tuning the degree of sampling bias. Regarding back-in-time sampling, we demonstrate that MiDaS-B inherits the strengths of MiDaS despite an additional challenge\u2014the unavailability of the target (i.e., past snapshot). It effectively handles this challenge by focusing on replicating universal evolutionary patterns, rather than directly replicating the target.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047035591",
+                    "name": "Minyoung Choe"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "2261454328",
+                    "name": "Geon Lee"
+                },
+                {
+                    "authorId": "2292531478",
+                    "name": "Woonsung Baek"
+                },
+                {
+                    "authorId": "2292600102",
+                    "name": "U. Kang"
+                },
+                {
+                    "authorId": "2242112674",
+                    "name": "Kijung Shin"
+                }
+            ]
+        },
+        {
+            "paperId": "1114d604da30ac242fa30178cd08bcc4452073e6",
+            "title": "Towards Deep Attention in Graph Neural Networks: Problems and Remedies",
+            "abstract": "Graph neural networks (GNNs) learn the representation of graph-structured data, and their expressiveness can be further enhanced by inferring node relations for propagation. Attention-based GNNs infer neighbor importance to manipulate the weight of its propagation. Despite their popularity, the discussion on deep graph attention and its unique challenges has been limited. In this work, we investigate some problematic phenomena related to deep graph attention, including vulnerability to over-smoothed features and smooth cumulative attention. Through theoretical and empirical analyses, we show that various attention-based GNNs suffer from these problems. Motivated by our findings, we propose AEROGNN, a novel GNN architecture designed for deep graph attention. AERO-GNN provably mitigates the proposed problems of deep graph attention, which is further empirically demonstrated with (a) its adaptive and less smooth attention functions and (b) higher performance at deep layers (up to 64). On 9 out of 12 node classification benchmarks, AERO-GNN outperforms the baseline GNNs, highlighting the advantages of deep graph attention. Our code is available at https://github.com/syleeheal/AERO-GNN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2218932858",
+                    "name": "Soo Yong Lee"
+                },
+                {
+                    "authorId": "2065674134",
+                    "name": "Fanchen Bu"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                }
+            ]
+        },
+        {
+            "paperId": "357c9cbdcd164d86d3a559ef9bab750c996da13b",
+            "title": "Classification of Edge-dependent Labels of Nodes in Hypergraphs",
+            "abstract": "A hypergraph is a data structure composed of nodes and hyperedges, where each hyperedge is an any-sized subset of nodes. Due to the flexibility in hyperedge size, hypergraphs represent group interactions (e.g., co-authorship by more than two authors) more naturally and accurately than ordinary graphs. Interestingly, many real-world systems modeled as hypergraphs contain edge-dependent node labels, i.e., node labels that vary depending on hyperedges. For example, on co-authorship datasets, the same author (i.e., a node) can be the primary author in a paper (i.e., a hyperedge) but the corresponding author in another paper (i.e., another hyperedge). In this work, we introduce a classification of edge-dependent node labels as a new problem. This problem can be used as a benchmark task for hypergraph neural networks, which recently have attracted great attention, and also the usefulness of edge-dependent node labels has been verified in various applications. To tackle this problem, we propose WHATsNet, a novel hypergraph neural network that represents the same node differently depending on the hyperedges it participates in by reflecting its varying importance in the hyperedges. To this end, WHATsNet models the relations between nodes within each hyperedge, using their relative centrality as positional encodings. In our experiments, we demonstrate that WHATsNet significantly and consistently outperforms ten competitors on six real-world hypergraphs, and we also show successful applications of WHATsNet to (a) ranking aggregation, (b) node clustering, and (c) product return prediction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047035591",
+                    "name": "Minyoung Choe"
+                },
+                {
+                    "authorId": "2109652166",
+                    "name": "Sunwoo Kim"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                }
+            ]
+        },
+        {
+            "paperId": "6d18dcd4b562ea15f3270551b71596b2a1980b07",
+            "title": "Tutorials at The Web Conference 2023",
+            "abstract": "This paper summarizes the content of the 28 tutorials that have been given at The Web Conference 2023.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Physics"
+            ],
+            "authors": [
+                {
+                    "authorId": "1705291",
+                    "name": "Valeria Fionda"
+                },
+                {
+                    "authorId": "2215622430",
+                    "name": "Olaf Hartig"
+                },
+                {
+                    "authorId": "1805958417",
+                    "name": "Reyhaneh Abdolazimi"
+                },
+                {
+                    "authorId": "1403657578",
+                    "name": "S. Amer-Yahia"
+                },
+                {
+                    "authorId": "2215690996",
+                    "name": "Hongzhi Chen"
+                },
+                {
+                    "authorId": "2117027107",
+                    "name": "Xiao Chen"
+                },
+                {
+                    "authorId": "2052469774",
+                    "name": "P. Cui"
+                },
+                {
+                    "authorId": "145269114",
+                    "name": "Jeffrey Dalton"
+                },
+                {
+                    "authorId": "2215596266",
+                    "name": "Xin Luna Dong"
+                },
+                {
+                    "authorId": "2957808",
+                    "name": "Lisette Espin Noboa"
+                },
+                {
+                    "authorId": "41031455",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2132398392",
+                    "name": "Manuela Fritz"
+                },
+                {
+                    "authorId": "47594426",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2161309826",
+                    "name": "Jingtong Gao"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                },
+                {
+                    "authorId": "2215622544",
+                    "name": "Torsten Hahmann"
+                },
+                {
+                    "authorId": "145325584",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2046142",
+                    "name": "S. Han"
+                },
+                {
+                    "authorId": "1842532",
+                    "name": "Estevam Hruschka"
+                },
+                {
+                    "authorId": "2118850040",
+                    "name": "Liang Hu"
+                },
+                {
+                    "authorId": "2139299903",
+                    "name": "Jiaxin Huang"
+                },
+                {
+                    "authorId": "47247243",
+                    "name": "Utkarshani Jaimini"
+                },
+                {
+                    "authorId": "2299944027",
+                    "name": "Olivier Jeunen"
+                },
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "51118506",
+                    "name": "F. Karimi"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                },
+                {
+                    "authorId": "1769861",
+                    "name": "K. Kenthapadi"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                },
+                {
+                    "authorId": "3309003",
+                    "name": "Hady W. Lauw"
+                },
+                {
+                    "authorId": "145535348",
+                    "name": "Thai Le"
+                },
+                {
+                    "authorId": "1808423005",
+                    "name": "Trung-Hoang Le"
+                },
+                {
+                    "authorId": "2158951945",
+                    "name": "Dongwon Lee"
+                },
+                {
+                    "authorId": "2110855835",
+                    "name": "Geon Lee"
+                },
+                {
+                    "authorId": "19326298",
+                    "name": "Liat Levontin"
+                },
+                {
+                    "authorId": "2144231489",
+                    "name": "Cheng-Te Li"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2110471246",
+                    "name": "Ying Li"
+                },
+                {
+                    "authorId": "2030126978",
+                    "name": "Jay Chiehen Liao"
+                },
+                {
+                    "authorId": "2157067900",
+                    "name": "Qidong Liu"
+                },
+                {
+                    "authorId": "46189109",
+                    "name": "Usha Lokala"
+                },
+                {
+                    "authorId": "2085850",
+                    "name": "Ben London"
+                },
+                {
+                    "authorId": "32545338",
+                    "name": "Siqu Long"
+                },
+                {
+                    "authorId": "153612944",
+                    "name": "H. Mcginty"
+                },
+                {
+                    "authorId": "145391513",
+                    "name": "Yu Meng"
+                },
+                {
+                    "authorId": "29072828",
+                    "name": "Seungwhan Moon"
+                },
+                {
+                    "authorId": "1394609613",
+                    "name": "Usman Naseem"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "1403851743",
+                    "name": "Behrooz Omidvar-Tehrani"
+                },
+                {
+                    "authorId": "2069543964",
+                    "name": "Zijie Pan"
+                },
+                {
+                    "authorId": "48331451",
+                    "name": "Devesh Parekh"
+                },
+                {
+                    "authorId": "2188744953",
+                    "name": "Jian Pei"
+                },
+                {
+                    "authorId": "2101664",
+                    "name": "Tiago P. Peixoto"
+                },
+                {
+                    "authorId": "144615425",
+                    "name": "S. Pemberton"
+                },
+                {
+                    "authorId": "144179461",
+                    "name": "Josiah Poon"
+                },
+                {
+                    "authorId": "2065812052",
+                    "name": "Filip Radlinski"
+                },
+                {
+                    "authorId": "48890086",
+                    "name": "Federico Rossetto"
+                },
+                {
+                    "authorId": "2091913080",
+                    "name": "Kaushik Roy"
+                },
+                {
+                    "authorId": "2911888",
+                    "name": "Aghiles Salah"
+                },
+                {
+                    "authorId": "2128305",
+                    "name": "M. Sameki"
+                },
+                {
+                    "authorId": "2064342729",
+                    "name": "Amit P. Sheth"
+                },
+                {
+                    "authorId": "28908689",
+                    "name": "C. Shimizu"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                },
+                {
+                    "authorId": "2451800",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "1682824",
+                    "name": "Julia Stoyanovich"
+                },
+                {
+                    "authorId": "2064266862",
+                    "name": "Dacheng Tao"
+                },
+                {
+                    "authorId": "2528063",
+                    "name": "Johanne R. Trippas"
+                },
+                {
+                    "authorId": "39603708",
+                    "name": "Quoc-Tuan Truong"
+                },
+                {
+                    "authorId": "1896151979",
+                    "name": "Yu-Che Tsai"
+                },
+                {
+                    "authorId": "150035131",
+                    "name": "Adaku Uchendu"
+                },
+                {
+                    "authorId": "2215624802",
+                    "name": "Bram Van Den Akker"
+                },
+                {
+                    "authorId": "3265905",
+                    "name": "Linshan Wang"
+                },
+                {
+                    "authorId": "2144295736",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2116951322",
+                    "name": "Shoujin Wang"
+                },
+                {
+                    "authorId": "2153691630",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "1684687",
+                    "name": "Ingmar Weber"
+                },
+                {
+                    "authorId": "69047048",
+                    "name": "H. Weld"
+                },
+                {
+                    "authorId": "2116666963",
+                    "name": "Lingfei Wu"
+                },
+                {
+                    "authorId": "2181385841",
+                    "name": "D. Xu"
+                },
+                {
+                    "authorId": "2138609128",
+                    "name": "E. Xu"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2156653838",
+                    "name": "Bo Yang"
+                },
+                {
+                    "authorId": "2125559318",
+                    "name": "Keyue Yang"
+                },
+                {
+                    "authorId": "1388775854",
+                    "name": "E. Yom-Tov"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "144007938",
+                    "name": "Zhou Yu"
+                },
+                {
+                    "authorId": "2281410",
+                    "name": "R. Zafarani"
+                },
+                {
+                    "authorId": "2499986",
+                    "name": "Hamed Zamani"
+                },
+                {
+                    "authorId": "41154657",
+                    "name": "Meike Zehlike"
+                },
+                {
+                    "authorId": "2145906426",
+                    "name": "Qi Zhang"
+                },
+                {
+                    "authorId": "3358065",
+                    "name": "Xikun Zhang"
+                },
+                {
+                    "authorId": "1739818",
+                    "name": "Yongfeng Zhang"
+                },
+                {
+                    "authorId": "49891156",
+                    "name": "Yu Zhang"
+                },
+                {
+                    "authorId": "2148904413",
+                    "name": "Zhengqi Zhang"
+                },
+                {
+                    "authorId": "144010790",
+                    "name": "Liang Zhao"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "87319dfd745225736457906aa49f3fb79a347136",
+            "title": "End-to-End Augmentation Hyperparameter Tuning for Self-Supervised Anomaly Detection",
+            "abstract": "Self-supervised learning (SSL) has emerged as a promising paradigm that presents self-generated supervisory signals to real-world problems, bypassing the extensive manual labeling burden. SSL is especially attractive for unsupervised tasks such as anomaly detection, where labeled anomalies are often nonexistent and costly to obtain. While self-supervised anomaly detection (SSAD) has seen a recent surge of interest, the literature has failed to treat data augmentation as a hyperparameter. Meanwhile, recent works have reported that the choice of augmentation has significant impact on detection performance. In this paper, we introduce ST-SSAD (Self-Tuning Self-Supervised Anomaly Detection), the first systematic approach to SSAD in regards to rigorously tuning augmentation. To this end, our work presents two key contributions. The first is a new unsupervised validation loss that quantifies the alignment between the augmented training data and the (unlabeled) test data. In principle we adopt transduction, quantifying the extent to which augmentation mimics the true anomaly-generating mechanism, in contrast to augmenting data with arbitrary pseudo anomalies without regard to test data. Second, we present new differentiable augmentation functions, allowing data augmentation hyperparameter(s) to be tuned end-to-end via our proposed validation loss. Experiments on two testbeds with semantic class anomalies and subtle industrial defects show that systematically tuning augmentation offers significant performance gains over current practices.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "bee3c3277cdc181fa33d3d847878847606bd982b",
+            "title": "How Transitive Are Real-World Group Interactions? - Measurement and Reproduction",
+            "abstract": "Many real-world interactions (e.g., researcher collaborations and email communication) occur among multiple entities. These group interactions are naturally modeled as hypergraphs. In graphs, transitivity is helpful to understand the connections between node pairs sharing a neighbor, and it has extensive applications in various domains. Hypergraphs, an extension of graphs, are designed to represent group relations. However, to the best of our knowledge, there has been no examination regarding the transitivity of real-world group interactions. In this work, we investigate the transitivity of group interactions in real-world hypergraphs. We first suggest intuitive axioms as necessary characteristics of hypergraph transitivity measures. Then, we propose a principled hypergraph transitivity measure HyperTrans, which satisfies all the proposed axioms, with a fast computation algorithm Fast-HyperTrans. After that, we analyze the transitivity patterns in real-world hypergraphs distinguished from those in random hypergraphs. Lastly, we propose a scalable hypergraph generator THera. It reproduces the observed transitivity patterns by leveraging community structures, which are pervasive in real-world hypergraphs. Our code and datasets are available at https://github.com/kswoo97/hypertrans.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109652166",
+                    "name": "Sunwoo Kim"
+                },
+                {
+                    "authorId": "2065674134",
+                    "name": "Fanchen Bu"
+                },
+                {
+                    "authorId": "2047035591",
+                    "name": "Minyoung Choe"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "40553270",
+                    "name": "Kijung Shin"
+                }
+            ]
+        },
+        {
+            "paperId": "c432bcd2c34688e12ecaa0d65b277cb265e173e6",
+            "title": "Self-Supervision for Tackling Unsupervised Anomaly Detection: Pitfalls and Opportunities",
+            "abstract": "Self-supervised learning (SSL) is a growing torrent that has recently transformed machine learning and its many real world applications, by learning on massive amounts of unlabeled data via self-generated supervisory signals. Unsupervised anomaly detection (AD) has also capitalized on SSL, by self-generating pseudo-anomalies through various data augmentation functions or external data exposure. In this vision paper, we first underline the importance of the choice of SSL strategies on AD performance, by presenting evidences and studies from the AD literature. Equipped with the understanding that SSL incurs various hyperparameters (HPs) to carefully tune, we present recent developments on unsupervised model selection and augmentation tuning for SSL-based AD. We then highlight emerging challenges and future opportunities; on designing new pretext tasks and augmentation functions for different data modalities, creating novel model selection solutions for systematically tuning the SSL HPs, as well as on capitalizing on the potential of pretrained foundation models on AD through effective density estimation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                },
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                }
+            ]
+        },
+        {
+            "paperId": "f03cec99e75dc74ab653b2598da16dc606c15da5",
+            "title": "DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection",
+            "abstract": "Self-supervised learning (SSL) has proven effective in solving various problems by generating internal supervisory signals. Unsupervised anomaly detection, which faces the high cost of obtaining true labels, is an area that can greatly benefit from SSL. However, recent literature suggests that tuning the hyperparameters (HP) of data augmentation functions is crucial to the success of SSL-based anomaly detection (SSAD), yet a systematic method for doing so remains unknown. In this work, we propose DSV (Discordance and Separability Validation), an unsupervised validation loss to select high-performing detection models with effective augmentation HPs. DSV captures the alignment between an augmentation function and the anomaly-generating mechanism with surrogate losses, which approximate the discordance and separability of test data, respectively. As a result, the evaluation via DSV leads to selecting an effective SSAD model exhibiting better alignment, which results in high detection accuracy. We theoretically derive the degree of approximation conducted by the surrogate losses and empirically show that DSV outperforms a wide range of baselines on 21 real-world tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "145454815",
+                    "name": "Yue Zhao"
+                },
+                {
+                    "authorId": "21613538",
+                    "name": "Lingxiao Zhao"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                }
+            ]
+        },
+        {
+            "paperId": "019cd41cc5833517a3b7cecade69ffde086775ca",
+            "title": "Less is More: SlimG for Accurate, Robust, and Interpretable Graph Mining",
+            "abstract": "How can we solve semi-supervised node classification in various graphs possibly with noisy features and structures? Graph neural networks (GNNs) have succeeded in many graph mining tasks, but their generalizability to various graph scenarios is limited due to the difficulty of training, hyperparameter tuning, and the selection of a model itself. Einstein said that we should\"make everything as simple as possible, but not simpler.\"We rephrase it into the careful simplicity principle: a carefully-designed simple model can surpass sophisticated ones in real-world graphs. Based on the principle, we propose SlimG for semi-supervised node classification, which exhibits four desirable properties: It is (a) accurate, winning or tying on 10 out of 13 real-world datasets; (b) robust, being the only one that handles all scenarios of graph data (homophily, heterophily, random structure, noisy features, etc.); (c) fast and scalable, showing up to 18 times faster training in million-scale graphs; and (d) interpretable, thanks to the linearity and sparsity. We explain the success of SlimG through a systematic study of the designs of existing GNNs, sanity checks, and comprehensive ablation studies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "151121638",
+                    "name": "Meng-Chieh Lee"
+                },
+                {
+                    "authorId": "2627244",
+                    "name": "Shubhranshu Shekhar"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                }
+            ]
+        },
+        {
+            "paperId": "3c253a615beedb737c3a679432d777aa70099f69",
+            "title": "Accurate Node Feature Estimation with Structured Variational Graph Autoencoder",
+            "abstract": "Given a graph with partial observations of node features, how can we estimate the missing features accurately? Feature estimation is a crucial problem for analyzing real-world graphs whose features are commonly missing during the data collection process. Accurate estimation not only provides diverse information of nodes but also supports the inference of graph neural networks that require the full observation of node features. However, designing an effective approach for estimating high-dimensional features is challenging, since it requires an estimator to have large representation power, increasing the risk of overfitting. In this work, we propose SVGA (Structured Variational Graph Autoencoder), an accurate method for feature estimation. SVGA applies strong regularization to the distribution of latent variables by structured variational inference, which models the prior of variables as Gaussian Markov random field based on the graph structure. As a result, SVGA combines the advantages of probabilistic inference and graph neural networks, achieving state-of-the-art performance in real datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31888223",
+                    "name": "Jaemin Yoo"
+                },
+                {
+                    "authorId": "27539372",
+                    "name": "Hyunsik Jeon"
+                },
+                {
+                    "authorId": "2130912362",
+                    "name": "Jinhong Jung"
+                },
+                {
+                    "authorId": "1699590260",
+                    "name": "U. Kang"
+                }
+            ]
+        }
+    ]
+}

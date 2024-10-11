@@ -1,0 +1,79 @@
+{
+    "authorId": "2157481581",
+    "papers": [
+        {
+            "paperId": "c73146cf9f1284a5aaf3eec0d13215191489de13",
+            "title": "Equitable Top-k Results for Long Tail Data",
+            "abstract": "For datasets exhibiting long tail phenomenon, we identify a fairness concern in existing top-k algorithms, that return a \"fixed\" set of k results for a given query. This causes a handful of popular records (products, items, etc) getting overexposed and always be returned to the user query, whereas, there exists a long tail of niche records that may be equally desirable (have similar utility). To alleviate this, we propose \u03b8-Equiv-top-k-MMSP inside existing top-k algorithms - instead of returning a fixed top-k set, it generates all (or many) top-k sets that are equivalent in utility and creates a probability distribution over those sets. The end user will be returned one of these sets during the query time proportional to its associated probability, such that, after many draws from many end users, each record will have as equal exposure as possible (governed by uniform selection probability). \u03b8-Equiv-top-k-MMSP is formalized with two sub-problems. (a) \u03b8-Equiv-top-k-Sets to produce a set S of sets, each set has k records, where the sets are equivalent in utility with the top-k set; (b) MaxMinFair to produce a probability distribution over S, that is, PDF(S), such that the records in S have uniform selection probability. We formally study the hardness of \u03b8-Equiv-top-k-MMSP. We present multiple algorithmic results - (a) An exact solution for \u03b8-Equiv-top-k-Sets, and MaxMinFair. (b) We design highly scalable algorithms that solve \u03b8-Equiv-top-k-Sets through a random walk and is backed by probability theory, as well as a greedy solution designed for MaxMinFair. (c) We finally present an adaptive random walk based algorithm that solves \u03b8-Equiv-top-k-Sets and MaxMinFair at the same time. We empirically study how \u03b8-Equiv-top-k-MMSP can alleviate a equitable exposure concerns that group fairness suffers from. We run extensive experiments using 6 datasets and design intuitive baseline algorithms that corroborate our theoretical analysis.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2157481581",
+                    "name": "Md Mouinul Islam"
+                },
+                {
+                    "authorId": "2069338143",
+                    "name": "Mahsa Asadi"
+                },
+                {
+                    "authorId": "2034201368",
+                    "name": "Senjuti Basu Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "271c35255cc05057472e78a71e65775ba2299f74",
+            "title": "Satisfying Complex Top-k Fairness Constraints by Preference Substitutions",
+            "abstract": "\n Given\n m\n users (voters), where each user casts her preference for a single item (candidate) over\n n\n items (candidates) as a ballot, the preference aggregation problem returns\n k\n items (candidates) that have the\n k\n highest number of preferences (votes). Our work studies this problem considering\n complex fairness constraints\n that have to be satisfied via proportionate representations of different values of the group protected attribute(s) in the top-\n k\n results. Precisely, we study\n the margin finding problem under single ballot substitutions\n , where a single substitution amounts to removing a vote from candidate\n i\n and assigning it to candidate\n j\n and the goal is to\n minimize the number of single ballot substitutions needed to guarantee that the top-k results satisfy the fairness constraints.\n We study several variants of this problem considering how top-\n k\n fairness constraints are defined, (i) MFBinaryS and MFMultiS are defined when the fairness (proportionate representation) is defined over a single, binary or multivalued, protected attribute, respectively; (ii) MF-Multi2 is studied when top-\n k\n fairness is defined over two different protected attributes; (iii) MFMulti3+ investigates the margin finding problem, considering 3 or more protected attributes. We study these problems theoretically, and present a suite of algorithms with provable guarantees. We conduct rigorous large scale experiments involving multiple real world datasets by appropriately adapting multiple state-of-the-art solutions to demonstrate the effectiveness and scalability of our proposed methods.\n",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2157481581",
+                    "name": "Md Mouinul Islam"
+                },
+                {
+                    "authorId": "2114004511",
+                    "name": "Dong Wei"
+                },
+                {
+                    "authorId": "1771729",
+                    "name": "B. Schieber"
+                },
+                {
+                    "authorId": "1702973",
+                    "name": "Senjuti Basu Roy"
+                }
+            ]
+        },
+        {
+            "paperId": "d6f895219b74103fb24fdcac6061e9ef5115603f",
+            "title": "Rank Aggregation with Proportionate Fairness",
+            "abstract": "Given multiple individual rank orders over a set of candidates or items, where the candidates belong to multiple (non-binary) protected groups, we study the classical rank aggregation problem subject to proportionate fairness or p-fairness (RAPF in short), considering Kemeny distance. We first study the problem of producing the closest p-fair ranking to an individual ranked order IPF in short) considering Kendall-Tau distance, and present multiple solutions for IPF. We then present two computational frameworks(a randomized randpickperm and a deterministic algpickperm) to solve RAPF that leverages the solutions of IPF as a subroutine. We make several non-trivial algorithmic contributions: (i) we prove that when the group protected attribute is binary, IPF can be solved exactly using a greedy technique; (ii) we present two different solutions for IPF when the group protected attribute is multi-valued, algexact is optimal and algapprox admits a 2 approximation factor; (iii) we design a framework for RAPF solution with an approximation factor that is 2+ the approximation factor of the IPF solution. The resulting randpickperm and algpickperm solutions exhibit 3 and 4 approximation factors when designed using algexact and algapprox, respectively. We run extensive experiments using multiple real world and large scale synthetic datasets and compare our proposed solutions against multiple state-of-the-art related works to demonstrate the effectiveness and efficiency of our studied problem and proposed solution.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114004511",
+                    "name": "Dong Wei"
+                },
+                {
+                    "authorId": "2157481581",
+                    "name": "Md Mouinul Islam"
+                },
+                {
+                    "authorId": "1771729",
+                    "name": "B. Schieber"
+                },
+                {
+                    "authorId": "1702973",
+                    "name": "Senjuti Basu Roy"
+                }
+            ]
+        }
+    ]
+}

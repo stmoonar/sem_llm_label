@@ -1,0 +1,453 @@
+{
+    "authorId": "35349851",
+    "papers": [
+        {
+            "paperId": "63c3bf8738e5df74b1ad6e944661cef551fc7f4d",
+            "title": "DiskGNN: Bridging I/O Efficiency and Model Accuracy for Out-of-Core GNN Training",
+            "abstract": "Graph neural networks (GNNs) are machine learning models specialized for graph data and widely used in many applications. To train GNNs on large graphs that exceed CPU memory, several systems store data on disk and conduct out-of-core processing. However, these systems suffer from either read amplification when reading node features that are usually smaller than a disk page or degraded model accuracy by treating the graph as disconnected partitions. To close this gap, we build a system called DiskGNN, which achieves high I/O efficiency and thus fast training without hurting model accuracy. The key technique used by DiskGNN is offline sampling, which helps decouple graph sampling from model computation. In particular, by conducting graph sampling beforehand, DiskGNN acquires the node features that will be accessed by model computation, and such information is utilized to pack the target node features contiguously on disk to avoid read amplification. Besides, \\name{} also adopts designs including four-level feature store to fully utilize the memory hierarchy to cache node features and reduce disk access, batched packing to accelerate the feature packing process, and pipelined training to overlap disk access with other operations. We compare DiskGNN with Ginex and MariusGNN, which are state-of-the-art systems for out-of-core GNN training. The results show that DiskGNN can speed up the baselines by over 8x while matching their best model accuracy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2244250792",
+                    "name": "Renjie Liu"
+                },
+                {
+                    "authorId": "2300427893",
+                    "name": "Yichuan Wang"
+                },
+                {
+                    "authorId": "2244600594",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2244248914",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2260646761",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2300287189",
+                    "name": "Bo Tang"
+                },
+                {
+                    "authorId": "2300362925",
+                    "name": "Jinyang Li"
+                }
+            ]
+        },
+        {
+            "paperId": "cd4af2a6fdfc85b9fb514989a41551186cf303dc",
+            "title": "4DBInfer: A 4D Benchmarking Toolbox for Graph-Centric Predictive Modeling on Relational DBs",
+            "abstract": "Although RDBs store vast amounts of rich, informative data spread across interconnected tables, the progress of predictive machine learning models as applied to such tasks arguably falls well behind advances in other domains such as computer vision or natural language processing. This deficit stems, at least in part, from the lack of established/public RDB benchmarks as needed for training and evaluation purposes. As a result, related model development thus far often defaults to tabular approaches trained on ubiquitous single-table benchmarks, or on the relational side, graph-based alternatives such as GNNs applied to a completely different set of graph datasets devoid of tabular characteristics. To more precisely target RDBs lying at the nexus of these two complementary regimes, we explore a broad class of baseline models predicated on: (i) converting multi-table datasets into graphs using various strategies equipped with efficient subsampling, while preserving tabular characteristics; and (ii) trainable models with well-matched inductive biases that output predictions based on these input subgraphs. Then, to address the dearth of suitable public benchmarks and reduce siloed comparisons, we assemble a diverse collection of (i) large-scale RDB datasets and (ii) coincident predictive tasks. From a delivery standpoint, we operationalize the above four dimensions (4D) of exploration within a unified, scalable open-source toolbox called 4DBInfer. We conclude by presenting evaluations using 4DBInfer, the results of which highlight the importance of considering each such dimension in the design of RDB predictive models, as well as the limitations of more naive approaches such as simply joining adjacent tables. Our source code is released at https://github.com/awslabs/multi-table-benchmark .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2244248914",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2257302315",
+                    "name": "Quan Gan"
+                },
+                {
+                    "authorId": "2256992062",
+                    "name": "David Wipf"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2298888654",
+                    "name": "Ning Li"
+                },
+                {
+                    "authorId": "2299152040",
+                    "name": "Jianheng Tang"
+                },
+                {
+                    "authorId": "2295790287",
+                    "name": "Yanlin Zhang"
+                },
+                {
+                    "authorId": "2275613451",
+                    "name": "Zizhao Zhang"
+                },
+                {
+                    "authorId": "2298905319",
+                    "name": "Zunyao Mao"
+                },
+                {
+                    "authorId": "2298974245",
+                    "name": "Yakun Song"
+                },
+                {
+                    "authorId": "2298929357",
+                    "name": "Yanbo Wang"
+                },
+                {
+                    "authorId": "2298940011",
+                    "name": "Jiahang Li"
+                },
+                {
+                    "authorId": "2269699052",
+                    "name": "Han Zhang"
+                },
+                {
+                    "authorId": "2299189130",
+                    "name": "Guang Yang"
+                },
+                {
+                    "authorId": "2268022441",
+                    "name": "Xiao Qin"
+                },
+                {
+                    "authorId": "2223137915",
+                    "name": "Chuan Lei"
+                },
+                {
+                    "authorId": "2279927888",
+                    "name": "Mu-Nan Zhang"
+                },
+                {
+                    "authorId": "2257343831",
+                    "name": "Weinan Zhang"
+                },
+                {
+                    "authorId": "2263543517",
+                    "name": "Christos Faloutsos"
+                },
+                {
+                    "authorId": "2148906289",
+                    "name": "Zheng Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "3f57f297eb80171f9c2a900d087cfcac943c4c1e",
+            "title": "DGI: An Easy and Efficient Framework for GNN Model Evaluation",
+            "abstract": "While many systems have been developed to train graph neural networks (GNNs), efficient model evaluation, which computes node embedding according to a given model, remains to be addressed. For instance, using the widely adopted node-wise approach, model evaluation can account for over 90% of the time in the end-to-end training process due to neighbor explosion, which means that a node accesses its multi-hop neighbors. The layer-wise approach avoids neighbor explosion by conducting computation layer by layer in GNN models. However, layer-wise model evaluation takes considerable implementation efforts because users need to manually decompose the GNN model into layers, and different implementations are required for GNN models with different structures. In this paper, we present DGI -a framework for easy and efficient GNN model evaluation, which automatically translates the training code of a GNN model for layer-wise evaluation to minimize user effort. DGI is general for different GNN models and evaluation requests (e.g., computing embedding for all or some of the nodes), and supports out-of-core execution on large graphs that cannot fit in CPU memory. Under the hood, DGI traces the computation graph of GNN model, partitions the computation graph into layers that are suitable for layer-wise evaluation according to tailored rules, and executes each layer efficiently by reordering the computation tasks and managing device memory consumption. Experiment results show that DGI matches hand-written implementations of layer-wise evaluation in efficiency and consistently outperforms node-wise evaluation across different datasets and hardware settings, and the speedup can be over 1,000x.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113653096",
+                    "name": "Peiqi Yin"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "9695889",
+                    "name": "Jinjing Zhou"
+                },
+                {
+                    "authorId": "2167292330",
+                    "name": "Qiang Fu"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2084612700",
+                    "name": "Bo Tang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "5b671f29e7830283d983a7f18f745b12abd490f8",
+            "title": "DSP: Efficient GNN Training with Multiple GPUs",
+            "abstract": "Jointly utilizing multiple GPUs to train graph neural networks (GNNs) is crucial for handling large graphs and achieving high efficiency. However, we find that existing systems suffer from high communication costs and low GPU utilization due to improper data layout and training procedures. Thus, we propose a system dubbed Distributed Sampling and Pipelining (DSP) for multi-GPU GNN training. DSP adopts a tailored data layout to utilize the fast NVLink connections among the GPUs, which stores the graph topology and popular node features in GPU memory. For efficient graph sampling with multiple GPUs, we introduce a collective sampling primitive (CSP), which pushes the sampling tasks to data to reduce communication. We also design a producer-consumer-based pipeline, which allows tasks from different mini-batches to run congruently to improve GPU utilization. We compare DSP with state-of-the-art GNN training frameworks, and the results show that DSP consistently outperforms the baselines under different datasets, GNN models and GPU counts. The speedup of DSP can be up to 26x and is over 2x in most cases.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2165760706",
+                    "name": "Qihui Zhou"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "122579067",
+                    "name": "Da Zheng"
+                },
+                {
+                    "authorId": "2118943843",
+                    "name": "Xiang Song"
+                },
+                {
+                    "authorId": "2153619495",
+                    "name": "Chenguang Zheng"
+                },
+                {
+                    "authorId": "2116502347",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "50877490",
+                    "name": "G. Karypis"
+                }
+            ]
+        },
+        {
+            "paperId": "96a88170729021e553648a2b17c73602a3171d2f",
+            "title": "gSampler: General and Efficient GPU-based Graph Sampling for Graph Learning",
+            "abstract": "Graph sampling prepares training samples for graph learning and can dominate the training time. Due to the increasing algorithm diversity and complexity, existing sampling frameworks are insufficient in the generality of expression and the efficiency of execution. To close this gap, we conduct a comprehensive study on 15 popular graph sampling algorithms to motivate the design of gSampler, a general and efficient GPU-based graph sampling framework. gSampler models graph sampling using a general 4-step Extract-Compute-Select-Finalize (ECSF) programming model, proposes a set of matrix-centric APIs that allow to easily express complex graph sampling algorithms, and incorporates a data-flow intermediate representation (IR) that translates high-level API codes for efficient GPU execution. We demonstrate that implementing graph sampling algorithms with gSampler is easy and intuitive. We also conduct extensive experiments with 7 algorithms, 4 graph datasets, and 2 hardware configurations. The results show that gSampler introduces sampling speedups of 1.14--32.7\u00d7 and an average speedup of 6.54\u00d7, compared to state-of-the-art GPU-based graph sampling systems such as DGL, which translates into an overall time reduction of over 40% for graph learning. gSampler is open-source at https://tinyurl.com/29twthd4.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2134719313",
+                    "name": "Ping Gong"
+                },
+                {
+                    "authorId": "2244250792",
+                    "name": "Renjie Liu"
+                },
+                {
+                    "authorId": "2169798543",
+                    "name": "Zunyao Mao"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2244600594",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "2244595439",
+                    "name": "Cheng Li"
+                },
+                {
+                    "authorId": "2244248914",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2244279886",
+                    "name": "Zhuozhao Li"
+                }
+            ]
+        },
+        {
+            "paperId": "b3571e31437497d3fd05211f18f58bc03e6d7304",
+            "title": "MuseGNN: Interpretable and Convergent Graph Neural Network Layers at Scale",
+            "abstract": "Among the many variants of graph neural network (GNN) architectures capable of modeling data with cross-instance relations, an important subclass involves layers designed such that the forward pass iteratively reduces a graph-regularized energy function of interest. In this way, node embeddings produced at the output layer dually serve as both predictive features for solving downstream tasks (e.g., node classification) and energy function minimizers that inherit desirable inductive biases and interpretability. However, scaling GNN architectures constructed in this way remains challenging, in part because the convergence of the forward pass may involve models with considerable depth. To tackle this limitation, we propose a sampling-based energy function and scalable GNN layers that iteratively reduce it, guided by convergence guarantees in certain settings. We also instantiate a full GNN architecture based on these designs, and the model achieves competitive accuracy and scalability when applied to the largest publicly-available node classification benchmark exceeding 1TB in size.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2260646761",
+                    "name": "Haitian Jiang"
+                },
+                {
+                    "authorId": "2244250792",
+                    "name": "Renjie Liu"
+                },
+                {
+                    "authorId": "2244600594",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2244248914",
+                    "name": "Minjie Wang"
+                },
+                {
+                    "authorId": "2256992062",
+                    "name": "David Wipf"
+                }
+            ]
+        },
+        {
+            "paperId": "f5af46e32c516d1158519b7e78f794c16df32494",
+            "title": "FEC: Efficient Deep Recommendation Model Training with Flexible Embedding Communication",
+            "abstract": "Embedding-based deep recommendation models (EDRMs), which contain small dense models and large embedding tables, are widely used in industry. Embedding communication constitutes the main cost for the distributed training of EDRMs, and thus we propose two strategies to improve its efficiency, i.e.,embedding tiering andpre-fetching. In particular, embedding tiering uses AllReduce to communicate popular embeddings that are accessed frequently. This is counter-intuitive as embeddings belong to the sparse embedding tables, but reasonable because the access pattern of popular embeddings resembles dense models. Pre-fetching starts communication early for embeddings that receive no updates such that they are removed from the critical path of training. We implement embedding tiering and pre-fetching in a system called FEC and compare it with the state-of-the-art systems on real datasets. The results show that FEC consistently outperforms the existing methods on all datasets, and its speed can be up to 6.65x and 2.42x in terms of embedding communication time and training throughput compared with the best performing baseline.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1381894756",
+                    "name": "Kaihao Ma"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2143454301",
+                    "name": "Yuzhen Huang"
+                },
+                {
+                    "authorId": "47096554",
+                    "name": "Yidi Wu"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                }
+            ]
+        },
+        {
+            "paperId": "5df9e659ee931c4aed4ea5ce6ba514fbe0a51e3d",
+            "title": "Elastic Deep Learning in Multi-Tenant GPU Clusters",
+            "abstract": "We study how to support elasticity, that is, the ability to dynamically adjust the parallelism (i.e., the number of GPUs), for deep neural network (DNN) training in a GPU cluster. Elasticity can benefit multi-tenant GPU cluster management in many ways, for example, achieving various scheduling objectives (e.g., job throughput, job completion time, GPU efficiency) according to cluster load variations, utilizing transient idle resources, and supporting performance profiling, job migration, and straggler mitigation. We propose EDL, which enables elastic deep learning with a simple API and can be easily integrated with existing deep learning frameworks such as TensorFlow and PyTorch. EDL also incorporates techniques that are necessary to reduce the overhead of parallelism adjustments, such as stop-free scaling and dynamic data pipeline. We demonstrate with experiments that EDL can indeed bring significant benefits to the above-listed applications in GPU cluster management.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47096554",
+                    "name": "Yidi Wu"
+                },
+                {
+                    "authorId": "1381894756",
+                    "name": "Kaihao Ma"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "2118358237",
+                    "name": "Zhi Liu"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "2143454301",
+                    "name": "Yuzhen Huang"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2088878160",
+                    "name": "Han Yuan"
+                },
+                {
+                    "authorId": "2087106044",
+                    "name": "Fan Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "d4cdadb0355e7c8bad2a6040687ae4f9a9233937",
+            "title": "DGI: Easy and Efficient Inference for GNNs",
+            "abstract": "While many systems have been developed to train Graph Neural Networks (GNNs), efficient model inference and evaluation remain to be addressed. For instance, using the widely adopted node-wise approach, model evaluation can account for up to 94% of the time in the end-to-end training process due to neighbor explosion, which means that a node accesses its multi-hop neighbors. On the other hand, layer-wise inference avoids the neighbor explosion problem by conducting inference layer by layer such that the nodes only need their one-hop neighbors in each layer. However, implementing layer-wise inference requires substantial engineering efforts because users need to manually decompose a GNN model into layers for computation and split workload into batches to fit into device memory. In this paper, we develop Deep Graph Inference (DGI) -- a system for easy and efficient GNN model inference, which automatically translates the training code of a GNN model for layer-wise execution. DGI is general for various GNN models and different kinds of inference requests, and supports out-of-core execution on large graphs that cannot fit in CPU memory. Experimental results show that DGI consistently outperforms layer-wise inference across different datasets and hardware settings, and the speedup can be over 1,000x.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2113653096",
+                    "name": "Peiqi Yin"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "9695889",
+                    "name": "Jinjing Zhou"
+                },
+                {
+                    "authorId": "2089209772",
+                    "name": "Qiang Fu"
+                },
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2084612700",
+                    "name": "Bo Tang"
+                },
+                {
+                    "authorId": "2108593481",
+                    "name": "Minjie Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "0d6c6e8d01945b9664c8cd9ac704888149dec5e2",
+            "title": "DGCL: an efficient communication library for distributed GNN training",
+            "abstract": "Graph neural networks (GNNs) have gained increasing popularity in many areas such as e-commerce, social networks and bio-informatics. Distributed GNN training is essential for handling large graphs and reducing the execution time. However, for distributed GNN training, a peer-to-peer communication strategy suffers from high communication overheads. Also, different GPUs require different remote vertex embeddings, which leads to an irregular communication pattern and renders existing communication planning solutions unsuitable. We propose the distributed graph communication library (DGCL) for efficient GNN training on multiple GPUs. At the heart of DGCL is a communication planning algorithm tailored for GNN training, which jointly considers fully utilizing fast links, fusing communication, avoiding contention and balancing loads on different links. DGCL can be easily adopted to extend existing single-GPU GNN systems to distributed training. We conducted extensive experiments on different datasets and network configurations to compare DGCL with alternative communication schemes. In our experiments, DGCL reduces the communication time of the peer-to-peer communication by 77.5% on average and the training time for an epoch by up to 47%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "35349851",
+                    "name": "Zhenkun Cai"
+                },
+                {
+                    "authorId": "145837716",
+                    "name": "Xiao Yan"
+                },
+                {
+                    "authorId": "47096554",
+                    "name": "Yidi Wu"
+                },
+                {
+                    "authorId": "1381894756",
+                    "name": "Kaihao Ma"
+                },
+                {
+                    "authorId": "1717691",
+                    "name": "James Cheng"
+                },
+                {
+                    "authorId": "2087106044",
+                    "name": "Fan Yu"
+                }
+            ]
+        }
+    ]
+}

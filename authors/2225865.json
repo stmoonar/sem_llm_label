@@ -1,0 +1,329 @@
+{
+    "authorId": "2225865",
+    "papers": [
+        {
+            "paperId": "01f516f0b0798973454cbdfd997594fe4e93eec6",
+            "title": "From Minimum Change to Maximum Density: On Determining Near-Optimal S-Repair",
+            "abstract": "Dirty data are commonly observed in real applications, making cleaning them a key step in data preparation. The widely adopted idea of cleaning dirty data is based on detecting conflicts w.r.t. integrity constraints. Typical S-repair methods remove a minimal set of tuples (to avoid excessive removal and information loss) such that integrity constraints are no longer violated in remaining tuples. Unfortunately, multiple candidates of minimal removal sets may exist and are difficult to determine which one is indeed proper. We intuitively notice that a clean tuple often has more close neighbors (i.e., higher density) than dirty tuples. Hence, in this paper, we study the problem of finding the optimal S-repair under integrity constraints with the highest density, among various minimal removal sets. Our major contributions include (1) the np-hardness analysis on solving the problem, (2) a heuristic algorithm for efficiently tackling the problem and returning the optimal solution in certain cases, (3) an approximation performance bounded method with the same optimal solution guarantee. Experiments on real datasets collected from industry with real-world errors demonstrate the superiority of our work in cleaning dirty tuples.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "1721029",
+                    "name": "Xiaojie Yuan"
+                }
+            ]
+        },
+        {
+            "paperId": "5e29bf57f86909b3c0289b8f654b9d211d415d87",
+            "title": "Time Series Representation for Visualization in Apache IoTDB",
+            "abstract": "When analyzing time series, often interactively, the analysts frequently demand to visualize instantly large-scale data stored in databases. M4 visualization selects the first, last, bottom and top data points in each pixel column to ensure pixel-perfectness of the two-color line chart visualization. While M4 already shows its preciseness of encasing time series in different scales into a fixed size of pixels, how to efficiently support M4 representation in a time series native database is still absent. It is worth noting that, to enable fast writes, the commodity time series database systems, such as Apache IoTDB or InfluxDB, employ LSM-Tree based storage. That is, a time series is segmented and stored in a number of chunks, with possibly out-of-order arrivals, i.e., disordered on timestamps. To implement M4, a natural idea is to merge online the chunks as a whole series, with costly merge sort on timestamps, and then perform M4 representation as in relational databases. In this study, we propose a novel chunk merge free approach called M4-LSM to accelerate M4 representation and visualization. In particular, we utilize the metadata of chunks to prune and avoid the costly merging of any chunk. Moreover, intra-chunk indexing and pruning are enabled for efficiently accessing the representation points, referring to the special properties of time series. Remarkably, the time series database native operator M4-LSM has been implemented in Apache IoTDB, an open-source time series database, and deployed in companies across various industries. In the experiments over real-world datasets, the proposed M4-LSM operator demonstrates high efficiency without sacrificing preciseness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2054447002",
+                    "name": "Lei Rui"
+                },
+                {
+                    "authorId": "2267009129",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2180290711",
+                    "name": "Yuyuan Kang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2216048120",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "5edbfac40cbdcc55d336f1f04ede9863f7ee2256",
+            "title": "Win-Win: On Simultaneous Clustering and Imputing over Incomplete Data",
+            "abstract": "Although clustering methods have shown promising performance in various applications, they cannot effectively handle incomplete data. Existing studies often impute missing values first before clustering analysis and conduct these two processes separately. However, inaccurate imputation does not necessarily contribute positively to the subsequent clustering. Intuitively, accurate imputation and clustering can serve and benefit from each other, where clustering-based imputation methods typically utilize cluster signals to impute incomplete data and accurate fillings are expected to bring more valuable data for clustering. Therefore, in this manuscript, rather than considering two tasks independently or conducting them respectively, we study simultaneous clustering and imputing over incomplete data. The immediate benefit is that such a strategy improves both clustering and imputation performance simultaneously, to get a win-win result. Our major technical highlights include (1) the problem formalization and NP-hardness analysis on computing simultaneous clustering and imputing results, (2) exact solutions by transforming the problem as the integer linear programming (ILP) formulation, and (3) efficient approximation algorithms based on the linear programming (LP) relaxation and local neighbors (LN) solution, with approximation guarantees. Experiments on various real-world datasets demonstrate the superiority of our work in clustering and imputing incomplete data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2143830649",
+                    "name": "Yu Sun"
+                },
+                {
+                    "authorId": "2304744331",
+                    "name": "Jingyu Zhu"
+                },
+                {
+                    "authorId": "2108894387",
+                    "name": "Xiao Xu"
+                },
+                {
+                    "authorId": "2119022892",
+                    "name": "Xian Xu"
+                },
+                {
+                    "authorId": "1423667463",
+                    "name": "Yuyao Sun"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2318819809",
+                    "name": "Xiang Li"
+                },
+                {
+                    "authorId": "2304295699",
+                    "name": "Xiaojie Yuan"
+                }
+            ]
+        },
+        {
+            "paperId": "642874ffed1eeaf53d9a13f1a285b142a332b7f8",
+            "title": "REGER: Reordering Time Series Data for Regression Encoding",
+            "abstract": "Regression models are employed in lossless compression of time series data, by storing the residual of each point, known as regression encoding. Owing to value fluctuation, the regression residuals could be large and thus occupy huge space. It is worth noting that compared to the fluctuating values, time intervals are often regular and easy to compress, especially in the IoT scenarios where sensor data are collected in a preset frequency. In this sense, there is a trade-off between storing the regular timestamps and fluctuating values. Intuitively, rather than in time order, we may exchange the data points in the series such that the nearby ones have both smoother timestamps and values, leading to lower residuals. In this paper, we propose to reorder the time series data for better regression encoding. Rather than recomputing from scratch, efficient updates of residuals after moving some points are devised. The experimental comparison over various real-world datasets, either public or collected by our industrial partners, illustrates the superiority of the proposal in compression ratio. The method, REGression Encoding with Reordering (REGER), has now become an encoding method in an open-source time series database, Apache IoTDB.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284570922",
+                    "name": "Jinzhao Xiao"
+                },
+                {
+                    "authorId": "2276748600",
+                    "name": "Wendi He"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "151257628",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2144499800",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "64542d120d35f3fa2dbc6e65b66eec6a01a035d3",
+            "title": "Apache TsFile: An IoT-native Time Series File Format",
+            "abstract": "The proliferation of the Internet of Things (IoT) has led to an exponential increase in time series data, distributed and applied in various contexts, demanding a dedicated storage solution. Based on our observations and analysis of IoT production systems, we have characterized 3 requirements for time series data: (1) a close association with devices and sensors, (2) continually synchronizing between cloud-edge, and (3) requiring the ability for high ingestion and low latency access on big volume data. Despite the growing trend, current time series database systems lack a standardized file format, and existing open file formats do not adequately leverage the unique characteristics of IoT time series data. In this paper, we introduce Apache TsFile, a specialized file format tailored for IoT time series data. TsFile organizes data by devices, creating indexes based on device-related information. Our experiments demonstrate the efficiency of TsFile in achieving high data ingestion rates, minimizing latency, and optimizing data compactness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2321927076",
+                    "name": "Xin Zhao"
+                },
+                {
+                    "authorId": "17350868",
+                    "name": "Jialin Qiao"
+                },
+                {
+                    "authorId": "151257628",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2144499800",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "757ebdafffefb0ea9b4934e57c6373473aee5030",
+            "title": "Distance-based Outlier Query Optimization in Apache IoTDB",
+            "abstract": "While outlier detection has been widely studied over streaming data, the query of outliers in time series databases was largely overlooked. Apache IoTDB, an open-source time series database, employs LSM-tree based storage to support intensive writing workloads, yet this storage structure unfortunately encumbers the outlier query performing. In the system, data points of a time series may be stored in multiple files with overlapping time ranges, owing to the far delayed data arrivals, which are simply discarded in streaming outlier detection. Given the overlapping time ranges, it is not able to detect outliers in each file and merge them as the results. In this paper, we focus on optimizing the efficiency of distance-based outlier query in Apache IoTDB, with the consideration of overlapping files for delayed data. We propose to utilize bucket statistics of the values stored in files. Upper and lower bounds on the neighbor counts of data points are derived in buckets and overlapping files for efficient pruning. Extensive experiments demonstrate the efficiency of our proposal in the LSM-tree based time series database, Apache IoTDB, compared to the existing outlier detection methods designed for data streams.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "7831577",
+                    "name": "Yunxiang Su"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "151257628",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2144499800",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "7cb8d6adc06d2d5f051f0c7c644bf08e77e6ec99",
+            "title": "On Reducing Space Amplification with Multi-Column Compaction in Apache IoTDB",
+            "abstract": "Log-structured merge trees (LSM-trees) are commonly employed as the storage engines for write-intensive workloads in modern time series databases including Apache IoTDB. Following append-only principle, LSM-trees can handle intensive writes and updates, but consequently suffer high space amplification (SA). To reduce SA in LSM-tree, compaction is triggered periodically to reorganize a large number of immutable files on disk to eliminate redundancy. This issue is further complicated in the Internet of Things (IoT) scenarios, where frequent out-of-order data insertions and data updates introduce duplicated keys, obsolete values and overlapping bitmaps in multi-column data, thereby exacerbating SA concerns.\n To mitigate SA in such contexts, this paper presents a Multi-Column Compaction (MCC) strategy in Apache IoTDB, an open-source time series database utilizing LSM-tree architecture and supporting multi-column storage. We take into consideration both the separate insertions (out-of-order data) and updates of multi-column data, and analyze the hardness of selecting proper files with the maximum space reduction in compaction. We then propose a heuristic method designed to improve the file selection, thus reducing SA. To enhance the efficiency of this approach, we further devise File Prefetcher and Compaction Cache. The proposed MCC has been implemented in Apache IoTDB. Experimental results demonstrate that our proposed MCC achieves better performance in reducing space amplification.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1392453108",
+                    "name": "Chenguang Fang"
+                },
+                {
+                    "authorId": "2318933431",
+                    "name": "Zijie Chen"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "151257628",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2144499800",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "8661ab64a846791aa4a1e6fe6d8d78af4e43f2cb",
+            "title": "Determining Exact Quantiles with Randomized Summaries",
+            "abstract": "Quantiles are fundamental statistics in various data science tasks, but costly to compute, e.g., by loading the entire data in memory for ranking. With limited memory space, prevalent in end devices or databases with heavy loads, it needs to scan the data in multiple passes. The idea is to gradually shrink the range of the queried quantile till it is small enough to fit in memory for ranking the result. Existing methods use deterministic sketches to determine the exact range of quantile, known as deterministic filter, which could be inefficient in range shrinking. In this study, we propose to shrink the ranges more aggressively, using randomized summaries such as KLL sketch. That is, with a high probability the quantile lies in a smaller range, namely probabilistic filter, determined by the randomized sketch. Specifically, we estimate the expected passes for determining the exact quantiles with probabilistic filters, and select a proper probability that can minimize the expected passes. Analyses show that our exact quantile determination method can terminate in P passes with 1-\u03b4 confidence, storing O(N 1/P logP-1/2P (1/\u03b4)) items, close to the lower bound \u00d8mega(N1/P) for a fixed \u03b4. The approach has been deployed as a function in an LSM-tree based time-series database Apache IoTDB. Remarkably, the randomized sketches can be pre-computed for the immutable SSTables in LSM-tree. Moreover, multiple quantile queries could share the data passes for probabilistic filters in range estimation. Extensive experiments on real and synthetic datasets demonstrate the superiority of our proposal compared to the existing methods with deterministic filters. On average, our method takes 0.48 fewer passes and 18% of the time compared with the state-of-the-art deterministic sketch (GK sketch).",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2294016191",
+                    "name": "Ziling Chen"
+                },
+                {
+                    "authorId": "2218990334",
+                    "name": "Haoquan Guan"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2267009129",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2216048120",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "9d3c5865d5a9dd3b5828ed2d85bdaca83d8d1bbb",
+            "title": "On Tuning Raft for IoT Workload in Apache IoTDB",
+            "abstract": "Raft has been widely adopted as the consensus protocol in various distributed systems, owing to its straight-forward interpretation and implementation. However, directly applying Raft may not fully meet the extremely high throughput requirement in the Internet of Things (IoT) scenarios. The case study on real IoT applications reveals unique features, such as high concurrency, fluctuating traffic, fixed-size requests, and compressible data. It explains the bottlenecks of the Raft leader in dispatching, persistence, and memory management, for IoT applications. To this end, we propose to explore the opportunities of tuning Raft for the particular IoT workload, including alternative data structures, various compression algorithms, memory recycling strategies, etc. This paper presents a systematic evaluation of Raft by tuning the aspects above, in an open-source time series database Apache IoTDB. The extensive experiments demonstrate improved system parallelism, reduced information redundancy, and increased resource utilization. The throughput improvement ranges from 10% by replacing the dispatching data structure to nearly 200% by pre-serialization. The overall throughput can reach 4x compared with the original Raft implementation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2114747361",
+                    "name": "Tian Jiang"
+                },
+                {
+                    "authorId": "151257628",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2239426162",
+                    "name": "Chen Wang"
+                },
+                {
+                    "authorId": "2144499800",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "bee2afaf199fc843aa85f20ea0fbbec9442d6f9b",
+            "title": "Multimodal Data Encoding and Compression in Apache IoTDB",
+            "abstract": "Time-series data are widely used in industrial manufacturing, meteorology, ships, electric power, vehicles, \ufb01nance, and other \ufb01elds, which promote the booming development of time-series database management systems. Faced with larger data scales and more diverse data modalities, e\ufb03ciently storing and managing the data is very critical, and data encoding and compression become more and more important and are worth studying. Existing data encoding methods and systems fail to consider the characteristics of data in di\ufb00erent modalities thoroughly, and some methods of time-series data analysis have not been applied to the problem of data encoding. We comprehensively introduce the multimodal data encoding methods and their system implementation in the Apache IoTDB time-series database system, especially for the industrial Internet of Things application scenarios. Our encoding method comprehensively considers data in multiple models including timestamp data, numerical data, Boolean data, frequency domain data, and text data, and fully explores and utilizes the characteristics of the corresponding modal of data, especially the characteristics of timestamp intervals approximation in timestamp modality, to carry out targeted data encoding design. At the same time, the data quality issue that may occur in practical applications has been taken into consideration in the encoding algorithm. Experimental evaluation and analysis at the encoding algorithm level and the system level over multiple datasets validate the e\ufb00ectiveness of our encoding method and its system implementation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2276748600",
+                    "name": "Wendi He"
+                },
+                {
+                    "authorId": "2283948324",
+                    "name": "Tianrui Xia"
+                },
+                {
+                    "authorId": "2225865",
+                    "name": "Shaoxu Song"
+                },
+                {
+                    "authorId": "2267009129",
+                    "name": "Xiangdong Huang"
+                },
+                {
+                    "authorId": "2216048120",
+                    "name": "Jianmin Wang"
+                }
+            ]
+        }
+    ]
+}

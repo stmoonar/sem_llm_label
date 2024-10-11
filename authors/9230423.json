@@ -1,0 +1,331 @@
+{
+    "authorId": "9230423",
+    "papers": [
+        {
+            "paperId": "437cfee2a7f7beadf09ad712f71b3265740e44a0",
+            "title": "Towards Realistic Zero-Shot Classification via Self Structural Semantic Alignment",
+            "abstract": "Large-scale pre-trained Vision Language Models (VLMs) have proven effective for zero-shot classification. Despite the success, most traditional VLMs-based methods are restricted by the assumption of partial source supervision or ideal target vocabularies, which rarely satisfy the open-world scenario. In this paper, we aim at a more challenging setting, Realistic Zero-Shot Classification, which assumes no annotation but instead a broad vocabulary. To address the new problem, we propose the Self Structural Semantic Alignment (S3A) framework, which extracts the structural semantic information from unlabeled data while simultaneously self-learning. Our S3A framework adopts a unique Cluster-Vote-Prompt-Realign (CVPR) algorithm, which iteratively groups unlabeled data to derive structural semantics for pseudo-supervision. Our CVPR algorithm includes iterative clustering on images, voting within each cluster to identify initial class candidates from the vocabulary, generating discriminative prompts with large language models to discern confusing candidates, and realigning images and the vocabulary as structural semantic alignment. Finally, we propose to self-train the CLIP image encoder with both individual and structural semantic alignment through a teacher-student learning strategy. Our comprehensive experiments across various generic and fine-grained benchmarks demonstrate that the S3A method substantially improves over existing VLMs-based approaches, achieving a more than 15% accuracy improvement over CLIP on average. Our codes, models, and prompts are publicly released at https://github.com/sheng-eatamath/S3A.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161256018",
+                    "name": "Shengxiang Zhang"
+                },
+                {
+                    "authorId": "40894826",
+                    "name": "Muzammal Naseer"
+                },
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "145314568",
+                    "name": "Zhiqiang Shen"
+                },
+                {
+                    "authorId": "2179960157",
+                    "name": "Salman A. Khan"
+                },
+                {
+                    "authorId": "2175349484",
+                    "name": "Kun Zhang"
+                },
+                {
+                    "authorId": "2358803",
+                    "name": "F. Khan"
+                }
+            ]
+        },
+        {
+            "paperId": "620d54c32923db997d9312b1d631393a740d2842",
+            "title": "GAIN: On the Generalization of Instructional Action Understanding",
+            "abstract": "Despite the great success achieved in instructional action understanding by deep learning and mountainous data, deploying trained models to the unseen environment still remains a great challenge, since it requires strong generalizability of models from in-distribution training data to out-of-distribution (OOD) data. In this paper, we introduce a benchmark, named GAIN, to analyze the GeneralizAbility of INstructional action understanding models. In GAIN, we reassemble steps of existing instructional video training datasets to construct the OOD tasks and then collect the corresponding videos. We evaluate the generalizability of models trained on in-distribution datasets with the performance on OOD videos and observe a significant performance drop. We further propose a simple yet effective approach, which cuts off the excessive contextual dependency of action steps by performing causal inference, to provide a potential direction for enhancing the OOD generalizability. In the experiments, we show that this simple approach can improve several baselines on both instructional action segmentation and detection tasks. We expect the introduction of the GAIN dataset will promote future in-depth research on the generalization of instructional video understanding. The project page is https://jun-long-li.github.io/GAIN.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "35299091",
+                    "name": "Yansong Tang"
+                },
+                {
+                    "authorId": "2150472556",
+                    "name": "Jinan Bao"
+                },
+                {
+                    "authorId": "2175349484",
+                    "name": "Kun Zhang"
+                },
+                {
+                    "authorId": "48128428",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "693a942fa34028de582d18642d73d57c70842303",
+            "title": "Adversarial Alignment for Source Free Object Detection",
+            "abstract": "Source-free object detection (SFOD) aims to transfer a detector pre-trained on a label-rich source domain to an unlabeled target domain without seeing source data. While most existing SFOD methods generate pseudo labels via a source-pretrained model to guide training, these pseudo labels usually contain high noises due to heavy domain discrepancy. In order to obtain better pseudo supervisions, we divide the target domain into source-similar and source-dissimilar parts and align them in the feature space by adversarial learning.Specifically, we design a detection variance-based criterion to divide the target domain. This criterion is motivated by a finding that larger detection variances denote higher recall and larger similarity to the source domain. Then we incorporate an adversarial module into a mean teacher framework to drive the feature spaces of these two subsets indistinguishable. Extensive experiments on multiple cross-domain object detection datasets demonstrate that our proposed method consistently outperforms the compared SFOD methods. Our implementation is available at https://github.com/ChuQiaosong.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047192315",
+                    "name": "Qi Chu"
+                },
+                {
+                    "authorId": "2117951494",
+                    "name": "Shuyan Li"
+                },
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "2158262186",
+                    "name": "Kai Li"
+                },
+                {
+                    "authorId": "2200104589",
+                    "name": "Xiu Li"
+                }
+            ]
+        },
+        {
+            "paperId": "9f0630ff9d256ab89248f87cf2bdb7cee5740d4c",
+            "title": "Tem-adapter: Adapting Image-Text Pretraining for Video Question Answer",
+            "abstract": "Video-language pre-trained models have shown remarkable success in guiding video question-answering (VideoQA) tasks. However, due to the length of video sequences, training large-scale video-based models incurs considerably higher costs than training image-based ones. This motivates us to leverage the knowledge from image-based pretraining, despite the obvious gaps between image and video domains. To bridge these gaps, in this paper, we propose Tem-adapter, which enables the learning of temporal dynamics and complex semantics by a visual Temporal Aligner and a textual Semantic Aligner. Unlike conventional pretrained knowledge adaptation methods that only concentrate on the downstream task objective, the Temporal Aligner introduces an extra language-guided autoregressive task aimed at facilitating the learning of temporal dependencies, with the objective of predicting future states based on historical clues and language guidance that describes event progression. Besides, to reduce the semantic gap and adapt the textual representation for better event description, we introduce a Semantic Aligner that first designs a template to fuse question and answer pairs as event descriptions and then learns a Transformer decoder with the whole video sequence as guidance for refinement. We evaluate Tem-adapter and different pre-train transferring methods on two VideoQA benchmarks, and the significant performance improvement demonstrates the effectiveness of our method. 1",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "2218494165",
+                    "name": "Xiao Liu"
+                },
+                {
+                    "authorId": "2749191",
+                    "name": "Guangrun Wang"
+                },
+                {
+                    "authorId": "2175349484",
+                    "name": "Kun Zhang"
+                },
+                {
+                    "authorId": "2231696227",
+                    "name": "Philip H.S.Torr"
+                },
+                {
+                    "authorId": "2144524205",
+                    "name": "Xiaoping Zhang"
+                },
+                {
+                    "authorId": "35299091",
+                    "name": "Yansong Tang"
+                }
+            ]
+        },
+        {
+            "paperId": "f27b7909123d881da7a9cacbbc32992449259874",
+            "title": "Language-Free Compositional Action Generation via Decoupling Refinement",
+            "abstract": "Composing simple actions into complex actions is crucial yet challenging. Existing methods largely rely on language annotations to discern composable latent semantics, which is costly and labor-intensive. In this study, we introduce a novel framework to generate compositional actions without language auxiliaries. Our approach consists of three components: Action Coupling, Conditional Action Generation, and Decoupling Refinement. Action Coupling integrates two sub-actions to generate pseudo-training examples. Then, a conditional generative model, CVAE is employed to facilitate the diverse generation. Decoupling Refinement leverages a self-supervised pre-trained model MAE to ensure semantic consistency between sub-actions and compositional actions. Due to the lack of existing datasets containing both sub-actions and compositional actions, we create two new datasets, named HumanAct-C and UESTC-C. Both qualitative and quantitative assessments are conducted to show our efficacy. 1",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2218494165",
+                    "name": "Xiao Liu"
+                },
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "35299091",
+                    "name": "Yansong Tang"
+                },
+                {
+                    "authorId": "2749191",
+                    "name": "Guangrun Wang"
+                },
+                {
+                    "authorId": "153317808",
+                    "name": "S. Lim"
+                }
+            ]
+        },
+        {
+            "paperId": "0d5103378a9f4f6e08bfcd364da207f93b31b8b7",
+            "title": "Prompt Learning with Optimal Transport for Vision-Language Models",
+            "abstract": "With the increasing attention to large vision-language models such as CLIP, there has been a significant amount of effort dedicated to building efficient prompts. Unlike conventional methods of only learning one single prompt, we propose to learn multiple comprehensive prompts to describe diverse characteristics of categories such as intrinsic attributes or extrinsic contexts. However, directly matching each prompt to the same visual feature is problematic, as it pushes the prompts to converge to one point. To solve this problem, we propose to apply optimal transport to match the vision and text modalities. Specifically, we first model images and the categories with visual and textual feature sets. Then, we apply a two-stage optimization strategy to learn the prompts. In the inner loop, we optimize the optimal transport distance to align visual features and prompts by the Sinkhorn algorithm, while in the outer loop, we learn the prompts by this distance from the supervised data. Extensive experiments are conducted on the few-shot recognition task and the improvement demonstrates the superiority of our method. The code is available at https://github.com/CHENGY12/PLOT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "2087699735",
+                    "name": "Weiran Yao"
+                },
+                {
+                    "authorId": "19214393",
+                    "name": "Xiangchen Song"
+                },
+                {
+                    "authorId": "2144455457",
+                    "name": "Xinyue Li"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2175349484",
+                    "name": "Kun Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "3b7035507c86244fb928b497cfe74de96f54b71d",
+            "title": "Probabilistic Temporal Modeling for Unintentional Action Localization",
+            "abstract": "Humans have the inherent advantage of understanding action intention, while it is an enormous challenge to train the machine to localize unintentional action in videos due to the lack of reliable annotations for stable training. The annotations of unintentional action are unreliable since different annotators are affected by their subjective appraisals and intrinsic ambiguity, which brings heavy difficulties for the training. To address this issue, we propose a probabilistic framework for unintentional action localization by modeling the uncertainty of annotations. Our framework consists of two main components, including Temporal Label Aggregation (TLA) and Dense Probabilistic Localization (DPL). We first formulate each annotated failure moment as a temporal label distribution. Then we propose a TLA component to aggregate temporal label distributions of different failure moments in an online manner and generate dense probabilistic supervision. Based on TLA, We further develop a DPL component to jointly train three heads (i.e., probabilistic dense classification, probabilistic temporal detection, and probabilistic regression) with different supervision granularities and make them highly collaborative. We evaluate our approach on the largest unintentional action dataset OOPS and demonstrate that our approach can achieve significant improvement over the baseline and state-of-the-art methods.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "3431233",
+                    "name": "Jinglin Xu"
+                },
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "2146482831",
+                    "name": "Nuoxing Zhou"
+                },
+                {
+                    "authorId": "3333315",
+                    "name": "Weishi Zheng"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "4e421472493434f5563afde3d4734671ba4fa854",
+            "title": "Temporally Disentangled Representation Learning",
+            "abstract": "Recently in the field of unsupervised representation learning, strong identifiability results for disentanglement of causally-related latent variables have been established by exploiting certain side information, such as class labels, in addition to independence. However, most existing work is constrained by functional form assumptions such as independent sources or further with linear transitions, and distribution assumptions such as stationary, exponential family distribution. It is unknown whether the underlying latent variables and their causal relations are identifiable if they have arbitrary, nonparametric causal influences in between. In this work, we establish the identifiability theories of nonparametric latent causal processes from their nonlinear mixtures under fixed temporal causal influences and analyze how distribution changes can further benefit the disentanglement. We propose \\textbf{\\texttt{TDRL}}, a principled framework to recover time-delayed latent causal variables and identify their relations from measured sequential data under stationary environments and under different distribution shifts. Specifically, the framework can factorize unknown distribution shifts into transition distribution changes under fixed and time-varying latent causal relations, and under observation changes in observation. Through experiments, we show that time-delayed latent causal influences are reliably identified and that our approach considerably outperforms existing baselines that do not correctly exploit this modular representation of changes. Our code is available at: \\url{https://github.com/weirayao/tdrl}.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2087699735",
+                    "name": "Weiran Yao"
+                },
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "2175349484",
+                    "name": "Kun Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "d591a4510cd5b44a0e3d362fd255f706867740fc",
+            "title": "PromptCAL: Contrastive Affinity Learning via Auxiliary Prompts for Generalized Novel Category Discovery",
+            "abstract": "Although existing semi-supervised learning models achieve remarkable success in learning with unannotated in-distribution data, they mostly fail to learn on unlabeled data sampled from novel semantic classes due to their closed-set assumption. In this work, we target a pragmatic but under-explored Generalized Novel Category Discovery (GNCD) setting. The GNCD setting aims to categorize unlabeled training data coming from known and novel classes by leveraging the information of partially labeled known classes. We propose a two-stage Contrastive Affinity Learning method with auxiliary visual Prompts, dubbed PromptCAL, to address this challenging problem. Our approach discovers reliable pairwise sample affinities to learn better semantic clustering of both known and novel classes for the class token and visual prompts. First, we propose a discriminative prompt regularization loss to reinforce semantic discriminativeness of prompt-adapted pre-trained vision transformer for refined affinity relationships. Besides, we propose contrastive affinity learning to calibrate semantic representations based on our iterative semi-supervised affinity graph generation method for semantically-enhanced supervision. Extensive experimental evaluation demonstrates that our PromptCAL method is more effective in discovering novel classes even with limited annotations and surpasses the current state-of-the-art on generic and fine-grained benchmarks (e.g., with nearly 11% gain on CUB-200, and 9% on ImageNet-100) on overall accuracy. Our code is available at https://github.com/sheng-eatamath/PromptCAL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2161256018",
+                    "name": "Shengxiang Zhang"
+                },
+                {
+                    "authorId": "2179960157",
+                    "name": "Salman A. Khan"
+                },
+                {
+                    "authorId": "145314568",
+                    "name": "Zhiqiang Shen"
+                },
+                {
+                    "authorId": "40894826",
+                    "name": "Muzammal Naseer"
+                },
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "2358803",
+                    "name": "F. Khan"
+                }
+            ]
+        },
+        {
+            "paperId": "de57bd18329276ca915e1177be8103de3e51fde8",
+            "title": "FineDiving: A Fine-grained Dataset for Procedure-aware Action Quality Assessment",
+            "abstract": "Most existing action quality assessment methods rely on the deep features of an entire video to predict the score, which is less reliable due to the non-transparent inference process and poor interpretability. We argue that understanding both high-level semantics and internal temporal structures of actions in competitive sports videos is the key to making predictions accurate and interpretable. Towards this goal, we construct a new fine-grained dataset, called FineDiving, developed on diverse diving events with detailed annotations on action procedures. We also propose a procedure-aware approach for action quality assessment, learned by a new Temporal Segmentation Attention module. Specifically, we propose to parse pairwise query and exemplar action instances into consecutive steps with diverse semantic and temporal correspondences. The procedure-aware cross-attention is proposed to learn embeddings between query and exemplar steps to discover their semantic, spatial, and temporal correspondences, and further serve for fine-grained contrastive regression to derive a reliable scoring mechanism. Extensive experiments demonstrate that our approach achieves substantial improvements over the state-of-the-art methods with better interpretability. The dataset and code are available at https://github.com/xujinglin/FineDiving.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3431233",
+                    "name": "Jinglin Xu"
+                },
+                {
+                    "authorId": "39358728",
+                    "name": "Yongming Rao"
+                },
+                {
+                    "authorId": "2116330410",
+                    "name": "Xumin Yu"
+                },
+                {
+                    "authorId": "9230423",
+                    "name": "Guangyi Chen"
+                },
+                {
+                    "authorId": "48128428",
+                    "name": "Jie Zhou"
+                },
+                {
+                    "authorId": "1697700",
+                    "name": "Jiwen Lu"
+                }
+            ]
+        }
+    ]
+}

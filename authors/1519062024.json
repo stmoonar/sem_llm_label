@@ -1,0 +1,367 @@
+{
+    "authorId": "1519062024",
+    "papers": [
+        {
+            "paperId": "5b21c344b4f212c8ea88926d18d70007a5ac0711",
+            "title": "CM-GAN: Image Inpainting with Cascaded Modulation GAN and Object-Aware Training",
+            "abstract": "Recent image inpainting methods have made great progress but often struggle to generate plausible image structures when dealing with large holes in complex images. This is partially due to the lack of effective network structures that can capture both the long-range dependency and high-level semantics of an image. We propose cascaded modulation GAN (CM-GAN), a new network design consisting of an encoder with Fourier convolution blocks that extract multi-scale feature representations from the input image with holes and a dual-stream decoder with a novel cascaded global-spatial modulation block at each scale level. In each decoder block, global modulation is first applied to perform coarse and semantic-aware structure synthesis, followed by spatial modulation to further adjust the feature map in a spatially adaptive fashion. In addition, we design an object-aware training scheme to prevent the network from hallucinating new objects inside holes, fulfilling the needs of object removal tasks in real-world scenarios. Extensive experiments are conducted to show that our method significantly outperforms existing methods in both quantitative and qualitative evaluation. Please refer to the project page: \\url{https://github.com/htzheng/CM-GAN-Inpainting}.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2743695",
+                    "name": "Haitian Zheng"
+                },
+                {
+                    "authorId": "2112754968",
+                    "name": "Zhe Lin"
+                },
+                {
+                    "authorId": "2054975",
+                    "name": "Jingwan Lu"
+                },
+                {
+                    "authorId": "2183492748",
+                    "name": "Scott D. Cohen"
+                },
+                {
+                    "authorId": "2177801",
+                    "name": "Eli Shechtman"
+                },
+                {
+                    "authorId": "2496412",
+                    "name": "Connelly Barnes"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "2072804831",
+                    "name": "N. Xu"
+                },
+                {
+                    "authorId": "67289941",
+                    "name": "Sohrab Amirghodsi"
+                },
+                {
+                    "authorId": "2116782926",
+                    "name": "Jiebo Luo"
+                }
+            ]
+        },
+        {
+            "paperId": "6348ffdbcd9ac4de69b139fa0303b9b2a7f61679",
+            "title": "Text-to-Image Generation via Implicit Visual Guidance and Hypernetwork",
+            "abstract": "We develop an approach for text-to-image generation that embraces additional retrieval images, driven by a combination of implicit visual guidance loss and generative objectives. Unlike most existing text-to-image generation methods which merely take the text as input, our method dynamically feeds cross-modal search results into a unified training stage, hence improving the quality, controllability and diversity of generation results. We propose a novel hypernetwork modulated visual-text encoding scheme to predict the weight update of the encoding layer, enabling effective transfer from visual information (e.g. layout, content) into the corresponding latent domain. Experimental results show that our model guided with additional retrieval visual data outperforms existing GAN-based models. On COCO dataset, we achieve better FID of $9.13$ with up to $3.5 \\times$ fewer generator parameters, compared with the state-of-the-art method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115845480",
+                    "name": "Xin Yuan"
+                },
+                {
+                    "authorId": "2112754968",
+                    "name": "Zhe Lin"
+                },
+                {
+                    "authorId": "1859486",
+                    "name": "Jason Kuen"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "1680236",
+                    "name": "J. Collomosse"
+                }
+            ]
+        },
+        {
+            "paperId": "21e4fdd6cfb8d5448a80340677d9b6b3205296d1",
+            "title": "Guided Zoom: Zooming into Network Evidence to Refine Fine-Grained Model Decisions",
+            "abstract": "In state-of-the-art deep single-label classification models, the top-<inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"bargal-ieq1-3054303.gif\"/></alternatives></inline-formula> <inline-formula><tex-math notation=\"LaTeX\">$(k=2,3,4, \\dots)$</tex-math><alternatives><mml:math><mml:mrow><mml:mo>(</mml:mo><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mn>3</mml:mn><mml:mo>,</mml:mo><mml:mn>4</mml:mn><mml:mo>,</mml:mo><mml:mo>\u22ef</mml:mo><mml:mo>)</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"bargal-ieq2-3054303.gif\"/></alternatives></inline-formula> accuracy is usually significantly higher than the top-1 accuracy. This is more evident in fine-grained datasets, where differences between classes are quite subtle. Exploiting the information provided in the top <inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"bargal-ieq3-3054303.gif\"/></alternatives></inline-formula> predicted classes boosts the final prediction of a model. We propose Guided Zoom, a novel way in which explainability could be used to improve model performance. We do so by making sure the model has \u201cthe right reasons\u201d for a prediction. The reason/evidence upon which a deep neural network makes a prediction is defined to be the grounding, in the pixel space, for a specific class conditional probability in the model output. Guided Zoom examines how reasonable the evidence used to make each of the top-<inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"bargal-ieq4-3054303.gif\"/></alternatives></inline-formula> predictions is. Test time evidence is deemed reasonable if it is coherent with evidence used to make similar correct decisions at training time. This leads to better informed predictions. We explore a variety of grounding techniques and study their complementarity for computing evidence. We show that Guided Zoom results in an improvement of a model's classification accuracy and achieves state-of-the-art classification performance on four fine-grained classification datasets. Our code is available at <uri>https://github.com/andreazuna89/Guided-Zoom</uri>.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3298267",
+                    "name": "Sarah Adel Bargal"
+                },
+                {
+                    "authorId": "144733334",
+                    "name": "Andrea Zunino"
+                },
+                {
+                    "authorId": "50980023",
+                    "name": "Vitali Petsiuk"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "2903226",
+                    "name": "Kate Saenko"
+                },
+                {
+                    "authorId": "1727204",
+                    "name": "Vittorio Murino"
+                },
+                {
+                    "authorId": "1749590",
+                    "name": "S. Sclaroff"
+                }
+            ]
+        },
+        {
+            "paperId": "28fce14898e7fd2cef5da09fafa578c95107fe3c",
+            "title": "SSH: A Self-Supervised Framework for Image Harmonization",
+            "abstract": "Image harmonization aims to improve the quality of image compositing by matching the \"appearance\" (e.g., color tone, brightness and contrast) between foreground and background images. However, collecting large-scale annotated datasets for this task requires complex professional retouching. Instead, we propose a novel Self-Supervised Harmonization framework (SSH) that can be trained using just \"free\" natural images without being edited. We reformulate the image harmonization problem from a representation fusion perspective, which separately processes the foreground and background examples, to address the background occlusion issue. This framework design allows for a dual data augmentation method, where diverse [foreground, background, pseudo GT] triplets can be generated by cropping an image with perturbations using 3D color lookup tables (LUTs). In addition, we build a real-world harmonization dataset as carefully created by expert users, for evaluation and benchmarking purposes. Our results show that the proposed self-supervised method outperforms previous state-of-the-art methods in terms of reference metrics, visual quality, and subject user study. Code and dataset are available at https://github.com/VITA-Group/SSHarmonization.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Yifan Jiang"
+                },
+                {
+                    "authorId": "2153527214",
+                    "name": "He Zhang"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "2136929983",
+                    "name": "Yilin Wang"
+                },
+                {
+                    "authorId": "145527707",
+                    "name": "Zhe L. Lin"
+                },
+                {
+                    "authorId": "2123318412",
+                    "name": "Kalyan Sunkavalli"
+                },
+                {
+                    "authorId": "2111638272",
+                    "name": "Simon Chen"
+                },
+                {
+                    "authorId": "67289941",
+                    "name": "Sohrab Amirghodsi"
+                },
+                {
+                    "authorId": "145620029",
+                    "name": "Sarah Kong"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "380ebd5124b3d6f0c8046fb700be6c5cda01d449",
+            "title": "Enhancing Class-semantics Features' Locating Performance for Temporal Action Localization",
+            "abstract": "Temporal action localization is a fundamental video understanding task. Meanwhile, due to the complex video background, the varied duration and amplitude of the actions, it is also a considerable challenge. Currently, offline class-semantics representation is the mainstream input of this task since untrimmed videos occupy a large memory, high-quality untrimmed videos and annotations are difficult to access. Because these representations only focus on the class-semantics information, they are sub-optimal for the temporal action localization tasks. At the same time, the exploration of localization-semantics representation is very few due to the high resource consumption. Therefore, it is necessary to improve the detection capability of class-semantics representation directly. As an exploration, we propose the ForeBack module to enhance class-semantics features\u2019 locating performance by augmenting the distinction modeling between foreground and background clips. This module could also eliminate part of the noise of inference probability sequences. Furthermore, we use phased training to learn and use the ForeBack module more effectively. Finally, we reveal the effectiveness of our approach by conduct experiments on THUMOS-14 and the mAP at tIoU@0.5 is improved from 38.8% (BMN action detection baseline) to 47.1%.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "72002635",
+                    "name": "Jianqin Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "72e81bc41ffae1d414836169107910025aaacb75",
+            "title": "Lite Vision Transformer with Enhanced Self-Attention",
+            "abstract": "Despite the impressive representation capacity of vision transformer models, current light-weight vision transformer models still suffer from inconsistent and incorrect dense predictions at local regions. We suspect that the power of their self-attention mechanism is limited in shallower and thinner networks. We propose Lite Vision Transformer (LVT), a novel light-weight transformer network with two enhanced self-attention mechanisms to improve the model performances for mobile deployment. For the low-level features, we introduce Convolutional Self-Attention (CSA). Unlike previous approaches of merging convolution and self-attention, CSA introduces local self-attention into the convolution within a kernel of size $3\\times 3$ to enrich low-level features in the first stage of LVT. For the high-level features, we propose Recursive Atrous Self-Attention (RASA), which utilizes the multi-scale context when calculating the similarity map and a recursive mechanism to increase the representation capability with marginal extra parameter cost. The superiority of LVT is demonstrated on ImageNet recognition, ADE20K semantic segmentation, and COCO panoptic segmentation. The code is made publicly available11https://github.com/Chenglin-Yang/LVT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2154170445",
+                    "name": "Chenglin Yang"
+                },
+                {
+                    "authorId": "2136929983",
+                    "name": "Yilin Wang"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "2153527214",
+                    "name": "He Zhang"
+                },
+                {
+                    "authorId": "2647061",
+                    "name": "Zijun Wei"
+                },
+                {
+                    "authorId": "145527707",
+                    "name": "Zhe L. Lin"
+                },
+                {
+                    "authorId": "145081362",
+                    "name": "A. Yuille"
+                }
+            ]
+        },
+        {
+            "paperId": "91a1b1b36bc1a18c84ab1b6cb5201d7d0e4ede8f",
+            "title": "Single-image Full-body Human Relighting",
+            "abstract": "We present a single-image data-driven method to automatically relight images with full-body humans in them. Our framework is based on a realistic scene decomposition leveraging precomputed radiance transfer (PRT) and spherical harmonics (SH) lighting. In contrast to previous work, we lift the assumptions on Lambertian materials and explicitly model diffuse and specular reflectance in our data. Moreover, we introduce an additional light-dependent residual term that accounts for errors in the PRT-based image reconstruction. We propose a new deep learning architecture, tailored to the decomposition performed in PRT, that is trained using a combination of L1, logarithmic, and rendering losses. Our model outperforms the state of the art for full-body human relighting both with synthetic images and photographs.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51011764",
+                    "name": "Manuel Lagunas"
+                },
+                {
+                    "authorId": "144783277",
+                    "name": "Xin Sun"
+                },
+                {
+                    "authorId": "2109724839",
+                    "name": "Jimei Yang"
+                },
+                {
+                    "authorId": "144543406",
+                    "name": "Ruben Villegas"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "2496409",
+                    "name": "Zhixin Shu"
+                },
+                {
+                    "authorId": "1775667",
+                    "name": "B. Masi\u00e1"
+                },
+                {
+                    "authorId": "2064797701",
+                    "name": "Diego Gutierrez"
+                }
+            ]
+        },
+        {
+            "paperId": "a5fed2f5eb28a8ac6312b31bcd566c510d765b10",
+            "title": "Multimodal Contrastive Training for Visual Representation Learning",
+            "abstract": "We develop an approach to learning visual representations that embraces multimodal data, driven by a combination of intra- and inter-modal similarity preservation objectives. Unlike existing visual pre-training methods, which solve a proxy prediction task in a single domain, our method exploits intrinsic data properties within each modality and semantic information from cross-modal correlation simultaneously, hence improving the quality of learned visual representations. By including multimodal training in a unified framework with different types of contrastive losses, our method can learn more powerful and generic visual features. We first train our model on COCO and evaluate the learned visual representations on various downstream tasks including image classification, object detection, and instance segmentation. For example, the visual representations pre-trained on COCO by our method achieve state-of-the-art top-1 validation accuracy of 55.3% on ImageNet classification, under the common transfer protocol. We also evaluate our method on the large-scale Stock images dataset and show its effectiveness on multi-label image tagging, and cross-modal retrieval tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115845480",
+                    "name": "Xin Yuan"
+                },
+                {
+                    "authorId": "145527707",
+                    "name": "Zhe L. Lin"
+                },
+                {
+                    "authorId": "1859486",
+                    "name": "Jason Kuen"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "2136929983",
+                    "name": "Yilin Wang"
+                },
+                {
+                    "authorId": "145854440",
+                    "name": "M. Maire"
+                },
+                {
+                    "authorId": "37493415",
+                    "name": "Ajinkya Kale"
+                },
+                {
+                    "authorId": "3073413",
+                    "name": "Baldo Faieta"
+                }
+            ]
+        },
+        {
+            "paperId": "09abc59567e0b4cc210ad2f1b554643d6df41003",
+            "title": "SSN: Soft Shadow Network for Image Compositing",
+            "abstract": "We introduce an interactive Soft Shadow Network (SSN) to generates controllable soft shadows for image compositing. SSN takes a 2D object mask as input and thus is agnostic to image types such as painting and vector art. An environment light map is used to control the shadow\u2019s characteristics, such as angle and softness. SSN employs an Ambient Occlusion Prediction module to predict an intermediate ambient occlusion map, which can be further refined by the user to provides geometric cues to modulate the shadow generation. To train our model, we design an efficient pipeline to produce diverse soft shadow training data using 3D object models. In addition, we propose an inverse shadow map representation to improve model training. We demonstrate that our model produces realistic soft shadows in real-time. Our user studies show that the generated shadows are often indistinguishable from shadows calculated by a physics-based renderer and users can easily use SSN through an interactive application to generate specific shadow effects in minutes.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2053802741",
+                    "name": "Yichen Sheng"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "1788393",
+                    "name": "Bedrich Benes"
+                }
+            ]
+        },
+        {
+            "paperId": "0e263735e2add52582b301a23f6a871cf4c525fd",
+            "title": "Adversarial Knowledge Transfer from Unlabeled Data",
+            "abstract": "While machine learning approaches to visual recognition offer great promise, most of the existing methods rely heavily on the availability of large quantities of labeled training data. However, in the vast majority of real-world settings, manually collecting such large labeled datasets is infeasible due to the cost of labeling data or the paucity of data in a given domain. In this paper, we present a novel Adversarial Knowledge Transfer (AKT) framework for transferring knowledge from internet-scale unlabeled data to improve the performance of a classifier on a given visual recognition task. The proposed adversarial learning framework aligns the feature space of the unlabeled source data with the labeled target data such that the target classifier can be used to predict pseudo labels on the source data. An important novel aspect of our method is that the unlabeled source data can be of different classes from those of the labeled target data, and there is no need to define a separate pretext task, unlike some existing approaches. Extensive experiments well demonstrate that models learned using our approach hold a lot of promise across a variety of visual recognition tasks on multiple standard datasets. Project page is at \\texttthttps://agupt013.github.io/akt.html.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "150015249",
+                    "name": "Akash Gupta"
+                },
+                {
+                    "authorId": "1819152",
+                    "name": "Rameswar Panda"
+                },
+                {
+                    "authorId": "49616225",
+                    "name": "S. Paul"
+                },
+                {
+                    "authorId": "1519062024",
+                    "name": "Jianming Zhang"
+                },
+                {
+                    "authorId": "1404727582",
+                    "name": "A. Roy-Chowdhury"
+                }
+            ]
+        }
+    ]
+}

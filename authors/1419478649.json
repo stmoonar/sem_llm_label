@@ -1,0 +1,279 @@
+{
+    "authorId": "1419478649",
+    "papers": [
+        {
+            "paperId": "72c498b2a388d2c02e7f8eb9416a9d708b28b7c1",
+            "title": "MODL: Multilearner Online Deep Learning",
+            "abstract": "Online deep learning solves the problem of learning from streams of data, reconciling two opposing objectives: learn fast and learn deep. Existing work focuses almost exclusively on exploring pure deep learning solutions, which are much better suited to handle the\"deep\"than the\"fast\"part of the online learning equation. In our work, we propose a different paradigm, based on a hybrid multilearner approach. First, we develop a fast online logistic regression learner. This learner does not rely on backpropagation. Instead, it uses closed form recursive updates of model parameters, handling the fast learning part of the online learning problem. We then analyze the existing online deep learning theory and show that the widespread ODL approach, currently operating at complexity $O(L^2)$ in terms of the number of layers $L$, can be equivalently implemented in $O(L)$ complexity. This further leads us to the cascaded multilearner design, in which multiple shallow and deep learners are co-trained to solve the online learning problem in a cooperative, synergistic fashion. We show that this approach achieves state-of-the-art results on common online learning datasets, while also being able to handle missing features gracefully. Our code is publicly available at https://github.com/AntonValk/MODL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "3313242",
+                    "name": "Boris N. Oreshkin"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "8c659df0ec487a5e4f42d1f46ea93227a47e5fce",
+            "title": "Personalized Negative Reservoir for Incremental Learning in Recommender Systems",
+            "abstract": "Recommender systems have become an integral part of online platforms. Every day the volume of training data is expanding and the number of user interactions is constantly increasing. The exploration of larger and more expressive models has become a necessary pursuit to improve user experience. However, this progression carries with it an increased computational burden. In commercial settings, once a recommendation system model has been trained and deployed it typically needs to be updated frequently as new client data arrive. Cumulatively, the mounting volume of data is guaranteed to eventually make full batch retraining of the model from scratch computationally infeasible. Naively fine-tuning solely on the new data runs into the well-documented problem of catastrophic forgetting. Despite the fact that negative sampling is a crucial part of training with implicit feedback, no specialized technique exists that is tailored to the incremental learning framework. In this work, we take the first step to propose, a personalized negative reservoir strategy which is used to obtain negative samples for the standard triplet loss. This technique balances alleviation of forgetting with plasticity by encouraging the model to remember stable user preferences and selectively forget when user interests change. We derive the mathematical formulation of a negative sampler to populate and update the reservoir. We integrate our design in three SOTA and commonly used incremental recommendation models. We show that these concrete realizations of our negative reservoir framework achieve state-of-the-art results in standard benchmarks, on multiple standard top-k evaluation metrics.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "2290188725",
+                    "name": "Yuening Wang"
+                },
+                {
+                    "authorId": "2242303315",
+                    "name": "Yingxue Zhang"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "26ebeeb1b9172df34ad21f1000bb6f3c374a222e",
+            "title": "Structure Aware Incremental Learning with Personalized Imitation Weights for Recommender Systems",
+            "abstract": "Recommender systems now consume large-scale data and play a significant role in improving user experience. Graph Neural Networks (GNNs) have emerged as one of the most effective recommender system models because they model the rich relational information. The ever-growing volume of data can make training GNNs prohibitively expensive. To address this, previous attempts propose to train the GNN models incrementally as new data blocks arrive. \nFeature and structure knowledge distillation techniques have been explored to allow the GNN model to train in a fast incremental fashion while alleviating the catastrophic forgetting problem. \nHowever, preserving the same amount of the historical information for all users is sub-optimal since it fails to take into account the dynamics of each user's change of preferences. \nFor the users whose interests shift substantially, retaining too much of the old knowledge can overly constrain the model, preventing it from quickly adapting to the users\u2019 novel interests. \nIn contrast, for users who have static preferences, model performance can benefit greatly from preserving as much of the user's long-term preferences as possible.\nIn this work, we propose a novel training strategy that adaptively learns personalized imitation weights for each user to balance the contribution from the recent data and the amount of knowledge to be distilled from previous time periods.\nWe demonstrate the effectiveness of learning imitation weights via a comparison on five diverse datasets for three state-of-art structure distillation based recommender systems. The performance shows consistent improvement over competitive incremental learning techniques.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108711613",
+                    "name": "Yuening Wang"
+                },
+                {
+                    "authorId": "2135319291",
+                    "name": "Yingxue Zhang"
+                },
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                },
+                {
+                    "authorId": "74142381",
+                    "name": "Chen Ma"
+                },
+                {
+                    "authorId": "2069718816",
+                    "name": "Jianye Hao"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "4d1c260cc34b1df902f2024896ef7c1db400fe20",
+            "title": "Motion In-Betweening via Deep <inline-formula><tex-math notation=\"LaTeX\">$\\Delta$</tex-math><alternatives><mml:math><mml:mi>\u0394</mml:mi></mml:math><inline-graphic xlink:href=\"oreshkin-ieq1-3309107.gif\"/></alternatives></inline-formula>-Interpolator",
+            "abstract": "We show that the task of synthesizing human motion conditioned on a set of key frames can be solved more accurately and effectively if a deep learning based interpolator operates in the delta mode using the spherical linear interpolator as a baseline. We empirically demonstrate the strength of our approach on publicly available datasets achieving state-of-the-art performance. We further generalize these results by showing that the <inline-formula><tex-math notation=\"LaTeX\">$\\Delta$</tex-math><alternatives><mml:math><mml:mi>\u0394</mml:mi></mml:math><inline-graphic xlink:href=\"oreshkin-ieq3-3309107.gif\"/></alternatives></inline-formula>-regime is viable with respect to the reference of the last known frame (also known as the zero-velocity model). This supports the more general conclusion that operating in the reference frame local to input frames is more accurate and robust than in the global (world) reference frame advocated in previous work.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3313242",
+                    "name": "Boris N. Oreshkin"
+                },
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "2806687",
+                    "name": "F\u00e9lix G. Harvey"
+                },
+                {
+                    "authorId": "2150349811",
+                    "name": "L. M'enard"
+                },
+                {
+                    "authorId": "2342894",
+                    "name": "Florent Bocquelet"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "816e1dba651c5e37627d825cf79e1edc69c17cd9",
+            "title": "Population Monte Carlo With Normalizing Flow",
+            "abstract": "Adaptive importance sampling (AIS) methods provide a useful alternative to Markov Chain Monte Carlo (MCMC) algorithms for performing inference of intractable distributions. Population Monte Carlo (PMC) algorithms constitute a family of AIS approaches which adapt the proposal distributions iteratively to improve the approximation of the target distribution. Recent work in this area primarily focuses on ameliorating the proposal adaptation procedure for high-dimensional applications. However, most of the AIS algorithms use simple proposal distributions for sampling, which might be inadequate in exploring target distributions with intricate geometries. In this work, we construct expressive proposal distributions in the AIS framework using normalizing flow, an appealing approach for modeling complex distributions. We use an iterative parameter update rule to enhance the approximation of the target distribution. Numerical experiments show that in high-dimensional settings, the proposed algorithm offers significantly improved performance compared to the existing techniques.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "38939190",
+                    "name": "Soumyasundar Pal"
+                },
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "062cd53e215d3da626a51fe3ae4536ed66b4d461",
+            "title": "Towards Bayesian Learning of the Architecture, Graph and Parameters for Graph Neural Networks",
+            "abstract": "Real life data often arises from relational structures that are best modeled by graphs. Bayesian learning on graphs has emerged as a framework which allows us to model prior beliefs about network data in a mathematically principled way. The approach provides uncertainty estimates and can perform very well on a small sample size when provided with an informative prior. Much of the work on Bayesian graph neural networks (GNNs) has focused on inferring the structure of the underlying graph and the model weights. Although research effort has been directed towards network architecture search for GNNs, existing strategies are not Bayesian and return a point estimate of the optimal architecture. In this work, we propose a method for principled Bayesian modelling for GNNs that allows for inference of a posterior over the architecture (number of layers, number of active neurons, aggregators, pooling), the graph, and the model parameters. We evaluate our proposed method on three mainstream datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "2211001566",
+                    "name": "Andr\u00e9-Walter Panzini"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "228faba0882d6ed2231023cf6e2053e460dea8ed",
+            "title": "Bag Graph: Multiple Instance Learning using Bayesian Graph Neural Networks",
+            "abstract": "Multiple Instance Learning (MIL) is a weakly supervised learning problem where the aim is to assign labels to sets or bags of instances, as opposed to traditional supervised learning where each instance is assumed to be independent and identically distributed (IID) and is to be labeled individually. Recent work has shown promising results for neural network models in the MIL setting. Instead of focusing on each instance, these models are trained in an end-to-end fashion to learn effective bag-level representations by suitably combining permutation invariant pooling techniques with neural architectures. In this paper, we consider modelling the interactions between bags using a graph and employ Graph Neural Networks (GNNs) to facilitate end-to-end learning. Since a meaningful graph representing dependencies between bags is rarely available, we propose to use a Bayesian GNN framework that can generate a likely graph structure for scenarios where there is uncertainty in the graph or when no graph is available. Empirical results demonstrate the efficacy of the proposed technique for several MIL benchmark tasks and a distribution regression task.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "38939190",
+                    "name": "Soumyasundar Pal"
+                },
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "1388386548",
+                    "name": "Florence Regol"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "6d05b537fd9500787838e1dd5f9819f34c1b92bb",
+            "title": "Motion Inbetweening via Deep \u0394-Interpolator",
+            "abstract": "We show that the task of synthesizing human motion conditioned on a set of key frames can be solved more accurately and effectively if a deep learning based interpolator operates in the delta mode using the spherical linear interpolator as a baseline. We empirically demonstrate the strength of our approach on publicly available datasets achieving state-of-the-art performance. We further generalize these results by showing that the $\\Delta$-regime is viable with respect to the reference of the last known frame (also known as the zero-velocity model). This supports the more general conclusion that operating in the reference frame local to input frames is more accurate and robust than in the global (world) reference frame advocated in previous work. Our code is publicly available at https://github.com/boreshkinai/delta-interpolator.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3313242",
+                    "name": "Boris N. Oreshkin"
+                },
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "2806687",
+                    "name": "F\u00e9lix G. Harvey"
+                },
+                {
+                    "authorId": "2150567841",
+                    "name": "Louis-Simon M\u00e9nard"
+                },
+                {
+                    "authorId": "2342894",
+                    "name": "Florent Bocquelet"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "7ec9a05f120c5c8a0beabef617267da1a177d8e6",
+            "title": "Contrastive Learning for Time Series on Dynamic Graphs",
+            "abstract": "There have been several recent efforts towards developing representations for multivariate time-series in an unsupervised learning framework. Such representations can prove beneficial in tasks such as activity recognition, health monitoring, and anomaly detection. In this paper, we consider a setting where we observe time-series at each node in a dynamic graph. We propose a framework called GraphTNC for unsupervised learning of joint representations of the graph and the time-series. Our approach employs a contrastive learning strategy. Based on an assumption that the time-series and graph evolution dynamics are piecewise smooth, we identify local windows of time where the signals exhibit approximate stationarity. We then train an encoding that allows the distribution of signals within a neighborhood to be distinguished from the distribution of non-neighboring signals. We first demonstrate the performance of our proposed framework using synthetic data, and subsequently we show that it can prove beneficial for the classification task with real-world datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2265585667",
+                    "name": "Yitian Zhang"
+                },
+                {
+                    "authorId": "1388386548",
+                    "name": "Florence Regol"
+                },
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "2150349871",
+                    "name": "Mark Coates"
+                }
+            ]
+        },
+        {
+            "paperId": "563a45df70f330dc20a56f448148c47739ab83a1",
+            "title": "Learning from Networks of Distributions",
+            "abstract": "There are multiple settings where it is more natural to represent data not as individual training points (vectors), but as probability distributions. In some cases, we may be provided with samples from the distribution (e.g., ecological inference, multi-instance learning) and in other cases, we may have access to parametric or semi-parametric specifications of a distribution. These latter specifications are often derived from a predictive algorithm. Our goal is to learn from these (empirical) distributions, so that we can perform a task such as regression or classification \u2013 mapping an input distribution to a real-valued output or a label. In this paper, we consider the case where, in addition to the observed distributions, we have access to relational data in the form of a network or graph. The graph specifies structural relationships between the observed distributions. Our goal is to design a learning algorithm that takes into account the graph structure as well as the information from the distributions. We describe a graph neural network architecture that performs information aggregation to learn. We demonstrate how our algorithm can be used in an example application.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1419478649",
+                    "name": "Antonios Valkanas"
+                },
+                {
+                    "authorId": "1388386548",
+                    "name": "Florence Regol"
+                },
+                {
+                    "authorId": "144819383",
+                    "name": "M. Coates"
+                }
+            ]
+        }
+    ]
+}

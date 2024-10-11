@@ -1,0 +1,268 @@
+{
+    "authorId": "1486300471",
+    "papers": [
+        {
+            "paperId": "f4a69983f084f896e898c9d3d7336f9454a6b817",
+            "title": "Robust Geometry-Dependent Attack for 3D Point Clouds",
+            "abstract": "Deep learning models for point clouds have shown to be vulnerable to adversarial attacks, which have received increasing attention in various safety-critical applications such as autonomous driving, robotics, and surveillance. Since existing 3D attack methods either modify the local points or perform global point-wise perturbations over the point cloud, they fail to capture the dependency between neighboring points for preserving the geometrical context and topological smoothness of the original 3D object. In this article, we propose a novel Geometry-Dependent Attack (GDA), which aims to generate more robust adversarial point clouds with lower perturbation costs by capturing and preserving the geometry-guided topology information. Specifically, we first analyze the geometric information of each benign point cloud following the graph signal processing and disentangle it into low-frequency (flat) and high-frequency (contour) components. Then, considering the varying characteristics of smoothness and sharpness after disentanglement, we design two collaborative patch-aware and point-aware attacks to perturb these two components separately to misclassify the 3D object. We test the proposed GDA attack using five popular point cloud networks (PointNet, PointNet++, DGCNN, PointTransformer, and PointMLP) on both ModelNet40 and ShapNetPart datasets. Experimental results show that our GDA attack achieves 100% success rates with the lowest perturbation cost. It also demonstrates the increased capability to defeat several existing defense models over other competing attacks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2109038537",
+                    "name": "Daizong Liu"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "40286491",
+                    "name": "X. Li"
+                }
+            ]
+        },
+        {
+            "paperId": "eb8db286e1f6fb618ce4e1165a27a5c7ce11a0c9",
+            "title": "Deep Homography Estimation With Feature Correlation Transformer",
+            "abstract": "Homography estimation is an important image alignment method that has been widely used in computer vision applications. Traditional methods heavily rely on the distribution of features and usually fail in low-texture and large-baseline scenes. Most learning-based methods use convolutional neural networks(CNNs) to extract features. However, the dense features extracted in this way have a limited receptive field, leading to poor accuracy of results. In this paper, we propose a novel method for homography estimation. We first estimate the projective transformation between the reference image and the target image at a coarse level and then refine the estimated homography at the fine level. Unlike approaches that use simple CNNs or global correlations to search correspondences, we add self- and cross-attention layers in the transformer to enhance the feature correlations. The experiments show that our method significantly outperforms the existing solutions in challenging large-baseline scenes.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2111824941",
+                    "name": "Haoyu Zhou"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "1718694",
+                    "name": "Yunyao Li"
+                },
+                {
+                    "authorId": "2158534066",
+                    "name": "Chu He"
+                },
+                {
+                    "authorId": "1683647",
+                    "name": "X. Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "5d5a4da9085d14a68cdd0829c1e23a883c352af9",
+            "title": "Exploring Optical-Flow-Guided Motion and Detection-Based Appearance for Temporal Sentence Grounding",
+            "abstract": "Temporal sentence grounding aims to localize a target segment in an untrimmed video semantically according to a given sentence query. Most previous works focus on learning frame-level features of each whole frame in the entire video, and directly match them with the textual information. Such frame-level feature extraction leads to the obstacles of these methods in distinguishing ambiguous video frames with complicated contents and subtle appearance differences, thus limiting their performance. In order to differentiate fine-grained appearance similarities among consecutive frames, some state-of-the-art methods additionally employ a detection model like Faster R-CNN to obtain detailed object-level features in each frame for filtering out the redundant background contents. However, these methods suffer from missing motion analysis since the object detection module in Faster R-CNN lacks temporal modeling. To alleviate the above limitations, in this paper, we propose a novel Motion- and Appearance-guided 3D Semantic Reasoning Network (MA3SRN), which incorporates optical-flow-guided motion-aware, detection-based appearance-aware, and 3D-aware object-level features to better reason the spatial-temporal object relations for accurately modelling the activity among consecutive frames. Specifically, we first develop three individual branches for motion, appearance, and 3D encoding separately to learn fine-grained motion-guided, appearance-guided, and 3D-aware object features, respectively. Then, both motion and appearance information from corresponding branches are associated to enhance the 3D-aware features for the final precise grounding. Extensive experiments on three challenging datasets (ActivityNet Caption, Charades-STA and TACoS) demonstrate that the proposed MA3SRN model achieves a new state-of-the-art.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "98579574",
+                    "name": "Daizong Liu"
+                },
+                {
+                    "authorId": "2117739499",
+                    "name": "Xiang Fang"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "2153245185",
+                    "name": "Pan Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "a233c5cfe76576b37ccdfceb25ff1c8453f56c3f",
+            "title": "Point Cloud Attacks in Graph Spectral Domain: When 3D Geometry Meets Graph Signal Processing",
+            "abstract": "With the increasing attention in various 3D safety-critical applications, point cloud learning models have been shown to be vulnerable to adversarial attacks. Although existing 3D attack methods achieve high success rates, they delve into the data space with point-wise perturbation, which may neglect the geometric characteristics. Instead, we propose point cloud attacks from a new perspective\u2014the graph spectral domain attack, aiming to perturb graph transform coefficients in the spectral domain that correspond to varying certain geometric structures. Specifically, leveraging on graph signal processing, we first adaptively transform the coordinates of points onto the spectral domain via graph Fourier transform (GFT) for compact representation. Then, we analyze the influence of different spectral bands on the geometric structure, based on which we propose to perturb the GFT coefficients via a learnable graph spectral filter. Considering the low-frequency components mainly contribute to the rough shape of the 3D object, we further introduce a low-frequency constraint to limit perturbations within imperceptible high-frequency components. Finally, the adversarial point cloud is generated by transforming the perturbed spectral representation back to the data domain via the inverse GFT. Experimental results demonstrate the effectiveness of the proposed attack in terms of both the imperceptibility and attack success rates.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2135646549",
+                    "name": "Daizong Liu"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "2153899839",
+                    "name": "Xin Li"
+                }
+            ]
+        },
+        {
+            "paperId": "a422900dbccc0b01bbbcd735ea54001a44f67615",
+            "title": "Neural Capture of Animatable 3D Human from Monocular Video",
+            "abstract": "We present a novel paradigm of building an animatable 3D human representation from a monocular video input, such that it can be rendered in any unseen poses and views. Our method is based on a dynamic Neural Radiance Field (NeRF) rigged by a mesh-based parametric 3D human model serving as a geometry proxy. Previous methods usually rely on multi-view videos or accurate 3D geometry information as additional inputs; besides, most methods suffer from degraded quality when generalized to unseen poses. We identify that the key to generalization is a good input embedding for querying dynamic NeRF: A good input embedding should define an injective mapping in the full volumetric space, guided by surface mesh deformation under pose variation. Based on this observation, we propose to embed the input query with its relationship to local surface regions spanned by a set of geodesic nearest neighbors on mesh vertices. By including both position and relative distance information, our embedding defines a distance-preserved deformation mapping and generalizes well to unseen poses. To reduce the dependency on additional inputs, we first initialize per-frame 3D meshes using off-the-shelf tools and then propose a pipeline to jointly optimize NeRF and refine the initial mesh. Extensive experiments show our method can synthesize plausible human rendering results under unseen poses and views.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "93104384",
+                    "name": "Gusi Te"
+                },
+                {
+                    "authorId": "2181901259",
+                    "name": "Xiu Li"
+                },
+                {
+                    "authorId": "2108787238",
+                    "name": "Xiao Li"
+                },
+                {
+                    "authorId": "2110107884",
+                    "name": "Jinglu Wang"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "2146557916",
+                    "name": "Yan Lu"
+                }
+            ]
+        },
+        {
+            "paperId": "d355e8b54237dd20e3a290cec9077df1e2391b88",
+            "title": "Learning Latent Part-Whole Hierarchies for Point Clouds",
+            "abstract": "Strong evidence suggests that humans perceive the 3D world by parsing visual scenes and objects into part-whole hierarchies. Although deep neural networks have the capability of learning powerful multi-level representations, they can not explicitly model part-whole hierarchies, which limits their expressiveness and interpretability in processing 3D vision data such as point clouds. To this end, we propose an encoder-decoder style latent variable model that explicitly learns the part-whole hierarchies for the multi-level point cloud segmentation. Specifically, the encoder takes a point cloud as input and predicts the per-point latent subpart distribution at the middle level. The decoder takes the latent variable and the feature from the encoder as an input and predicts the per-point part distribution at the top level. During training, only annotated part labels at the top level are provided, thus making the whole framework weakly supervised. We explore two kinds of approximated inference algorithms, i.e., most-probable-latent and Monte Carlo methods, and three stochastic gradient estimations for learning discrete latent variables, i.e., straight-through, REINFORCE, and pathwise estimators. Experimental results on the PartNet dataset show that the proposed method achieves state-of-the-art performance in not only top-level part segmentation but also middle-level latent subpart segmentation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149395798",
+                    "name": "Xiang Gao"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "2246396",
+                    "name": "Renjie Liao"
+                }
+            ]
+        },
+        {
+            "paperId": "170175efb6b65a467d0ac6c0436783620163269f",
+            "title": "Deep Point Set Resampling via Gradient Fields",
+            "abstract": "3D point clouds acquired by scanning real-world objects or scenes have found a wide range of applications including immersive telepresence, autonomous driving, surveillance, etc. They are often perturbed by noise or suffer from low density, which obstructs downstream tasks such as surface reconstruction and understanding. In this paper, we propose a novel paradigm of point set resampling for restoration, which learns continuous gradient fields of point clouds that converge points towards the underlying surface. In particular, we represent a point cloud via its gradient field\u2014the gradient of the log-probability density function, and enforce the gradient field to be continuous, thus guaranteeing the continuity of the model for solvable optimization. Based on the continuous gradient fields estimated via a proposed neural network, resampling a point cloud amounts to performing gradient-based Markov Chain Monte Carlo (MCMC) on the input noisy or sparse point cloud. Further, we propose to introduce regularization into the gradient-based MCMC during point cloud restoration, which essentially refines the intermediate resampled point cloud iteratively and accommodates various priors in the resampling process. Extensive experimental results demonstrate that the proposed point set resampling achieves the state-of-the-art performance in representative restoration tasks including point cloud denoising and upsampling.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149052738",
+                    "name": "Haolan Chen"
+                },
+                {
+                    "authorId": "1491520789",
+                    "name": "Bianli Du"
+                },
+                {
+                    "authorId": "35518638",
+                    "name": "Shitong Luo"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                }
+            ]
+        },
+        {
+            "paperId": "2651d2d14a8dd04559abccce6a549b755d42e97d",
+            "title": "Generic Reversible Visible Watermarking via Regularized Graph Fourier Transform Coding",
+            "abstract": "Reversible visible watermarking (RVW) is an active copyright protection mechanism. It not only transparently superimposes copyright patterns on specific positions of digital images or video frames to declare the copyright ownership information, but also completely erases the visible watermark image and thus enables restoring the original host image without any distortion. However, existing RVW algorithms mostly construct the reversible mapping mechanism for a specific visible watermarking scheme, which is not versatile. Hence, we propose a generic RVW framework to accommodate various visible watermarking schemes. In particular, we obtain a reconstruction data packet\u2014the compressed difference image between the watermarked image and the original host image, which is embedded into the watermarked image via any conventional reversible data hiding method to facilitate the blind recovery of the host image. The key is to achieve compact compression of the difference image for efficient embedding of the reconstruction data packet. To this end, we propose regularized Graph Fourier Transform (GFT) coding, where the difference image is smoothed via the graph Laplacian regularizer for more efficient compression and then encoded by multi-resolution GFTs in an approximately optimal manner. Experimental results show that the proposed framework has much better versatility than state-of-the-art methods. Due to the small amount of auxiliary information to be embedded, the visual quality of the watermarked image is also higher.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "3167173",
+                    "name": "Wenfa Qi"
+                },
+                {
+                    "authorId": "2110835780",
+                    "name": "Sirui Guo"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                }
+            ]
+        },
+        {
+            "paperId": "46bcd396bfa86d1bf500886285ff8247cdfe3c28",
+            "title": "Self-Supervised Graph Representation Learning via Topology Transformations",
+            "abstract": "We present the Topology Transformation Equivariant Representation learning, a general paradigm of self-supervised learning for node representations of graph data to enable the wide applicability of Graph Convolutional Neural Networks (GCNNs). We formalize the proposed model from an information-theoretic perspective, by maximizing the mutual information between topology transformations and node representations before and after the transformations. We derive that maximizing such mutual information can be relaxed to minimizing the cross entropy between the applied topology transformation and its estimation from node representations. In particular, we seek to sample a subset of node pairs from the original graph and flip the edge connectivity between each pair to transform the graph topology. Then, we self-train a representation encoder to learn node representations by reconstructing the topology transformations from the feature representations of the original and transformed graphs. In experiments, we apply the proposed model to the downstream node classification, graph classification and link prediction tasks, and results show that the proposed method outperforms the state-of-the-art unsupervised approaches.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2149395798",
+                    "name": "Xiang Gao"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "2272096",
+                    "name": "Guo-Jun Qi"
+                }
+            ]
+        },
+        {
+            "paperId": "62eb3870fc7c84a99d369b330badc3f79fe08f53",
+            "title": "AGRNet: Adaptive Graph Representation Learning and Reasoning for Face Parsing",
+            "abstract": "Face parsing infers a pixel-wise label to each facial component, which has drawn much attention recently. Previous methods have shown their success in face parsing, which however overlook the correlation among facial components. As a matter of fact, the component-wise relationship is a critical clue in discriminating ambiguous pixels in facial area. To address this issue, we propose adaptive graph representation learning and reasoning over facial components, aiming to learn representative vertices that describe each component, exploit the component-wise relationship and thereby produce accurate parsing results against ambiguity. In particular, we devise an adaptive and differentiable graph abstraction method to represent the components on a graph via pixel-to-vertex projection under the initial condition of a predicted parsing map, where pixel features within a certain facial region are aggregated onto a vertex. Further, we explicitly incorporate the image edge as a prior in the model, which helps to discriminate edge and non-edge pixels during the projection, thus leading to refined parsing results along the edges. Then, our model learns and reasons over the relations among components by propagating information across vertices on the graph. Finally, the refined vertex features are projected back to pixel grids for the prediction of the final parsing map. To train our model, we propose a discriminative loss to penalize small distances between vertices in the feature space, which leads to distinct vertices with strong semantics. Experimental results show the superior performance of the proposed model on multiple face parsing datasets, along with the validation on the human parsing task to demonstrate the generalizability of our model.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "93104384",
+                    "name": "Gusi Te"
+                },
+                {
+                    "authorId": "1486300471",
+                    "name": "Wei Hu"
+                },
+                {
+                    "authorId": "1604967498",
+                    "name": "Yinglu Liu"
+                },
+                {
+                    "authorId": "1704812",
+                    "name": "Hailin Shi"
+                },
+                {
+                    "authorId": "144025741",
+                    "name": "Tao Mei"
+                }
+            ]
+        }
+    ]
+}

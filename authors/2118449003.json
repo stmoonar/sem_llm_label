@@ -1,0 +1,317 @@
+{
+    "authorId": "2118449003",
+    "papers": [
+        {
+            "paperId": "4c19e9d2f0da6e28f53617f355fb58f53b2f3aca",
+            "title": "Graph Contrastive Invariant Learning from the Causal Perspective",
+            "abstract": "Graph contrastive learning (GCL), learning the node representation by contrasting two augmented graphs in a self-supervised way, has attracted considerable attention. GCL is usually believed to learn the invariant representation. However, does this understanding always hold in practice? In this paper, we first study GCL from the perspective of causality. By analyzing GCL with the structural causal model (SCM), we discover that traditional GCL may not well learn the invariant representations due to the non-causal information contained in the graph. How can we fix it and encourage the current GCL to learn better invariant representations? The SCM offers two requirements and motives us to propose a novel GCL method. Particularly, we introduce the spectral graph augmentation to simulate the intervention upon non-causal factors. Then we design the invariance objective and independence objective to better capture the causal factors. Specifically, (i) the invariance objective encourages the encoder to capture the invariant information contained in causal variables, and (ii) the independence objective aims to reduce the influence of confounders on the causal variables. Experimental results demonstrate the effectiveness of our approach on node classification tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2186301319",
+                    "name": "Yanhu Mo"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "48635390",
+                    "name": "Shaohua Fan"
+                },
+                {
+                    "authorId": "2151458697",
+                    "name": "Chuan Shi"
+                }
+            ]
+        },
+        {
+            "paperId": "c9845a625e2dac5e32db172d353f81d377760a5f",
+            "title": "Learning Invariant Representations of Graph Neural Networks via Cluster Generalization",
+            "abstract": "Graph neural networks (GNNs) have become increasingly popular in modeling graph-structured data due to their ability to learn node representations by aggregating local structure information. However, it is widely acknowledged that the test graph structure may differ from the training graph structure, resulting in a structure shift. In this paper, we experimentally find that the performance of GNNs drops significantly when the structure shift happens, suggesting that the learned models may be biased towards specific structure patterns. To address this challenge, we propose the Cluster Information Transfer (CIT) mechanism (Code available at https://github.com/BUPT-GAMMA/CITGNN), which can learn invariant representations for GNNs, thereby improving their generalization ability to various and unknown test graphs with structure shift. The CIT mechanism achieves this by combining different cluster information with the nodes while preserving their cluster-independent information. By generating nodes across different clusters, the mechanism significantly enhances the diversity of the nodes and helps GNNs learn the invariant representations. We provide a theoretical analysis of the CIT mechanism, showing that the impact of changing clusters during structure shift can be mitigated after transfer. Additionally, the proposed mechanism is a plug-in that can be easily used to improve existing GNNs. We comprehensively evaluate our proposed method on three typical structure shift scenarios, demonstrating its effectiveness in enhancing GNNs' performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2290074141",
+                    "name": "Donglin Xia"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2087010708",
+                    "name": "Nian Liu"
+                },
+                {
+                    "authorId": "2151458697",
+                    "name": "Chuan Shi"
+                }
+            ]
+        },
+        {
+            "paperId": "cefee18a6e90e747b94dc25e71993cd0bcdbecbe",
+            "title": "Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks?",
+            "abstract": "Graph neural networks (GNNs) are vulnerable to adversarial perturbations, especially for topology attacks, and many methods that improve the robustness of GNNs have received considerable attention. Recently, we have witnessed the significant success of large language models (LLMs), leading many to explore the great potential of LLMs on GNNs. However, they mainly focus on improving the performance of GNNs by utilizing LLMs to enhance the node features. Therefore, we ask: Will the robustness of GNNs also be enhanced with the powerful understanding and inference capabilities of LLMs? By presenting the empirical results, we find that despite that LLMs can improve the robustness of GNNs, there is still an average decrease of 23.1% in accuracy, implying that the GNNs remain extremely vulnerable against topology attack. Therefore, another question is how to extend the capabilities of LLMs on graph adversarial robustness. In this paper, we propose an LLM-based robust graph structure inference framework, LLM4RGNN, which distills the inference capabilities of GPT-4 into a local LLM for identifying malicious edges and an LM-based edge predictor for finding missing important edges, so as to recover a robust graph structure. Extensive experiments demonstrate that LLM4RGNN consistently improves the robustness across various GNNs. Even in some cases where the perturbation ratio increases to 40%, the accuracy of GNNs is still better than that on the clean graph.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2284728816",
+                    "name": "Zhongjian Zhang"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2283313383",
+                    "name": "Huichi Zhou"
+                },
+                {
+                    "authorId": "2257366050",
+                    "name": "Yue Yu"
+                },
+                {
+                    "authorId": "16003017",
+                    "name": "Mengmei Zhang"
+                },
+                {
+                    "authorId": "2257052319",
+                    "name": "Cheng Yang"
+                },
+                {
+                    "authorId": "2293890214",
+                    "name": "Chuan Shi"
+                }
+            ]
+        },
+        {
+            "paperId": "f02237ed9eef969fc60656c2355aab1f81b04aa2",
+            "title": "Graph Fairness Learning under Distribution Shifts",
+            "abstract": "Graph neural networks (GNNs) have achieved remarkable performance on graph-structured data. However, GNNs may inherit prejudice from the training data and make discriminatory predictions based on sensitive attributes, such as gender and race. Recently, there has been an increasing interest in ensuring fairness on GNNs, but all of them are under the assumption that the training and testing data are under the same distribution, i.e., training data and testing data are from the same graph. Will graph fairness performance decrease under distribution shifts? How does distribution shifts affect graph fairness learning? All these open questions are largely unexplored from a theoretical perspective. To answer these questions, we first theoretically identify the factors that determine bias on a graph. Subsequently, we explore the factors influencing fairness on testing graphs, with a noteworthy factor being the representation distances of certain groups between the training and testing graph. Motivated by our theoretical analysis, we propose our framework FatraGNN. Specifically, to guarantee fairness performance on unknown testing graphs, we propose a graph generator to produce numerous graphs with significant bias and under different distributions. Then we minimize the representation distances for each certain group between the training graph and generated graphs. This empowers our model to achieve high classification and fairness performance even on generated graphs with significant bias, thereby effectively handling unknown testing graphs. Experiments on real-world and semi-synthetic datasets demonstrate the effectiveness of our model in terms of both accuracy and fairness.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2274190647",
+                    "name": "Yibo Li"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2281845717",
+                    "name": "Yujie Xing"
+                },
+                {
+                    "authorId": "48635390",
+                    "name": "Shaohua Fan"
+                },
+                {
+                    "authorId": "144902428",
+                    "name": "Ruijia Wang"
+                },
+                {
+                    "authorId": "2187868315",
+                    "name": "Yaoqi Liu"
+                },
+                {
+                    "authorId": "2151458697",
+                    "name": "Chuan Shi"
+                }
+            ]
+        },
+        {
+            "paperId": "25612f9294d04a87280b198f036763affe9c2296",
+            "title": "Heterogeneous Graph Propagation Network",
+            "abstract": "Graph neural network (GNN), as a powerful graph representation technique based on deep learning, has shown superior performance and attracted considerable research interest. Recently, some works attempt to generalize GNN to heterogeneous graph which contains different types of nodes and links. Heterogeneous graph neural networks (HeteGNNs) usually follow two steps: aggregate neighbors via single meta-path and then aggregate rich semantics via multiple meta-paths. However, we discover an important semantic confusion phenomenon in HeteGNNs, i.e., with the growth of model depth, the learned node embeddings become indistinguishable, leading to the performance degradation of HeteGNNs. We explain semantic confusion by theoretically deriving that HeteGNNs and multiple meta-paths based random walk are essentially equivalent. Following the theoretical analysis, we propose a novel Heterogeneous graph Propagation Network (HPN) to alleviate the semantic confusion. Specifically, the semantic propagation mechanism improves the node-level aggregating process via absorbing node's local semantic with a proper weight, which makes HPN capture the characteristics of each node and learn distinguishable node embedding with deeper HeteGNN architecture. Then, the semantic fusion mechanism is designed to learn the importance of meta-path and fuse them judiciously. Extensive experimental results show the superior performance of the proposed HPN over the state-of-the-arts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51111816",
+                    "name": "Houye Ji"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "144123161",
+                    "name": "C. Shi"
+                },
+                {
+                    "authorId": "2156645170",
+                    "name": "Bai Wang"
+                },
+                {
+                    "authorId": "152297693",
+                    "name": "Philip S. Yu"
+                }
+            ]
+        },
+        {
+            "paperId": "60057b812d3170c9f7ad15fcecbc8b55672f89ae",
+            "title": "A Generalized Neural Diffusion Framework on Graphs",
+            "abstract": "Recent studies reveal the connection between GNNs and the diffusion process, which motivates many diffusion based GNNs to be proposed. However, since these two mechanisms are closely related, one fundamental question naturally arises: Is there a general diffusion framework that can formally unify these GNNs? The answer to this question can not only deepen our understanding of the learning process of GNNs, but also may open a new door to design a broad new class of GNNs. In this paper, we propose a general diffusion equation framework with the fidelity term, which formally establishes the relationship between the diffusion process with more GNNs. Meanwhile, with this framework, we identify one characteristic of graph diffusion networks, i.e., the current neural diffusion process only corresponds to the first-order diffusion equation. However, by an experimental investigation, we show that the labels of high-order neighbors actually appear monophily property, which induces the similarity based on labels among high-order neighbors without requiring the similarity among first-order neighbors. This discovery motives to design a new high-order neighbor-aware diffusion equation, and derive a new type of graph diffusion network (HiD-Net) based on the framework. With the high-order diffusion equation, HiD-Net is more robust against attacks and works on both homophily and heterophily graphs. We not only theoretically analyze the relation between HiD-Net with high-order random walk, but also provide a theoretical convergence guarantee. Extensive experimental results well demonstrate the effectiveness of HiD-Net over state-of-the-art graph diffusion networks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2274190647",
+                    "name": "Yibo Li"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2274205897",
+                    "name": "Hongrui Liu"
+                },
+                {
+                    "authorId": "2151458697",
+                    "name": "Chuan Shi"
+                }
+            ]
+        },
+        {
+            "paperId": "ae5cb6fa8d5707a6d4585080ad8a102f11f0ab5a",
+            "title": "A Survey on Spectral Graph Neural Networks",
+            "abstract": "Graph neural networks (GNNs) have attracted considerable attention from the research community. It is well established that GNNs are usually roughly divided into spatial and spectral methods. Despite that spectral GNNs play an important role in both graph signal processing and graph representation learning, existing studies are biased toward spatial approaches, and there is no comprehensive review on spectral GNNs so far. In this paper, we summarize the recent development of spectral GNNs, including model, theory, and application. Specifically, we first discuss the connection between spatial GNNs and spectral GNNs, which shows that spectral GNNs can capture global information and have better expressiveness and interpretability. Next, we categorize existing spectral GNNs according to the spectrum information they use, \\ie, eigenvalues or eigenvectors. In addition, we review major theoretical results and applications of spectral GNNs, followed by a quantitative experiment to benchmark some popular spectral GNNs. Finally, we conclude the paper with some future directions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1491450638",
+                    "name": "Deyu Bo"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2152796976",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "143844731",
+                    "name": "Yuan Fang"
+                },
+                {
+                    "authorId": "2110414878",
+                    "name": "Yawen Li"
+                },
+                {
+                    "authorId": "2151458697",
+                    "name": "Chuan Shi"
+                }
+            ]
+        },
+        {
+            "paperId": "07808da6b32d464f66aac31297f070c15499b92b",
+            "title": "Robust Heterogeneous Graph Neural Networks against Adversarial Attacks",
+            "abstract": "Heterogeneous Graph Neural Networks (HGNNs) have drawn increasing attention in recent years and achieved outstanding performance in many tasks. However, despite their wide use, there is currently no understanding of their robustness to adversarial attacks. In this work, we first systematically study the robustness of HGNNs and show that they can be easily fooled by adding the adversarial edge between the target node and large-degree node (i.e., hub). Furthermore, we show two key reasons for such vulnerability of HGNNs: one is perturbation enlargement effect, i.e., HGNNs, failing to encode transiting probability, will enlarge the effect of the adversarial hub in comparison of GCNs, and the other is soft attention mechanism, i.e., such mechanism assigns positive attention values to obviously unreliable neighbors. Based on the two facts, we propose a novel robust HGNN framework RoHe against topology adversarial attacks by equipping an attention purifier, which can prune malicious neighbors based on topology and feature. Specifically, to eliminate the perturbation enlargement, we introduce the metapath-based transiting probability as the prior criterion of the purifier, restraining the confidence of malicious neighbors from the adversarial hub. Then the purifier learns to mask out neighbors with low confidence, thus can effectively alleviate the negative effect of malicious neighbors in the soft attention mechanism. Extensive experiments on different benchmark datasets for multiple HGNNs are conducted, where the considerable improvement of HGNNs under adversarial attacks will demonstrate the effectiveness and generalization ability of our defense framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "16003017",
+                    "name": "Mengmei Zhang"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2109834004",
+                    "name": "Meiqi Zhu"
+                },
+                {
+                    "authorId": "2113917199",
+                    "name": "Chuan Shi"
+                },
+                {
+                    "authorId": "2019870682",
+                    "name": "Zhiqiang Zhang"
+                },
+                {
+                    "authorId": "2151548887",
+                    "name": "Jun Zhou"
+                }
+            ]
+        },
+        {
+            "paperId": "199175151da29da2a310fbd66b10e93c0f1043bb",
+            "title": "Uncovering the Structural Fairness in Graph Contrastive Learning",
+            "abstract": "Recent studies show that graph convolutional network (GCN) often performs worse for low-degree nodes, exhibiting the so-called structural unfairness for graphs with long-tailed degree distributions prevalent in the real world. Graph contrastive learning (GCL), which marries the power of GCN and contrastive learning, has emerged as a promising self-supervised approach for learning node representations. How does GCL behave in terms of structural fairness? Surprisingly, we find that representations obtained by GCL methods are already fairer to degree bias than those learned by GCN. We theoretically show that this fairness stems from intra-community concentration and inter-community scatter properties of GCL, resulting in a much clear community structure to drive low-degree nodes away from the community boundary. Based on our theoretical analysis, we further devise a novel graph augmentation method, called GRAph contrastive learning for DEgree bias (GRADE), which applies different strategies to low- and high-degree nodes. Extensive experiments on various benchmarks and evaluation protocols validate the effectiveness of the proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144902428",
+                    "name": "Ruijia Wang"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2151458697",
+                    "name": "Chuan Shi"
+                },
+                {
+                    "authorId": "1980627927",
+                    "name": "Le Song"
+                }
+            ]
+        },
+        {
+            "paperId": "1c97736423f5ad51f093fb044b47608533590eeb",
+            "title": "Confidence May Cheat: Self-Training on Graph Neural Networks under Distribution Shift",
+            "abstract": "Graph Convolutional Networks (GCNs) have recently attracted vast interest and achieved state-of-the-art performance on graphs, but its success could typically hinge on careful training with amounts of expensive and time-consuming labeled data. To alleviate labeled data scarcity, self-training methods have been widely adopted on graphs by labeling high-confidence unlabeled nodes and then adding them to the training step. In this line, we empirically make a thorough study for current self-training methods on graphs. Surprisingly, we find that high-confidence unlabeled nodes are not always useful, and even introduce the distribution shift issue between the original labeled dataset and the augmented dataset by self-training, severely hindering the capability of self-training on graphs. To this end, in this paper, we propose a novel Distribution Recovered Graph Self-Training framework (DR-GST), which could recover the distribution of the original labeled dataset. Specifically, we first prove the equality of loss function in self-training framework under the distribution shift case and the population distribution if each pseudo-labeled node is weighted by a proper coefficient. Considering the intractability of the coefficient, we then propose to replace the coefficient with the information gain after observing the same changing trend between them, where information gain is respectively estimated via both dropout variational inference and dropedge variational inference in DR-GST. However, such a weighted loss function will enlarge the impact of incorrect pseudo labels. As a result, we apply the loss correction method to improve the quality of pseudo labels. Both our theoretical analysis and extensive experiments on five benchmark datasets demonstrate the effectiveness of the proposed DR-GST, as well as each well-designed component in DR-GST.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2130603394",
+                    "name": "Hongrui Liu"
+                },
+                {
+                    "authorId": "145743766",
+                    "name": "Binbin Hu"
+                },
+                {
+                    "authorId": "2118449003",
+                    "name": "Xiao Wang"
+                },
+                {
+                    "authorId": "2113917199",
+                    "name": "Chuan Shi"
+                },
+                {
+                    "authorId": "2019870682",
+                    "name": "Zhiqiang Zhang"
+                },
+                {
+                    "authorId": "2151548887",
+                    "name": "Jun Zhou"
+                }
+            ]
+        }
+    ]
+}

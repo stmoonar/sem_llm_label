@@ -1,0 +1,372 @@
+{
+    "authorId": "2153516978",
+    "papers": [
+        {
+            "paperId": "2b3552447761071cdda48e61458a5c96fd4a611d",
+            "title": "Reinforcement Logic Rule Learning for Temporal Point Processes",
+            "abstract": "We propose a framework that can incrementally expand the explanatory temporal logic rule set to explain the occurrence of temporal events. Leveraging the temporal point process modeling and learning framework, the rule content and weights will be gradually optimized until the likelihood of the observational event sequences is optimal. The proposed algorithm alternates between a master problem, where the current rule set weights are updated, and a subproblem, where a new rule is searched and included to best increase the likelihood. The formulated master problem is convex and relatively easy to solve using continuous optimization, whereas the subproblem requires searching the huge combinatorial rule predicate and relationship space. To tackle this challenge, we propose a neural search policy to learn to generate the new rule content as a sequence of actions. The policy parameters will be trained end-to-end using the reinforcement learning framework, where the reward signals can be efficiently queried by evaluating the subproblem objective. The trained policy can be used to generate new rules in a controllable way. We evaluate our methods on both synthetic and real healthcare datasets, obtaining promising results.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155848487",
+                    "name": "Chao Yang"
+                },
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "2054043626",
+                    "name": "Kun Gao"
+                },
+                {
+                    "authorId": "2228313627",
+                    "name": "Shuang Li"
+                }
+            ]
+        },
+        {
+            "paperId": "9e761f4ac57239d68958c817858f5b6627c01e54",
+            "title": "FedSkill: Privacy Preserved Interpretable Skill Learning via Imitation",
+            "abstract": "Imitation learning that replicates experts' skills via their demonstrations has shown significant success in various decision-making tasks. However, two critical challenges still hinder the deployment of imitation learning techniques in real-world application scenarios. First, existing methods lack the intrinsic interpretability to explicitly explain the underlying rationale of the learned skill and thus making learned policy untrustworthy. Second, due to the scarcity of expert demonstrations from each end user (client), learning a policy based on different data silos is necessary but challenging in privacy-sensitive applications such as finance and healthcare. To this end, we present a privacy-preserved interpretable skill learning framework (FedSkill) that enables global policy learning to incorporate data from different sources and provides explainable interpretations to each local user without violating privacy and data sovereignty. Specifically, our proposed interpretable skill learning model can capture the varying patterns in the trajectories of expert demonstrations, and extract prototypical information as skills that provide implicit guidance for policy learning and explicit explanations in the reasoning process. Moreover, we design a novel aggregation mechanism coupled with the based skill learning model to preserve global information utilization and maintain local interpretability under the federated framework. Thoroughly experiments on three datasets and empirical studies demonstrate that our proposed FedSkill framework not only outperforms state-of-the-art imitation learning methods but also exhibits good interpretability under a federated setting. Our proposed FedSkill framework is the first attempt to bridge the gaps among federated learning, interpretable machine learning, and imitation learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214140574",
+                    "name": "Yushan Jiang"
+                },
+                {
+                    "authorId": "3007026",
+                    "name": "Wenchao Yu"
+                },
+                {
+                    "authorId": "2451800",
+                    "name": "Dongjin Song"
+                },
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "145859270",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "2145225646",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "4a79c16afd26e9c91d5870a0041f519534131fcb",
+            "title": "Hierarchical Imitation Learning via Subgoal Representation Learning for Dynamic Treatment Recommendation",
+            "abstract": "Dynamic Treatment Recommendation (DTR) is a sequence of tailored treatment decision rules which can be grouped as individual sub-tasks. As the reward signals in DTR are hard to design, Imitation Learning (IL) has achieved great success as it is effective in mimicking doctors' behaviors from their demonstrations without explicit reward signals. As a patient may have several different symptoms, the behaviors in doctors' demonstrations can often be grouped to handle individual symptoms. However, a single flat policy learned by IL is difficult to mimic doctors' demonstrations with such hierarchical structure, where low-level behaviors are switching from one symptom to another controlled by high-level decisions. Due to this observation, we consider Hierarchical Imitation Learning methods as good solutions for DTR. In this paper, we propose a novel Subgoal conditioned HIL framework (short for SHIL), where a high-level policy sequentially sets a subgoal for each sub-task without prior knowledge, and the low-level policy for sub-tasks is learned to reach the subgoal. To get rid of prior knowledge, a self-supervised learning method is proposed to learn an effective representation for each subgoal. More specifically, we carefully designed to encourage diverse representations among different subgoals. To demonstrate that SHIL is able to learn meaningful high-level policy and low-level policy that accurately reproduces complex doctors' demonstrations, we conduct experiments on a real-world medical data from health care domain, MIMIC-III. Compared with state-of-the-art baselines, SHIL improves the likelihood of patient survival by a significant margin and provides explainable recommendation with hierarchical structure.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "2824766",
+                    "name": "Ruiming Tang"
+                },
+                {
+                    "authorId": "143644849",
+                    "name": "Xiaofeng He"
+                },
+                {
+                    "authorId": "1996703",
+                    "name": "Xiuqiang He"
+                }
+            ]
+        },
+        {
+            "paperId": "21f5d94cb6674604df1927dcdd8f0f5186a09f92",
+            "title": "Hierarchical Multiagent Reinforcement Learning for Allocating Guaranteed Display Ads",
+            "abstract": "In this article, we study the problem of guaranteed display ads (GDAs) allocation, which requires proactively allocate display ads to different impressions to fulfill their impression demands indicated in the contracts. Existing methods for this problem either assume the impressions that are static or solely consider a specific ad\u2019s benefits. Thus, it is hard to generalize to the industrial production scenario where the impressions are dynamical and large-scale, and the overall allocation optimality of all the considered GDAs is required. To bridge this gap, we formulate this problem as a sequential decision-making problem in the scope of multiagent reinforcement learning (MARL), by assigning an allocation agent to each ad and coordinating all the agents for allocating GDAs. The inputs are the states (e.g., the demands of the ad and the remaining time steps for displaying the ads) of each ad and the impressions at different time steps, and the outputs are the display ratios of each ad for each impression. Specifically, we propose a novel hierarchical MARL (HMARL) method that creates hierarchies over the agent policies to handle a large number of ads and the dynamics of impressions. HMARL contains: 1) a manager policy to navigate the agent to choose an appropriate subpolicy and 2) a set of subpolicies that let the agents perform diverse conditioning on their states. Extensive experiments on three real-world data sets from the Tencent advertising platform with tens of millions of records demonstrate significant improvements of HMARL over state-of-the-art approaches.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "2112661118",
+                    "name": "Lei Han"
+                },
+                {
+                    "authorId": "2295277027",
+                    "name": "Xinru Chen"
+                },
+                {
+                    "authorId": "2157461624",
+                    "name": "Chengchang Li"
+                },
+                {
+                    "authorId": "1768190",
+                    "name": "Junzhou Huang"
+                },
+                {
+                    "authorId": "2155042473",
+                    "name": "Weinan Zhang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "143644849",
+                    "name": "Xiaofeng He"
+                },
+                {
+                    "authorId": "2061549073",
+                    "name": "Dijun Luo"
+                }
+            ]
+        },
+        {
+            "paperId": "a48e1c4fc515049f715074e9e8501c5cf792b0a1",
+            "title": "Understanding the Spread of COVID-19 Epidemic: A Spatio-Temporal Point Process View",
+            "abstract": "Since the first coronavirus case was identified in the U.S. on Jan. 21, more than 1 million people in the U.S. have confirmed cases of COVID-19. This infectious respiratory disease has spread rapidly across more than 3000 counties and 50 states in the U.S. and have exhibited evolutionary clustering and complex triggering patterns. It is essential to understand the complex spacetime intertwined propagation of this disease so that accurate prediction or smart external intervention can be carried out. In this paper, we model the propagation of the COVID-19 as spatio-temporal point processes and propose a generative and intensity-free model to track the spread of the disease. We further adopt a generative adversarial imitation learning framework to learn the model parameters. In comparison with the traditional likelihood-based learning methods, this imitation learning framework does not need to prespecify an intensity function, which alleviates the model-misspecification. Moreover, the adversarial learning procedure bypasses the difficult-to-evaluate integral involved in the likelihood evaluation, which makes the model inference more scalable with the data and variables. We showcase the dynamic learning performance on the COVID-19 confirmed cases in the U.S. and evaluate the social distancing policy based on the learned generative model.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "31023698",
+                    "name": "Shuang Li"
+                },
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "1425082935",
+                    "name": "Xinyun Chen"
+                },
+                {
+                    "authorId": "2115566004",
+                    "name": "Yixiang Fang"
+                },
+                {
+                    "authorId": "2157996506",
+                    "name": "Yan Song"
+                }
+            ]
+        },
+        {
+            "paperId": "d37a8e9cea2f1e1b45b4912d243eee1b9dd5f756",
+            "title": "TCL: Transformer-based Dynamic Graph Modelling via Contrastive Learning",
+            "abstract": "Dynamic graph modeling has recently attracted much attention due to its extensive applications in many real-world scenarios, such as recommendation systems, financial transactions, and social networks. Although many works have been proposed for dynamic graph modeling in recent years, effective and scalable models are yet to be developed. In this paper, we propose a novel graph neural network approach, called TCL, which deals with the dynamically-evolving graph in a continuous-time fashion and enables effective dynamic node representation learning that captures both the temporal and topology information. Technically, our model contains three novel aspects. First, we generalize the vanilla Transformer to temporal graph learning scenarios and design a graph-topology-aware transformer. Secondly, on top of the proposed graph transformer, we introduce a two-stream encoder that separately extracts representations from temporal neighborhoods associated with the two interaction nodes and then utilizes a co-attentional transformer to model inter-dependencies at a semantic level. Lastly, we are inspired by the recently developed contrastive learning and propose to optimize our model by maximizing mutual information (MI) between the predictive representations of two future interaction nodes. Benefiting from this, our dynamic representations can preserve high-level (or global) semantics about interactions and thus is robust to noisy interactions. To the best of our knowledge, this is the first attempt to apply contrastive learning to representation learning on dynamic graphs. We evaluate our model on four benchmark datasets for interaction prediction and experiment results demonstrate the superiority of our model.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "2072561851",
+                    "name": "Xiaofu Chang"
+                },
+                {
+                    "authorId": "31023698",
+                    "name": "Shuang Li"
+                },
+                {
+                    "authorId": "2070014163",
+                    "name": "Yunfei Chu"
+                },
+                {
+                    "authorId": "2155493824",
+                    "name": "Hui Li"
+                },
+                {
+                    "authorId": "2155467859",
+                    "name": "Wei Zhang"
+                },
+                {
+                    "authorId": "143644849",
+                    "name": "Xiaofeng He"
+                },
+                {
+                    "authorId": "1779453",
+                    "name": "Le Song"
+                },
+                {
+                    "authorId": "1709595",
+                    "name": "Jingren Zhou"
+                },
+                {
+                    "authorId": "38385080",
+                    "name": "Hongxia Yang"
+                }
+            ]
+        },
+        {
+            "paperId": "709eaa95f9467c0f59062eaf6d6e3e1c5131d00e",
+            "title": "Temporal Logic Point Processes",
+            "abstract": "We propose a modeling framework for event data and aim to answer questions such as when and why the next event would happen. Our proposed model excels in small data regime with the ability to incorporate domain knowledge in terms of logic rules. We model the dynamics of the event starts and ends via intensity function with the structures informed by a set of \ufb01rst-order temporal logic rules. Using the softened representation of temporal relations, and a weighted combination of logic rules, our probabilistic model can deal with uncertainty in events. Furthermore, many well-known point processes (e.g., Hawkes process, self-correcting point process) can be interpreted as special cases of our model given simple temporal logic rules. Our model, therefore, riches the family of point processes. We derive a maximum likelihood estimation procedure for the proposed temporal logic model and show that it can lead to accurate predictions when data are sparse and domain knowledge is critical.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "31023698",
+                    "name": "Shuang Li"
+                },
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "2145052027",
+                    "name": "Ruizhi Zhang"
+                },
+                {
+                    "authorId": "2072561851",
+                    "name": "Xiaofu Chang"
+                },
+                {
+                    "authorId": "1998927695",
+                    "name": "Xuqin Liu"
+                },
+                {
+                    "authorId": "145646522",
+                    "name": "Yao Xie"
+                },
+                {
+                    "authorId": "145475951",
+                    "name": "Yuan Qi"
+                },
+                {
+                    "authorId": "1779453",
+                    "name": "Le Song"
+                }
+            ]
+        },
+        {
+            "paperId": "826fa326a1ccf3d45db9f76a5c701a7e814611cf",
+            "title": "Adversarial Cooperative Imitation Learning for Dynamic Treatment Regimes\u2731",
+            "abstract": "Recent developments in discovering dynamic treatment regimes (DTRs) have heightened the importance of deep reinforcement learning (DRL) which are used to recover the doctor\u2019s treatment policies. However, existing DRL-based methods expose the following limitations: 1) supervised methods based on behavior cloning suffer from compounding errors; 2) the self-defined reward signals in reinforcement learning models are either too sparse or need clinical guidance; 3) only positive trajectories (e.g. survived patients) are considered in current imitation learning models, with negative trajectories (e.g. deceased patients) been largely ignored, which are examples of what not to do and could help the learned policy avoid repeating mistakes. To address these limitations, in this paper, we propose the adversarial cooperative imitation learning model, ACIL, to deduce the optimal dynamic treatment regimes that mimics the positive trajectories while differs from the negative trajectories. Specifically, two discriminators are used to help achieve this goal: an adversarial discriminator is designed to minimize the discrepancies between the trajectories generated from the policy and the positive trajectories, and a cooperative discriminator is used to distinguish the negative trajectories from the positive and generated trajectories. The reward signals from the discriminators are utilized to refine the policy for dynamic treatment regimes. Experiments on the publicly real-world medical data demonstrate that ACIL improves the likelihood of patient survival and provides better dynamic treatment regimes with the exploitation of information from both positive and negative trajectories.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "3007026",
+                    "name": "Wenchao Yu"
+                },
+                {
+                    "authorId": "143644849",
+                    "name": "Xiaofeng He"
+                },
+                {
+                    "authorId": "92186360",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "2073748732",
+                    "name": "Martin Renqiang Ren"
+                },
+                {
+                    "authorId": "46315104",
+                    "name": "Wei Wang"
+                },
+                {
+                    "authorId": "2991105",
+                    "name": "Bo Zong"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                }
+            ]
+        },
+        {
+            "paperId": "ad99b9ba5a2b5919b064fda7d4f52a335c44cb7c",
+            "title": "Deep Reinforcement Learning for Greenhouse Climate Control",
+            "abstract": "Worldwide, the area of greenhouse production is increasing with the rapid growth of global population and demands for fresh food. However, the greenhouse industry encounters challenges to find automatic control policy. Reinforcement Learning (RL) is a powerful tool in solving the autonomous decision making problems. In this paper, we propose a novel Deep Reinforcement Learning framework for cucumber climate control. Although some machine learning methods have been proposed to address the dynamic climate control problem, these methods have two major issues. First, they only consider the current reward (e.g., the fruit weight of the cucumber). Second, previous study only considers one control variable. However, the growth of crops are impacted by multiple factors synchronously (e.g., CO2 and Temperature).To solve these challenges, we propose a Deep Reinforcement learning based climate control method, which can model future reward explicitly. We further consider the fruit weight and the cost of the planting in order to improve the cumulative fruit weight and reduce the costs.Extensive experiments are conducted on the cucumber simulator environment have shown the superior performance of our methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "143644849",
+                    "name": "Xiaofeng He"
+                },
+                {
+                    "authorId": "2061549073",
+                    "name": "Dijun Luo"
+                }
+            ]
+        },
+        {
+            "paperId": "b131050fafe21607b8171f83fdf233428a608ed4",
+            "title": "Learning Robust Representations with Graph Denoising Policy Network",
+            "abstract": "Existing representation learning methods based on graph neural networks and their variants rely on the aggregation of neighborhood information, which makes it sensitive to noises in the graph, e.g. erroneous links between nodes, incorrect/missing node features. In this paper, we propose Graph Denoising Policy Network (short for GDPNet) to learn robust representations from noisy graph data through reinforcement learning. GDPNet first selects signal neighborhoods for each node, and then aggregates the information from the selected neighborhoods to learn node representations for the down-stream tasks. Specifically, in the signal neighborhood selection phase, GDPNet optimizes the neighborhood for each target node by formulating the process of removing noisy neighborhoods as a Markov decision process and learning a policy with task-specific rewards received from the representation learning phase. In the representation learning phase, GDPNet aggregates features from signal neighbors to generate node representations for down-stream tasks, and provides task-specific rewards to the signal neighbor selection phase. These two phases are jointly trained to select optimal sets of neighbors for target nodes with maximum cumulative task-specific rewards, and to learn robust representations for nodes. Experimental results on node classification task demonstrate the effectiveness of GDNet, outperforming the state-of-the-art graph representation learning methods on several well-studied datasets.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153516978",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "3007026",
+                    "name": "Wenchao Yu"
+                },
+                {
+                    "authorId": "46315104",
+                    "name": "Wei Wang"
+                },
+                {
+                    "authorId": "92186360",
+                    "name": "Wei Cheng"
+                },
+                {
+                    "authorId": "143715293",
+                    "name": "W. Zhang"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                },
+                {
+                    "authorId": "143644849",
+                    "name": "Xiaofeng He"
+                },
+                {
+                    "authorId": "2145225543",
+                    "name": "Haifeng Chen"
+                }
+            ]
+        }
+    ]
+}

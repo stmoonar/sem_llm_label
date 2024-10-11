@@ -1,0 +1,467 @@
+{
+    "authorId": "2580112",
+    "papers": [
+        {
+            "paperId": "7cf7a94dbb208a212ea1b0ae3c44abf9c13e088c",
+            "title": "Handling Missing Sensors in Topology-Aware IoT Applications with Gated Graph Neural Network",
+            "abstract": "Reliable data collection, transmission, and delivery on Internet of Things (IoT) systems is crucial in order to provide high-quality intelligent services. However, sensor data delivery can be interrupted for various reasons, such as sensor malfunction, network failures, and external attacks. Thus, only data from a partial set of sensors may be available. We call it the missing sensor problem. This problem can lead to severe performance degradation at inference time by neural-network-based recognition models trained on the complete sensor set. This paper enhances the robustness of neural network models to the missing sensor problem by introducing a novel feature reconstruction module, named the graph recovery module, that handles missing sensors directly inside the network. Specifically, we consider topology-aware IoT applications, where sensors are placed on a physically interconnected network. We design a novel neural message passing mechanism that logically mimics physical network topology, based on recent advances in graph neural networks (GNNs). We rely on a spatial locality assumption, where only correlations between physically connected sensors are explicitly explored. When encountering missing sensors, information is passed from available sensors to missing sensors to be used to reconstruct their features. Moreover, at each message passing step, we utilize a gating mechanism inspired by Gated Recurrent Units (GRUs) to automatically control information flow between available sensors and missing sensors. We empirically evaluate the reconstruction performance of the graph recovery module with two representative IoT applications; human activity recognition (HAR) and electroencephalogram (EEG)-based motor-imagery classification, on three public datasets. Two different backbone networks are utilized for the tasks. Our design is shown to effectively maintain model performance, suffering only 7% to 18% accuracy loss when as much as 90% of sensors are removed, compared to a drop of 15% to 47% in the accuracy of competing state-of-the-art algorithms under the same conditions. The accuracy gap is largest when more sensors are missing.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "2108691987",
+                    "name": "Yifei Huang"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "2124948781",
+                    "name": "Jinyang Li"
+                },
+                {
+                    "authorId": "49981269",
+                    "name": "Tianshi Wang"
+                },
+                {
+                    "authorId": "2144408471",
+                    "name": "Ruijie Wang"
+                },
+                {
+                    "authorId": "1928291861",
+                    "name": "Chaoqi Yang"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        },
+        {
+            "paperId": "e7c493a08a2afcc626950b7b9f1db645cd1f8a31",
+            "title": "Scheduling Real-time Deep Learning Services as Imprecise Computations",
+            "abstract": "The paper presents a real-time computing framework for intelligent real-time edge services, on behalf of local embedded devices that are themselves unable to support extensive computations. The work contributes to a new direction in realtime computing that develops scheduling algorithms for machine intelligence tasks that enable anytime prediction. We show that deep neural network workflows can be cast as imprecise computations, each with a mandatory part and (several) optional parts whose execution utility depends on input data. With our design, deep neural networks can be preempted before their completion and support anytime inference. The goal of the realtime scheduler is to maximize the average accuracy of deep neural network outputs while meeting task deadlines, thanks to opportunistic shedding of the least necessary optional parts. The work is motivated by the proliferation of increasingly ubiquitous but resource-constrained embedded devices (for applications ranging from autonomous cars to the Internet of Things) and the desire to develop services that endow them with intelligence. Experiments on recent GPU hardware and a state of the art deep neural network for machine vision illustrate that our scheme can increase the overall accuracy by 10% \u223c 20% while incurring (nearly) no deadline misses.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "2232700",
+                    "name": "Yifan Hao"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "49981269",
+                    "name": "Tianshi Wang"
+                },
+                {
+                    "authorId": "2124948781",
+                    "name": "Jinyang Li"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        },
+        {
+            "paperId": "5777a7b4e5d477aabfd0651645b313c97751b08f",
+            "title": "STFNets: Learning Sensing Signals from the Time-Frequency Perspective with Short-Time Fourier Neural Networks",
+            "abstract": "Recent advances in deep learning motivate the use of deep neural networks in Internet-of-Things (IoT) applications. These networks are modelled after signal processing in the human brain, thereby leading to significant advantages at perceptual tasks such as vision and speech recognition. IoT applications, however, often measure physical phenomena, where the underlying physics (such as inertia, wireless signal propagation, or the natural frequency of oscillation) are fundamentally a function of signal frequencies, offering better features in the frequency domain. This observation leads to a fundamental question: For IoT applications, can one develop a new brand of neural network structures that synthesize features inspired not only by the biology of human perception but also by the fundamental nature of physics? Hence, in this paper, instead of using conventional building blocks (e.g., convolutional and recurrent layers), we propose a new foundational neural network building block, the Short-Time Fourier Neural Network (STFNet). It integrates a widely-used time-frequency analysis method, the Short-Time Fourier Transform, into data processing to learn features directly in the frequency domain, where the physics of underlying phenomena leave better footprints. STFNets bring additional flexibility to time-frequency analysis by offering novel nonlinear learnable operations that are spectral-compatible. Moreover, STFNets show that transforming signals to a domain that is more connected to the underlying physics greatly simplifies the learning process. We demonstrate the effectiveness of STFNets with extensive experiments on a wide range of sensing inputs, including motion sensors, WiFi, ultrasound, and visible light. STFNets significantly outperform the state-of-the-art deep learning models in all experiments. A STFNet, therefore, demonstrates superior capability as the fundamental building block of deep neural networks for IoT applications for various sensor inputs 1.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "51517417",
+                    "name": "Ailing Piao"
+                },
+                {
+                    "authorId": "2116484376",
+                    "name": "Wenjun Jiang"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "2124948781",
+                    "name": "Jinyang Li"
+                },
+                {
+                    "authorId": "49981269",
+                    "name": "Tianshi Wang"
+                },
+                {
+                    "authorId": "3225210",
+                    "name": "Shaohan Hu"
+                },
+                {
+                    "authorId": "143843304",
+                    "name": "Lu Su"
+                },
+                {
+                    "authorId": "145325584",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        },
+        {
+            "paperId": "6bb27e2c7c4cd081e13613d3cbce3fd3b06e6b63",
+            "title": "Eugene: Towards Deep Intelligence as a Service",
+            "abstract": "The paper discusses an emerging suite of machine intelligence services that are of increasing importance in the highly instrumented world of the Internet of Things (IoT). The suite, called Eugene, would offer a form of intelligent behavior (based on deep neural networks) to otherwise simple embedded devices; the clients of the service. These devices would benefit from service resources to learn from data and to perform intelligent inference, classification, prediction, and estimation tasks that they are too limited to carry out on their own. The paper discusses the taxonomy of such services and the state of implementation, as well as the various challenges entailed, including scheduling, caching (of intelligent functions), and cooperative learning.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "1791322",
+                    "name": "Kasthuri Jayarajah"
+                },
+                {
+                    "authorId": "2150552689",
+                    "name": "Archan Misra"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                },
+                {
+                    "authorId": "2232700",
+                    "name": "Yifan Hao"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "51517417",
+                    "name": "Ailing Piao"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "3225210",
+                    "name": "Shaohan Hu"
+                },
+                {
+                    "authorId": "144847130",
+                    "name": "Dulanga Weerakoon"
+                }
+            ]
+        },
+        {
+            "paperId": "800d083691d2c1c1e511ae6c09a1c051908912f7",
+            "title": "Unsupervised Fact-finding with Multi-modal Data in Social Sensing",
+            "abstract": "This paper develops unsupervised fact-finding algorithms that combine consideration of multi-modal microblog content features with analysis of propagation patterns to determine veracity of microblog observations. In contrast to prior solutions that use labeled examples to learn content features that are correlated with veracity, our approach is entirely unsupervised. Hence, given no prior training data, we jointly learn the importance of different content features together with the veracity of observations using propagation patterns as an indicator of perceived content reliability. To offer robustness, we describe fact-finding extensions that handle the existence of malicious colluding sources. We evaluate the performance of the proposed algorithms on real-world data sets collected from Twitter. The evaluation results demonstrate that the proposed algorithms outperform the existing fact-finding approaches, and offer tunable knobs for controlling robustness/performance trade-offs in the presence of malicious sources.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "143843304",
+                    "name": "Lu Su"
+                },
+                {
+                    "authorId": "3623271",
+                    "name": "Zhibo Wang"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "1795727",
+                    "name": "Lance M. Kaplan"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        },
+        {
+            "paperId": "a4b8199de7fa094fd34eb9ff39dea970e2aac543",
+            "title": "GreenRoute: A Generalizable Fuel-Saving Vehicular Navigation Service",
+            "abstract": "This paper presents GreenRoute, a fuel-saving vehicular navigation system whose contribution is motivated by one of the key challenges in the design of autonomic services: namely, designing the service in a manner that reduces operating cost. GreenRoute achieves this end, in the specific context of fuel-saving vehicular navigation, by significantly improving the generalizability of fuel consumption models it learns (in order to recommend fuel-saving routes to drivers). By learning fuel consumption models that apply seamlessly across vehicles and routes, GreenRoute eliminates one of the key incremental costs unique to fuel-saving navigation: namely, the cost of upkeep with ever-changing fuel-consumption-specific route and vehicle parameters globally. Unlike shortest or fastest routes (that depend only on map topology and traffic), minimum-fuel routes depend additionally on the vehicle engine. This makes fuel-efficient routes harder to compute in a generic fashion, compared to shortest and fastest routes. The difficulty results in two additional costs. First, more route features need to be collected (and updated) for predicting fuel consumption, such as the nature of traffic regulators. Second, fuel prediction remains specific to the individual vehicle type, which requires continual upkeep with new car types and parameters. The contribution of this paper lies in deriving and implementing a fuel consumption model that avoids both of the above two sources of cost. To measure route recommendation quality, we test the system (using 21 vehicles and over 2400 miles driven in seven US cities) by comparing fuel consumption on our routes against both Google Maps' routes and the shortest routes. Results show that, on average, our routes save 10.8% fuel compared to Google Maps' routes and save 8.4% compared to the shortest routes. This is roughly comparable to services that maintain individualized vehicle models, suggesting that our low-cost models do not come at the expense of quality reduction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                }
+            ]
+        },
+        {
+            "paperId": "aff41cfe0a7648bc2b693f3f1dd0e45a13af97b6",
+            "title": "SADeepSense: Self-Attention Deep Learning Framework for Heterogeneous On-Device Sensors in Internet of Things Applications",
+            "abstract": "Deep neural networks are becoming increasingly popular in Internet of Things (IoT) applications. Their capabilities of fusing multiple sensor inputs and extracting temporal relationships can enhance intelligence in a wide range of applications. However, one key problem is the missing of adaptation to heterogeneous on-device sensors. These low-end sensors on IoT devices possess different accuracies, granularities, and amounts of information, whose sensing qualities are heterogeneous and vary over time. The existing deep learning frameworks for IoT applications usually treat every sensor input equally over time or increase model capacity in an ad-hoc manner, lacking the ability to identify and exploit the sensor heterogeneities. In this work, we propose SADeepSense, a deep learning framework that can automatically balance the contributions of multiple sensor inputs over time by exploiting their sensing qualities. SADeepSense makes two key contributions. First, SADeepSense employs the self-attention mechanism to learn the correlations among different sensors over time with no additional supervision. The correlations are then applied to infer the sensing qualities and to reassign model concentrations in multiple sensors over time. Second, instead of directly learning the sensing qualities and contributions, SADeepSense generates the residual concentrations that are deviated from the equal contributions, which helps to stabilize the training process. We demonstrate the effectiveness of SADeepSense with two representative IoT sensing tasks: heterogeneous human activity recognition with motion sensors and gesture recognition with the wireless signal. SADeepSense consistently outperforms the state-of-the-art methods by a clear margin. In addition, we show that SADeepSense only imposes little additional resource-consumption burden on embedded devices compared to the corresponding state-of-the-art framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "2232700",
+                    "name": "Yifan Hao"
+                },
+                {
+                    "authorId": "51517417",
+                    "name": "Ailing Piao"
+                },
+                {
+                    "authorId": "3225210",
+                    "name": "Shaohan Hu"
+                },
+                {
+                    "authorId": "2115435534",
+                    "name": "Su Lu"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        },
+        {
+            "paperId": "bc8d466630f07ac8f44136abd6813fb084e73b18",
+            "title": "A Latent Hawkes Process Model for Event Clustering and Temporal Dynamics Learning with Applications in GitHub",
+            "abstract": "Large volumes of event data are becoming increasingly available on online social networks. These events are usually causally dependent to each other, reflecting the interactions and collaborations among different parties. Learning and interpreting the temporal patterns and dynamics within these event streams plays an important role in many practical applications, such as trend prediction and anomaly detection. Since causal dependencies can be reflected in both event time (i.e., when) and event content (i.e., who and what), we thus develop a user community based generative model, called latent Hawkes process (LHP), taking into account both-side information to illustrate the generation of such inter-dependent event streams on GitHub repositories, where each attribute is assumed to be generated by interplays between correlated latent communities. Through learning of our model, two functionalities are fulfilled concurrently: event clustering (i.e., community discovery) and temporal dependency learning among these clusters (i.e., dependency profiling). To do so, we design an EM-based framework integrating sequential Monte Carlo sampling to estimate model parameters in an end-to-end manner. Through experiments on practical GitHub event data, we validate the effectiveness of LHP in extracting user community structures and learning their correlated temporal dynamics. Such knowledge further enables us to gain new insights into the development status of software, such as the project persistence and anomaly detection.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "9507379",
+                    "name": "Xinzhe Fu"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        },
+        {
+            "paperId": "e9550958076af74d509b7ed1378e860c25fa6cfb",
+            "title": "Simulation Evaluation of Fuel-Saving Systems in the City of Chicago",
+            "abstract": "This paper presents realistic traffic simulations in four representative regions in Chicago, using real map data and historical traffic statistics, to estimate the amount of fuel that can be saved by two types of systems, namely, a Green Light Optimal Speed Advisory (GLOSA) system and an Eco-Routing system. In particular, two previous systems called GreenDrive and GreenRoute are selected to estimate how much fuel they can save in a year, assuming they enjoy the same popularity as Google Maps. Evaluating intelligent transportation systems in simulation has attracted significant research efforts as large scale real-world experiments are often too expensive to carry out. However, simulation-based evaluations pose serious questions on how real the simulated environments are. In this paper, we resort to several data sources from the city of Chicago to quantify the approximation in simulated traffic, so as to convincingly derive the amount of fuel savings on a larger scale. Specifically, we create SUMO simulations of four real regions of Chicago, and utilize traffic counts data, road speed data, and taxi trips data to validate each simulation scenario. In the end, we show that by using our previously proposed systems, the estimated fuel saved in a year can be 17.6 million gallons for the entire Chicago area.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "153626198",
+                    "name": "Dongxin Liu"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "1390628682",
+                    "name": "Shengzhong Liu"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        },
+        {
+            "paperId": "17cd8f24e81cf2400c130bec41fc9a40ab2cf4d8",
+            "title": "Deep Learning for the Internet of Things",
+            "abstract": "How can the advantages of deep learning be brought to the emerging world of embedded IoT devices? The authors discuss several core challenges in embedded and mobile deep learning, as well as recent solutions demonstrating the feasibility of building IoT applications that are powered by effective, efficient, and reliable deep learning models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2325031",
+                    "name": "Shuochao Yao"
+                },
+                {
+                    "authorId": "2580112",
+                    "name": "Yiran Zhao"
+                },
+                {
+                    "authorId": "2085709",
+                    "name": "Aston Zhang"
+                },
+                {
+                    "authorId": "3225210",
+                    "name": "Shaohan Hu"
+                },
+                {
+                    "authorId": "3395273",
+                    "name": "Huajie Shao"
+                },
+                {
+                    "authorId": "145657504",
+                    "name": "Chao Zhang"
+                },
+                {
+                    "authorId": "143843304",
+                    "name": "Lu Su"
+                },
+                {
+                    "authorId": "1730531",
+                    "name": "T. Abdelzaher"
+                }
+            ]
+        }
+    ]
+}

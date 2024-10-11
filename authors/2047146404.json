@@ -1,0 +1,209 @@
+{
+    "authorId": "2047146404",
+    "papers": [
+        {
+            "paperId": "2b054eb2be8fbb261503370323e4442602eddeed",
+            "title": "Fact Ranking over Large-Scale Knowledge Graphs with Reasoning Embedding Models",
+            "abstract": "Knowledge graphs (KGs) serve as the backbone of many applications such as recommendation systems and question answering. All these applications require reasoning about the relevance of facts in a KG to downstream applications. In this work, we describe our efforts in building a solution to reason about the importance of facts over continuously updated industry-scale KGs. We focus on the problem of fact ranking and evaluate to what extent modern knowledge graph embedding (KGE) models provide a representation for addressing this problem. To this end, we discuss unique challenges associated with solving this task in industrial settings and evaluate how accurately different KGE models and text-based embedding models can solve the problem of fact ranking.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40046694",
+                    "name": "Hongyu Ren"
+                },
+                {
+                    "authorId": "143661472",
+                    "name": "A. Mousavi"
+                },
+                {
+                    "authorId": "4047075",
+                    "name": "Anil Pacaci"
+                },
+                {
+                    "authorId": "2087061163",
+                    "name": "S. R. Chowdhury"
+                },
+                {
+                    "authorId": "2047146404",
+                    "name": "J. Mohoney"
+                },
+                {
+                    "authorId": "1743316",
+                    "name": "Ihab F. Ilyas"
+                },
+                {
+                    "authorId": "1718694",
+                    "name": "Yunyao Li"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                }
+            ]
+        },
+        {
+            "paperId": "4f662c42b2bd52422b70d8f44175f33cec4f8969",
+            "title": "High-Throughput Vector Similarity Search in Knowledge Graphs",
+            "abstract": "There is an increasing adoption of machine learning for encoding data into vectors to serve online recommendation and search use cases. As a result, recent data management systems propose augmenting query processing with online vector similarity search. In this work, we explore vector similarity search in the context of Knowledge Graphs (KGs). Motivated by the tasks of finding related KG queries and entities for past KG query workloads, we focus on hybrid vector similarity search (hybrid queries for short) where part of the query corresponds to vector similarity search and part of the query corresponds to predicates over relational attributes associated with the underlying data vectors. For example, given past KG queries for a song entity, we want to construct new queries for new song entities whose vector representations are close to the vector representation of the entity in the past KG query. But entities in a KG also have non-vector attributes such as a song associated with an artist, a genre, and a release date. Therefore, suggested entities must also satisfy query predicates over non-vector attributes beyond a vector-based similarity predicate. While these tasks are central to KGs, our contributions are generally applicable to hybrid queries. In contrast to prior works that optimize online queries, we focus on enabling efficient batch processing of past hybrid query workloads. We present our system, HQI, for high-throughput batch processing of hybrid queries. We introduce a workload-aware vector data partitioning scheme to tailor the vector index layout to the given workload and describe a multi-query optimization technique to reduce the overhead of vector similarity computations. We evaluate our methods on industrial workloads and demonstrate that HQI yields a 31\u00d7 improvement in throughput for finding related KG queries compared to existing hybrid query processing approaches.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047146404",
+                    "name": "J. Mohoney"
+                },
+                {
+                    "authorId": "4047075",
+                    "name": "Anil Pacaci"
+                },
+                {
+                    "authorId": "2087061163",
+                    "name": "S. R. Chowdhury"
+                },
+                {
+                    "authorId": "143661472",
+                    "name": "A. Mousavi"
+                },
+                {
+                    "authorId": "1743316",
+                    "name": "Ihab F. Ilyas"
+                },
+                {
+                    "authorId": "1856878",
+                    "name": "U. F. Minhas"
+                },
+                {
+                    "authorId": "32546616",
+                    "name": "Jeffrey Pound"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                }
+            ]
+        },
+        {
+            "paperId": "36b7419166e470d65a84dad4ce4aa7857d7573fe",
+            "title": "MariusGNN: Resource-Efficient Out-of-Core Training of Graph Neural Networks",
+            "abstract": "We study training of Graph Neural Networks (GNNs) for large-scale graphs. We revisit the premise of using distributed training for billion-scale graphs and show that for graphs that fit in main memory or the SSD of a single machine, out-of-core pipelined training with a single GPU can outperform state-of-the-art (SoTA) multi-GPU solutions. We introduce MariusGNN, the first system that utilizes the entire storage hierarchy---including disk---for GNN training. MariusGNN introduces a series of data organization and algorithmic contributions that 1) minimize the end-to-end time required for training and 2) ensure that models learned with disk-based training exhibit accuracy similar to those fully trained in memory. We evaluate MariusGNN against SoTA systems for learning GNN models and find that single-GPU training in MariusGNN achieves the same level of accuracy up to 8\u00d7 faster than multi-GPU training in these systems, thus, introducing an order of magnitude monetary cost reduction. MariusGNN is open-sourced at www.marius-project.org.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "103967638",
+                    "name": "R. Waleffe"
+                },
+                {
+                    "authorId": "2047146404",
+                    "name": "J. Mohoney"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                },
+                {
+                    "authorId": "2697906",
+                    "name": "S. Venkataraman"
+                }
+            ]
+        },
+        {
+            "paperId": "ca973af3058109cf10b6a37bbeebd132f6123dba",
+            "title": "Marius++: Large-Scale Training of Graph Neural Networks on a Single Machine",
+            "abstract": "Graph Neural Networks (GNNs) have emerged as a powerful model for ML over graph-structured data. Yet, scalability remains a major challenge for using GNNs over billion-edge inputs. The creation of mini-batches used for training incurs computational and data movement costs that grow exponentially with the number of GNN layers as state-of-the-art models aggregate information from the multi-hop neighborhood of each input node. In this paper, we focus on scalable training of GNNs with emphasis on resource efficiency. We show that out-of-core pipelined mini-batch training in a single machine outperforms resource-hungry multi-GPU solutions. We introduce Marius++, a system for training GNNs over billion-scale graphs. Marius++ provides disk-optimized training for GNNs and introduces a series of data organization and algorithmic contributions that 1) minimize the memory-footprint and end-to-end time required for training and 2) ensure that models learned with disk-based training exhibit accuracy similar to those fully trained in mixed CPU/GPU settings. We evaluate Marius++ against PyTorch Geometric and Deep Graph Library using seven benchmark (model, data set) settings and find that Marius++ with one GPU can achieve the same level of model accuracy up to 8 \u00d7 faster than these systems when they are using up to eight GPUs. For these experiments, disk-based training allows Marius++ deployments to be up to 64 \u00d7 cheaper in monetary cost than those of the competing systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "103967638",
+                    "name": "R. Waleffe"
+                },
+                {
+                    "authorId": "2047146404",
+                    "name": "J. Mohoney"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                },
+                {
+                    "authorId": "2697906",
+                    "name": "S. Venkataraman"
+                }
+            ]
+        },
+        {
+            "paperId": "363e23e956df41744a92247da0588bbf442beec2",
+            "title": "Learning Massive Graph Embeddings on a Single Machine",
+            "abstract": "We propose a new framework for computing the embeddings of large-scale graphs on a single machine. A graph embedding is a fixed length vector representation for each node (and/or edge-type) in a graph and has emerged as the de-facto approach to apply modern machine learning on graphs. We identify that current systems for learning the embeddings of large-scale graphs are bottlenecked by data movement, which results in poor resource utilization and inefficient training. These limitations require state-of-the-art systems to distribute training across multiple machines. We propose Marius, a system for efficient training of graph embeddings that leverages partition caching and buffer-aware data orderings to minimize disk access and interleaves data movement with computation to maximize utilization. We compare Marius against two state-of-the-art industrial systems on a diverse array of benchmarks. We demonstrate that Marius achieves the same level of accuracy but is up to one order of magnitude faster. We also show that Marius can scale training to datasets an order of magnitude beyond a single machine's GPU and CPU memory capacity, enabling training of configurations with more than a billion edges and 550 GB of total parameters on a single machine with 16 GB of GPU memory and 64 GB of CPU memory. Marius is open-sourced at www.marius-project.org.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2047146404",
+                    "name": "J. Mohoney"
+                },
+                {
+                    "authorId": "103967638",
+                    "name": "R. Waleffe"
+                },
+                {
+                    "authorId": "2110162839",
+                    "name": "Yiheng Xu"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                },
+                {
+                    "authorId": "2697906",
+                    "name": "S. Venkataraman"
+                }
+            ]
+        },
+        {
+            "paperId": "b42e2eb66adc4da70b7741056c186d870bd11d53",
+            "title": "Demonstration of Marius: Graph Embeddings with a Single Machine",
+            "abstract": "Graph embeddings have emerged as the de facto representation for modern machine learning over graph data structures. The goal of graph embedding models is to convert high-dimensional sparse graphs into low-dimensional, dense and continuous vector spaces that preserve the graph structure properties. However, learning a graph embedding model is a resource intensive process, and existing solutions rely on expensive distributed computation to scale training to instances that do not fit in GPU memory. This demonstration showcases Marius: a new open-source engine for learning graph embedding models over billion-edge graphs on a single machine. Marius is built around a recently-introduced architecture for machine learning over graphs that utilizes pipelining and a novel data replacement policy to maximize GPU utilization and exploit the entire memory hierarchy (including disk, CPU, and GPU memory) to scale to large instances. The audience will experience how to develop, train, and deploy graph embedding models using Marius\u2019 configuration-driven programming model. Moreover, the audience will have the opportunity to explore Marius\u2019 deployments on applications including link-prediction on WikiKG90M and reasoning queries on a paleobiology knowledge graph. Marius is available as open source software at https://marius-project.org.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2075238370",
+                    "name": "Anders Carlsson"
+                },
+                {
+                    "authorId": "2123153001",
+                    "name": "Anze Xie"
+                },
+                {
+                    "authorId": "2047146404",
+                    "name": "J. Mohoney"
+                },
+                {
+                    "authorId": "103967638",
+                    "name": "R. Waleffe"
+                },
+                {
+                    "authorId": "2286046229",
+                    "name": "Shanan Peters"
+                },
+                {
+                    "authorId": "145071799",
+                    "name": "Theodoros Rekatsinas"
+                },
+                {
+                    "authorId": "2697906",
+                    "name": "S. Venkataraman"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,330 @@
+{
+    "authorId": "3157053",
+    "papers": [
+        {
+            "paperId": "01d31fb9fc6ab36df6627b8555b64789113eb7a5",
+            "title": "RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment",
+            "abstract": "We propose Reinforcement Learning from Contrastive Distillation (RLCD), a method for aligning language models to follow principles expressed in natural language (e.g., to be more harmless) without using human feedback. RLCD creates preference pairs from two contrasting model outputs, one using a positive prompt designed to encourage following the given principles, and one using a negative prompt designed to encourage violating them. Using two different prompts causes model outputs to be more differentiated on average, resulting in cleaner preference labels in the absence of human annotations. We then use the preference pairs to train a preference model, which is in turn used to improve a base unaligned language model via reinforcement learning. Empirically, RLCD outperforms RLAIF (Bai et al., 2022b) and context distillation (Huang et al., 2022) baselines across three diverse alignment tasks--harmlessness, helpfulness, and story outline generation--and when using both 7B and 30B model scales for simulating preference data.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410652795",
+                    "name": "Kevin Yang"
+                },
+                {
+                    "authorId": "38666915",
+                    "name": "D. Klein"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "1932187449",
+                    "name": "Yuandong Tian"
+                }
+            ]
+        },
+        {
+            "paperId": "0a3eab75098f2ae26406ae9a3f27d38fab515668",
+            "title": "Code-Switched Text Synthesis in Unseen Language Pairs",
+            "abstract": "Existing efforts on text synthesis for code-switching mostly require training on code-switched texts in the target language pairs, limiting the deployment of the models to cases lacking code-switched data. In this work, we study the problem of synthesizing code-switched texts for language pairs absent from the training data. We introduce GLOSS, a model built on top of a pre-trained multilingual machine translation model (PMMTM) with an additional code-switching module. This module, either an adapter or extra prefixes, learns code-switching patterns from code-switched data during training, while the primary component of GLOSS, i.e., the PMMTM, is frozen. The design of only adjusting the code-switching module prevents our model from overfitting to the constrained training data for code-switching. Hence, GLOSS exhibits the ability to generalize and synthesize code-switched texts across a broader spectrum of language pairs. Additionally, we develop a self-training algorithm on target language pairs further to enhance the reliability of GLOSS. Automatic evaluations on four language pairs show that GLOSS achieves at least 55% relative BLEU and METEOR scores improvements compared to strong baselines. Human evaluations on two language pairs further validate the success of GLOSS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "34809425",
+                    "name": "I-Hung Hsu"
+                },
+                {
+                    "authorId": "2064769354",
+                    "name": "Avik Ray"
+                },
+                {
+                    "authorId": "2119476143",
+                    "name": "Shubham Garg"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Jing Huang"
+                }
+            ]
+        },
+        {
+            "paperId": "0a89829b68a10ee441357b64cb521a6379e953b2",
+            "title": "Open-Domain Text Evaluation via Contrastive Distribution Methods",
+            "abstract": "Recent advancements in open-domain text generation, driven by the power of large pre-trained language models (LLMs), have demonstrated remarkable performance. However, assessing these models' generation quality remains a challenge. In this paper, we introduce a novel method for evaluating open-domain text generation called Contrastive Distribution Methods (CDM). Leveraging the connection between increasing model parameters and enhanced LLM performance, CDM creates a mapping from the _contrast_ of two probabilistic distributions -- one known to be superior to the other -- to quality measures. We investigate CDM for open-domain text generation evaluation under two paradigms: 1) _Generative_ CDM, which harnesses the contrast of two language models' distributions to generate synthetic examples for training discriminator-based metrics; 2) _Discriminative_ CDM, which directly uses distribution disparities between two language models for evaluation. Our experiments on coherence evaluation for multi-turn dialogue and commonsense evaluation for controllable generation demonstrate CDM's superior correlate with human judgment than existing automatic evaluation metrics, highlighting the strong performance and generalizability of our approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2167235968",
+                    "name": "Sidi Lu"
+                },
+                {
+                    "authorId": "1709797",
+                    "name": "Asli Celikyilmaz"
+                },
+                {
+                    "authorId": "1785372925",
+                    "name": "Tianlu Wang"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                }
+            ]
+        },
+        {
+            "paperId": "10243faeb3db176f23ecf24568875142b8382e8d",
+            "title": "Unsupervised Melody-to-Lyrics Generation",
+            "abstract": "Automatic melody-to-lyric generation is a task in which song lyrics are generated to go with a given melody. It is of significant practical interest and more challenging than unconstrained lyric generation as the music imposes additional constraints onto the lyrics. The training data is limited as most songs are copyrighted, resulting in models that underfit the complicated cross-modal relationship between melody and lyrics. In this work, we propose a method for generating high-quality lyrics without training on any aligned melody-lyric data. Specifically, we design a hierarchical lyric generation framework that first generates a song outline and second the complete lyrics. The framework enables disentanglement of training (based purely on text) from inference (melody-guided text generation) to circumvent the shortage of parallel data.We leverage the segmentation and rhythm alignment between melody and lyrics to compile the given melody into decoding constraints as guidance during inference. The two-step hierarchical design also enables content control via the lyric outline, a much-desired feature for democratizing collaborative song creation. Experimental results show that our model can generate high-quality lyrics that are more on-topic, singable, intelligible, and coherent than strong baselines, for example SongMASS, a SOTA model trained on a parallel dataset, with a 24% relative overall quality improvement based on human ratings. Our code is available at https://github.com/amazon-science/unsupervised-melody-to-lyrics-generation.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "48391421",
+                    "name": "Yufei Tian"
+                },
+                {
+                    "authorId": "1414599717",
+                    "name": "Anjali Narayan-Chen"
+                },
+                {
+                    "authorId": "3114640",
+                    "name": "Shereen Oraby"
+                },
+                {
+                    "authorId": "32015706",
+                    "name": "Alessandra Cervone"
+                },
+                {
+                    "authorId": "34280810",
+                    "name": "Gunnar A. Sigurdsson"
+                },
+                {
+                    "authorId": "46387857",
+                    "name": "Chenyang Tao"
+                },
+                {
+                    "authorId": "1902008743",
+                    "name": "Wenbo Zhao"
+                },
+                {
+                    "authorId": "2878984",
+                    "name": "Tagyoung Chung"
+                },
+                {
+                    "authorId": "2217929400",
+                    "name": "Jing Huang"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                }
+            ]
+        },
+        {
+            "paperId": "16259d44c317342758a81a8765f08504736da163",
+            "title": "Are Fairy Tales Fair? Analyzing Gender Bias in Temporal Narrative Event Chains of Children\u2019s Fairy Tales",
+            "abstract": "Social biases and stereotypes are embedded in our culture in part through their presence in our stories, as evidenced by the rich history of humanities and social science literature analyzing such biases in children stories. Because these analyses are often conducted manually and at a small scale, such investigations can benefit from the use of more recent natural language processing (NLP) methods that examine social bias in models and data corpora. Our work joins this interdisciplinary effort and makes a unique contribution by taking into account the event narrative structures when analyzing the social bias of stories. We propose a computational pipeline that automatically extracts a story\u2019s temporal narrative verb-based event chain for each of its characters as well as character attributes such as gender. We also present a verb-based event annotation scheme that can facilitate bias analysis by including categories such as those that align with traditional stereotypes. Through a case study analyzing gender bias in fairy tales, we demonstrate that our framework can reveal bias in not only the unigram verb-based events in which female and male characters participate but also in the temporal narrative order of such event participation.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "40521719",
+                    "name": "Paulina Toro Isaza"
+                },
+                {
+                    "authorId": "2007669250",
+                    "name": "Guangxuan Xu"
+                },
+                {
+                    "authorId": "2181812178",
+                    "name": "Akintoye Oloko"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yufang Hou"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "36743361",
+                    "name": "Dakuo Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "1a0f7ff0c649c8f45c038a040cc08edb5f7c4a87",
+            "title": "SIMMC-VR: A Task-oriented Multimodal Dialog Dataset with Situated and Immersive VR Streams",
+            "abstract": "Building an AI assistant that can seamlessly converse and instruct humans, in a user-centric situated scenario, requires several essential abilities:(1) spatial and temporal understanding of the situated and real-time user scenes,(2) capability of grounding the actively perceived visuals of users to conversation contexts,and (3) conversational reasoning over past utterances to perform just-in-time assistance.However, we currently lack a large-scale benchmark that captures user\u2013assistant interactions with all of the aforementioned features.To this end, we propose SIMMC-VR, an extension of the SIMMC-2.0 dataset, to a video-grounded task-oriented dialog dataset that captures real-world AI-assisted user scenarios in VR.We propose a novel data collection paradigm that involves(1) generating object-centric multimodal dialog flows with egocentric visual streams and visually-grounded templates,and (2) manually paraphrasing the simulated dialogs for naturalness and diversity while preserving multimodal dependencies. To measure meaningful progress in the field, we propose four tasks to address the new challenges in SIMMC-VR, which require complex spatial-temporal dialog reasoning in active egocentric scenes.We benchmark the proposed tasks with strong multimodal models, and highlight the key capabilities that current models lack for future research directions.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2015467",
+                    "name": "Te-Lin Wu"
+                },
+                {
+                    "authorId": "2150275",
+                    "name": "Satwik Kottur"
+                },
+                {
+                    "authorId": "2111680936",
+                    "name": "Andrea Madotto"
+                },
+                {
+                    "authorId": "2065276988",
+                    "name": "Mahmoud Azab"
+                },
+                {
+                    "authorId": "145009056",
+                    "name": "Pedro Rodriguez"
+                },
+                {
+                    "authorId": "3057557",
+                    "name": "Babak Damavandi"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "29072828",
+                    "name": "Seungwhan Moon"
+                }
+            ]
+        },
+        {
+            "paperId": "230d1486a8030fcf2b4cdad133642bb2dd226c60",
+            "title": "Identifying Informational Sources in News Articles",
+            "abstract": "News articles are driven by the informational sources journalists use in reporting. Modeling when, how and why sources get used together in stories can help us better understand the information we consume and even help journalists with the task of producing it. In this work, we take steps toward this goal by constructing the largest and widest-ranging annotated dataset, to date, of informational sources used in news writing. We show that our dataset can be used to train high-performing models for information detection and source attribution. We further introduce a novel task, source prediction, to study the compositionality of sources in news articles. We show good performance on this task, which we argue is an important proof for narrative science exploring the internal structure of news articles and aiding in planning-based language generation, and an important step towards a source-recommendation system to aid journalists.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51444076",
+                    "name": "Alexander Spangher"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "143823227",
+                    "name": "Jonathan May"
+                },
+                {
+                    "authorId": "48898287",
+                    "name": "Emilio Ferrara"
+                }
+            ]
+        },
+        {
+            "paperId": "323d6544f2f1232c22ededfd4f1a412d43017282",
+            "title": "ACCENT: An Automatic Event Commonsense Evaluation Metric for Open-Domain Dialogue Systems",
+            "abstract": "Commonsense reasoning is omnipresent in human communications and thus is an important feature for open-domain dialogue systems. However, evaluating commonsense in dialogue systems is still an open challenge. We take the first step by focusing on event commonsense that considers events and their relations, and is crucial in both dialogues and general commonsense reasoning. We propose ACCENT, an event commonsense evaluation metric empowered by commonsense knowledge bases (CSKBs). ACCENT first extracts event-relation tuples from a dialogue, and then evaluates the response by scoring the tuples in terms of their compatibility with the CSKB. To evaluate ACCENT, we construct the first public event commonsense evaluation dataset for open-domain dialogues.Our experiments show that ACCENT is an efficient metric for event commonsense evaluation, which achieves higher correlations with human judgments than existing baselines.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "3022427",
+                    "name": "Sarik Ghazarian"
+                },
+                {
+                    "authorId": "74175857",
+                    "name": "Yijia Shao"
+                },
+                {
+                    "authorId": "51518773",
+                    "name": "Rujun Han"
+                },
+                {
+                    "authorId": "143728483",
+                    "name": "A. Galstyan"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                }
+            ]
+        },
+        {
+            "paperId": "53c12581e4f5f9cdf4be87e7f0eb128e588302d2",
+            "title": "The Second Workshop on Knowledge-Augmented Methods for Natural Language Processing",
+            "abstract": "Language models are being developed and deployed in many applications, \"small\"-scale and large-scale, generic and specialized, text-only and multimodal, etc. Meanwhile, the missingness of important knowledge causes limitations and safety challenges. The knowledge includes commonsense, world facts, domain expertise, personalization, and especially the unique patterns that need to be discovered from big data applications. Training and inference processes of the language models can be and should be augmented with the knowledge. The first KnowledgeNLP at AAAI 2023 attracted scientists on knowledge augmentation methods towards higher language intelligence. This workshop offers a broad platform to share ideas and discuss various topics, such as (1) synergy between knowledge and language model, (2) scalable architectures that integrate NLP, knowledge graph, and graph learning technologies, (3) KnowledgeNLP for e-commerce, education, and healthcare, (4) human factors and social good in KnowledgeNLP.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "38767143",
+                    "name": "W. Yu"
+                },
+                {
+                    "authorId": "2147222008",
+                    "name": "Lingbo Tong"
+                },
+                {
+                    "authorId": "3040379",
+                    "name": "Weijia Shi"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "2152153656",
+                    "name": "Meng Jiang"
+                }
+            ]
+        },
+        {
+            "paperId": "6e76e29188ae8f5ff86f85945d4784b8c598b01e",
+            "title": "DOC: Improving Long Story Coherence With Detailed Outline Control",
+            "abstract": "We propose the Detailed Outline Control (DOC) framework for improving long-range plot coherence when automatically generating several-thousand-word-long stories. DOC consists of two complementary components: a detailed outliner and a detailed controller. The detailed outliner creates a more detailed, hierarchically structured outline, shifting creative burden from the main drafting procedure to the planning stage. The detailed controller ensures the more detailed outline is still respected during generation by controlling story passages to align with outline details. In human evaluations of automatically generated stories, DOC substantially outperforms a strong Re3 baseline (Yang et al., 2022) on plot coherence (22.5% absolute gain), outline relevance (28.2%), and interestingness (20.7%). Humans also judged DOC to be much more controllable in an interactive generation setting.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1410652795",
+                    "name": "Kevin Yang"
+                },
+                {
+                    "authorId": "38666915",
+                    "name": "D. Klein"
+                },
+                {
+                    "authorId": "3157053",
+                    "name": "Nanyun Peng"
+                },
+                {
+                    "authorId": "1932187449",
+                    "name": "Yuandong Tian"
+                }
+            ]
+        }
+    ]
+}

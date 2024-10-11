@@ -1,0 +1,187 @@
+{
+    "authorId": "2160885489",
+    "papers": [
+        {
+            "paperId": "0ec8701ea9c7c88278aa2289602806aa8d956c9c",
+            "title": "Operationalizing the Blueprint for an AI Bill of Rights: Recommendations for Practitioners, Researchers, and Policy Makers",
+            "abstract": "As Artificial Intelligence (AI) tools are increasingly employed in diverse real-world applications, there has been significant interest in regulating these tools. To this end, several regulatory frameworks have been introduced by different countries worldwide. For example, the European Union recently passed the AI Act, the White House issued an Executive Order on safe, secure, and trustworthy AI, and the White House Office of Science and Technology Policy issued the Blueprint for an AI Bill of Rights (AI BoR). Many of these frameworks emphasize the need for auditing and improving the trustworthiness of AI tools, underscoring the importance of safety, privacy, explainability, fairness, and human fallback options. Although these regulatory frameworks highlight the necessity of enforcement, practitioners often lack detailed guidance on implementing them. Furthermore, the extensive research on operationalizing each of these aspects is frequently buried in technical papers that are difficult for practitioners to parse. In this write-up, we address this shortcoming by providing an accessible overview of existing literature related to operationalizing regulatory principles. We provide easy-to-understand summaries of state-of-the-art literature and highlight various gaps that exist between regulatory guidelines and existing AI research, including the trade-offs that emerge during operationalization. We hope that this work not only serves as a starting point for practitioners interested in learning more about operationalizing the regulatory guidelines outlined in the Blueprint for an AI BoR but also provides researchers with a list of critical open problems and gaps between regulations and state-of-the-art AI research. Finally, we note that this is a working paper and we invite feedback in line with the purpose of this document as described in the introduction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2041293215",
+                    "name": "Alexander X. Oesterling"
+                },
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2310700639",
+                    "name": "Suresh Venkatasubramanian"
+                },
+                {
+                    "authorId": "2310699647",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "44e77bdc6dd8c2e039daf1d6b537f304f75b362d",
+            "title": "All Roads Lead to Rome? Exploring Representational Similarities Between Latent Spaces of Generative Image Models",
+            "abstract": "Do different generative image models secretly learn similar underlying representations? We investigate this by measuring the latent space similarity of four different models: VAEs, GANs, Normalizing Flows (NFs), and Diffusion Models (DMs). Our methodology involves training linear maps between frozen latent spaces to\"stitch\"arbitrary pairs of encoders and decoders and measuring output-based and probe-based metrics on the resulting\"stitched'' models. Our main findings are that linear maps between latent spaces of performant models preserve most visual information even when latent sizes differ; for CelebA models, gender is the most similarly represented probe-able attribute. Finally we show on an NF that latent space representations converge early in training.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2224843950",
+                    "name": "Charumathi Badrinath"
+                },
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2041293215",
+                    "name": "Alexander X. Oesterling"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "2310699647",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "8362c45885738f5246e163a9763e0270d229ca6b",
+            "title": "Interpreting CLIP with Sparse Linear Concept Embeddings (SpLiCE)",
+            "abstract": "CLIP embeddings have demonstrated remarkable performance across a wide range of computer vision tasks. However, these high-dimensional, dense vector representations are not easily interpretable, restricting their usefulness in downstream applications that require transparency. In this work, we empirically show that CLIP's latent space is highly structured, and consequently that CLIP representations can be decomposed into their underlying semantic components. We leverage this understanding to propose a novel method, Sparse Linear Concept Embeddings (SpLiCE), for transforming CLIP representations into sparse linear combinations of human-interpretable concepts. Distinct from previous work, SpLiCE does not require concept labels and can be applied post hoc. Through extensive experimentation with multiple real-world datasets, we validate that the representations output by SpLiCE can explain and even replace traditional dense CLIP representations, maintaining equivalent downstream performance while significantly improving their interpretability. We also demonstrate several use cases of SpLiCE representations including detecting spurious correlations, model editing, and quantifying semantic shifts in datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2041293215",
+                    "name": "Alexander X. Oesterling"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "144717568",
+                    "name": "F. Calmon"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "7e605b9d32d9a248810b7802ffe55ce1ea273ba0",
+            "title": "Discriminative Feature Attributions: Bridging Post Hoc Explainability and Inherent Interpretability",
+            "abstract": "With the increased deployment of machine learning models in various real-world applications, researchers and practitioners alike have emphasized the need for explanations of model behaviour. To this end, two broad strategies have been outlined in prior literature to explain models. Post hoc explanation methods explain the behaviour of complex black-box models by identifying features critical to model predictions; however, prior work has shown that these explanations may not be faithful, in that they incorrectly attribute high importance to features that are unimportant or non-discriminative for the underlying task. Inherently interpretable models, on the other hand, circumvent these issues by explicitly encoding explanations into model architecture, meaning their explanations are naturally faithful, but they often exhibit poor predictive performance due to their limited expressive power. In this work, we identify a key reason for the lack of faithfulness of feature attributions: the lack of robustness of the underlying black-box models, especially to the erasure of unimportant distractor features in the input. To address this issue, we propose Distractor Erasure Tuning (DiET), a method that adapts black-box models to be robust to distractor erasure, thus providing discriminative and faithful attributions. This strategy naturally combines the ease of use of post hoc explanations with the faithfulness of inherently interpretable models. We perform extensive experiments on semi-synthetic and real-world datasets and show that DiET produces models that (1) closely approximate the original black-box models they are intended to explain, and (2) yield explanations that match approximate ground truths available by construction. Our code is made public at https://github.com/AI4LIFE-GROUP/DiET.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "c271f5d1286bbdc0efd8ed1bc6e9bde028eed725",
+            "title": "Verifiable Feature Attributions: A Bridge between Post Hoc Explainability and Inherent Interpretability",
+            "abstract": "As machine learning models are increasingly employed in medicine, researchers, healthcare organizations, providers, and patients have all emphasized the need for greater transparency. To provide explanations of models in high-stakes applications, two broad strategies have been outlined in prior literature. Post hoc explanation methods explain the behaviour of complex black-box models by highlighting image regions critical to model predictions; however, prior work has shown that these explanations may not be faithful, and even more concerning is our inability to verify them. Specifically, it is nontrivial to evaluate if a given feature attribution is correct with respect to the underlying model. Inherently interpretable models, on the other hand, circumvent this by explicitly encoding explanations into model architecture, making their explanations naturally faithful and verifiable, but they often exhibit poor predictive performance due to their limited expressive power. In this work, we aim to bridge the gap between the aforementioned strategies by proposing Verifiabil-ity Tuning (VerT), a method that transforms black-box models into models with verifiable feature attributions. We begin by introducing a formal theoretical framework to understand verifiability and show that attributions produced by standard models cannot be verified. We then leverage this framework to propose a method for building verifiable models and feature attributions from black-box models. Finally, we perform extensive experiments on semi-synthetic and real-world datasets, and show that VerT produces models (1) yield explanations that are correct and verifiable and (2) are faithful to the original black-box models they are meant to explain.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2822290",
+                    "name": "Suraj Srinivas"
+                },
+                {
+                    "authorId": "1892673",
+                    "name": "Himabindu Lakkaraju"
+                }
+            ]
+        },
+        {
+            "paperId": "222c1b5c2e883ea877c0b8f789585b1bb51f235e",
+            "title": "Do Vision-Language Pretrained Models Learn Composable Primitive Concepts?",
+            "abstract": "Vision-language (VL) pretrained models have achieved impressive performance on multimodal reasoning and zero-shot recognition tasks. Many of these VL models are pretrained on unlabeled image and caption pairs from the internet. In this paper, we study whether representations of primitive concepts--such as colors, shapes, or the attributes of object parts--emerge automatically within these pretrained VL models. We propose a two-step framework, Compositional Concept Mapping (CompMap), to investigate this. CompMap first asks a VL model to generate primitive concept activations with text prompts, and then learns to construct a composition model that maps the primitive concept activations (e.g. the likelihood of black tail or red wing) to composite concepts (e.g. a red-winged blackbird). We show that a composition model can be reliably learn from ground truth primitive concepts. We thus hypothesize that if primitive concepts indeed emerge in a VL pretrained model, its primitive concept activations can be used to learn a composition model similar to the one designed by experts. We propose a quantitative metric to measure the degree of similarity, and refer to the metric as the interpretability metric. We also measure the classification accuracy when using the primitive concept activations and the learned composition model to predict the composite concepts, and refer to it as the usefulness metric. Our study reveals that state-of-the-art VL pretrained models learn primitive concepts that are highly useful for fine-grained visual recognition on the CUB dataset, and compositional generalization tasks on the MIT-States dataset. However, we observe that the learned composition models have low interpretability in our qualitative analyses. Our results reveal the limitations of existing VL models, and the necessity of pretraining objectives that encourage the acquisition of primitive concepts.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2127600348",
+                    "name": "Tian Yun"
+                },
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2949185",
+                    "name": "Ellie Pavlick"
+                },
+                {
+                    "authorId": "1491624845",
+                    "name": "Chen Sun"
+                }
+            ]
+        },
+        {
+            "paperId": "dbb012d143fdcbf8d02c0a5933c153767bd1cf12",
+            "title": "Do Vision-Language Pretrained Models Learn Primitive Concepts?",
+            "abstract": ". Vision-language pretrained models have achieved impressive performance on multimodal reasoning and zero-shot recognition tasks. Many of these VL models are pretrained on unlabeled image and caption pairs from the internet. In this paper, we study whether the notion of primitive concepts, such as color and shape attributes, emerges automatically from these pretrained VL models. We propose to learn compositional derivations that map primitive concept activations into composite concepts, a task which we demonstrate to be straightforward given true primitive concept annotations. This compositional derivation learning (CompDL) framework allows us to quantitively measure the usefulness and interpretability of the learned derivations, by jointly considering the entire set of candidate primitive concepts. Our study reveals that state-of-the-art VL pretrained models learn primitive concepts that are highly useful as visual descriptors, as demonstrated by their strong performance on fine-grained visual recognition tasks, but those concepts struggle to provide interpretable compositional derivations, which highlights limitations of existing VL models. Code and models will be released.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2127600348",
+                    "name": "Tian Yun"
+                },
+                {
+                    "authorId": "2160885489",
+                    "name": "Usha Bhalla"
+                },
+                {
+                    "authorId": "2949185",
+                    "name": "Ellie Pavlick"
+                },
+                {
+                    "authorId": "1491624845",
+                    "name": "Chen Sun"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,337 @@
+{
+    "authorId": "98285513",
+    "papers": [
+        {
+            "paperId": "345e996da8a8a5ce09897e4c10fc1d9df861e1ba",
+            "title": "Boosting Differentiable Causal Discovery via Adaptive Sample Reweighting",
+            "abstract": "Under stringent model type and variable distribution assumptions, differentiable score-based causal discovery methods learn a directed acyclic graph (DAG) from observational data by evaluating candidate graphs over an average score function. Despite great success in low-dimensional linear systems, it has been observed that these approaches overly exploit easier-to-fit samples, thus inevitably learning spurious edges. Worse still, inherent mostly in these methods the common homogeneity assumption can be easily violated, due to the widespread existence of heterogeneous data in the real world, resulting in performance vulnerability when noise distributions vary. We propose a simple yet effective model-agnostic framework to boost causal discovery performance by dynamically learning the adaptive weights for the Reweighted Score function, ReScore for short, where the weights tailor quantitatively to the importance degree of each sample. Intuitively, we leverage the bilevel optimization scheme to \\wx{alternately train a standard DAG learner and reweight samples -- that is, upweight the samples the learner fails to fit and downweight the samples that the learner easily extracts the spurious information from. Extensive experiments on both synthetic and real-world datasets are carried out to validate the effectiveness of ReScore. We observe consistent and significant boosts in structure learning performance. Furthermore, we visualize that ReScore concurrently mitigates the influence of spurious edges and generalizes to heterogeneous data. Finally, we perform the theoretical analysis to guarantee the structure identifiability and the weight adaptive properties of ReScore in linear systems. Our codes are available at https://github.com/anzhang314/ReScore.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153659066",
+                    "name": "An Zhang"
+                },
+                {
+                    "authorId": "2170734220",
+                    "name": "Fang Liu"
+                },
+                {
+                    "authorId": "2111663645",
+                    "name": "Wenchang Ma"
+                },
+                {
+                    "authorId": "2113440869",
+                    "name": "Zhibo Cai"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "34f7ed9673b8e49e44c2e68dc641395947bc7b3e",
+            "title": "Learning to Double-Check Model Prediction From a Causal Perspective",
+            "abstract": "The present machine learning schema typically uses a one-pass model inference (e.g., forward propagation) to make predictions in the testing phase. It is inherently different from human students who double-check the answer during examinations especially when the confidence is low. To bridge this gap, we propose a learning to double-check (L2D) framework, which formulates double check as a learnable procedure with two core operations: recognizing unreliable predictions and revising predictions. To judge the correctness of a prediction, we resort to counterfactual faithfulness in causal theory and design a contrastive faithfulness measure. In particular, L2D generates counterfactual features by imagining: \u201cwhat would the sample features be if its label was the predicted class\u201d and judges the prediction by the faithfulness of the counterfactual features. Furthermore, we design a simple and effective revision module to revise the original model prediction according to the faithfulness. We apply the L2D framework to three classification models and conduct experiments on two public datasets for image classification, validating the effectiveness of L2D in prediction correctness judgment and revision.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2214550033",
+                    "name": "Xun Deng"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "5462268",
+                    "name": "Hanwang Zhang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "41ea36bc2d796408dc9aa68d1c60ee371efbbd69",
+            "title": "LightGT: A Light Graph Transformer for Multimedia Recommendation",
+            "abstract": "Multimedia recommendation methods aim to discover the user preference on the multi-modal information to enhance the collaborative filtering (CF) based recommender system. Nevertheless, they seldom consider the impact of feature extraction on the user preference modeling and prediction of the user-item interaction, as the extracted features contain excessive information irrelevant to the recommendation. To capture the informative features from the extracted ones, we resort to Transformer model to establish the correlation between the items historically interacted by the same user. Considering its challenges in effectiveness and efficiency, we propose a novel Transformer-based recommendation model, termed as Light Graph Transformer model (LightGT). Therein, we develop a modal-specific embedding and a layer-wise position encoder for the effective similarity measurement, and present a light self-attention block to improve the efficiency of self-attention scoring. Based on these designs, we can effectively and efficiently learn the user preference from the off-the-shelf items' features to predict the user-item interactions. Conducting extensive experiments on Movielens, Tiktok and Kwai datasets, we demonstrate that LigthGT significantly outperforms the state-of-the-art baselines with less time. Our code is publicly available at: https://github.com/Liuwq-bit/LightGT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1887997",
+                    "name": "Yin-wei Wei"
+                },
+                {
+                    "authorId": "2142722308",
+                    "name": "Wenqi Liu"
+                },
+                {
+                    "authorId": "2158337579",
+                    "name": "Fan Liu"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "143982887",
+                    "name": "Liqiang Nie"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "450f9fb889df7a3810b33c4994322db7a5f4b137",
+            "title": "Self-Supervised Learning for Multimedia Recommendation",
+            "abstract": "Learning representations for multimedia content is critical for multimedia recommendation. Current representation learning methods roughly fall into two groups: (1) using the historical interactions to create ID embeddings of users and items, and (2) treating multi-modal data as the side information of items to enrich their ID embeddings. Each user-item interaction offers the supervisory signal to optimize the representation learning by the traditional supervised learning paradigm. Due to the overlook of the multi-modal patterns ($e.g.$, co-occurrence of visual, acoustic, textual features in micro-videos a user saw before, and her behavioral features) hidden in the data, these methods are insufficient to create powerful representations and obtain satisfactory recommendation accuracy. To capture multi-modal patterns in the data itself, we go beyond the supervised learning paradigm, and incorporate the idea of self-supervised learning (SSL) into multimedia recommendation. Specifically, SSL consists of two components: (1) data augmentation upon multi-modal contents, where we design three operators \u2014 feature dropout (FD), feature masking (FM), feature fine and coarse spaces (FAC) \u2014 to generate multiple views of individual items; and (2) contrastive learning, which differentiates the views of an item from the others\u2019 to distill additional supervisory signals. Clearly, SSL enables us to explore and exhibit the underlying relations among modalities, thereby resulting in powerful representations. We denote the generic framework by Self-supervised Learning-guided Multimedia Recommendation (SLMRec). Extensive experiments are performed on three real-world datasets, showing that SLMRec achieves significant improvements over several state-of-the-art baselines like LightGCN [1], MMGCN [2]. Further analysis shows how SSL affects recommendation performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "9168351",
+                    "name": "Zhulin Tao"
+                },
+                {
+                    "authorId": "2174542939",
+                    "name": "Xiaohao Liu"
+                },
+                {
+                    "authorId": "2154000083",
+                    "name": "Yewei Xia"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "49576045",
+                    "name": "Lifang Yang"
+                },
+                {
+                    "authorId": "3213583",
+                    "name": "Xianglin Huang"
+                },
+                {
+                    "authorId": "144078686",
+                    "name": "Tat-Seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "4a91153f52869aa709f778e5e21814e237543542",
+            "title": "Discovering Spatio-Temporal Rationales for Video Question Answering",
+            "abstract": "This paper strives to solve complex video question answering (VideoQA) which features long video containing multiple objects and events at different time. To tackle the challenge, we highlight the importance of identifying question-critical temporal moments and spatial objects from the vast amount of video content. Towards this, we propose a Spatio-Temporal Rationalization (STR), a differentiable selection module that adaptively collects question-critical moments and objects using cross-modal interaction. The discovered video moments and objects are then served as grounded rationales to support answer reasoning. Based on STR, we further propose TranSTR, a Transformerstyle neural network architecture that takes STR as the core and additionally underscores a novel answer interaction mechanism to coordinate STR for answer decoding. Experiments on four datasets show that TranSTR achieves new state-of-the-art (SoTA). Especially, on NExT-QA and Causal-VidQA which feature complex VideoQA, it significantly surpasses the previous SoTA by 5.8% and 6.8%, respectively. We then conduct extensive studies to verify the importance of STR as well as the proposed answer interaction mechanism. With the success of TranSTR and our comprehensive analysis, we hope this work can spark more future efforts in complex VideoQA. Code will be released at https://github.com/yl3800/TranSTR.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2135358934",
+                    "name": "Yicong Li"
+                },
+                {
+                    "authorId": "66358686",
+                    "name": "Junbin Xiao"
+                },
+                {
+                    "authorId": "2224656169",
+                    "name": "Chun Feng"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "52c36f7f3554c497d680aa8ccb38aef6b96e26f0",
+            "title": "Cooperative Explanations of Graph Neural Networks",
+            "abstract": "With the growing success of graph neural networks (GNNs), the explainability of GNN is attracting considerable attention. Current explainers mostly leverage feature attribution and selection to explain a prediction. By tracing the importance of input features, they select the salient subgraph as the explanation. However, their explainability is at the granularity of input features only, and cannot reveal the usefulness of hidden neurons. This inherent limitation makes the explainers fail to scrutinize the model behavior thoroughly, resulting in unfaithful explanations. In this work, we explore the explainability of GNNs at the granularity of both input features and hidden neurons. To this end, we propose an explainer-agnostic framework, Cooperative GNN Explanation (CGE) to generate the explanatory subgraph and subnetwork simultaneously, which jointly explain how the GNN model arrived at its prediction. Specifically, it first initializes the importance scores of input features and hidden neurons with masking networks. Then it iteratively retrains the importance scores, refining the salient subgraph and subnetwork by discarding low-scored features and neurons in each iteration. Through such cooperative learning, CGE not only generates faithful and concise explanations, but also exhibits how the salient information flows by activating and deactivating neurons. We conduct extensive experiments on both synthetic and real-world datasets, validating the superiority of CGE over state-of-the-art approaches. Code is available at https://github.com/MangoKiller/CGE_demo.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2159830802",
+                    "name": "Junfeng Fang"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "2153659066",
+                    "name": "An Zhang"
+                },
+                {
+                    "authorId": "2163529904",
+                    "name": "Zemin Liu"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "5457a77e4b1fa671b75defb46be371f3a7ecd47c",
+            "title": "Integrating Spatial and Temporal Information for Violent Activity Detection from Video Using Deep Spiking Neural Networks",
+            "abstract": "Increasing violence in workplaces such as hospitals seriously challenges public safety. However, it is time- and labor-consuming to visually monitor masses of video data in real time. Therefore, automatic and timely violent activity detection from videos is vital, especially for small monitoring systems. This paper proposes a two-stream deep learning architecture for video violent activity detection named SpikeConvFlowNet. First, RGB frames and their optical flow data are used as inputs for each stream to extract the spatiotemporal features of videos. After that, the spatiotemporal features from the two streams are concatenated and fed to the classifier for the final decision. Each stream utilizes a supervised neural network consisting of multiple convolutional spiking and pooling layers. Convolutional layers are used to extract high-quality spatial features within frames, and spiking neurons can efficiently extract temporal features across frames by remembering historical information. The spiking neuron-based optical flow can strengthen the capability of extracting critical motion information. This method combines their advantages to enhance the performance and efficiency for recognizing violent actions. The experimental results on public datasets demonstrate that, compared with the latest methods, this approach greatly reduces parameters and achieves higher inference efficiency with limited accuracy loss. It is a potential solution for applications in embedded devices that provide low computing power but require fast processing speeds.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "2146105340",
+                    "name": "Jie Yang"
+                },
+                {
+                    "authorId": "1686744",
+                    "name": "N. Kasabov"
+                }
+            ]
+        },
+        {
+            "paperId": "a1f718113c6a4ac6eeacce477eefc0a26d101e95",
+            "title": "Online Distillation-enhanced Multi-modal Transformer for Sequential Recommendation",
+            "abstract": "Multi-modal recommendation systems, which integrate diverse types of information, have gained widespread attention in recent years. However, compared to traditional collaborative filtering-based multi-modal recommendation systems, research on multi-modal sequential recommendation is still in its nascent stages. Unlike traditional sequential recommendation models that solely rely on item identifier (ID) information and focus on network structure design, multi-modal recommendation models need to emphasize item representation learning and the fusion of heterogeneous data sources. This paper investigates the impact of item representation learning on downstream recommendation tasks and examines the disparities in information fusion at different stages. Empirical experiments are conducted to demonstrate the need to design a framework suitable for collaborative learning and fusion of diverse information. Based on this, we propose a new model-agnostic framework for multi-modal sequential recommendation tasks, called Online Distillation-enhanced Multi-modal Transformer (ODMT), to enhance feature interaction and mutual learning among multi-source input (ID, text, and image), while avoiding conflicts among different features during training, thereby improving recommendation accuracy. To be specific, we first introduce an ID-aware Multi-modal Transformer module in the item representation learning stage to facilitate information interaction among different features. Secondly, we employ an online distillation training strategy in the prediction optimization stage to make multi-source data learn from each other and improve prediction robustness. Experimental results on a stream media recommendation dataset and three e-commerce recommendation datasets demonstrate the effectiveness of the proposed two modules, which is approximately 10% improvement in performance compared to baseline models. Our code will be released at: https://github.com/xyliugo/ODMT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144540034",
+                    "name": "Wei Ji"
+                },
+                {
+                    "authorId": "49543069",
+                    "name": "Xian-Yan Liu"
+                },
+                {
+                    "authorId": "2153659066",
+                    "name": "An Zhang"
+                },
+                {
+                    "authorId": "1887997",
+                    "name": "Yin-wei Wei"
+                },
+                {
+                    "authorId": "2072724871",
+                    "name": "Yongxin Ni"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "a5c5a17b1b99176e8657f76240b25aea30092de7",
+            "title": "Discovering Dynamic Causal Space for DAG Structure Learning",
+            "abstract": "Discovering causal structure from purely observational data (i.e., causal discovery), aiming to identify causal relationships among variables, is a fundamental task in machine learning.The recent invention of differentiable score-based DAG learners is a crucial enabler, which reframes the combinatorial optimization problem into a differentiable optimization with a DAG constraint over directed graph space. Despite their great success, these cutting-edge DAG learners incorporate DAG-ness independent score functions to evaluate the directed graph candidates, lacking in considering graph structure. As a result, measuring the data fitness alone regardless of DAG-ness inevitably leads to discovering suboptimal DAGs and model vulnerabilities. Towards this end, we propose a dynamic csusal space for DAG structure learning, coined CASPER, that integrates the graph structure into the score function as a new measure in the causal space to faithfully reflect the causal distance between estimated and ground-truth DAG. CASPER revises the learning process as well as enhances the DAG structure learning via adaptive attention to DAG-ness. Grounded by empirical visualization, CASPER, as a space, satisfies a series of desired properties, such as structure awareness and noise-robustness. Extensive experiments on both synthetic and real-world datasets clearly validate the superiority of our CASPER over the state-of-the-art causal discovery methods in terms of accuracy and robustness.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "70448703",
+                    "name": "F. Liu"
+                },
+                {
+                    "authorId": "2111663645",
+                    "name": "Wenchang Ma"
+                },
+                {
+                    "authorId": "2153659066",
+                    "name": "An Zhang"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "2178958",
+                    "name": "Yueqi Duan"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        },
+        {
+            "paperId": "b7f1e00cd52089423ea9feb5d3af1d9ff432d9b7",
+            "title": "Strategy-aware Bundle Recommender System",
+            "abstract": "A bundle is a group of items that provides improved services to users and increased profits for sellers. However, locating the desired bundles that match the users' tastes still challenges us, due to the sparsity issue. Despite the remarkable performance of existing approaches, we argue that they seldom consider the bundling strategy (i.e., how the items within a bundle are associated with each other) in the bundle recommendation, resulting in the suboptimal user and bundle representations for their interaction prediction. Therefore, we propose to model the strategy-aware user and bundle representations for the bundle recommendation. Towards this end, we develop a new model for bundle recommendation, termed Bundle Graph Transformer (BundleGT), which consists of the token embedding layer, hierarchical graph transformer (HGT) layer, and prediction layer. Specifically, in the token embedding layer, we take the items within bundles as tokens and represent them with items' id embedding learned from user-item interactions. Having the input tokens, the HGT layer can simultaneously model the strategy-aware bundle and user representations. Therein, we encode the prior knowledge of bundling strategy from the well-designed bundles and incorporate it with tokens' embeddings to model the bundling strategy and learn the strategy-aware bundle representations. Meanwhile, upon the correlation between bundles consumed by the same user, we further learn the user preference on bundling strategy. Jointly considering it with the user preference on the item content, we can learn the strategy-aware user representation for user-bundle interaction prediction. Conducting extensive experiments on Youshu, ifashion, and Netease datasets, we demonstrate that our proposed model outperforms the state-of-the-art baselines (e.g., BundelNet [7] Net, BGCN [3] BGCN, and CrossCBR [22]), justifying the effectiveness of our proposed model. Moreover, in HGT layer, our devised light self-attention block improves not only the accuracy performance but efficiency of BundleGT. Our code is publicly available at: https://github.com/Xiaohao-Liu/BundleGT.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1887997",
+                    "name": "Yin-wei Wei"
+                },
+                {
+                    "authorId": "2174542939",
+                    "name": "Xiaohao Liu"
+                },
+                {
+                    "authorId": "2109267019",
+                    "name": "Yunshan Ma"
+                },
+                {
+                    "authorId": "98285513",
+                    "name": "Xiang Wang"
+                },
+                {
+                    "authorId": "143982887",
+                    "name": "Liqiang Nie"
+                },
+                {
+                    "authorId": "143779329",
+                    "name": "Tat-seng Chua"
+                }
+            ]
+        }
+    ]
+}

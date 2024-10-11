@@ -1,0 +1,386 @@
+{
+    "authorId": "1815447",
+    "papers": [
+        {
+            "paperId": "1d88500872d06d1e7cde34dc366bf165bcab9a7d",
+            "title": "PLaD: Preference-based Large Language Model Distillation with Pseudo-Preference Pairs",
+            "abstract": "Large Language Models (LLMs) have exhibited impressive capabilities in various tasks, yet their vast parameter sizes restrict their applicability in resource-constrained settings. Knowledge distillation (KD) offers a viable solution by transferring expertise from large teacher models to compact student models. However, traditional KD techniques face specific challenges when applied to LLMs, including restricted access to LLM outputs, significant teacher-student capacity gaps, and the inherited mis-calibration issue. In this work, we present PLaD, a novel preference-based LLM distillation framework. PLaD exploits the teacher-student capacity discrepancy to generate pseudo-preference pairs where teacher outputs are preferred over student outputs. Then, PLaD leverages a ranking loss to re-calibrate student's estimation of sequence likelihood, which steers the student's focus towards understanding the relative quality of outputs instead of simply imitating the teacher. PLaD bypasses the need for access to teacher LLM's internal states, tackles the student's expressivity limitations, and mitigates the student mis-calibration issue. Through extensive experiments on two sequence generation tasks and with various LLMs, we demonstrate the effectiveness of our proposed PLaD framework.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2288852433",
+                    "name": "Rongzhi Zhang"
+                },
+                {
+                    "authorId": "2266463492",
+                    "name": "Jiaming Shen"
+                },
+                {
+                    "authorId": "2239381730",
+                    "name": "Tianqi Liu"
+                },
+                {
+                    "authorId": "2266420540",
+                    "name": "Haorui Wang"
+                },
+                {
+                    "authorId": "2266819166",
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": "2304748093",
+                    "name": "Feng Han"
+                },
+                {
+                    "authorId": "2239559694",
+                    "name": "Jialu Liu"
+                },
+                {
+                    "authorId": "2282531735",
+                    "name": "Simon Baumgartner"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                },
+                {
+                    "authorId": "2305503379",
+                    "name": "Chao Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "29528d8cb030a65f62a35b1237f1f5483077ad0a",
+            "title": "Inference Scaling for Long-Context Retrieval Augmented Generation",
+            "abstract": "The scaling of inference computation has unlocked the potential of long-context large language models (LLMs) across diverse settings. For knowledge-intensive tasks, the increased compute is often allocated to incorporate more external knowledge. However, without effectively utilizing such knowledge, solely expanding context does not always enhance performance. In this work, we investigate inference scaling for retrieval augmented generation (RAG), exploring strategies beyond simply increasing the quantity of knowledge. We focus on two inference scaling strategies: in-context learning and iterative prompting. These strategies provide additional flexibility to scale test-time computation (e.g., by increasing retrieved documents or generation steps), thereby enhancing LLMs' ability to effectively acquire and utilize contextual information. We address two key questions: (1) How does RAG performance benefit from the scaling of inference computation when optimally configured? (2) Can we predict the optimal test-time compute allocation for a given budget by modeling the relationship between RAG performance and inference parameters? Our observations reveal that increasing inference computation leads to nearly linear gains in RAG performance when optimally allocated, a relationship we describe as the inference scaling laws for RAG. Building on this, we further develop the computation allocation model to estimate RAG performance across different inference configurations. The model predicts optimal inference parameters under various computation constraints, which align closely with the experimental results. By applying these optimal configurations, we demonstrate that scaling inference compute on long-context LLMs achieves up to 58.9% gains on benchmark datasets compared to standard RAG.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2028213158",
+                    "name": "Zhenrui Yue"
+                },
+                {
+                    "authorId": "39371343",
+                    "name": "Honglei Zhuang"
+                },
+                {
+                    "authorId": "2324782053",
+                    "name": "Aijun Bai"
+                },
+                {
+                    "authorId": "2261281337",
+                    "name": "Kai Hui"
+                },
+                {
+                    "authorId": "1886219",
+                    "name": "R. Jagerman"
+                },
+                {
+                    "authorId": "2324910979",
+                    "name": "Hansi Zeng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": null,
+                    "name": "Dong Wang"
+                },
+                {
+                    "authorId": "2261356664",
+                    "name": "Xuanhui Wang"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                }
+            ]
+        },
+        {
+            "paperId": "477d98492acd671c08b964b6d1e25b1161748d72",
+            "title": "Consolidating Ranking and Relevance Predictions of Large Language Models through Post-Processing",
+            "abstract": "The powerful generative abilities of large language models (LLMs) show potential in generating relevance labels for search applications. Previous work has found that directly asking about relevancy, such as ``How relevant is document A to query Q?\", results in sub-optimal ranking. Instead, the pairwise ranking prompting (PRP) approach produces promising ranking performance through asking about pairwise comparisons, e.g., ``Is document A more relevant than document B to query Q?\". Thus, while LLMs are effective at their ranking ability, this is not reflected in their relevance label generation. In this work, we propose a post-processing method to consolidate the relevance labels generated by an LLM with its powerful ranking abilities. Our method takes both LLM generated relevance labels and pairwise preferences. The labels are then altered to satisfy the pairwise preferences of the LLM, while staying as close to the original values as possible. Our experimental results indicate that our approach effectively balances label accuracy and ranking performance. Thereby, our work shows it is possible to combine both the ranking and labeling abilities of LLMs through post-processing.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110134250",
+                    "name": "Le Yan"
+                },
+                {
+                    "authorId": "2099586642",
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": "39371343",
+                    "name": "Honglei Zhuang"
+                },
+                {
+                    "authorId": "1886219",
+                    "name": "R. Jagerman"
+                },
+                {
+                    "authorId": "2261356664",
+                    "name": "Xuanhui Wang"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                },
+                {
+                    "authorId": "143624743",
+                    "name": "Harrie Oosterhuis"
+                }
+            ]
+        },
+        {
+            "paperId": "6c7638ceacf810b1bdf6298baf7c2a6454917f28",
+            "title": "Reliable Confidence Intervals for Information Retrieval Evaluation Using Generative A.I",
+            "abstract": "The traditional evaluation of information retrieval (IR) systems is generally very costly as it requires manual relevance annotation from human experts. Recent advancements in generative artificial intelligence -- specifically large language models (LLMs) -- can generate relevance annotations at an enormous scale with relatively small computational costs. Potentially, this could alleviate the costs traditionally associated with IR evaluation and make it applicable to numerous low-resource applications. However, generated relevance annotations are not immune to (systematic) errors, and as a result, directly using them for evaluation produces unreliable results. In this work, we propose two methods based on prediction-powered inference and conformal risk control that utilize computer-generated relevance annotations to place reliable confidence intervals (CIs) around IR evaluation metrics. Our proposed methods require a small number of reliable annotations from which the methods can statistically analyze the errors in the generated annotations. Using this information, we can place CIs around evaluation metrics with strong theoretical guarantees. Unlike existing approaches, our conformal risk control method is specifically designed for ranking metrics and can vary its CIs per query and document. Our experimental results show that our CIs accurately capture both the variance and bias in evaluation based on LLM annotations, better than the typical empirical bootstrapping estimates. We hope our contributions bring reliable evaluation to the many IR applications where this was traditionally infeasible.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Mathematics"
+            ],
+            "authors": [
+                {
+                    "authorId": "143624743",
+                    "name": "Harrie Oosterhuis"
+                },
+                {
+                    "authorId": "1886219",
+                    "name": "R. Jagerman"
+                },
+                {
+                    "authorId": "2099586642",
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": "2261356664",
+                    "name": "Xuanhui Wang"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                }
+            ]
+        },
+        {
+            "paperId": "7d494fbf4534ef1c2ffab9b711f05ac95154d81b",
+            "title": "Multilingual Fine-Grained News Headline Hallucination Detection",
+            "abstract": "The popularity of automated news headline generation has surged with advancements in pre-trained language models. However, these models often suffer from the ``hallucination'' problem, where the generated headline is not fully supported by its source article. Efforts to address this issue have predominantly focused on English, using over-simplistic classification schemes that overlook nuanced hallucination types. In this study, we introduce the first multilingual, fine-grained news headline hallucination detection dataset that contains over 11 thousand pairs in 5 languages, each annotated with detailed hallucination types by experts. We conduct extensive experiments on this dataset under two settings. First, we implement several supervised fine-tuning approaches as preparatory solutions and demonstrate this dataset's challenges and utilities. Second, we test various large language models' in-context learning abilities and propose two novel techniques, language-dependent demonstration selection and coarse-to-fine prompting, to boost the few-shot hallucination detection performance in terms of the example-F1 metric. We release this dataset to foster further research in multilingual, fine-grained headline hallucination detection.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266463492",
+                    "name": "Jiaming Shen"
+                },
+                {
+                    "authorId": "2239381730",
+                    "name": "Tianqi Liu"
+                },
+                {
+                    "authorId": "2239559694",
+                    "name": "Jialu Liu"
+                },
+                {
+                    "authorId": "2266819166",
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": "2275177854",
+                    "name": "Jay Pavagadhi"
+                },
+                {
+                    "authorId": "2282531735",
+                    "name": "Simon Baumgartner"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                }
+            ]
+        },
+        {
+            "paperId": "93173caa18cddf469b2a0c3867fafb63835b35c6",
+            "title": "Knowledge Distillation with Perturbed Loss: From a Vanilla Teacher to a Proxy Teacher",
+            "abstract": "Knowledge distillation is a popular technique to transfer knowledge from a large teacher model to a small student model. Typically, the student learns to imitate the teacher by minimizing the KL divergence of its output distribution with the teacher\u2019s output distribution. In this work, we argue that such a learning objec-tive is sub-optimal because there exists a discrepancy between the teacher\u2019s output distribution and the ground truth label distribution. Therefore, forcing the student to blindly imitate the unreliable teacher output distribution leads to inferior performance. To this end, we propose a novel knowledge distillation objective PTLoss by first representing the vanilla KL-based distillation loss function via a Maclaurin series and then perturbing the leading-order terms in this series. This perturbed loss implicitly transforms the original teacher into a proxy teacher with a distribution closer to the ground truth distribution. We establish the theoretical connection between this \u201cdistribution closeness\u201d and the student model generalizability, which enables us to select the PTLoss\u2019s perturbation coefficients in a principled way. Extensive experiments on six public benchmark datasets demonstrate the effectiveness of PTLoss with teachers of different scales.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2288852433",
+                    "name": "Rongzhi Zhang"
+                },
+                {
+                    "authorId": "2266463492",
+                    "name": "Jiaming Shen"
+                },
+                {
+                    "authorId": "2239381730",
+                    "name": "Tianqi Liu"
+                },
+                {
+                    "authorId": "2239559694",
+                    "name": "Jialu Liu"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                },
+                {
+                    "authorId": "1398342639",
+                    "name": "Marc Najork"
+                },
+                {
+                    "authorId": "2318670851",
+                    "name": "Chao Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "c8c9002af1d90e9dafa3d07e9edf0d883ec45472",
+            "title": "Boosting Reward Model with Preference-Conditional Multi-Aspect Synthetic Data Generation",
+            "abstract": "Reward models (RMs) are crucial for aligning large language models (LLMs) with human preferences. They are trained using preference datasets where each example consists of one input prompt, two responses, and a preference label. As curating a high-quality human labeled preference dataset is both time-consuming and expensive, people often rely on existing powerful LLMs for preference label generation. This can potentially introduce noise and impede RM training. In this work, we present RMBoost, a novel synthetic preference data generation paradigm to boost reward model quality. Unlike traditional methods, which generate two responses before obtaining the preference label, RMBoost first generates one response and selects a preference label, followed by generating the second more (or less) preferred response conditioned on the pre-selected preference label and the first response. This approach offers two main advantages. First, RMBoost reduces labeling noise since preference pairs are constructed intentionally. Second, RMBoost facilitates the creation of more diverse responses by incorporating various quality aspects (e.g., helpfulness, relevance, completeness) into the prompts. We conduct extensive experiments across three diverse datasets and demonstrate that RMBoost outperforms other synthetic preference data generation techniques and significantly boosts the performance of four distinct reward models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2266463492",
+                    "name": "Jiaming Shen"
+                },
+                {
+                    "authorId": "2265148831",
+                    "name": "Ran Xu"
+                },
+                {
+                    "authorId": "2266398790",
+                    "name": "Yennie Jun"
+                },
+                {
+                    "authorId": "2266819166",
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": "2239381730",
+                    "name": "Tianqi Liu"
+                },
+                {
+                    "authorId": "2312676249",
+                    "name": "Carl Yang"
+                },
+                {
+                    "authorId": "2260290217",
+                    "name": "Yi Liang"
+                },
+                {
+                    "authorId": "2282531735",
+                    "name": "Simon Baumgartner"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                }
+            ]
+        },
+        {
+            "paperId": "0b211dee3cf1eb419bb61ced7b92a12f2b8b4314",
+            "title": "Learning to Rank when Grades Matter",
+            "abstract": "Graded labels are ubiquitous in real-world learning-to-rank applications, especially in human rated relevance data. Traditional learning-to-rank techniques aim to optimize the ranked order of documents. They typically, however, ignore predicting actual grades. This prevents them from being adopted in applications where grades matter, such as filtering out ``poor'' documents. Achieving both good ranking performance and good grade prediction performance is still an under-explored problem. Existing research either focuses only on ranking performance by not calibrating model outputs, or treats grades as numerical values, assuming labels are on a linear scale and failing to leverage the ordinal grade information. In this paper, we conduct a rigorous study of learning to rank with grades, where both ranking performance and grade prediction performance are important. We provide a formal discussion on how to perform ranking with non-scalar predictions for grades, and propose a multiobjective formulation to jointly optimize both ranking and grade predictions. In experiments, we verify on several public datasets that our methods are able to push the Pareto frontier of the tradeoff between ranking and grade prediction performance, showing the benefit of leveraging ordinal grade information.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110134250",
+                    "name": "Le Yan"
+                },
+                {
+                    "authorId": "2099586642",
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": "1743255",
+                    "name": "G. Shamir"
+                },
+                {
+                    "authorId": "2116442426",
+                    "name": "Dong Lin"
+                },
+                {
+                    "authorId": "1526973500",
+                    "name": "Xuanhui Wang"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                }
+            ]
+        },
+        {
+            "paperId": "0fbab714338dafab2a48014bb5494f503d5df8ea",
+            "title": "Query Expansion by Prompting Large Language Models",
+            "abstract": "Query expansion is a widely used technique to improve the recall of search systems. In this paper, we propose an approach to query expansion that leverages the generative abilities of Large Language Models (LLMs). Unlike traditional query expansion approaches such as Pseudo-Relevance Feedback (PRF) that relies on retrieving a good set of pseudo-relevant documents to expand queries, we rely on the generative and creative abilities of an LLM and leverage the knowledge inherent in the model. We study a variety of different prompts, including zero-shot, few-shot and Chain-of-Thought (CoT). We find that CoT prompts are especially useful for query expansion as these prompts instruct the model to break queries down step-by-step and can provide a large number of terms related to the original query. Experimental results on MS-MARCO and BEIR demonstrate that query expansions generated by LLMs can be more powerful than traditional query expansion methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1886219",
+                    "name": "R. Jagerman"
+                },
+                {
+                    "authorId": "39371343",
+                    "name": "Honglei Zhuang"
+                },
+                {
+                    "authorId": "2099586642",
+                    "name": "Zhen Qin"
+                },
+                {
+                    "authorId": "1526973500",
+                    "name": "Xuanhui Wang"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                }
+            ]
+        },
+        {
+            "paperId": "17170575aa8b4fa4e3eef5d366ada706a94dd836",
+            "title": "LaMP: When Large Language Models Meet Personalization",
+            "abstract": "This paper highlights the importance of personalization in large language models and introduces the LaMP benchmark -- a novel benchmark for training and evaluating language models for producing personalized outputs. LaMP offers a comprehensive evaluation framework with diverse language tasks and multiple entries for each user profile. It consists of seven personalized tasks, spanning three text classification and four text generation tasks. We additionally propose two retrieval augmentation approaches that retrieve personal items from each user profile for personalizing language model outputs. To this aim, we study various retrieval models, including term matching, semantic matching, and time-aware methods. Extensive experiments on LaMP for zero-shot and fine-tuned language models demonstrate the efficacy of the proposed retrieval augmentation approach and highlight the impact of personalization in various natural language tasks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2073044451",
+                    "name": "Alireza Salemi"
+                },
+                {
+                    "authorId": "9076501",
+                    "name": "Sheshera Mysore"
+                },
+                {
+                    "authorId": "1815447",
+                    "name": "Michael Bendersky"
+                },
+                {
+                    "authorId": "2499986",
+                    "name": "Hamed Zamani"
+                }
+            ]
+        }
+    ]
+}

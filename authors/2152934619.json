@@ -1,0 +1,382 @@
+{
+    "authorId": "2152934619",
+    "papers": [
+        {
+            "paperId": "e81c91cd71a3310e33e1bffc713aec4de608f40b",
+            "title": "Revisiting Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning: A Benchmark",
+            "abstract": "In the evolving landscape of natural language processing (NLP), fine-tuning pre-trained Large Language Models (LLMs) with first-order (FO) optimizers like SGD and Adam has become standard. Yet, as LLMs grow {in size}, the substantial memory overhead from back-propagation (BP) for FO gradient computation presents a significant challenge. Addressing this issue is crucial, especially for applications like on-device training where memory efficiency is paramount. This paper proposes a shift towards BP-free, zeroth-order (ZO) optimization as a solution for reducing memory costs during LLM fine-tuning, building on the initial concept introduced by MeZO. Unlike traditional ZO-SGD methods, our work expands the exploration to a wider array of ZO optimization techniques, through a comprehensive, first-of-its-kind benchmarking study across five LLM families (Roberta, OPT, LLaMA, Vicuna, Mistral), three task complexities, and five fine-tuning schemes. Our study unveils previously overlooked optimization principles, highlighting the importance of task alignment, the role of the forward gradient method, and the balance between algorithm complexity and fine-tuning performance. We further introduce novel enhancements to ZO optimization, including block-wise descent, hybrid training, and gradient sparsity. Our study offers a promising direction for achieving further memory-efficient LLM fine-tuning. Codes to reproduce all our experiments are at https://github.com/ZO-Bench/ZO-LLM .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2155369380",
+                    "name": "Yihua Zhang"
+                },
+                {
+                    "authorId": "2253560631",
+                    "name": "Pingzhi Li"
+                },
+                {
+                    "authorId": "2284689881",
+                    "name": "Junyuan Hong"
+                },
+                {
+                    "authorId": "2284734081",
+                    "name": "Jiaxiang Li"
+                },
+                {
+                    "authorId": "2108441128",
+                    "name": "Yimeng Zhang"
+                },
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2279077171",
+                    "name": "Pin-Yu Chen"
+                },
+                {
+                    "authorId": "2284685556",
+                    "name": "Jason D. Lee"
+                },
+                {
+                    "authorId": "2284681558",
+                    "name": "Wotao Yin"
+                },
+                {
+                    "authorId": "2284067426",
+                    "name": "Mingyi Hong"
+                },
+                {
+                    "authorId": "2267007672",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2261649341",
+                    "name": "Sijia Liu"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "19cbae4b5d3a10fd5e5cc27de163a4319c9d4341",
+            "title": "You Only Transfer What You Share: Intersection-Induced Graph Transfer Learning for Link Prediction",
+            "abstract": "Link prediction is central to many real-world applications, but its performance may be hampered when the graph of interest is sparse. To alleviate issues caused by sparsity, we investigate a previously overlooked phenomenon: in many cases, a densely connected, complementary graph can be found for the original graph. The denser graph may share nodes with the original graph, which offers a natural bridge for transferring selective, meaningful knowledge. We identify this setting as Graph Intersection-induced Transfer Learning (GITL), which is motivated by practical applications in e-commerce or academic co-authorship predictions. We develop a framework to effectively leverage the structural prior in this setting. We first create an intersection subgraph using the shared nodes between the two graphs, then transfer knowledge from the source-enriched intersection subgraph to the full target graph. In the second step, we consider two approaches: a modified label propagation, and a multi-layer perceptron (MLP) model in a teacher-student regime. Experimental results on proprietary e-commerce datasets and open-source citation graphs show that the proposed workflow outperforms existing transfer learning baselines that do not explicitly utilize the intersection structure.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                }
+            ]
+        },
+        {
+            "paperId": "19ea368b7f88279899c40813a797dda7adc50c07",
+            "title": "Outline, Then Details: Syntactically Guided Coarse-To-Fine Code Generation",
+            "abstract": "For a complicated algorithm, its implementation by a human programmer usually starts with outlining a rough control flow followed by iterative enrichments, eventually yielding carefully generated syntactic structures and variables in a hierarchy. However, state-of-the-art large language models generate codes in a single pass, without intermediate warm-ups to reflect the structured thought process of\"outline-then-detail\". Inspired by the recent success of chain-of-thought prompting, we propose ChainCoder, a program synthesis language model that generates Python code progressively, i.e. from coarse to fine in multiple passes. We first decompose source code into layout frame components and accessory components via abstract syntax tree parsing to construct a hierarchical representation. We then reform our prediction target into a multi-pass objective, each pass generates a subsequence, which is concatenated in the hierarchy. Finally, a tailored transformer architecture is leveraged to jointly encode the natural language descriptions and syntactically aligned I/O data samples. Extensive evaluations show that ChainCoder outperforms state-of-the-arts, demonstrating that our progressive generation eases the reasoning procedure and guides the language model to generate higher-quality solutions. Our codes are available at: https://github.com/VITA-Group/ChainCoder.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2005814581",
+                    "name": "S. Sharan"
+                },
+                {
+                    "authorId": "145018564",
+                    "name": "Ajay Jaiswal"
+                },
+                {
+                    "authorId": "1473176860",
+                    "name": "Kevin Wang"
+                },
+                {
+                    "authorId": "2199014014",
+                    "name": "Yihan Xi"
+                },
+                {
+                    "authorId": "1575684088",
+                    "name": "Dejia Xu"
+                },
+                {
+                    "authorId": "2108404505",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "d96a202ab4f61ce1db1d9e34fbdf20c9cf1018de",
+            "title": "Graph Contrastive Learning: An Odyssey towards Generalizable, Scalable and Principled Representation Learning on Graphs",
+            "abstract": "Graph Contrastive Learning (GCL), an uprising regime of learning representations of graph-structured data, has gained significant attention in recent years. At its core, GCL leverages the idea of comparing different views of a graph to learn representations that capture desirable characteristics of the graph structures. GCL has been applied to a wide range of graph-structured data, including attributed graphs, multi-relational graphs, temporal graphs, hierarchical graphs, heterogeneous graphs, and hypergraphs. The learned graph representations yield predictive performance that generalizes well in various downstream tasks at the node, link, and graph levels, and can scale up to graphs with millions of nodes. In this paper, we present a review of representative GCL approaches with a major emphasis on our own recent efforts. Beginning with the original GCL approach with ad-hoc view generation and simple homogeneous graphs, we demonstrate how the framework can be further extended to more complex heterogeneous graphs and hypergraphs, as well as improved via principled view generation towards generalizability, fairness, interpretability, and other aspects. Theoretical explorations are covered at the end. In conclusion, we discuss the future prospects and ongoing challenges in the field of GCL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108807305",
+                    "name": "Yan Han"
+                },
+                {
+                    "authorId": "89197162",
+                    "name": "Yuning You"
+                },
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2229759886",
+                    "name": "Scott Hoang"
+                },
+                {
+                    "authorId": "2068207615",
+                    "name": "Tianxin Wei"
+                },
+                {
+                    "authorId": "2114798575",
+                    "name": "Majdi Hassan"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "119663804",
+                    "name": "Ying Ding"
+                },
+                {
+                    "authorId": "1705610299",
+                    "name": "Yang Shen"
+                },
+                {
+                    "authorId": "2156070723",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "3a272ee8265b4007f4f6d8ab9cf065e4fe1b6751",
+            "title": "A Comprehensive Study on Large-Scale Graph Training: Benchmarking and Rethinking",
+            "abstract": "Large-scale graph training is a notoriously challenging problem for graph neural networks (GNNs). Due to the nature of evolving graph structures into the training process, vanilla GNNs usually fail to scale up, limited by the GPU memory space. Up to now, though numerous scalable GNN architectures have been proposed, we still lack a comprehensive survey and fair benchmark of this reservoir to find the rationale for designing scalable GNNs. To this end, we first systematically formulate the representative methods of large-scale graph training into several branches and further establish a fair and consistent benchmark for them by a greedy hyperparameter searching. In addition, regarding efficiency, we theoretically evaluate the time and space complexity of various branches and empirically compare them w.r.t GPU memory usage, throughput, and convergence. Furthermore, We analyze the pros and cons for various branches of scalable GNNs and then present a new ensembling training manner, named EnGCN, to address the existing issues. Our code is available at https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "108237152",
+                    "name": "Keyu Duan"
+                },
+                {
+                    "authorId": "47781070",
+                    "name": "Zirui Liu"
+                },
+                {
+                    "authorId": "2118952622",
+                    "name": "Peihao Wang"
+                },
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "3364022",
+                    "name": "Kaixiong Zhou"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "2148950326",
+                    "name": "Xia Hu"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "4ec995fd4117a0f0c7e9d68c38a3b858c95c732c",
+            "title": "Symbolic Visual Reinforcement Learning: A Scalable Framework with Object-Level Abstraction and Differentiable Expression Search",
+            "abstract": "Learning efficient and interpretable policies has been a challenging task in reinforcement learning (RL), particularly in the visual RL setting with complex scenes. While neural networks have achieved competitive performance, the resulting policies are often over-parameterized black boxes that are difficult to interpret and deploy efficiently. More recent SRL frameworks have shown that high-level domain-specific programming logic can be designed to handle both policy learning and symbolic planning. However, these approaches rely on coded primitives with little feature learning, and when applied to high-dimensional visual scenes, they can suffer from scalability issues and perform poorly when images have complex object interactions. To address these challenges, we propose Differentiable Symbolic Expression Search (DiffSES), a novel symbolic learning approach that discovers discrete symbolic policies using partially differentiable optimization. By using object-level abstractions instead of raw pixel-level inputs, DiffSES is able to leverage the simplicity and scalability advantages of symbolic expressions, while also incorporating the strengths of neural networks for feature learning and optimization. Our experiments demonstrate that DiffSES is able to generate symbolic policies that are simpler and more and scalable than state-of-the-art SRL methods, with a reduced amount of symbolic prior knowledge. Our codes are available at: https://github.com/VITA-Group/DiffSES.",
+            "fieldsOfStudy": [
+                "Medicine",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2323052464",
+                    "name": "SP Sharan"
+                },
+                {
+                    "authorId": "47774591",
+                    "name": "Zhiwen Fan"
+                },
+                {
+                    "authorId": "2144759142",
+                    "name": "Kevin Wang"
+                },
+                {
+                    "authorId": "2199014014",
+                    "name": "Yihan Xi"
+                },
+                {
+                    "authorId": "2108404505",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "62f82e0a3271880ca81c7198cad80305bb3719a7",
+            "title": "Search Behavior Prediction: A Hypergraph Perspective",
+            "abstract": "At E-Commerce stores such as Amazon, eBay, and Taobao, the shopping items and the query words that customers use to search for the items form a bipartite graph that captures search behavior. Such a query-item graph can be used to forecast search trends or improve search results. For example, generating query-item associations, which is equivalent to predicting links in the bipartite graph, can yield recommendations that can customize and improve the user search experience. Although the bipartite shopping graphs are straightforward to model search behavior, they suffer from two challenges: 1) The majority of items are sporadically searched and hence have noisy/sparse query associations, leading to a long-tail distribution. 2) Infrequent queries are more likely to link to popular items, leading to another hurdle known as disassortative mixing. To address these two challenges, we go beyond the bipartite graph to take a hypergraph perspective, introducing a new paradigm that leverages auxiliary information from anonymized customer engagement sessions to assist the main task of query-item link prediction. This auxiliary information is available at web scale in the form of search logs. We treat all items appearing in the same customer session as a single hyperedge. The hypothesis is that items in a customer session are unified by a common shopping interest. With these hyperedges, we augment the original bipartite graph into a new hypergraph. We develop a Dual-Channel Attention-Based Hypergraph Neural Network (DCAH), which synergizes information from two potentially noisy sources (original query-item edges and item-item hyperedges). In this way, items on the tail are better connected due to the extra hyperedges, thereby enhancing their link prediction performance. We further integrate DCAH with self-supervised graph pre-training and/or DropEdge training, both of which effectively alleviate disassortative mixing. Extensive experiments on three proprietary E-Commerce datasets show that DCAH yields significant improvements of up to 24.6% in mean reciprocal rank (MRR) and 48.3% in recall compared to GNN-based baselines. Our source code is available at https://github.com/amazon-science/dual-channel-hypergraph-neural-network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2153216777",
+                    "name": "Yan Han"
+                },
+                {
+                    "authorId": "2057479333",
+                    "name": "E-Wen Huang"
+                },
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "145850291",
+                    "name": "Nikhil S. Rao"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                },
+                {
+                    "authorId": "2691095",
+                    "name": "Karthik Subbian"
+                }
+            ]
+        },
+        {
+            "paperId": "a0f487ac7852a10769729f7a530f5fcfaf7466a0",
+            "title": "Symbolic Learning to Optimize: Towards Interpretability and Scalability",
+            "abstract": "Recent studies on Learning to Optimize (L2O) suggest a promising path to automating and accelerating the optimization procedure for complicated tasks. Existing L2O models parameterize optimization rules by neural networks, and learn those numerical rules via meta-training. However, they face two common pitfalls: (1) scalability: the numerical rules represented by neural networks create extra memory overhead for applying L2O models, and limit their applicability to optimizing larger tasks; (2) interpretability: it is unclear what an L2O model has learned in its black-box optimization rule, nor is it straightforward to compare different L2O models in an explainable way. To avoid both pitfalls, this paper proves the concept that we can\"kill two birds by one stone\", by introducing the powerful tool of symbolic regression to L2O. In this paper, we establish a holistic symbolic representation and analysis framework for L2O, which yields a series of insights for learnable optimizers. Leveraging our findings, we further propose a lightweight L2O model that can be meta-trained on large-scale problems and outperformed human-designed and tuned optimizers. Our work is set to supply a brand-new perspective to L2O research. Codes are available at: https://github.com/VITA-Group/Symbolic-Learning-To-Optimize.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "3236115",
+                    "name": "Ting-Kuei Hu"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "b9225c672a5078409d890393780a5eb90f2ec3ca",
+            "title": "Anti-Oversmoothing in Deep Vision Transformers via the Fourier Domain Analysis: From Theory to Practice",
+            "abstract": "Vision Transformer (ViT) has recently demonstrated promise in computer vision problems. However, unlike Convolutional Neural Networks (CNN), it is known that the performance of ViT saturates quickly with depth increasing, due to the observed attention collapse or patch uniformity. Despite a couple of empirical solutions, a rigorous framework studying on this scalability issue remains elusive. In this paper, we first establish a rigorous theory framework to analyze ViT features from the Fourier spectrum domain. We show that the self-attention mechanism inherently amounts to a low-pass filter, which indicates when ViT scales up its depth, excessive low-pass filtering will cause feature maps to only preserve their Direct-Current (DC) component. We then propose two straightforward yet effective techniques to mitigate the undesirable low-pass limitation. The first technique, termed AttnScale, decomposes a self-attention block into low-pass and high-pass components, then rescales and combines these two filters to produce an all-pass self-attention matrix. The second technique, termed FeatScale, re-weights feature maps on separate frequency bands to amplify the high-frequency signals. Both techniques are efficient and hyperparameter-free, while effectively overcoming relevant ViT training artifacts such as attention collapse and patch uniformity. By seamlessly plugging in our techniques to multiple ViT variants, we demonstrate that they consistently help ViTs benefit from deeper architectures, bringing up to 1.1% performance gains\"for free\"(e.g., with little parameter overhead). We publicly release our codes and pre-trained models at https://github.com/VITA-Group/ViT-Anti-Oversmoothing.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2118952622",
+                    "name": "Peihao Wang"
+                },
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "2034263179",
+                    "name": "Tianlong Chen"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        },
+        {
+            "paperId": "cf0ae306a5b485fbf391b60d026f75e008115500",
+            "title": "Symbolic Distillation for Learned TCP Congestion Control",
+            "abstract": "Recent advances in TCP congestion control (CC) have achieved tremendous success with deep reinforcement learning (RL) approaches, which use feedforward neural networks (NN) to learn complex environment conditions and make better decisions. However, such\"black-box\"policies lack interpretability and reliability, and often, they need to operate outside the traditional TCP datapath due to the use of complex NNs. This paper proposes a novel two-stage solution to achieve the best of both worlds: first to train a deep RL agent, then distill its (over-)parameterized NN policy into white-box, light-weight rules in the form of symbolic expressions that are much easier to understand and to implement in constrained environments. At the core of our proposal is a novel symbolic branching algorithm that enables the rule to be aware of the context in terms of various network conditions, eventually converting the NN policy into a symbolic tree. The distilled symbolic rules preserve and often improve performance over state-of-the-art NN policies while being faster and simpler than a standard neural network. We validate the performance of our distilled symbolic rules on both simulation and emulation environments. Our code is available at https://github.com/VITA-Group/SymbolicPCC.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2005814581",
+                    "name": "S. Sharan"
+                },
+                {
+                    "authorId": "2152934619",
+                    "name": "Wenqing Zheng"
+                },
+                {
+                    "authorId": "152764944",
+                    "name": "Kuo-Feng Hsu"
+                },
+                {
+                    "authorId": "40862349",
+                    "name": "Jiarong Xing"
+                },
+                {
+                    "authorId": "30894196",
+                    "name": "Ang Chen"
+                },
+                {
+                    "authorId": "2969311",
+                    "name": "Zhangyang Wang"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,328 @@
+{
+    "authorId": "2112144628",
+    "papers": [
+        {
+            "paperId": "11847555f170bd9dcaf7eca2af8fc69d9e0f2d98",
+            "title": "MLP4Rec: A Pure MLP Architecture for Sequential Recommendations",
+            "abstract": "Self-attention models have achieved state-of-the-art performance in sequential recommender systems by capturing the sequential dependencies among user-item interactions. However, they rely on positional embeddings to retain the sequential information, which may break the semantics of item embeddings. In addition, most existing works assume that such sequential dependencies exist solely in the item embeddings, but neglect their existence among the item features. In this work, we propose a novel sequential recommender system (MLP4Rec) based on the recent advances of MLP-based architectures, which is naturally sensitive to the order of items in a sequence. To be specific, we develop a tri-directional fusion scheme to coherently capture sequential, cross-channel and cross-feature correlations. Extensive experiments demonstrate the effectiveness of MLP4Rec over various representative baselines upon two benchmark datasets. The simple architecture of MLP4Rec also leads to the linear computational complexity as well as much fewer model parameters than existing self-attention methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2163453098",
+                    "name": "Chuan Lyu"
+                },
+                {
+                    "authorId": "2152527913",
+                    "name": "Minghao Zhao"
+                },
+                {
+                    "authorId": "2087049767",
+                    "name": "Runze Wu"
+                },
+                {
+                    "authorId": "2773849",
+                    "name": "Ruocheng Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "34ea83793ae149d24fdb35f7d20c911cb98f72ea",
+            "title": "Efficient Spatially Sparse Inference for Conditional GANs and Diffusion Models",
+            "abstract": "During image editing, existing deep generative models tend to re-synthesize the entire output from scratch, including the unedited regions. This leads to a significant waste of computation, especially for minor editing operations. In this work, we present Spatially Sparse Inference (SSI), a general-purpose technique that selectively performs computation for edited regions and accelerates various generative models, including both conditional GANs and diffusion models. Our key observation is that users prone to gradually edit the input image. This motivates us to cache and reuse the feature maps of the original image. Given an edited image, we sparsely apply the convolutional filters to the edited regions while reusing the cached features for the unedited areas. Based on our algorithm, we further propose Sparse Incremental Generative Engine (SIGE) to convert the computation reduction to latency reduction on off-the-shelf hardware. With about 1%-area edits, SIGE accelerates DDPM by <inline-formula><tex-math notation=\"LaTeX\">$3.0\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>3</mml:mn><mml:mo>.</mml:mo><mml:mn>0</mml:mn><mml:mo>\u00d7</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"li-ieq1-3316020.gif\"/></alternatives></inline-formula> on NVIDIA RTX 3090 and <inline-formula><tex-math notation=\"LaTeX\">$4.6\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>4</mml:mn><mml:mo>.</mml:mo><mml:mn>6</mml:mn><mml:mo>\u00d7</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"li-ieq2-3316020.gif\"/></alternatives></inline-formula> on Apple M1 Pro GPU, Stable Diffusion by <inline-formula><tex-math notation=\"LaTeX\">$7.2\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>7</mml:mn><mml:mo>.</mml:mo><mml:mn>2</mml:mn><mml:mo>\u00d7</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"li-ieq3-3316020.gif\"/></alternatives></inline-formula> on 3090, and GauGAN by <inline-formula><tex-math notation=\"LaTeX\">$5.6\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>5</mml:mn><mml:mo>.</mml:mo><mml:mn>6</mml:mn><mml:mo>\u00d7</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"li-ieq4-3316020.gif\"/></alternatives></inline-formula> on 3090 and <inline-formula><tex-math notation=\"LaTeX\">$5.2\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>5</mml:mn><mml:mo>.</mml:mo><mml:mn>2</mml:mn><mml:mo>\u00d7</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"li-ieq5-3316020.gif\"/></alternatives></inline-formula> on M1 Pro GPU. Compared to our conference paper, we enhance SIGE to accommodate attention layers and apply it to Stable Diffusion. Additionally, we offer support for Apple M1 Pro GPU and include more results to substantiate the efficacy of our method.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "46698300",
+                    "name": "Ji Lin"
+                },
+                {
+                    "authorId": "83262128",
+                    "name": "Chenlin Meng"
+                },
+                {
+                    "authorId": "2490652",
+                    "name": "Stefano Ermon"
+                },
+                {
+                    "authorId": "2143833459",
+                    "name": "Song Han"
+                },
+                {
+                    "authorId": "1922024303",
+                    "name": "Jun-Yan Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "6409ca7fe8858f9c430f260969309ef8f12d24b8",
+            "title": "Lite Pose: Efficient Architecture Design for 2D Human Pose Estimation",
+            "abstract": "Pose estimation plays a critical role in human-centered vision applications. However, it is difficult to deploy state-of-the-art HRNet-based pose estimation models on resource-constrained edge devices due to the high computational cost (more than 150 GMACs per frame). In this paper, we study efficient architecture design for real-time multi-person pose estimation on edge. We reveal that HRNet's high-resolution branches are redundant for models at the low-computation region via our gradual shrinking experiments. Removing them improves both efficiency and performance. Inspired by this finding, we design LitePose, an efficient single-branch architecture for pose estimation, and introduce two simple approaches to enhance the capacity of LitePose, including fusion deconv head and large kernel conv. On mobile platforms, LitePose reduces the latency by up to $5.0\\times$ without sacrificing performance, compared with prior state-of-the-art efficient pose estimation models, pushing the frontier of real-time multi-person pose estimation on edge. Our code and pretrained models are released at https://github.com/mit-han-lab/litepose.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108927967",
+                    "name": "Yihan Wang"
+                },
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2114069742",
+                    "name": "Han Cai"
+                },
+                {
+                    "authorId": "2164114675",
+                    "name": "Wei-Ming Chen"
+                },
+                {
+                    "authorId": "2143833459",
+                    "name": "Song Han"
+                }
+            ]
+        },
+        {
+            "paperId": "892ab4db1097040161dfccb6df028df4b1d17904",
+            "title": "RGBT Tracking by Fully-Convolutional Triple Networks with Cosine Embedding Loss",
+            "abstract": "RGBT tracking has drawn much attention on computer vision in recent years, which aims to fuse complementary information from visible and thermal images for robust object tracking. There are a lot of works paying extensive explorations for fusing features from convolutional networks to integrate modalities, especially modality-specific properties. Although these methods have achieved quite good performance, it is insufficient to represent and interpret the commonness and specificity, as well as the relationship between them, which are significant for RGBT tracking. In this work, we propose a novel triple network to extract Modal-Common, Modal-Specific features, which interprets Modal Common-Specific information from multi-modal images. Besides, a corresponding cosine embedding loss is designed to differentiate features and make them discriminative. For the purpose of perceiving complementary information of modal-specific features, we propose a cross-modal attention-query module, which queries channel attention of another modality and enhances relevant channels itself. Moreover, we conduct an efficient tracker with fully-convolutional siamese network for real-time RGBT tracking. Extensive experiments on two RGBT benchmark datasets has proved the excellent performance and efficiency of our method compared with classic RGB trackers and other state-of-the-art RGBT tracking algorithms.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2107371504",
+                    "name": "Ping Zhang"
+                },
+                {
+                    "authorId": "2140505162",
+                    "name": "Jinsheng Luo"
+                },
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2114086657",
+                    "name": "Chunming Gao"
+                },
+                {
+                    "authorId": "1387840921",
+                    "name": "Changke Wu"
+                }
+            ]
+        },
+        {
+            "paperId": "d238b8ab8b9328b9bbe954d37c6065682b8646b0",
+            "title": "Federated Graph Contrastive Learning",
+            "abstract": "\u2014Graph learning models are critical tools for researchers to explore graph-structured data. To train a capable graph learning model, a conventional method uses suf\ufb01cient training data to train a graph model on a single device. However, it is prohibitive to do so in real-world scenarios due to privacy concerns. Federated learning provides a feasible solution to address such limitations via introducing various privacy-preserving mechanisms, such as differential privacy on graph edges. Nevertheless, differential privacy in federated graph learning secures the classi\ufb01ed information maintained in graphs. It degrades the performances of the graph learning models. In this paper, we investigate how to implement differential privacy on graph edges and observe the performances decreasing in the experiments. We also note that the differential privacy on graph edges introduces noises to perturb graph proximity, which is one of the graph augmentations in graph contrastive learning. Inspired by that, we propose to leverage the advantages of graph contrastive learning to alleviate the performance dropping caused by differential privacy. Extensive experiments are conducted with several representative graph models and widely-used datasets, showing that contrastive learning indeed alleviates the models\u2019 performance dropping caused by differential privacy.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145058732",
+                    "name": "Haoran Yang"
+                },
+                {
+                    "authorId": "2116710405",
+                    "name": "Xiangyu Zhao"
+                },
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "49177484",
+                    "name": "Hongxu Chen"
+                },
+                {
+                    "authorId": "2149131224",
+                    "name": "Guandong Xu"
+                }
+            ]
+        },
+        {
+            "paperId": "f1d6c1e1c4c6a1430ebea3fb3e65961e5b0cae08",
+            "title": "Dual-Modality Feature Extraction Network Based on Graph Attention for RGBT Tracking",
+            "abstract": "The RGBT target tracking method has recently gained popularity owing to the complementarity of RGB images and thermal images information. Although numerous RGBT tracking methods have been proposed, effectively utilizing dual-modality information is still challenging. To solve this problem, we design a dual-modality feature extraction network to extract common and specific modality features. For specific modality features, we design two unique feature extraction networks to learn the independent dual-modality information respectively. For common modality features, we propose a common feature extraction network based on the graph attention method, which could learn the shared modality information of dual-modality images. According to experiments on the RGBT234 and LasHeR datasets, our suggested method performs sufficiently.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2177191020",
+                    "name": "Z. Tian"
+                },
+                {
+                    "authorId": "2187698325",
+                    "name": "Siqing Chen"
+                },
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2187584890",
+                    "name": "Kuo Liao"
+                },
+                {
+                    "authorId": "2107371504",
+                    "name": "Ping Zhang"
+                },
+                {
+                    "authorId": "2187669690",
+                    "name": "Wenyao Zhao"
+                }
+            ]
+        },
+        {
+            "paperId": "5feb0936a74393285a16411bff53bf68ebeb1bde",
+            "title": "A new convolutional neural network and long short term memory combined model for stock index prediction",
+            "abstract": "Stock market is one of the most important parts in the financial market. Numerous time series forecasting methods have been developed for predicting the stock price. Feature extraction is essential to many of these forecasting models. Highly related features can improve the accuracy of the forecasting model. This paper proposes a new model named CNN-LS that combines Convolution Neural Networks (CNN) with Long Short-Term Memory (LSTM) to predict the price of six common indices, including Shanghai Composite Index, Shenzhen Component Index, Dow Jones Index, Nasdaq Index, Nikkei 225 and S&P 500. The model contains two paths of CNN and one path of LSTM to extract features. In our experiment with 10 years historic data of six indexes, the proposed CNN-LS achieved MSE of 0.5994 and MAE of 0.5427 on the testing set, both of which are better than MAE and MSE of five recent methods for stock prediction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1557852385",
+                    "name": "Yuyang Lin"
+                },
+                {
+                    "authorId": "1557337458",
+                    "name": "Qiyin Zhong"
+                },
+                {
+                    "authorId": "2323557645",
+                    "name": "Qi Huang"
+                },
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2026994095",
+                    "name": "Fei Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "a06918eec3ebe308c7309435871c692c5acfd357",
+            "title": "GAN Compression: Efficient Architectures for Interactive Conditional GANs",
+            "abstract": "Conditional Generative Adversarial Networks (cGANs) have enabled controllable image synthesis for many vision and graphics applications. However, recent cGANs are 1-2 orders of magnitude more compute-intensive than modern recognition CNNs. For example, GauGAN consumes 281G MACs per image, compared to 0.44G MACs for MobileNet-v3, making it difficult for interactive deployment. In this work, we propose a general-purpose compression framework for reducing the inference time and model size of the generator in cGANs. Directly applying existing compression methods yields poor performance due to the difficulty of GAN training and the differences in generator architectures. We address these challenges in two ways. First, to stabilize GAN training, we transfer knowledge of multiple intermediate representations of the original model to its compressed model and unify unpaired and paired learning. Second, instead of reusing existing CNN designs, our method finds efficient architectures via neural architecture search. To accelerate the search process, we decouple the model training and search via weight sharing. Experiments demonstrate the effectiveness of our method across different supervision settings, network architectures, and learning methods. Without losing image quality, we reduce the computation of CycleGAN by 21\u00d7, Pix2pix by 12\u00d7, MUNIT by 29\u00d7, and GauGAN by 9\u00d7, paving the way for interactive image synthesis.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2110385919",
+                    "name": "Ji Lin"
+                },
+                {
+                    "authorId": "2110668135",
+                    "name": "Yaoyao Ding"
+                },
+                {
+                    "authorId": "1741412659",
+                    "name": "Zhijian Liu"
+                },
+                {
+                    "authorId": "1922024303",
+                    "name": "Jun-Yan Zhu"
+                },
+                {
+                    "authorId": "143840275",
+                    "name": "Song Han"
+                }
+            ]
+        },
+        {
+            "paperId": "b6207686ecf40f1eb1752425299f265dffbc4abe",
+            "title": "GAN Compression: Efficient Architectures for Interactive Conditional GANs",
+            "abstract": "Conditional Generative Adversarial Networks (cGANs) have enabled controllable image synthesis for many computer vision and graphics applications. However, recent cGANs are 1-2 orders of magnitude more computationally-intensive than modern recognition CNNs. For example, GauGAN consumes 281G MACs per image, compared to 0.44G MACs for MobileNet-v3, making it difficult for interactive deployment. In this work, we propose a general-purpose compression framework for reducing the inference time and model size of the generator in cGANs. Directly applying existing CNNs compression methods yields poor performance due to the difficulty of GAN training and the differences in generator architectures. We address these challenges in two ways. First, to stabilize the GAN training, we transfer knowledge of multiple intermediate representations of the original model to its compressed model, and unify unpaired and paired learning. Second, instead of reusing existing CNN designs, our method automatically finds efficient architectures via neural architecture search (NAS). To accelerate the search process, we decouple the model training and architecture search via weight sharing. Experiments demonstrate the effectiveness of our method across different supervision settings (paired and unpaired), model architectures, and learning methods (e.g., pix2pix, GauGAN, CycleGAN). Without losing image quality, we reduce the computation of CycleGAN by more than 20x and GauGAN by 9x, paving the way for interactive image synthesis. The code and demo are publicly available.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "2110385919",
+                    "name": "Ji Lin"
+                },
+                {
+                    "authorId": "2110668135",
+                    "name": "Yaoyao Ding"
+                },
+                {
+                    "authorId": "47781592",
+                    "name": "Zhijian Liu"
+                },
+                {
+                    "authorId": "2436356",
+                    "name": "Jun-Yan Zhu"
+                },
+                {
+                    "authorId": "143840275",
+                    "name": "Song Han"
+                }
+            ]
+        },
+        {
+            "paperId": "76d203b6b688264b60cb39c90d3c94d23fe9a265",
+            "title": "Nipple Detection in Mammogram Using a New Convolutional Neural Network Architecture",
+            "abstract": "Mammogram is an X-ray image of the breast. It plays an important role in the breast cancer early diagnosis. In recent years, computer aided detection (CAD) is used for breast cancer detection. Multi-view of mammograms are needed to achieve high accuracy of automatic detection. Since nipple is the only landmark on mammogram of different views (mediolateral oblique (MLO) and craniocaudal (CC) views), nipple detection becomes the first important step of many CAD systems. Researchers have developed different models to detect nipple in recent 20 years. Grey scale, geometric feature and breast edge's gradient are used to find the nipple on the mammogram. For most methods, MLO and CC views need to be tested separately, and obvious and subtle types of nipples also need different methods to detect. In this paper, a model with deep learning is designed to locate nipples on mammogram of both MLO and CC views. Both obvious and subtle types are used for experiment. Four convolutional neural network blocks are used to attain candidate blocks. Normalization layers are added to the proposed model in order to improve the domain adaptation. Based on the intersection of candidates, the model computes the final block of nipple. In this experiment, train set and test set are randomly attained from Digital Database for Screening Mammography (DDSM). Our proposed method achieved an overall nipple detection accuracy of 98.00%, which outperformed three comparative methods.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1557852385",
+                    "name": "Yuyang Lin"
+                },
+                {
+                    "authorId": "2112144628",
+                    "name": "Muyang Li"
+                },
+                {
+                    "authorId": "1490938764",
+                    "name": "Sirui Chen"
+                },
+                {
+                    "authorId": "49296984",
+                    "name": "Limin Yu"
+                },
+                {
+                    "authorId": "2026994095",
+                    "name": "Fei Ma"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,315 @@
+{
+    "authorId": "2173256903",
+    "papers": [
+        {
+            "paperId": "27abdbab96df27d0c8cc2ec448d9d78b050c9c01",
+            "title": "Cycle-Retinex: Unpaired Low-Light Image Enhancement via Retinex-Inline CycleGAN",
+            "abstract": "Low-light image enhancement aims to recover normal-light images from the images captured under dim environments. Most existing methods could just improve the light appearance globally whereas failing to handle other degradation such as dense noise, color offset and extremely low-light. Moreover, unsupervised methods proposed in recent years lack reliable physical model as the basis, thus universality is greatly limited. To address these problems, we propose a novel low-light image enhancement method via Retinex-inline cycle-consistent generative adversarial network named Cycle-Retinex, whose training is totally dependent on unpaired datasets. Specifically, we organically combine Retinex theory with CycleGAN, by which we decouple low-light image enhancement task into two sub-tasks, i.e. illumination map enhancement and reflectance map restoration. Retinex theory helps CycleGAN simplify low-light image enhancement problem and CycleGAN provides synthetic paired images to guide the training of Retinex decomposition network. We further introduce a self-augmented method to address the color distortion and noise problem, thus making the network learn to enhance low-light images adaptively. Extensive experiments show that the proposed method can achieve promising results.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2044457157",
+                    "name": "Kangle Wu"
+                },
+                {
+                    "authorId": "2118223646",
+                    "name": "Jun Huang"
+                },
+                {
+                    "authorId": "95952596",
+                    "name": "Yong Ma"
+                },
+                {
+                    "authorId": "40513331",
+                    "name": "Fan Fan"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "32945683b01cc5a1650cbef8d4823b5b8615951d",
+            "title": "PAPS: Progressive Attention-Based Pan-sharpening",
+            "abstract": "Pan-sharpening aims to seek high-resolution multi-spectral (HRMS) images from paired multispectral images of low resolution (LRMS) and panchromatic (PAN) images, the key to which is how to maximally integrate spatial and spectral information from PAN and LRMS images. Following the principle of gradual advance, this paper designs a novel network that contains two main logical functions, i.e., detail enhancement and progressive fusion, to solve the problem. More specifically, the detail enhancement module attempts to produce enhanced MS results with the same spatial sizes as corresponding PAN images, which are of higher quality than directly up-sampling LRMS images. Having a better MS base (enhanced MS) and its PAN, we progressively extract information from the PAN and enhanced MS images, expecting to capture pivotal and complementary information of the two modalities for the purpose of constructing the desired HRMS. Extensive experiments together with ablation studies on widely-used datasets are provided to verify the efficacy of our design, and demonstrate its superiority over other state-of-the-art methods both quantitatively and qualitatively. Our code has been released at https://github.com/JiaYN1/PAPS.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "47416894",
+                    "name": "Yanan Jia"
+                },
+                {
+                    "authorId": "2087008409",
+                    "name": "Qiming Hu"
+                },
+                {
+                    "authorId": "8015902",
+                    "name": "Renwei Dian"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                },
+                {
+                    "authorId": "46909769",
+                    "name": "Xiaojie Guo"
+                }
+            ]
+        },
+        {
+            "paperId": "04ff9f79cccdfc887b55e0e0270bf8f30dd506e3",
+            "title": "Multipatch Progressive Pansharpening With Knowledge Distillation",
+            "abstract": "In this article, we propose a novel multipatch and multistage pansharpening method with knowledge distillation, termed PSDNet. Different from the existing pansharpening methods that typically input single-size patches to the network and implement pansharpening in an overall stage, we design multipatch inputs and a multistage network for more accurate and finer learning. First, multipatch inputs allow the network to learn more accurate spatial and spectral information by reducing the number of object types. We employ small patches in the early part to learn accurate local information, as small patches contain fewer object types. Then, the later part exploits large patches to fine-tune it for the overall information. Second, the multistage network is designed to reduce the difficulty of the previous single-step pansharpening and progressively generate elaborate results. In addition, instead of the traditional perceptual loss, which hardly relates to the specific task or the designed network, we introduce distillation loss to reinforce the guidance of the ground truth. Extensive experiments are conducted to demonstrate the superior performance of our proposed PSDNet to the existing state-of-the-art methods. Our code is available at https://github.com/Meiqi-Gong/PSDNet.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2156453650",
+                    "name": "Meiqi Gong"
+                },
+                {
+                    "authorId": "1682058",
+                    "name": "H. Zhang"
+                },
+                {
+                    "authorId": "2044616606",
+                    "name": "Han Xu"
+                },
+                {
+                    "authorId": "2090453022",
+                    "name": "Xin Tian"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "170f080ad2f8a9a0914ac791690a5a5878dbd636",
+            "title": "Dif-Fusion: Toward High Color Fidelity in Infrared and Visible Image Fusion With Diffusion Models",
+            "abstract": "Color plays an important role in human visual perception, reflecting the spectrum of objects. However, the existing infrared and visible image fusion methods rarely explore how to handle multi-spectral/channel data directly and achieve high color fidelity. This paper addresses the above issue by proposing a novel method with diffusion models, termed as Dif-Fusion, to generate the distribution of the multi-channel input data, which increases the ability of multi-source information aggregation and the fidelity of colors. In specific, instead of converting multi-channel images into single-channel data in existing fusion methods, we create the multi-channel data distribution with a denoising network in a latent space with forward and reverse diffusion process. Then, we use the the denoising network to extract the multi-channel diffusion features with both visible and infrared information. Finally, we feed the multi-channel diffusion features to the multi-channel fusion module to directly generate the three-channel fused image. To retain the texture and intensity information, we propose multi-channel gradient loss and intensity loss. Along with the current evaluation metrics for measuring texture and intensity fidelity, we introduce Delta E as a new evaluation metric to quantify color fidelity. Extensive experiments indicate that our method is more effective than other state-of-the-art image fusion methods, especially in color fidelity. The source code is available at https://github.com/GeoVectorMatrix/Dif-Fusion.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Medicine"
+            ],
+            "authors": [
+                {
+                    "authorId": "2066445624",
+                    "name": "Jun Yue"
+                },
+                {
+                    "authorId": "38140728",
+                    "name": "Leyuan Fang"
+                },
+                {
+                    "authorId": "3385381",
+                    "name": "Shaobo Xia"
+                },
+                {
+                    "authorId": "2142393722",
+                    "name": "Yue Deng"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "21e08726b7a1c39de9ca7262925b06d3776acecd",
+            "title": "D2Net: Deep Denoising Network in Frequency Domain for Hyperspectral Image",
+            "abstract": "Dear Editor, Since the existing hyperspectral image denoising methods suffer from excessive or incomplete denoising, leading to information distortion and loss, this letter proposes a deep denoising network in the frequency domain, termed D2Net. Our motivation stems from the observation that images from different hyperspectral image (HSI) bands share the same structural and contextual features while the reflectance variations in the spectra are mainly fallen on the details and textures. We design the D2Net in three steps: 1) spatial decomposition, 2) spatial-spectral denoising, and 3) refined reconstruction. It achieves multi-scale feature learning without information loss by adopting the rigorous symmetric discrete wavelet transform (DWT) and inverse discrete wavelet transform (IDWT). In particular, the specific design for different frequency components ensures complete noise removal and preservation of fine details. Experiment results demonstrate that our D2Net can attain a promising denoising performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "114444284",
+                    "name": "Erting Pan"
+                },
+                {
+                    "authorId": "95952596",
+                    "name": "Yong Ma"
+                },
+                {
+                    "authorId": "3370925",
+                    "name": "Xiaoguang Mei"
+                },
+                {
+                    "authorId": "2118223646",
+                    "name": "Jun Huang"
+                },
+                {
+                    "authorId": "40513331",
+                    "name": "Fan Fan"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "356ed77271f0c3cfbbf5f7a821ce52f42da28137",
+            "title": "PG-Net: Progressive Guidance Network via Robust Contextual Embedding for Efficient Point Cloud Registration",
+            "abstract": "Building high-quality correspondences is critical in the feature-based point cloud registration pipelines. However, existing single-sequence learning frameworks are difficult to accurately and adequately capture contextual information, leaving a large proportion of outliers between two low-overlap scenes. In this article, we present a progressive guidance network (PG-Net) to gather rich contextual information and exclude outliers. Specifically, we design a novel iterative structure that exploits the inlier probabilities of correspondences to guide the classification of initial correspondences progressively. This structure can mitigate outlier effects with robust contextual information to obtain more accurate model estimation. In addition, to sufficiently capture contextual information, we propose a grouped dense fusion attention (GDFA) feature embedding module to enhance the representation of inliers and significant channel\u2013spatial. Meanwhile, we propose a two-stage neural spectral matching (TSNSM) module to compute the inlier probability of each correspondence and estimate a 3-D transformation model in a coarse-to-fine manner. Experiments results on the indoor and outdoor datasets using distinct 3-D local descriptors demonstrate that our PG-Net surpasses state-of-the-art outlier removal methods. Especially compared with the recent outlier removal network PointDSC, our PG-Net improves the registration recall by 4.06% on the indoor dataset with the FPFH descriptor. Source code: https://github.com/changcaiyang/PG-Net.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115721151",
+                    "name": "Jingtao Wang"
+                },
+                {
+                    "authorId": "2120101285",
+                    "name": "Xin Liu"
+                },
+                {
+                    "authorId": "1596817543",
+                    "name": "Luanyuan Dai"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                },
+                {
+                    "authorId": "3013008",
+                    "name": "Lifang Wei"
+                },
+                {
+                    "authorId": "2155848341",
+                    "name": "Changcai Yang"
+                },
+                {
+                    "authorId": "2190791870",
+                    "name": "Riqing Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "408b1e0d0ccff25a2f03ae73d44918df7d30e1da",
+            "title": "Coarse-to-Fine Cross-Domain Learning Fusion Network for Pansharpening",
+            "abstract": "Deep learning (DL)-based pansharpening methods have shown great advantages in fusing multispectral (MS) and panchromatic (PAN) images to obtain a high-resolution MS image in remote sensing applications. However, most DL methods have low generalization capability that will cause severe spatial or spectral distortions, especially when a large distribution gap exists between training data from a source domain and testing data from another target domain. To overcome this problem, we propose a coarse-to-fine adaption learning fusion network for pansharpening. We first learn the priori mapping relationships between MS and PAN images in the source domain through the coarse-fusion (CF) network, which combines the advantages of UNet and Transformer architectures that help to explore texture information of different characteristics. To generate a clear fusion result with good preservation of spatial and spectral information in the target domain, the fine-fusion network is further proposed to adjust the spatial and spectral information of the coarse-fusion image in an unsupervised learning manner based on the target-specific knowledge. Therefore, the generalization capability can be effectively improved because the general mapping relationship from the source domain and the specific target knowledge from the target domain are both considered. Experiments on simulated and real datasets are conducted to demonstrate the superiority of our proposed method over other state-of-the-art DL methods in terms of visual quality and quantitative analysis.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2216427265",
+                    "name": "Chengjie Ke"
+                },
+                {
+                    "authorId": "143715293",
+                    "name": "W. Zhang"
+                },
+                {
+                    "authorId": "38655501",
+                    "name": "Zhongyuan Wang"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                },
+                {
+                    "authorId": "2090453022",
+                    "name": "Xin Tian"
+                }
+            ]
+        },
+        {
+            "paperId": "42162e61fed13baebf61b7bbd31b59a81ed18f49",
+            "title": "Learning for Feature Matching via Graph Context Attention",
+            "abstract": "Establishing reliable correspondences via a deep learning network is an important task in remote sensing, photogrammetry, and other computer vision fields. It usually requires mining the relationship among correspondences to aggregate both local and global contexts. However, current methods are insufficient to effectively acquire context information with high reliability. In this article, we propose a graph context attention-based network (GCA-Net) to capture and leverage abundant contextual information for feature matching. Specifically, we design a graph context attention block, which generates multipath graph contexts and softly fuses them to combine respective advantages. In addition, for building the graph context containing stronger representation ability and outlier resistance ability, we further design a local\u2013global channel mining block to gather context information by focusing on the significant part as well as to mine dependencies among channels of correspondences in both local and global aspects. The proposed GCA-Net is able to effectively infer the probability of correspondences being inliers or outliers and estimate the essential matrix meanwhile. Extensive experimental results for outlier removal and relative pose estimation demonstrate that GCA-Net outperforms the state-of-the-art methods on both outdoor and indoor datasets (i.e., YFCC100M and SUN3D). In addition, experiments extended to remote sensing and point cloud scenes also demonstrate the powerful generalization capability of our network.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2117223896",
+                    "name": "Junwen Guo"
+                },
+                {
+                    "authorId": "2055961353",
+                    "name": "Guobao Xiao"
+                },
+                {
+                    "authorId": "2112472091",
+                    "name": "Zhimin Tang"
+                },
+                {
+                    "authorId": "2163148650",
+                    "name": "Shunxing Chen"
+                },
+                {
+                    "authorId": "2124865712",
+                    "name": "Shiping Wang"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "4c5c5001ea6338a53b9e8553f12ed1d35b936233",
+            "title": "Diff-Retinex: Rethinking Low-light Image Enhancement with A Generative Diffusion Model",
+            "abstract": "In this paper, we rethink the low-light image enhancement task and propose a physically explainable and generative diffusion model for low-light image enhancement, termed as Diff-Retinex. We aim to integrate the advantages of the physical model and the generative network. Furthermore, we hope to supplement and even deduce the information missing in the low-light image through the generative network. Therefore, Diff-Retinex formulates the lowlight image enhancement problem into Retinex decomposition and conditional image generation. In the Retinex decomposition, we integrate the superiority of attention in Transformer and meticulously design a Retinex Transformer decomposition network (TDN) to decompose the image into illumination and reflectance maps. Then, we design multi-path generative diffusion networks to reconstruct the normal-light Retinex probability distribution and solve the various degradations in these components respectively, including dark illumination, noise, color deviation, loss of scene contents, etc. Owing to generative diffusion model, Diff-Retinex puts the restoration of low-light subtle detail into practice. Extensive experiments conducted on real-world low-light datasets qualitatively and quantitatively demonstrate the effectiveness, superiority, and generalization of the proposed method.",
+            "fieldsOfStudy": [
+                "Computer Science",
+                "Engineering"
+            ],
+            "authors": [
+                {
+                    "authorId": "2182439167",
+                    "name": "Xunpeng Yi"
+                },
+                {
+                    "authorId": "2044616606",
+                    "name": "Han Xu"
+                },
+                {
+                    "authorId": "1682058",
+                    "name": "H. Zhang"
+                },
+                {
+                    "authorId": "2153720741",
+                    "name": "Linfeng Tang"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                }
+            ]
+        },
+        {
+            "paperId": "53ea10a2346a41ece57647cf76eccb3f83d5ed1f",
+            "title": "Loop Closure Detection With Bidirectional Manifold Representation Consensus",
+            "abstract": "Loop closure detection (LCD) is an indispensable module in simultaneous localization and mapping. It is responsible to recognize pre-visited areas during the navigation of a robot, providing auxiliary information to revise pose estimation. Unlike most current methods which focus on seeking an appropriate representation of images, we propose a novel two-stage pipeline dominated by the estimation of spatial geometric relationship. Specifically, to avoid unnecessary memory costs, consecutive images are segmented into sequences as per the similarity of their global features. Then the sequence descriptor is incrementally inserted into hierarchical navigable small world for the construction of reference database, from which the most similar image for the query one is searched parallelly. To further identify whether the candidate pair is geometry-consistent, a feature matching method termed as bidirectional manifold representation consensus (BMRC) is proposed. It constructs local neighborhood structures of feature points via manifold representation, and formulates the matching problem into an optimization model, enabling linearithmic time complexity via a closed-form solution. Meanwhile, an accelerated version of it is introduced (BMRC*), which performs about 63% faster than BMRC in an image pair with 352 initial correspondences. Extensive experiments on nine publicly available datasets demonstrate that BMRC and BMRC* perform well in feature matching and the proposed pipeline has remarkable performance in the LCD task.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51149566",
+                    "name": "Kaining Zhang"
+                },
+                {
+                    "authorId": "2145275245",
+                    "name": "Zizhuo Li"
+                },
+                {
+                    "authorId": "2173256903",
+                    "name": "Jiayi Ma"
+                }
+            ]
+        }
+    ]
+}

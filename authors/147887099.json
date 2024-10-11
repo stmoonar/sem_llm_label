@@ -1,0 +1,434 @@
+{
+    "authorId": "147887099",
+    "papers": [
+        {
+            "paperId": "51615bee01c966ba055920e10778d5331d35bccd",
+            "title": "MoMo: A shared encoder Model for text, image and multi-Modal representations",
+            "abstract": "We propose a self-supervised shared encoder model that achieves strong results on several visual, language and multimodal benchmarks while being data, memory and run-time efficient. We make three key contributions. First, in contrast to most existing works, we use a single transformer with all the encoder layers processing both the text and the image modalities. Second, we propose a stage-wise training strategy where the model is first trained on images, then jointly with unimodal text and image datasets and finally jointly with text and text-image datasets. Third, to preserve information across both the modalities, we propose a training pipeline that learns simultaneously from gradient updates of different modalities at each training update step. The results on downstream text-only, image-only and multimodal tasks show that our model is competitive with several strong models while using fewer parameters and lesser pre-training data. For example, MoMo performs competitively with FLAVA on multimodal (+3.1), image-only (+1.1) and text-only (-0.1) tasks despite having 2/5th the number of parameters and using 1/3rd the image-text training pairs. Finally, we ablate various design choices and further show that increasing model size produces significant performance gains indicating potential for substantial improvements with larger models using our approach.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "29962444",
+                    "name": "Zhao-Heng Zheng"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "faffa6c51abb671f3117d94cedeb28f3631d2f6a",
+            "title": "FashionNTM: Multi-turn Fashion Image Retrieval via Cascaded Memory",
+            "abstract": "Multi-turn textual feedback-based fashion image retrieval focuses on a real-world setting, where users can iteratively provide information to refine retrieval results until they find an item that fits all their requirements. In this work, we present a novel memory-based method, called FashionNTM, for such a multi-turn system. Our framework incorporates a new Cascaded Memory Neural Turing Machine (CM-NTM) approach for implicit state management, thereby learning to integrate information across all past turns to retrieve new images, for a given turn. Unlike vanilla Neural Turing Machine (NTM), our CM-NTM operates on multiple inputs, which interact with their respective memories via individual read and write heads, to learn complex relationships. Extensive evaluation results show that our proposed method outperforms the previous state-of-the-art algorithm by 50.5%, on Multi-turn FashionIQ [60] \u2013 the only existing multi-turn fashion dataset currently, in addition to having a relative improvement of 12.6% on Multi-turn Shoes \u2013 an extension of the singleturn Shoes dataset [5] that we created in this work. Further analysis of the model in a real-world interactive setting demonstrates two important capabilities of our model \u2013 memory retention across turns, and agnosticity to turn order for non-contradictory feedback. Finally, user study results show that images retrieved by FashionNTM were favored by 83.1% over other multi-turn models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "151453388",
+                    "name": "Anwesan Pal"
+                },
+                {
+                    "authorId": "5002401",
+                    "name": "Sahil Wadhwa"
+                },
+                {
+                    "authorId": "26393556",
+                    "name": "Ayush Jaiswal"
+                },
+                {
+                    "authorId": "2213162331",
+                    "name": "Xu Zhang"
+                },
+                {
+                    "authorId": "2109035901",
+                    "name": "Yue Wu"
+                },
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "2065343184",
+                    "name": "Henrik I. Christensen"
+                }
+            ]
+        },
+        {
+            "paperId": "8d0ddeab6ef624d15db320eaa38df282c4dfa33a",
+            "title": "FPI: Failure Point Isolation in Large-scale Conversational Assistants",
+            "abstract": "Large-scale conversational assistants such as Cortana, Alexa, Google Assistant and Siri process requests through a series of modules for wake word detection, speech recognition, language understanding and response generation. An error in one of these modules can cascade through the system. Given the large traffic volumes in these assistants, it is infeasible to manually analyze the data, identify requests with processing errors and isolate the source of error. We present a machine learning system to address this challenge. First, we embed the incoming request and context, such as system response and subsequent turns, using pre-trained transformer models. Then, we combine these embeddings with encodings of additional metadata features (such as confidence scores from different modules in the online system) using a \u201cmixing-encoder\u201d to output the failure point predictions. Our system obtains 92.2% of human performance on this task while scaling to analyze the entire traffic in 8 different languages of a large-scale conversational assistant. We present detailed ablation studies analyzing the impact of different modeling choices.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145964537",
+                    "name": "R. Khaziev"
+                },
+                {
+                    "authorId": "3164047",
+                    "name": "Usman Shahid"
+                },
+                {
+                    "authorId": "2240075710",
+                    "name": "Tobias R\u00f6ding"
+                },
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "2798149",
+                    "name": "Emir Kapanci"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "9690e7056c972e298c6696fa4b1f485b82ded433",
+            "title": "FashionVLP: Vision Language Transformer for Fashion Retrieval with Feedback",
+            "abstract": "Fashion image retrieval based on a query pair of reference image and natural language feedback is a challenging task that requires models to assess fashion related information from visual and textual modalities simultaneously. We propose a new vision-language transformer based model, FashionVLP, that brings the prior knowledge contained in large image-text corpora to the domain of fashion image retrieval, and combines visual information from multiple levels of context to effectively capture fashion-related information. While queries are encoded through the transformer layers, our asymmetric design adopts a novel attention-based approach for fusing target image features without involving text or transformer layers in the process. Extensive results show that FashionVLP achieves the state-of-the-art performance on benchmark datasets, with a large 23% relative improvement on the challenging FashionIQ dataset, which contains complex natural language feedback.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2096063076",
+                    "name": "Sonam Goenka"
+                },
+                {
+                    "authorId": "29962444",
+                    "name": "Zhao-Heng Zheng"
+                },
+                {
+                    "authorId": "26393556",
+                    "name": "Ayush Jaiswal"
+                },
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "1887625",
+                    "name": "Yuehua Wu"
+                },
+                {
+                    "authorId": "3236027",
+                    "name": "Varsha Hedau"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "c8525b6119a6ec89bd64a97a6ee5d7d377f8841c",
+            "title": "CGF: Constrained Generation Framework for Query Rewriting in Conversational AI",
+            "abstract": "In conversational AI agents, Query Rewriting 001 (QR) plays a crucial role in reducing users fric- 002 tions and satisfying their daily demands. Users 003 frictions are caused by various reasons, such 004 as errors in the spoken dialogue system, users\u2019 005 accent or their abridged language. In this work, 006 we present a novel Constrained Generation 007 Framework (CGF) for query rewriting at both 008 global and personalized level. The proposed 009 framework is based on the encoder-decoder 010 framework and consists of a context-enhanced 011 encoding and constrained generation decoding 012 phrases. The model takes the query and its 013 previous dialogue context information as the 014 encoder input, then the decoder relies on the 015 pre-defined global or personalized constrained 016 decoding space to generate the rewrites. Ex- 017 tensive offline and online A/B experimental re- 018 sults show that the proposed CGF significantly 019 boosts the query rewriting performance. 020",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "145485960",
+                    "name": "Jie Hao"
+                },
+                {
+                    "authorId": "2152797245",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "2117800368",
+                    "name": "Xing Fan"
+                },
+                {
+                    "authorId": "2118973203",
+                    "name": "Saurabh Gupta"
+                },
+                {
+                    "authorId": "2805456",
+                    "name": "Saleh Soltan"
+                },
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "1941997",
+                    "name": "Chenlei Guo"
+                },
+                {
+                    "authorId": "1748051",
+                    "name": "G\u00f6khan T\u00fcr"
+                }
+            ]
+        },
+        {
+            "paperId": "daa3af99c6421a60e4dc06cb27fc97a60a1aa54b",
+            "title": "Alexa Teacher Model: Pretraining and Distilling Multi-Billion-Parameter Encoders for Natural Language Understanding Systems",
+            "abstract": "We present results from a large-scale experiment on pretraining encoders with non-embedding parameter counts ranging from 700M to 9.3B, their subsequent distillation into smaller models ranging from 17M-170M parameters, and their application to the Natural Language Understanding (NLU) component of a virtual assistant system. Though we train using 70% spoken-form data, our teacher models perform comparably to XLM-R and mT5 when evaluated on the written-form Cross-lingual Natural Language Inference (XNLI) corpus. We perform a second stage of pretraining on our teacher models using in-domain data from our system, improving error rates by 3.86% relative for intent classification and 7.01% relative for slot filling. We find that even a 170M-parameter model distilled from our Stage 2 teacher model has 2.88% better intent classification and 7.69% better slot filling error rates when compared to the 2.3B-parameter teacher trained only on public data (Stage 1), emphasizing the importance of in-domain data for pretraining. When evaluated offline using labeled NLU data, our 17M-parameter Stage 2 distilled model outperforms both XLM-R Base (85M params) and DistillBERT (42M params) by 4.23% to 6.14%, respectively. Finally, we present results from a full virtual assistant experimentation platform, where we find that models trained using our pretraining and distillation pipeline outperform models distilled from 85M-parameter teachers by 3.74%-4.91% on an automatic measurement of full-system user dissatisfaction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "120590817",
+                    "name": "Jack G. M. FitzGerald"
+                },
+                {
+                    "authorId": "2773408",
+                    "name": "Shankar Ananthakrishnan"
+                },
+                {
+                    "authorId": "1757320",
+                    "name": "Konstantine Arkoudas"
+                },
+                {
+                    "authorId": "2081635546",
+                    "name": "Davide Bernardi"
+                },
+                {
+                    "authorId": "2170538298",
+                    "name": "Abhishek Bhagia"
+                },
+                {
+                    "authorId": "3257579",
+                    "name": "Claudio Delli Bovi"
+                },
+                {
+                    "authorId": "2109908684",
+                    "name": "Jin Cao"
+                },
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "2170537879",
+                    "name": "Amit Chauhan"
+                },
+                {
+                    "authorId": "1919815",
+                    "name": "Luoxin Chen"
+                },
+                {
+                    "authorId": "15854877",
+                    "name": "Anurag Dwarakanath"
+                },
+                {
+                    "authorId": "1900292156",
+                    "name": "Satyam Dwivedi"
+                },
+                {
+                    "authorId": "2820794",
+                    "name": "Turan Gojayev"
+                },
+                {
+                    "authorId": "145916630",
+                    "name": "Karthik Gopalakrishnan"
+                },
+                {
+                    "authorId": "2308928",
+                    "name": "Thomas Gueudr\u00e9"
+                },
+                {
+                    "authorId": "1395813836",
+                    "name": "Dilek Z. Hakkani-T\u00fcr"
+                },
+                {
+                    "authorId": "1836135",
+                    "name": "Wael Hamza"
+                },
+                {
+                    "authorId": "2149932798",
+                    "name": "Jonathan Hueser"
+                },
+                {
+                    "authorId": "2117356",
+                    "name": "Kevin Martin Jose"
+                },
+                {
+                    "authorId": "144165565",
+                    "name": "Haidar Khan"
+                },
+                {
+                    "authorId": "2108662892",
+                    "name": "Bei Liu"
+                },
+                {
+                    "authorId": "2152961472",
+                    "name": "Jianhua Lu"
+                },
+                {
+                    "authorId": "47773962",
+                    "name": "A. Manzotti"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "1980308",
+                    "name": "Karolina Owczarzak"
+                },
+                {
+                    "authorId": "2033358253",
+                    "name": "Gokmen Oz"
+                },
+                {
+                    "authorId": "40436342",
+                    "name": "Enrico Palumbo"
+                },
+                {
+                    "authorId": "102648923",
+                    "name": "Charith Peris"
+                },
+                {
+                    "authorId": "1588348842",
+                    "name": "Chandan Prakash"
+                },
+                {
+                    "authorId": "38696444",
+                    "name": "Stephen Rawls"
+                },
+                {
+                    "authorId": "146177177",
+                    "name": "Andrew Rosenbaum"
+                },
+                {
+                    "authorId": "37832169",
+                    "name": "Anjali Shenoy"
+                },
+                {
+                    "authorId": "2805456",
+                    "name": "Saleh Soltan"
+                },
+                {
+                    "authorId": "1734869335",
+                    "name": "Mukund Sridhar"
+                },
+                {
+                    "authorId": "2087344242",
+                    "name": "Lizhen Tan"
+                },
+                {
+                    "authorId": "1761263",
+                    "name": "Fabian Triefenbach"
+                },
+                {
+                    "authorId": "2162760612",
+                    "name": "Pan Wei"
+                },
+                {
+                    "authorId": "2119316118",
+                    "name": "Haiyang Yu"
+                },
+                {
+                    "authorId": "2000361443",
+                    "name": "Shuai Zheng"
+                },
+                {
+                    "authorId": "5108268",
+                    "name": "Gokhan Tur"
+                },
+                {
+                    "authorId": "2104644641",
+                    "name": "Premkumar Natarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "9c81394363178ce94b1eac111df4e3ad11bdb7c2",
+            "title": "FewshotQA: A simple framework for few-shot learning of question answering tasks using pre-trained text-to-text models",
+            "abstract": "The task of learning from only a few examples (called a few-shot setting) is of key importance and relevance to a real-world setting. For question answering (QA), the current state-of-the-art pre-trained models typically need fine-tuning on tens of thousands of examples to obtain good results. Their performance degrades significantly in a few-shot setting (< 100 examples). To address this, we propose a simple fine-tuning framework that leverages pre-trained text-to-text models and is directly aligned with their pre-training framework. Specifically, we construct the input as a concatenation of the question, a mask token representing the answer span and a context. Given this input, the model is fine-tuned using the same objective as that of its pre-training objective. Through experimental studies on various few-shot configurations, we show that this formulation leads to significant gains on multiple QA benchmarks (an absolute gain of 34.2 F1 points on average when there are only 16 training examples). The gains extend further when used with larger models (Eg:- 72.3 F1 on SQuAD using BART-large with only 32 examples) and translate well to a multilingual setting . On the multilingual TydiQA benchmark, our model outperforms the XLM-Roberta-large by an absolute margin of upto 40 F1 points and an average of 33 F1 points in a few-shot setting (<= 64 training examples). We conduct detailed ablation studies to analyze factors contributing to these gains.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                }
+            ]
+        },
+        {
+            "paperId": "db899c6191e25818091d4bab1c2da88689554e7f",
+            "title": "Error Detection in Large-Scale Natural Language Understanding Systems Using Transformer Models",
+            "abstract": "Large-scale conversational assistants like Alexa, Siri, Cortana and Google Assistant process every utterance using multiple models for domain, intent and named entity recognition. Given the decoupled nature of model development and large traffic volumes, it is extremely difficult to identify utterances processed erroneously by such systems. We address this challenge to detect domain classification errors using offline Transformer models. We combine utterance encodings from a RoBERTa model with the Nbest hypothesis produced by the production system. We then fine-tune end-to-end in a multitask setting using a small dataset of humanannotated utterances with domain classification errors. We tested our approach for detecting misclassifications from one domain that accounts for <0.5% of the traffic in a large-scale conversational AI system. Our approach achieves an F1 score of 30% outperforming a biLSTM baseline by 16.9% and a standalone RoBERTa model by 4.8%. We improve this further by 2.2% to 32.2% by ensembling multiple models.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                },
+                {
+                    "authorId": "49824581",
+                    "name": "P. Natarajan"
+                },
+                {
+                    "authorId": "2121339589",
+                    "name": "Darshan Fofadiya"
+                },
+                {
+                    "authorId": "2121359655",
+                    "name": "Prathap Ramachandra"
+                }
+            ]
+        },
+        {
+            "paperId": "b1dfb1035d7f68a3e71a44bd10b25b4677fdbf48",
+            "title": "Simultaneous paraphrasing and translation by fine-tuning Transformer models",
+            "abstract": "This paper describes the third place submission to the shared task on simultaneous translation and paraphrasing for language education at the 4th workshop on Neural Generation and Translation (WNGT) for ACL 2020. The final system leverages pre-trained translation models and uses a Transformer architecture combined with an oversampling strategy to achieve a competitive performance. This system significantly outperforms the baseline on Hungarian (27% absolute improvement in Weighted Macro F1 score) and Portuguese (33% absolute improvement) languages.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                }
+            ]
+        },
+        {
+            "paperId": "a52ad4f73f690c350c054a2463db9bc5f94e9360",
+            "title": "Gendered Pronoun Resolution using BERT and an Extractive Question Answering Formulation",
+            "abstract": "The resolution of ambiguous pronouns is a longstanding challenge in Natural Language Understanding. Recent studies have suggested gender bias among state-of-the-art coreference resolution systems. As an example, Google AI Language team recently released a gender-balanced dataset and showed that performance of these coreference resolvers is significantly limited on the dataset. In this paper, we propose an extractive question answering (QA) formulation of pronoun resolution task that overcomes this limitation and shows much lower gender bias (0.99) on their dataset. This system uses fine-tuned representations from the pre-trained BERT model and outperforms the existing baseline by a significant margin (22.2% absolute improvement in F1 score) without using any hand-engineered features. This QA framework is equally performant even without the knowledge of the candidate antecedents of the pronoun. An ensemble of QA and BERT-based multiple choice and sequence classification models further improves the F1 (23.3% absolute improvement upon the baseline). This ensemble model was submitted to the shared task for the 1st ACL workshop on Gender Bias for Natural Language Processing. It ranked 9th on the final official leaderboard.",
+            "fieldsOfStudy": [
+                "Sociology",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "147887099",
+                    "name": "Rakesh Chada"
+                }
+            ]
+        }
+    ]
+}

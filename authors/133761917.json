@@ -1,0 +1,361 @@
+{
+    "authorId": "133761917",
+    "papers": [
+        {
+            "paperId": "e8919f27508c72836871a8b3dc4d024f8c1fd89f",
+            "title": "Evaluating the Generalization Ability of Quantized LLMs: Benchmark, Analysis, and Toolbox",
+            "abstract": "Large language models (LLMs) have exhibited exciting progress in multiple scenarios, while the huge computational demands hinder their deployments in lots of real-world applications. As an effective means to reduce memory footprint and inference cost, quantization also faces challenges in performance degradation at low bit-widths. Understanding the impact of quantization on LLM capabilities, especially the generalization ability, is crucial. However, the community's main focus remains on the algorithms and models of quantization, with insufficient attention given to whether the quantized models can retain the strong generalization abilities of LLMs. In this work, we fill this gap by providing a comprehensive benchmark suite for this research topic, including an evaluation system, detailed analyses, and a general toolbox. Specifically, based on the dominant pipeline in LLM quantization, we primarily explore the impact of calibration data distribution on the generalization of quantized LLMs and conduct the benchmark using more than 40 datasets within two main scenarios. Based on this benchmark, we conduct extensive experiments with two well-known LLMs (English and Chinese) and four quantization algorithms to investigate this topic in-depth, yielding several counter-intuitive and valuable findings, e.g., models quantized using a calibration set with the same distribution as the test data are not necessarily optimal. Besides, to facilitate future research, we also release a modular-designed toolbox, which decouples the overall pipeline into several separate components, e.g., base LLM module, dataset module, quantizer module, etc. and allows subsequent researchers to easily assemble their methods through a simple configuration. Our benchmark suite is publicly available at https://github.com/TsingmaoAI/MI-optimize",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2307547414",
+                    "name": "Yijun Liu"
+                },
+                {
+                    "authorId": "2260668917",
+                    "name": "Yuan Meng"
+                },
+                {
+                    "authorId": "2307566619",
+                    "name": "Fang Wu"
+                },
+                {
+                    "authorId": "2307885932",
+                    "name": "Shenhao Peng"
+                },
+                {
+                    "authorId": "2308147657",
+                    "name": "Hang Yao"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2266423717",
+                    "name": "Chen Tang"
+                },
+                {
+                    "authorId": "2277668948",
+                    "name": "Xinzhu Ma"
+                },
+                {
+                    "authorId": "2295848449",
+                    "name": "Zhi Wang"
+                },
+                {
+                    "authorId": "2277687596",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "0a851958ba955e125bfd8486da481c42764146a0",
+            "title": "Post-training Quantization with Progressive Calibration and Activation Relaxing for Text-to-Image Diffusion Models",
+            "abstract": "High computational overhead is a troublesome problem for diffusion models. Recent studies have leveraged post-training quantization (PTQ) to compress diffusion models. However, most of them only focus on unconditional models, leaving the quantization of widely-used pretrained text-to-image models, e.g., Stable Diffusion, largely unexplored. In this paper, we propose a novel post-training quantization method PCR (Progressive Calibration and Relaxing) for text-to-image diffusion models, which consists of a progressive calibration strategy that considers the accumulated quantization error across timesteps, and an activation relaxing strategy that improves the performance with negligible cost. Additionally, we demonstrate the previous metrics for text-to-image diffusion model quantization are not accurate due to the distribution gap. To tackle the problem, we propose a novel QDiffBench benchmark, which utilizes data in the same domain for more accurate evaluation. Besides, QDiffBench also considers the generalization performance of the quantized model outside the calibration dataset. Extensive experiments on Stable Diffusion and Stable Diffusion XL demonstrate the superiority of our method and benchmark. Moreover, we are the first to achieve quantization for Stable Diffusion XL while maintaining the performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1993657480",
+                    "name": "Siao Tang"
+                },
+                {
+                    "authorId": "2256599610",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2266422295",
+                    "name": "Zewen Wu"
+                },
+                {
+                    "authorId": "2265931162",
+                    "name": "Yansong Tang"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "5d00e8f305d20ad937938fa4db054a33186626f7",
+            "title": "AutoGT: Automated Graph Transformer Architecture Search",
+            "abstract": "Although Transformer architectures have been successfully applied to graph data with the advent of Graph Transformer, the current design of Graph Transformers still heavily relies on human labor and expertise knowledge to decide on proper neural architectures and suitable graph encoding strategies at each Transformer layer. In literature, there have been some works on the automated design of Transformers focusing on non-graph data such as texts and images without considering graph encoding strategies, which fail to handle the non-euclidean graph data. In this paper, we study the problem of automated graph Transformers, for the first time. However, solving these problems poses the following challenges: i) how can we design a unified search space for graph Transformer, and ii) how to deal with the coupling relations between Transformer architectures and the graph encodings of each Transformer layer. To address these challenges, we propose Automated Graph Transformer (AutoGT), a neural architecture search framework that can automatically discover the optimal graph Transformer architectures by joint optimization of Transformer architecture and graph encoding strategies. Specifically, we first propose a unified graph Transformer formulation that can represent most state-ofthe-art graph Transformer architectures. Based upon the unified formulation, we further design the graph Transformer search space that includes both candidate architectures and various graph encodings. To handle the coupling relations, we propose a novel encoding-aware performance estimation strategy by gradually training and splitting the supernets according to the correlations between graph encodings and architectures. The proposed strategy can provide a more consistent and fine-grained performance prediction when evaluating the jointly optimized graph encodings and architectures. Extensive experiments and ablation studies show that our proposed AutoGT gains sufficient improvement over state-of-the-art hand-crafted baselines on all datasets, demonstrating its effectiveness and wide applicability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2128158461",
+                    "name": "Zizhao Zhang"
+                },
+                {
+                    "authorId": "153316152",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2116460208",
+                    "name": "Ziwei Zhang"
+                },
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "a4b2391f9dad4341829a4a61ff315060a6a7cc34",
+            "title": "Lightweight Diffusion Models with Distillation-Based Block Neural Architecture Search",
+            "abstract": "Diffusion models have recently shown remarkable generation ability, achieving state-of-the-art performance in many tasks. However, the high computational cost is still a troubling problem for diffusion models. To tackle this problem, we propose to automatically remove the structural redundancy in diffusion models with our proposed Diffusion Distillation-based Block-wise Neural Architecture Search (DiffNAS). Specifically, given a larger pretrained teacher, we leverage DiffNAS to search for the smallest architecture which can achieve on-par or even better performance than the teacher. Considering current diffusion models are based on UNet which naturally has a block-wise structure, we perform neural architecture search independently in each block, which largely reduces the search space. Different from previous block-wise NAS methods, DiffNAS contains a block-wise local search strategy and a retraining strategy with a joint dynamic loss. Concretely, during the search process, we block-wisely select the best subnet to avoid the unfairness brought by the global search strategy used in previous works. When retraining the searched architecture, we adopt a dynamic joint loss to maintain the consistency between supernet training and subnet retraining, which also provides informative objectives for each block and shortens the paths of gradient propagation. We demonstrate this joint loss can effectively improve model performance. We also prove the necessity of the dynamic adjustment of this loss. The experiments show that our method can achieve significant computational reduction, especially on latent diffusion models with about 50\\% MACs and Parameter reduction.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "1993657480",
+                    "name": "Siao Tang"
+                },
+                {
+                    "authorId": "2256599610",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2265931162",
+                    "name": "Yansong Tang"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "d11e6fd847bdeb1b76121dccc7ecdae8f8bffb13",
+            "title": "Joint Data-Task Generation for Auxiliary Learning",
+            "abstract": "Current auxiliary learning methods mainly adopt the methodology of reweighing losses for the manually collected auxiliary data and tasks. However, these methods heavily rely on domain knowledge during data collection, which may be hardly available in reality. Therefore, current methods will become less effective and even do harm to the primary task when unhelpful auxiliary data and tasks are employed. To tackle the problem, we propose a joint data-task generation framework for auxiliary learning (DTG-AuxL), which can bring benefits to the primary task by generating the new auxiliary data and task in a joint manner. The proposed DTG-AuxL framework contains a joint generator and a bi-level optimization strategy. Specifically, the joint generator contains a feature generator and a label generator, which are designed to be applicable and expressive for various auxiliary learning scenarios. The bi-level optimization strategy optimizes the joint generator and the task learning model, where the joint generator is effectively optimized in the upper level via the implicit gradient from the primary loss and the explicit gradient of our proposed instance regularization, while the task learning model is optimized in the lower level by the generated data and task. Extensive experiments show that our proposed DTG-AuxL framework consistently outperforms existing methods in various auxiliary learning scenarios, particularly when the manually collected auxiliary data and tasks are unhelpful.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2153687490",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "2261888564",
+                    "name": "Yuwei Zhou"
+                },
+                {
+                    "authorId": "2112481185",
+                    "name": "Yi Qin"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "076eab3357574dbb2a0cf908abbaff6999f1b4b1",
+            "title": "Large-Scale Graph Neural Architecture Search",
+            "abstract": "Graph Neural Architecture Search (GNAS) has become a powerful method in automatically discovering suitable Graph Neural Network (GNN) architectures for different tasks. However, existing approaches fail to handle large-scale graphs because current performance estimation strategies in GNAS are computationally expensive for large-scale graphs and suffer from consistency collapse issues. To tackle these problems, we propose the G raph A rchitect U re S earch at S cale (GAUSS) method that can handle large-scale graphs by designing an efficient light-weight supernet and the joint architecture-graph sampling. In particular, a graph sampling-based single-path one-shot super-net is proposed to reduce the computation burden. To address the consistency collapse issues, we further explicitly consider the joint architecture-graph sampling through a novel architecture peer learning mechanism on the sampled sub-graphs and an architecture importance sampling algo-rithm. Our proposed framework is able to smooth the highly non-convex optimization objective and stabilize the architecture sampling process. We provide theoretical analyses on GAUSS and empirically evaluate it on five datasets whose vertex sizes range from 10 4 to 10 8 . The experimental results demonstrate substantial improvements of GAUSS over other GNAS baselines on all datasets. To the best of our knowledge, the proposed GAUSS method is the first graph neural architecture search framework that can handle graphs with billions of edges within 1 GPU day 1 .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "153316152",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2116460208",
+                    "name": "Ziwei Zhang"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "5727b57d493965392d01b769ac2a81d6a67b4c91",
+            "title": "Module-Aware Optimization for Auxiliary Learning",
+            "abstract": "In line 2 of (A2), we obtain the relation between \u2207\u03b1\u03b8M and its previous term \u2207\u03b1\u03b8M\u22121, like a linear function with its weight (I \u2212 \u03b71\u22072\u03b8M\u22121L\u0304t(\u03b1, \u03b8M\u22121)) and bias term \u2212\u03b71\u2207\u03b1\u2207\u03b8M\u22121L\u0304t(\u03b1, \u03b8M\u22121) . In the following derivation, \u2207\u03b1\u03b8M\u22121 can be replaced with its previous linear form of \u2207\u03b1\u03b8M\u22122, until we reach the initial \u2207\u03b1\u03b80, which equals to 0. Summing up all the bias terms gives the final expression. From (A2), the derivation of \u2207\u03b1\u03b8M requires the Jacobi and Hessian matrix in previous M steps, which is memory consuming. By approximating all previous \u03b8\u03c4 as \u03b8M , we obtain the following best-response approximation:",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2153687490",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "100576986",
+                    "name": "Yue Liu"
+                },
+                {
+                    "authorId": "2110219508",
+                    "name": "Yuwei Zhou"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "7a1cec0c4b2196267ec4ebaf0b412c522d77eb25",
+            "title": "Curriculum-NAS: Curriculum Weight-Sharing Neural Architecture Search",
+            "abstract": "Neural Architecture Search (NAS) is an effective way to automatically design neural architectures for various multimedia applications. Weight-sharing, as one of the most popular NAS strategies, has been widely adopted due to its search efficiency. Existing weight-sharing NAS methods overlook the influence of data distribution and treat each data sample equally. Contrastively, in this paper, we empirically discover that different data samples have different influences on architectures, e.g., some data samples are easy to fit by certain architectures but hard by others. Hence, there exist architectures with better performances on early data samples being more likely to be discovered in the whole NAS searching process, which leads to a suboptimal searching result. To tackle this problem, we propose Curriculum-NAS, a curriculum training framework on weight-sharing NAS, which dynamically changes the training data weights during the searching process. In particular, Curriculum-NAS utilizes the multiple subnets included in weight-sharing NAS to jointly assess data uncertainty, which serves as the difficulty criterion in a curriculum manner, so that the potentially optimal architectures can obtain higher probability of being fully trained and discovered. Extensive experiments on several image and text datasets demonstrate that our Curriculum-NAS can bring consistent improvement over existing weight-sharing NAS. The code is available online at https://github.com/zhouyw16/curriculum-nas.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2110219508",
+                    "name": "Yuwei Zhou"
+                },
+                {
+                    "authorId": "2153687490",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "50997773",
+                    "name": "Xuguang Duan"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "b4f326b6a999aa6c626564882b946b255ca4ea8f",
+            "title": "Auxiliary Learning with Joint Task and Data Scheduling",
+            "abstract": "Existing auxiliary learning approaches only consider the relationships between the target task and the auxiliary tasks, ignoring the fact that data samples within an auxiliary task could contribute differently to the target task, which results in inefficient auxiliary information usage and non-robustness to data noise. In this paper, we propose to learn a joint task and data schedule for auxiliary learning, which captures the importance of different data samples in each auxiliary task to the target task. However, learning such a joint schedule is challenging due to the large number of additional parameters required for the schedule. To tackle the challenge, we propose a joint task and data scheduling (JTDS) model for auxiliary learning. The JTDS model captures the joint task-data importance through a task-data scheduler, which creates a mapping from task, feature and label information to the schedule in a parameter-efficient way. Particularly, we formulate the scheduler and the task learning process as a bi-level optimization problem. In the lower optimization, the task learning model is updated with the scheduled gradient, while in the upper optimization, the task-data scheduler is updated with the implicit gradient. Experimental results show that our JTDS model significantly outperforms the state-of-the-art methods under supervised, semi-supervised and corrupted label settings 1 .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2191043236",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2153687490",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "2119034169",
+                    "name": "Yue Liu"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        },
+        {
+            "paperId": "b5af49fbcf3678d9203036fe1df8fbfa49d274c3",
+            "title": "Multimodal Continual Graph Learning with Neural Architecture Search",
+            "abstract": "Continual graph learning is rapidly emerging as an important role in a variety of real-world applications such as online product recommendation systems and social media. While achieving great success, existing works on continual graph learning ignore the information from multiple modalities (e.g., visual and textual features) as well as the rich dynamic structural information hidden in the ever-changing graph data and evolving tasks. However, considering multimodal continual graph learning with evolving topological structures poses great challenges: i) it is unclear how to incorporate the multimodal information into continual graph learning and ii) it is nontrivial to design models that can capture the structure-evolving dynamics in continual graph learning. To tackle these challenges, in this paper we propose a novel Multimodal Structure-evolving Continual Graph Learning (MSCGL) model, which continually learns both the model architecture and the corresponding parameters for Adaptive Multimodal Graph Neural Network (AdaMGNN). To be concrete, our proposed MSCGL model simultaneously takes social information and multimodal information into account to build the multimodal graphs. In order for continually adapting to new tasks without forgetting the old ones, our MSCGL model explores a new strategy with joint optimization of Neural Architecture Search (NAS) and Group Sparse Regularization (GSR) across different tasks. These two parts interact with each other reciprocally, where NAS is expected to explore more promising architectures and GSR is in charge of preserving important information from the previous tasks. We conduct extensive experiments over two real-world multimodal continual graph scenarios to demonstrate the superiority of the proposed MSCGL model. Empirical experiments indicate that both the architectures and weight sharing across different tasks play important roles in affecting the model performances.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115669651",
+                    "name": "Jie Cai"
+                },
+                {
+                    "authorId": "2153687490",
+                    "name": "Xin Wang"
+                },
+                {
+                    "authorId": "133761917",
+                    "name": "Chaoyu Guan"
+                },
+                {
+                    "authorId": "1581808833",
+                    "name": "Yateng Tang"
+                },
+                {
+                    "authorId": "2110639436",
+                    "name": "Jin Xu"
+                },
+                {
+                    "authorId": "2061200345",
+                    "name": "Bin Zhong"
+                },
+                {
+                    "authorId": "2156154955",
+                    "name": "Wenwu Zhu"
+                }
+            ]
+        }
+    ]
+}

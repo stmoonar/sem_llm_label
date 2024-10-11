@@ -1,0 +1,361 @@
+{
+    "authorId": "1625473962",
+    "papers": [
+        {
+            "paperId": "058bb47550f7de7f163aa9b152dfcc84c575b51b",
+            "title": "Is Diffusion Model Safe? Severe Data Leakage via Gradient-Guided Diffusion Model",
+            "abstract": "Gradient leakage has been identified as a potential source of privacy breaches in modern image processing systems, where the adversary can completely reconstruct the training images from leaked gradients. However, existing methods are restricted to reconstructing low-resolution images where data leakage risks of image processing systems are not sufficiently explored. In this paper, by exploiting diffusion models, we propose an innovative gradient-guided fine-tuning method and introduce a new reconstruction attack that is capable of stealing private, high-resolution images from image processing systems through leaked gradients where severe data leakage encounters. Our attack method is easy to implement and requires little prior knowledge. The experimental results indicate that current reconstruction attacks can steal images only up to a resolution of $128 \\times 128$ pixels, while our attack method can successfully recover and steal images with resolutions up to $512 \\times 512$ pixels. Our attack method significantly outperforms the SOTA attack baselines in terms of both pixel-wise accuracy and time efficiency of image reconstruction. Furthermore, our attack can render differential privacy ineffective to some extent.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2307088141",
+                    "name": "Jiayang Meng"
+                },
+                {
+                    "authorId": "2110813692",
+                    "name": "Tao Huang"
+                },
+                {
+                    "authorId": "2273086226",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                }
+            ]
+        },
+        {
+            "paperId": "112426cca46a7eeb7c521576fcb9df805841dfbf",
+            "title": "Streamlining Redundant Layers to Compress Large Language Models",
+            "abstract": "This paper introduces LLM-Streamline, a novel layer pruning approach for large language models. It is based on the observation that different layers have varying impacts on hidden states, enabling the identification of less important layers. LLMStreamline comprises two parts: layer pruning, which removes consecutive layers with the lowest importance based on target sparsity, and layer replacement, where a lightweight network is trained to replace the pruned layers to mitigate performance loss. Additionally, a new metric called\"stability\"is proposed to address the limitations of accuracy in evaluating model compression. Experiments show that LLM-Streamline surpasses previous state-of-the-art pruning methods in both accuracy and stability.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2293709918",
+                    "name": "Xiaodong Chen"
+                },
+                {
+                    "authorId": "2236902930",
+                    "name": "Yuxuan Hu"
+                },
+                {
+                    "authorId": "2155700347",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "2108975817",
+                    "name": "Yanling Wang"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "2191043357",
+                    "name": "Hong Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "3fd483fc22f0768049597b389ae3b48d2cffede7",
+            "title": "LLMTune: Accelerate Database Knob Tuning with Large Language Models",
+            "abstract": "Database knob tuning is a critical challenge in the database community, aiming to optimize knob values to enhance database performance for specific workloads. DBMS often feature hundreds of tunable knobs, posing a significant challenge for DBAs to recommend optimal configurations. Consequently, many machine learning-based tuning methods have been developed to automate this process. Despite the introduction of various optimizers, practical applications have unveiled a new problem: they typically require numerous workload runs to achieve satisfactory performance, a process that is both time-consuming and resource-intensive. This inefficiency largely stems from the optimal configuration often being substantially different from the default setting, necessitating multiple iterations during tuning. Recognizing this, we argue that an effective starting point could significantly reduce redundant exploration in less efficient areas, thereby potentially speeding up the tuning process for the optimizers. Based on this assumption, we introduce LLMTune, a large language model-based configuration generator designed to produce an initial, high-quality configuration for new workloads. These generated configurations can then serve as starting points for various base optimizers, accelerating their tuning processes. To obtain training data for LLMTune's supervised fine-tuning, we have devised a new automatic data generation framework capable of efficiently creating a large number ofpairs. We have conducted thorough experiments to evaluate LLMTune's effectiveness with different workloads, such as TPC-H and JOB. In comparison to leading methods, LLMTune demonstrates a quicker ability to identify superior configurations. For instance, with the challenging TPC-H workload, our LLMTune achieves a significant 15.6x speed-up ratio in finding the best-performing configurations.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2198199708",
+                    "name": "Xinmei Huang"
+                },
+                {
+                    "authorId": "2274084217",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2155700347",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "2297344386",
+                    "name": "Xinxin Zhao"
+                },
+                {
+                    "authorId": "2297127833",
+                    "name": "Zhiming Yao"
+                },
+                {
+                    "authorId": "2297341653",
+                    "name": "Yiyan Li"
+                },
+                {
+                    "authorId": "2164113313",
+                    "name": "Zhuohao Yu"
+                },
+                {
+                    "authorId": "2297140223",
+                    "name": "Tieying Zhang"
+                },
+                {
+                    "authorId": "2191043357",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                }
+            ]
+        },
+        {
+            "paperId": "978040c55f9094212d15b7ffadfab1440913b6cf",
+            "title": "CodeS: Towards Building Open-source Language Models for Text-to-SQL",
+            "abstract": "Language models have shown promising performance on the task of translating natural language questions into SQL queries (Text-to-SQL). However, most of the state-of-the-art (SOTA) approaches rely on powerful yet closed-source large language models (LLMs), such as ChatGPT and GPT-4, which may have the limitations of unclear model architectures, data privacy risks, and expensive inference overheads. To address the limitations, we introduce CodeS, a series of pre-trained language models with parameters ranging from 1B to 15B, specifically designed for the text-to-SQL task. CodeS is a fully open-source language model, which achieves superior accuracy with much smaller parameter sizes. This paper studies the research challenges in building CodeS. To enhance the SQL generation abilities of CodeS, we adopt an incremental pre-training approach using a specifically curated SQL-centric corpus. Based on this, we address the challenges of schema linking and rapid domain adaptation through strategic prompt construction and a bi-directional data augmentation technique. We conduct comprehensive evaluations on multiple datasets, including the widely used Spider benchmark, the newly released BIRD benchmark, robustness-diagnostic benchmarks such as Spider-DK, Spider-Syn, Spider-Realistic, and Dr.Spider, as well as two real-world datasets created for financial and academic applications. The experimental results show that our CodeS achieves new SOTA accuracy and robustness on nearly all challenging text-to-SQL benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2274084217",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2155700347",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "2303287269",
+                    "name": "Hanbing Liu"
+                },
+                {
+                    "authorId": "2297832474",
+                    "name": "Ju Fan"
+                },
+                {
+                    "authorId": "2108046717",
+                    "name": "Xiaokang Zhang"
+                },
+                {
+                    "authorId": "2287070483",
+                    "name": "Jun Zhu"
+                },
+                {
+                    "authorId": "2286888373",
+                    "name": "Renjie Wei"
+                },
+                {
+                    "authorId": "2289618868",
+                    "name": "Hongyan Pan"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "2191043357",
+                    "name": "Hong Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "d37bd7aac01f8bc1b22ba74df79facb2b62be0a4",
+            "title": "Open-World Semi-Supervised Learning for Node Classification",
+            "abstract": "Open-world semi-supervised learning (Open-world SSL) for node classification, that classifies unlabeled nodes into seen classes or multiple novel classes, is a practical but under-explored problem in the graph community. As only seen classes have human labels, they are usually better learned than novel classes, and thus exhibit smaller intra-class variances within the embedding space (named as imbalance of intra-class variances between seen and novel classes). Based on empirical and theoretical analysis, we find the variance imbalance can negatively impact the model performance. Pre-trained feature encoders can alleviate this issue via producing compact representations for novel classes. However, creating general pre-trained encoders for various types of graph data has been proven to be challenging. As such, there is a demand for an effective method that does not rely on pre-trained graph encoders. In this paper, we propose an IMbalance-A ware method named OpenIMA for Open-world semi-supervised node classification, which trains the node classification model from scratch via contrastive learning with bias-reduced pseudo labels. Extensive experiments on seven popular graph benchmarks demonstrate the effectiveness of OpenIMA, and the source code has been available on GitHub11https://github.com/RUCKBReasoning/OpenIMA.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108975817",
+                    "name": "Yanling Wang"
+                },
+                {
+                    "authorId": "2155700347",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "2145402325",
+                    "name": "Lingxi Zhang"
+                },
+                {
+                    "authorId": "2292089866",
+                    "name": "Lixin Liu"
+                },
+                {
+                    "authorId": "2292122925",
+                    "name": "Yuxiao Dong"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "2191043357",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2292126832",
+                    "name": "Hongzhi Yin"
+                }
+            ]
+        },
+        {
+            "paperId": "028732d9b26e2da1c3babe3d8bc070eb4af6afad",
+            "title": "ConPhrase: Enhancing Context-Aware Phrase Mining From Text Corpora",
+            "abstract": "Phrase mining is an essential step when transforming unstructured text into structured information, in which the aim is to extract high-quality phrases from given corpora automatically. Existing statistics-based methods have achieved state-of-the-art performance on this task. However, such methods often rely heavily on statistical signals to extract quality phrases, ignoring the effect of contextual information. In this paper, we propose a novel context-aware method, called ConPhrase, for quality phrase mining under distantly supervised settings. Specifically, ConPhrase formulates phrase mining as a sequence labeling problem by considering local contextual information, and also incorporates distant supervision methods to automatically generate labeled data. It comprises two modules designed to tackle global information scarcity and noisy data filtration: 1) a topic-aware phrase recognition network that incorporates domain-related topic information into word representation learning to identify quality phrases effectively; 2) an instance selection network that focuses on choosing correct sentences with reinforcement learning for improving the prediction performance of the phrase recognition network. Moreover, we also propose an extended variant of ConPhrase, called ConPhrase+, that further enhances phrase recognition by utilizing document-level contextual information across sentences within the entire document. Experimental results show that contextual information is indispensable for phrase mining and our context-aware methods perform significantly better than state-of-the-art approaches on three publicly available datasets.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108121357",
+                    "name": "Xue Zhang"
+                },
+                {
+                    "authorId": "2262400832",
+                    "name": "Qinghua Li"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "92779309",
+                    "name": "Hong Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "2f9221877030c28cf98f0847ff8b8e787377b9a6",
+            "title": "A Generation-based Deductive Method for Math Word Problems",
+            "abstract": ",",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2236902930",
+                    "name": "Yuxuan Hu"
+                },
+                {
+                    "authorId": "2155700347",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "2274084217",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "2273086226",
+                    "name": "Hong Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "5a62ae4a4b42869ef52c296b6bcda2be3ada82ee",
+            "title": "FC-KBQA: A Fine-to-Coarse Composition Framework for Knowledge Base Question Answering",
+            "abstract": "The generalization problem on KBQA has drawn considerable attention. Existing research suffers from the generalization issue brought by the entanglement in the coarse-grained modeling of the logical expression, or inexecutability issues due to the fine-grained modeling of disconnected classes and relations in real KBs. We propose a Fine-to-Coarse Composition framework for KBQA (FC-KBQA) to both ensure the generalization ability and executability of the logical expression. The main idea of FC-KBQA is to extract relevant fine-grained knowledge components from KB and reformulate them into middle-grained knowledge pairs for generating the final logical expressions. FC-KBQA derives new state-of-the-art performance on GrailQA and WebQSP, and runs 4 times faster than the baseline. Our code is now available at GitHub https://github. com/RUCKBReasoning/FC-KBQA.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2145402325",
+                    "name": "Lingxi Zhang"
+                },
+                {
+                    "authorId": "2155700347",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "2108975817",
+                    "name": "Yanling Wang"
+                },
+                {
+                    "authorId": "1712738522",
+                    "name": "S. Cao"
+                },
+                {
+                    "authorId": "2198199708",
+                    "name": "Xinmei Huang"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "2191043357",
+                    "name": "Hong Chen"
+                },
+                {
+                    "authorId": "2116822735",
+                    "name": "Juan Li"
+                }
+            ]
+        },
+        {
+            "paperId": "6d51f4b220cb2c8321dc5f9755b7d66f10f1cad6",
+            "title": "RESDSQL: Decoupling Schema Linking and Skeleton Parsing for Text-to-SQL",
+            "abstract": "One of the recent best attempts at Text-to-SQL is the pre-trained language model. Due to the structural property of the SQL queries, the seq2seq model takes the responsibility of parsing both the schema items (i.e., tables and columns) and the skeleton (i.e., SQL keywords). Such coupled targets increase the difficulty of parsing the correct SQL queries especially when they involve many schema items and logic operators. This paper proposes a ranking-enhanced encoding and skeleton-aware decoding framework to decouple the schema linking and the skeleton parsing. Specifically, for a seq2seq encoder-decode model, its encoder is injected by the most relevant schema items instead of the whole unordered ones, which could alleviate the schema linking effort during SQL parsing, and its decoder first generates the skeleton and then the actual SQL query, which could implicitly constrain the SQL parsing. We evaluate our proposed framework on Spider and its three robustness variants: Spider-DK, Spider-Syn, and Spider-Realistic. The experimental results show that our framework delivers promising performance and robustness. Our code is available at https://github.com/RUCKBReasoning/RESDSQL.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "144911687",
+                    "name": "Haoyang Li"
+                },
+                {
+                    "authorId": "2155700347",
+                    "name": "Jing Zhang"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "2191043357",
+                    "name": "Hong Chen"
+                }
+            ]
+        },
+        {
+            "paperId": "91fcc641d6a24c06d2c6657f9a8ec6e506d3ef86",
+            "title": "FOSS: A Self-Learned Doctor for Query Optimizer",
+            "abstract": "Various works have utilized deep learning to address the query optimization problem in database system. They either learn to construct plans from scratch in a bottom-up manner or steer the plan generation behavior of traditional optimizer using hints. While these methods have achieved some success, they face challenges in either low training efficiency or limited plan search space. To address these challenges, we introduce FOSS, a novel framework for query optimization based on deep reinforcement learning. FOSS initiates optimization from the original plan generated by a traditional optimizer and incrementally refines suboptimal nodes of the plan through a sequence of actions. Additionally, we devise an asymmetric advantage model to evaluate the advantage between two plans. We integrate it with a traditional optimizer to form a simulated environment. Leveraging this simulated environment, FOSS can bootstrap itself to rapidly generate a large amount of high-quality simulated experiences. FOSS then learns from these experiences to improve its optimization capability. We evaluate the performance of FOSS on Join Order Benchmark, TPC-DS, and Stack Overflow. The experimental results demonstrate that FOSS outperforms the state-of-the-art methods in terms of latency performance. Compared to PostgreSQL, FOSS achieves speedup ranging from 1.15x to 8.33x in total latency across different benchmarks.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2273343769",
+                    "name": "Kai Zhong"
+                },
+                {
+                    "authorId": "2110786066",
+                    "name": "Luming Sun"
+                },
+                {
+                    "authorId": "2273556317",
+                    "name": "Tao Ji"
+                },
+                {
+                    "authorId": "1625473962",
+                    "name": "Cuiping Li"
+                },
+                {
+                    "authorId": "2273086226",
+                    "name": "Hong Chen"
+                }
+            ]
+        }
+    ]
+}

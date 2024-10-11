@@ -1,0 +1,414 @@
+{
+    "authorId": "143711382",
+    "papers": [
+        {
+            "paperId": "11417522f57c13898e24d87ef22f9e45fa197cf8",
+            "title": "DensePure: Understanding Diffusion Models for Adversarial Robustness",
+            "abstract": "Diffusion models have been recently employed to improve certified robustness through the process of denoising. However, the theoretical understanding of why diffusion models are able to improve the certified robustness is still lacking, preventing from further improvement. In this study, we close this gap by analyzing the fundamental properties of diffusion models and establishing the conditions under which they can enhance certified robustness. This deeper understanding allows us to propose a new method DensePure , designed to improve the certified robustness of a pretrained model (i.e. classifier). Given an (adversarial) input, DensePure consists of multiple runs of denoising via the reverse process of the diffusion model (with different random seeds) to get multiple reversed samples, which are then passed through the classifier, followed by majority voting of inferred labels to make the final prediction. This design of using multiple runs of denoising is informed by our theoretical analysis of the conditional distribution of the reversed sample. Specifically, when the data density of a clean sample is high, its conditional density under the reverse process in a diffusion model is also high; thus sampling from the latter conditional distribution can purify the adversarial example and return the corresponding clean sample with a high probability. By using the highest density point in the conditional distribution as the reversed sample, we identify the robust region of a given instance under the diffusion model\u2019s reverse process. We show that this robust region is a union of multiple convex sets, and is potentially much larger than the robust regions identified in previous works. In practice, DensePure can approximate the label of the high density region in the conditional distribution so that it can enhance certified robustness. We conduct extensive experiments to demonstrate the effectiveness of DensePure by evaluating its certified robustness given a standard model via randomized smoothing. We show that DensePure is consistently better than existing methods on ImageNet, with 7% improvement on average. Project",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2723309",
+                    "name": "Chaowei Xiao"
+                },
+                {
+                    "authorId": "2144173619",
+                    "name": "Zhongzhu Chen"
+                },
+                {
+                    "authorId": "1845918120",
+                    "name": "Kun Jin"
+                },
+                {
+                    "authorId": "2110170885",
+                    "name": "Jiong Wang"
+                },
+                {
+                    "authorId": "2066304514",
+                    "name": "Weili Nie"
+                },
+                {
+                    "authorId": "2135695038",
+                    "name": "Mingyan Liu"
+                },
+                {
+                    "authorId": "2047844",
+                    "name": "Anima Anandkumar"
+                },
+                {
+                    "authorId": "71788673",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                }
+            ]
+        },
+        {
+            "paperId": "14b9c9d8bb8c84e939e52e59fe6461b34db67b15",
+            "title": "TrojDiff: Trojan Attacks on Diffusion Models with Diverse Targets",
+            "abstract": "Diffusion models have achieved great success in a range of tasks, such as image synthesis and molecule design. As such successes hinge on large-scale training data collected from diverse sources, the trustworthiness of these collected data is hard to control or audit. In this work, we aim to explore the vulnerabilities of diffusion models under potential training data manipulations and try to answer: How hard is it to perform Trojan attacks on well-trained diffusion models? What are the adversarial targets that such Trojan attacks can achieve? To answer these questions, we propose an effective Trojan attack against diffusion models, TrojDiff, which optimizes the Trojan diffusion and generative processes during training. In particular, we design novel transitions during the Trojan diffusion process to diffuse adversarial targets into a biased Gaussian distribution and propose a new parameterization of the Trojan generative process that leads to an effective training objective for the attack. In addition, we consider three types of adversarial targets: the Trojaned diffusion models will always output instances belonging to a certain class from the in-domain distribution (In-D2D attack), out-of-domain distribution (Out-D2D-attack), and one specific instance (D2I attack). We evaluate TrojDiff on CIFAR-10 and CelebA datasets against both DDPM and DDIM diffusion models. We show that TrojDiff always achieves high attack performance under different adversarial targets using different types of triggers, while the performance in benign environments is preserved. The code is available at https://github.com/chenweixin107/TrojDiff.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108947078",
+                    "name": "Weixin Chen"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                },
+                {
+                    "authorId": "2151288080",
+                    "name": "Bo Li"
+                }
+            ]
+        },
+        {
+            "paperId": "204a1db416d0b1b01d11cb2fbb5ae8cfa9d39df8",
+            "title": "DeepSeer: Interactive RNN Explanation and Debugging via State Abstraction",
+            "abstract": "Recurrent Neural Networks (RNNs) have been widely used in Natural Language Processing (NLP) tasks given its superior performance on processing sequential data. However, it is challenging to interpret and debug RNNs due to the inherent complexity and the lack of transparency of RNNs. While many explainable AI (XAI) techniques have been proposed for RNNs, most of them only support local explanations rather than global explanations. In this paper, we present DeepSeer, an interactive system that provides both global and local explanations of RNN behavior in multiple tightly-coordinated views for model understanding and debugging. The core of DeepSeer is a state abstraction method that bundles semantically similar hidden states in an RNN model and abstracts the model as a finite state machine. Users can explore the global model behavior by inspecting text patterns associated with each state and the transitions between states. Users can also dive into individual predictions by inspecting the state trace and intermediate prediction results of a given input. A between-subjects user study with 28 participants shows that, compared with a popular XAI technique, LIME, participants using DeepSeer made a deeper and more comprehensive assessment of RNN model behavior, identified the root causes of incorrect predictions more accurately, and came up with more actionable plans to improve the model performance.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2108157560",
+                    "name": "Zhijie Wang"
+                },
+                {
+                    "authorId": "1739753031",
+                    "name": "Yuheng Huang"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                },
+                {
+                    "authorId": "2193640276",
+                    "name": "Lei Ma"
+                },
+                {
+                    "authorId": "2146332594",
+                    "name": "Tianyi Zhang"
+                }
+            ]
+        },
+        {
+            "paperId": "3fbd6a75cf0b2cb51cd2f782983409ca604acb82",
+            "title": "Adversarial Collaborative Learning on Non-IID Features",
+            "abstract": "Federated Learning (FL) has been a popular approach to enable collaborative learning on multiple parties without exchanging raw data. However, the model performance of FL may degrade a lot due to non-IID data. While many FL algorithms focus on non-IID labels, FL on non-IID features has largely been overlooked. Different from typical FL approaches, the paper proposes a new learning concept called ADCOL ( Ad versarial Co llaborative L earning) for non-IID features. Instead of adopting the widely used model-averaging scheme, ADCOL conducts training in an adversarial way: the server aims to train a discriminator to distinguish the representations of the parties, while the parties aim to generate a common representation distribution. Our experiments show that ADCOL achieves better performance than state-of-the-art FL algorithms on non-IID features.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "92621060",
+                    "name": "Q. Li"
+                },
+                {
+                    "authorId": "2082463717",
+                    "name": "Bingsheng He"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                }
+            ]
+        },
+        {
+            "paperId": "4a899ad6f6083b9edea6fbea59f923a32cbf7a12",
+            "title": "A Note on \"Efficient Task-Specific Data Valuation for Nearest Neighbor Algorithms\"",
+            "abstract": "Data valuation is a growing research field that studies the influence of individual data points for machine learning (ML) models. Data Shapley, inspired by cooperative game theory and economics, is an effective method for data valuation. However, it is well-known that the Shapley value (SV) can be computationally expensive. Fortunately, Jia et al. (2019) showed that for K-Nearest Neighbors (KNN) models, the computation of Data Shapley is surprisingly simple and efficient. In this note, we revisit the work of Jia et al. (2019) and propose a more natural and interpretable utility function that better reflects the performance of KNN models. We derive the corresponding calculation procedure for the Data Shapley of KNN classifiers/regressors with the new utility functions. Our new approach, dubbed soft-label KNN-SV, achieves the same time complexity as the original method. We further provide an efficient approximation algorithm for soft-label KNN-SV based on locality sensitive hashing (LSH). Our experimental results demonstrate that Soft-label KNN-SV outperforms the original method on most datasets in the task of mislabeled data detection, making it a better baseline for future work on data valuation.",
+            "fieldsOfStudy": [
+                "Mathematics",
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "39823639",
+                    "name": "R. Jia"
+                },
+                {
+                    "authorId": "46927039",
+                    "name": "David Dao"
+                },
+                {
+                    "authorId": "51454501",
+                    "name": "Boxin Wang"
+                },
+                {
+                    "authorId": "73774594",
+                    "name": "F. Hubis"
+                },
+                {
+                    "authorId": "35835002",
+                    "name": "Nezihe Merve G\u00fcrel"
+                },
+                {
+                    "authorId": "1490934734",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "1776014",
+                    "name": "Ce Zhang"
+                },
+                {
+                    "authorId": "144168566",
+                    "name": "C. Spanos"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                }
+            ]
+        },
+        {
+            "paperId": "79a48bd713221a10fee9b93e8889e159518499c9",
+            "title": "Secure Federated Correlation Test and Entropy Estimation",
+            "abstract": "We propose the first federated correlation test framework compatible with secure aggregation, namely F ED - \u03c7 2 . In our protocol, the statistical computations are recast as frequency moment estimation problems, where the clients collaboratively generate a shared projection matrix and then use stable projection to encode the local information in a compact vector. As such encodings can be linearly aggregated, secure aggregation can be applied to conceal the individual updates. We formally establish the security guarantee of F ED - \u03c7 2 by proving that only the minimum necessary information (i.e., the correlation statistics) is revealed to the server. We show that our protocol can be naturally extended to estimate other statistics that can be recast as frequency moment estimations. By accommodating Shan-non\u2019e Entropy in F ED - \u03c7 2 , we further propose the first secure federated entropy estimation protocol, F ED -H. The evaluation results demonstrate that F ED - \u03c7 2 and F ED -H achieve good performance with small client-side computation overhead in several real-world case studies.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2075387603",
+                    "name": "Qi Pang"
+                },
+                {
+                    "authorId": "1390770335",
+                    "name": "Lun Wang"
+                },
+                {
+                    "authorId": "2118513248",
+                    "name": "Shuai Wang"
+                },
+                {
+                    "authorId": "2152934594",
+                    "name": "Wenting Zheng"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                }
+            ]
+        },
+        {
+            "paperId": "7d1f654740aba5c910ab934ea6872726e5b76961",
+            "title": "Secure Floating-Point Training",
+            "abstract": "Secure 2-party computation (2PC) of floating-point arithmetic is improving in performance and recent work runs deep learning algorithms with it, while being as numerically precise as commonly used machine learning (ML) frameworks like PyTorch. We find that the existing 2PC libraries for floating-point support generic computations and lack specialized support for ML training. Hence, their latency and communication costs for compound operations (e.g., dot products) are high. We provide novel specialized 2PC protocols for compound operations and prove their precision using numerical analysis. Our implementation B EACON outperforms state-of-the-art libraries for 2PC of floating-point by over 6 \u00d7 .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51148185",
+                    "name": "Deevashwer Rathee"
+                },
+                {
+                    "authorId": "2028910746",
+                    "name": "Anwesh Bhattacharya"
+                },
+                {
+                    "authorId": "144730682",
+                    "name": "Divya Gupta"
+                },
+                {
+                    "authorId": "2111335402",
+                    "name": "Rahul Sharma"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                }
+            ]
+        },
+        {
+            "paperId": "8dd4825e5e9a773eb0b32bfe9720cade3ac57ef3",
+            "title": "SoK: Data Sovereignty",
+            "abstract": "Society appears to be on the verge of recognizing the need for control over sensitive data in modern web applications. Recently, many systems claim to give control to individuals, promising the preeminent goal of data sovereignty. However, despite recent attention, research and industry efforts are fragmented and lack a holistic system overview. In this paper, we provide the first transecting systematization of data sovereignty by drawing from a dispersed body of knowledge. We clarify the field by identifying its three main areas: (i) decentralized identity, (ii) decentralized access control and (iii) policy-compliant decentralized computation. We find that literature lacks a cohesive set of formal definitions. Each area is considered in isolation, and priorities in industry and academia are not aligned due to a lack of clarity regarding user control. To solve this issue, we propose formal definitions for each sub-area. By highlighting that data sovereignty transcends the domain of decentralized identity, we aim to guide future works to embrace a broader perspective on user control. In each section, we augment our definition with security and privacy properties, discuss the state of the art and proceed to identify open challenges. We conclude by highlighting synergies between areas, emphasizing the real-world benefit obtained by further developing data sovereign systems.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2115020553",
+                    "name": "Jens Ernstberger"
+                },
+                {
+                    "authorId": "1752924346",
+                    "name": "Jan Lauinger"
+                },
+                {
+                    "authorId": "2221051845",
+                    "name": "Fatima Elsheimy"
+                },
+                {
+                    "authorId": "3138957",
+                    "name": "Liyi Zhou"
+                },
+                {
+                    "authorId": "2120525",
+                    "name": "S. Steinhorst"
+                },
+                {
+                    "authorId": "1749530",
+                    "name": "R. Canetti"
+                },
+                {
+                    "authorId": "2115895053",
+                    "name": "Andrew Miller"
+                },
+                {
+                    "authorId": "39000631",
+                    "name": "Arthur Gervais"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                }
+            ]
+        },
+        {
+            "paperId": "a6d3794c23626060781da0f1ff2bcdf7457b6c43",
+            "title": "DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models",
+            "abstract": "Generative Pre-trained Transformer (GPT) models have exhibited exciting progress in their capabilities, capturing the interest of practitioners and the public alike. Yet, while the literature on the trustworthiness of GPT models remains limited, practitioners have proposed employing capable GPT models for sensitive applications such as healthcare and finance -- where mistakes can be costly. To this end, this work proposes a comprehensive trustworthiness evaluation for large language models with a focus on GPT-4 and GPT-3.5, considering diverse perspectives -- including toxicity, stereotype bias, adversarial robustness, out-of-distribution robustness, robustness on adversarial demonstrations, privacy, machine ethics, and fairness. Based on our evaluations, we discover previously unpublished vulnerabilities to trustworthiness threats. For instance, we find that GPT models can be easily misled to generate toxic and biased outputs and leak private information in both training data and conversation history. We also find that although GPT-4 is usually more trustworthy than GPT-3.5 on standard benchmarks, GPT-4 is more vulnerable given jailbreaking system or user prompts, potentially because GPT-4 follows (misleading) instructions more precisely. Our work illustrates a comprehensive trustworthiness evaluation of GPT models and sheds light on the trustworthiness gaps. Our benchmark is publicly available at https://decodingtrust.github.io/ ; our dataset can be previewed at https://huggingface.co/datasets/AI-Secure/DecodingTrust ; a concise version of this work is at https://openreview.net/pdf?id=kaHpo8OZw2 .",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "51454501",
+                    "name": "Boxin Wang"
+                },
+                {
+                    "authorId": "2108947078",
+                    "name": "Weixin Chen"
+                },
+                {
+                    "authorId": "146922081",
+                    "name": "Hengzhi Pei"
+                },
+                {
+                    "authorId": "150961077",
+                    "name": "Chulin Xie"
+                },
+                {
+                    "authorId": "2153110066",
+                    "name": "Mintong Kang"
+                },
+                {
+                    "authorId": "2146063748",
+                    "name": "Chenhui Zhang"
+                },
+                {
+                    "authorId": "2153079868",
+                    "name": "Chejian Xu"
+                },
+                {
+                    "authorId": "2155965725",
+                    "name": "Zidi Xiong"
+                },
+                {
+                    "authorId": "151183175",
+                    "name": "Ritik Dutta"
+                },
+                {
+                    "authorId": "1749176844",
+                    "name": "Rylan Schaeffer"
+                },
+                {
+                    "authorId": "2127191901",
+                    "name": "Sang Truong"
+                },
+                {
+                    "authorId": "2285788571",
+                    "name": "Simran Arora"
+                },
+                {
+                    "authorId": "16787428",
+                    "name": "Mantas Mazeika"
+                },
+                {
+                    "authorId": "3422872",
+                    "name": "Dan Hendrycks"
+                },
+                {
+                    "authorId": "2695029",
+                    "name": "Zi-Han Lin"
+                },
+                {
+                    "authorId": "98742322",
+                    "name": "Yuk-Kit Cheng"
+                },
+                {
+                    "authorId": "123593472",
+                    "name": "Sanmi Koyejo"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                },
+                {
+                    "authorId": "2165245120",
+                    "name": "Bo Li"
+                }
+            ]
+        },
+        {
+            "paperId": "a82690177d548e68fb96bb949f3c3ea7f82ef139",
+            "title": "SoK: Privacy-Preserving Data Synthesis",
+            "abstract": "As the prevalence of data analysis grows, safeguarding data privacy has become a paramount concern. Consequently, there has been an upsurge in the development of mechanisms aimed at privacy-preserving data analyses. However, these approaches are task-specific; designing algorithms for new tasks is a cumbersome process. As an alternative, one can create synthetic data that is (ideally) devoid of private information. This paper focuses on privacy-preserving data synthesis (PPDS) by providing a comprehensive overview, analysis, and discussion of the field. Specifically, we put forth a master recipe that unifies two prominent strands of research in PPDS: statistical methods and deep learning (DL)-based methods. Under the master recipe, we further dissect the statistical methods into choices of modeling and representation, and investigate the DL-based methods by different generative modeling principles. To consolidate our findings, we provide comprehensive reference tables, distill key takeaways, and identify open problems in the existing literature. In doing so, we aim to answer the following questions: What are the design principles behind different PPDS methods? How can we categorize these methods, and what are the advantages and disadvantages associated with each category? Can we provide guidelines for method selection in different real-world scenarios? We proceed to benchmark several prominent DL-based methods on the task of private image synthesis and conclude that DP-MERF is an all-purpose approach. Finally, upon systematizing the work over the past decade, we identify future directions and call for actions from researchers.",
+            "fieldsOfStudy": [
+                "Computer Science"
+            ],
+            "authors": [
+                {
+                    "authorId": "2134348585",
+                    "name": "Yuzheng Hu"
+                },
+                {
+                    "authorId": "2116491459",
+                    "name": "Fan Wu"
+                },
+                {
+                    "authorId": "92621060",
+                    "name": "Q. Li"
+                },
+                {
+                    "authorId": "3147214",
+                    "name": "Yunhui Long"
+                },
+                {
+                    "authorId": "1740613789",
+                    "name": "Gonzalo Munilla Garrido"
+                },
+                {
+                    "authorId": "34952137",
+                    "name": "Chang Ge"
+                },
+                {
+                    "authorId": "1696332",
+                    "name": "Bolin Ding"
+                },
+                {
+                    "authorId": "2059363584",
+                    "name": "D. Forsyth"
+                },
+                {
+                    "authorId": "2151288080",
+                    "name": "Bo Li"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                }
+            ]
+        }
+    ]
+}
